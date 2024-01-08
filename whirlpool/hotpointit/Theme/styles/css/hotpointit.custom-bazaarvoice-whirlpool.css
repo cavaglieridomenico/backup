@@ -1,0 +1,67 @@
+.ratingSummaryContainer {
+  width: 100%;
+  /* margin: 1rem 0; */
+  justify-content: flex-end;
+  margin-top: 4px;
+}
+.ratingSummaryWrite{
+  display: none;
+}
+.reviewsContainerWriteButton{
+  display: none;
+}
+.inactiveStarContainer,
+.inactiveStar,
+.activeStarContainer,
+.activeStar,
+.activeStarContainer {
+  max-width: 0.75rem;
+}
+.activeStar {
+  color: #B24C24;
+}
+:global(.vtex-flex-layout-0-x-flexColChild--ratingsRowMobile)
+  .inlineRatingContainer {
+  text-align: start !important;
+}
+.containerInline{
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  padding-right: 0;
+  padding-top: 0.3rem;
+}
+.containerInline :last-child {
+  margin-left: 0.25rem;
+}
+.ratingStars {
+  margin-right: 0 !important;
+}
+.ratingStars :last-child {
+  margin-left: 0;
+}
+@media only screen and (min-width: 640px) and (max-width: 930px) {
+  .containerInline {
+    padding-top: 0.5rem;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .ratingSummaryContainer {
+    justify-content: flex-start;
+    margin: 0;
+    min-width: auto;
+  }
+  .inlineRatingContainer {
+    padding-right: 1rem;
+  }
+@media only screen and (max-width: 320px) {
+    .ratingStars {
+      padding-top: 2rem;
+    }
+  }
+}
+@media only screen and (max-width: 318px) {
+  .ratingStarsActive {
+    top: 0rem;
+  }
+}

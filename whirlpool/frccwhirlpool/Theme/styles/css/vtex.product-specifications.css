@@ -1,0 +1,45 @@
+.specificationValue--subscriptionText {
+  padding: 4px 10px;
+  font-size: 10px;
+  font-family: "GothamProRRegular";
+  font-weight: 400;
+  line-height: 12px;
+}
+.specificationValue--wProKeyValue::before {
+  content: "• ";
+}
+.specificationValue--wProKeyValue::after {
+  content: "\a";
+  white-space: pre;
+}
+.groupContainer--ecoValue,
+.badgeText--ecoValue {
+  margin: 0;
+}
+.specificationValue--codiceProdotto {
+  font-weight: 100 !important;
+  line-height: 1;
+}
+@media only screen and (max-width: 600px) {
+  .specificationValue--subscriptionText {
+    font-size: 9px;
+    font-family: "GothamProRRegular";
+    font-weight: 400;
+    line-height: 12px;
+    padding: 4px 8px;
+  }
+}
+.specificationValue--fieldNameSpec {
+  font-family: "GothamProRRegular";
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 1rem;
+  color: #727273;
+}
+@media only screen and (max-width: 640px) {
+  :global(.vtex-flex-layout-0-x-flexCol--cardModalMobile) .specificationValue--codiceProdotto--last{
+    display: flex;
+    justify-content: center;
+  }
+}

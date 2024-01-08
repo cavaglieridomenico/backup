@@ -1,0 +1,9 @@
+query shipping($items: [ShippingItem], $postalCode: String, $country: String) {
+  shipping(items: $items, postalCode: $postalCode, country: $country) {
+    logisticsInfo {
+      slas {
+        id
+      }
+    }
+  }
+}

@@ -1,0 +1,260 @@
+{
+  "store.custom#asciugatrice-supreme-care": {
+    "children": [
+      "flex-layout.row#bread-theme",
+      "experimental__visibility-layout#heroBannerAnto",
+      "video#master",
+      //"analytics",
+      "__fold__.experimentalLazyAssets",
+      "experimental__visibility-layout#richTextCentrale",
+      "flex-layout.row#space",
+      "flex-layout.row#BnnrPostillaWCollectionFrigo4PorteBottom1",
+      "flex-layout.row#BnnrPostillaWCollectionFrigo4PorteBottom2",
+      "experimental__visibility-layout#CaruselTextBanner",
+      "flex-layout.row#space",
+      "responsive-layout.desktop#Tab-Active-point",
+      "responsive-layout.mobile#Tab-Active-point",
+      "flex-layout.row#space",
+      "experimental__visibility-layout#listContextInnovazione",
+      "flex-layout.row#space",
+      "experimental__visibility-layout#listImageInnovazione"
+    ]
+  },
+  "responsive-layout.desktop#Tab-Active-point": {
+    "children": ["experimental__visibility-layout#Tab-Active-point"]
+  },
+  "experimental__visibility-layout#Tab-Active-point": {
+    "props": {
+      "visible": true
+    },
+    "children": ["tab-layout#Tab-Active-point"]
+  },
+  "tab-layout#Tab-Active-point": {
+    "children": ["tab-list#Tab-Active-point", "tab-content#Tab-Active-point"],
+    "props": {
+      "blockClass": ["BannerTab", "BannerTabHome"],
+      "defaultActiveTabId": "BannerTab1"
+    }
+  },
+  "tab-list#Tab-Active-point": {
+    "props": {
+      "blockClass": ["bannerTabHome", "bannerTabActivePoint"]
+    },
+    "children": [
+      "tab-list.item#Tab-Active-point1-slider",
+      "flex-layout.row#Tab-Active-point-central-items",
+      "tab-list.item#Tab-Active-point2-slider"
+    ]
+  },
+  "flex-layout.row#Tab-Active-point-central-items": {
+    "props": {
+      "blockClass": "Tab-Active-point-central-items"
+    },
+    "children": [
+      "flex-layout.row#Tab-Active-point-1",
+      "flex-layout.row#Tab-Active-point-2"
+    ]
+  },
+  "flex-layout.row#Tab-Active-point-1": {
+    "props": {
+      "blockClass": "Tab-Active-point-1"
+    },
+    "children": ["image#icon-active-point", "tab-list.item#Tab-Active-point1"]
+  },
+  "flex-layout.row#Tab-Active-point-2": {
+    "props": {
+      "blockClass": "Tab-Active-point-1"
+    },
+    "children": [
+      "image#icon-active-point",
+      "tab-list.item#Tab-Active-pointLast"
+    ]
+  },
+  "image#icon-active-point": {
+    "props": {
+      "src": "/arquivos/active-point-1.png",
+      "blockClass": "icon-active-point"
+    }
+  },
+  "image#image-slider--active-point": {
+    "props": {
+      "src": "/assets/ph-square.jpg",
+      "blockClass": "image-slider-active-point"
+    }
+  },
+  "image#image-bg-slider-active-point": {
+    "props": {
+      "src": "/assets/ph-square.jpg",
+      "blockClass": "image-slider-bg-active-point"
+    }
+  },
+  "tab-list.item#Tab-Active-point1-slider": {
+    "props": {
+      "tabId": "BannerTab1",
+      "label": " ",
+      "defaultActiveTab": true,
+      "blockClass": "backArrowActivePoint"
+    }
+  },
+  "tab-list.item#Tab-Active-point1": {
+    "props": {
+      "tabId": "BannerTab1",
+      "label": "EASYCLEANING",
+      "defaultActiveTab": true,
+      "blockClass": "listItem1ActivePoint"
+    }
+  },
+  "tab-list.item#Tab-Active-pointLast": {
+    "props": {
+      "tabId": "BannerTab2",
+      "label": "CICLO PRE IRON",
+      "blockClass": "listItem2ActivePoint"
+    }
+  },
+  "tab-list.item#Tab-Active-point2-slider": {
+    "props": {
+      "tabId": "BannerTab2",
+      "label": " ",
+      "defaultActiveTab": false,
+      "blockClass": "goNextActivePoint"
+    }
+  },
+  "tab-content#Tab-Active-point": {
+    "props": {
+      "blockClass": ["bannerTab", "bannerTabHome"]
+    },
+    "children": [
+      "tab-content.item#BannerTab-Active-point1",
+      "tab-content.item#BannerTab-Active-point2"
+    ]
+  },
+  "tab-content.item#BannerTab-Active-point1": {
+    "children": ["flex-layout.row#bannerTabContentActivePoint"],
+    "props": {
+      "tabId": "BannerTab1",
+      "blockClass": "TabContent"
+    }
+  },
+  "experimental__visibility-layout#BannerTab1-slider-activePoint": {
+    "children": ["tab-list.item#BannerTab1-slider"]
+  },
+  "experimental__visibility-layout#BannerTab1-slider-back-activePoint": {
+    "children": ["tab-list.item#BannerTab2-slider"]
+  },
+  "tab-content.item#BannerTab-Active-point2": {
+    "children": ["flex-layout.row#bannerTabContentActivePoint"],
+    "props": {
+      "tabId": "BannerTab2",
+      "blockClass": "TabContent"
+    }
+  },
+  "flex-layout.row#bannerTabContentActivePoint": {
+    "props": {
+      "blockClass": ["bannerTabContentBanner", "bannerTabContentActivePoint"]
+    },
+    "children": [
+      "experimental__visibility-layout#imagebannerTabContent",
+      "info-card#bannerTabHome"
+    ]
+  },
+  //Tablet & Mobile
+  "responsive-layout.mobile#Tab-Active-point": {
+    "children": ["experimental__visibility-layout#Tab-Active-point-mobile"]
+  },
+  "experimental__visibility-layout#Tab-Active-point-mobile": {
+    "props": {
+      "visible": true
+    },
+    "children": [
+      // "experimental__visibility-layout#imageTab-Active-point",
+      "slider-layout#Tab-Active-point"
+    ]
+  },
+  "slider-layout#Tab-Active-point": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": false,
+      "showNavigationArrows": "always",
+      "blockClass": ["carousel", "ricambiOriginali", "sliderctivePoint"]
+    },
+    "children": [
+      "flex-layout.row#Tab-Active-point1",
+      "flex-layout.row#Tab-Active-point2"
+    ]
+  },
+  "flex-layout.row#Tab-Active-point1": {
+    "props": {
+      "blockClass": "contentDivActivePoint"
+    },
+    "children": [
+      "flex-layout.row#Tab-Active-point-image",
+      "flex-layout.row#Tab-Active-point-first-row",
+      "flex-layout.row#Tab-Active-point-second-row"
+    ]
+  },
+  "flex-layout.row#Tab-Active-point-image": {
+    "props": {
+      "blockClass": "Tab-Active-point-image"
+    },
+    "children": ["image#image-bg-slider-active-point"]
+  },
+  "flex-layout.row#Tab-Active-point-first-row": {
+    "props": {
+      "blockClass": "bannerTabContentActivePointFirstRow"
+    },
+    "children": ["image#icon-active-point", "rich-text#title-easy-cleaning"]
+  },
+  "flex-layout.row#Tab-Active-point-second-row": {
+    "props": {
+      "blockClass": "bannerTabContentActivePointSecondRow"
+    },
+    "children": [
+      "rich-text#paragraph-easy-cleaning",
+      "image#image-slider--active-point"
+    ]
+  },
+  "flex-layout.row#Tab-Active-point2": {
+    "props": {
+      "blockClass": "contentDivActivePoint"
+    },
+    "children": [
+      "flex-layout.row#Tab-Active-point-image",
+      "flex-layout.row#Tab-Active-point-first-row",
+      "flex-layout.row#Tab-Active-point-second-row"
+    ]
+  },
+  "rich-text#title-easy-cleaning": {
+    "props": {
+      "text": "EASYCLEANING",
+      "blockClass": "title-easy-cleaning"
+    }
+  },
+  "rich-text#paragraph-easy-cleaning": {
+    "props": {
+      "text": "Filtro facile da pulire con soli 3 semplici gesti. Il sistema EasyCleaning esclusivo Hotpoint è l'unica soluzione sul mercato che permette di pulire il filtro del condensatore, senza la necessità di rimuovere totalmente il condensatore e utilizzare altri strumenti.",
+      "blockClass": "paragraph-easy-cleaning"
+    }
+  },
+  "experimental__visibility-layout#imageTab-Active-point": {
+    "props": {
+      "visible": true
+    },
+    "children": ["flex-layout.col#imageTab-Active-point"]
+  },
+  "flex-layout.col#imageTab-Active-point": {
+    "props": {
+      "blockClass": "imageTab-Active-point"
+    },
+    "children": ["image#imageTab-Active-point"]
+  },
+  "image#imageTab-Active-point": {
+    "props": {
+      "src": "assets/ph-vertical.jpg",
+      "blockClass": "imageTab-Active-point"
+    }
+  }
+}

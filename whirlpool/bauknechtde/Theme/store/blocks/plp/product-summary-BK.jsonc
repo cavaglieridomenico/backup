@@ -1,0 +1,521 @@
+{
+  "product-summary.shelf.product-comparison#bauknechtPLP": {
+    "children": ["condition-layout.product#bauknechtPLP"]
+  },
+  "condition-layout.product#bauknechtPLP": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "40"
+          }
+        }
+      ],
+      "matchType": "any",
+      "Then": "flex-layout.row#bundle-layoutPlp",
+      "Else": "flex-layout.row#plpCardBK"
+    }
+  },
+  "flex-layout.row#plpCardBK": {
+    "children": [
+      "flex-layout.col#productImagePLPCard",
+      "flex-layout.col#productInfosPLPCard"
+    ],
+    "props": {
+      "blockClass": ["plpCardBK"]
+    }
+  },
+  /*------------------- LEFT COLUMN ------------------*/
+  "flex-layout.col#productImagePLPCard": {
+    "children": [
+      "promo-countdown#plp",
+      "flex-layout.row#promotionPLPBK",
+      "product-summary-image#bkPLPCard",
+      "flex-layout.row#comparisonWishBKPLP"
+    ],
+    "props": {
+      "blockClass": ["productImagePLPCard"],
+      "width": "30%"
+    }
+  },
+  "promo-countdown#plp": {
+    "title": "Promo Countdown in PLPs",
+    "props": {
+      "blockClass": "promoCountdownPlp"
+    }
+  },
+  "flex-layout.row#promotionPLPBK": {
+    "children": [
+      "vtex.product-highlights@2.x:product-highlights#promotionPLPBK"
+    ],
+    "props": {
+      "blockClass": "promotionPLPBK"
+    }
+  },
+  "vtex.product-highlights@2.x:product-highlights#promotionPLPBK": {
+    "props": {
+      /*   "type": "promotion", */
+      "blockClass": "promotionPLPBK"
+    },
+    "children": ["product-highlight-text#promotionPLPBK"]
+  },
+  "product-highlight-text#promotionPLPBK": {
+    "props": {
+      "message": "{highlightName}"
+      /*  "type": "show" */
+    }
+  },
+  "product-summary-image#bkPLPCard": {
+    "props": {
+      "showBadge": false,
+      "width": 360 /* Image will be 180px but this 360 is used to retrieve a higher quality image */,
+      "height": 360,
+      "blockClass": "productImageBk"
+    }
+  },
+  "flex-layout.row#comparisonWishBKPLP": {
+    "props": {
+      "blockClass": ["comparisonWishBKPLP"],
+      "colSizing": "auto"
+    },
+    "children": [
+      "condition-layout.category#spare-comparison-list"
+      // "flex-layout.col#comparisonWishBKPDP2"
+      // "add-to-list-btn#BKPLP"
+    ]
+  },
+  "product-comparison-block.selector#BKPLP": {
+    "props": {
+      "blockClass": "compareSearchBKPLP"
+    }
+  },
+  "add-to-list-btn#BKPLP": {
+    "props": {
+      "blockClass": "wishListBKPLP"
+    }
+  },
+  /*------------------- RIGHT COLUMN ------------------*/
+  "flex-layout.col#productInfosPLPCard": {
+    "children": [
+      "condition-layout.product#blackFridayPopupPLP",
+      "flex-layout.row#titleAndRatingBKPLP",
+      "flex-layout.row#addSerivesAndBKPLP"
+    ],
+    "props": {
+      "blockClass": ["productInfosPLPCard"],
+      "width": "70%"
+    }
+  },
+  //UPPER ROW
+  "flex-layout.row#titleAndRatingBKPLP": {
+    "props": {
+      "blockClass": ["titleAndRatingBKPLPRow"],
+      "colSizing": "100%"
+    },
+    "children": ["flex-layout.col#titleAndRatingBKPLP"]
+  },
+  "condition-layout.product#blackFridayPopupPLP": {
+    "title": "[CONDITIONAL] - Popup Black Friday PLP",
+    "props": {
+      "conditions": [
+        {
+          "subject": "productClusters",
+          "arguments": {
+            "id": "314"
+          }
+        }
+      ],
+      "Then": "rich-text#blackFridayPopupPLP"
+    }
+  },
+  "rich-text#blackFridayPopupPLP": {
+    "title": "[TEXT] - Popup Black Friday PLP",
+    "props": {
+      "text": "Black Friday Deals ![Info](https://cdn.pixabay.com/photo/2017/03/17/05/20/info-2150938_960_720.png)",
+      "blockClass": ["blackFridayPopup", "blackFridayPopupPLP"]
+    }
+  },
+
+  "flex-layout.col#titleAndRatingBKPLP": {
+    "props": {
+      "blockClass": ["titleAndRatingBKPLPCol"],
+      "colSizing": "auto"
+    },
+    "children": [
+      "flex-layout.row#titleBKPLP",
+      "flex-layout.row#BVandStockBKPLP"
+    ]
+  },
+  "flex-layout.row#titleBKPLP": {
+    "props": {
+      "blockClass": ["titleBKPLPRow"],
+      "colSizing": "auto"
+    },
+    "children": ["vtex.store-components:product-name#bkPLP"]
+  },
+  "vtex.store-components:product-name#bkPLP": {
+    "props": {
+      "tag": "div",
+      "displayMode": "linkToProductPage",
+      "blockClass": "summaryNameBkPLP"
+    }
+  },
+  "flex-layout.row#BVandStockBKPLP": {
+    "props": {
+      "blockClass": ["BVandStockBKPLPRow"]
+      // "colSizing": "auto"
+    },
+    "children": [
+      "flex-layout.col#rating-searchBK",
+      "flex-layout.col#stockBadgeBK"
+    ]
+  },
+  "flex-layout.col#rating-searchBK": {
+    "props": {
+      "blockClass": ["rating-searchBKCol"],
+      "width": "60%"
+    },
+    "children": ["product-rating-inline.bazaarvoice"]
+  },
+  "flex-layout.col#stockBadgeBK": {
+    "title": "[COL] - Product's availability Badge",
+    "props": {
+      "blockClass": ["stockBadgeBKCol", "labelEndAligned"],
+      "width": "40%"
+    },
+    "children": ["condition-layout.product#isProductSellableBK"]
+  },
+  "condition-layout.product#isProductSellableBK": {
+    "title": "[CONDITION] - Product's availability",
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "sellable",
+            "value": "true"
+          }
+        }
+      ],
+      "Then": "condition-layout.product#isProductAvailableBK",
+      "Else": "rich-text#productNotSellableLabel"
+    }
+  },
+  /*"rich-text#productNotSellableLabel": {
+    "props": {
+      "text": "Nicht im Bauknecht Online Shop verfügbar",
+      "blockClass": [
+        "productNotSellableLabel",
+        "stockBadges"
+      ]
+    }
+  },*/
+  "rich-text#productNotSellableLabel": {
+    "title": "[TEXT] - Product's availability (Not sellable)",
+    "props": {
+      "text": "![](assets/icons/grey_dot.svg) Nicht im Bauknecht Online Shop verfügbar",
+      "blockClass": ["productNotSellableLabel", "stockBadges"]
+    }
+  },
+  "condition-layout.product#isProductAvailableBK": {
+    "title": "[CONDITION] - Product's availability",
+    "props": {
+      "conditions": [
+        {
+          "subject": "isProductAvailable"
+        }
+      ],
+      "Then": "condition-layout.product#isFewPiecesBK",
+      "Else": "rich-text#productNotInStockLabel"
+    }
+  },
+  "rich-text#productNotInStockLabel": {
+    "title": "[TEXT] - Product's availability (Not in stock)",
+    "props": {
+      "text": "![](assets/icons/red_dot.svg) Zurzeit nicht im Shop verfügbar",
+      "blockClass": ["productNotInStockLabel", "stockBadges"]
+    }
+  },
+  "condition-layout.product#isFewPiecesBK": {
+    "title": "[CONDITION] - Product's availability",
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "showFewPiecesAlert",
+            "value": "true"
+          }
+        }
+      ],
+      "Then": "rich-text#productFewPiecesLabel",
+      "Else": "rich-text#productInStockLabel"
+    }
+  },
+  "rich-text#productFewPiecesLabel": {
+    "title": "[TETX] - Product's availability (Few piece)",
+    "props": {
+      "text": "![](assets/icons/orange_dot.svg) Nur noch wenige verfügbar",
+      "blockClass": ["productFewPiecesLabel", "stockBadges"]
+    }
+  },
+  /*"rich-text#productInStockLabel": {
+    "props": {
+      "text": "Auf Lager: Lieferzeit 4-6 Werktage",
+      "blockClass": [
+        "productInStockLabel",
+        "stockBadges"
+      ]
+    }
+  },*/
+  "rich-text#productInStockLabel": {
+    "title": "[TEXT] - Product's availability (In stock)",
+    "props": {
+      "text": "![](assets/icons/green_dot.svg) Auf Lager: Lieferzeit 4-6 Werktage",
+      "blockClass": ["productInStockLabel", "stockBadges"]
+    }
+  },
+  //LOWER ROW
+  "flex-layout.row#addSerivesAndBKPLP": {
+    "props": {
+      "blockClass": ["addSerivesAndBKPLPRow"]
+      // "colSizing": "auto"
+    },
+    "children": [
+      "flex-layout.col#keyFeauturesAndBadges",
+      "flex-layout.col#addServices"
+    ]
+  },
+  //KEY FEATURES AND BADGES COL
+  // "condition-layout.product#keyFeauturesAndBadges": {
+  //   "props": {
+  //     "conditions": [
+  //       {
+  //         "subject": "SalesFeature",
+  //         "arguments": {}
+  //       }
+  //     ],
+  //     "Then": null,
+  //     "Else": "flex-layout.row#keyFeaturesBKPLP"
+  //   }
+  // },
+  "flex-layout.col#keyFeauturesAndBadges": {
+    "props": {
+      "blockClass": ["keyFeauturesAndBadgesCol"],
+      "width": "45%",
+      "padding": "1rem"
+    },
+    "children": [
+      "flex-layout.row#keyFeaturesBKPLP",
+      // "flex-layout.row#keyFeaturesBKPLP",
+      "flex-layout.row#energyLabelAndBadgeBKPLP"
+    ]
+  },
+  //KEY FEATURES ROW
+  "flex-layout.row#keyFeaturesBKPLP": {
+    "props": {
+      "blockClass": ["keyFeaturesBKPLPRow"]
+      // "colSizing": "auto"
+    },
+    "children": ["product-specification-group#keyFeatures"]
+  },
+  "product-specification-group#keyFeatures": {
+    "children": ["product-specification#keyFeatures"],
+    "props": {
+      "filter": {
+        "specificationGroups": ["SalesFeature"],
+        "type": "show"
+      }
+    }
+  },
+  "product-specification#keyFeatures": {
+    "children": ["product-specification-values#keyFeatures"]
+  },
+  "product-specification-values#keyFeatures": {
+    "children": ["product-specification-text#keyFeatures"]
+  },
+  "product-specification-text#keyFeatures": {
+    "props": {
+      "message": "{specificationValue}",
+      "blockClass": ["keyFeaturesValue"]
+    }
+  },
+  //BADGES ROW
+  "flex-layout.row#energyLabelAndBadgeBKPLP": {
+    "props": {
+      "blockClass": ["energyLabelAndBadgeBKPLP"],
+      "colSizing": "auto"
+    },
+    "children": [
+      "flex-layout.col#EnergyLabelCol",
+      "flex-layout.col#10YWLogoCol",
+      "flex-layout.col#reddotPrizeBadgeCol"
+    ]
+  },
+  "flex-layout.col#EnergyLabelCol": {
+    "props": {
+      "blockClass": ["EnergyLabelCol"]
+    },
+    "children": ["condition-layout.product#energy-label-available"]
+  },
+  "condition-layout.product#energy-label-available": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "EnergyLogo_image"
+          }
+        }
+      ],
+      "Then": "condition-layout.product#etichetta-image"
+    }
+  },
+  "condition-layout.product#etichetta-image": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "energy-label"
+          }
+        }
+      ],
+      "Then": "flex-layout.row#old-label",
+      "Else": "flex-layout.row#new-label" //"image-from-specification#EtichettaEnergeticaNew"
+    }
+  },
+  "flex-layout.row#new-label": {
+    "props": {
+      "blockClass": "newEnergyLabelRow"
+      // "colSizing": "auto"
+    },
+    "children": [
+      "image-from-specification#EtichettaEnergeticaNew",
+      "link.product#newEnergyLabelLink"
+    ]
+  },
+  "flex-layout.row#old-label": {
+    "props": {
+      "blockClass": "oldEnergyLabelRow"
+    },
+    "children": [
+      "image-from-specification#EtichettaEnergetica",
+      "link.product#oldEnergyLabelLink"
+    ]
+  },
+  "image-from-specification#EtichettaEnergeticaNew": {
+    "props": {
+      "specificationName": "EnergyLogo_image",
+      "imageLink": "Specification.new-energy-label",
+      "target": "_blank"
+    }
+  },
+  "image-from-specification#EtichettaEnergetica": {
+    "props": {
+      "specificationName": "EnergyLogo_image",
+      "imageLink": "Specification.energy-label",
+      "target": "_blank"
+    }
+  },
+  "link.product#newEnergyLabelLink": {
+    "props": {
+      "label": "Produktdatenblatt",
+      "href": "{specificationGroups.Document.specifications.product-information-sheet}",
+      "blockClass": ["typoLinkPDP", "fitContent", "linkPdfPLPBK"],
+      "target": "_blank",
+      "escapeLinkRegex": "[%+]"
+    }
+  },
+  "link.product#oldEnergyLabelLink": {
+    "props": {
+      "label": "Produktdatenblatt",
+      "href": "{specificationGroups.Document.specifications.product-fiche}",
+      "blockClass": ["typoLinkPDP", "fitContent", "linkPdfPLPBK"],
+      "target": "_blank",
+      "escapeLinkRegex": "[%+]"
+    }
+  },
+  //PRIZE BADGE
+  "flex-layout.col#10YWLogoCol": {
+    "props": {
+      "blockClass": ["10YWBadgeCol"]
+    },
+    "children": [
+      "condition-layout.product#10YWLogo",
+      "condition-layout.product#banner00"
+    ]
+  },
+  "flex-layout.col#reddotPrizeBadgeCol": {
+    "props": {
+      "blockClass": ["PrizeBadgeCol"]
+    },
+    "children": [
+      // "condition-layout.product#reddotPrize"
+      "awarded-logos"
+    ]
+  },
+  //ADDITIONAL SERVICES COL
+  "flex-layout.col#addServices": {
+    "props": {
+      "blockClass": ["addServicesCol"],
+      "width": "55%"
+    },
+    "children": [
+      "condition-layout.category#isAccessoryAddServicesPLP",
+      "flex-layout.row#priceRowPLPBK"
+    ]
+  },
+  //ADD SERVICES
+  "flex-layout.row#additionalServicesPLPBK": {
+    "props": {
+      "blockClass": "additionalServicesPLPBK"
+    },
+    "children": ["flex-layout.col#addServicesSpecs"]
+  },
+  "flex-layout.col#addServicesSpecs": {
+    "children": ["print-additional-services"],
+    "props": {
+      "blockClass": ["specProps", "addServicesProps"]
+    }
+  },
+  "print-specification#addServices": {
+    "props": {
+      "specificationToPrint": [
+        {
+          "specGroup": "Other",
+          "specAttribute": "additionalServices"
+        }
+      ],
+      "isPlpAddServices": true
+    }
+  },
+  //PRICE ROW
+  "flex-layout.row#priceRowPLPBK": {
+    "props": {
+      "blockClass": "priceRowPLPBK",
+      "colSizing": "auto"
+    },
+    "children": [
+      "flex-layout.col#savingsPriceCol",
+      "flex-layout.col#sellingPriceCol"
+    ]
+  },
+  "flex-layout.col#savingsPriceCol": {
+    "props": {
+      "blockClass": ["savingsPriceCol"],
+      "width": "50%"
+    },
+    "children": [
+      "condition-layout.product#showSavingsPriceUnavailableProdPLPBK"
+    ]
+  },
+  "flex-layout.col#sellingPriceCol": {
+    "props": {
+      "blockClass": ["sellingPriceCol"],
+      "width": "50%"
+    },
+    "children": ["condition-layout.product#showPriceUnavailableProdPLPBK"]
+  }
+}

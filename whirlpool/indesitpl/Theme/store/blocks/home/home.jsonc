@@ -1,0 +1,497 @@
+{
+  "store.home": {
+    "blocks": [
+      // "analytics#home",
+      "responsive-layout.mobile#homepage",
+      "responsive-layout.desktop#homepage"
+    ]
+  },
+  "responsive-layout.mobile#homepage": {
+    "children": ["flex-layout.row#home-page-mobile"],
+    "props": {
+      "blockClass": "homepage-container"
+    }
+  },
+  "responsive-layout.desktop#homepage": {
+    "children": ["flex-layout.row#all-homepage"],
+    "props": {
+      "blockClass": "homepage-container"
+    }
+  },
+  "flex-layout.row#all-homepage": {
+    "children": ["flex-layout.col#all-homepage"]
+  },
+  "flex-layout.col#all-homepage": {
+    "children": [
+      "hreflang-home-component",
+      "flex-layout.row#home-page-slider-desk",
+      "flex-layout.row#images-menu",
+      "homepage-animation#first",
+      "flex-layout.row#info-pillars",
+      "homepage-double-animation#double",
+      // "homepage-animation#second",
+      // "homepage-animation#third",
+      "flex-layout.col#double-banner-hp-desktop",
+      "flex-layout.col#seo-text-hp"
+    ],
+    "props": {
+      "blockClass": "images-menu-all-container"
+    }
+  },
+  /* ---------------------------------------- SLIDER HOME -------------------------------- */
+  "flex-layout.row#home-page-slider-desk": {
+    "children": ["analytics-wrapper#home-page-slider"]
+  },
+  "analytics-wrapper#home-page-slider": {
+    "title": "Analtics Wrapper Slider Top",
+    "props": {
+      "isHpSlider": true,
+      "propsAnalytics": {
+        "analyticsProperties": "provide",
+        "nameEvent": "slider_click",
+        "name": "sliderClick",
+        // "analyticsProperties": "provide",
+        // "nameEvent": "redeemAPromo",
+        // "name": "promo",
+        "data": [{}]
+      }
+    },
+    "children": ["slider-layout#text-test"]
+  },
+  //"home-page-slider-desk": {},
+  "slider-layout#text-test": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "showNavigationArrows": "desktopOnly",
+      "showPaginationDots": "mobileOnly",
+      "blockClass": "carousel"
+    },
+    "children": [
+      "flex-layout.row#slide-1",
+      "flex-layout.row#slide-2",
+      "flex-layout.row#slide-3",
+      "flex-layout.row#slide-4"
+    ]
+  },
+  /* --- SLIDE 1 --- */
+  "flex-layout.row#slide-1": {
+    "props": {
+      "blockClass": "home-slider"
+    },
+    "children": [
+      "flex-layout.row#image-container-slide-1",
+      "flex-layout.col#text-slide-1"
+    ]
+  },
+  "flex-layout.row#image-container-slide-1": {
+    "props": {
+      "blockClass": ["image-container-slide", "container-slide-1"]
+    }
+  },
+  "flex-layout.col#text-slide-1": {
+    "props": {
+      "blockClass": "text-slide"
+    },
+    "children": ["rich-text#title-slide-1", "rich-text#desc-slide-1"]
+  },
+  "rich-text#title-slide-1": {
+    "props": {
+      "text": "# Indesit - jesteśmy tu dla Ciebie",
+      "blockClass": "title-slide"
+    }
+  },
+  "rich-text#desc-slide-1": {
+    "props": {
+      "text": "Zaufało nam już kilka pokoleń, Indesit to marka warta zaufania.",
+      "blockClass": "desc-slide"
+    }
+  },
+  /* --- SLIDE 2 --- */
+  "flex-layout.row#slide-2": {
+    "props": {
+      "blockClass": "home-slider"
+    },
+    "children": [
+      "flex-layout.row#image-container-slide-2",
+      "flex-layout.col#text-slide-2"
+    ]
+  },
+  "flex-layout.row#image-container-slide-2": {
+    "props": {
+      "blockClass": ["image-container-slide", "container-slide-2"]
+    }
+  },
+  "flex-layout.col#text-slide-2": {
+    "props": {
+      "blockClass": "text-slide"
+    },
+    "children": ["rich-text#title-slide-2", "rich-text#desc-slide-2"]
+  },
+  "rich-text#title-slide-2": {
+    "props": {
+      "text": "# Produkty, którym możesz zaufać",
+      "blockClass": "title-slide"
+    }
+  },
+  "rich-text#desc-slide-2": {
+    "props": {
+      "text": "Nasze produkty są praktyczne, godne zaufania i łatwe w użyciu. Wspierają w życiu codziennym każdego dnia.",
+      "blockClass": "desc-slide"
+    }
+  },
+  /* --- SLIDE 3 --- */
+  "flex-layout.row#slide-3": {
+    "props": {
+      "blockClass": "home-slider"
+    },
+    "children": [
+      "flex-layout.row#image-container-slide-3",
+      "flex-layout.col#text-slide-3"
+    ]
+  },
+  "flex-layout.row#image-container-slide-3": {
+    "props": {
+      "blockClass": ["image-container-slide", "container-slide-3"]
+    }
+  },
+  "flex-layout.col#text-slide-3": {
+    "props": {
+      "blockClass": "text-slide"
+    },
+    "children": ["rich-text#title-slide-3", "rich-text#desc-slide-3"]
+  },
+  "rich-text#title-slide-3": {
+    "props": {
+      "text": "# Bądź gotowy w mgnieniu oka",
+      "blockClass": "title-slide"
+    }
+  },
+  "rich-text#desc-slide-3": {
+    "props": {
+      "text": "Dzięki **technologiom Indesit Push&Go oraz Turn&Go** wystarczy jeden ruch, żeby każdego dnia w spokoju zarządzać pracami domowymi.",
+      "blockClass": "desc-slide"
+    }
+  },
+  /* --- SLIDE 4 --- */
+  "flex-layout.row#slide-4": {
+    "props": {
+      "blockClass": "home-slider"
+    },
+    "children": [
+      "flex-layout.row#image-container-slide-4",
+      "flex-layout.col#text-slide-4"
+    ]
+  },
+  "flex-layout.row#image-container-slide-4": {
+    "props": {
+      "blockClass": ["image-container-slide", "container-slide-4"]
+    }
+  },
+  "flex-layout.col#text-slide-4": {
+    "props": {
+      "blockClass": "text-slide"
+    },
+    "children": [
+      "rich-text#title-slide-4",
+      "rich-text#desc-slide-4",
+      "flex-layout.row#btn-container-slide-4"
+    ]
+  },
+  "rich-text#title-slide-4": {
+    "props": {
+      "text": "# Gotowanie stanie się rodzinną zabawą",
+      "blockClass": ["title-slide", "title-slide-4"]
+    }
+  },
+  "rich-text#desc-slide-4": {
+    "props": {
+      "text": "Z piekarnikami Turn&Go Aria, gotujesz łatwiej każdego dnia.",
+      "blockClass": "desc-slide"
+    }
+  },
+  "flex-layout.row#btn-container-slide-4": {
+    "props": {
+      "blockClass": "btn-container-slide"
+    },
+    "children": ["button-primary#btn-slide-4"]
+  },
+  "button-primary#btn-slide-4": {
+    "props": {
+      "width": "209px",
+      "text": "Odkryj więcej",
+      "href": "/produkty/gotowanie/piekarniki"
+    }
+  },
+  /* ------------------------------------------------------------------------ */
+  "flex-layout.col#placeholder": {
+    "children": ["flex-layout.row#images-menu"]
+  },
+  "homepage-animation#first": {
+    "props": {
+      "id": "first",
+      "blockClass": "svg_container_first"
+    }
+  },
+  "homepage-double-animation#double": {
+    "props": {
+      "id": "second",
+      "id2": "third",
+      "blockClass": "svg_container_second"
+    }
+  },
+  "homepage-animation#second": {
+    "props": {
+      "id": "second",
+      "titleText": "Votre solution pour <br/>économiser du temps, de <br/>l'argent et des efforts.",
+      "subtitleText": "Toujours prêts, intuitifs et faciles<br/> à utiliser, nos appareils vous offrent<br/> exactement ce dont vous avez besoin.",
+      "isLeft": true,
+      "blockClass": "svg_container_second"
+    }
+  },
+  "homepage-animation#third": {
+    "props": {
+      "id": "third",
+      "titleText": "Simple à utiliser,<br/> performant et au<br/> design harmonieux.",
+      "subtitleText": "Des solutions pour <br/>tous les jours pour<br/> vous simplifier la vie.",
+      "isLeft": false,
+      "blockClass": "svg_container_third"
+    }
+  },
+  /*------------------------------- PILLARS -----------------------------------------*/
+  "flex-layout.row#info-pillars": {
+    "props": {
+      "preventHorizontalStretch": true,
+      "blockClass": "info-pillars"
+    },
+    "children": [
+      "flex-layout.col#do-it-together",
+      "flex-layout.col#product-columns"
+    ]
+  },
+  /*------------------------------- DO IT TOGETHER -----------------------------------------*/
+  "flex-layout.col#do-it-together": {
+    "children": [
+      "image#do-it-together-img",
+      "rich-text#do-it-together",
+      "link#discover-more-home-page"
+    ],
+    "props": {
+      "width": "50%",
+      "blockClass": "do-it-together-container"
+    }
+  },
+  "image#do-it-together-img": {
+    "props": {
+      "src": "assets/do-it-together.png",
+      "blockClass": "image-do-it-together"
+    }
+  },
+  "rich-text#do-it-together": {
+    "props": {
+      "text": "Łatwe w użytkowaniu dla każdego członka rodziny. \n #DoItTogether",
+      "blockClass": "do-it-together-body-text"
+    }
+  },
+  "link#discover-more-home-page": {
+    "props": {
+      "blockClass": "discover-more-link-home",
+      "label": "Dowiedz się więcej",
+      "href": "/do-it-together",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "cta_click",
+      "isPrevent": false,
+      "analyticsType": "do-it-together",
+      "clickArea": "main",
+      "checkpoint": "1"
+    }
+  },
+  /* ------------------- CARD HOME ----------------------- */
+  "flex-layout.col#product-columns": {
+    "props": {
+      "width": "50%",
+      "blockClass": "product-columns-home"
+    },
+    "children": ["card-product-home"]
+  },
+  "card-product-home": {
+    "props": {
+      "collectionID": "138"
+    }
+  },
+  /* ------------------- BANNER ----------------------- */
+  "flex-layout.col#double-banner-hp-desktop": {
+    "children": [
+      "flex-layout.row#containerBannerNEL"
+      /* "flex-layout.row#containerBannerNEL-2" */
+    ]
+  },
+  /* ------------------- NEL BANNER ----------------------- */
+  "flex-layout.row#containerBannerNEL": {
+    "props": {
+      "blockClass": "containerBannerLandingStyle-home"
+    },
+    "children": [
+      "flex-layout.col#imageContainerBannerNEL",
+      "flex-layout.col#descriptionAndButtonContainerNEL"
+    ]
+  },
+  "flex-layout.col#imageContainerBannerNEL": {
+    "props": {
+      "blockClass": "imageContainerBannerNELStyle"
+    },
+    "children": ["image#imageBannerNEL"]
+  },
+  "image#imageBannerNEL": {
+    "props": {
+      "src": "assets/NEL_desktop.png",
+      "blockClass": "imageBannerNELStyle"
+    }
+  },
+  "flex-layout.col#descriptionAndButtonContainerNEL": {
+    "props": {
+      "blockClass": "descriptionAndButtonContainerLandingStyle"
+    },
+    "children": [
+      "flex-layout.row#titleContainerBannerNEL",
+      "flex-layout.row#descriptionContainerBannerNEL"
+      /*  "flex-layout.row#buttonContainerBannerNEL" */
+    ]
+  },
+  "flex-layout.row#titleContainerBannerNEL": {
+    "props": {
+      "blockClass": "titleContainerBannerLandingStyle"
+    },
+    "children": ["rich-text#titleNEL"]
+  },
+  "rich-text#titleNEL": {
+    "props": {
+      "blockClass": "titleLandingStyle",
+      "text": "Nowe klasy efektywności energetycznej"
+    }
+  },
+  "flex-layout.row#descriptionContainerBannerNEL": {
+    "props": {
+      "blockClass": "descriptionContainerBannerLandingStyle"
+    },
+    "children": ["rich-text#descriptionNEL", "link#buttonNEL"]
+  },
+  "rich-text#descriptionNEL": {
+    "props": {
+      "blockClass": "descriptionLandingStyle",
+      "text": "W marcu 2021 r. wprowadzono nowe etykiety energetyczne ze zmienionymi klasami efektywności energetycznej dla urządzeń gospodarstwa domowego. Tu znajdziesz wszystkie istotne informacje na ten temat."
+    }
+  },
+  "flex-layout.row#buttonContainerBannerNEL": {
+    "props": {
+      "blockClass": "buttonContainerBannerLandingStyle"
+    },
+    "children": []
+  },
+  "link#buttonNEL": {
+    "props": {
+      "blockClass": ["discover-more-link-home", "button-NEL"],
+      "label": "Dowiedz się więcej",
+      "href": "/landings/nowe-klasy-efektywnosci-energetycznej",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "cta_click",
+      "isPrevent": false,
+      "analyticsType": "efektywnosci-energetycznej",
+      "clickArea": "main",
+      "checkpoint": "2"
+    }
+    //"children": ["button-primary#moreInfo"]
+  },
+
+  /* ------------------- NEL BANNER 2----------------------- */
+
+  "flex-layout.row#containerBannerNEL-2": {
+    "props": {
+      "blockClass": "containerBannerLandingStyle-home"
+    },
+    "children": ["flex-layout.col#car-container-banner"]
+  },
+  "flex-layout.col#car-container-banner": {
+    "children": [
+      "flex-layout.row#row-banner-image-and-description",
+      "flex-layout.row#container-banner-text-bg"
+    ]
+  },
+  "flex-layout.row#row-banner-image-and-description": {
+    "children": [
+      "flex-layout.col#container-banner-description",
+      "flex-layout.col#banner-image-container-desktop"
+    ]
+  },
+  /* ------------------------------------ */
+  "flex-layout.row#container-banner-text-bg": {
+    "props": {
+      "blockClass": "titleContainerBannerLandingStyle-reverted"
+    },
+    "children": ["rich-text#text-bg-desktop"]
+  },
+  "rich-text#text-bg-desktop": {
+    "props": {
+      "blockClass": "titleLandingStyle",
+      "text": ""
+    }
+  },
+  "flex-layout.col#banner-image-container-desktop": {
+    "children": ["image#imageBannerNEL-2"]
+  },
+  "image#imageBannerNEL-2": {
+    "props": {
+      "src": "assets/banner-promo-home.jpg",
+      "blockClass": "imageBannerNELStyle-2"
+    }
+  },
+  /* ------------------------------------ */
+  "flex-layout.col#container-banner-description": {
+    "children": [
+      "rich-text#description-banner-desktop",
+      "flex-layout.row#row-banner-button-desktop"
+      // "link#buttonNEL-2"
+      // "rich-text#banner-button-desktop"
+    ]
+  },
+  "rich-text#description-banner-desktop": {
+    "props": {
+      "blockClass": "description-banner-desktop",
+      "text": "Soddisfatti o rimborsati! acquista un'asciugatrice Indesit in promozione e provala fino a 30 giorni."
+    }
+  },
+  "flex-layout.row#row-banner-button-desktop": {
+    "props": {
+      "blockClass": "banner-container-button-desktop"
+    },
+    "children": ["link#buttonNEL-2"]
+  },
+  "link#buttonNEL-2": {
+    "props": {
+      "href": "https://promozioniindesit.it/"
+    },
+    "children": ["button-primary#moreInfo"]
+  },
+  "flex-layout.col#seo-text-hp": {
+    "props": {
+      "blockClass": "seo-text-hp-style"
+    },
+    "children": ["rich-text#seo-text-hp-welcome", "rich-text#seo-text-hp-text"]
+  },
+  "rich-text#seo-text-hp-welcome": {
+    "props": {
+      "blockClass": "bottom-seo-text",
+      "text": "Witamy na stronie Indesit"
+    }
+  },
+  "rich-text#seo-text-hp-text": {
+    "props": {
+      "blockClass": "bottom-seo-text",
+      "text": "Domu dużych i małych urządzeń domowych, które zapewniają rozwiązania codziennych potrzeb Twojego domu i kuchni. Odkryj szeroką gamę stylowych i energooszczędnych urządzeń domowych z inteligentnymi technologiami i wyjątkowym designem. Nasza oferta pralek, lodówek, kuchenek mikrofalowych, zmywarek i wielu innych urządzeń gospodarstwa domowego odpowiada na wszelkie potrzeby Twojej rodziny. Niezależnie od tego, czy masz mało miejsca w domu, czy inne też specjalne wymagania, projektujemy nasze urządzenia tak, aby sprostać Twoim potrzebom. Jeśli potrzebujesz pomocy przy wyborze odpowiedniego urządzenia do Twojego domu, przejrzyj nasze specjalne poradniki dla kupujących w sekcji Life Proof. Znajdziesz tam wskazówki posortowane według obszarów zainteresowania, takich jak gotowanie, chłodzenie, zmywanie, czy pranie. Firma Indesit jest dumna z tego, że może dostarczyć swoim klientom wysokiej jakości obsługę i pomoc w wyborze odpowiedniego urządzenia. Jeśli potrzebujesz pomocy, możesz tu umówić wizytę naszego technika serwisowego lub przejrzeć nasze instrukcje rozwiązywania problemówo oraz dokumentację obsługi urządzeń. Możesz również udać się do naszego internetowego sklepu z częściami zamiennymi, aby zakupić nowe części."
+    }
+  }
+}

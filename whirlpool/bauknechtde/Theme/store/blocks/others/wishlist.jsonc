@@ -1,0 +1,70 @@
+{
+  "my-account-link.wishlist-link": {
+    "title": "[LINK] - [MID] - My-Account Wishlist Menu Link",
+    "props": {
+      "label": "Wunschliste"
+    }
+  },
+  "my-account-page.wishlist-page": {
+    "title": "[PAGE] - [] - My-Account Wishlist Page",
+    "children": [
+      "link#backWishlist",
+      "flex-layout.row#top",
+      "list-context.wishlist"
+    ]
+  },
+  "store.wishlist": {
+    "blocks": [
+      "link#backWishlist",
+      "flex-layout.row#top",
+      "list-context.wishlist"
+    ]
+  },
+  "link#backWishlist": {
+    "title": "[LINK] - [TOP] - Wishlist Back to Profile Link",
+    "props": {
+      "href": "#/profile",
+      "label": "Zurück",
+      "blockClass": "backWishlist"
+    }
+  },
+  "flex-layout.row#top": {
+    "title": "[ROW] - [TOP] - Wishlist Title Container",
+    "children": ["flex-layout.col#title"]
+  },
+  "flex-layout.col#title": {
+    "title": "[COL] - [TOP] - Wishlist Title Container",
+    "children": ["rich-text#titleWhish"],
+    "props": {
+      "blockClass": "titleWishlist",
+      "preventVerticalStretch": true
+    }
+  },
+  "rich-text#titleWhish": {
+    "title": "[TEXT] - [TOP] - Wishlist Title Text",
+    "props": {
+      "text": "## Wunschliste",
+      "blockClass": "titleWishlist"
+    }
+  },
+  "list-context.wishlist": {
+    "title": "[CONTEXT] - [MID] - Wishlist Slider Context",
+    "blocks": ["product-summary.shelf#wishlistCarousel"],
+    "children": ["slider-layout-whl#wishlist"]
+  },
+  "slider-layout-whl#wishlist": {
+    "title": "[LAYOUT] - [MID] - Wishlist Slider",
+    "props": {
+      "itemsPerPage": {
+        "desktop": 5,
+        "tablet": 2,
+        "phone": 1
+      },
+      "infinite": true,
+      "fullWidth": false,
+      "blockClass": ["shelf", "wishlistSlider"],
+      "showNavigationArrows": "desktopOnly",
+      "showPaginationDots": "mobileOnly"
+    }
+  }
+}

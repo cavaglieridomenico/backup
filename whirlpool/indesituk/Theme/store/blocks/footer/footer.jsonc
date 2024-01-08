@@ -1,0 +1,320 @@
+{
+  /* ---------------------- FOOTER ---------------------------- */
+  "footer": {
+    "blocks": ["footer-layout.desktop", "footer-layout.mobile"]
+  },
+  /* ---------------------- DESKTOP ---------------------------- */
+  "footer-layout.desktop": {
+    "props": {
+      "blockClass": "footer-container-desktop"
+    },
+    "children": ["flex-layout.row#footer-row"]
+  },
+  /* ---------------------- FLEX LAYOUT ---------------------------- */
+  "flex-layout.row#footer-row": {
+    "children": ["vtex.menu@2.x:menu#footer-menu", "flex-layout.col#follow-us"],
+    "props": {
+      "preventHorizontalStretch": true,
+      "blockClass": "footerRowDesktop"
+    }
+  },
+  "flex-layout.col#follow-us": {
+    "props": {
+      "blockClass": "follow-us-container"
+    },
+    "children": ["flex-layout.row#follow-us-row"]
+  },
+  /* ---------------------- MENU ITEM LABELS ---------------------------- */
+  "vtex.menu@2.x:menu#footer-menu": {
+    "props": {
+      "blockClass": "footerMenu"
+    },
+    "children": [
+      //"menu-item#store-locator",
+      //"menu-item#dolt-together",
+      /*  "menu-item#faq-footer", */
+      //"menu-item#support",
+      //"menu-item#legal-issues",
+      //"menu-item#safety-notices"
+      "link#footerMenu_01-item_01",
+      "link#footerMenu_01-item_02",
+      "link#footerMenu_01-item_03",
+      "link#footerMenu_01-item_04",
+      "link#footerMenu_01-item_05",
+      "link#footerMenu_01-item_06"
+    ]
+  },
+  /* ---------------------- FOLLOW US ROW ---------------------------- */
+  "flex-layout.row#follow-us-row": {
+    "props": {
+      "preventHorizontalStretch": true
+    },
+    "children": ["rich-text#follow-us-text", "social-networks"]
+  },
+  /* ---------------------- FOLLOW US ---------------------------- */
+  "rich-text#follow-us-text": {
+    "props": {
+      "text": "Follow us",
+      "blockClass": "followUsText"
+    }
+  },
+  /* ---------------------- SOCIAL NETWORKS ---------------------------- */
+  "social-networks": {
+    "props": {
+      "blockClass": "social-icons",
+      "socialNetworks": [
+        {
+          "name": "Facebook",
+          "url": "https://www.facebook.com/IndesitUK/",
+          "target": "_blank"
+        },
+        {
+          "name": "Instagram",
+          "url": "https://www.instagram.com/indesituk/",
+          "target": "_blank"
+        },
+        {
+          "name": "Twitter",
+          "url": "https://twitter.com/IndesitUK",
+          "target": "_blank"
+        },
+        {
+          "name": "Youtube",
+          "url": "https://www.youtube.com/channel/UCM7lOO-oHvxmET-aQ7zZ_nA",
+          "target": "_blank"
+        }
+      ]
+    }
+  },
+  /* ---------------------- MOBILE ---------------------------- */ /* BREAK POINT DA 1025 PX */
+  "footer-layout.mobile": {
+    "props": {
+      "blockClass": "footer-container-mobile"
+    },
+    "children": ["flex-layout.row#footer-row-mobile"]
+  },
+  /* ---------------------- FLEX LAYOUT ---------------------------- */
+  "flex-layout.row#footer-row-mobile": {
+    "children": [
+      "flex-layout.col#links-mobile",
+      "flex-layout.col#follow-us-mobile"
+    ],
+    "props": {
+      "preventHorizontalStretch": true,
+      "blockClass": "footerRowMobile"
+    }
+  },
+  "flex-layout.col#links-mobile": {
+    "props": {
+      "blockClass": "links-footer"
+    },
+    "children": ["flex-layout.row#links-row-mobile"]
+  },
+  "flex-layout.col#follow-us-mobile": {
+    "props": {
+      "blockClass": "follow-us-footer"
+    },
+    "children": ["flex-layout.row#follow-us-row-mobile"]
+  },
+  /* ---------------------- LINKS ROW ---------------------------- */
+  "flex-layout.row#links-row-mobile": {
+    "props": {
+      "preventHorizontalStretch": true,
+      "blockClass": "links"
+    },
+    "children": ["flex-layout.col#links-left", "flex-layout.col#links-right"]
+  },
+  "flex-layout.col#links-left": {
+    "props": {
+      "blockClass": "links-left"
+    },
+    "children": [
+      "link#footerMenu-mobile-item_01",
+      "link#footerMenu-mobile-item_02",
+      "link#footerMenu-mobile-item_03"
+    ]
+  },
+  "flex-layout.col#links-right": {
+    "props": {
+      "blockClass": "links-right"
+    },
+    "children": [
+      /* "link#faq-mobile", */
+      //"link#legal-issues",
+      //"link#safety-notices"
+      "link#footerMenu-mobile-item_04",
+      "link#footerMenu-mobile-item_05",
+      "link#footerMenu-mobile-item_06"
+    ]
+  },
+  /* ---------------------- LINKS LEFT ---------------------------- */
+  "link#footerMenu-mobile-item_01": {
+    "props": {
+      "label": "Store Locator",
+      "href": "/store-locator",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "menu_footer_click",
+      "analyticsType": "",
+      "isPrevent": false,
+      "clickArea": "footer",
+      "blockClass": ["footer-item"]
+    }
+    //"children": ["rich-text#sl-text"]
+  },
+  // "rich-text#sl-text": {
+  //   "props": {
+  //     "blockClass": "links-text",
+  //     "text": "Store Locator"
+  //   }
+  // },
+  "link#footerMenu-mobile-item_02": {
+    "props": {
+      "label": "Support",
+      "href": "https://www.indesitservice.co.uk/",
+      "target": "_blank",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "menu_footer_click",
+      "analyticsType": "",
+      "isPrevent": false,
+      "clickArea": "footer",
+      "blockClass": ["footer-item"]
+    }
+    //"children": ["rich-text#sp-text"]
+  },
+  "link#footerMenu-mobile-item_03": {
+    "props": {
+      "label": "Cookie Policy",
+      "href": "/legal-issues/cookies-disclaimer",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "menu_footer_click",
+      "analyticsType": "",
+      "isPrevent": false,
+      "clickArea": "footer",
+      "blockClass": ["footer-item"]
+    }
+    //"children": ["rich-text#sp-text"]
+  },
+  // "rich-text#sp-text": {
+  //   "props": {
+  //     "blockClass": "links-text",
+  //     "text": "Support"
+  //   }
+  //},
+  /* ---------------------- LINKS RIGHT ---------------------------- */
+  "link#footerMenu-mobile-item_04": {
+    "props": {
+      "label": "#DoitTogether",
+      "href": "/do-it-together",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "menu_footer_click",
+      "analyticsType": "",
+      "isPrevent": false,
+      "clickArea": "footer",
+      "blockClass": ["footer-item"]
+    }
+  },
+  "link#footerMenu-mobile-item_05": {
+    "props": {
+      "label": "Legal issues",
+      "href": "/legal-issues",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "menu_footer_click",
+      "analyticsType": "",
+      "isPrevent": false,
+      "clickArea": "footer",
+      "blockClass": ["footer-item"]
+    }
+  },
+  "link#footerMenu-mobile-item_06": {
+    "props": {
+      "label": "Privacy policy",
+      "href": "/legal-issues/privacy-policy",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "menu_footer_click",
+      "analyticsType": "",
+      "isPrevent": false,
+      "clickArea": "footer",
+      "blockClass": ["footer-item"]
+    }
+  },
+  /*  "link#faq-mobile": {
+    "props": {
+      "href": "/legal-issues/privacy-policy"
+    },
+    "children": ["rich-text#pp-text"]
+  },
+  "rich-text#pp-text": {
+    "props": {
+      "blockClass": "links-text",
+      "text": "Privacy policy"
+    }
+  }, */
+  // //"link#legal-issues": {
+  // //  "props": {
+  //     "href": "/legal-issues"
+  //   },
+  //   "children": ["rich-text#li-text"]
+  // },
+  // "rich-text#li-text": {
+  //   "props": {
+  //     "blockClass": "links-text",
+  //     "text": "Legal issues"
+  //   }
+  // },
+  // "link#safety-notices": {
+  //   "props": {
+  //     "href": "https://www.indesitservice.co.uk/safety-notice"
+  //   },
+  //   "children": ["rich-text#sn-text"]
+  // },
+  // "rich-text#sn-text": {
+  //   "props": {
+  //     "blockClass": "links-text",
+  //     "text": "Safety notices"
+  //   }
+  // },
+
+  /* ---------------------- FOLLOW US ROW ---------------------------- */
+  "flex-layout.row#follow-us-row-mobile": {
+    "props": {
+      "preventHorizontalStretch": true,
+      "blockClass": "followUsRowMobile"
+    },
+    "children": ["rich-text#follow-us-text-mobile", "social-networks#mobile"]
+  },
+  /* ---------------------- FOLLOW US ---------------------------- */
+  "rich-text#follow-us-text-mobile": {
+    "props": {
+      "blockClass": "followUsTextMobile",
+      "text": "Follow us"
+    }
+  },
+  /* ---------------------- SOCIAL NETWORKS MOBILE ---------------------------- */
+  "social-networks#mobile": {
+    "props": {
+      "blockClass": "social-icons-mobile",
+      "socialNetworks": [
+        {
+          "name": "Facebook",
+          "url": "https://www.facebook.com/IndesitUK/",
+          "target": "_blank"
+        },
+        {
+          "name": "Instagram",
+          "url": "https://www.instagram.com/indesituk/",
+          "target": "_blank"
+        },
+        {
+          "name": "Twitter",
+          "url": "https://twitter.com/IndesitUK",
+          "target": "_blank"
+        },
+        {
+          "name": "Youtube",
+          "url": "https://www.youtube.com/channel/UCM7lOO-oHvxmET-aQ7zZ_nA",
+          "target": "_blank"
+        }
+      ]
+    }
+  }
+}

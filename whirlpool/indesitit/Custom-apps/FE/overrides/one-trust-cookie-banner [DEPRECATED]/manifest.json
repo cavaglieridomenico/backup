@@ -1,0 +1,37 @@
+{
+  "name": "one-trust",
+  "vendor": "indesitit",
+  "version": "0.0.13",
+  "title": "OneTrust",
+  "description": "One trust integration",
+  "builders": {
+    "store": "0.x",
+    "pixel": "0.x",
+    "docs": "0.x"
+  },
+  "dependencies": {
+    "vtex.pixel-interfaces": "1.x"
+  },
+  "settingsSchema": {
+    "title": "One Trust",
+    "type": "object",
+    "properties": {
+      "cdnId": {
+        "title": "CDN ID",
+        "description": "Enter the ID cdn ID from your One Trust consolle",
+        "type": "string"
+      },
+      "s": {
+        "title": "Service",
+        "description": "Enter the service URL for One Trust",
+        "type": "string"
+      },
+      "url": {
+        "title": "Url",
+        "description": "Enter the URL for One Trust",
+        "type": "string"
+      }
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

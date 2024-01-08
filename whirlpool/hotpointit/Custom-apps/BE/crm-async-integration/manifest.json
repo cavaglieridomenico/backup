@@ -1,0 +1,181 @@
+{
+  "name": "crm-async-integration",
+  "vendor": "hotpointitqa",
+  "version": "0.1.5",
+  "title": "CRM Connector",
+  "description": "Custom app integrating Vtex with SAP CRM",
+  "categories": [],
+  "dependencies": {},
+  "builders": {
+    "node": "6.x",
+    "docs": "0.x"
+  },
+  "scripts": {},
+  "credentialType": "absolute",
+  "policies": [
+    {
+      "name": "ADMIN_DS"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "api.vtex.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "webservicesq.cert.whirlpool.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "webservices.cert.whirlpool.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.vtexcommercestable.com.br",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "portal.vtexcommercestable.com.br",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "hp-it-ups-vtex-to-crm-dot-go-whr-emea-digital-d2c-mdw.ey.r.appspot.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "d2c-it-crm-async-flow-dot-go-whr-emea-digital-d2c-mdw.ey.r.appspot.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "hp-it-ups-vtex-to-crm-dot-whr-emea-digital-d2c.ew.r.appspot.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "d2c-it-crm-async-flow-dot-whr-emea-digital-d2c.ew.r.appspot.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "d2c-cross-crm-async-flow-dot-go-whr-emea-digital-d2c-mdw.ey.r.appspot.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "accounts.google.com/o/oauth2/auth",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "oauth2.googleapis.com/token",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "www.googleapis.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "colossus-fire-event"
+    },
+    {
+      "name": "colossus-write-logs"
+    }
+  ],
+  "settingsSchema": {
+    "title": "CRM connector",
+    "type": "object",
+    "properties": {
+      "crmEnvironment": {
+        "title": "CRM environment",
+        "type": "string",
+        "enum": [
+          "production",
+          "quality"
+        ],
+        "default": "quality"
+      },
+      "crmPassword": {
+        "title": "CRM password",
+        "type": "string"
+      },
+      "gcpAuthType": {
+        "title": "GCP - Authentication type",
+        "type": "string",
+        "enum": [
+          "Bearer",
+          "Basic"
+        ],
+        "default": "Bearer"
+      },
+      "gcpHost": {
+        "title": "GCP - Host",
+        "type": "string"
+      },
+      "gcpProjectId": {
+        "title": "GCP - Project id",
+        "type": "string"
+      },
+      "gcpClientEmail": {
+        "title": "GCP - Client email (or Username)",
+        "type": "string"
+      },
+      "gcpPrivateKey": {
+        "title": "GCP - Private key (or Password)",
+        "type": "string"
+      },
+      "gcpTargetAudience": {
+        "title": "GCP - Target audience",
+        "type": "string"
+      },
+      "gcpBrand": {
+        "title": "GCP - Brand",
+        "type": "string",
+        "default": "HP"
+      },
+      "gcpCountry": {
+        "title": "GCP - Country",
+        "type": "string",
+        "default": "IT"
+      },
+      "authCookie": {
+        "title": "Authentication cookie",
+        "type": "string",
+        "default": "VtexIdclientAutCookie_{{account}}"
+      }
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

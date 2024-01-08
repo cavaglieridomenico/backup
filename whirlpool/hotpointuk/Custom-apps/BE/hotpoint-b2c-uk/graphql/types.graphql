@@ -1,0 +1,52 @@
+#/getBomCodes
+type BomCodes {
+    modelNumber: String
+    industrialCode: String
+}
+
+#/getFitsIn
+type FitsInFG{
+    modelNumber: String
+    industrialCode: String
+    categoryName: String
+}
+
+#/doesItFit
+type OutcomeFit{
+    outcome: String
+}
+
+#/getBomImage
+type BomTD{
+    id: String
+    bomImage: String
+}
+
+#/ getJcodeForBom
+type SpareAndReference{
+    sparePartId: String,
+    referenceNumber: String
+}
+
+#/ getSpareByIndustrialWithFilterPAG
+type SparePart{
+    sparePartId: String
+    familyGroup: String
+
+}
+
+#/getFamilyGroup
+type FamilyGroupL{
+    familyGroup: [String]
+}
+
+#/getSupportVideos
+type SupportVideos{
+    videoUrls: [String]
+}
+
+input Filter{
+  name: String
+  value: String
+}
+

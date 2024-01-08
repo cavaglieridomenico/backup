@@ -1,0 +1,89 @@
+{
+  "product-summary.shelf.product-comparison#bauknechtPLP-comparison-stickyMobile": {
+    "children": [
+      "flex-layout.row#contentStickyCompare"
+    ],
+    "props": {
+      "blockClass": [
+        "bauknechtPLP-comparison-stickyMobile"
+      ]
+    }
+  },
+  "vtex.store-components:product-name#bkPLPStickyMobile": {
+    "props": {
+      "tag": "div",
+      "displayMode": "linkToProductPage",
+      "blockClass": "summaryNameBkPLP"
+    }
+  },
+  "flex-layout.row#productEnergyLabel-StickyMobile": {
+    "title": "[ROW] - Product Energy Label Sticky Mobile Compare",
+    "children": ["flex-layout.col#productEnergyLabel-carousel-small-PLPBK"],
+    "props": {
+      "blockClass": [
+        "productEnergyLabelAndStockMobilePLPBKRow",
+        "productEnergyLabel-StickyMobile"
+      ],
+      "preserveLayoutOnMobile": true
+    }
+  },
+  "product-summary-image#compareImageStickyMobile": {
+    "props": {
+      "showBadge": false,
+      "width": 100,
+      "height": 100,
+      "blockClass": "compareImageStickyMobile"
+    }
+  },
+
+  "flex-layout.row#productTitleCompareSticky": {
+    "title": "[ROW] - Product Title Sticky Mobile Compare",
+    "children": [
+      "vtex.store-components:product-name#bkPLPStickyMobile"
+    ],
+    "props": {
+      "blockClass": "productTitleCompareSticky"
+    }
+  },
+  "flex-layout.col#energyPriceCompareSticky": {
+    "title": "[COL] - Energy Label - Price Sticky Mobile Compare",
+    "children": [
+      "flex-layout.row#productEnergyLabel-StickyMobile",
+      "flex-layout.col#priceCompareSticky"
+    ],
+    "props": {
+      "blockClass": "energyPriceCompareSticky"
+    }
+  },
+  "flex-layout.col#priceCompareSticky": {
+    "title": "[COL] - Price Sticky Mobile Compare",
+    "children": [
+      "flex-layout.col#savingsPriceCol",
+      "flex-layout.col#sellingPriceCol"
+    ],
+    "props": {
+      "blockClass": "priceCompareSticky"
+    }
+  },
+  "flex-layout.row#productDescriptionCompareSticky": {
+    "title": "[COL] - Product Description Sticky Mobile Compare",
+    "children": [
+      "flex-layout.row#productTitleCompareSticky",
+      "flex-layout.col#energyPriceCompareSticky"
+    ],
+    "props": {
+      "width": "80%",
+      "blockClass": "productDescriptionCompareSticky"
+    }
+  },
+  "flex-layout.row#contentStickyCompare": {
+    "title": "[COL] - Content Sticky Mobile Compare",
+    "children": [
+      "product-summary-image#compareImageStickyMobile",
+      "flex-layout.row#productDescriptionCompareSticky"
+    ],
+    "props": {
+      "blockClass": "contentStickyCompare"
+    }
+  }
+}

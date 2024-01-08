@@ -1,0 +1,304 @@
+{
+  /*-------------- 10 YEARS WARRANTY LOGO ---------------*/
+  "condition-layout.product#10YWLogo": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "2"
+          }
+        },
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "11"
+          }
+        },
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "12"
+          }
+        },
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "10"
+          }
+        },
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "9"
+          }
+        },
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "8"
+          }
+        },
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "38"
+          }
+        },
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "39"
+          }
+        },
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "35"
+          }
+        },
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "37"
+          }
+        },
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "32"
+          }
+        },
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "34"
+          }
+        },
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "33"
+          }
+        },
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "36"
+          }
+        },
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "31"
+          }
+        },
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "30"
+          }
+        },
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "28"
+          }
+        },
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "27"
+          }
+        },
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "29"
+          }
+        },
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "7"
+          }
+        },
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "26"
+          }
+        },
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "20"
+          }
+        }
+      ],
+      "matchType": "any",
+      "Else": "zoom-in-container"
+    }
+  },
+  "condition-layout.product#banner00": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "productId",
+          "arguments": {
+            "id": "1394"
+          }
+        },
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "isDiscontinued",
+            "value": "false"
+          }
+        }
+      ],
+      "Then": "link#2plus2YWLogo"
+    }
+  },
+  "zoom-in-container": {
+    "props": {
+      "zoomFactor": 2
+    },
+    "children": ["link#10YWLogo"
+    // ,"link#2plus2YWLogo"
+
+  ]
+  },
+  "link#10YWLogo": {
+    "props": {
+      "href": "https://bauknechtde.vtexcommercestable.com.br/api/dataentities/AT/documents/fca552be-fc20-11ec-835d-0eb9d231f98b/file/attachments/BK10YETpdf.pdf",
+      "target": "_blank",
+      "blockClass": "10YWLink"
+    },
+    "children": ["image#10YWLogo"]
+  },
+  "image#10YWLogo": {
+    "props": {
+      "src": "assets/logos/10yw-logo.jpg",
+      "blockClass": "10YWLogo"
+    }
+  },
+  "link#2plus2YWLogo": {
+    "props": {
+      "href": "https://www.bauknecht.de/api/dataentities/AT/documents/09dd864e-d38f-11ed-83ab-12cb776c4983/file/attachments/Bauknecht-Kondenstrockner-KT-Eco-Dry-8B2JGS.pdf",//da modificare
+      "target": "_blank",
+      "blockClass": "2plus2YWLink"
+    },
+    "children": ["image#2plus2YWLogo"]
+  },
+  "image#2plus2YWLogo": {
+    "props": {
+      "src": "assets/logos/2plus2warranty.png", //da modificare
+      "blockClass": ["10YWLogo","2plus2YWLogo"]
+    }
+  },
+  /*-------------- RED DOT PRIZE ---------------*/
+  // "condition-layout.product#reddotPrize": {
+  //   "props": {
+  //     "conditions": [
+  //       {
+  //         "subject": "specificationProperties",
+  //         "arguments": {
+  //           "name": "extendedWarranty",
+  //           "value": "true"
+  //         }
+  //       }
+  //     ],
+  //     "Then": "image#reddotLogo"
+  //   }
+  // },
+  // "image#reddotLogo": {
+  //   "props": {
+  //     "src": "assets/logos/reddot-logo.png",
+  //     "blockClass": "reddotLogo"
+  //   }
+  // },
+  /*-------------------- SHOW PRICE --------------------*/
+  "condition-layout.product#showPriceUnavailableProdPLPBK": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "sellable",
+            "value": "true"
+          }
+        }
+      ],
+      "Then": "condition-layout.product#price-summary-spare"
+    }
+  },
+  "product-selling-price#summaryBK": {
+    "props": {
+      "alwaysShow": true,
+      "blockClass": ["summary", "summaryPL"],
+      "markers": ["Tax"],
+      "message": "{sellingPriceValue} Inkl. MwSt."
+    }
+  },
+  /*-------------------- SAVINGS PRICE --------------------*/
+  "condition-layout.product#showSavingsPriceUnavailableProdPLPBK": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "sellable",
+            "value": "true"
+          }
+        }
+      ],
+      "Then": "flex-layout.row#savingPricesPLPBK"
+    }
+  },
+  "flex-layout.row#savingPricesPLPBK": {
+    "props": {
+      "blockClass": "savingPricesPLPBK",
+      "colSizing": "auto"
+    },
+    "children": [
+      "flex-layout.col#listPricePLPBK",
+      "flex-layout.col#savingPLPBK"
+    ]
+  },
+  "flex-layout.col#listPricePLPBK": {
+    "props": {
+      "blockClass": "listPricePLPBKBox"
+    },
+    "children": ["product-list-price#listPricePLPBK"]
+  },
+  "flex-layout.col#savingPLPBK": {
+    "props": {
+      "blockClass": "savingPLPBKBox"
+    },
+    "children": [
+      "product-price-savings#savingPLPBK",
+      "product-spot-price-savings#percentagePLPBK"
+    ]
+  },
+  "product-spot-price-savings#percentagePLPBK": {
+    "props": {
+      "alwaysShow": true,
+      "blockClass": "percentagePLPBK",
+      "message": "-{spotPriceSavingsPercentage}"
+    }
+  },
+  "product-price-savings#savingPLPBK": {
+    "props": {
+      "markers": ["highlight"],
+      "blockClass": "savingPLPBK",
+      "message": "Rabatt: {savingsValue}"
+    }
+  },
+  "product-list-price#listPricePLPBK": {
+    "props": {
+      "alwaysShow": true,
+      "blockClass": "listPricePLPBK"
+    }
+  }
+}

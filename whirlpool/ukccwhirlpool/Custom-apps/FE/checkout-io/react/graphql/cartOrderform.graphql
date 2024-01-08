@@ -1,0 +1,59 @@
+query cartOrder($orderFormId: ID) {
+	orderForm(orderFormId: $orderFormId, refreshOutdatedData: true)
+		@context(provider: "vtex.checkout-graphql") {
+		id
+		loggedIn
+		items {
+			id
+			productId
+			name
+			detailUrl
+			quantity
+			imageUrls {
+				at1x
+			}
+			additionalInfo {
+				brandName
+			}
+			offerings {
+				id
+				name
+				price
+			}
+			bundleItems {
+				id
+				name
+				imageUrls {
+					at1x
+				}
+			}
+			listPrice
+			sellingPrice
+		}
+		totalizers {
+			id
+			name
+			value
+		}
+		value
+		storePreferencesData {
+			currencySymbol
+		}
+		clientProfileData {
+			email
+			firstName
+			lastName
+			phone
+		}
+		marketingData {
+			utmCampaign
+			utmMedium
+			utmSource
+			utmiCampaign
+			utmiPart
+			utmiPage
+			coupon
+			marketingTags
+    }
+	}
+}

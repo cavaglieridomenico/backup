@@ -1,0 +1,41 @@
+{
+  "name": "google-tag-manager-indesit-custom",
+  "vendor": "indesitpl",
+  "version": "0.0.13",
+  "title": "Google Tag Manager Custom",
+  "description": "Google Tag Manager Custom",
+  "mustUpdateAt": "2021-08-05",
+  "scripts": {
+    "postreleasy": "vtex publish --verbose"
+  },
+  "billingOptions": {
+    "type": "free",
+    "support": {
+      "url": "https://support.vtex.com/hc/requests"
+    },
+    "availableCountries": [
+      "*"
+    ]
+  },
+  "builders": {
+    "react": "3.x",
+    "store": "0.x",
+    "pixel": "0.x",
+    "docs": "0.x"
+  },
+  "dependencies": {
+    "vtex.pixel-interfaces": "1.x"
+  },
+  "policies": [
+    {
+      "name": "pixel"
+    }
+  ],
+  "settingsSchema": {
+    "title": "Google Tag Manager",
+    "type": "object",
+    "bindingBounded": true,
+    "properties": {}
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

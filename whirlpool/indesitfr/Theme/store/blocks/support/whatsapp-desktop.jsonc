@@ -1,0 +1,115 @@
+{
+  "store.custom#whatsapp-page": {
+    "blocks": [
+      "responsive-layout.desktop#whatsapp-page-desk",
+      "responsive-layout.mobile#whatsapp-page-mobile"
+    ]
+  },
+  "store.custom#whatsapp-page_up": {
+    "blocks": [
+      "responsive-layout.desktop#whatsapp-page-desk",
+      "responsive-layout.mobile#whatsapp-page-mobile"
+    ]
+  },
+  /* BREADCRUMB */
+  "flex-layout.row#whatsapp-breadcrumb-desktop": {
+    "props": {
+      "blockClass": ["productBread"],
+      "showOnMobile": true
+    },
+    "children": ["breadcrumb-custom#whatsapp"]
+  },
+  "breadcrumb-custom#whatsapp": {
+    "props": {
+      /* "blockClass": "containerBreadcrumbs", */
+      "firstPage": "Home",
+      "previousPage": "Service",
+      "previousPath": "/service",
+      "currentPage": "Canale Whatsapp"
+    }
+  },
+  /* DESKTOP WHATSAPP */
+  "responsive-layout.desktop#whatsapp-page-desk": {
+    "children": [
+      "flex-layout.row#whatsapp-breadcrumb-desktop",
+      "flex-layout.row#accesso-whatsapp-desktop",
+      "flex-layout.row#qr-code-whatsapp-desktop"
+    ]
+  },
+  /* ACCEDI A WHATSAPP */
+  "flex-layout.row#accesso-whatsapp-desktop": {
+    "children": ["link#accesso-whatsapp-desktop"]
+  },
+  "link#accesso-whatsapp-desktop": {
+    "children": [
+      "image#whatsapp-logo-desktop",
+      "rich-text#accesso-whatsapp-desktop",
+      "rich-text#servizio-attivo-desktop"
+    ],
+    "props": {
+      "blockClass": "accesso-whatsapp-container-desktop",
+      "href": "https://wa.me/message/MIKJ4WDQGB3LM1"
+    }
+  },
+  "image#whatsapp-logo-desktop": {
+    "props": {
+      "blockClass": "whatsapp-logo-desktop",
+      "src": "assets/whatsapp-it.svg"
+    }
+  },
+  "rich-text#accesso-whatsapp-desktop": {
+    "props": {
+      "blockClass": "accesso-whatsapp-desc-desktop",
+      "text": "Accédez à notre chaîne WhatsApp"
+    }
+  },
+  "rich-text#servizio-attivo-desktop": {
+    "props": {
+      "blockClass": "servizio-attivo-desktop",
+      "text": "Le service est actif du lundi au vendredi de 9h00 à 18h00 hors jours fériés."
+    }
+  },
+  /* QR CODE WHATSAPP */
+  "flex-layout.row#qr-code-whatsapp-desktop": {
+    "children": ["flex-layout.col#qr-code-whatsapp-desktop"],
+    "props": {
+      "blockClass": "qr-code-whatsapp-desktop"
+    }
+  },
+  "flex-layout.col#qr-code-whatsapp-desktop": {
+    "children": [
+      "rich-text#qr-code-title-desktop",
+      "flex-layout.col#qr-code-desc-container-desktop"
+    ],
+    "props": {
+      "blockClass": "qr-code-whatsapp-container"
+    }
+  },
+  "rich-text#qr-code-title-desktop": {
+    "props": {
+      "blockClass": "qr-code-title",
+      "text": "QR Code"
+    }
+  },
+  "flex-layout.col#qr-code-desc-container-desktop": {
+    "children": [
+      "rich-text#qr-code-desc-desktop",
+      "image#qr-code-desc-image-desktop"
+    ],
+    "props": {
+      "blockClass": "qr-code-desc-container-desktop"
+    }
+  },
+  "rich-text#qr-code-desc-desktop": {
+    "props": {
+      "blockClass": "qr-code-desc-desktop",
+      "text": "Scannez le QR Code pour nous joindre immédiatement depuis votre téléphone"
+    }
+  },
+  "image#qr-code-desc-image-desktop": {
+    "props": {
+      "blockClass": "qr-code-desc-image-desktop",
+      "src": "assets/wa-qrcode.png"
+    }
+  }
+}

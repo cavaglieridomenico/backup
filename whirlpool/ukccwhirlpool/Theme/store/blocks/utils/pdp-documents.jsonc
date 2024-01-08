@@ -1,0 +1,460 @@
+{
+  "flex-layout.col#spec_pdf_professional": {
+    "children": [
+      //   "rich-text#spec_two_title",
+      "condition-layout.product#product-attachment-1",
+      "condition-layout.product#product-attachment-2",
+      "condition-layout.product#product-attachment-3",
+      "condition-layout.product#product-attachment-4",
+      "condition-layout.product#product-attachment-5",
+      "condition-layout.product#product-attachment-6",
+      "condition-layout.product#product-attachment-7",
+      "condition-layout.product#product-attachment-8",
+      "condition-layout.product#product-attachment-9",
+      "condition-layout.product#product-attachment-10",
+      "condition-layout.product#product-attachment-11",
+      "condition-layout.product#product-attachment-12",
+      "condition-layout.product#product-attachment-13"
+    ],
+    "props": {
+      "blockClass": "rightSpecBlock"
+    }
+  },
+  "rich-text#spec_two_title": {
+    "props": {
+      "blockClass": "testoTitoloPdf",
+      "text": "**PDF Documentation:**"
+    }
+  },
+  "flex-layout.col#spec_pdf_standard": {
+    "children": [
+      //   "rich-text#spec_two_title",
+      "condition-layout.product#product-attachment-1",
+      "condition-layout.product#product-attachment-2",
+      "condition-layout.product#product-attachment-3",
+      "condition-layout.product#product-attachment-4",
+      "condition-layout.product#product-attachment-5",
+      "condition-layout.product#product-attachment-6",
+      "condition-layout.product#product-attachment-7",
+      "condition-layout.product#product-attachment-8",
+      "condition-layout.product#product-attachment-9",
+      "condition-layout.product#product-attachment-10",
+      "condition-layout.product#product-attachment-11",
+      "condition-layout.product#product-attachment-12",
+      "condition-layout.product#product-attachment-13"
+    ],
+    "props": {
+      "blockClass": "rightSpecBlock"
+    }
+  },
+  //WPA ATTACHMENTS
+  "condition-layout.product#wpa-attachment-1": {
+    "title": "instruction-for-use ? documentLink",
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "instruction-for-use"
+          }
+        }
+      ],
+      "Then": "link.product#wpa-attachment-link-1"
+    }
+  },
+  "link.product#wpa-attachment-link-1": {
+    "props": {
+      "escapeLinkRegex": "[+*]",
+      "label": "Instructions for use",
+      "href": "{specificationGroups.Documents.specifications.instruction-for-use}",
+      "blockClass": "pdfLink",
+      "target": "_blank",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "pdfDownload"
+    }
+  },
+  "condition-layout.product#wpa-attachment-2": {
+    "title": "instruction-for-use ? documentLink",
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "instruction-for-installation"
+          }
+        }
+      ],
+      "Then": "link.product#wpa-attachment-link-2"
+    }
+  },
+  "link.product#wpa-attachment-link-2": {
+    "props": {
+      "escapeLinkRegex": "[+*]",
+      "label": "Instruction for installation",
+      "href": "{specificationGroups.Documents.specifications.instruction-for-installation}",
+      "blockClass": "pdfLink",
+      "target": "_blank",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "pdfDownload"
+    }
+  },
+  "condition-layout.product#wpa-attachment-3": {
+    "title": "instruction-for-use ? documentLink",
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "Technical documentation"
+          }
+        }
+      ],
+      "Then": "link.product#wpa-attachment-link-3"
+    }
+  },
+  "link.product#wpa-attachment-link-3": {
+    "props": {
+      "escapeLinkRegex": "[+*]",
+      "label": "Technical documentation",
+      "href": "{specificationGroups.Document.specifications.Technical documentation}",
+      "blockClass": "pdfLink",
+      "target": "_blank",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "pdfDownload"
+    }
+  },
+  "condition-layout.product#wpa-attachment-4": {
+    "title": "instruction-for-use ? documentLink",
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "Product sheets"
+          }
+        }
+      ],
+      "Then": "link.product#wpa-attachment-link-4"
+    }
+  },
+  "link.product#wpa-attachment-link-4": {
+    "props": {
+      "escapeLinkRegex": "[+*]",
+      "label": "WPA attachment 4",
+      "href": "{specificationGroups.Document.specifications.Таблицы продуктов}",
+      "blockClass": "pdfLink",
+      "target": "_blank"
+    }
+  },
+  // PRODUCT ATTACHMENTS
+  "condition-layout.product#product-attachment-1": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "cookbook"
+          }
+        }
+      ],
+      "Then": "link.product#product-attachment-link-1"
+    }
+  },
+  "link.product#product-attachment-link-1": {
+    "props": {
+      "escapeLinkRegex": "[+*]",
+      "label": "Поваренная книга",
+      "href": "{specificationGroups.Document.specifications.cookbook}",
+      "blockClass": "pdfLink",
+      "target": "_blank"
+    }
+  },
+  "condition-layout.product#product-attachment-2": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "program-chart"
+          }
+        }
+      ],
+      "Then": "link.product#product-attachment-link-2"
+    }
+  },
+  "link.product#product-attachment-link-2": {
+    "props": {
+      "escapeLinkRegex": "[+*]",
+      "label": "Program chart",
+      "href": "{specificationGroups.Document.specifications.program-chart}",
+      "blockClass": "pdfLink",
+      "target": "_blank",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "pdfDownload"
+    }
+  },
+  "condition-layout.product#product-attachment-3": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "instruction-for-use"
+          }
+        }
+      ],
+      "Then": "link.product#product-attachment-link-3"
+    }
+  },
+  "link.product#product-attachment-link-3": {
+    "props": {
+      "escapeLinkRegex": "[+*]",
+      "label": "Instruction for use",
+      "href": "{specificationGroups.Document.specifications.instruction-for-use}",
+      "blockClass": "pdfLink",
+      "target": "_blank",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "pdfDownload"
+    }
+  },
+  "condition-layout.product#product-attachment-4": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "installation-instructions"
+          }
+        }
+      ],
+      "Then": "link.product#product-attachment-link-4"
+    }
+  },
+  "link.product#product-attachment-link-4": {
+    "props": {
+      "escapeLinkRegex": "[+*]",
+      "label": "Installation instructions",
+      "href": "{specificationGroups.Document.specifications.installation-instructions}",
+      "blockClass": "pdfLink",
+      "target": "_blank",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "pdfDownload"
+    }
+  },
+  "condition-layout.product#product-attachment-5": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "daily-reference-guide"
+          }
+        }
+      ],
+      "Then": "link.product#product-attachment-link-5"
+    }
+  },
+  "link.product#product-attachment-link-5": {
+    "props": {
+      "escapeLinkRegex": "[+*]",
+      "label": "Daily Reference Guide",
+      "href": "{specificationGroups.Document.specifications.daily-reference-guide}",
+      "blockClass": "pdfLink",
+      "target": "_blank",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "pdfDownload"
+    }
+  },
+  "condition-layout.product#product-attachment-6": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "health-safety-environmental"
+          }
+        }
+      ],
+      "Then": "link.product#product-attachment-link-6"
+    }
+  },
+  "link.product#product-attachment-link-6": {
+    "props": {
+      "escapeLinkRegex": "[+*]",
+      "label": "Instructions for safety and environmental protection",
+      "href": "{specificationGroups.Document.specifications.health-safety-environmental}",
+      "blockClass": "pdfLink",
+      "target": "_blank",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "pdfDownload"
+    }
+  },
+  "condition-layout.product#product-attachment-7": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "product-information-sheet"
+          }
+        }
+      ],
+      "Then": "link.product#product-attachment-link-7"
+    }
+  },
+  "link.product#product-attachment-link-7": {
+    "props": {
+      "escapeLinkRegex": "[+*]",
+      "label": "Product Information Sheet",
+      "href": "{specificationGroups.Document.specifications.product-information-sheet}",
+      "blockClass": "pdfLink",
+      "target": "_blank",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "pdfDownload"
+    }
+  },
+  "condition-layout.product#product-attachment-8": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "product-fiche"
+          }
+        }
+      ],
+      "Then": "link.product#product-attachment-link-8"
+    }
+  },
+  "link.product#product-attachment-link-8": {
+    "props": {
+      "escapeLinkRegex": "[+*]",
+      "label": "Product sheet",
+      "href": "{specificationGroups.Document.specifications.product-fiche}",
+      "blockClass": "pdfLink",
+      "target": "_blank",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "pdfDownload"
+    }
+  },
+  "condition-layout.product#product-attachment-9": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "energy-label"
+          }
+        }
+      ],
+      "Then": "link.product#product-attachment-link-9"
+    }
+  },
+  "link.product#product-attachment-link-9": {
+    "props": {
+      "escapeLinkRegex": "[+*]",
+      "label": "Energy label",
+      "href": "{specificationGroups.Document.specifications.energy-label}",
+      "blockClass": "pdfLink",
+      "target": "_blank",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "pdfDownload"
+    }
+  },
+  "condition-layout.product#product-attachment-10": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "new-energy-label"
+          }
+        }
+      ],
+      "Then": "link.product#product-attachment-link-10"
+    }
+  },
+  "link.product#product-attachment-link-10": {
+    "props": {
+      "escapeLinkRegex": "[+*]",
+      "label": "New Energy Class",
+      "href": "{specificationGroups.Document.specifications.new-energy-label}",
+      "blockClass": "pdfLink",
+      "target": "_blank",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "pdfDownload"
+    }
+  },
+  "condition-layout.product#product-attachment-11": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "product-data-sheet"
+          }
+        }
+      ],
+      "Then": "link.product#product-attachment-link-11"
+    }
+  },
+  "link.product#product-attachment-link-11": {
+    "props": {
+      "escapeLinkRegex": "[+*]",
+      "label": "Installation guide",
+      "href": "{specificationGroups.Document.specifications.product-data-sheet}",
+      "blockClass": "pdfLink",
+      "target": "_blank",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "pdfDownload"
+    }
+  },
+  "condition-layout.product#product-attachment-12": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "nel-data-sheet"
+          }
+        }
+      ],
+      "Then": "link.product#product-attachment-link-12"
+    }
+  },
+  "link.product#product-attachment-link-12": {
+    "props": {
+      "escapeLinkRegex": "[+*]",
+      "label": "Product data sheet",
+      "href": "{specificationGroups.Document.specifications.nel-data-sheet}",
+      "blockClass": "pdfLink",
+      "target": "_blank",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "pdfDownload"
+    }
+  },
+  "condition-layout.product#product-attachment-13": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "use-care"
+          }
+        }
+      ],
+      "Then": "link.product#product-attachment-link-13"
+    }
+  },
+  "link.product#product-attachment-link-13": {
+    "props": {
+      "escapeLinkRegex": "[+*]",
+      "label": "User Manual",
+      "href": "{specificationGroups.Document.specifications.use-care}",
+      "blockClass": "pdfLink",
+      "target": "_blank",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "pdfDownload"
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "memory": 256,
+  "ttl": 60,
+  "timeout": 30,
+  "minReplicas": 2,
+  "maxReplicas": 10,
+  "workers": 4,
+  "routes": {
+    "paymentmethods": {
+      "path": "/_v/api/connectors/worldpay/payment-methods",
+      "public": true
+    },
+    "providermanifest": {
+      "path": "/_v/api/connectors/worldpay/manifest",
+      "public": true
+    },
+    "createpayment": {
+      "path": "/_v/api/connectors/worldpay/payments",
+      "public": true
+    },
+    "capturepayment": {
+      "path": "/_v/api/connectors/worldpay/payments/:paymentId/settlements",
+      "public": true
+    },
+    "cancelpayment": {
+      "path": "/_v/api/connectors/worldpay/payments/:paymentId/cancellations",
+      "public": true
+    },
+    "refundpayment": {
+      "path": "/_v/api/connectors/worldpay/payments/:paymentId/refunds",
+      "public": true
+    },
+    "notification": {
+      "path": "/_v/api/connectors/worldpay/notification",
+      "public": true
+    },
+    "paymentdenied": {
+      "path": "/_v/api/connectors/worldpay/denied/:orderid/:token",
+      "public": true
+    },
+    "helperpage": {
+      "path": "/_v/api/connectors/worldpay/helper",
+      "public": true
+    },
+    "sapdata": {
+      "path": "/_v/api/connectors/worldpay/sap/:orderid",
+      "public": true
+    }
+  }
+}

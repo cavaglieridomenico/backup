@@ -1,0 +1,44 @@
+<script>
+  ;(function() {
+    var pushState = history.pushState;
+    var replaceState = history.replaceState;
+
+    history.pushState = function() {
+        pushState.apply(history, arguments);
+        window.dispatchEvent(new Event('pushstate'));
+        window.dispatchEvent(new Event('locationchange'));
+    };
+
+    history.replaceState = function() {
+        replaceState.apply(history, arguments);
+        window.dispatchEvent(new Event('replacestate'));
+        window.dispatchEvent(new Event('locationchange'));
+    };
+
+    window.addEventListener('popstate', function() {
+        window.dispatchEvent(new Event('locationchange'))
+    });
+})();
+
+  var files_loaded = false;
+  if(!files_loaded){
+    files_loaded = true;
+    (function() {
+    var e = document.createElement('script')
+    var baseUrl = 'https://itwhirlpool.vteximg.com.br/arquivos'
+    var dataDomain = '7c483779-b7a8-45f2-8e7d-0f580bff0531'
+    e.type = "text/javascript";
+    e.src = baseUrl +"/m-chat40.js";
+    var t = document.getElementsByTagName('script')[0]
+    e.setAttribute("data-document-language", "true");
+    e.setAttribute("data-domain-script", dataDomain);
+    t.parentNode.insertBefore(e, t)
+    var link  = document.createElement('link');
+    link.rel  = 'stylesheet';
+    link.type = 'text/css';
+    link.href = baseUrl + '/genesys4.css';
+    link.media = 'all';
+    document.getElementsByTagName( "head" )[0].appendChild( link );
+  })()
+}
+</script>

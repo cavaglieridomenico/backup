@@ -1,0 +1,613 @@
+{
+  "store.custom#text-only-content": {
+    "blocks": [
+      "flex-layout.row#bread-pre-plp",
+      "flex-layout.row#header-container",
+      "flex-layout.row#privacy-policy-container",
+      // PART BEFORE FOOTER
+      "experimental__visibility-layout#support-box-title",
+      "experimental__visibility-layout#support-box",
+      "flex-layout.row#newsletter-row"
+    ]
+  },
+  "flex-layout.row#header-container": {
+    "props": {
+      "blockClass": [
+        "sp-header-container",
+        "m-text-block-title"
+      ]
+    },
+    "children": [
+      "flex-layout.col#sp-header"
+    ]
+  },
+  // header
+  "flex-layout.col#sp-header": {
+    "props": {
+      "blockClass": "sp-header"
+    },
+    "children": [
+      "rich-text#page-title"
+    ]
+  },
+  // Text Only container
+  "flex-layout.row#text-only-container": {
+    "props": {
+      "blockClass": "sp-to-container"
+    },
+    "children": [
+      "rich-text#to-paragraph"
+    ]
+  },
+  "rich-text#to-paragraph": {
+    "props": {
+      "text": "Text here",
+      "blockClass": "to-paragraph-aligned"
+    }
+  },
+  //Privacy container
+  "flex-layout.row#privacy-policy-container": {
+    "children": [
+      "flex-layout.col#privacy-policy-container-col"
+    ],
+    "props": {
+      "blockClass": "privacy-policy-container"
+    }
+  },
+  "flex-layout.col#privacy-policy-container-col": {
+    "children": [
+      "flex-layout.row#privacy-policy-content-container",
+      "flex-layout.row#privacy-policy-mid-content-container",
+      "flex-layout.row#privacy-policy-macro-categories-container"
+    ]
+  },
+  "flex-layout.row#privacy-policy-content-container": {
+    "children": [
+      "rich-text#privacy-policy-content-paragraph"
+    ],
+    "props": {
+      "blockClass": "privacy-policy-content-container-style"
+    }
+  },
+  "rich-text#privacy-policy-content-paragraph": {
+    "props": {
+      "text": "We are delighted that you have shown interest in our company and products and we are committed to improving your customer experience in compliance with all applicable data protection laws and regulations.  Please find below our Privacy Notice, which explains the way we process your personal data.\n\nThe below privacy notice (**\"Privacy Notice\"**) is provided by:\n- with reference to the processing of data related to the use of the website (**\"Website\"**): Whirlpool UK Appliances Ltd, a company incorporated under the laws of England and Wales, having its registered office in Morley Way, Peterborough, Cambridgeshire, PE2 9JB; or\n- with reference to the processing of data related to the use of the applications and/or Smart Appliances of Whirlpool - i.e. household appliances that connect to the Internet (**\"App\"** and **\"Smart Appliances\"**): Whirlpool EMEA S.r.l., with registered office in Via Varesina n.204, 20156 Milano (MI), Italy, each in its capacity as a data controller (**\"Whirlpool\"**, **\"we\"** or **\"us\"**), and applies to users of the Website and/or the Apps and or Smart Appliances and any other individuals who interact with us through other channels (**\"Users\"**, **\"you\"** or **\"your\"**).\nThe Privacy Notice provides the main information regarding the methods used to collect and process Users' personal data, in accordance with the provisions of the UK General Data Protection Regulation (**\"UK GDPR\"**) and any other applicable local laws and regulations such as the EU General Data Protection Regulation (Regulation (EU) No. 2016/679, together with UK GDPR, **\"GDPR\"**).\n\nFor any clarifications or requests regarding the Privacy Notice and the data processing carried out by Whirlpool, you may:\n- contact us using our [contact form](https://www.hotpointservice.co.uk/contact)  or by sending a letter by post to the address of the Whirlpool company indicated above;\n- contact our Data Protection Officer by sending an e-mail to [data_protection_emea@whirlpool.com](mailto:data_protection_emea@whirlpool.com), or by post to the above-mentioned Whirlpool company address with the addition of \"for the attention of the Data Protection Office\".",
+      "blockClass": "privacy-policy-content-text-style"
+    }
+  },
+  "flex-layout.row#privacy-policy-mid-content-container": {
+    "children": [
+      "flex-layout.col#privacy-policy-title-mid-content-container"
+    ],
+    "props": {
+      "blockClass": "privacy-policy-mid-content-container-style"
+    }
+  },
+  "flex-layout.col#privacy-policy-title-mid-content-container": {
+    "children": [
+      "flex-layout.row#privacy-policy-information-container",
+      "flex-layout.row#privacy-policy-how-we-use-container",
+      "flex-layout.row#privacy-policy-ground-container",
+      "flex-layout.row#privacy-policy-how-long-container",
+      "flex-layout.row#privacy-policy-protect-container",
+      "flex-layout.row#privacy-policy-we-share-container",
+      "flex-layout.row#privacy-policy-transfers-container",
+      "flex-layout.row#privacy-policy-rights-container",
+      "flex-layout.row#privacy-policy-contact-container"
+    ],
+    "props": {
+      "blockClass": "privacy-policy-title-mid-content-container-style"
+    }
+  },
+  //PRIMA ROW CON DOPPIA COLONNA, TITOLO A SINISTRA E CONTENUTO A DESTRA
+  "flex-layout.row#privacy-policy-information-container": {
+    "children": [
+      "flex-layout.col#privacy-policy-information-title",
+      "flex-layout.col#privacy-policy-information-content"
+    ],
+    "props": {
+      "blockClass": "privacy-policy-information-container-style"
+    }
+  },
+  "flex-layout.col#privacy-policy-information-title": {
+    "children": [
+      "rich-text#privacy-policy-information-title-text"
+    ],
+    "props": {
+      "width": "20%",
+      "blockClass": "privacy-policy-information-title-style"
+    }
+  },
+  "flex-layout.col#privacy-policy-information-content": {
+    "children": [
+      "rich-text#privacy-policy-information-content-text"
+    ],
+    "props": {
+      "width": "80%",
+      "blockClass": "privacy-policy-information-content-style"
+    }
+  },
+  "rich-text#privacy-policy-information-title-text": {
+    "props": {
+      "text": "INFORMATION WE \n COLLECT",
+      "blockClass": "privacy-policy-information-title-text-style"
+    }
+  },
+  "rich-text#privacy-policy-information-content-text": {
+    "props": {
+      "text": "We collect (1) personal data that you have shared with us, (2) data we collected when we conclude sales and services transactions with you, (3) data collected by our call centers, (4) data concerning your activity on the Website, the App or through the Smart Appliances and (5) information provided or collected through other sources.\n\nWe do not collect special categories of personal data relating to you (e.g., health or judicial data).\n\nFor further information click [here](#information).",
+      "blockClass": "privacy-policy-information-content-text-style"
+    }
+  },
+  //SECONDA ROW CON DOPPIA COLONNA, TITOLO A SINISTRA E CONTENUTO A DESTRA
+  "flex-layout.row#privacy-policy-how-we-use-container": {
+    "children": [
+      "flex-layout.col#privacy-policy-how-we-use-title",
+      "flex-layout.col#privacy-policy-how-we-use-content"
+    ],
+    "props": {
+      "blockClass": "privacy-policy-how-we-use-container-style"
+    }
+  },
+  "flex-layout.col#privacy-policy-how-we-use-title": {
+    "children": [
+      "rich-text#privacy-policy-how-we-use-title-text"
+    ],
+    "props": {
+      "width": "20%",
+      "blockClass": "privacy-policy-how-we-use-title-style"
+    }
+  },
+  "flex-layout.col#privacy-policy-how-we-use-content": {
+    "children": [
+      "rich-text#privacy-policy-how-we-use-content-text"
+    ],
+    "props": {
+      "width": "80%",
+      "blockClass": "privacy-policy-how-we-use-content-style"
+    }
+  },
+  "rich-text#privacy-policy-how-we-use-title-text": {
+    "props": {
+      "text": "HOW WE USE YOUR \n DATA",
+      "blockClass": "privacy-policy-how-we-use-title-text-style"
+    }
+  },
+  "rich-text#privacy-policy-how-we-use-content-text": {
+    "props": {
+      "text": "We use your personal data to provide you with the services requested, including but not limited to, getting in touch with you in case of security issues related to your household appliance, allowing you to surf the Website, to use the App and/or the Smart Appliances, responding to requests and to interact with our services including the ones offered through call centers.\n\nOnly with your consent, we may also process your personal data to send you marketing communications, including offers and discounts from us and from our trusted partners, as well as record the phone calls made by you to our call center. With another specific consent, we may also profile your preferences and interests in order to send you personalized marketing communications. For further information click [here](#how-we-use).",
+      "blockClass": "privacy-policy-how-we-use-content-text-style"
+    }
+  },
+  //TERZA ROW CON DOPPIA COLONNA, TITOLO A SINISTRA E CONTENUTO A DESTRA
+  "flex-layout.row#privacy-policy-ground-container": {
+    "children": [
+      "flex-layout.col#privacy-policy-ground-title",
+      "flex-layout.col#privacy-policy-ground-content"
+    ],
+    "props": {
+      "blockClass": "privacy-policy-ground-container-style"
+    }
+  },
+  "flex-layout.col#privacy-policy-ground-title": {
+    "children": [
+      "rich-text#privacy-policy-ground-title-text"
+    ],
+    "props": {
+      "width": "20%",
+      "blockClass": "privacy-policy-ground-title-style"
+    }
+  },
+  "flex-layout.col#privacy-policy-ground-content": {
+    "children": [
+      "rich-text#privacy-policy-ground-content-text"
+    ],
+    "props": {
+      "width": "80%",
+      "blockClass": "privacy-policy-ground-content-style"
+    }
+  },
+  "rich-text#privacy-policy-ground-title-text": {
+    "props": {
+      "text": "ON WHAT GROUND \n DO WE USE YOUR \n DATA",
+      "blockClass": "privacy-policy-ground-title-text-style"
+    }
+  },
+  "rich-text#privacy-policy-ground-content-text": {
+    "props": {
+      "text": "We only use your data in case there is a legitimate legal ground for processing of personal data, such as\n\n &ndash; perform a contract we have with you;\n- &ndash; comply with legal obligations;\n-  &ndash; protect Whirlpool’s legitimate interests;\n-  &ndash; your consent.\n\nFor further information click [here](#ground)",
+      "blockClass": "privacy-policy-ground-content-text-style"
+    }
+  },
+  //QUARTA ROW CON DOPPIA COLONNA, TITOLO A SINISTRA E CONTENUTO A DESTRA
+  "flex-layout.row#privacy-policy-how-long-container": {
+    "children": [
+      "flex-layout.col#privacy-policy-how-long-title",
+      "flex-layout.col#privacy-policy-how-long-content"
+    ],
+    "props": {
+      "blockClass": "privacy-policy-how-long-container-style"
+    }
+  },
+  "flex-layout.col#privacy-policy-how-long-title": {
+    "children": [
+      "rich-text#privacy-policy-how-long-title-text"
+    ],
+    "props": {
+      "width": "20%",
+      "blockClass": "privacy-policy-how-long-title-style"
+    }
+  },
+  "flex-layout.col#privacy-policy-how-long-content": {
+    "children": [
+      "rich-text#privacy-policy-how-long-content-text"
+    ],
+    "props": {
+      "width": "80%",
+      "blockClass": "privacy-policy-how-long-content-style"
+    }
+  },
+  "rich-text#privacy-policy-how-long-title-text": {
+    "props": {
+      "text": "FOR HOW LONG WE \n RETAIN YOUR DATA",
+      "blockClass": "privacy-policy-how-long-title-text-style"
+    }
+  },
+  "rich-text#privacy-policy-how-long-content-text": {
+    "props": {
+      "text": "We use your personal data for the period strictly necessary to achieve the purposes set forth in this Privacy Notice.\n\n  For further information click [here](#how-long).",
+      "blockClass": "privacy-policy-how-long-content-text-style"
+    }
+  },
+  //QUINTA ROW CON DOPPIA COLONNA, TITOLO A SINISTRA E CONTENUTO A DESTRA
+  "flex-layout.row#privacy-policy-protect-container": {
+    "children": [
+      "flex-layout.col#privacy-policy-protect-title",
+      "flex-layout.col#privacy-policy-protect-content"
+    ],
+    "props": {
+      "blockClass": "privacy-policy-protect-container-style"
+    }
+  },
+  "flex-layout.col#privacy-policy-protect-title": {
+    "children": [
+      "rich-text#privacy-policy-protect-title-text"
+    ],
+    "props": {
+      "width": "20%",
+      "blockClass": "privacy-policy-protect-title-style"
+    }
+  },
+  "flex-layout.col#privacy-policy-protect-content": {
+    "children": [
+      "rich-text#privacy-policy-protect-content-text"
+    ],
+    "props": {
+      "width": "80%",
+      "blockClass": "privacy-policy-protect-content-style"
+    }
+  },
+  "rich-text#privacy-policy-protect-title-text": {
+    "props": {
+      "text": "WHAT WE DO TO \n  PROTECT YOUR \n  DATA",
+      "blockClass": "privacy-policy-protect-title-text-style"
+    }
+  },
+  "rich-text#privacy-policy-protect-content-text": {
+    "props": {
+      "text": "The security of your data is a priority for us. For this purpose, we have implemented adequate administrative, technical and organizational measures designed to safeguard your personal data against loss, theft and unauthorized use, disclosure or modification.\n\n For further information click [here](#protect).",
+      "blockClass": "privacy-policy-protect-content-text-style"
+    }
+  },
+  //SESTA ROW CON DOPPIA COLONNA, TITOLO A SINISTRA E CONTENUTO A DESTRA
+  "flex-layout.row#privacy-policy-we-share-container": {
+    "children": [
+      "flex-layout.col#privacy-policy-we-share-title",
+      "flex-layout.col#privacy-policy-we-share-content"
+    ],
+    "props": {
+      "blockClass": "privacy-policy-we-share-container-style"
+    }
+  },
+  "flex-layout.col#privacy-policy-we-share-title": {
+    "children": [
+      "rich-text#privacy-policy-we-share-title-text"
+    ],
+    "props": {
+      "width": "20%",
+      "blockClass": "privacy-policy-we-share-title-style"
+    }
+  },
+  "flex-layout.col#privacy-policy-we-share-content": {
+    "children": [
+      "rich-text#privacy-policy-we-share-content-text"
+    ],
+    "props": {
+      "width": "80%",
+      "blockClass": "privacy-policy-we-share-content-style"
+    }
+  },
+  "rich-text#privacy-policy-we-share-title-text": {
+    "props": {
+      "text": "WITH WHOM DO \n WE SHARE YOUR \n DATA",
+      "blockClass": "privacy-policy-we-share-title-text-style"
+    }
+  },
+  "rich-text#privacy-policy-we-share-content-text": {
+    "props": {
+      "text": "We may share your data with (1) service providers, (2) companies of the Whirlpool Group, and (3) public authorities and (4) marketing and commercial partners.\n\n For further information click [here](#we-share).",
+      "blockClass": "privacy-policy-we-share-content-text-style"
+    }
+  },
+  //SETTIMA ROW CON DOPPIA COLONNA, TITOLO A SINISTRA E CONTENUTO A DESTRA
+  "flex-layout.row#privacy-policy-transfers-container": {
+    "children": [
+      "flex-layout.col#privacy-policy-transfers-title",
+      "flex-layout.col#privacy-policy-transfers-content"
+    ],
+    "props": {
+      "blockClass": "privacy-policy-transfers-container-style"
+    }
+  },
+  "flex-layout.col#privacy-policy-transfers-title": {
+    "children": [
+      "rich-text#privacy-policy-transfers-title-text"
+    ],
+    "props": {
+      "width": "20%",
+      "blockClass": "privacy-policy-transfers-title-style"
+    }
+  },
+  "flex-layout.col#privacy-policy-transfers-content": {
+    "children": [
+      "rich-text#privacy-policy-transfers-content-text"
+    ],
+    "props": {
+      "width": "80%",
+      "blockClass": "privacy-policy-transfers-content-style"
+    }
+  },
+  "rich-text#privacy-policy-transfers-title-text": {
+    "props": {
+      "text": "TRANSFERS OF \n  YOUR DATA \n OUTSIDE EEA",
+      "blockClass": "privacy-policy-transfers-title-text-style"
+    }
+  },
+  "rich-text#privacy-policy-transfers-content-text": {
+    "props": {
+      "text": "Your data may be transferred to recipients located outside the United Kingdom (UK) or European Economic Area (EEA). In any case, we always make sure that appropriate and suitable safeguards compliant with the GDPR are implemented.\n\nFor further information click [here](#transfers).",
+      "blockClass": "privacy-policy-transfers-content-text-style"
+    }
+  },
+  //OTTAVA ROW CON DOPPIA COLONNA, TITOLO A SINISTRA E CONTENUTO A DESTRA
+  "flex-layout.row#privacy-policy-rights-container": {
+    "children": [
+      "flex-layout.col#privacy-policy-rights-title",
+      "flex-layout.col#privacy-policy-rights-content"
+    ],
+    "props": {
+      "blockClass": "privacy-policy-rights-container-style"
+    }
+  },
+  "flex-layout.col#privacy-policy-rights-title": {
+    "children": [
+      "rich-text#privacy-policy-rights-title-text"
+    ],
+    "props": {
+      "width": "20%",
+      "blockClass": "privacy-policy-rights-title-style"
+    }
+  },
+  "flex-layout.col#privacy-policy-rights-content": {
+    "children": [
+      "rich-text#privacy-policy-rights-content-text"
+    ],
+    "props": {
+      "width": "80%",
+      "blockClass": "privacy-policy-rights-content-style"
+    }
+  },
+  "rich-text#privacy-policy-rights-title-text": {
+    "props": {
+      "text": "YOUR RIGHTS",
+      "blockClass": "privacy-policy-rights-title-text-style"
+    }
+  },
+  "rich-text#privacy-policy-rights-content-text": {
+    "props": {
+      "text": "You have the right of access, rectification, erasure and portability of your personal data, restriction and opposition to processing, withdrawal of consent at any time.\n\n For further information click [here](#rights).",
+      "blockClass": "privacy-policy-rights-content-text-style"
+    }
+  },
+  //NONA ROW CON DOPPIA COLONNA, TITOLO A SINISTRA E CONTENUTO A DESTRA
+  "flex-layout.row#privacy-policy-contact-container": {
+    "children": [
+      "flex-layout.col#privacy-policy-contact-title",
+      "flex-layout.col#privacy-policy-contact-content"
+    ],
+    "props": {
+      "blockClass": "privacy-policy-contact-container-style"
+    }
+  },
+  "flex-layout.col#privacy-policy-contact-title": {
+    "children": [
+      "rich-text#privacy-policy-contact-title-text"
+    ],
+    "props": {
+      "width": "20%",
+      "blockClass": "privacy-policy-contact-title-style"
+    }
+  },
+  "flex-layout.col#privacy-policy-contact-content": {
+    "children": [
+      "rich-text#privacy-policy-contact-content-text"
+    ],
+    "props": {
+      "width": "80%",
+      "blockClass": "privacy-policy-contact-content-style"
+    }
+  },
+  "rich-text#privacy-policy-contact-title-text": {
+    "props": {
+      "text": "CONTACT US",
+      "blockClass": "privacy-policy-contact-title-text-style"
+    }
+  },
+  "rich-text#privacy-policy-contact-content-text": {
+    "props": {
+      "text": "You may contact us using our [contact form](https://www.hotpointservice.co.uk/contact) or by sending a letter by post to the Whirlpool company listed above.\n\nYou may contact our Data Protection Officer by sending an email to [data_protection_emea@whirlpool.com](mailto:data_protection_emea@whirlpool.com) or by post to our address above with the addition of \"for the attention of the Data Protection Office\".",
+      "blockClass": "privacy-policy-contact-content-text-style"
+    }
+  },
+  //MACRO CATEGORIE ROW E COLONNA PRINCIPALE
+  "flex-layout.row#privacy-policy-macro-categories-container": {
+    "children": [
+      "flex-layout.col#privacy-policy-macro-categories-container-col"
+    ],
+    "props": {
+      "blockClass": "privacy-policy-data-processed-container-style"
+    }
+  },
+  "flex-layout.col#privacy-policy-macro-categories-container-col": {
+    "children": [
+      "flex-layout.row#privacy-policy-data-processed",
+      "flex-layout.row#privacy-policy-purposes",
+      "flex-layout.row#privacy-policy-legal-basis",
+      "flex-layout.row#privacy-policy-retention",
+      "flex-layout.row#privacy-policy-procedures",
+      "flex-layout.row#privacy-policy-communication",
+      "flex-layout.row#privacy-policy-eea",
+      "flex-layout.row#privacy-policy-subjects"
+    ],
+    "props": {
+      "blockClass": "privacy-policy-macro-categories-container-col-style"
+    }
+  },
+  //MACRO CATEGORIE DATA-PROCESSED
+  "flex-layout.row#privacy-policy-data-processed": {
+    "children": [
+      "rich-text#privacy-policy-data-processed-text"
+    ],
+    "props": {
+      "blockClass": "privacy-policy-data-processed-style"
+    }
+  },
+  "rich-text#privacy-policy-data-processed-text": {
+    "props": {
+      "text": "<span class='vtex-rich-text-0-x-midTitleStyle'><span>1</span>. TYPE OF PERSONAL DATA PROCESSED</span>\n\n Whirlpool processes the following categories of information about you, depending on the type of interaction with you:\n\n **1. Data provided by you directly** </li>\n\n Whirlpool processes personal data concerning you collected or provided directly by you through different channels and on different occasions, as well as from different sources. Examples of personal data we collect include:\n <ol class='vtex-rich-text-0-x-olAlphaStyle'><li>personal data provided at the time of creating an account on the Website and/or on the App, of purchasing a Whirlpool product or service through the Website, of registering the product purchased, sending a request for information, assistance or services related to the purchase (such as, name, surname, residential address, e-mail, telephone number, appliances purchased by you, services requested by you);</li>\n <li>personal data provided during phone calls to our call centers (including call dates and times, caller contact information and information relating to your order); </li> <br> <li>personal data contained in images, audio and/or video you submit or allow the App or Smart Appliances to capture;</li> \n <li>personal data provided by other parties’ products or services that you connect through the App or Smart Appliances.</li> </ol> \n We may receive your personal data from third parties, such as insurance and distribution companies.\n\n **2. Data collected through the Website, Apps and Smart Appliances**\n\n The Website, Apps and Smart Appliances collect your personal data for various reasons (including technical and related to their functioning), such as: (i) the IP address and domain name of your computer; (ii) the ID, model and serial number of the Smart Appliances; (iii) the IP address of your home router when connecting a Smart Appliance to our network; (iv) the type of browser and operating system used; (v) the physical location of your device or Smart Appliance (as determined, for example, using satellites, mobile phone towers and WiFi signals); and (vi) other information about your online session, such as the Uniform Resource Identifier (URI) addresses of the requested resources, the time of the request, the method used to send the request to the server, the size of the file received in response, the numerical code related to the status of the response received from the server and other parameters relating to the operating system used by the User's device. After you connect your Smart Appliance to our network, we may automatically collect information from the Smart Appliance on a periodic basis, including status (such as whether the Smart Appliance is off or on, and details about the cycle or function it is performing), instructions that have been entered on the Smart Appliance, fault or error codes and aspects of its environment that may affect how it operates (such as input voltage, signal strength and air temperature). We may track and collect App usage data, such as the date and time the App accesses our servers, what information has been downloaded to the App, and the instructions that are transmitted to the Smart Appliance.\nThe data collected through the Website and the App are also used for the purpose of collecting anonymous statistical information on the use of the Website, the App and Smart Appliances and to check their correct functioning, and are stored according to our information retention requirements. However, for some activities, such as after-sales services or control and/or performance measurement activities, personal data may be processed.\nThis data may also be used to ascertain liability in the event of computer crimes perpetrated against the Website, the App and/or Smart Appliances.\nIf you would prefer to not have Whirlpool collect any data from you Smart Appliances, you will need to disconnect your Smart Appliance from your wireless router and turn off the wireless connection button on your appliance. Disconnecting your Smart Appliance will also result in you being unable to use the Smart Appliance and the App, even if your account will remain active. If you simply deactivate your account without disconnecting your Smart Appliance, the identification data of your Smart Appliance will continue to be transmitted to Whirlpool.\n\nOn our Website we may collect both information that does not constitute personal data (for example, to check the Website is properly functioning and to produce anonymous statistics on the use of the same), and information that contains personal data of the User, through different types of cookies or other tracking technologies (for example, pixels and web beacons), after you have given your consent to the installation of such technologies (where consent is required). Further information on the cookies we install through the Website can be found in our [Cookie Notice](cookie-policy). If the information collected through cookies is personal data, in addition to the aforementioned cookie notice, this Privacy Notice will also apply: please refer to the relevant sections. \n\n <br> Such category of data includes: (i) the IP address and the domain name of the User’s computer; (ii) the Smart Appliances ID, model and serial number; (iii) the IP address of your home router when you connect a Smart Appliance to our network; (iv) the type of browser and operating system used; (v) the physical location of your device or Smart Appliance (as determined, for example, using satellite, cell phone tower, and WiFi signals); and (vi) other information about your online session such as the URI (Uniform Resource Identifier) addresses of the requested resources, the time of the request, the method used to submit the request to the server, the size of the file received as reply, the numerical code related to the reply status from the server and other parameters related to the operating system used by the User’s device. After you connect your Smart Appliance to our network, we may automatically collect information from the Smart Appliance on a periodic basis, including status (such as whether the Smart Appliance is off or on, and details about the cycle or function it is performing), instructions that have been entered on the Smart Appliance, fault or error codes and aspects of its environment that may affect how it operates (such as input voltage, signal strength and air temperature). We may track and collect App usage data, such as the date and time the App accesses our servers, what information has been downloaded to the App, and the instructions that are transmitted to the Smart Appliance. \n\n <br> Website data is used only to collect anonymous statistical information on the use of the Website and to control its correct operation and it is retained in accordance with our records retention requirements. Such data may also be used for ascertaining liability in the event of possible computer-related crimes against the Website, the App and/or the Smart Appliances. \n\n <br> If you would prefer to not have Whirlpool collect any data from you Smart Appliances, you will need to de-provision (disconnect) your Smart Appliance from your wireless router and turn off the wireless connection button on your appliance. De-provisioning (disconnecting) your Smart Appliance will also disable your use of the Smart Appliance and App, even if your related account remains active. If you merely deactivate your account but do not de-provision (disconnect) your Smart Appliance, data, which do not include and are not associated with your personal data and does not identify you specifically, will continue to be transmitted to Whirlpool. \n\n <br> We may also collect personal data on our Website by means of different categories of cookies, where applicable after you have provided your active consent. For more information about cookies, please visit our [Cookie Notice.](cookies-disclaimer)",
+      "blockClass": "privacy-policy-data-processed-text-style",
+      "htmlId": "information"
+    }
+  },
+  //MACRO CATEGORIE purposes
+  "flex-layout.row#privacy-policy-purposes": {
+    "children": [
+      "rich-text#privacy-policy-purposes-text"
+    ],
+    "props": {
+      "blockClass": "privacy-policy-purposes-style"
+    }
+  },
+  "rich-text#privacy-policy-purposes-text": {
+    "props": {
+      "text": "<span  class='vtex-rich-text-0-x-midTitleStyle'><span>2</span>. PURPOSES, LEGAL BASIS OF THE PROCESSING AND STORAGE OF DATA</span>\n\n|PURPOSE|LEGAL BASIS|STORAGE PERIOD|\n | :---|:----:|---:|\n | a) Allow you to create an account on the Website or on the App and manage this account, and sending you communications functional to its use|The performance of a contract of which the User is a party or of pre-contractual measures adopted at the request of the User - Art. 6 (1) (b) GDPR.<br> The provision of personal data is necessary for this purpose. If you do not provide your personal data, it will not be possible to register your account.| Until your account is deleted.|\n | b) To allow you to register the products and Smart Appliances you have purchased on the Website, also in order to allow us to notify you of any safety issues concerning the registered product or Smart Appliance. | The performance of a contract of which the User is a party or of pre-contractual measures adopted at the request of the User - Art. 6 (1) (b) GDPR.<br> The provision of personal data is necessary for this purpose. If you do not provide your personal data, it will not be possible to have you register the purchased product. | For the duration of warranty and in accordance with applicable law.|\n | c) Complete the purchase of a product on the Site and provide you with related services under the contract, including customer service, after-sales services (such as home delivery, installation, removal, procurement of spare parts, repair, replacement, etc.).| The performance of a contract of which the User is a party or of pre-contractual measures adopted at the request of the User - Art. 6 (1) (b) GDPR.<br> The provision of personal data is necessary for this purpose. If you do not provide your personal data, it will not be possible for you to purchase the product or access the related service requested.|For the duration of the contract and beyond as permitted by in accordance with applicable law.|\n | d) Process and manage information requests related to our products and services which you send through the channels made available by Whirlpool, including our interactive chat service. | The performance of a contract of which the User is a party or of pre-contractual measures adopted at the request of the User - Art. 6 (1) (b) GDPR.<br>The provision of personal data is necessary for this purpose. If you do not provide your personal data, it will not be possible for us to respond to your request.| For the time necessary to fulfill the request. |\n | e) Send you marketing communications (in electronic or non-electronic form) regarding our products and services, also bought or registered (by telephone, post, e-mail, SMS, MMS, push notifications and banner on Meta social media platforms and Google platforms); when we are marketing through these platforms, we may also exclude you (or  from receiving our marketing communications). We may also carry out market researches. | - Your freely given consent - Art. 6(1)(a) GDPR. The provision of personal data is optional for this purpose. If you do not provide consent, there will be no consequences of any kind for you. If you have given your consent, you may revoke it at any time also through the button available at the bottom of each marketing communication you will receive.<br> - If marketing communications are sent to your email address, which you provided to us in the context of purchasing a product or a service from Whirlpool, and such communications relate to products similar to those purchased by you, the legal basis is the legitimate interest of Whirlpool - Art. 6(1)(f) GDPR and Art. 130 D.Lgs. 196/2003. The provision of personal data is necessary for this purpose. You may at any time object to the processing carried out for this purpose, including through the button available at the bottom of each marketing communication you will receive.| In case of legitimate interest, until you object to the processing of your data for this purpose.<br> In case of consent, until you withdraw your consent.|\n | f) collect and analyze your history and interests as our consumer (including purchases made, products registered, repair history, complaints, review scores, enrollment in loyalty program, interactions with our advertisements, including those sent by email, interests, demographic data and preferences shown in our preference center) and/or rely upon Meta’s or Google's monitoring of your characteristics, behaviors and interests shown on Meta or Google social media platforms (e.g. page visitors, age, gender, main city, interests, intent to buy) and to create targeting audiences on Meta  Ireland Limited's and Google's social media platforms and, in order to show you (or exclude from showing you) personalized marketing communications on such platforms. To do so, we may also combine personal data we collected with personal data collected through tracking technologies (if you have provided your ad hoc consent – please see below for more information).| - Your freely given consent - Art. 6(1)(a) GDPR. The provision of personal data is optional for this purpose. If you do not provide consent, there will be no consequences of any kind for you. If you have given your consent, you may revoke it at any time also through the button available at the bottom of each marketing communication you will receive. | In case of consent, until you withdraw your consent.|\n | g) Carry out analytics across systems where we host your personal data in order to enrich, improve or gain further insight into such data and datasets. This purpose includes activities such as the development and improvement of our applications, products and/or services and their analysis to help us better understand our customers in order to offer the most relevant communications, services, and experiences to them. Also, we may combine these data with data collected through tracking technologies.<br><br>The personal data we use for this purpose include:<br><br> - Products you purchased or registered (time of purchase or registration, product model, purchase price, location of purchase or registration (e.g. whether from a retailer or an ecommerce platform)<br> - Warranties or spare parts you purchased<br> - History of repair in relation to your products or spare parts<br> - Any complaints in relation to your products or spare parts<br> - Scores of reviews you have provided<br> - enrollment in loyalty program,<br> - Interactions with our communications<br> - Delivery and installations you have received from us.| The legitimate interest of Whirlpool or a third party - Art. 6(1)(f) GDPR. | Until the purpose for which the personal data is originally collected no longer exists and such data is deleted in accordance with the retention periods set out in this section 2.|\n | h) Send you customer satisfaction questionnaires via email or sms and evaluate your degree of satisfaction with the product purchased or the services you have used, in order to improve the products and services offered to you (including by Whirlpool suppliers).<br> The questionnaires will be anonymous, except for the questionnaires relating to the delivery and installation service, in which you will be asked for certain data (such as order number, supplier and product line) necessary to assess the quality of the services provided by Whirlpool suppliers with reference to individual products/product lines. | The legitimate interest of Whirlpool or a third party - Art. 6(1)(f) GDPR.<br><br>The provision of personal data is necessary for this purpose. You may at any time object to the processing carried out for this purpose.| Until the questionnaire is sent or, with reference to the questionnaires concerning the delivery and installation service, until the evaluation of the quality of the service provided by the suppliers or, in any case, until you object to the processing of the data.| Per la durata della operazioni a premio o del concorso.|\n | i) When requested by you, we will inform you by email when a product on the Website is back in stock, when the price of a product drops or send you a comparison table between the products you have chosen. | Your freely given consent - Art. 6 (1) (a) GDPR.<br>The provision of personal data is optional for this purpose. If you do not provide your data, we will not be able to fulfill the request. | Once the request has been processed. | \n | j) Allow you to participate in promotions, prize draws and competitions organized by Whirlpool or by third parties on behalf of Whirlpool. | Depending on the promotion or competition, the legal basis may be the performance of a contract of which the User is a party or of pre-contractual measures adopted at the request of the same - Art. 6 (1) (b) GDPR - or your freely given consent - Art. 6 (1)(a) GDPR.<br>The provision of personal data is necessary for this purpose.If you do not provide your data, it will not be possible for you to participate in the promotion. | For the duration of the promotion or the competition. |\n | k) Recording and listening to the phone calls you made to the consumer call center, for internal training, documentation and quality control / assurance purposes of the service provided. | Your freely given consent - Art. 6(1)(a) GDPR.<br>The provision of personal data is optional for this purpose. If you do not provide your data, there will be no consequences of any kind for you.| Up to the evaluation of the quality of the service.|\n | l) Show you the purchases made on the Website as a visitor (and the related purchase information) in your personal account (if created). | Your freely given consent - Art. 6(1)(a) GDPR.<br>The provision of personal data is optional for this purpose. If you do not provide your data, there will be no consequences of any kind for you. | Until you delete you account. |\n | m) Offer you the purchase of warranty extensions (by phone and on the Website), if your product or Smart Appliance is no longer covered by warranty or is only covered by legal warranty | The legitimate interest of Whirlpool or third parties - Art. 6(1)(f) GDPR.<br>The provision of personal data is necessary for this purpose. You may object to the processing carried out for this purpose at any time.| Your data will not be stored if the warranty is not purchased. |\n | n) Provide extended warranty service purchased by you, including the related phone support services, verification of the coverage period of the purchased product, repair and replacement of the product.| The performance of a contract of which the User is a party or of pre-contractual measures adopted at the request of the User - Art. 6 (1) (b) GDPR.<br>The provision of personal data is necessary for this purpose. If you do not provide your personal data, we cannot provide you with warranty extension services. | For the duration of the warranty and beyond in accordance with the law. |\n | o) Using tracking technologies, analyze the traffic on the Website, to produce aggregate and anonymous statistics for the purpose of optimizing the services provided through the Website. We may also carry out analytics across systems where we host your personal data in order to enrich, improve or gain further insight into such data and datasets. This purpose includes activities such as the development and improvement of our applications, products and/or services and their analysis to help us better understand our customers in order to offer the most relevant communications, services, and experiences to them. Also, we may combine these data with data collected by you. The personal data we use for this purpose include our communications with you (including email/sms opens, clicks, unsubscribes). | Your freely given consent to install the tracking technology (see [Cookie Notice](cookie-policy)).<br>Providing personal data for this purpose is optional. If you do not provide your personal data, there will be no consequences of any kind for you.| Until data is anonymized, which takes place following the collection of data or, in any case, until consent is withdrawn. |\n | p) Through tracking technologies, to analyse your behavior on the Website, your preferences, interests, purchase history, browsing experiences and interactions with our advertisements (including those that are sent by email) in order to create targeting audiences on social media platforms and/or personalize marketing communications that are shown to you or that are shown to individuals with similar interests/characteristics to yours (including on third party sites, including on Meta  social media platforms or when using Google services), as well as to understand and improve the effectiveness of our marketing strategy. To do so, we may also use the data collected by Meta or Google, when you navigate their platforms to show you targeted advertising. Where we do this, such targeting and the display of the relevant marketing communications will be entirely managed by Meta or Google based on cookies that are used on such platforms.<br>Also, we may also combine data collected through tracking technologies with personal data we collected (for example, when you opt-in to receive marketing communications, register, purchase or register a product on the Website, or when you log in or visit Facebook or navigate through Google services e.g., the email).<br>For example, we may use the pixel provided by Facebook to understand your potential shopping interests displayed on the Website. Or, we may use cookies to verify the products you have left in your shopping cart and send you marketing communications with those products. | Your freely given consent, as required to install the tracking technology (see [Cookie Notice](cookie-policy)).| Until you withdraw consent.|\n | q) In the event that you have been redirected to the Website by clicking in an advertisement for Whirlpool products shown on a third party site (affiliate publishers), evaluate, using tracking technologies, if the source site belongs to one of the affiliate publishers of Awin AG or similar companies and if you have completed the purchase (known as <i>affiliate marketing)</i>. | Your freely given consent, as required to install the tracking technology (see [Cookie Notice](cookie-policy)).<br>The provision of personal data is optional for this purpose. If you do not provide your consent, there will be no consequences of any kind for you. If you have given your consent, you can revoke it at any time.| Until the completion of the affiliate marketing transaction or, in any case, until the withdrawal of consent. |\n | r) Provide you with the services you have purchased with Smart Appliances, including notifications for service and maintenance purposes, communications functional to the use of your Smart Appliance, such as location for configuration and App enablement, customer service, after-sales services and contractual warranty services. | The performance of a contract of which the User is a party or of pre-contractual measures adopted at the request of the User - Art. 6 (1) (b) GDPR.<br>The provision of personal data is necessary for this purpose. If you do not provide your personal data, we cannot provide you with services relating to Smart Appliances | For the duration of the contract and beyond as permitted by in accordance with applicable law.|\n | s) Carry out activities necessary for the transfers of businesses and business branches, takeovers, mergers, demergers or other transformations and for the performance of such transactions. | The legitimate interest of Whirlpool or third parties - Art. 6(1)(f) GDPR.<br>The provision of personal data is necessary for this purpose. You may object to the processing carried out for this purpose at any time.| Until the extraordinary transaction is completed. |\n | t) Prevent fraud and establish liability for cybercrime. | The legitimate interest of Whirlpool or third parties - Art. 6 (1) (f) GDPR.<br>The provision of personal data is necessary for this purpose. You may object to the processing carried out for this purpose at any time. | For the term of the limitation period. |\n | u) Protect Whirlpool's rights, both in and out of court. | The legitimate interest of Whirlpool or third parties - Art. 6 (1) (f) GDPR.<br>The provision of personal data is necessary for this purpose. You may object to the processing carried out for this purpose at any time. | For the duration of the procedure / proceedings and in accordance with applicable law. |\n | v) Fulfill Whirlpool's legal obligations and respond to requests from competent authorities. | The fulfillment of a legal obligation to which Whirlpool is subject - Art. 6(1)(c) GDPR.<br>The provision of personal data is necessary for this purpose. If you do not provide personal data, there will be no consequences of any kind for you. | For the period provided by law or required by the authority. |",
+      "blockClass": "privacy-policy-purposes-text-style",
+      "htmlId": "how-we-use"
+    }
+  },
+  //MACRO CATEGORIE legal-basis
+  "flex-layout.row#privacy-policy-legal-basis": {
+    "children": [
+      "rich-text#privacy-policy-legal-basis-text"
+    ],
+    "props": {
+      "blockClass": "privacy-policy-legal-basis-style"
+    }
+  },
+  "rich-text#privacy-policy-legal-basis-text": {
+    "props": {
+      "text": "<span  class='vtex-rich-text-0-x-midTitleStyle'><span>3</span>. DATA PROCESSING PROCEDURES </span>\n\n Your personal data is processed with the support of Information Technology and/or paper means and it is protected by appropriate security measures suitable to ensure the secrecy and security of the personal data. More specifically, Whirlpool adopts the appropriate administrative, technical, personal and physical measures designed to protect personal data against any loss, theft as well as unauthorized use, disclosure or modifications of the personal data.",
+      "blockClass": "privacy-policy-legal-basis-text-style",
+      "htmlId": "ground"
+    }
+  },
+  //MACRO CATEGORIE retention
+  "flex-layout.row#privacy-policy-retention": {
+    "children": [
+      "rich-text#privacy-policy-retention-text"
+    ],
+    "props": {
+      "blockClass": "privacy-policy-retention-style"
+    }
+  },
+  "rich-text#privacy-policy-retention-text": {
+    "props": {
+      "text": "<span  class='vtex-rich-text-0-x-midTitleStyle'><span>4</span>. COMMUNICATION OF DATA </span> \n\n Your personal data will be processed by Whirlpool employees, who have been trained and authorized to process personal data in accordance with the provisions of the GDPR.\n\n Your personal data may also be shared with the following recipients (please note that not all of the listed third parties will receive your data):\n\n 1. companies of the Whirlpool Group located in the United Kingdom (UK), European Economic Area (EEA) and outside the UK or EEA, acting as autonomous controllers;\n\n 2. service providers located in the UK or EEA and outside the UK or EEA, such as, IT service providers (e.g. e-mail and cloud providers) and systems management and IT maintenance professionals, distributors of our products, suppliers of logistics and delivery services for our products, suppliers of technical assistance services, repair and maintenance of our products, call center operators and customer service providers, agencies and providers of services of digital marketing and advertising of our products (for example, Meta Platforms Ireland Limited), reviews and ratings service providers, cookie providers, tracking technologies and web / email analytics services (for example, Google Analytics offered by Google LLC.). These entities work on our behalf as data processors or independent data controllers, as appropriate;\n 3. electronic payment service providers, in order to manage payments related to your orders. For the sake of clarity, Whirlpool does not process any banking / financial data (including credit card information) of the Users. In relation to this processing, the electronic payment service providers will process your personal data as independent data controllers, in compliance with the GDPR (and with any other applicable local legislation) and with the relevant privacy policies. Whirlpool is not responsible for any damages (including those deriving from the violation of the GDPR and any other applicable data protection legislation) deriving from the processing of the User's banking / financial data (including credit card data) by such third parties;\n 4. independent authorities, law enforcement agencies and/or judicial and administrative authorities for their institutional purposes as prescribed by law;\n 5. third parties involved in an extraordinary corporate transactions, such as a merger or the sale of a business unit, including those who provide them with advice in the context of the transaction;\n 6. entities that provide specific legal, financial or tax consultancy services;\n 7. our extended warranty provider Domestic & General Group (Domestic & General Insurance PLC  - **\"D&G\"**). D&G acts as a joint data controller (together with Whirlpool) for the purpose of promoting and selling warranty extensions, as well as managing repair requests under such warranty extensions. D&G and its Data Protection Officer can be contacted for any matter relating to the processing carried out jointly with Whirlpool, at the following address: dataprotection@domesticandgeneral.com. D&G will process personal data for the following purposes: (i) to register and manage your account / profile, as well as the legal warranty provided by Whirlpool; (ii) promote, sell and manage extended warranty; (iii) in some countries, handle and answer incoming customer service calls and update such data with such consumer information; (iv) manage and respond to incoming consumer complaints (including any disputes) relating to extended warranty; (vi) manage service bookings and the provision of repair services and provide replacement products to consumers, as well as correct and update such data with information provided by consumers in connection with such repair services and/or the supply of replacement products and / or update such personal data; (vii) carry out surveys on the quality of the products and services provided;\n 8. Meta Platforms Ireland Limited (**\"Meta Ireland\"**), which provides Whirlpool with a service for the creation of targeted audiences as well as with a tracking technology (pixel) through which personalized advertisements or web forms through which users can subscribe to commercial communications from Whirlpool are displayed on the social network. Through the service known as Custom Audience, Whirlpool sends Facebook your contact details in order to create an audience of consumers to be targeted on the social platform with marketing communications: for such processing activities, Whirlpool is the data controller while Facebook is our data processor and a data processing agreement has been concluded. The pixel (called Facebook pixel) tracks your behaviors and interests shown on the Website, transmits them to Meta Ireland and, also by combining the information it already has about you, shows you interest-based advertising of Whirlpool products (known as Website Custom Audience), or web forms to subscribe to commercial communications from  Whirlpool (known as Lead Ads), to you or to users of Meta Ireland who have common or similar characteristics / interests to yours (known as Lookalike Audience). For the processing carried out jointly in order to show you the advertisements or web forms indicated above, we and Meta Ireland act as joint controllers and, to this end, we have entered into a joint controller agreement which sets out our responsibilities to comply with the obligations under the GDPR (available at the following [link](https://www.facebook.com/legal/controller_addendum)). According to this agreement, Whirlpool is responsible for providing you with the information referred to in Articles 13 and 14 GDPR, while Facebook Ireland is responsible for responding to your requests to exercise the rights referred to in Articles 15-20 GDPR with reference to the personal data stored by Facebook Ireland following the processing. In any case, you may address your requests for information or exercise your rights with reference to the data processing carried out as joint controllers with both joint controllers. Whirlpool and Meta Ireland act as independent data controllers in relation to the processing of your personal data that you provide via the web form through which you subscribe to commercial communications (Lead Ads service). Moreover, Whirlpool uses Meta Ads Manager service of Meta Ireland through which we send targeted marketing communications on Meta social media platforms, on the basis of selected criteria rendered available by Meta Ireland: for the sake of transparency, please note that we do not access to the identity nor other information of Meta’s users to which the marketing communications are shown. The contact details of Meta Ireland and its Data Protection Officer, as well as further information on how Meta Ireland processes your personal data (including the legal basis referred to and how to exercise your rights in relation to Meta Ireland), can be found at https://www.facebook.com/about/privacy.\n 9. Google LLC. (or its subsidiaries), which provides Whirlpool, as part of the Google Ads services, tracking technologies through which personalized advertisements or web forms in which to subscribe to commercial communications from Whirlpool are displayed by Google LLC. within its services. These tracking technologies (remarketing pixel and Google Analytics integrated with Google Ads) track your behavior and interests on the Website, transmitting the relevant information to Google LLC. Google LLC., also through combination with information it already has on you, may show you ads for products of Whirlpool, personalized on the basis of your interests (known as Remarketing), or web forms through which you can subscribe to commercial communications from Whirlpool (known as Lead Form), to you or to users of Google LLC. who have characteristics and/or interests that are similar to yours. For the processing described above (including the processing of your personal data that you provide through the web forms (Lead Form service)), Whirlpool and Google LLC. act as autonomous controllers. The contact details of Google LLC and its Data Protection Officer, as well as further information on how Google LLC processes your personal data, can be found at https://policies.google.com/privacy.\n 10. Awin AG, which provides Whirlpool with tracking technology as part of affiliate marketing activities. Affiliate publishers place advertisements from Whirlpool on their websites and, when you click on the advertisement, you are redirected to the website which, using the tracking technology provided by Awin AG, recognizes whether the originating website belongs to an affiliate publisher and tracks whether you make a purchase. For processing carried out jointly, Whirlpool and Awin AG act as joint data controllers and for this relationship we have entered into a joint-controller agreement that sets out our respective responsibilities with regard to compliance with our obligations under the GDPR (the essential content of which can be requested by sending an email to data_protection_emea@whirlpool.com). You may address your inquiries or exercise your rights with regard to the data processing carried out jointly with both joint controllers. The contact details of Awin AG and its Data Protection Officer, as well as further information on how Awin AG processes your personal data, can be found at https://www.awin.com/it/privacy.\n\nA full list of Whirlpool's data processors can be provided upon request, which is to be sent via email to data_protection_emea@whirlpool.com.",
+      "blockClass": "privacy-policy-retention-text-style",
+      "htmlId": "how-long"
+    }
+  },
+  //MACRO CATEGORIE procedures
+  "flex-layout.row#privacy-policy-procedures": {
+    "children": [
+      "rich-text#privacy-policy-procedures-text"
+    ],
+    "props": {
+      "blockClass": "privacy-policy-procedures-style"
+    }
+  },
+  "rich-text#privacy-policy-procedures-text": {
+    "props": {
+      "text": "<span  class='vtex-rich-text-0-x-midTitleStyle'><span>5</span>. DATA TRANSFER OUTSIDE OF THE EEA</span> \n\n We may transfer your personal data to a country outside the UK or EEA. Any transfer of your personal data to a country outside the UK or EEA (whether within or outside the Whirlpool Group) will be done in accordance with the GDPR when:\n\n 1. the country to which the personal data is transferred has been the subject of an adequacy decision by the European Commission, pursuant to Article 45 GDPR; or\n\n 2. when adequate safeguards have been provided by or to the Whirlpool Group company exporting your personal data, pursuant to Articles 46 - 48 GDPR, including, without limitation, when the importer has signed the standard contractual clauses made available by the European Commission or, where the UK GDPR applies, the international data transfer agreement or international data transfer addendum made available by the UK Information Commissioner's Office. In any case, the transfer based on one of the instruments indicated in Articles 46 - 48 GDPR will be accompanied by additional contractual, organizational and technical measures, if this is necessary to ensure that your personal data is guaranteed a level of protection substantially equivalent to that guaranteed in the UK or European Union.\n\nA copy of the safeguards in place may be requested at any time by sending an email to data_protection_emea@whirlpool.com.",
+      "blockClass": "privacy-policy-procedures-text-style",
+      "htmlId": "protect"
+    }
+  },
+  //MACRO CATEGORIE communication
+  "flex-layout.row#privacy-policy-communication": {
+    "children": [
+      "rich-text#privacy-policy-communication-text"
+    ],
+    "props": {
+      "blockClass": "privacy-policy-communication-style"
+    }
+  },
+  "rich-text#privacy-policy-communication-text": {
+    "props": {
+      "text": "<span  class='vtex-rich-text-0-x-midTitleStyle'><span>6</span>. MINORS UNDER THE AGE OF 18 </span> \n\n The Website, Apps, and Smart Appliances are not addressed to persons under the age of 18, nor is Whirlpool knowingly collecting personal data from persons under the age of 18.\n\n",
+      "blockClass": "privacy-policy-communication-text-style",
+      "htmlId": "we-share"
+    }
+  },
+  //MACRO CATEGORIE eea
+  "flex-layout.row#privacy-policy-eea": {
+    "children": [
+      "rich-text#privacy-policy-eea-text"
+    ],
+    "props": {
+      "blockClass": "privacy-policy-eea-style"
+    }
+  },
+  "rich-text#privacy-policy-eea-text": {
+    "props": {
+      "text": "<span  class='vtex-rich-text-0-x-midTitleStyle'><span>7</span>. RIGHTS OF DATA SUBJECTS </span> \n\n You, at any time and at no charge, may exercise the following rights:\n\n | Name of the Right | Description |\n |------|------|\n | 1. Right to be informed (Art. 13,14 GDPR) | The right to be informed on the purposes and methods of the processing of your personal data |\n | 2. Right of access  (Art. 15 GDPR) | Right to access your personal data. This right enables you to obtain confirmation as to whether or not personal data concerning you is being processed and, if so, to obtain access to the personal data and to receive a copy of the personal data we hold about you. |\n | 3. Right to rectification (Art. 16 GDPR) | Right to request an update or correction to the personal data we hold about you. This right allows you to have incomplete or inaccurate data rectified, although we may need to verify the accuracy of new data you provide. |\n | 4. Right to be forgotten (Art. 17 GDPR) | Right to request erasure of your personal data. This right allows you to ask us to erase or remove your personal data if the conditions set out in Article 17 GDPR apply. |\n | 5. Right to restriction of processing (Art. 18 GDPR) | Right to restrict the processing of your personal data. This right allows you to ask us to restrict the processing of your personal data in the cases provided for by Art. 18 GDPR. | 6. Right to withdraw consent (Art. 7 GDPR) | If the processing is based on your freely given consent, you have the right to withdraw this consent at any time.  Withdrawal of consent does not affect the lawfulness of data processing carried out before consent is withdrawn |\n | 7. Art. 20 GDPR | Right to the portability of your data. This right allows you to ask us to deliver your personal data to yourself or another party. We will deliver your personal data to you or to the third party indicated in a structured, commonly used and electronically readable format. You may exercise this right if the processing is based on your consent or is necessary for the performance of a contract to which you are a party (or of pre-contractual measures taken at your request), and is carried out by automated means. You will not be able to exercise this right if it violates the rights and freedoms of others. |\n |8. Right to lodge a complaint (Art. 77, 79 GDPR) | The right to lodge a complaint with the national data protection authority in the Member State in which you normally reside, work or the place where you believe a breach of the GDPR has occurred or with the judicial authority.|\n | 9. Right to object (ART. 21 GDPR) | The right to object to the processing of all or part of your personal data if the processing is based on the legitimate interest of Whirlpool (or a third party) and if, in light of your specific situation, you wish to object to the processing because you believe that it affects your fundamental rights and freedoms. In some cases, we may continue to process your data if we demonstrate compelling legitimate grounds which override your rights and freedoms, or if the processing is necessary to establish, exercise or defend our legal claims. However, if you object to the processing of your data for marketing purposes, we cannot for any reason continue to process your data for such purposes.|\n\n If you wish to exercise the above rights, or raise any questions about the personal data we hold about you, please contact us:\n - using our [contact form](https://www.hotpointservice.co.uk/contact);\n - by sending an email to data_protection_emea@whirlpool.com;\n - by sending a letter by post to the address of the Whirlpool indicated above with the addition \"for the attention of the Data Protection Office\".\n\nIf you have an unresolved privacy or data use concern that we have not addressed in a satisfactory manner, you may also contact our U.S.-based third party dispute resolution provider (free of charge) at https://feedback-form.truste.com/watchdog/request.",
+      "blockClass": "privacy-policy-eea-text-style",
+      "htmlId": "transfers"
+    }
+  },
+  //MACRO CATEGORIE subjects
+  "flex-layout.row#privacy-policy-subjects": {
+    "children": [
+      "rich-text#privacy-policy-subjects-text"
+    ],
+    "props": {
+      "blockClass": "privacy-policy-subjects-style"
+    }
+  },
+  "rich-text#privacy-policy-subjects-text": {
+    "props": {
+      "text": "<span  class='vtex-rich-text-0-x-midTitleStyle'><span>9</span>. AMENDMENTS AND UPDATES </span>\n\n Our Privacy Notice is subject to continuous review and may be updated from time to time. If we make material changes, we will notify you by sending you a notice to your last known email address prior to its effective date.\n This Privacy Notice is current as of insert date of GO LIVE\n\n![TRUSTe](https://privacy-policy.truste.com/privacy-seal/seal?rid=e1d3da8b-b66b-4037-a274-20292dcd11e4)",
+      "blockClass": "privacy-policy-subjects-text-style"
+    }
+  }
+}

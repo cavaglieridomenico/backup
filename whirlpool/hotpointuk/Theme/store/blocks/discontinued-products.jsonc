@@ -1,0 +1,89 @@
+{
+	"store.custom#discontinued-products": {
+		"blocks": [
+			"symmetric-pdp-title",
+			"responsive-layout.mobile#discontinued-products",
+			"responsive-layout.desktop#discontinued-products",
+			// PART BEFORE FOOTER
+			"experimental__visibility-layout#support-box-title",
+			"experimental__visibility-layout#support-box",
+			"flex-layout.row#newsletter-row"
+		]
+	},
+	"symmetric-pdp-title": {},
+	"responsive-layout.desktop#discontinued-products": {
+		"children": [
+			"symmetric-pdp-title",
+			"breadcrumb-pdp-unsellable",
+			"out-of-stock-products#desktop"
+		]
+	},
+	"responsive-layout.mobile#discontinued-products": {
+		"children": [
+			"symmetric-pdp-title",
+			"breadcrumb-pdp-unsellable",
+			"out-of-stock-products#mobile"
+		]
+	},
+	"out-of-stock-products#desktop": {
+		"children": [
+			"symmetric-pdp-title",
+			"flex-layout.row#bread-pdp",
+			// "flex-layout.row#product-name",
+			"flex-layout.row#product-main",
+			"flex-layout.row#description",
+			"flex-layout.row#carousel-salesforce"
+		]
+	},
+	"flex-layout.row#carousel-salesforce": {
+		"title": "[Row] - [Desktop] Carousel Salesforce",
+		"props": {
+			"blockClass": "carouselSalesforce",
+			"htmlId": "recommended"
+		},
+		"children": ["carousel-salesforce#desktop"]
+	},
+	"carousel-salesforce#desktop": {
+		"title": "Carousel Salesforce Desktop",
+		//"blocks": ["product-summary.shelf"],
+		"blocks": ["product-summary.shelf#bestSeller"],
+		"children": ["slider-layout#carousel-salesforce"]
+	},
+	"slider-layout#carousel-salesforce": {
+		"title": "[Slider] - [Desktop] Carousel Salesforce",
+		"props": {
+			"infinite": true,
+			"fullWidth": false,
+			"blockClass": ["carouselSalesforce"],
+			"showNavigationArrows": "desktopOnly",
+			"showPaginationDots": "always",
+			"itemsPerPage": {
+				"desktop": 4,
+				"tablet": 2,
+				"phone": 1
+			}
+		}
+	},
+	"flex-layout.row#disc-block": {
+		"children": [
+			"rich-text#spacer",
+			"flex-layout.col#discontinuedBlock"
+		],
+		"props": {
+			"horizontalAlign": "right",
+			"blockClass": "discontinuedRow"
+		}
+	},
+	"rich-text#spacer": {
+		"props": {
+			"text": ""
+		}
+	},
+	"out-of-stock-products#mobile": {
+		"children": [
+			"symmetric-pdp-title",
+			"flex-layout.row#bread-pdp",
+			"flex-layout.row#product-main-mobile"
+		]
+	}
+}

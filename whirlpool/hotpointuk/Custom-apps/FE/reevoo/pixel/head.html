@@ -1,0 +1,86 @@
+<!-- <script> -->
+<script 
+  defer="defer" 
+  src="https://widgets.reevoo.com/loader/HTT.js" 
+  id="reevoo-loader"
+  type="text/javascript" />
+  
+  /*
+    REEVOO MARKER 2.0 HAS SOME ISSUES, UNTIL SOLVED WE ARE LOADING A FORKED AND MODIFIED MARKER
+  
+    OLD SCRIPT SETTINGS SCRIPT: https://widgets.reevoo.com/loader/HTT.js
+    OLD LOADER SCRIPT: https://widgets.reevoo.com/assets/mark2.0/reevoo_loader-f5d7a5f9b91ceb6717afe087ec90de7b.js
+  
+    THIS SOLUTION INVOLES A CUSTOM LOADER WICH HAS BEEN UPLOADED UNDER PATH /arquivos/reevoo_loader.js.
+    HERE WE HAVE REPLACED THE <h1> tags with <h2> tags, for obvious SEO implications.
+      
+    TO RESTORE OLD SOLUTION JUST DELETE ALL YOU SEE IN THIS FILE AND REPALCE WITH:
+    
+    <script 
+    defer="defer" 
+    src="https://widgets.reevoo.com/loader/HTT.js" 
+    id="reevoo-loader"
+    type="text/javascript" />
+  
+  */
+
+  /*--------------------- REVOO SOLUTION CHANGES --> TICKET RUN-2026 ------------------------------------*/
+  /* function initReevooLoader() {
+    window.reevooLoader = new ReevooLoader({
+      assets: {
+        reevooBadge: { url: '/assets/reevoo_adaptive_badges_3_9.3-1463097151a67bb951c23eb134938438.js', id: 'reevoo-badges', type: 'JS' },
+        style: { url: '/assets/mark2.0/reevoo_loader-e8c6f375d774ae3b180a7b286f7f7d53.css', id: 'reevoo-style', type: 'STYLE' },
+      },
+      apis: {
+        texts: { url: '/loader/texts' },
+        badgeVariants: { url: '/reevoomark/badge-variant' },
+        badgeTemplates: { url: '/reevoomark/badge' },
+        productSummaries: { url: '/reevoomark/product_summary' },
+        customExperienceScores: { url: '/reevoomark/customer_experience_scores/---trkref---.json' },
+        brandReviews: { url: '/api/brand_reviews' },
+        aaoReviews: { url: '/api/conversations/questions' }, // deprecated
+        conversationsQuestions: { url: '/api/conversations/questions' },
+        newConversationsResponse: { url: '/api/conversations/responses/new' },
+        productReviews: { url: '/api/product_reviews' },
+        offers: { url: '/api/v1/widgets/offers', host: 'price_widgets' },
+      },
+      rich_snippets: {
+        //productRichSnippets: { url: '/loader/product_reviews_rich_snippets.js', id: 'product_rich_snippets', type: 'JS' },
+        brandRichSnippets: { url: '/loader/cx_reviews_rich_snippets.js', id: 'brand_rich_snippets', type: 'JS' }
+      },
+      settings: {
+        hosts: {
+          default: 'https://widgets.reevoo.com',
+          price_widgets: 'https://price-widgets.reevoo.com',
+        },
+        trkref: 'HTT',
+        locale: 'en-GB',
+        language: 'en',
+        tracking_enabled: true,
+        translations_enabled: false,
+        offers_enabled: true,
+        show_brand: true,
+        aao_enabled: true,
+        brand_reviews_enabled: true,
+        product_reviews_enabled: true,
+        min_product_reviews_to_show: 3,
+        min_product_reviews_with_content_to_show: 1,
+        min_brand_reviews_to_show: 1
+      },
+      theme_styles: null,
+      texts: { "tab_titles": { "aao": "Ask an owner", "product": "Customer reviews", "brand": "Reviews of Hotpoint" } }
+    })
+    window.reevooLoader.registerCustomElements()
+  }
+
+  (function () {
+    var script = document.createElement('script')
+    script.type = 'text/javascript'
+    script.id = 'reevoo-loader'
+    //script.src = "https://widgets.reevoo.com/assets/mark2.0/reevoo_loader-f5d7a5f9b91ceb6717afe087ec90de7b.js"
+    script.src = "/arquivos/reevoo_loader.js"
+    script.onload = initReevooLoader
+    document.head.appendChild(script)
+  })()
+
+<!-- <//script> -->

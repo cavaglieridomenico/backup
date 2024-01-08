@@ -1,0 +1,7 @@
+query productCategory($field:ProductUniqueIdentifierField!, $values:[ID!]){
+  productsByIdentifier(field:$field, values:$values){
+    categoryTree{
+      name
+    }
+  }
+}

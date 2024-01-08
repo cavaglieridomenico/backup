@@ -1,0 +1,33 @@
+{
+  "name": "manuals-app",
+  "vendor": "bauknechtde",
+  "version": "1.0.1",
+  "title": "Manuals app",
+  "description": "App to interact with the manuals",
+  "builders": {
+    "docs": "0.x",
+    "node": "6.x",
+    "graphql": "1.x"
+  },
+  "scripts": {
+    "prereleasy": "bash lint.sh"
+  },
+  "credentialType": "absolute",
+  "policies": [
+    {
+      "name": "ADMIN_DS"
+    },
+    {
+      "name": "graphql-query"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "*",
+        "path": "/*"
+      }
+    }
+  ],
+  "dependencies": {},
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

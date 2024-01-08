@@ -1,0 +1,73 @@
+{
+  "product-comparison-drawer": {
+    "blocks": ["list-context.comparison-product-summary-slider#drawer"]
+  },
+  "list-context.comparison-product-summary-slider#drawer": {
+    "blocks": ["product-summary.shelf.product-comparison#drawer"],
+    "children": ["slider-layout#comparison-drawer"]
+  },
+  "slider-layout#comparison-drawer": {
+    "props": {
+      "blockClass": "comparison-drawer",
+      "itemsPerPage": {
+        "desktop": 4,
+        "tablet": 3,
+        "phone": 1
+      },
+      "showPaginationDots": "never",
+      "infinite": false,
+      "fullWidth": true,
+      "centerMode": "to-the-left"
+    }
+  },
+  "product-summary.shelf.product-comparison#drawer": {
+    "children": [
+      "product-summary-column#drawer-col2",
+      "product-comparison-block.close-button"
+    ],
+    "props": {
+      "blockClass": "drawer-summary"
+    }
+  },
+  "product-summary-column#drawer-col2": {
+    "children": [
+      "product-summary-image#comparison",
+      "vtex.store-components:product-name#summary",
+      "product-specification-group#modelSummary",
+      "flex-layout.row#priceComparison"
+    ],
+    "props": {
+      "blockClass": "drawer-summary-col2"
+    }
+  },
+  "product-summary-image#comparison": {
+    "props": {
+      "blockClass": "comparisonDrawer"
+    }
+  },
+  "product-summary-name#comparison": {
+    "props": {
+      "blockClass": "nameProductCompare",
+      "tag": "div"
+    }
+  },
+  "product-summary-price#comparison": {
+    "props": {
+      "showListPrice": true,
+      "showSellingPriceRange": false,
+      "showLabels": false,
+      "showInstallments": false,
+      "showDiscountValue": false
+    }
+  },
+  "flex-layout.row#priceComparison": {
+    "props": {
+      "blockClass": "priceComparisonDrawer"
+    },
+    "children": [
+      "product-selling-price",
+      "product-list-price",
+      "product-price-savings#saving"
+    ]
+  }
+}

@@ -1,0 +1,350 @@
+{
+  "order-placed": {
+    "blocks": ["op-header", "op-order"]
+  },
+  "op-header": {
+    "children": []
+  },
+  "op-section#confirmation": {
+    "props": {
+      "name": "confirmation",
+      "marginBottom": 9,
+      "borderless": true
+    },
+    "children": [
+      "op-confirmation-icon",
+      "op-confirmation-title",
+      "flex-layout.row#confirmation-box-wrapper"
+    ]
+  },
+  // each order section
+  "op-order": {
+    "children": [
+      //"op-omniconvert",
+      "op-section#confirmation",
+      "flex-layout.row#order-header",
+      "flex-layout.row#delivery-shipping-billing-wrapper",
+      "rich-text#Riepilogo-ordine",
+      "flex-layout.row#order-list-header",
+      "op-section#delivery-packages",
+      "op-order-total",
+      "purchaseContext",
+      "rich-text#ivaTYP",
+      "flex-layout.row#back-to-home"
+    ]
+  },
+  "rich-text#ivaTYP": {
+    "props": {
+      "text": "*The total includes VAT and any active promotions",
+      "blockClass": "ivaTYP"
+    }
+  },
+  "flex-layout.row#order-list-header": {
+    "children": [
+      "flex-layout.col#product-header",
+      "flex-layout.col#quantity-header",
+      "flex-layout.col#prezzo-header"
+    ],
+    "props": {
+      "blockClass": "headerOrder"
+    }
+  },
+  "flex-layout.col#product-header": {
+    "children": ["rich-text#prodotto"],
+    "props": {
+      "blockClass": "headerOrder",
+      "width": {
+        "desktop": "60%",
+        "mobile": "80%"
+      }
+    }
+  },
+  "flex-layout.col#quantity-header": {
+    "children": ["rich-text#quantity"],
+    "props": {
+      "blockClass": ["headerOrder", "quantity"],
+      "width": {
+        "desktop": "30%",
+        "mobile": "0%"
+      }
+    }
+  },
+  "flex-layout.col#prezzo-header": {
+    "children": ["rich-text#prezzo"],
+    "props": {
+      "blockClass": ["headerOrder", "headerPrezzo"]
+    }
+  },
+  "rich-text#prodotto": {
+    "props": {
+      "text": "Prodotto",
+      "blockClass": ["headerOrderText", "productText"]
+    }
+  },
+  "rich-text#quantity": {
+    "props": {
+      "text": "Quantità",
+      "blockClass": "headerOrderText"
+    }
+  },
+  "rich-text#prezzo": {
+    "props": {
+      "text": "Prezzo",
+      "blockClass": "headerOrderText"
+    }
+  },
+  "flex-layout.row#back-to-home": {
+    "children": ["link#back-home"],
+    "props": {
+      "blockClass": "backHome"
+    }
+  },
+  "link#back-home": {
+    "props": {
+      "label": "Continua con gli acquisti",
+      "href": "/",
+      "blockClass": "backHomeLink"
+    }
+  },
+  // each order headerxt
+  "flex-layout.row#order-header": {
+    "props": {
+      "fullWidth": true,
+      "colSizing": "auto",
+      "colGap": 5,
+      "marginBottom": 5,
+      "blockClass": "order-header-row"
+    },
+    "children": ["flex-layout.col#order-header-info"]
+  },
+  "flex-layout.col#order-header-info": {
+    "children": [
+      "flex-layout.row#op-order-number-and-order-word-wrapper",
+      "billing-address.creation-date"
+    ]
+  },
+  "flex-layout.row#op-order-number-and-order-word-wrapper": {
+    "props": {
+      "blockClass": ["op-order-number-and-order-word-wrapper"]
+    },
+    "children": ["flex-layout.col#op-order-number-and-order-word2"]
+  },
+  "flex-layout.col#op-order-number-and-order-word2": {
+    "props": {
+      "blockClass": ["op-order-number-and-order-word2"]
+    },
+    "children": ["op-order-number"]
+  },
+  "op-order-number#title": {
+    "props": { "blockClass": "title" }
+  },
+  "flex-layout.row#delivery-shipping-billing-wrapper": {
+    "children": [
+      "flex-layout.col#delivery-shipping-billing-wrapper1",
+      "flex-layout.col#delivery-shipping-billing-wrapper2"
+    ],
+    "props": {
+      "blockClass": ["delivery-shipping-billing-wrapper"],
+      "horizontalAlign": "center",
+      "colGap": 5,
+      "marginBottom": 5,
+      "preventVerticalStretch": true,
+      "preserveLayoutOnMobile": false
+    }
+  },
+  "flex-layout.col#delivery-shipping-billing-wrapper1": {
+    "props": {
+      "blockClass": ["delivery-shipping-billing-wrapper"],
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "flex-layout.row#delivery-shipping-billing-wrapper1_title",
+      "flex-layout.row#delivery-shipping-billing-wrapper1_title2",
+      "flex-layout.row#delivery-shipping-billing-wrapper1_deliveryAddress",
+      "flex-layout.row#delivery-shipping-billing-wrapper1_billingAddress",
+      "flex-layout.row#delivery-shipping-billing-wrapper1_title3",
+      "flex-layout.col#delivery-shipping-billing-courier"
+    ]
+  },
+  "flex-layout.row#delivery-shipping-billing-wrapper1_title": {
+    "props": {
+      "blockClass": ["delivery-shipping-billing-wrapper_content"]
+    },
+    "children": ["rich-text#delivery-shipping-billing-wrapper_title1"]
+  },
+  "rich-text#delivery-shipping-billing-wrapper_title1": {
+    "props": {
+      "text": "Shipping details",
+      "textPosition": "LEFT",
+      "blockClass": ["delivery-shipping-billing-wrapper_content"]
+    }
+  },
+  "flex-layout.row#delivery-shipping-billing-wrapper1_title2": {
+    "props": {
+      "blockClass": ["delivery-shipping-billing-wrapper_content"]
+    },
+    "children": ["rich-text#delivery-shipping-billing-wrapper1_title2"]
+  },
+  "rich-text#delivery-shipping-billing-wrapper1_title2": {
+    "props": {
+      "text": "Delivery date",
+      "textPosition": "LEFT",
+      "blockClass": ["delivery-shipping-billing-wrapper_content2"]
+    }
+  },
+  "flex-layout.row#delivery-shipping-billing-wrapper1_title3": {
+    "props": {
+      "blockClass": ["delivery-shipping-billing-wrapper_content"]
+    },
+    "children": ["rich-text#delivery-shipping-billing-wrapper1_title3"]
+  },
+  "rich-text#delivery-shipping-billing-wrapper1_title3": {
+    "props": {
+      "text": "*Delivery courier",
+      "textPosition": "LEFT",
+      "blockClass": ["delivery-shipping-billing-wrapper_content2"]
+    }
+  },
+  "flex-layout.col#delivery-shipping-billing-courier": {
+    "children": ["op-delivery-courier"]
+  },
+  "rich-text#delivery-shipping-billing-courier": {
+    "props": {
+      "text": "In case of sda: UPS <br />In case of not sda: Hotpoint Home Solutions",
+      "textPosition": "LEFT",
+      "blockClass": ["delivery-shipping-billing-courier"]
+    }
+  },
+  "rich-text#delivery-shipping-billing-wrapper_title2": {
+    "props": {
+      "text": "Delivery address and contact details",
+      "textPosition": "LEFT",
+      "blockClass": ["delivery-shipping-billing-wrapper_content"]
+    }
+  },
+  "flex-layout.row#delivery-shipping-billing-wrapper2_title2": {
+    "props": {
+      "blockClass": ["delivery-shipping-billing-wrapper_content"]
+    },
+    "children": ["rich-text#delivery-shipping-billing-wrapper2_title2"]
+  },
+  "rich-text#delivery-shipping-billing-wrapper2_title2": {
+    "props": {
+      "text": "Address",
+      "textPosition": "LEFT",
+      "blockClass": ["delivery-shipping-billing-wrapper_content2"]
+    }
+  },
+  "rich-text#delivery-shipping-billing-wrapper_title3": {
+    "props": {
+      "text": "Contact details",
+      "textPosition": "LEFT",
+      "blockClass": ["delivery-shipping-billing-wrapper_content"]
+    }
+  },
+  "flex-layout.row#delivery-shipping-billing-wrapper1_deliveryAddress": {
+    "props": {
+      "blockClass": ["delivery-shipping-billing-wrapper_content"]
+    },
+    "children": ["billing-address.delivery"]
+  },
+  "flex-layout.row#delivery-shipping-billing-wrapper1_billingAddress": {
+    "children": ["op-delivery-date"],
+    "props": {
+      "blockClass": ["delivery-shipping-billing-wrapper_content"]
+    }
+  },
+  "rich-text#delivery-shipping-billing-wrapper1_gli-accessori-wpro": {
+    "props": {
+      "text": "To be replaced with real delivery date",
+      "blockClass": "accessoriText"
+    }
+  },
+
+  "flex-layout.col#delivery-shipping-billing-wrapper2": {
+    "props": {
+      "blockClass": ["delivery-shipping-billing-wrapper"],
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "flex-layout.row#delivery-shipping-billing-wrapper2_title",
+      "flex-layout.row#delivery-shipping-billing-wrapper2_title2",
+      "flex-layout.row#delivery-shipping-billing-wrapper2_content",
+      "flex-layout.row#delivery-shipping-billing-wrapper3_content"
+    ]
+  },
+  "flex-layout.row#delivery-shipping-billing-wrapper2_title": {
+    "props": {
+      "blockClass": ["delivery-shipping-billing-wrapper_content"]
+    },
+    "children": ["rich-text#delivery-shipping-billing-wrapper_title2"]
+  },
+  "flex-layout.row#delivery-shipping-billing-wrapper2_content": {
+    "props": {
+      "blockClass": ["delivery-shipping-billing-wrapper_content"]
+    },
+    "children": ["op-delivery-address"]
+  },
+
+  "flex-layout.col#delivery-shipping-billing-wrapper3": {
+    "props": {
+      "blockClass": ["delivery-shipping-billing-wrapper"],
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "flex-layout.row#delivery-shipping-billing-wrapper3_title",
+      "flex-layout.row#delivery-shipping-billing-wrapper3_content"
+    ]
+  },
+  "flex-layout.row#delivery-shipping-billing-wrapper3_title": {
+    "props": {
+      "blockClass": ["delivery-shipping-billing-wrapper_content"]
+    },
+    "children": ["rich-text#delivery-shipping-billing-wrapper_title3"]
+  },
+  "flex-layout.row#delivery-shipping-billing-wrapper3_content": {
+    "props": {
+      "blockClass": ["delivery-shipping-billing-wrapper_content"]
+    },
+    "children": ["billing-address"]
+  },
+  // bottom of top section of order header
+  "op-section#pickup-packages": {
+    "props": {
+      "name": "pickupPackages"
+    },
+    "children": ["op-order-pickup-packages"]
+  },
+  "op-section#delivery-info": {
+    "props": {
+      "name": "deliveryInfo"
+    },
+    "children": ["op-order-delivery-packages"]
+  },
+  "rich-text#Riepilogo-ordine": {
+    "props": {
+      "text": "#### Riepilogo ordine",
+      "blockClass": "titleOrder"
+    }
+  },
+  "op-section#delivery-packages": {
+    "props": {
+      "name": "deliveryPackages"
+    },
+    "children": ["op-order-delivery-packages"]
+  },
+  "experimental__visibility-layout#ButtonWarrantyOrderPlaced": {
+    "props": {
+      "visible": true
+    },
+    "children": ["link#ButtonOrderPlaced"]
+  },
+  "link#ButtonOrderPlaced": {
+    "props": {
+      "label": "TESTO BOTTONE",
+      "href": "#",
+      "displayMode": "button",
+      "blockClass": ["postillaButton", "buttonOrderPlaced"]
+    }
+  }
+}

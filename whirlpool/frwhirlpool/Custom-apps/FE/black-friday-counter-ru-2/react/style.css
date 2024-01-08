@@ -1,0 +1,486 @@
+body {  /* Disable horizontal scroll */
+  overflow-x: hidden !important;
+}
+/* Countdown component */
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+.countdownContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: max-content !important;
+  height: max-content !important;
+}
+/* Knob component */
+.washingMachine {
+  background-image: url('https://frwhirlpool.vtexassets.com/arquivos/washing_machine_bf.png');
+  background-position: left;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 15%;
+  left: 60%;
+  width: 600px;
+  height: 600px;
+}
+.knobContainer {
+  display: flex;
+  width: fit-content;
+  width: -moz-fit-content;
+  position: relative;
+  padding: 0.5rem;
+  top: 12.5%;
+  left: 11%;
+}
+.knob {
+  max-width: 85%;
+  max-height: 85%;
+}
+.cleatsContainer {
+  position: absolute; 
+  left: 8.5%;
+  top: 25%;
+  width: 300px; 
+  height: 300px; 
+  border-radius: 50%; 
+  transform: rotate(-90deg);
+}
+.cleat {
+  position: absolute; 
+  object-fit: contain;
+}
+/* Description component */
+
+.description {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  padding: 0 1rem;
+  margin: 0;
+  text-align: center;
+}
+.descriptionOrange {
+  color:#EDAC09;
+}
+/* Subscribe form */
+.subscribeContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 170px;
+  padding: 1rem;
+}
+.subscriptionForm {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.nameSurnameWrapper{
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+.subscriptionForm :global(.vtex-input-prefix__group) {
+  border-radius: 6px;
+  height: 48px;
+}
+.subscriptionForm :global(.vtex-input){
+  min-height: 80px;
+}
+.subscriptionForm :global(.vtex-styleguide-9-x-input) {
+  font-style: normal;
+  font-weight: 400;
+  padding: 1.4rem;
+  height: 48px;
+}
+.subscriptionButton {
+  font-style: normal;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #EDAC09;
+  border-radius: 2px;
+  padding: 0.8rem 2rem;
+  border: none;
+  height: 48px;
+  text-transform: uppercase;
+  cursor: pointer !important;
+}
+.discoverButton{
+  font-weight: bold;
+  color: #ffffff;
+  border-radius: 2px;
+  background-color: #EDB112;
+  padding: 1rem 2rem;
+  border: none;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer !important;
+  width: fit-content;
+  margin: 0 auto 1rem auto;
+}
+.checkboxContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  /* width: 70%; */
+  margin: 1rem 0 0.5rem 0;
+}
+.checkboxContainer :global(.vtex-checkbox__line-container) {
+width: auto !important;
+}
+.checkboxContainer :global(.vtex-checkbox__inner-container) {
+  border: 0.8px solid white;
+  width: 1.4rem;
+  height: 1.4rem;
+}
+.checkboxContainer :global(.vtex-checkbox__input) {
+  width: 100% !important;
+  height: 100% !important;
+}
+.checkboxContainer :global(.vtex-checkbox__box-wrapper) {
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 5px;
+  border: 1px solid #e3e4e6;
+}
+.checkboxContainer :global(.vtex-checkbox__container) {
+  width: 1.4rem !important;
+  height: 1.4rem !important;
+}
+.checkboxContainer :global(.vtex-checkbox__box) {
+  background-color: #EDAC09;
+}
+.checkboxRequired {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 160%;
+  left: -2.5%;
+  background-color: #363636;
+  border-radius: 4px;
+  padding: 1rem;
+  color: #ffffff;
+}
+.checkboxRequired::after {
+  content: '';
+  position: absolute;
+  left: 18px;
+  top: -18px;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 25px solid #363636;
+  border-radius: 2px;
+  clear: both;
+}
+.orangeSquare {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  padding: 0.5rem;
+  background-color: #EDAC09;
+  margin: 0 1rem 0 0.5rem;
+}
+.checkboxRequiredExclamative {
+  color: #222222;
+  font-style: normal;
+  font-weight: bold;
+  text-align: center;
+}
+.closeIcon {
+  position: absolute;
+  top: 8%;
+  right: 5%;
+  cursor: pointer;
+}
+.checkboxText {
+  font-size: 0.79rem;
+  margin-left: 1rem;
+}
+.checkboxLink {
+  color: #000;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.checkboxTextAsterisk {
+  font-size: 0.79rem;
+  margin: 0;
+}
+.discountCountdownExpired{
+  width: 100%;
+  text-align: center;
+}
+.countdownSubtitleExpired{
+  font-size: 2rem;
+  font-weight: bold;
+  color: #505050;
+  margin: 0;
+}
+.countdownDiscountExpired{
+  font-size: 4.5rem;
+  font-weight: 800;
+  color: #505050;
+  margin: 0;
+}
+.orangeRow{
+  height: 12px;
+  background: #edb112;
+  width: 50%;
+  border-radius: 10px;
+  margin: 0.5rem auto 1.5rem auto;
+}
+.countdownDescriptionExpired{
+  font-size: 2rem;
+  color: #505050;
+  margin: 0.5rem 0;
+}
+/* Mobile version*/
+@media only screen and (max-width: 600px) {
+  /* Countdown component */
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  /* Knob component*/
+  .knobContainer {
+    position: relative;
+    top: unset;
+    left: unset;
+    width: 100%;
+    height: 100%;
+  }
+  /* .knob {  //ORIGINAL WAY
+    position: absolute;
+    left: 7.5%;
+    top: 8%;
+  } */
+  /* .cleatsContainer {     //ORIGINAL WAY
+    position: relative; 
+    width: 250px; 
+    height: 250px; 
+    transform: none;
+    top: unset;
+    left: unset;
+    margin: 1rem 0;
+  } */
+  .subscriptionForm {
+    width: 100%;
+    flex-direction: column;
+    padding-top: 0.5rem;
+  }
+  .nameSurnameWrapper{
+    flex-direction: column;
+    gap: 0px;
+  }
+  .subscriptionButton {
+    margin: 0.8rem 0 0 0;
+  }
+  .checkboxContainer {
+    align-items: flex-start;
+  }
+  .checkboxContainer {
+    width: 100%;
+  }
+  .checkboxRequired {
+    display: flex;
+    position: absolute;
+    left: auto;
+    top: auto;
+    padding: 2rem;
+    border-radius: 2px;
+    background-color: #363636;
+    max-width: 300px;
+  }
+  .checkboxRequiredOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    overflow-y: hidden;
+    background-color: rgba(0, 0, 0, 0.199);
+  }
+  .checkboxRequired::after {
+    display: none;
+  }
+  .washingMachine {
+    background-position: center;
+    position: unset;
+    top: unset;
+    left: unset;
+    width: 250px;
+    height: 250px;
+    margin-top: 1rem;
+  }
+  .cleatsContainer {
+    position: relative; 
+    width: 130px; 
+    height: 130px; 
+    transform: none;
+    top: unset;
+    left: unset;
+    margin-bottom: 0.5rem;
+  }
+  .knob {
+    position: absolute;
+    left: 7.5%;
+    top: 7%;
+    max-width: 85%;
+    max-height: 85%;
+  }
+}
+/* Tablet version*/
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .subscriptionButton {
+    padding: 0.8rem 1rem;
+  }
+  .checkboxContainer {
+    width: 80% !important;
+  }
+  .checkboxRequired {
+    display: flex;
+    position: absolute;
+    left: auto;
+    top: auto;
+    padding: 2rem;
+    border-radius: 2px;
+    background-color: #363636;
+    max-width: 300px;
+  }
+  .checkboxRequiredOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.199);
+  }
+  .checkboxRequired::after {
+    display: none;
+  }
+  .washingMachine {
+    background-position: center;
+    position: absolute;
+    top: 30%;
+    left: 65%;
+    width: 250px;
+    height: 250px;
+    margin-top: 1rem;
+  }
+  .cleatsContainer {
+    position: relative; 
+    width: 130px; 
+    height: 130px; 
+    transform: none;
+    top: unset;
+    left: unset;
+    margin-bottom: 0.5rem;
+  }
+  .knobContainer {
+    position: relative;
+    top: unset;
+    left: unset;
+    width: 100%;
+    height: 100%;
+  }
+  .knob {
+    position: absolute;
+    left: 7.5%;
+    top: 7%;
+    max-width: 85%;
+    max-height: 85%;
+  }
+  .nameSurnameWrapper{
+    flex-direction: column;
+    gap: 0px;
+  }
+}
+/* Laptop */
+@media only screen and (min-width: 1025px) and (max-width: 1439px) {
+  .washingMachine {
+    top: 25%;
+    width: 400px;
+    height: 400px;
+  }
+  .cleatsContainer {
+    left: 8%;
+    width: 200px;
+    height: 200px;
+  }
+  .knobContainer {
+    top: 13.5%;
+    left: 10.5%;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .washingMachine {
+    top: 5%;
+  }
+}
+/* 4K */
+@media only screen and (min-width: 2560px) {
+  .washingMachine {
+    left: 60%;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 750px) {
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .knobContainer {
+    position: relative;
+    top: unset;
+    left: unset;
+    width: 100%;
+    height: 100%;
+  }
+  .knob {
+    position: absolute;
+    left: 7.5%;
+    top: 7%;
+    max-width: 85%;
+    max-height: 85%;
+  }
+  .washingMachine {
+    position: unset;
+  }
+  .subscriptionForm {
+    width: 100% !important;
+}
+  }
+  @media only screen and (max-width: 1024px) {
+    .description{
+      padding-bottom: 0;
+      padding-top: 0.5rem;
+    }
+    .subscribeContainer{
+      padding-top: 0;
+    }
+  }

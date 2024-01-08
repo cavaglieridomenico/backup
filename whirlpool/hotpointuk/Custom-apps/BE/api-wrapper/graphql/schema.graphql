@@ -1,0 +1,4 @@
+type Query {
+  productLogos(skuId: ID!): [String] @cacheControl(maxAge: MEDIUM, scope: PUBLIC)
+  promoInfoBySkuId(skuId:ID!): PromoInfo@cacheControl(scope: PUBLIC)
+}

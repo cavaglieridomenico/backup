@@ -1,0 +1,260 @@
+{
+  "store.custom#black-friday-plp": {
+    "blocks": [
+      "breadcrumb#black-friday",
+      "toggle-layout#bfTitle",
+      "analytics",
+      "toggle-layout#bannerBF",
+      // "timer-component#aspettando-black-friday-1",
+      "toggle-layout#bfCarouselTitle-1",
+      "toggle-layout#bf-1",
+      "toggle-layout#bfCarouselTitle-2",
+      "toggle-layout#bf-2",
+      "toggle-layout#bfCarouselTitle-3",
+      "toggle-layout#bf-3",
+      "toggle-layout#bfCarouselTitle-4",
+      "toggle-layout#bf-4"
+    ]
+  },
+  // "timer-component#aspettando-black-friday-1": {
+  //   "props": {
+  //     "showDateFormat": true,
+  //     "targetDate": "2021-11-26",
+  //     "ore": "00",
+  //     "minuti": "00",
+  //     "secondi": "00"
+  //     // "Head": "rich-text#testA",
+  //     // "Else": "rich-text#testB"
+  //   },
+  //   // "children": ["rich-text#testC"],
+  //   "title": "Black Friday"
+  // },
+  "rich-text#testB": {
+    "props": {
+      "text": ""
+    }
+  },
+  "toggle-layout#bf-1": {
+    "children": ["list-context.product-list#bf-1"]
+  },
+  "toggle-layout#bf-2": {
+    "children": ["list-context.product-list#bf-2"]
+  },
+  "toggle-layout#bf-3": {
+    "children": ["list-context.product-list#bf-3"]
+  },
+  "toggle-layout#bf-4": {
+    "children": ["list-context.product-list#bf-4"]
+  },
+  "toggle-layout#bannerBF": {
+    "props": {
+      "visible": true
+    },
+    "children": ["flex-layout.row#bannerBF"]
+  },
+  "flex-layout.row#bannerBF": {
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": [
+        "bgColorAntonioHero",
+        "columnPostillaBannerAntonio",
+        "columnPostillaBF"
+      ]
+    },
+    "children": [
+      "flex-layout.col#leftPartPostillaValueBf",
+      "flex-layout.col#rightPartPostillaValueBf"
+    ]
+  },
+  "flex-layout.col#rightPartPostillaValueBf": {
+    "props": {
+      "width": "50%",
+      "blockClass": ["columnPostillaImage", "columnPostillaImageBlackBg"]
+    },
+    "children": ["image#bannerPostillaBf"]
+  },
+  "image#bannerPostillaBf": {
+    "props": {
+      "src": "assets/placeholders/image-placeholder-16-9.png",
+      "blockClass": "imagePostillaBanner"
+    }
+  },
+  "flex-layout.col#leftPartPostillaValueBf": {
+    "props": {
+      "width": "50%",
+      "preventVerticalStretch": true,
+      "blockClass": [
+        "columnPostilla",
+        "columnPostillaBottom",
+        "leftColumnOffers",
+        "leftColumnFB"
+      ]
+    },
+    "children": [
+      // "rich-text#BanntitleParag",
+      "rich-text#BannTitleBf",
+      // "rich-text#BannDesc",
+      "toggle-layout#ButtonBannerWithPostillaBf"
+      // "rich-text#BannPostilla"
+    ]
+  },
+  "rich-text#BannTitleBf": {
+    "props": {
+      "text": "# Black Friday",
+      "blockClass": ["titleHBannerPostilla", "bfBannerTitle"]
+    }
+  },
+  "rich-text#bfCarouselTitle-1": {
+    "props": {
+      "text": "# Title 1",
+      "blockClass": ["titleSearchPage", "bfCarouselTitle"]
+    }
+  },
+  "rich-text#bfCarouselTitle-2": {
+    "props": {
+      "text": "# Title 2",
+      "blockClass": ["titleSearchPage", "bfCarouselTitle"]
+    }
+  },
+  "rich-text#bfCarouselTitle-3": {
+    "props": {
+      "text": "# Title 3",
+      "blockClass": ["titleSearchPage", "bfCarouselTitle"]
+    }
+  },
+  "rich-text#bfCarouselTitle-4": {
+    "props": {
+      "text": "# Title 4",
+      "blockClass": ["titleSearchPage", "bfCarouselTitle"]
+    }
+  },
+  "toggle-layout#bfCarouselTitle-1": {
+    "children": ["rich-text#bfCarouselTitle-1"]
+  },
+  "toggle-layout#bfCarouselTitle-2": {
+    "children": ["rich-text#bfCarouselTitle-2"]
+  },
+  "toggle-layout#bfCarouselTitle-3": {
+    "children": ["rich-text#bfCarouselTitle-3"]
+  },
+  "toggle-layout#bfCarouselTitle-4": {
+    "children": ["rich-text#bfCarouselTitle-4"]
+  },
+  "toggle-layout#ButtonBannerWithPostillaBf": {
+    "props": {
+      "visible": true
+    },
+    "children": ["link#ButtonBannBf"]
+  },
+  "link#ButtonBannBf": {
+    "props": {
+      "label": "TESTO BOTTONE",
+      "href": "#",
+      "displayMode": "button",
+      "blockClass": ["postillaButton", "postillaButtonOffers"]
+    }
+  },
+  "breadcrumb#black-friday": {
+    "props": {
+      "categories": ["Black Friday"],
+      "showOnMobile": false
+    }
+  },
+  "toggle-layout#bfTitle": {
+    "props": {
+      "visible": true
+    },
+    "children": ["rich-text#bfTitle"]
+  },
+  "rich-text#bfTitle": {
+    "props": {
+      "text": "Black Friday",
+      "blockClass": "titleSearchPage"
+    }
+  },
+
+  "list-context.product-list#bf-1": {
+    "blocks": ["product-summary.shelf"],
+    "children": ["slider-layout#bf-1"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC",
+      "maxItems": 5
+    }
+  },
+  "list-context.product-list#bf-2": {
+    "blocks": ["product-summary.shelf"],
+    "children": ["slider-layout#bf-2"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC",
+      "maxItems": 5
+    }
+  },
+  "list-context.product-list#bf-3": {
+    "blocks": ["product-summary.shelf"],
+    "children": ["slider-layout#bf-3"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC",
+      "maxItems": 5
+    }
+  },
+  "list-context.product-list#bf-4": {
+    "blocks": ["product-summary.shelf"],
+    "children": ["slider-layout#bf-4"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC",
+      "maxItems": 5
+    }
+  },
+  "slider-layout#bf-1": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 5,
+        "tablet": 3,
+        "phone": 1
+      },
+      "collection": "1423",
+      "infinite": true,
+      "fullWidth": false,
+      "blockClass": "shelf"
+    }
+  },
+  "slider-layout#bf-2": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 5,
+        "tablet": 3,
+        "phone": 1
+      },
+      "collection": "1423",
+      "infinite": true,
+      "fullWidth": false,
+      "blockClass": "shelf"
+    }
+  },
+  "slider-layout#bf-3": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 5,
+        "tablet": 3,
+        "phone": 1
+      },
+      "collection": "1423",
+      "infinite": true,
+      "fullWidth": false,
+      "blockClass": ["shelf", "smallerShelf"]
+    }
+  },
+  "slider-layout#bf-4": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 5,
+        "tablet": 3,
+        "phone": 1
+      },
+      "collection": "1423",
+      "infinite": true,
+      "fullWidth": false,
+      "blockClass": "shelf"
+    }
+  }
+}

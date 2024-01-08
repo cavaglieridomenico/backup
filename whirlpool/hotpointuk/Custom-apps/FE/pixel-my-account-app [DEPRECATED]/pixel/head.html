@@ -1,0 +1,214 @@
+<!-- My account gdpr-->
+<script type="text/javascript">
+  (function () {
+    var pushState = history.pushState;
+    var replaceState = history.replaceState;
+
+    history.pushState = function () {
+      pushState.apply(history, arguments);
+      window.dispatchEvent(new Event("pushstate"));
+      window.dispatchEvent(new Event("locationchange"));
+    };
+
+    history.replaceState = function () {
+      replaceState.apply(history, arguments);
+      window.dispatchEvent(new Event("replacestate"));
+      window.dispatchEvent(new Event("locationchange"));
+    };
+
+    window.addEventListener("popstate", function () {
+      window.dispatchEvent(new Event("locationchange"));
+    });
+
+    window.addEventListener("resize", function () {
+      window.dispatchEvent(new Event("locationchange"));
+    });
+
+    window.addEventListener("load", function () {
+      window.dispatchEvent(new Event("locationchange"));
+    });
+  })();
+
+  // Funtion to create an error div with message for mandatory phone number in MyAccount
+	const createErrorDiv = (errorMessageLabel) => {
+		const errorMessage = document.createElement('div')
+		errorMessage.classList.add('red', 'f6', 'mt3', 'lh-title')
+		errorMessage.id = 'customErrorMessage'
+		errorMessage.innerText = errorMessageLabel
+		return errorMessage
+	}
+
+  window.addEventListener("locationchange", function () {
+    //This Javascript makes the phone number mandatory in MyAccount profile section
+    if (
+			window.location.href.includes('account') &&
+			window.location.hash == '#/profile/edit'
+		) {
+			waitForEl('input[name="homePhone"]', function () {
+				const input = document.querySelector('input[name="homePhone"]')
+				input.setAttribute('placeholder', 'Mandatory')
+				input.addEventListener('focus', () => {
+					const errorMessageDiv = document.getElementById('customErrorMessage')
+					if (errorMessageDiv) {
+						errorMessageDiv.remove()
+						input.style['border-color'] = '#e3e4e6'
+					}
+				})
+				input.addEventListener('blur', () => {
+					if (input.value == '') {
+						if (!document.getElementById('customErrorMessage')) {
+							const errorMessage = createErrorDiv(
+								window.__RUNTIME__.messages['profile-form.error.EMPTY_FIELD'],
+							)
+							input.parentElement.parentElement.appendChild(errorMessage)
+						}
+						input.style['border-color'] = '#ff4c4c'
+					}
+				})
+			})
+
+			waitForEl('button[type="submit"]', function () {
+				const button = document.querySelector('button[type="submit"]')
+				button.addEventListener('click', (e) => {
+					const phoneField = document.querySelector('input[name="homePhone"]')
+
+					if (phoneField.value == '') {
+						if (!document.getElementById('customErrorMessage')) {
+							const errorMessage = createErrorDiv(
+								window.__RUNTIME__.messages['profile-form.error.EMPTY_FIELD'],
+							)
+							phoneField.parentElement.parentElement.appendChild(errorMessage)
+						}
+						phoneField.style['border-color'] = '#ff4c4c'
+						e.stopPropagation()
+						e.preventDefault()
+					}
+				})
+			})
+		}
+
+    // Javascript to style the ORDER DETAILS page and change label of Product Quantity
+    if (window.location.href.indexOf("account") > 0 &&
+        window.location.hash &&
+        window.location.hash == "#/orders") {
+          waitForEl(".vtex-my-orders-app-3-x-detailsBtn", function() {
+            const detailsButtons = document.getElementsByClassName("vtex-my-orders-app-3-x-detailsBtn");
+            for (const button of detailsButtons) {
+              button.addEventListener("click", function() {
+                waitForEl(".vtex-my-orders-app-3-x-productQuantity", function() {
+                  const productQuantities = document.getElementsByClassName("vtex-my-orders-app-3-x-productQuantity");
+                  for (let quantity of productQuantities) {
+                    quantity.textContent = quantity.textContent.replace(/[^\d]/g, "");
+                  };
+                })
+              })
+            }
+          })
+    };
+
+    // Javascript to edit the NEWSLETTER OPTIN checkbox and push EVENT
+    if (
+      (window.location.href.indexOf("account") > 0 &&
+        window.location.hash &&
+        window.location.hash == "#/profile") ||
+      window.location.href.includes("?success=true")
+    ) {
+      waitForEl(".vtex-my-account-1-x-newsletterContainerMessage", function () {
+        document.querySelector(
+          ".vtex-my-account-1-x-newsletterContainerMessage"
+        ).innerHTML = "<p>I have read and understood the content of the <a style=\"text-decoration:none\" class=\'vtex-rich-text-0-x-link vtex-rich-text-0-x-link--spaziature-impaginazione\' href=\"/privacy-policy\" target=\"_blank\">privacy notice</a>.</p>";
+
+        document.querySelector("label[for='newsletterOptIn']").textContent =
+          "I consent to the processing of my personal data to allow Whirlpool UK Appliances Ltd. to send me newsletters/marketing communications (in electronic and non-electronic form, including via telephone, postal services, e-mail, SMS, push notifications or banners on third party sites including on Meta and Google platforms) regarding products and services of Whirlpool UK Appliances Ltd. even bought or registered by me, as well as to conduct market research.";
+      });
+
+      waitForEl("#newsletterOptIn", function () {
+        const checkbox = document.getElementById("newsletterOptIn");
+
+        checkbox.addEventListener("change", (event) => {
+          event.stopPropagation();
+          event.stopImmediatePropagation();
+          let dataLayer = window.dataLayer || [];
+          if (event.currentTarget.checked) {
+            dataLayer.push({
+              event: "optin_granted",
+            });
+          }
+        });
+      });
+    }
+  });
+
+  window.addEventListener("load", function () {
+    // THIS CODE BELOW IS TO BE ACTIVATED AND EDITED WHEN WISHLIST IS ADDED.
+
+    // const buttonProduct = document.getElementsByClassName("vtex-product-comparison-0-x-compareProductButtonWrapper")
+    // waitForEl(".vtex-product-comparison-0-x-compareProductButtonWrapper", function() {
+    //   buttonProduct[0].children[0].addEventListener("click", function() {
+    //     window.location = "/produktvergleich"
+    //   })
+    // });
+
+    // Javascript to edit the LOGOUT MODAL style
+    waitForEl(".vtex-my-account-1-x-menuLink", function() {
+      const logoutButton = document.getElementsByClassName("vtex-my-account-1-x-menuLink")[0];
+      logoutButton.addEventListener("click", function() {
+        waitForEl(".vtex-styleguide-9-x-scrollBar", function() {
+          const textOfModal = document.getElementsByClassName(
+            "vtex-styleguide-9-x-scrollBar"
+          )[0].children[0];
+          textOfModal.style.padding = 0;
+          textOfModal.style.color = "#505050";
+          const modalContainer = document.getElementsByClassName("vtex-modal__modal")[0];
+          modalContainer.setAttribute("style", "border-radius: 0.25rem; padding: 0 !important");
+          const modal = document.getElementsByClassName("vtex-styleguide-9-x-scrollBar")[0];
+          modal.setAttribute("style", "padding: 15px 25px !important");
+          const modalOverlay = document.getElementsByClassName("vtex-modal__overlay")[0];
+          modalOverlay.setAttribute("style", "background-color: rgba(0,0,0,0.8) !important; z-index: 1000");
+          const modaConfirmation = document.getElementsByClassName("vtex-modal__confirmation")[0];
+          modaConfirmation.setAttribute("style", "padding: unset; position: static;")
+          const modalHeading = document.getElementsByClassName("t-heading-5")[0];
+          modalHeading.setAttribute("style", "position: static !important; padding: 0");
+          if (window.innerWidth <= 368) {
+            document.getElementsByClassName(
+              "vtex-modal__close-icon"
+            )[0].style.margin = 0;
+          }
+        })
+      })
+    });
+  })
+
+  function setEventiListener(element, type, callback) {
+    let listOfElements = document.querySelectorAll(element);
+    if (listOfElements && listOfElements.length > 0) {
+      listOfElements.forEach((e) => {
+        e.addEventListener(type, callback);
+      });
+      return;
+    } else {
+      setTimeout(() => setEventiListener(element, type, callback), 250);
+    }
+  }
+
+  setEventiListener(".vtex-address-form__state input", "focus", (event) => {
+    document
+      .querySelector(".vtex-address-form__state input")
+      .attr("maxLength", 2);
+  });
+
+  var waitForEl = function (selector, callback) {
+    let element = document.querySelector(selector);
+    if (
+      element &&
+      (window.getComputedStyle(element).visibility == "visible" ||
+        document.querySelector(selector).length > 0)
+    ) {
+      callback();
+    } else {
+      setTimeout(function () {
+        waitForEl(selector, callback);
+      }, 100);
+    }
+  };
+</script>

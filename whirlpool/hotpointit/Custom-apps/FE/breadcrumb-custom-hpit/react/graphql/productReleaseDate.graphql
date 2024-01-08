@@ -1,0 +1,8 @@
+query GET_CATEGORY_NAME ($categoryId: String!,$type: String!){
+  internal{
+    routes(locator:{ id: $categoryId, type: $type }){
+      binding
+      route
+    }
+  }
+}

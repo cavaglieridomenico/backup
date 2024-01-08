@@ -1,0 +1,175 @@
+{
+  "vtex.menu@2.x:menu#websites": {
+    "children": ["flex-layout.row#top-menu"]
+  },
+  "flex-layout.row#top-menu": {
+    "children": [
+      "conditional-login",
+      "menu-item#help",
+      "flex-layout.col#serviceMenuItem",
+      "menu-item#wishlist",
+      "minicart.v2"
+    ],
+    "props": {
+      "blockClass": "topMenuContainer"
+    }
+  },
+  "menu-item#sign-in": {
+    "props": {
+      "id": "menu-item-sign-in",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "blockClass": "top-menu",
+      "itemProps": {
+        "type": "internal",
+        "href": "/account",
+        "noFollow": false,
+        "tagTitle": "Entrer",
+        "text": "Entrer"
+      },
+      "iconProps": {
+        "id": "inf-login",
+        "size": 16,
+        "viewBox": "0 0 16 16"
+      },
+      "iconToTheRight": true
+    }
+  },
+
+  "menu-item#help2": {
+    "props": {
+      "id": "menu-item-help2",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Help2",
+        "text": "Help2"
+      }
+    }
+  },
+  "menu-item#service": {
+    "props": {
+      "id": "menu-item-service",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "blockClass": "top-menu",
+      "itemProps": {
+        "type": "internal",
+        "href": "/services",
+        "noFollow": false,
+        "tagTitle": "Services",
+        "text": "Service"
+      },
+      "iconProps": {
+        "id": "inf-settings",
+        "size": 16,
+        "viewBox": "0 0 16 16"
+      },
+      "iconToTheRight": true
+    }
+  },
+  "flex-layout.col#serviceMenuItem": {
+    "children": ["logo#service", "menu-item#serviceNew"],
+    "props": {
+      "blockClass": "top-menu-item-container"
+    }
+  },
+  "logo#service": {
+    "props": {
+      "title": "Logo",
+      "url": "assets/ph-square.jpg",
+      "width": 16,
+      "height": 16,
+      "blockClass": ["top-menu-item-logo"],
+      "href": "/services"
+    }
+  },
+  "menu-item#serviceNew": {
+    "props": {
+      "id": "menu-item-service",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "blockClass": "top-menu-service",
+      "itemProps": {
+        "type": "internal",
+        "href": "/services",
+        "noFollow": false,
+        "tagTitle": "Services",
+        "text": "Service"
+      }
+    }
+  },
+  "menu-item#comparison": {
+    "props": {
+      "id": "menu-item-comparison",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "blockClass": "top-menu",
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Сравнение",
+        "text": "Сравнение"
+      },
+      "iconProps": {
+        "id": "inf-stats",
+        "size": 16,
+        "viewBox": "0 0 16 16"
+      },
+      "iconToTheRight": true
+    }
+  },
+
+  "menu-item#cart": {
+    "props": {
+      "id": "menu-item-cart",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "blockClass": "icon",
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Cart",
+        "text": "Cart"
+      },
+      "iconProps": {
+        "id": "sti-discount",
+        "size": 16,
+        "viewBox": "0 0 16 16"
+      },
+      "iconToTheRight": true
+    }
+  },
+  "vtex.menu@2.x:menu#institutional": {
+    "children": ["logo#header"],
+    "props": {
+      "blockClass": "logoHeader"
+    }
+  },
+  "menu-item#whirlpool-website": {
+    "props": {
+      "id": "menu-item-whirlpool-website",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "external",
+        "href": "http://whirlpool.com",
+        "noFollow": false,
+        "tagTitle": "Whirlpool",
+        "text": "Whirlpool"
+      }
+    }
+  }
+}

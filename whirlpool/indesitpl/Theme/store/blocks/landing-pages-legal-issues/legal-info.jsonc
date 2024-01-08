@@ -1,0 +1,65 @@
+{
+  "store.custom#legal-issues-legal-info": {
+    "blocks": [
+      "responsive-layout.desktop#legal-info",
+      "responsive-layout.mobile#legal-info"
+    ]
+  },
+  "responsive-layout.desktop#legal-info": {
+    "children": ["flex-layout.row#legal-info-maxi-container"]
+  },
+  "flex-layout.row#legal-info-maxi-container": {
+    "props": {
+      "blockClass": "legal-info-maxi-container"
+    },
+    "children": ["flex-layout.col#legal-info-col-maxi-container"]
+  },
+  "flex-layout.col#legal-info-col-maxi-container": {
+    "props": {
+      "blockClass": "legal-info-col-maxi-container"
+    },
+    "children": [
+      "breadcrumb#legal-info",
+      "flex-layout.row#legal-info-title-container",
+      "flex-layout.row#legal-info-content-container"
+    ]
+  },
+  //BREADCRUMBS
+  "breadcrumb#legal-info": {
+    "props": {
+      "categories": [
+        "/Home/",
+        "Warunki",
+        "Mentions Légales relatives à Whirlpool France"
+      ],
+      "showOnMobile": true,
+      "blockClass": "breadcrumb-legal-issues-landings"
+    }
+  },
+  // TITLE
+  "flex-layout.row#legal-info-title-container": {
+    "props": {
+      "blockClass": "legal-info-title-container"
+    },
+    "children": ["rich-text#legal-info-title"]
+  },
+  "rich-text#legal-info-title": {
+    "props": {
+      "blockClass": "legal-info-title",
+      "text": "Mentions Légales relatives à Whirlpool France"
+    }
+  },
+  // CONTENT
+  "flex-layout.row#legal-info-content-container": {
+    "props": {
+      "blockClass": "legal-info-content-container"
+    },
+    "children": ["rich-text#legal-info-content-text"]
+  },
+  "rich-text#legal-info-content-text": {
+    "props": {
+      "blockClass": "legal-info-content-text",
+      "text": "Whirlpool France \n SAS au capital de 79 903 708 € \n Tour Pacific, 11-13 cours Valmy \n 92977 La Défense \n RCS Nanterre n° 325 041 481 \n N° TVA FR42325041481 \n <br> Informations: \n <br> **0 892 700 150** (Service 0,34 €/ min + prix appel) \n <br> Du lundi au vendredi \n <br> de 8h 30 à 19h \n et le samedi de 9h à 17h \n\n <br> Contact e-mail : whirlpool.fr@whirlpool.eu"
+    }
+  }
+} //

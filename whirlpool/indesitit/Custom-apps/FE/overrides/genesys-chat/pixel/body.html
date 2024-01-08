@@ -1,0 +1,390 @@
+<!-- Genesys test button start -->
+<div class="m-chat" id="genesys-chat" style="display: unset;">
+  <div class="m-chat__header" style="background-color: #0090d0;">
+    <span class="m-chat__header-title">
+      Live chat
+    </span>
+    <a class="close" id="hide-icon" href="#">
+      <a class="reduce" id="close-icon" href="#">
+        <span style="background-color: #ffffff; height: 2px;"></span>
+        <span style="background-color: #ffffff; height: 2px;"></span>
+      </a>
+  </div>
+  <div class="m-chat__body">
+    <div class="m-chat__wrapper">
+      <div class="panel-first">
+        <form id="chat" action="#" name="chat" data-form-validate=""
+          data-error-translation="{ &quot;empty_err&quot;:&quot;Questo valore non dovrebbe essere vuoto.&quot;, &quot;invalid_email&quot;:&quot;Questo valore non è un indirizzo email valido.&quot; }">
+          <input type="hidden" id="genesys_webchat_src" value="https://apps.mypurecloud.de/widgets/9.0">
+          <input type="hidden" id="genesys_webchat_stream" value="live">
+          <input type="hidden" id="genesys_webchat_api_key" value="b638772e-4b33-4c11-8b41-5af1b096b140">
+          <input type="hidden" id="genesys_webchat_endpoint" value="GlobalChatSwitchboard">
+          <input type="hidden" id="genesys_webchat_theme" value="cx-theme-indesit">
+          <input type="hidden" id="genesys_webchat_lang" value="it">
+          <input type="hidden" id="genesys_webchat_subject" value="Chat Assistenza Indesit.it">
+          <input type="hidden" id="genesys_webchat_department" value="IndesitService">
+          <div class="panel-first__box m-chat__open"
+            style="font-family: Roboto-Light; text-align: center; padding: 25px; line-height: 25px; ">
+            Benvenuto, per iniziare a dialogare con uno dei nostri operatori inserisci il tuo nome o nick name,
+            indirizzo email e motivazione. Tratteremo le tue informazioni personali in conformità con la nostra <a
+              href="https://www.indesit.it/informativa-sulla-privacy" style="color: #005c92;">Informativa sulla
+              Privacy</a>.
+          </div>
+          <div class="m-form__row m-chat__closed" style="display: none;">
+            <!-- <div class="m-chat__intro-info">Il servizio sara' attivo dal Lunedi al Venerdi dalle ore 9.00 alle ore 18.00. Il sabato dalle 9.00 alle 13.00. Giorni festivi esclusi</div> -->
+          </div>
+          <div class="m-form__row m-chat__open">
+            <!-- <div class="m-chat__intro-info" style="font-family: Roboto-Light;">Il servizio sara' attivo dal Lunedi al Venerdi dalle ore 9.00 alle ore 18.00. Il sabato dalle 9.00 alle 13.00. Giorni festivi esclusi</div> -->
+            <div class="m-chat__form-items">
+              <div class="m-contact-item">
+                <div class="m-form-item__field" data-field-required="true" data-field-id="firstname"
+                  data-field-name="firstname">
+                  <div class="m-form-item__text-wrapper"> <label for="firstname"
+                      class="m-form-item__field-text m-form-item__field--required" style="font-family: Roboto-Light;">
+                      Nome </label>
+                  </div>
+                  <div class="m-form-item__text-input"> <input type="text" name="firstname" id="firstname"
+                      placeholder="" required=""
+                      style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
+                  </div>
+                  <span class="m-form-item__field-text--error"></span>
+                </div>
+              </div>
+              <div class="m-contact-item">
+                <div class="m-form-item__field " data-field-required="true" data-field-id="lastname"
+                  data-field-name="lastname">
+                  <div class="m-form-item__text-wrapper"> <label for="lastname"
+                      class="m-form-item__field-text m-form-item__field--required" style="font-family: Roboto-Light;">
+                      Cognome </label>
+                  </div>
+                  <div class="m-form-item__text-input"> <input type="text" name="lastname" id="lastname" placeholder=""
+                      required=""> </div>
+                  <span class="m-form-item__field-text--error"></span>
+                </div>
+              </div>
+              <div class="m-contact-item">
+                <div class="m-form-item__field " data-field-required="true" data-field-id="mail" data-field-name="mail">
+                  <div class="m-form-item__text-wrapper"> <label for="mail"
+                      class="m-form-item__field-text m-form-item__field--required" style="font-family: Roboto-Light;">
+                      Email </label>
+                  </div>
+                  <div class="m-form-item__text-input"> <input type="email" name="mail" id="mail" placeholder=""
+                      required=""> </div>
+                  <span class="m-form-item__field-text--error"></span>
+                </div>
+              </div>
+              <!-- <div class="m-contact-item">
+                <label class="m-form-item__field-text m-form-item__field--required" style="font-family: Roboto-Light;"
+                  for="reason">Motivazione</label>
+                <div class="m-form-item__field m-form-item__field--select" data-field-required="true"
+                  data-field-id="reason" data-field-name="Motivazione">
+                  <div class="m-form-item__select" style="font-family: Roboto-Light;">
+                    <select name="Motivazione" id="reason" class="" style="font-family: Roboto-Light;"
+                      onclick="analyticsCallback()"
+                    >
+                      <option value="" disabled="" selected=""> Scegli la motivazione </option>
+                      <option value="Consegne"> Consegne </option>
+                      <option value="Gestione ordini e pagamenti"> Gestione ordini e pagamenti </option>
+                      <option value="Informazioni prodotto"> Informazioni prodotto </option>
+                      <option value="Richiesta intervento tecnico"> Richiesta intervento tecnico </option>
+                      <option value="Informazioni, segnalazioni intervento in corso"> Informazioni, segnalazioni intervento in corso </option>
+                      <option value="Informazioni acquisto accessori e prodotti per la pulizia"> Informazioni acquisto accessori e prodotti per la pulizia </option>
+                    </select> </div> <span class="m-form-item__field-text--error"></span>
+                </div>
+              </div> -->
+              <!-- <div class="m-contact-item">
+                <div class="m-form-item__field" data-field-required="true" data-field-id="message"
+                  data-field-name="message">
+                  <span
+                      class="m-form-item__field-text m-form-item__field-text--required" style="font-family: Roboto-Light;"> Messaggio </span>
+                  <div class="m-form-item__textarea"> <textarea id="message" rows="3" placeholder=""></textarea> <span
+                      class="m-form-item__field-text--error"></span> </div>
+                </div>
+              </div> -->
+              <div class="m-contact-item">
+                <div class="m-form-item__field m-form-item__field--left " data-field-id="chattranscript"
+                  data-field-name="chattranscript">
+                  <div class="m-form-item__checkbox-wrapper">
+                    <input type="checkbox" name="chattranscript" id="chattranscript">
+                    <span class="m-form-item__checkbox-custom"></span>
+                    <label class="m-form-item__checkbox m-form-item__checkbox-text--form"
+                      style="font-family: Roboto-Light;" for="chattranscript">
+                      Clicca qui se vuoi ricevere sulla tua mail una copia della conversazione
+                    </label>
+                  </div>
+                  <span class="m-form-item__field-text--error"></span>
+                </div>
+              </div> <button type="submit" value="" data-action="start-chat"
+                class="m-button start-chat m-button--primary"
+                style="background-color: #0090d0; font-family: Roboto-Medium;">
+                <span>
+                  Chat
+                </span>
+              </button>
+              <!-- <span class="required m-chat__open" style="font-family: Roboto-Light;">
+                I campi con asterisco (*) sono obbligatori
+              </span> -->
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="panel-second">
+        <div class="loader">
+          <div class="m-page-loader m-page-loader--light">
+            <div class="m-page-loader__loader"></div>
+          </div>
+          Connessione in corso...<br>
+          La chat si avvierà a breve
+        </div>
+        <div class="m-chat__error">
+          <div class="m-chat__error-ctn m-chat__reload reload-chat">
+            <div class="m-chat__alert">Prova a ricaricare la pagina, se il problema persiste cancella la cache del
+              browser.</div> <a class="m-button m-button--primary" href="#">
+              <div class="m-button__wrapper"> <span>wp_support_chat_chat_reload</span> </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="panel-third"> </div>
+    </div>
+  </div>
+
+</div>
+<!-- STYLE -->
+<style>
+  .m-chat {
+    bottom: 0;
+    top: calc(100vh - 50px);
+    display: block !important;
+    transition: top 200ms ease;
+  }
+
+  .m-chat.visible {
+    visibility: visible;
+    /* transform: translateX(430px); */
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    width: 360px;
+    min-width: unset;
+    left: 0;
+    right: 0;
+  }
+
+  @media screen and (min-width: 1024px) {
+    .m-chat.visible {
+      left: auto;
+      right: 7.5rem;
+    }
+  }
+
+  .m-chat.hidden {
+    visibility: hidden;
+    display: none !important;
+  }
+
+  .m-form-item__checkbox-wrapper .m-form-item__checkbox-custom:after {
+    background: #0090d0;
+  }
+
+  img {
+    user-select: none;
+  }
+
+  .m-chat__header {
+    height: 56px;
+  }
+
+  .m-chat__header-title {
+    font-family: "Roboto-Medium";
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .m-chat.open .m-chat__header .reduce span:last-child {
+    top: -1.75px;
+    transform: rotate(45deg);
+  }
+
+  .m-chat.open .m-chat__header .reduce span {
+    top: 0;
+  }
+
+  .m-chat.open .m-chat__header .reduce span {
+    transform: rotate(-45deg);
+  }
+
+  .m-chat .m-chat__header .reduce span {
+    top: -1px;
+  }
+
+  .m-chat .m-chat__header .reduce span:last-child {
+    transform: rotate(0deg);
+    top: -3px;
+  }
+
+  .m-chat .m-chat__header .reduce span {
+    transform: rotate(90deg);
+  }
+
+  .m-chat .reduce {
+    right: 10px;
+  }
+
+  .m-form-item__field--required:after {
+    content: '';
+  }
+
+  .m-form-item__checkbox-custom {
+    position: relative !important;
+    width: 43px !important;
+    height: 16px !important;
+    background: #E5F6FF !important;
+    border-radius: 10px !important;
+    border: 1px solid transparent !important;
+  }
+
+  input:checked[type=checkbox]+.m-form-item__checkbox-custom {
+    background: #0090d0 !important;
+  }
+
+  .m-form-item__checkbox-custom::after {
+    background: #0090d0 !important;
+    height: 12px !important;
+    width: 12px !important;
+    top: 2px !important;
+    left: 2px !important;
+    opacity: 1 !important;
+    transition: left .2s ease !important;
+  }
+
+  input:checked[type=checkbox]+.m-form-item__checkbox-custom::after {
+    left: 18px !important;
+    background: #E5F6FF !important;
+  }
+
+  input[type=checkbox] {
+    width: 35px !important;
+  }
+
+  .cx-common-container {
+    background-color: #ffffff;
+  }
+
+  .cx-common-container .cx-titlebar {
+    background-color: #0090d0;
+    color: #ffffff;
+  }
+
+  .cx-icon.cx-button-close>svg {
+    filter: invert(100%);
+    height: 14px;
+  }
+
+  .cx-icon>svg {
+    filter: invert(100%);
+  }
+
+  .cx-icon.cx-button-minimize {
+    visibility: hidden;
+  }
+
+  .cx-title {
+    font-size: 26px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .cx-title {
+      margin: -2px 0 0 8px;
+    }
+  }
+
+  .cx-bubble {
+    background-color: rgba(0, 144, 208, .5);
+  }
+
+  .cx-name {
+    color: #ffffff !important;
+  }
+
+  .cx-message-input.cx-input.i18n.cx-form-control ::-webkit-input-placeholder {
+    color: #c6c6c6;
+  }
+
+  .cx-bubble-arrow>svg {
+    filter: invert(48%) sepia(90%) saturate(2900%) hue-rotate(169deg) brightness(88%) contrast(101%);
+  }
+
+  .cx-input-container {
+    border-color: #0090d0;
+  }
+
+  .cx-end-cancel.cx-btn.cx-btn-default.i18n {
+    border-color: #0090d0;
+    color: #0090d0;
+    font-size: "Roboto";
+  }
+
+  .cx-end-confirm.cx-btn.cx-btn-primary.i18n {
+    border-color: #0090d0;
+    color: #ffffff;
+    background-color: #0090d0;
+    font-size: "Roboto";
+  }
+
+  .m-button.start-chat.m-button--primary {
+    border: 16px;
+    height: 56px;
+    border-radius: 16px;
+  }
+
+  .panel-first__box.m-chat__open {
+    font-size: 14px;
+    letter-spacing: -0.3px;
+  }
+
+  .m-chat__intro-info {
+    padding: 10px 15px;
+  }
+
+  .m-chat__form-items {
+    padding: 0 15px 20px;
+  }
+
+  .m-form-item__checkbox.m-form-item__checkbox-text--form {
+    margin: 0 0 0 6px;
+  }
+
+  .cx-widget.cx-webchat-chat-button.cx-side-button.cx-theme-indesit {
+    display: none;
+  }
+</style>
+
+<script>
+  let chat = document.getElementById("genesys-chat");
+  let closeIcon = document.getElementById("close-icon");
+  let select = document.getElementById("reason");
+
+  var value = select?.options[select.selectedIndex]?.value;
+
+  closeIcon.addEventListener("click", toggleChat);
+
+  function toggleChat() {
+    chat.classList.toggle("open");
+  }
+
+  const analyticsCallback = () => {
+    var value = select?.options[select.selectedIndex]?.value;
+
+
+    window.dataLayer = window.dataLayer || [];
+    let analyticsJson = {
+      event: "chatSupport",
+      eventCategory: 'Chat Support',
+      eventAction: 'Request Chat Session',
+      eventLabel: `Chat session topic ${":" + value ? value : ": none"}`
+    }
+    window.dataLayer.push(analyticsJson);
+  }
+
+</script>

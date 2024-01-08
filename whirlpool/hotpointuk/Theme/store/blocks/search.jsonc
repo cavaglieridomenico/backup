@@ -1,0 +1,2666 @@
+{
+  "store.search.product-comparison": {
+    "blocks": [
+      "search-result-layout#generic",
+      // PART BEFORE FOOTER
+      "experimental__visibility-layout#support-box-title",
+      "experimental__visibility-layout#support-box",
+      "flex-layout.row#newsletter-row"
+    ],
+    "props": {
+      "context": {
+        "skusFilter": "ALL",
+        "maxItemsPerPage": 9,
+        "__unstableProductOriginVtex": true
+      }
+    }
+  },
+  "store.search.product-comparison#brand": {
+    "blocks": [
+      "search-result-layout",
+      // PART BEFORE FOOTER
+      "experimental__visibility-layout#support-box-title",
+      "experimental__visibility-layout#support-box",
+      "flex-layout.row#newsletter-row"
+    ],
+    "props": {
+      "context": {
+        "orderByField": "OrderByReleaseDateDESC",
+        "hideUnavailableItems": false,
+        "maxItemsPerPage": 9,
+        "skusFilter": "ALL",
+        "__unstableProductOriginVtex": true
+      }
+    }
+  },
+  "store.search.product-comparison#department": {
+    "blocks": [
+      "search-result-layout#dep",
+      // PART BEFORE FOOTER
+      "experimental__visibility-layout#support-box-title",
+      "experimental__visibility-layout#support-box",
+      "flex-layout.row#newsletter-row"
+    ],
+    "props": {
+      "context": {
+        "maxItemsPerPage": 9,
+        "__unstableProductOriginVtex": true
+      }
+    }
+  },
+  "store.search.product-comparison#category": {
+    "blocks": [
+      "search-result-layout",
+      // PART BEFORE FOOTER
+      "experimental__visibility-layout#support-box-title",
+      "experimental__visibility-layout#support-box",
+      "flex-layout.row#newsletter-row"
+    ],
+    "props": {
+      "context": {
+        "skusFilter": "ALL",
+        "maxItemsPerPage": 9,
+        "__unstableProductOriginVtex": true
+      }
+    }
+  },
+  "store.search.product-comparison#subcategory": {
+    "blocks": [
+      "search-result-layout",
+      // PART BEFORE FOOTER
+      "experimental__visibility-layout#support-box-title",
+      "experimental__visibility-layout#support-box",
+      "flex-layout.row#newsletter-row"
+    ],
+    "props": {
+      "context": {
+        "skusFilter": "ALL",
+        "maxItemsPerPage": 9,
+        "__unstableProductOriginVtex": true
+      }
+    }
+  },
+  "search-result-layout": {
+    "blocks": [
+      "search-result-layout.desktop.product-comparison#search",
+      "search-result-layout.mobile",
+      "search-not-found-layout"
+    ]
+  },
+  "search-result-layout#generic": {
+    "title": "[TOP] - Search result layout",
+    "blocks": [
+      "search-result-layout.desktop.product-comparison#search",
+      "search-result-layout.mobile",
+      "search-not-found-layout"
+    ]
+  },
+  "search-result-layout#dep": {
+    "blocks": [
+      "search-result-layout.desktop.product-comparison#search",
+      "search-result-layout.mobile",
+      "search-not-found-layout"
+    ]
+  },
+  "search-result-layout.desktop": {
+    "children": [
+      // "plp-structured-data",
+      "flex-layout.row#bread-plp",
+      "experimental__visibility-layout#bannerPLP",
+      "flex-layout.row#searchtitle",
+      "flex-layout.col#filter",
+      "flex-layout.row#result"
+    ],
+    "props": {
+      "pagination": "show-more",
+      "preventRouteChange": true,
+      "showFacetQuantity": true,
+      "mobileLayout": {
+        "mode1": "small",
+        "mode2": "normal"
+      }
+    }
+  },
+  "search-result-layout.desktop#dep": {
+    "children": [
+      "flex-layout.row#bread-plp",
+      "experimental__visibility-layout#bannerPLP",
+      "flex-layout.row#searchtitleDep",
+      "flex-layout.row#searchinfo",
+      "flex-layout.row#fetchprevious",
+      "flex-layout.row#productsDep",
+      "flex-layout.row#fetchmore",
+      "flex-layout.row#space"
+    ],
+    "props": {
+      "pagination": "show-more",
+      "preventRouteChange": true,
+      "showFacetQuantity": true,
+      "mobileLayout": {
+        "mode1": "small",
+        "mode2": "normal"
+      }
+    }
+  },
+  "search-result-layout.desktop.product-comparison#searchGeneric": {
+    "children": [
+      // "plp-structured-data",
+      "flex-layout.row#queryRow",
+      // "flex-layout.row#searchinfo",
+      "flex-layout.row#fetchprevious",
+      "flex-layout.row#result",
+      // "flex-layout.row#fetchmore",
+      "flex-layout.row#space",
+      "product-comparison-drawer"
+    ]
+  },
+  "search-result-layout.desktop.product-comparison#search": {
+    "children": [
+      /*ONLY SHOW CURRENT FINISHED GOODS LAYOUT IF NOT SPARE PARTS OR ACCESSORIES PLP*/
+      "condition-layout.category#fg-layout-desktop",
+      "condition-layout.category#spare-and-accessories-layout"
+    ],
+    "props": {
+      "pagination": "show-more",
+      "preventRouteChange": true,
+      "showFacetQuantity": true,
+      "mobileLayout": {
+        "mode1": "small",
+        "mode2": "normal"
+      },
+      "hiddenFacets": {
+        "categories": true,
+        "specificationFilters": {
+          "hiddenFilters": [
+            {
+              "name": "new-energy-label"
+            },
+            {
+              "name": "category:"
+            },
+            {
+              "name": "product-information-sheet"
+            },
+            {
+              "name": "use-care"
+            },
+            {
+              "name": "health-safety-environmental"
+            },
+            {
+              "name": "nel-data-sheet"
+            },
+            {
+              "name": "daily-reference-guide"
+            },
+            {
+              "name": "energy-label"
+            },
+            {
+              "name": "product-fiche"
+            },
+            {
+              "name": "installation-instructions"
+            },
+            {
+              "name": "instruction-for-use"
+            },
+            {
+              "name": "product-data-sheet"
+            },
+            {
+              "name": "program-chart"
+            },
+            {
+              "name": "EnergyLogo_description"
+            },
+            {
+              "name": "EnergyLogo_image"
+            },
+            {
+              "name": "Fast Cooling"
+            },
+            {
+              "name": "FreshControl"
+            },
+            {
+              "name": "Dual No Frost"
+            },
+            {
+              "name": "FreshBox 0°"
+            },
+            {
+              "name": "Display Touch"
+            },
+            {
+              "name": "Everest"
+            },
+            {
+              "name": "Metal Multi Flow"
+            },
+            {
+              "name": "Freeze Control"
+            },
+            {
+              "name": "Flushline"
+            },
+            {
+              "name": "4 ripiani"
+            },
+            {
+              "name": "Anti UV"
+            },
+            {
+              "name": "6TH SENSE Freeze Lock"
+            },
+            {
+              "name": "6TH SENSE Fresh Lock"
+            },
+            {
+              "name": "6th sense Live"
+            },
+            {
+              "name": "CONNECTIVITY"
+            },
+            {
+              "name": "Convertible Space"
+            },
+            {
+              "name": "FlexiFreeze"
+            },
+            {
+              "name": "In-door Ice"
+            },
+            {
+              "name": "Pure control"
+            },
+            {
+              "name": "Triple No Frost technology"
+            },
+            {
+              "name": "Easy access tray"
+            },
+            {
+              "name": "6th Sense Control"
+            },
+            {
+              "name": "Flexi Shelf"
+            },
+            {
+              "name": "Design WCollection"
+            },
+            {
+              "name": "Compressore Inverter"
+            },
+            {
+              "name": "6th Sense Precision Control"
+            },
+            {
+              "name": "Fast Freeze Pad"
+            },
+            {
+              "name": "Fresh Pad"
+            },
+            {
+              "name": "37 dB(A)"
+            },
+            {
+              "name": "StopFrost"
+            },
+            {
+              "name": "LessFrost"
+            },
+            {
+              "name": "35 dB(A)"
+            },
+            {
+              "name": "34dB(A)"
+            },
+            {
+              "name": "Zen Technology"
+            },
+            {
+              "name": "SETMO"
+            },
+            {
+              "name": "Capacità 245- 310 litri"
+            },
+            {
+              "name": "constructionType"
+            },
+            {
+              "name": "field5"
+            },
+            {
+              "name": "sellable"
+            },
+            {
+              "name": "fewPiecesThreshold"
+            },
+            {
+              "name": "minimumQuantityThreshold"
+            },
+            {
+              "name": "showPrice"
+            },
+            {
+              "name": "isDiscontinued"
+            },
+            {
+              "name": "productType"
+            },
+            {
+              "name": "extendedWarranty"
+            },
+            {
+              "name": "CommercialCode_field"
+            },
+            {
+              "name": "Key lock"
+            },
+            {
+              "name": "Quick Dry Sintetici"
+            },
+            {
+              "name": "My option"
+            },
+            {
+              "name": "90'"
+            },
+            {
+              "name": "Low/High Heat"
+            },
+            {
+              "name": "My program"
+            },
+            {
+              "name": "Extra Dry cotone"
+            },
+            {
+              "name": "100'"
+            },
+            {
+              "name": "Less Creased"
+            },
+            {
+              "name": "120'"
+            },
+            {
+              "name": "Less Fluff"
+            },
+            {
+              "name": "140'"
+            },
+            {
+              "name": "160'"
+            },
+            {
+              "name": "Heat&Enjoy"
+            },
+            {
+              "name": "150'"
+            },
+            {
+              "name": "Pre Care"
+            },
+            {
+              "name": "Crease Care"
+            },
+            {
+              "name": "Quick Dry Cotone"
+            },
+            {
+              "name": "Cotton Hanger"
+            },
+            {
+              "name": "Ready to Iron"
+            },
+            {
+              "name": "Jeans"
+            },
+            {
+              "name": "Additional reversing"
+            },
+            {
+              "name": "Cuddly Toys"
+            },
+            {
+              "name": "Seta"
+            },
+            {
+              "name": "Bed linen"
+            },
+            {
+              "name": "Crease Relax"
+            },
+            {
+              "name": "Speed 15"
+            },
+            {
+              "name": "Baby & Delicates"
+            },
+            {
+              "name": "Fitness"
+            },
+            {
+              "name": "70'"
+            },
+            {
+              "name": "Fast Iron"
+            },
+            {
+              "name": "45'"
+            },
+            {
+              "name": "Iron Dry sintetici"
+            },
+            {
+              "name": "High Heat"
+            },
+            {
+              "name": "Turbo Dry"
+            },
+            {
+              "name": "Off"
+            },
+            {
+              "name": "Eco Time"
+            },
+            {
+              "name": "80'"
+            },
+            {
+              "name": "Anti Allergy"
+            },
+            {
+              "name": "Activewear"
+            },
+            {
+              "name": "Lingerie"
+            },
+            {
+              "name": "Extra Care"
+            },
+            {
+              "name": "20'"
+            },
+            {
+              "name": "30'"
+            },
+            {
+              "name": "40'"
+            },
+            {
+              "name": "Quick dry"
+            },
+            {
+              "name": "Sport Kit"
+            },
+            {
+              "name": "Refresh"
+            },
+            {
+              "name": "60'"
+            },
+            {
+              "name": "PRE-IRON"
+            },
+            {
+              "name": "Bed and Bath"
+            },
+            {
+              "name": "Fast Iron cotone"
+            },
+            {
+              "name": "Easy Cleaning"
+            },
+            {
+              "name": "FreshCare+"
+            },
+            {
+              "name": "Woolmark Blue"
+            },
+            {
+              "name": "SoftMove"
+            },
+            {
+              "name": "Design Premium"
+            },
+            {
+              "name": "Ecomonitor"
+            },
+            {
+              "name": "Sport"
+            },
+            {
+              "name": "Lana 40°"
+            },
+            {
+              "name": "Gym Kit"
+            },
+            {
+              "name": "20°C"
+            },
+            {
+              "name": "Eco 40-60"
+            },
+            {
+              "name": "Push & Wash"
+            },
+            {
+              "name": "Water plus"
+            },
+            {
+              "name": "Removable worktop"
+            },
+            {
+              "name": "ZENTechnology"
+            },
+            {
+              "name": "PrecisionClean"
+            },
+            {
+              "name": "WaterSave"
+            },
+            {
+              "name": "Bio Stains"
+            },
+            {
+              "name": "Fresh Care"
+            },
+            {
+              "name": "Motore inverter"
+            },
+            {
+              "name": "Drum Up"
+            },
+            {
+              "name": "BTU"
+            },
+            {
+              "name": "12000 BTU"
+            },
+            {
+              "name": "Design"
+            },
+            {
+              "name": "4D XPERT"
+            },
+            {
+              "name": "JET FUNCTION"
+            },
+            {
+              "name": "9000 BTU"
+            },
+            {
+              "name": "18000 BTU"
+            },
+            {
+              "name": "20000 BTU"
+            },
+            {
+              "name": "24000 BTU"
+            },
+            {
+              "name": "Eco Night"
+            },
+            {
+              "name": "FastFreeze"
+            },
+            {
+              "name": "Ice maker"
+            },
+            {
+              "name": "Easy to move"
+            },
+            {
+              "name": "SpaceMax"
+            },
+            {
+              "name": "TurboFreeze"
+            },
+            {
+              "name": "Frost Out"
+            },
+            {
+              "name": "Flexi Mode"
+            },
+            {
+              "name": "9M"
+            },
+            {
+              "name": "Cook3"
+            },
+            {
+              "name": "Cook4"
+            },
+            {
+              "name": "Ready2cook"
+            },
+            {
+              "name": "Assisted Display"
+            },
+            {
+              "name": "Cool Door"
+            },
+            {
+              "name": "Forced Air"
+            },
+            {
+              "name": "SoftClosing"
+            },
+            {
+              "name": "SteamSense"
+            },
+            {
+              "name": "Smart clean"
+            },
+            {
+              "name": "BakeSense"
+            },
+            {
+              "name": "6thSenseLive App"
+            },
+            {
+              "name": "MySmartDisplay"
+            },
+            {
+              "name": "Easy to Clean"
+            },
+            {
+              "name": "iXelium"
+            },
+            {
+              "name": "SmartDisplay"
+            },
+            {
+              "name": "SteamSense+"
+            },
+            {
+              "name": "Sous Vide cooking functions"
+            },
+            {
+              "name": "6TH SENSE Technology"
+            },
+            {
+              "name": "cookbook"
+            },
+            {
+              "name": "BreadDefrost"
+            },
+            {
+              "name": "Dual Crisp"
+            },
+            {
+              "name": "ForcedAir"
+            },
+            {
+              "name": "JetDefrost"
+            },
+            {
+              "name": "Reheat&Defrost"
+            },
+            {
+              "name": "Steam"
+            },
+            {
+              "name": "3DTechnology"
+            },
+            {
+              "name": "Jet Start"
+            },
+            {
+              "name": "Crisp"
+            },
+            {
+              "name": "Grill"
+            },
+            {
+              "name": "MAX"
+            },
+            {
+              "name": "Jet Menu"
+            },
+            {
+              "name": "Auto Clean"
+            },
+            {
+              "name": "ChefMenu"
+            },
+            {
+              "name": "Crispfry"
+            },
+            {
+              "name": "Auto Cook"
+            },
+            {
+              "name": "DoughRising"
+            },
+            {
+              "name": "Jet grill"
+            },
+            {
+              "name": "Precision Bake"
+            },
+            {
+              "name": "XXL display"
+            },
+            {
+              "name": "Dual Steam"
+            },
+            {
+              "name": "Steam&Boil"
+            },
+            {
+              "name": "AssistedDisplay"
+            },
+            {
+              "name": "MySmart Display"
+            },
+            {
+              "name": "Jet air"
+            },
+            {
+              "name": "Magic Clean"
+            },
+            {
+              "name": "Colour"
+            },
+            {
+              "name": "Maximum number of espresso cups"
+            },
+            {
+              "name": "Coffee system"
+            },
+            {
+              "name": "COL_MAIN"
+            },
+            {
+              "name": "POSITIONS"
+            },
+            {
+              "name": "Z_TECH_TYPE"
+            },
+            {
+              "name": "Timer"
+            },
+            {
+              "name": "GAS_SAFETY_TYPE"
+            },
+            {
+              "name": "RADIANT_PLATES_NUMBER"
+            },
+            {
+              "name": "ELECTRIC_ZONES_NUMBER"
+            },
+            {
+              "name": "WARMING_ZONES_NUMBER"
+            },
+            {
+              "name": "ELECTRIC_PLATES_NUMBER"
+            },
+            {
+              "name": "WIDTH_NICHE_SIZE_MIN"
+            },
+            {
+              "name": "EasyReplace"
+            },
+            {
+              "name": "Booster"
+            },
+            {
+              "name": "FlexiCook"
+            },
+            {
+              "name": "Double zone G0"
+            },
+            {
+              "name": "ECO BOOSTER"
+            },
+            {
+              "name": "Moka"
+            },
+            {
+              "name": "EasyDisplay"
+            },
+            {
+              "name": "FlexiMax"
+            },
+            {
+              "name": "SmartSense"
+            },
+            {
+              "name": "Chef Control"
+            },
+            {
+              "name": "SmartSense Premium"
+            },
+            {
+              "name": "AssistedTextDisplay"
+            },
+            {
+              "name": "FlexiFull"
+            },
+            {
+              "name": "PreciseFlame"
+            },
+            {
+              "name": "Booster 3Kw"
+            },
+            {
+              "name": "FlexiSide"
+            },
+            {
+              "name": "MultiLevel Flame"
+            },
+            {
+              "name": "FlexiFlame"
+            },
+            {
+              "name": "Tablet program 60 alternating"
+            },
+            {
+              "name": "Auto Fast"
+            },
+            {
+              "name": "Powerclean"
+            },
+            {
+              "name": "Sensor intensive 60-70"
+            },
+            {
+              "name": "Sensor Outsource"
+            },
+            {
+              "name": "Duo Wash"
+            },
+            {
+              "name": "Proclean"
+            },
+            {
+              "name": "Sensor 40-70 (Atlantic sensor)"
+            },
+            {
+              "name": "Sensor one touch 40-70"
+            },
+            {
+              "name": "UltraIntensive"
+            },
+            {
+              "name": "Sensor normal 60-70 (APL standard)"
+            },
+            {
+              "name": "Sani rinse"
+            },
+            {
+              "name": "Tablet program 60 permanent"
+            },
+            {
+              "name": "1 hour Wash & Dry"
+            },
+            {
+              "name": "Autosensor 50-65"
+            },
+            {
+              "name": "Ciclo Extra"
+            },
+            {
+              "name": "Express"
+            },
+            {
+              "name": "Trio Wash"
+            },
+            {
+              "name": "Bio Eco 50"
+            },
+            {
+              "name": "Self Clean"
+            },
+            {
+              "name": "Eco"
+            },
+            {
+              "name": "Fast everyday 60 + 3h delay"
+            },
+            {
+              "name": "Baby Care"
+            },
+            {
+              "name": "Smart Daily"
+            },
+            {
+              "name": "Sensor intensive 60-70 (APL)"
+            },
+            {
+              "name": "Autosensor 50-65 + 3h delay"
+            },
+            {
+              "name": "Eco 50"
+            },
+            {
+              "name": "Auto Intensive"
+            },
+            {
+              "name": "Sensor intensive 60-70 + Aquasteam"
+            },
+            {
+              "name": "Fast 55"
+            },
+            {
+              "name": "Eco 55°"
+            },
+            {
+              "name": "Sensor one touch 40-70 + Aquasteam"
+            },
+            {
+              "name": "Sensor normal 40-55 (APL standard)"
+            },
+            {
+              "name": "Aquasteam"
+            },
+            {
+              "name": "Fast Everyday 60°"
+            },
+            {
+              "name": "Eco green"
+            },
+            {
+              "name": "Sensor normal 40-55"
+            },
+            {
+              "name": "Dual Wash"
+            },
+            {
+              "name": "Sensor PLP2"
+            },
+            {
+              "name": "Energy Efficiency Class (Regulation (EU) 2017/1369)"
+            },
+            {
+              "name": "Airborne acoustical noise emissions"
+            },
+            {
+              "name": "Energy Consumption for 100 cycles Eco Programme"
+            },
+            {
+              "name": "14 coperti"
+            },
+            {
+              "name": "Extra Space"
+            },
+            {
+              "name": "Flexi Space"
+            },
+            {
+              "name": "EcoFriendly"
+            },
+            {
+              "name": "Power Clean Pro"
+            },
+            {
+              "name": "OverFlow"
+            },
+            {
+              "name": "NaturalDry"
+            },
+            {
+              "name": "Glass Care"
+            },
+            {
+              "name": "Performance"
+            },
+            {
+              "name": "Fluid Dynamic Efficiency class"
+            },
+            {
+              "name": "CookSense"
+            },
+            {
+              "name": "ZenMode"
+            },
+            {
+              "name": "DimmerLight"
+            },
+            {
+              "name": "Light Sense"
+            },
+            {
+              "name": "NightLight"
+            },
+            {
+              "name": "Strip LED Light"
+            },
+            {
+              "name": "Absolute beauty"
+            },
+            {
+              "name": "6th Sense Absolute"
+            },
+            {
+              "name": "Wash&Dry"
+            },
+            {
+              "name": "SteamCare"
+            },
+            {
+              "name": "safety-data-sheet"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "flex-layout.row#searchbread": {
+    "children": ["link#home", "image#arrowBread", "link#cat"],
+    "props": {
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true,
+      "blockClass": "breadCustom"
+    }
+  },
+  "link#home": {
+    "title": "[LINK] - Home",
+    "props": {
+      "href": "/",
+      "label": "Home",
+      "blockClass": "breadLink"
+    }
+  },
+  "image#arrowBread": {
+    "title": "[IMAGE] - Arrow Breadcrumb",
+    "props": {
+      "src": "assets/arrowIconBread.svg"
+    }
+  },
+  "image#arrowBreadDown": {
+    "props": {
+      "src": "assets/arrowIconBreadDown.svg"
+    }
+  },
+  "image#arrowBreadUp": {
+    "props": {
+      "src": "assets/arrowIconBreadUp.svg"
+    }
+  },
+  "link#dep": {
+    "props": {
+      "href": "#",
+      "label": "DEPARTMENT",
+      "blockClass": ["breadLink", "dep"]
+    }
+  },
+  "link#cat": {
+    "props": {
+      "href": "/dep/cat",
+      "label": "CATEGORY",
+      "blockClass": "breadLink"
+    }
+  },
+  "flex-layout.row#searchtitle": {
+    "children": ["rich-text#category"]
+  },
+  "rich-text#category": {
+    "title": "[TEXT] - Category",
+    "props": {
+      "text": "Category",
+      "blockClass": "titleSearchPage"
+    }
+  },
+  "flex-layout.row#result": {
+    "children": ["flex-layout.col#filter", "flex-layout.col#content"],
+    "props": {
+      "preventHorizontalStretch": true,
+      "fullWidth": true,
+      "blockClass": "paddingSearch"
+    }
+  },
+  "flex-layout.col#filter": {
+    "children": ["filter-navigator.v3"],
+    "props": {
+      "blockClass": "filterCol"
+    }
+  },
+  "flex-layout.col#content": {
+    "children": [
+      "flex-layout.row#searchinfo",
+      "flex-layout.row#fetchprevious",
+      "__fold__.experimentalLazyAssets", //nel caso spacchi la plp in prod da rimuovere
+      "flex-layout.row#products",
+      "flex-layout.row#fetchmore",
+      "flex-layout.row#space",
+      "experimental__visibility-layout#CarouselPlpPage",
+      "experimental__visibility-layout#SEOTextPLP"
+    ],
+    "props": {
+      "width": "grow",
+      "preventVerticalStretch": true
+    }
+  },
+  "flex-layout.row#searchinfo": {
+    "children": ["flex-layout.col#productCount", "flex-layout.col#orderby"]
+  },
+  "flex-layout.col#productCount": {
+    "children": ["search-products-count-per-page"],
+    "props": {
+      "blockClass": "productCountCol"
+    }
+  },
+  "flex-layout.col#orderby": {
+    "children": ["order-by.v2"],
+    "props": {
+      "blockClass": "orderByCol"
+    }
+  },
+  "flex-layout.row#fetchprevious": {
+    "title": "[TOP] - Fetch Previous",
+    "props": {
+      "marginBottom": 3
+    },
+    "children": ["search-fetch-previous"]
+  },
+  "search-fetch-more": {
+    "props": {
+      "htmlElementForButton": "a"
+    }
+  },
+  "flex-layout.row#fetchmore": {
+    "title": "[TOP] - Fetch more",
+    "props": {
+      "marginTop": 3
+    },
+    "children": ["search-fetch-more"]
+  },
+  "flex-layout.row#products": {
+    "title": "[TOP] - Search product",
+    "children": ["search-content"]
+  },
+  "flex-layout.row#productsDep": {
+    "children": [
+      // "search-content"
+      "flex-layout.row#resultDep"
+    ],
+    "props": {
+      "blockClass": "paddingSearch"
+    }
+  },
+  //medlique
+  "flex-layout.row#resultDep": {
+    "children": [
+      "flex-layout.col#filter",
+      "flex-layout.col#content"
+      // "search-content"
+    ],
+    "props": {
+      "preventHorizontalStretch": true,
+      "fullWidth": true,
+      "blockClass": "paddingSearch"
+    }
+  },
+  "search-content": {
+    "blocks": ["gallery", "not-found"]
+  },
+  "search-result-layout.mobile": {
+    "title": "[MOBILE] - Search result",
+    "children": [
+      "condition-layout.category#spare-and-accessories-layout",
+      /*ONLY SHOW CURRENT FINISHED GOODS LAYOUT IF NOT SPARE PARTS OR ACCESSORIES PLP*/
+      "condition-layout.category#fg-layout-mobile"
+    ],
+    "props": {
+      "pagination": "show-more",
+      "preventRouteChange": true,
+      "showFacetQuantity": true,
+      "mobileLayout": {
+        "mode1": "small",
+        "mode2": "normal"
+      },
+      "hiddenFacets": {
+        "specificationFilters": {
+          "hiddenFilters": [
+            {
+              "name": "new-energy-label"
+            },
+            {
+              "name": "category:"
+            },
+            {
+              "name": "product-information-sheet"
+            },
+            {
+              "name": "use-care"
+            },
+            {
+              "name": "health-safety-environmental"
+            },
+            {
+              "name": "nel-data-sheet"
+            },
+            {
+              "name": "daily-reference-guide"
+            },
+            {
+              "name": "energy-label"
+            },
+            {
+              "name": "product-fiche"
+            },
+            {
+              "name": "installation-instructions"
+            },
+            {
+              "name": "instruction-for-use"
+            },
+            {
+              "name": "product-data-sheet"
+            },
+            {
+              "name": "program-chart"
+            },
+            {
+              "name": "EnergyLogo_description"
+            },
+            {
+              "name": "EnergyLogo_image"
+            },
+            {
+              "name": "Fast Cooling"
+            },
+            {
+              "name": "FreshControl"
+            },
+            {
+              "name": "Dual No Frost"
+            },
+            {
+              "name": "FreshBox 0°"
+            },
+            {
+              "name": "Display Touch"
+            },
+            {
+              "name": "Everest"
+            },
+            {
+              "name": "Metal Multi Flow"
+            },
+            {
+              "name": "Freeze Control"
+            },
+            {
+              "name": "Flushline"
+            },
+            {
+              "name": "4 ripiani"
+            },
+            {
+              "name": "Anti UV"
+            },
+            {
+              "name": "6TH SENSE Freeze Lock"
+            },
+            {
+              "name": "6TH SENSE Fresh Lock"
+            },
+            {
+              "name": "6th sense Live"
+            },
+            {
+              "name": "CONNECTIVITY"
+            },
+            {
+              "name": "Convertible Space"
+            },
+            {
+              "name": "FlexiFreeze"
+            },
+            {
+              "name": "In-door Ice"
+            },
+            {
+              "name": "Pure control"
+            },
+            {
+              "name": "Triple No Frost technology"
+            },
+            {
+              "name": "Easy access tray"
+            },
+            {
+              "name": "6th Sense Control"
+            },
+            {
+              "name": "Flexi Shelf"
+            },
+            {
+              "name": "Design WCollection"
+            },
+            {
+              "name": "Compressore Inverter"
+            },
+            {
+              "name": "6th Sense Precision Control"
+            },
+            {
+              "name": "Fast Freeze Pad"
+            },
+            {
+              "name": "Fresh Pad"
+            },
+            {
+              "name": "37 dB(A)"
+            },
+            {
+              "name": "StopFrost"
+            },
+            {
+              "name": "LessFrost"
+            },
+            {
+              "name": "35 dB(A)"
+            },
+            {
+              "name": "34dB(A)"
+            },
+            {
+              "name": "Zen Technology"
+            },
+            {
+              "name": "SETMO"
+            },
+            {
+              "name": "Capacità 245- 310 litri"
+            },
+            {
+              "name": "constructionType"
+            },
+            {
+              "name": "field5"
+            },
+            {
+              "name": "sellable"
+            },
+            {
+              "name": "fewPiecesThreshold"
+            },
+            {
+              "name": "minimumQuantityThreshold"
+            },
+            {
+              "name": "showPrice"
+            },
+            {
+              "name": "isDiscontinued"
+            },
+            {
+              "name": "productType"
+            },
+            {
+              "name": "extendedWarranty"
+            },
+            {
+              "name": "CommercialCode_field"
+            },
+            {
+              "name": "Key lock"
+            },
+            {
+              "name": "Quick Dry Sintetici"
+            },
+            {
+              "name": "My option"
+            },
+            {
+              "name": "90'"
+            },
+            {
+              "name": "Low/High Heat"
+            },
+            {
+              "name": "My program"
+            },
+            {
+              "name": "Extra Dry cotone"
+            },
+            {
+              "name": "100'"
+            },
+            {
+              "name": "Less Creased"
+            },
+            {
+              "name": "120'"
+            },
+            {
+              "name": "Less Fluff"
+            },
+            {
+              "name": "140'"
+            },
+            {
+              "name": "160'"
+            },
+            {
+              "name": "Heat&Enjoy"
+            },
+            {
+              "name": "150'"
+            },
+            {
+              "name": "Pre Care"
+            },
+            {
+              "name": "Crease Care"
+            },
+            {
+              "name": "Quick Dry Cotone"
+            },
+            {
+              "name": "Cotton Hanger"
+            },
+            {
+              "name": "Ready to Iron"
+            },
+            {
+              "name": "Jeans"
+            },
+            {
+              "name": "Additional reversing"
+            },
+            {
+              "name": "Cuddly Toys"
+            },
+            {
+              "name": "Seta"
+            },
+            {
+              "name": "Bed linen"
+            },
+            {
+              "name": "Crease Relax"
+            },
+            {
+              "name": "Speed 15"
+            },
+            {
+              "name": "Baby & Delicates"
+            },
+            {
+              "name": "Fitness"
+            },
+            {
+              "name": "70'"
+            },
+            {
+              "name": "Fast Iron"
+            },
+            {
+              "name": "45'"
+            },
+            {
+              "name": "Iron Dry sintetici"
+            },
+            {
+              "name": "High Heat"
+            },
+            {
+              "name": "Turbo Dry"
+            },
+            {
+              "name": "Off"
+            },
+            {
+              "name": "Eco Time"
+            },
+            {
+              "name": "80'"
+            },
+            {
+              "name": "Anti Allergy"
+            },
+            {
+              "name": "Activewear"
+            },
+            {
+              "name": "Lingerie"
+            },
+            {
+              "name": "Extra Care"
+            },
+            {
+              "name": "20'"
+            },
+            {
+              "name": "30'"
+            },
+            {
+              "name": "40'"
+            },
+            {
+              "name": "Quick dry"
+            },
+            {
+              "name": "Sport Kit"
+            },
+            {
+              "name": "Refresh"
+            },
+            {
+              "name": "60'"
+            },
+            {
+              "name": "PRE-IRON"
+            },
+            {
+              "name": "Bed and Bath"
+            },
+            {
+              "name": "Fast Iron cotone"
+            },
+            {
+              "name": "Easy Cleaning"
+            },
+            {
+              "name": "FreshCare+"
+            },
+            {
+              "name": "Woolmark Blue"
+            },
+            {
+              "name": "SoftMove"
+            },
+            {
+              "name": "Design Premium"
+            },
+            {
+              "name": "Ecomonitor"
+            },
+            {
+              "name": "Sport"
+            },
+            {
+              "name": "Lana 40°"
+            },
+            {
+              "name": "Gym Kit"
+            },
+            {
+              "name": "20°C"
+            },
+            {
+              "name": "Eco 40-60"
+            },
+            {
+              "name": "Push & Wash"
+            },
+            {
+              "name": "Water plus"
+            },
+            {
+              "name": "Removable worktop"
+            },
+            {
+              "name": "ZENTechnology"
+            },
+            {
+              "name": "PrecisionClean"
+            },
+            {
+              "name": "WaterSave"
+            },
+            {
+              "name": "Bio Stains"
+            },
+            {
+              "name": "Fresh Care"
+            },
+            {
+              "name": "Motore inverter"
+            },
+            {
+              "name": "Drum Up"
+            },
+            {
+              "name": "BTU"
+            },
+            {
+              "name": "12000 BTU"
+            },
+            {
+              "name": "Design"
+            },
+            {
+              "name": "4D XPERT"
+            },
+            {
+              "name": "JET FUNCTION"
+            },
+            {
+              "name": "9000 BTU"
+            },
+            {
+              "name": "18000 BTU"
+            },
+            {
+              "name": "20000 BTU"
+            },
+            {
+              "name": "24000 BTU"
+            },
+            {
+              "name": "Eco Night"
+            },
+            {
+              "name": "FastFreeze"
+            },
+            {
+              "name": "Ice maker"
+            },
+            {
+              "name": "Easy to move"
+            },
+            {
+              "name": "SpaceMax"
+            },
+            {
+              "name": "TurboFreeze"
+            },
+            {
+              "name": "Frost Out"
+            },
+            {
+              "name": "Flexi Mode"
+            },
+            {
+              "name": "9M"
+            },
+            {
+              "name": "Cook3"
+            },
+            {
+              "name": "Cook4"
+            },
+            {
+              "name": "Ready2cook"
+            },
+            {
+              "name": "Assisted Display"
+            },
+            {
+              "name": "Cool Door"
+            },
+            {
+              "name": "Forced Air"
+            },
+            {
+              "name": "SoftClosing"
+            },
+            {
+              "name": "SteamSense"
+            },
+            {
+              "name": "Smart clean"
+            },
+            {
+              "name": "BakeSense"
+            },
+            {
+              "name": "6thSenseLive App"
+            },
+            {
+              "name": "MySmartDisplay"
+            },
+            {
+              "name": "Easy to Clean"
+            },
+            {
+              "name": "iXelium"
+            },
+            {
+              "name": "SmartDisplay"
+            },
+            {
+              "name": "SteamSense+"
+            },
+            {
+              "name": "Sous Vide cooking functions"
+            },
+            {
+              "name": "6TH SENSE Technology"
+            },
+            {
+              "name": "cookbook"
+            },
+            {
+              "name": "BreadDefrost"
+            },
+            {
+              "name": "Dual Crisp"
+            },
+            {
+              "name": "ForcedAir"
+            },
+            {
+              "name": "JetDefrost"
+            },
+            {
+              "name": "Reheat&Defrost"
+            },
+            {
+              "name": "Steam"
+            },
+            {
+              "name": "3DTechnology"
+            },
+            {
+              "name": "Jet Start"
+            },
+            {
+              "name": "Crisp"
+            },
+            {
+              "name": "Grill"
+            },
+            {
+              "name": "MAX"
+            },
+            {
+              "name": "Jet Menu"
+            },
+            {
+              "name": "Auto Clean"
+            },
+            {
+              "name": "ChefMenu"
+            },
+            {
+              "name": "Crispfry"
+            },
+            {
+              "name": "Auto Cook"
+            },
+            {
+              "name": "DoughRising"
+            },
+            {
+              "name": "Jet grill"
+            },
+            {
+              "name": "Precision Bake"
+            },
+            {
+              "name": "XXL display"
+            },
+            {
+              "name": "Dual Steam"
+            },
+            {
+              "name": "Steam&Boil"
+            },
+            {
+              "name": "AssistedDisplay"
+            },
+            {
+              "name": "MySmart Display"
+            },
+            {
+              "name": "Jet air"
+            },
+            {
+              "name": "Magic Clean"
+            },
+            {
+              "name": "Colour"
+            },
+            {
+              "name": "Maximum number of espresso cups"
+            },
+            {
+              "name": "Coffee system"
+            },
+            {
+              "name": "COL_MAIN"
+            },
+            {
+              "name": "POSITIONS"
+            },
+            {
+              "name": "Z_TECH_TYPE"
+            },
+            {
+              "name": "Timer"
+            },
+            {
+              "name": "GAS_SAFETY_TYPE"
+            },
+            {
+              "name": "RADIANT_PLATES_NUMBER"
+            },
+            {
+              "name": "ELECTRIC_ZONES_NUMBER"
+            },
+            {
+              "name": "WARMING_ZONES_NUMBER"
+            },
+            {
+              "name": "ELECTRIC_PLATES_NUMBER"
+            },
+            {
+              "name": "WIDTH_NICHE_SIZE_MIN"
+            },
+            {
+              "name": "EasyReplace"
+            },
+            {
+              "name": "Booster"
+            },
+            {
+              "name": "FlexiCook"
+            },
+            {
+              "name": "Double zone G0"
+            },
+            {
+              "name": "ECO BOOSTER"
+            },
+            {
+              "name": "Moka"
+            },
+            {
+              "name": "EasyDisplay"
+            },
+            {
+              "name": "FlexiMax"
+            },
+            {
+              "name": "SmartSense"
+            },
+            {
+              "name": "Chef Control"
+            },
+            {
+              "name": "SmartSense Premium"
+            },
+            {
+              "name": "AssistedTextDisplay"
+            },
+            {
+              "name": "FlexiFull"
+            },
+            {
+              "name": "PreciseFlame"
+            },
+            {
+              "name": "Booster 3Kw"
+            },
+            {
+              "name": "FlexiSide"
+            },
+            {
+              "name": "MultiLevel Flame"
+            },
+            {
+              "name": "FlexiFlame"
+            },
+            {
+              "name": "Tablet program 60 alternating"
+            },
+            {
+              "name": "Auto Fast"
+            },
+            {
+              "name": "Powerclean"
+            },
+            {
+              "name": "Sensor intensive 60-70"
+            },
+            {
+              "name": "Sensor Outsource"
+            },
+            {
+              "name": "Duo Wash"
+            },
+            {
+              "name": "Proclean"
+            },
+            {
+              "name": "Sensor 40-70 (Atlantic sensor)"
+            },
+            {
+              "name": "Sensor one touch 40-70"
+            },
+            {
+              "name": "UltraIntensive"
+            },
+            {
+              "name": "Sensor normal 60-70 (APL standard)"
+            },
+            {
+              "name": "Sani rinse"
+            },
+            {
+              "name": "Tablet program 60 permanent"
+            },
+            {
+              "name": "1 hour Wash & Dry"
+            },
+            {
+              "name": "Autosensor 50-65"
+            },
+            {
+              "name": "Ciclo Extra"
+            },
+            {
+              "name": "Express"
+            },
+            {
+              "name": "Trio Wash"
+            },
+            {
+              "name": "Bio Eco 50"
+            },
+            {
+              "name": "Self Clean"
+            },
+            {
+              "name": "Eco"
+            },
+            {
+              "name": "Fast everyday 60 + 3h delay"
+            },
+            {
+              "name": "Baby Care"
+            },
+            {
+              "name": "Smart Daily"
+            },
+            {
+              "name": "Sensor intensive 60-70 (APL)"
+            },
+            {
+              "name": "Autosensor 50-65 + 3h delay"
+            },
+            {
+              "name": "Eco 50"
+            },
+            {
+              "name": "Auto Intensive"
+            },
+            {
+              "name": "Sensor intensive 60-70 + Aquasteam"
+            },
+            {
+              "name": "Fast 55"
+            },
+            {
+              "name": "Eco 55°"
+            },
+            {
+              "name": "Sensor one touch 40-70 + Aquasteam"
+            },
+            {
+              "name": "Sensor normal 40-55 (APL standard)"
+            },
+            {
+              "name": "Aquasteam"
+            },
+            {
+              "name": "Fast Everyday 60°"
+            },
+            {
+              "name": "Eco green"
+            },
+            {
+              "name": "Sensor normal 40-55"
+            },
+            {
+              "name": "Dual Wash"
+            },
+            {
+              "name": "Sensor PLP2"
+            },
+            {
+              "name": "Energy Efficiency Class (Regulation (EU) 2017/1369)"
+            },
+            {
+              "name": "Airborne acoustical noise emissions"
+            },
+            {
+              "name": "Energy Consumption for 100 cycles Eco Programme"
+            },
+            {
+              "name": "14 coperti"
+            },
+            {
+              "name": "Extra Space"
+            },
+            {
+              "name": "Flexi Space"
+            },
+            {
+              "name": "EcoFriendly"
+            },
+            {
+              "name": "Power Clean Pro"
+            },
+            {
+              "name": "OverFlow"
+            },
+            {
+              "name": "NaturalDry"
+            },
+            {
+              "name": "Glass Care"
+            },
+            {
+              "name": "Performance"
+            },
+            {
+              "name": "Fluid Dynamic Efficiency class"
+            },
+            {
+              "name": "CookSense"
+            },
+            {
+              "name": "ZenMode"
+            },
+            {
+              "name": "DimmerLight"
+            },
+            {
+              "name": "Light Sense"
+            },
+            {
+              "name": "NightLight"
+            },
+            {
+              "name": "Strip LED Light"
+            },
+            {
+              "name": "Absolute beauty"
+            },
+            {
+              "name": "6th Sense Absolute"
+            },
+            {
+              "name": "Wash&Dry"
+            },
+            {
+              "name": "SteamCare"
+            },
+            {
+              "name": "safety-data-sheet"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "search-result-layout.mobile#Generic": {
+    "children": [
+      "flex-layout.row#queryRow",
+      // "flex-layout.row#bread-plp",
+      // "flex-layout.row#countAndorderByMobile",
+      "flex-layout.row#searchinfomobile",
+      "flex-layout.row#searchtitle",
+      "flex-layout.row#productCountMobile",
+      "flex-layout.row#contentmobile",
+      "flex-layout.row#fetchmore",
+      "flex-layout.row#space",
+      "product-comparison-drawer"
+    ]
+  },
+  "search-result-layout.mobile#Dep": {
+    "children": [
+      // "plp-structured-data",
+      "flex-layout.row#bread-plp",
+      "experimental__visibility-layout#bannerPLP",
+      "flex-layout.row#searchtitle",
+      "flex-layout.row#searchinfomobile",
+      "flex-layout.row#bread-plp",
+      "flex-layout.row#productCountMobile",
+      "flex-layout.row#contentmobile",
+      "flex-layout.row#fetchmore",
+      "flex-layout.row#space"
+    ],
+    "props": {
+      "pagination": "show-more",
+      "preventRouteChange": true,
+      "showFacetQuantity": true,
+      "mobileLayout": {
+        "mode1": "small",
+        "mode2": "normal"
+      }
+    }
+  },
+  "flex-layout.row#bread-plp": {
+    "children": ["breadcrumb-plp-category"],
+    "props": {
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true,
+      "blockClass": "breadCustom"
+    }
+  },
+  "link#2level-plp": {
+    "children": ["breadcrumb-plp-category"],
+    "props": {
+      "blockClass": "breadLink"
+    }
+  },
+  "link#3level-plp": {
+    "children": ["breadcrumb-plp"],
+    "props": {
+      "blockClass": ["breadLink", "breadBold"]
+    }
+  },
+  "experimental__visibility-layout#SEOTextPLP": {
+    "props": {
+      "visible": true
+    },
+    "children": ["flex-layout.row#textSEO"]
+  },
+  "experimental__visibility-layout#SEOTextPLPReadmore": {
+    "title": "[SEO TEXT READ MORE]",
+    "props": {
+      "visible": false
+    },
+    "children": ["flex-layout.row#read-more-seo"]
+  },
+  "flex-layout.row#textSEO": {
+    "children": ["rich-text#seo"],
+    "props": {
+      "blockClass": ["paddingSearch"]
+    }
+  },
+  "rich-text#seo": {
+    "props": {
+      "text": "### Forni Whirlpool \n Il forno da incasso costituisce un elemento imprescindibile per uno spazio moderno dedicato alla cucina, e Whirlpool propone una linea ricca di modelli e soluzioni pensati per venire incontro a ogni necessità: Forni a vapore e tradizionali completi di tutte le più avanzate funzioni di cottura, studiati per garantirti le performance di cui hai bisogno per qualsiasi ricetta.\n Con la nostra gamma di forni a vapore puoi preparare piatti deliziosi: scopri la combinazione di cottura tradizionale e a vapore, cucina piatti sani e deliziosi, preservando tutte le proprietà organolettiche degli ingredienti. Dai dolci e le torte agli arrosti di carne, dai piatti di pesce fino al pane fatto in casa; le numerose funzioni ti permettono di scegliere sempre il programma di cottura più adatto a ogni ricetta. \n Lasciati stupire dalla tecnologia 6° Senso dei forni multifunzione di Whirlpool: le ricette pre-programmate regolano autonomamente il riscaldamento e la durata del ciclo, mentre la lampada alogena interna è studiata per assicurarti la migliore illuminazione riducendo allo stesso tempo il consumo energetico. Immancabili le funzioni di pre-riscaldamento e la tecnologia autopulente pirolitica, pensate per farti risparmiare tempo: la prima consente di raggiungere velocemente la temperatura desiderata, mentre la seconda ti viene incontro nella pulizia dello spazio interno, aiutandoti a rimuovere anche i residui e lo sporco più ostinato. \n La massima praticità incontra il design accattivante e moderno: i forni a incasso di Whirlpool si integrano facilmente in ogni ambiente, completando il [piano cottura per la cucina](https://www.whirlpool.it/prodotti/cottura/piani-cottura)  e sposandosi alla perfezione con le linee dell’arredo contemporaneo. I colori vanno dall’elegante nero al brillante acciaio, con una gamma di proposte e combinazioni che ti permette di trovare con facilità quello più adatto ai tuoi gusti estetici. Scopri i forni Whirlpool sul catalogo online: scegli il meglio per la tua casa.",
+      "blockClass": "seoText"
+    }
+  },
+  "experimental__visibility-layout#bannerPLP": {
+    "props": {
+      "visible": true
+    },
+    "children": ["flex-layout.row#heroAndRating"]
+  },
+  "flex-layout.row#heroAndRating": {
+    "children": ["flex-layout.col#read-more", "flex-layout.col#Rating"],
+    "props": {
+      "blockClass": "heroRow",
+      "colSizing": "auto"
+    }
+  },
+  "flex-layout.col#read-more": {
+    "children": ["read-more"],
+    "props": {
+      "blockClass": "readMoreCol"
+    }
+  },
+  "read-more": {
+    "children": ["rich-text#read-more"]
+  },
+  "rich-text#read-more": {
+    "props": {
+      "blockClass": "read-more-text",
+      "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s [help](https://help.vtex.com/en/faq/what-is-vtex-io) It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock"
+    }
+  },
+  "flex-layout.row#read-more-seo": {
+    "children": ["read-more#seo"],
+    "props": {
+      "blockClass": "readMoreSeo"
+    }
+  },
+  "read-more#seo": {
+    "children": ["rich-text#read-more-seo"]
+  },
+  "rich-text#read-more-seo": {
+    "props": {
+      "blockClass": "read-more-text",
+      "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s [help](https://help.vtex.com/en/faq/what-is-vtex-io) It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock"
+    }
+  },
+  "flex-layout.col#Rating": {
+    "children": ["rating-brand"],
+    "props": {
+      "blockClass": "Rating"
+    }
+  },
+  "rich-text#heroText": {
+    "props": {
+      "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
+      "blockClass": "heroText"
+    }
+  },
+  "experimental__visibility-layout#CarouselPLP": {
+    "props": {
+      "visible": false,
+      "blockClass": "plpSlider"
+    },
+    "children": ["slider-layout-whl#plp"]
+  },
+  "slider-layout-whl#plp": {
+    "title": "[Slider] - Banners in plp Desktop",
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "showNavigationArrows": "desktopOnly",
+      "autoplay": {
+        "timeout": 5000,
+        "stopOnHover": false
+      },
+      "blockClass": "carousel"
+    },
+    "children": [
+      "flex-layout.row#cardPersonalized1",
+      "flex-layout.row#cardPersonalized2",
+      "flex-layout.row#cardPersonalized3",
+      "flex-layout.row#cardPersonalized4",
+      "flex-layout.row#cardPersonalized5",
+      "flex-layout.row#cardPersonalized6"
+    ]
+  },
+  "info-card#heroBannerSearch": {
+    "props": {
+      "id": "hero-banner-main-search",
+      "isFullModeStyle": false,
+      "textPosition": "left",
+      "imageUrl": "assets/supremecareHEROlarge.jpg",
+      "headline": "Supreme Care",
+      "subhead": "La lavatrice più silenziosa",
+      "callToActionMode": "none",
+      "blockClass": ["heroBanner", "heroBannerSearch"],
+      "textAlignment": "left"
+    }
+  },
+  "flex-layout.row#searchtitleDep": {
+    "children": ["rich-text#category"]
+  },
+  "flex-layout.row#queryRow": {
+    "children": ["rich-text#query", "search-title.v2"],
+    "props": {
+      "blockClass": "queryRow"
+    }
+  },
+  "rich-text#query": {
+    "props": {
+      "text": "Ricerca: ",
+      "blockClass": "query"
+    }
+  },
+  "flex-layout.row#countAndorderByMobile": {
+    "children": ["search-products-count-per-page", "order-by.v2"],
+    "props": {
+      "blockClass": ["orderByMobileCol", "disFlexDirCol", "widthFit"]
+    }
+  },
+  "order-by.v2": {
+    "props": {
+      "hiddenOptions": [
+        "OrderByReleaseDateDESC",
+        "OrderByNameASC",
+        "OrderByNameDESC"
+      ]
+    }
+  },
+
+  // "search-content": {
+  //   "blocks": [
+  //     "gallery",
+  //     "not-found"
+  //   ]
+  // },
+  "flex-layout.row#searchbread": {
+    "children": ["link#home", "image#arrowBread", "link#cat"],
+    "props": {
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true,
+      "blockClass": "breadCustom"
+    }
+  },
+  "link#home": {
+    "props": {
+      "href": "/",
+      "label": "Home",
+      "blockClass": "breadLink"
+    }
+  },
+  "image#arrowBread": {
+    "props": {
+      "src": "assets/arrowIconBread.svg"
+    }
+  },
+  "image#arrowBreadDown": {
+    "props": {
+      "src": "assets/arrowIconBreadDown.svg"
+    }
+  },
+  "image#arrowBreadUp": {
+    "props": {
+      "src": "assets/arrowIconBreadUp.svg"
+    }
+  },
+  "link#dep": {
+    "props": {
+      "href": "#",
+      "label": "DEPARTMENT",
+      "blockClass": ["breadLink", "dep"]
+    }
+  },
+  "link#cat": {
+    "props": {
+      "href": "/dep/cat",
+      "label": "CATEGORY",
+      "blockClass": "breadLink"
+    }
+  },
+  "flex-layout.row#searchtitle": {
+    "children": ["rich-text#category"]
+  },
+  "rich-text#category": {
+    "props": {
+      "text": "Category",
+      "blockClass": "titleSearchPage"
+    }
+  },
+  "flex-layout.row#result": {
+    "children": ["flex-layout.col#filter", "flex-layout.col#content"],
+    "props": {
+      "preventHorizontalStretch": true,
+      "fullWidth": true,
+      "blockClass": "paddingSearch"
+    }
+  },
+  "flex-layout.col#filter": {
+    "children": ["filter-navigator.v3"],
+    "props": {
+      "blockClass": "filterCol"
+    }
+  },
+  "flex-layout.col#content": {
+    "children": [
+      "flex-layout.row#searchinfo",
+      "flex-layout.row#fetchprevious",
+      "__fold__.experimentalLazyAssets", //nel caso spacchi la plp in prod da rimuovere
+      "flex-layout.row#products",
+      "flex-layout.row#fetchmore",
+      "flex-layout.row#space",
+      "experimental__visibility-layout#CarouselPlpPage",
+      "experimental__visibility-layout#SEOTextPLP",
+      "experimental__visibility-layout#SEOTextPLPReadmore"
+    ],
+    "props": {
+      "width": "grow",
+      "preventVerticalStretch": true
+    }
+  },
+  "flex-layout.row#searchinfo": {
+    "children": ["flex-layout.col#productCount", "flex-layout.col#orderby"]
+  },
+  "flex-layout.col#productCount": {
+    "children": ["search-products-count-per-page"],
+    "props": {
+      "blockClass": "productCountCol"
+    }
+  },
+  "flex-layout.col#orderby": {
+    "children": ["order-by.v2"],
+    "props": {
+      "blockClass": "orderByCol"
+    }
+  },
+  "flex-layout.row#fetchprevious": {
+    "props": {
+      "marginBottom": 3
+    },
+    "children": ["search-fetch-previous"]
+  },
+  "flex-layout.row#fetchmore": {
+    "props": {
+      "marginTop": 3
+    },
+    "children": ["search-fetch-more"]
+  },
+  "flex-layout.row#products": {
+    "children": ["search-content"]
+  },
+  "flex-layout.row#productsDep": {
+    "children": ["search-content"],
+    "props": {
+      "blockClass": "paddingSearch"
+    }
+  },
+  "search-content": {
+    "blocks": ["gallery", "not-found"]
+  },
+  "flex-layout.row#contentmobile": {
+    "title": "[ROW] - Content Mobile",
+    "children": ["search-content"],
+    "props": {
+      "preserveLayoutOnMobile": true,
+      "blockClass": "contentResult"
+    }
+  },
+  "flex-layout.row#searchinfomobile": {
+    "title": "[MOBILE] - Search info",
+    "children": [
+      "flex-layout.col#filterMobile",
+      "flex-layout.col#orderByMobile"
+    ],
+    "props": {
+      "preserveLayoutOnMobile": true,
+      "colGap": 5,
+      "colSizing": "equal",
+      "fullWidth": true
+    }
+  },
+  "flex-layout.col#orderByMobile": {
+    "title": "[MOBILE] - Order By",
+    "children": ["order-by.v2"],
+    "props": {
+      "blockClass": "orderByMobileCol"
+    }
+  },
+  "flex-layout.row#productCountMobile": {
+    "title": "[MOBILE] - Product count Mobile",
+    "children": ["search-products-count-per-page"],
+    "props": {
+      "blockClass": "productCountMobileRow"
+    }
+  },
+  "flex-layout.col#filterMobile": {
+    "title": "[MOBILE] - Filter mobile",
+    "children": ["filter-navigator.v3"],
+    "props": {
+      "blockClass": "filterMobileCol",
+      "marginRight": 2
+    }
+  },
+  "filter-navigator.v3": {
+    "props": {
+      "navigationTypeOnMobile": "collapsible",
+      "initiallyCollapsed": true
+    }
+  },
+  "flex-layout.col#switcherMobile": {
+    "title": "[MOBILE] - Switcher Mobile",
+    "children": ["search-layout-switcher"],
+    "props": {
+      "blockClass": "switcherMobileCol"
+    }
+  },
+  "search-not-found-layout": {
+    "children": [
+      "title-tag",
+      // OLD
+      // "rich-text#not-found-page",
+      // "flex-layout.row#searchBar404",
+      // "rich-text#not-found-page2",
+      // "rich-text#buttonNotFound",
+      // "experimental__visibility-layout#gridHome3",
+      // "experimental__visibility-layout#menuImagesHome"
+      // NEW
+      "rich-text#not-found-page-title",
+      "flex-layout.row#not-found-page-content-container"
+    ]
+  },
+  "flex-layout.row#notfound": {
+    "children": [
+      "rich-text#not-found-pageS",
+      "rich-text#buttonNotFoundS",
+      "image#404S"
+    ],
+    "props": {
+      "blockClass": ["flexDisplay", "flexColDir", "center"]
+    }
+  },
+  "rich-text#not-found-pageS": {
+    "title": "[TEXT] - Result not found",
+    "props": {
+      "text": "Siamo spiacenti, nessun risultato",
+      "textAlignment": "center",
+      "blockClass": ["notFound", "center"]
+    }
+  },
+  "rich-text#buttonNotFoundS": {
+    "title": "[TEXT] - Back to Homepage",
+    "props": {
+      "text": "[ ritorna alla homepage ](/)",
+      "blockClass": ["buttonCard", "linkNotFound", "center"]
+    }
+  },
+  "image#404S": {
+    "props": {
+      "src": "assets/404.jpg",
+      "blockClass": "center"
+    }
+  },
+  "breadcrumb": {
+    "props": {
+      "showOnMobile": true
+    }
+  },
+  "gallery": {
+    "blocks": ["product-summary.shelf.product-comparison#search"]
+  },
+  "not-found": {
+    "props": {
+      "text": "404 page -- search page category"
+    }
+  },
+  "flex-layout.row#searchBar404": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "searchBar404"
+    },
+    "children": ["flex-layout.col#search404"]
+  },
+  "flex-layout.col#search404": {
+    "props": {
+      "width": "grow",
+      "blockClass": "searchBarContainer404"
+    },
+    "children": ["search-bar#search404"]
+  },
+  "search-bar#404": {
+    "props": {
+      "maxWidth": "80%",
+      "blockClass": "search404"
+    }
+  },
+  "experimental__visibility-layout#CarouselPLPMobile": {
+    "title": "Experimental visibility - Carousel plp Mobile",
+    "props": {
+      "visible": true,
+      "blockClass": "plpSliderMobilePLP"
+    },
+    "children": ["image#bannerPostillaPlp"]
+  },
+  "list-context.info-card-list#plpBannerMobile": {
+    "children": ["slider-layout-whl#plpBannerMobile"],
+    "props": {
+      "infoCards": [
+        {
+          "id": "hero-banner-main-search",
+          "isFullModeStyle": false,
+          "textPosition": "center",
+          "imageUrl": "assets/category-banner-mob.jpg",
+          "headline": "",
+          "subhead": "",
+          "callToActionMode": "none",
+          "blockClass": [
+            "heroBanner",
+            "heroBannerSearch",
+            "heroBannerSearchPlpMobile"
+          ],
+          "textAlignment": "center"
+        }
+      ]
+    }
+  },
+  "slider-layout-whl#plpBannerMobile": {
+    "title": "[Slider] - Banners in plp Mobile",
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": false,
+      "showNavigationArrows": "never",
+      "blockClass": ["carousel", "carouselPlp", "carouselPlpMobile"]
+    }
+  },
+  "experimental__visibility-layout#CarouselPlpPage": {
+    "title": "Experimental visibility - Carousel plp page",
+    "props": {
+      "visible": true,
+      "blockClass": "plpSliderMobilePLP"
+    },
+    "children": ["image#bannerPostillaPlp"]
+  }
+  // "list-context.info-card-list#plpBanner": {
+  //   "children": [
+  //     "slider-layout-whl#plpBanner"
+  //   ],
+  //   "props": {
+  //     "infoCards": [
+  //       {
+  //         "id": "hero-banner-main-search",
+  //         "isFullModeStyle": false,
+  //         "textPosition": "center",
+  //         "imageUrl": "assets/category-banner.jpg",
+  //         "headline": "",
+  //         "subhead": "",
+  //         "callToActionMode": "none",
+  //         "blockClass": [
+  //           "heroBanner",
+  //           "heroBannerSearch",
+  //           "heroBannerSearchPlpMobile"
+  //         ],
+  //         "textAlignment": "center"
+  //       }
+  //     ]
+  //   }
+  // },
+  // "slider-layout-whl#plpBanner": {
+  //   "props": {
+  //     "itemsPerPage": {
+  //       "desktop": 1,
+  //       "tablet": 1,
+  //       "phone": 1
+  //     },
+  //     "infinite": false,
+  //     "showNavigationArrows": "never",
+  //     "blockClass": [
+  //       "carousel",
+  //       "carouselPlp",
+  //       "carouselPlpMobile"
+  //     ]
+  //   }
+  // }
+}

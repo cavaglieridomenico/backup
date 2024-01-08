@@ -1,0 +1,293 @@
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.articleWrapper, .genericWrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.articleWrapper {
+    grid-template-columns: repeat(auto-fit, 25%);
+    margin: 0 auto;
+    gap: unset;
+    justify-content: center;
+}
+.articleContainer, .heroContainer {
+    margin: 0.5rem;
+}
+.categoryContainer, .articleContainer {
+    position: relative;
+}
+.categoryContainer:hover .gradient {
+    opacity: 1;
+    border-bottom-width: 3px;
+}
+/* .categoryContainer:hover .categoryImage {
+    transform: scale(1.1);
+} */
+.categoryContainer:hover .filterCategoryImage {
+    transform: scale(1);
+}
+.categoryContainer:hover .arrowBackIcon {
+    opacity: 1;
+}
+.categoryImageContainer, .articleImageContainer {
+    position: relative;
+    overflow: hidden;
+}
+.gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.1) 85%, rgba(255,255,255,0) 100%);
+    border-bottom-width: 0;
+    opacity: 0.75;
+    transition: opacity 0.3s, border-bottom-width 0.3s;
+    box-sizing: border-box;
+}
+.categoryImage, .articleImage {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+.categoryImage {
+   width: 150px;
+   height: 150px;
+}
+.categoryTextContainer {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 150px;
+    text-align: center;
+}
+.paragraph {
+    font-size: 1.2rem;
+}
+.categoryTitle, .paragraph {
+    margin: 0;
+    font-size: 1.250rem;
+    margin: 10px 0px;
+    padding: 0;
+    font-family: "openSans";
+    color: #0d436b;
+    font-weight: 600;
+}
+.arrowBackIcon { 
+    transform: rotate(180deg);
+    height: 11px;
+    width: 18px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* ----- ARTICLE SECTION ----- */
+.articleContainer:hover .articleGradient {
+    opacity: 1;
+}
+.articleTextContainer {
+    padding: 1.5rem;
+    background-color: #fff;
+    height: 165px;
+}
+.articleCategoryTime {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.articleCategory {
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+}
+.articleTitle {
+    font-family: "myriadLight";
+    font-weight: 300!important;
+    font-size: 1.15rem!important;
+    line-height: 1.2;
+    margin: 1rem 0;
+}
+.articleTime {
+    font-size: 0.75rem;
+    color: #d0d3d4;
+    display: flex;
+    align-items: center;
+}
+.articleTimeIcon {
+    width: 10px;
+    height: auto;
+    display: block;
+    margin: 0 0.25rem;
+    position: relative;
+    bottom: 1px;
+}
+.articleIconContainer {
+    position: absolute;
+    bottom: 1.2rem;
+    right: 1.3rem;
+}
+.articleIconContainer .arrowBackIcon {
+    opacity: 1;
+}
+.articleGradient {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s;
+    box-sizing: border-box;
+}
+
+/* ----- HERO SECTION ----- */
+.heroContainer {
+    grid-column: span 2;
+}
+.heroContainer .articleImage {
+    aspect-ratio: 2.07/1;
+}
+.heroContainer .articleCategory {
+    color: #d0d3d4;
+}
+.heroTextLinkContainer {
+    display: flex;
+}
+.heroTitleContainer {
+    flex: 1;
+}
+.heroLinkContainer {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+}
+.link {
+    background-color: #fff;
+    color: #edb112;
+}
+.link:hover {
+    background-color: #fff;
+    color: rgba(237,177,18,.8);
+    border-color: rgba(237,177,18,.8);
+}
+
+/* ----- FILTER CATEGORY SECTION ----- */
+.filterWrapper {
+    display: flex;
+    justify-content: center;
+}
+.filterCategoryContainer {
+    max-width: 288px;
+}
+.filterCategoryImage {
+    aspect-ratio: 16/9;
+}
+.filterCategoryTextContainer {
+    position: unset;
+    margin-top: 1rem;
+    font-size: 1.2rem; 
+}
+.filterCategoryTitle, .paragraph {
+    color: #505050;
+}
+
+/* ----- MEDIA QUERY SECTION ----- */
+@media only screen and (max-width: 1024px) {
+    .filterWrapper {
+        display: flex;
+        justify-content: flex-start;
+    }
+    .filterCategoryContainer {
+        border: 2px solid #f2f2f2;
+        border-radius: 3px;
+        height: 60px;
+        max-width: 150px;
+        min-width: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .filterCategoryImageContainer {
+        display: none;
+    }
+    .filterCategoryTextContainer {
+        font-size: 1rem;
+        margin-top: 0;
+        padding: 0.5rem;
+        text-align: center;
+    }
+    .paragraph {
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+@media only screen and (max-width: 850px) {
+    .articleWrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media only screen and (max-width: 768px) {
+    .genericWrapper {
+        gap: 0.5rem;
+        overflow-x: scroll;
+    }
+    .categoryTitle, .paragraph {
+        width: 110px;
+    }
+    .categoryImage {
+        width: 110px;
+        height: 110px;
+    }
+    .articleGradient {
+        background: none;
+        opacity: 1;
+    }
+    .heroContainer .articleImage {
+        aspect-ratio: 1/1;
+    }
+    .filterWrapper {
+        gap: 1rem;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .categoryTextContainer {
+        font-size: 1.2rem;
+        bottom: 1rem;
+        left: 1.25rem;
+    }
+    .articleTextContainer {
+        height: auto;
+    }
+    .articleWrapper {
+        grid-template-columns: 1fr;
+    }
+    .heroTextLinkContainer {
+        flex-direction: column;
+    }
+    .heroContainer {
+        grid-column: span 1;
+    }
+    .heroLinkContainer {
+        align-items: flex-start;
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+    .filterWrapper {
+        gap: 0.5rem;
+        overflow-x: scroll;
+    }
+    .filterCategoryTextContainer {
+        font-size: 0.8rem;
+    }
+    .paragraph {
+        font-size: 0.8rem;
+    }
+}

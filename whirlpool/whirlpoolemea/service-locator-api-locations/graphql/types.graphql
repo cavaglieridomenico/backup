@@ -1,0 +1,49 @@
+scalar StringOrStringArray
+
+type SLResponse{
+    locations:countAndRes    
+}
+
+type SLServiceResponse{
+    locations:countAndResGetService    
+}
+
+type countAndRes{
+    count:Int,
+    results:[results]
+}
+
+type countAndResGetService{
+    count:Int,
+    results:[getServiceResult]
+}
+
+type results{
+    id:String,
+    label:String,
+    slug:String,
+    parent_label:String
+}
+
+type getServiceResult{
+    id:Int,
+    name:String,
+    address:String,
+    addressOriginal:String,
+    addressGoogle:String,
+    phone:String,
+    zip:Int,
+    email:String,
+    googlePlaceId:String,
+    filters:StringOrStringArray,
+    collections:StringOrStringArray,
+    type:String,
+    icon:String,
+    info:String,
+    lat:Float,
+    lng:Float,
+    distance:Int,
+    useEmail:Boolean,
+    parent_label:String
+}
+

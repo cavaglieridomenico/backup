@@ -1,0 +1,76 @@
+{
+  "store.custom#sostituzione-prodotto": {
+    "blocks": [
+      "flex-layout.row#bread-theme",
+      "flex-layout.row#SostituzioneProdottoText3",
+      "flex-layout.row#halfSpace",
+      "flex-layout.row#sostituzione-prodotto-form",
+      "newsletter-popup#footer"
+      ////"analytics"
+    ]
+  },
+  "flex-layout.row#sostituzione-prodotto-form": {
+    "props": {
+      "blockClass": "CustomFormRow"
+    },
+    "children": ["custom-form"]
+  },
+  "custom-form": {
+    "props": {
+      "url": "/v1/api/order/return",
+      "isReturn": true,
+      "isProduct": true,
+      "privacyLinkLabel" : "Informativa sulla privacy",
+      "privacyLabel" : "Tratteremo le tue informazioni personali in conformità con la nostra ",
+      "privacyLink" : "/pagine/informativa-sulla-privacy",
+      "errorFieldEmpty":"Il campo non può essere vuoto.",
+      "errorWrongEmail":"Inserire una mail valida.",
+      "errorOrderNumberChars":"Questo valore deve essere esattamente di 16 caratteri.",
+      "errorProductCodeChars":"Questo valore deve essere esattamente di 12 caratteri.",
+      "errorDateFuture":"Il campo è obbligatorio e non può includere una data futura",
+      "successMessageText":"Grazie per averci contattato! Ti abbiamo inviato una email con il resoconto dei dati ",
+      "addressFormText":"RESIDENZA *",
+      "addressTo":"INDIRIZZO *",
+      "orderNumber":"NUMERO D'ORDINE *",
+      "productCode":"CODICE PRODOTTO *",
+      "deliveredDate":"DATA RICEZIONE MERCE *",
+      "refundReason":"MOTIVAZIONE DEL RESO",
+      "note":"NOTE",
+      "supportEmail": "supporto@whirlpool.com",
+      "requiredFields": "*Campi obbligatori",
+      "placeholderNumber":"+39",
+      "placeholderEmail":"latuaemail@esempio.com",
+      "goBackHome":"torna alla home"
+
+    }
+  },
+  "breadcrumb#SostituzioneProdottoDanneggiato": {
+    "props": {
+      "categories": [
+        "/supporto/",
+        "supporto/sostituzione prodotto danneggiato/",
+        "sostituzione prodotto danneggiato/Sostituzione prodotto"
+      ],
+      "showOnMobile": false
+    }
+  },
+
+  "flex-layout.row#SostituzioneProdottoText3": {
+    "props": {
+      "blockClass": "container"
+    },
+    "children": ["flex-layout.col#SostituzioneProdottoText1"]
+  },
+
+  "flex-layout.col#SostituzioneProdottoText1": {
+    "children": ["rich-text#SostituzioneProdottoText3"]
+  },
+  "rich-text#SostituzioneProdottoText3": {
+    "props": {
+      "text": "# Modulo online per richiesta sostituzione prodotto danneggiato - Elettrodomestici \n\n\n Se ci sono stati dei danneggiamenti al prodotto, causati dal trasporto, restituiscilo e ti sarà riconsegnato nuovo. Il prodotto sarà sostituito con un altro prodotto pari-modello. Penseremo noi ad organizzare la sostituzione e la riconsegna. \nPer maggiori informazioni sulle Condizioni di Acquisto online [clicca qui](/pagine/condizioni-di-utilizzo).",
+      "textAlignment": "left",
+      "textPosition": "LEFT",
+      "blockClass": "formText"
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  /* MOBILE SERVICE LOCATOR */
+  "responsive-layout.mobile#service-locator-mobile": {
+    "children": [
+      "breadcrumb-custom#service-locator-mobile",
+      "flex-layout.row#description-container-maxi-mobile",
+      "flex-layout.row#map-container-maxi-mobile"
+    ]
+  },
+  /* BREADCRUMB  */
+  "breadcrumb-custom#service-locator-mobile": {
+    "props": {
+      /* "blockClass": "containerBreadcrumbs", */
+      "currentPage": "Service locator"
+    }
+  },
+  /* MOBILE SERVICE LOCATOR DESCRIPTION */
+  "flex-layout.row#description-container-maxi-mobile": {
+    "children": [
+      "flex-layout.col#description-container-maxi-mobile"
+    ]
+  },
+  "flex-layout.col#description-container-maxi-mobile": {
+    "children": [
+      "rich-text#description-title-mobile",
+      "rich-text#description-desc-mobile"
+    ],
+    "props": {
+      "blockClass": "description-container-maxi-mobile"
+    }
+  },
+  "rich-text#description-title-mobile": {
+    "props": {
+      "text": "Hai bisogno di un Tecnico Autorizzato INDESIT?",
+      "blockClass": "description-title-mobile"
+    }
+  },
+  "rich-text#description-desc-mobile": {
+    "props": {
+      "text": "Trova il Centro di Assistenza Autorizzato Indesit di tua pertinenza. \n Basta inserire il tuo indirizzo completo (via e città) negli appositi campi sottostanti e visualizza il \n tuo centro di riferimento. Scopri se i servizi che offre sono in linea con le tue esigenze.\n In alternativa, chiamaci allo 02 20 30 (o al nostro numero nella tua regione che puoi trovare qui\n sotto) e un nostro operatore richiederà per te l'intervento di un tecnico specializzato\n appartenente ad uno dei 250 Centri Autorizzati Indesit, più vicino a te.",
+      "blockClass": "description-desc-mobile"
+    }
+  },
+  /* MOBILE SERVICE LOCATOR EMBEDDED MAP */
+  "flex-layout.row#map-container-maxi-mobile": {
+    "children": [
+      "flex-layout.col#map-container-maxi-mobile"
+    ],
+    "props": {
+      "blockClass": "map-container-maxi-mobile"
+    }
+  },
+  "flex-layout.col#map-container-maxi-mobile": {
+    "children": [
+      "embedded-service-locator",
+      "flex-layout.row#service-locator-link"
+    ],
+    "props": {
+      "blockClass": "map-container-maxi-mobile"
+    }
+  },
+  "embedded-service-locator#mobile-embed": {}
+}

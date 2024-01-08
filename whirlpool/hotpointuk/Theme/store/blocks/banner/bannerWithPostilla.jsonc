@@ -1,0 +1,139 @@
+{
+  "experimental__visibility-layout#bannerWithPostilla": {
+    "title": "Hero banner",
+    "props": {
+      "visible": true
+    },
+    "children": ["flex-layout.row#bannerWithPostilla"]
+  },
+  "flex-layout.row#bannerWithPostilla": {
+    "title": "[ROW] - Hero banner",
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": ["columnPostillaBannerAntonio", "bgColorAntonioHero"]
+    },
+    "children": [
+      "flex-layout.col#leftPartPostilla",
+      "flex-layout.col#rightPartPostilla"
+    ]
+  },
+  "flex-layout.col#rightPartPostilla": {
+    "title": "[COL] - Right side Banner with Postilla",
+    "props": {
+      "width": "60%",
+      "blockClass": "columnPostillaImage"
+    },
+    "children": ["image#bannerPostilla"]
+  },
+  "rich-text#BanntitleParag": {
+    "title": "[TEXT] - Title Banner Section",
+    "props": {
+      "text": "W COLLECTION",
+      "blockClass": "titlePBannerPostilla"
+    }
+  },
+  "rich-text#BannTitle": {
+    "title": "[TEXT] - Title Banner",
+    "props": {
+      "text": "# Frigorifero combinato 4 porte",
+      "blockClass": ["titleHBannerPostilla"]
+    }
+  },
+  "rich-text#BannDesc": {
+    "title": "[TEXT] - Description Banner",
+    "props": {
+      "text": "33% di spazio extra per frutta e verdura *",
+      "blockClass": "descBannerPostilla"
+    }
+  },
+  "experimental__visibility-layout#ButtonBannerWithPostilla": {
+    "title": "[EXPERIMENTAL-VISIBILITY] - Button Banner",
+    "props": {
+      "visible": true
+    },
+    // "children": ["link#ButtonBann"]
+    "children": ["link#ButtonBann"]
+  },
+  "link#ButtonBann": {
+    "title": "[LINK] - Link Banner",
+    "props": {
+      "label": "CLICK HERE",
+      "href": "#",
+      "displayMode": "button",
+      "blockClass": "bannerButton",
+      "isPrevent": false,
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "cta_click",
+      "analyticsType": "",
+      "clickArea": "main"
+    }
+  },
+  "flex-layout.col#leftPartPostilla": {
+    "props": {
+      "width": "40%",
+      "preventVerticalStretch": true,
+      "blockClass": ["columnPostilla", "columnPostillaBottom"]
+    },
+    "children": [
+      "rich-text#BanntitleParag",
+      "rich-text#BannTitle",
+      "rich-text#BannDesc",
+      "experimental__visibility-layout#ButtonBannerWithPostilla",
+      //"analytics-wrapper.promotion#LinkButtonBann",
+      "rich-text#BannPostilla"
+    ]
+  },
+  "rich-text#BannPostilla": {
+    "title": "[TEXT] - Postilla Banner",
+    "props": {
+      "text": "*Considerando la capacità dello spazio convertibile impostato a 4 ° C.",
+      "blockClass": "postillaBannerPostilla"
+    }
+  },
+  "image#bannerPostilla": {
+    "title": "[IMAGE] - Image Banner with Postilla",
+    "props": {
+      "src": "assets/postillaBanner/frigoBannerPostilla.jpg",
+      "blockClass": "imagePostillaBanner"
+    }
+  },
+  "image#bannerPostillaPlp": {
+    "props": {
+      "src": "assets/postillaBanner/frigoBannerPostilla.jpg",
+      "blockClass": ["imagePostillaBanner", "imagePostillaBannerPlp"]
+    }
+  },
+  //Banenr 2
+  "experimental__visibility-layout#bannerWithPostillaHome": {
+    "props": {
+      "visible": true
+    },
+    "children": ["flex-layout.row#bannerWithPostillaHome"]
+  },
+  "flex-layout.row#bannerWithPostillaHome": {
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": ["columnPostillaBannerAntonio", "bgColorAntonioHero"]
+    },
+    "children": [
+      "flex-layout.col#leftPartPostillaHome",
+      "flex-layout.col#rightPartPostilla"
+    ]
+  },
+  "flex-layout.col#leftPartPostillaHome": {
+    "props": {
+      "width": "40%",
+      "preventVerticalStretch": true,
+      "blockClass": ["columnPostilla", "columnPostillaBottom"]
+    },
+    "children": [
+      "image#LogoBannerTopCarousel",
+      "rich-text#BanntitleParag",
+      "rich-text#BannTitle",
+      "rich-text#BannDesc",
+      "experimental__visibility-layout#ButtonBannerWithPostilla",
+      //"analytics-wrapper.promotion#LinkButtonBann",
+      "rich-text#BannPostilla"
+    ]
+  }
+}

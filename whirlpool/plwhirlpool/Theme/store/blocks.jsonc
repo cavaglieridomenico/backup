@@ -1,0 +1,105 @@
+/* Blocks can be defined both on the store/blocks.json file, and in any number of json
+ * files inside the store/blocks directory, with any arbitrary directory structure.
+ *
+ * Additionally, all blocks files can support comments, such as this one, if given the
+ * .jsonc file extension.
+ *
+ * The store/blocks.json file is intended for backwards compatibility, for miscellaneous
+ * blocks, or if the app is simple enough that it doesn't warrant splitting the file.
+ */
+{
+  "store.orderplaced": {
+    "blocks": [
+      "order-placed",
+      "flex-layout.row#newsletter-row"
+    ]
+  },
+  "store.account": {
+    "blocks": [
+      "my-account" //"analytics"
+    ],
+    "parent": {
+      "challenge": "challenge.profile"
+    }
+  },
+  "store.not-found#product": {
+    "children": [
+      "rich-text#not-found-page",
+      "rich-text#buttonNotFound",
+      "image#404",
+      "analytics#error",
+      "flex-layout.row#newsletter-row"
+    ],
+    "props": {
+      "blockClass": [
+        "flexDisplay",
+        "flexColDir",
+        "center"
+      ]
+    }
+  },
+  "store.not-found#search": {
+    "children": [
+      "rich-text#not-found-page",
+      "rich-text#buttonNotFound",
+      "image#404",
+      "analytics#error",
+      "flex-layout.row#newsletter-row"
+    ],
+    "props": {
+      "blockClass": [
+        "flexDisplay",
+        "flexColDir",
+        "center"
+      ]
+    }
+  },
+  "store.custom#contact": {
+    "children": [
+      "rich-text#not-found-page",
+      "rich-text#buttonNotFound",
+      "image#404",
+      "analytics",
+      "flex-layout.row#newsletter-row"
+    ],
+    "props": {
+      "blockClass": [
+        "flexDisplay",
+        "flexColDir",
+        "center"
+      ],
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER"
+    }
+  },
+  "rich-text#not-found-page": {
+    "props": {
+      "text": "Wybrana strona nie istnieje",
+      "textAlignment": "center",
+      "blockClass": [
+        "notFound",
+        "center"
+      ],
+      "textPosition": "CENTER"
+    }
+  },
+  "rich-text#buttonNotFound": {
+    "props": {
+      "text": "[ Wróć na stronę główną ](/)",
+      "blockClass": [
+        "buttonCard",
+        "linkNotFound",
+        "center"
+      ],
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER"
+    }
+  },
+  "image#404": {
+    "title": "image - 404",
+    "props": {
+      "src": "assets/placeholders/placeholder-ultrawide.png",
+      "blockClass": "center"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "store.custom#store-locator": {
+    "blocks": [
+      // "analytics",
+      "flex-layout.row#store-locator-title",
+      "flex-layout.row#store-locator-app"
+    ]
+  },
+  /* ---------------------- TITLE ROW  ---------------------------- */
+  "flex-layout.row#store-locator-title": {
+    "props": {
+      "blockClass": "store-locator-title-style"
+    },
+    "children": ["rich-text#store-locator-text"]
+  },
+  "rich-text#store-locator-text": {
+    "props": {
+      "blockClass": "store-locator-title-style",
+      "text": "Store Locator"
+    }
+  },
+  /* ---------------------- STORE LOCATOR APP  ---------------------------- */
+  "flex-layout.row#store-locator-app": {
+    "props": {
+      "blockClass": "store-locator-container"
+    },
+    "children": ["flex-layout.col#store-locator-app"]
+  },
+  "flex-layout.col#store-locator-app": {
+    "children": ["store-locator-app"],
+    "props": {
+      "blockClass": "store-locator-app"
+    }
+  },
+  "store-locator-app": {}
+}

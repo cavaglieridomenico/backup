@@ -1,0 +1,50 @@
+{
+  /* This is the interface of the Cart-add*/
+  "store.checkout.cart-add": {
+    "parent": {
+      "header": "header#cart",
+      "footer": "footer#cart"
+    },
+    "blocks": ["flex-layout.row#emptyCart"]
+  },
+  "flex-layout.row#emptyCart": {
+    "children": [
+      "flex-layout.row#cartEmpty",
+      "flex-layout.row#cartEmptyButton"
+    ],
+    "props": {
+      "blockClass": "emptyCartWrapper"
+    }
+  },
+  "flex-layout.row#cartEmpty": {
+    "children": ["rich-text#emptyCart", "rich-text#emptyCartSub"],
+    "props": {
+      "blockClass": "cartEmptyCol"
+    }
+  },
+  "flex-layout.row#cartEmptyButton": {
+    "children": ["link#chooseAProduct"],
+    "props": {
+      "blockClass": ["cartEmptyCol", "cartEmptyColButton"]
+    }
+  },
+  "rich-text#emptyCart": {
+    "props": {
+      "text": "## Your cart is empty.",
+      "blockClass": "emptyCartTitle"
+    }
+  },
+  "rich-text#emptyCartSub": {
+    "props": {
+      "text": "To continue shopping, browse the categories on the site or search for your products.",
+      "blockClass": "emptyCartDesc"
+    }
+  },
+  "link#chooseAProduct": {
+    "props": {
+      "href": "/",
+      "label": "Choose product",
+      "blockClass": "chooseAProductButton"
+    }
+  }
+}

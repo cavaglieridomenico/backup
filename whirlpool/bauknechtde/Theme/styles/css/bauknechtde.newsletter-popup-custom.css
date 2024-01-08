@@ -1,0 +1,153 @@
+.description {
+  font-family: "myriadLight";
+  font-size: 1.25rem;
+  color: #000000;
+}
+
+.containerPopup :global(.vtex-button) {
+  background: #007d69;
+  transition: all 0.5s ease-in-out;
+}
+
+.titleFormNewsletter {
+  margin-top: 14px !important;
+}
+
+.containerPopup :global(.vtex-button):hover {
+  background: #40a08c;
+  transition: all 0.5s ease-in-out;
+}
+
+.titleForm {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "myriadBold";
+  letter-spacing: 0.2rem;
+  margin: 0.6rem;
+}
+
+.descriptionForm {
+  text-align: center;
+  font-family: "myriadLight";
+  margin: 0.6rem;
+}
+
+.fieldContainer :global(.vtex-input__label) {
+  font-family: "myriadBold";
+}
+
+.privacy,
+.informativa :global(.vtex-checkbox__label) {
+  text-align: left;
+  font-family: "myriadLight";
+  color: #505050;
+  font-size: 1rem;
+}
+
+.link {
+  color: #007d69;
+}
+
+.submitContainer :global(.vtex-styleguide-9-x-input) {
+  background-color: #007d69;
+  font-family: "myriadBold";
+  transition: all 0.5s ease-in-out;
+}
+
+.submitContainer :global(.vtex-styleguide-9-x-input):hover {
+  background-color: #40a08c;
+}
+
+.successClass {
+  font-family: "quickSemibold";
+  background: #007d69;
+}
+
+.loaderForm {
+  border-top: 1rem solid #007d69;
+}
+
+/* newsLetter page */
+.rightButtonNewsLetterPage {
+  flex-basis: 200px;
+  position: relative;
+}
+
+.rightButtonNewsLetterPage ::after {
+  content: ">";
+  font-size: 20px;
+  color: #007d69;
+  position: absolute;
+  text-transform: none !important;
+  top: 7px;
+  right: 15px;
+  font-family: "myriadBold";
+}
+
+.rightButtonNewsLetterPage :global(.vtex-styleguide-9-x-input) {
+  width: 100%;
+  text-align: center;
+  text-transform: none !important;
+  background-color: white !important;
+  border: 1px solid #007d69 !important;
+  color: #007d69;
+  transition: all 0.5s ease-in-out;
+}
+
+.rightButtonNewsLetterPage :global(.vtex-styleguide-9-x-input):focus {
+  outline: none;
+  text-decoration: none;
+  color: transparent;
+  border-collapse: collapse;
+}
+
+.leftButtonNewsLetterPage {
+  flex-basis: 200px;
+  position: relative;
+}
+
+.leftButtonNewsLetterPage ::after {
+  content: ">";
+  font-size: 20px;
+  color: #fff;
+  position: absolute;
+  text-transform: none !important;
+  top: 7px;
+  right: 15px;
+  font-family: "myriadBold";
+}
+
+.leftButtonNewsLetterPage :global(.vtex-styleguide-9-x-input) {
+  width: 100%;
+  text-align: center;
+  text-transform: none !important;
+  border: 1px solid #007d69 !important;
+  transition: all 0.5s ease-in-out;
+}
+
+/*  */
+
+@media only screen and (min-width: 1100px) {
+  .containerPopup {
+    margin: 2rem 20% 0 20%;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  :global(.vtex-modal__modal) {
+    max-width: 100% !important;
+  }
+
+  :global(.vtex__icon-close) {
+    display: none;
+  }
+
+  :global(.vtex-modal__close-icon) {
+    margin: 1rem;
+    height: 1rem;
+    width: 1rem;
+    background-image: url("/arquivos/cross-svgrepo-com.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}

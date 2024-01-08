@@ -1,0 +1,7 @@
+query search($map:String,$query:String,$selFacet:[SelectedFacetInput],$from:Int,$to:Int,$hideUnavailableItems:Boolean, $fullText:String,$simulationBehavior: SimulationBehavior,$operator:Operator,$fuzzy:String,$searchState:String){
+  productSearch(map:$map, query:$query,selectedFacets:$selFacet,from:$from,to:$to,hideUnavailableItems:$hideUnavailableItems,fullText:$fullText,simulationBehavior:$simulationBehavior,operator:$operator,fuzzy:$fuzzy,searchState:$searchState){
+    products{
+      productId
+    }
+  }
+}

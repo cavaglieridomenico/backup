@@ -1,0 +1,196 @@
+{
+  //---------------------------------PLP COMMON ELEMENT----------------------------
+  "flex-layout.row#searchbread": {
+    "children": [
+      "breadcrumb.search#bc-desktop",
+      // "analytics",
+      "product-comparison-drawer"
+    ],
+    "props": {
+      "fullWidth": true,
+      "blockClass": "product-list-breadcrumb"
+    }
+  },
+  "breadcrumb.search#bc-desktop": {
+    "props": {
+      "showOnMobile": true,
+      "width": "100%"
+    }
+  },
+  //----------------------------------TOP CAROUSEL----------------------------------
+  "list-context.product-list#top-carousel-plp": {
+    "blocks": ["product-summary.shelf.product-comparison#carousel-shelf"],
+    "children": [
+      "condition-layout-search#hero-plp-cookers-condition",
+      "condition-layout-search#hero-plp-hobs-condition",
+      "condition-layout-search#hero-plp-hoods-condition",
+      "condition-layout-search#hero-plp-microwaves-condition",
+      "condition-layout-search#hero-plp-ovens-condition",
+      "condition-layout-search#hero-plp-fridges-condition",
+      "condition-layout-search#hero-plp-freezers-condition",
+      "condition-layout-search#hero-plp-dishwashers-condition",
+      "condition-layout-search#hero-plp-dryers-condition",
+      "condition-layout-search#hero-plp-washing-dryers-condition",
+      "condition-layout-search#hero-plp-built-in-coffee-machine",
+      "condition-layout-search#hero-plp-washing-machine-condition"
+    ]
+  },
+  "list-context.product-list#bottom-carousel-plp": {
+    "blocks": ["product-summary.shelf.product-comparison#carousel-shelf"],
+    "children": [
+      "flex-layout.row#bottom-carousel-text-row-mobile",
+      "condition-layout-search#suggested-plp-washing-machine-condition",
+      "condition-layout-search#suggested-plp-washing-dryers-condition",
+      "condition-layout-search#suggested-plp-dryers-condition",
+      "condition-layout-search#suggested-plp-dishwashers-condition",
+      "condition-layout-search#suggested-plp-freezers-condition",
+      "condition-layout-search#suggested-plp-fridges-condition",
+      "condition-layout-search#suggested-plp-ovens-condition",
+      "condition-layout-search#suggested-plp-microwaves-condition",
+      "condition-layout-search#suggested-plp-hoods-condition",
+      "condition-layout-search#suggested-plp-hobs-condition",
+      "condition-layout-search#suggested-built-in-coffee-machine",
+      "condition-layout-search#suggested-plp-cookers-condition"
+    ]
+  },
+  "flex-layout.row#bottom-carousel-text-row": {
+    "children": ["rich-text#bottom-carousel-text"]
+  },
+  "rich-text#bottom-carousel-text": {
+    "props": {
+      "text": "You may also be interested in"
+    }
+  },
+  //---------------------------------PRODUCTS LIST----------------------------------------//
+  "flex-layout.row#fetchmore": {
+    "props": {
+      "marginTop": 5,
+      "marginBottom": 5
+    },
+    "children": ["search-fetch-more"]
+  },
+  "search-fetch-more": {
+    "props": {
+      "blockClass": "fetch-more-button"
+    }
+  },
+  "flex-layout.row#result": {
+    "children": ["flex-layout.col#content"],
+    "props": {
+      "preventHorizontalStretch": true,
+      "fullWidth": true
+    }
+  },
+  "flex-layout.col#content": {
+    "children": [
+      "flex-layout.row#filter-order",
+      "flex-layout.row#total-product-count-row",
+      "flex-layout.row#products"
+    ],
+    "props": {
+      "width": "grow",
+      "preventVerticalStretch": true,
+      "blockClass": "colGalleryItem"
+    }
+  },
+  "flex-layout.row#products": {
+    "children": ["search-content"]
+  },
+  "search-content": {
+    "blocks": ["gallery", "not-found"]
+  },
+  "gallery": {
+    "props": {
+      "layouts": [
+        {
+          "name": "list",
+          "component": "OneListSummary",
+          "itemsPerRow": 1
+        }
+      ],
+      "OneListSummary": "product-summary.shelf.product-comparison",
+      "blockClass": "galleryItemList"
+    }
+  },
+  //--------------------------------MODAL FILTER----------------------------------
+  "flex-layout.row#filter-order": {
+    "children": ["flex-layout.col#filter-button", "flex-layout.col#order"],
+    "props": {
+      "blockClass": "filter-order"
+    }
+  },
+  "flex-layout.col#filter-button": {
+    "children": ["modal-trigger#filter-modal"],
+    "props": {
+      "blockClass": ["filterButton"]
+    }
+  },
+  "modal-trigger#filter-modal": {
+    "children": ["rich-text#button-modal-text", "modal-layout#filter"],
+    "props": {
+      "blockClass": ["trigger-filter-style"]
+    }
+  },
+  "rich-text#button-modal-text": {
+    "props": {
+      "text": "FILTERS",
+      "blockClass": "modal-filter-button"
+    }
+  },
+  "modal-layout#filter": {
+    "children": [
+      /* "flex-layout.col#filter",
+      "modal-actions.close#close-filter-modal" */
+      "filter-navigator.v3"
+    ],
+    "props": {
+      "blockClass": "modal-layout-filter"
+    }
+  },
+  "modal-actions.close#close-filter-modal": {
+    "props": {
+      "label": "",
+      "blockClass": "close-modal-button"
+    }
+  },
+  "flex-layout.col#filter": {
+    "children": ["filter-navigator.v3"]
+  },
+  "flex-layout.col#order": {
+    "children": ["flex-layout.row#searchinfo"],
+    "props": {
+      "showOrderTitle": false
+    }
+  },
+  "flex-layout.row#searchinfo": {
+    "children": ["order-by.v2"],
+    "props": {
+      "horizontalAlign": "right",
+      "preventHorizontalStretch": true,
+      "blockClass": "orderByButton"
+    }
+  },
+  "order-by.v2": {
+    "props": {
+      "showOrderTitle": false,
+      "hiddenOptions": [
+        "OrderByPriceASC",
+        "OrderByPriceDESC",
+        "OrderByBestDiscountDESC",
+        "OrderByTopSaleDESC"
+      ]
+    }
+  },
+  "flex-layout.col#total-product-count": {
+    "children": ["search-products-count-per-page"],
+    "props": {
+      "blockClass": ["productCountCol"]
+    }
+  },
+  "flex-layout.row#total-product-count-row": {
+    "children": ["flex-layout.col#total-product-count"],
+    "props": {
+      "blockClass": ["productCountRow"]
+    }
+  }
+}

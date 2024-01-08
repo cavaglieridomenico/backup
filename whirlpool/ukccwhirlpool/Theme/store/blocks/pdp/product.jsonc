@@ -1,0 +1,1489 @@
+{
+  //Commented breadcrumb for ticket RU-1023
+  "store.product.product-comparison": {
+    "children": [
+      "responsive-layout.desktop#product-pdp",
+      "responsive-layout.mobile#product-pdp",
+      "product-comparison-drawer#pdp"
+    ]
+  },
+  "responsive-layout.desktop#product-pdp": {
+    "children": [
+      "sticky-layout#promoStickyBanner",
+      "flex-layout.row#breadcrumb-container-pdp",
+      "flex-layout.row#productNameAndRefId",
+      "flex-layout.row#commercialCodePdp",
+      "flex-layout.row#wishlistAndCompareDesktop",
+      "sticky-layout#pdpStickyBanner",
+      "flex-layout.row#mainSectionDesktop",
+      "experimental__visibility-layout#buy-together",
+      "flex-layout.row#tabsLayoutPdp",
+      "flex-layout.row#pdpReviewsExtended"
+    ]
+  },
+  //BUY TOGETHER
+  "experimental__visibility-layout#buy-together": {
+    "title": "Experimental visibility - buy-together",
+    "children": ["flex-layout.row#buy-together"]
+  },
+  "flex-layout.row#buy-together": {
+    "props": {
+      "blockClass": ["width1280Center", "bundlesSection"]
+    },
+    "children": ["buy-together"]
+  },
+  "buy-together": {
+    "props": {
+      "BuyButton": "add-to-cart-custom#pdp",
+      "blockClass": ["buyTogether"]
+    },
+    "blocks": ["product-summary.shelf#product-card"]
+  },
+  //STICKY PDP BANNER
+  "sticky-layout#pdpStickyBanner": {
+    "children": [
+      "flex-layout.row#pdpStickyBanner"
+    ],
+    "props": {
+      "blockClass": "pdpStickyBanner"
+    }
+  },
+  "flex-layout.row#pdpStickyBanner": {
+    "title": "[ROW] - Sticky Pdp Banner",
+    "children": [
+      "flex-layout.col#pdpStickyBanner"
+    ],
+    "props": {
+      "blockClass": "pdpStickyBannerRow"
+    }
+  },
+  "flex-layout.col#pdpStickyBanner": {
+    "title": "[COL] - Sticky Pdp Banner",
+    "children": [
+      "flex-layout.row#stickyPdpInfos",
+      "vtex.product-highlights@2.x:product-highlights#promoStickyBanner"
+    ],
+    "props": {
+      "blockClass": "pdpStickyBannerRow"
+    }
+  },
+  //Product Image, Title and Price
+  "flex-layout.row#stickyPdpInfos": {
+    "title": "[ROW] - Sticky Pdp Product Infos",
+    "children": [
+      "flex-layout.col#stickyPdpImageTitle",
+      "flex-layout.col#stickyPdpPriceAndAddToCart"
+    ],
+    "props": {
+      "blockClass": "stickyPdpInfosInfos",
+      "colSizing": "auto"
+    }
+  },
+  //Product Image and Title
+  "flex-layout.col#stickyPdpImageTitle": {
+    "title": "[COL] - Sticky Pdp Image and Title Col",
+    "children": [
+      "flex-layout.row#stickyPdpImageTitle"
+    ],
+    "props": {
+      "blockClass": "stickyPdpImageTitleCol"
+    }
+  },
+  "flex-layout.row#stickyPdpImageTitle": {
+    "title": "[ROW] - Sticky Pdp Image and Title Row",
+    "children": [
+      "flex-layout.col#stickyPdpImage",
+      "flex-layout.col#stickyPdpTitleAndEnergyLabel"
+    ],
+    "props": {
+      "blockClass": "stickyPdpImageTitleRow",
+      "colSizing": "auto"
+    }
+  },
+  //Product Image
+  "flex-layout.col#stickyPdpImage": {
+    "title": "[COL] - Sticky Pdp Image",
+    "children": [
+      "product-image"
+    ],
+    "props": {
+      "blockClass": "stickyPdpImageCol"
+    }
+  },
+  //Product title and Energy Label
+  "flex-layout.col#stickyPdpTitleAndEnergyLabel": {
+    "title": "[COL] - Sticky Pdp Title and Energy Label",
+    "children": [
+      "vtex.store-components:product-name#sticky",
+      "condition-layout.product#isAccessorioEtichette"
+    ],
+    "props": {
+      "blockClass": "stickyPdpTitleCol"
+    }
+  },
+  //Product Name
+  "vtex.store-components:product-name#sticky": {
+    "props": {
+      "blockClass": "stickyName",
+      "tag": "div"
+    }
+  },
+  //Product Price
+  "flex-layout.col#stickyPdpPriceAndAddToCart": {
+    "title": "[COL] - Sticky Pdp Price and add to cart Col",
+    "children": [
+      "flex-layout.row#stickyPdpPrice",
+      "flex-layout.row#addToCartDesktop"
+    ],
+    "props": {
+      "blockClass": "stickyPdpPriceAndAddToCartCol"
+    }
+  },
+  "flex-layout.row#stickyPdpPrice": {
+    "title": "[COL] - Sticky Pdp Price Col",
+    "children": [
+      "product-price-custom"
+    ],
+    "props": {
+      "blockClass": "stickyPdpPriceRow"
+    }
+  },
+  //STICKY PROMO BANNER
+  "sticky-layout#promoStickyBanner": {
+    "children": [
+      "flex-layout.row#promoStickyBanner"
+    ],
+    "props": {
+      "verticalSpacing": 95,
+      "blockClass": "promoStickyBanner"
+    }
+  },
+  "flex-layout.row#promoStickyBanner": {
+    "title": "[ROW] - Sticky Promo Banner",
+    "children": [
+      "vtex.product-highlights@2.x:product-highlights#promoStickyBanner"
+    ],
+    "props": {
+      "blockClass": "promoStickyBanner"
+    }
+  },
+  "vtex.product-highlights@2.x:product-highlights#promoStickyBanner": {
+    "props": {
+      "type": "promotion",
+      "blockClass": "promoStickyBanner"
+    },
+    "children": [
+      "product-highlight-text#promoStickyBanner"
+    ]
+  },
+  "product-highlight-text#promoStickyBanner": {
+    "props": {
+      "message": "{highlightName}"
+    }
+  },
+  "flex-layout.row#breadcrumb-container-pdp": {
+    "children": [
+      "breadcrumb-custom-pdp"
+    ],
+    "props": {
+      "blockClass": "breadcrumbContainer"
+    }
+  },
+  "responsive-layout.mobile#product-pdp": {
+    "children": [
+      "flex-layout.row#productImages",
+      "flex-layout.row#productNamePDP",
+      "flex-layout.row#commercialAndLeadtimePDP",
+      "flex-layout.row#keyFeaturesPDP",
+      "flex-layout.row#productEnergyLabelAndPricePDP",
+      "experimental__visibility-layout#buy-together",
+      "flex-layout.row#revooAndYourekoPDP",
+      "flex-layout.row#compareAndWishlistPDP",
+      "flex-layout.row#roundelsLogosPDP",
+      "flex-layout.row#additionalServicesPDP",
+      "flex-layout.row#paypal",
+      "flex-layout.row#deliverySimulator",
+      "flex-layout.row#paymentMethods",
+      "flex-layout.row#main-description",
+      "flex-layout.row#productInformations",
+      "flex-layout.row#pdpReviewsExtended",
+      "condition-layout.product#stickyAddToCart"
+    ]
+  },
+  "flex-layout.row#commercialCodePdp": {
+    "children": [
+      "product-specification-group#modelSummary"
+    ],
+    "props": {
+      "blockClass": [
+        "commercialCode",
+        "commercialCodePdp"
+      ]
+    }
+  },
+  /*----------------- MOBILE -----------------*/
+  //PRODUCT IMAGES
+  "flex-layout.row#productImages": {
+    "title": "[ROW] - Product Images",
+    "children": [
+      "video-player-thron-pdp#mobilePdp"
+    ],
+    "props": {
+      "blockClass": "productImages"
+    }
+  },
+  "video-player-thron-pdp#mobilePdp": {
+    "props": {
+      "aspectRatio": {
+        "desktop": "auto",
+        "phone": "16:9"
+      },
+      "showPaginationDots": true,
+      "maxHeight": 400,
+      "blockClass": "productPage"
+    }
+  },
+  //PRODUCT TITLE
+  "flex-layout.row#productNamePDP": {
+    "title": "[ROW] - Product name",
+    "props": {
+      "blockClass": "productNameRow"
+    },
+    "children": [
+      "vtex.store-components:product-name"
+    ]
+  },
+  //COMMERCIAL CODE AND LEADTIME
+  "flex-layout.row#commercialAndLeadtimePDP": {
+    "title": "[ROW] - Commercial code and leadtime",
+    "props": {
+      "blockClass": "commercialAndLeadtimePDPRow"
+    },
+    "children": [
+      "flex-layout.row#commercialAndLeadtime"
+    ]
+  },
+  //KEY FEATURES
+  "flex-layout.row#keyFeaturesPDP": {
+    "title": "[ROW] - Key features",
+    "props": {
+      "blockClass": "keyFeaturesPDPRow"
+    },
+    "children": [
+      "experimental__visibility-layout#keyFeatures"
+    ]
+  },
+  //ENERGY LABEL AND PRICE
+  "flex-layout.row#productEnergyLabelAndPricePDP": {
+    "title": "[ROW] - Energy label and price",
+    "props": {
+      "blockClass": "productEnergyLabelAndPricePDPRow"
+    },
+    "children": [
+      "flex-layout.row#productEnergyLabelAndPrice"
+    ]
+  },
+  //REVOO AND YOUREKO
+  "flex-layout.row#revooAndYourekoPDP": {
+    "title": "[ROW] - Revoo and Youreko",
+    "props": {
+      "blockClass": "revooAndYourekoPDPRow"
+    },
+    "children": [
+      "flex-layout.row#revooAndYoureko"
+    ]
+  },
+  //COMPARE AND WISHLIST
+  "flex-layout.row#compareAndWishlistPDP": {
+    "title": "[ROW] - Compare and wishlist",
+    "props": {
+      "blockClass": "compareAndWishlistPDPRow"
+    },
+    "children": [
+      "flex-layout.row#compareAndWishlist"
+    ]
+  },
+  //ROUNDELS
+  "flex-layout.row#roundelsLogosPDP": {
+    "title": "[ROW] - Roundels logos",
+    "props": {
+      "blockClass": "roundelsLogosPDPRow"
+    },
+    "children": [
+      "flex-layout.row#roundelsLogos"
+    ]
+  },
+  //ADDITIONAL SERVICES
+  "flex-layout.row#additionalServicesPDP": {
+    "title": "[ROW] - Additional Service",
+    "props": {
+      "blockClass": "additionalServicesPDPRow"
+    },
+    "children": [
+      "experimental__visibility-layout#additional-services-pdp"
+    ]
+  },
+  //PAYPAL
+  "flex-layout.row#paypal": {
+    "title": "[ROW] - Paypal",
+    "children": [
+      "paypal-app"
+    ],
+    "props": {
+      "blockClass": "paypalRow"
+    }
+  },
+  //DELIVERY SIMULATOR
+  "flex-layout.row#deliverySimulator": {
+    "title": "[ROW] - Delivery Simulator",
+    "children": [
+      "flex-layout.col#deliverySimulator"
+    ],
+    "props": {
+      "blockClass": "deliverySimulatorRow"
+    }
+  },
+  "flex-layout.col#deliverySimulator": {
+    "title": "[COL] - Delivery Simulator",
+    "children": [
+      "condition-layout.product#isDiscontinuedShippingSimulatorQuestion",
+      "condition-layout.product#isDiscontinuedShippingCustom"
+    ],
+    "props": {
+      "blockClass": "deliverySimulatorCol"
+    }
+  },
+  "condition-layout.product#isDiscontinuedShippingSimulatorQuestion": {
+    "title": "[CONDITION] isDiscontinued = true ? - shippingSim",
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "isDiscontinued",
+            "value": "true"
+          }
+        }
+      ],
+      "Then": null,
+      "Else": "flex-layout.row#shippingSimulatorQuestion"
+    }
+  },
+  "flex-layout.row#shippingSimulatorQuestion": {
+    "children": [
+      "rich-text#shippingSimulatorQuestion"
+    ],
+    "props": {
+      "blockClass": "shippingSimulatorQuestion"
+    }
+  },
+  "rich-text#shippingSimulatorQuestion": {
+    "props": {
+      "text": "Check if your delivery zip code is covered for installation:",
+      "blockClass": "shippingSimulatorQuestion"
+    }
+  },
+  "condition-layout.product#isDiscontinuedShippingCustom": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "isDiscontinued",
+            "value": "true"
+          }
+        }
+      ],
+      "Then": null,
+      "Else": "shipping-custom-pdp"
+    }
+  },
+  "shipping-custom-pdp": {
+    "props": {
+      "textButton": "Estimate delivery",
+      "title": "Postal code"
+    }
+  },
+  //PAYMENT METHODS
+  "flex-layout.row#paymentMethods": {
+    "title": "[ROW] - Payment methods",
+    "children": [
+      "flex-layout.col#paymentMethods"
+    ],
+    "props": {
+      "blockClass": "paymentMethodsRow"
+    }
+  },
+  "flex-layout.col#paymentMethods": {
+    "title": "[COL] - Payment methods",
+    "children": [
+      "experimental__visibility-layout#payementMethodsText",
+      "image#payment-methodsPdp"
+    ],
+    "props": {
+      "blockClass": "paymentMethodsCol"
+    }
+  },
+  "experimental__visibility-layout#payementMethodsText": {
+    "title": " [CONDITION] payementMethodsText",
+    "children": [
+      "rich-text#payementMethodsText"
+    ]
+  },
+  "rich-text#payementMethodsText": {
+    "props": {
+      "text": "Secure payment",
+      "blockClass": "payementMethodsText"
+    }
+  },
+  "image#payment-methodsPdp": {
+    "props": {
+      "blockClass": [
+        "imagePayment",
+        "imagePaymentPdp"
+      ],
+      "horizontalAlign": "center",
+      "src": "assets/icons/paymentMethods_withoutAE.svg"
+    }
+  },
+  //PRODUCT INFORMATIONS (ACCORDIONS)
+  "flex-layout.row#productInformations": {
+    "title": "[ROW] - Product Informations",
+    "children": [
+      "flex-layout.col#productInformations"
+    ],
+    "props": {
+      "blockClass": "productInformationsRow"
+    }
+  },
+  "flex-layout.col#productInformations": {
+    "title": "[COL] - Product Informations",
+    "children": [
+      "disclosure-layout#productDetails",
+      "disclosure-layout#features",
+      "disclosure-layout#documents"
+    ],
+    "props": {
+      "blockClass": "productInformationsCol"
+    }
+  },
+  //Product Details Accordion
+  "disclosure-layout#productDetails": {
+    "title": "[DISCLOSURE] - Product details layout",
+    "props": {
+      "blockClass": "pdpAccordion"
+    },
+    "children": [
+      "disclosure-trigger#productDetails",
+      "disclosure-content#productDetails"
+    ]
+  },
+  //Product Details Accordion trigger
+  "disclosure-trigger#productDetails": {
+    "title": "[DISCLOSURE] - Product details trigger",
+    "children": [
+      "rich-text#productDetails",
+      "disclosure-state-indicator#arrows"
+    ],
+    "props": {
+      "blockClass": "pdpAccordionTrigger"
+    }
+  },
+  "rich-text#productDetails": {
+    "title": "[TEXT] - Disclosure title",
+    "props": {
+      "text": "Product Details",
+      "blockClass": "ProdDescAndDetailsTrigger"
+    }
+  },
+  "disclosure-state-indicator#arrows": {
+    "title": "[DISCLOSURE] - Arrows",
+    "props": {
+      "Show": "image#arrowBreadDown",
+      "Hide": "image#arrowBreadUp"
+    }
+  },
+  //Product Details Accordion Content
+  "disclosure-content#productDetails": {
+    "title": "[DISCLOSURE] - Product details section contents",
+    "props": {
+      "blockClass": "pdpAccordionContent"
+    },
+    "children": [
+      "condition-layout.product#wpa-features"
+    ]
+  },
+  "condition-layout.product#wpa-features": {
+    "title": " [CONDITION] productType = 'professional' - wpaFeatures",
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "productType",
+            "value": "professional"
+          }
+        }
+      ],
+      "Then": "product-specification-group#features-wpa",
+      "Else": "product-specification-group#features-standard"
+    }
+  },
+  "product-specification-group#features-wpa": {
+    "children": [
+      "flex-layout.col#technical-features"
+    ],
+    "props": {
+      "filter": {
+        "specificationGroups": [
+          "Special Features"
+        ],
+        "type": "show"
+      }
+    }
+  },
+  "flex-layout.col#technical-features": {
+    "children": [
+      "product-specifications-with-images"
+    ],
+    "props": {
+      "blockClass": "productSpecificationFeatures"
+    }
+  },
+  "product-specification-group#features-standard": {
+    "children": [
+      "flex-layout.col#technical-features"
+    ],
+    "props": {
+      "filter": {
+        "specificationGroups": [
+          "RatingGroupAttrLogo"
+        ],
+        "type": "show"
+      }
+    }
+  },
+  //Features Accordion
+  "disclosure-layout#features": {
+    "title": "[DISCLOSURE] - Faetures layout",
+    "props": {
+      "blockClass": "pdpAccordion"
+    },
+    "children": [
+      "disclosure-trigger#features",
+      "disclosure-content#features"
+    ]
+  },
+  //Product Details Accordion trigger
+  "disclosure-trigger#features": {
+    "title": "[DISCLOSURE] - Features trigger",
+    "children": [
+      "rich-text#productDetails",
+      "disclosure-state-indicator#arrows"
+    ],
+    "props": {
+      "blockClass": "pdpAccordionTrigger"
+    }
+  },
+  //Product Details Accordion Content
+  "disclosure-content#features": {
+    "title": "[DISCLOSURE] - Features section contents",
+    "props": {
+      "blockClass": "pdpAccordionContent"
+    },
+    "children": [
+      "condition-layout.product#wpa-specifications"
+    ]
+  },
+  "condition-layout.product#wpa-specifications": {
+    "title": " [CONDITION] productType = 'professional' - wpaTable",
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "productType",
+            "value": "professional"
+          }
+        }
+      ],
+      "Then": "product-specification-group#table-wpa",
+      "Else": "product-specification-group#table-standard"
+    }
+  },
+  //Documents Accordion
+  "disclosure-layout#documents": {
+    "title": "[DISCLOSURE] - Documents layout",
+    "props": {
+      "blockClass": "pdpAccordion"
+    },
+    "children": [
+      "disclosure-trigger#documents",
+      "disclosure-content#documents"
+    ]
+  },
+  //Product Details Accordion trigger
+  "disclosure-trigger#documents": {
+    "title": "[DISCLOSURE] - Documents trigger",
+    "children": [
+      "rich-text#productDetails",
+      "disclosure-state-indicator#arrows"
+    ],
+    "props": {
+      "blockClass": "pdpAccordionTrigger"
+    }
+  },
+  //Product Details Accordion Content
+  "disclosure-content#documents": {
+    "title": "[DISCLOSURE] - Documents section contents",
+    "props": {
+      "blockClass": "pdpAccordionContent"
+    },
+    "children": [
+      "condition-layout.product#isProfessional"
+    ]
+  },
+  "condition-layout.product#isProfessional": {
+    "title": " [CONDITION] productType = professional ? pdfProfessional",
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "productType",
+            "value": "professional"
+          }
+        }
+      ],
+      "Then": "flex-layout.col#spec_pdf_professional",
+      "Else": "flex-layout.col#spec_pdf_standard"
+    }
+  },
+  /*-----------------------------------------------------------------*/
+  /*----------------- DESKTOP -----------------*/
+  //PRODUCT NAME AND REFID
+  "flex-layout.row#productNameAndRefId": {
+    "title": "[ROW] - Reviews Section",
+    "children": [
+      "flex-layout.col#productTitleDesktop",
+      "flex-layout.col#refId"
+    ],
+    "props": {
+      "blockClass": "productNameAndRefIdRow",
+      "colSizing": "auto"
+    }
+  },
+  "flex-layout.col#productTitleDesktop": {
+    "children": [
+      "vtex.store-components:product-name"
+    ],
+    "props": {
+      "blockClass": "productTitleDesktopCol"
+    }
+  },
+  "flex-layout.col#refId": {
+    "children": [
+      "product-identifier.product#productSkuId"
+    ],
+    "props": {
+      "blockClass": "refIdDesktopCol"
+    }
+  },
+  "product-identifier.product#productSkuId": {
+    "props": {
+      "idField": "skuReferenceId",
+      "blockClass": "borderLeft",
+      "product-identifier__label": "Test"
+    }
+  },
+  //WISHLIST AND COMPARE
+  "flex-layout.row#wishlistAndCompareDesktop": {
+    "children": [
+      "add-to-list-btn",
+      "product-comparison-block.selector#pdp"
+    ],
+    "props": {
+      "preventHorizontalStretch": true,
+      "blockClass": "wishlistAndCompareDesktopRow"
+    }
+  },
+  "product-comparison-block.selector#pdp": {
+    "props": {
+      "blockClass": [
+        "compareSearchPage",
+        "compareSearchPdp"
+      ]
+    }
+  },
+  //MAIN ROW PDP
+  "flex-layout.row#mainSectionDesktop": {
+    "title": "[ROW] - Pdp main secrion",
+    "children": [
+      "flex-layout.col#product-image",
+      "flex-layout.col#servicesAndDescription",
+      "flex-layout.col#priceAndAddToCart"
+    ],
+    "props": {
+      "blockClass": "mainSectionDesktopRow",
+      "colSizing": "auto"
+    }
+  },
+  //PRODUCT IMAGES
+  "flex-layout.col#product-image": {
+    "title": "[COl] - Product image and revoo badge",
+    "children": [
+      "flex-layout.row#product-image",
+      "flex-layout.row#revoo-product-badge"
+    ],
+    "props": {
+      "width": "40%"
+    }
+  },
+  "flex-layout.row#product-image": {
+    "title": "[ROW] - Product images",
+    "children": [
+      "video-player-thron-pdp"
+    ]
+  },
+  "video-player-thron-pdp": {
+    "props": {
+      "aspectRatio": {
+        "desktop": "auto",
+        "phone": "16:9"
+      },
+      "showPaginationDots": false,
+      "maxHeight": 400,
+      "blockClass": "productPage"
+    }
+  },
+  "flex-layout.row#revoo-product-badge": {
+    "title": "[ROW] - Revoo product badge",
+    "children": [
+      "rating-product-badge"
+    ],
+    "props": {
+      "colSizing": "auto",
+      "blockClass": "revooProductBadge"
+    }
+  },
+  //ADDITIONAL SERVICES AND DESCRIPTION
+  "flex-layout.col#servicesAndDescription": {
+    "title": "[COl] - Additional Services and Description",
+    "children": [
+      "flex-layout.row#energyLabelAndYoureko",
+      "flex-layout.row#additional-services-pdp",
+      "flex-layout.row#main-description",
+      "flex-layout.row#specifications-title"
+    ],
+    "props": {
+      "blockClass": "servicesAndDescriptionCol",
+      "width": "30%"
+    }
+  },
+  //Energy label and Youreko
+  "flex-layout.row#energyLabelAndYoureko": {
+    "title": "[ROW] - Energy label and Youreko badge",
+    "children": [
+      "flex-layout.col#energyAndPds",
+      "flex-layout.col#youreko"
+    ],
+    "props": {
+      "blockClass": "energyLabelAndYourekoRow",
+      "colSizing": "auto"
+    }
+  },
+  //Additional Services
+  "flex-layout.row#additional-services-pdp": {
+    "title": "[ROW] - Additional Services",
+    "props": {
+      "blockClass": "addServicesPdp"
+    },
+    "children": [
+      "experimental__visibility-layout#additional-services-pdp"
+    ]
+  },
+  "experimental__visibility-layout#additional-services-pdp": {
+    "title": "[VISIBILITY] additional-services",
+    "children": [
+      "additional-services-pdp"
+    ]
+  },
+  //Product Description
+  "flex-layout.row#main-description": {
+    "title": "[ROW] - Product Description",
+    "children": [
+      "ukccwhirlpool.product-description:product-description#main"
+    ],
+    "props": {
+      "blockClass": "main-description"
+    }
+  },
+  "ukccwhirlpool.product-description:product-description#main": {
+    "props": {
+      "collapseContent": true,
+      "title": "Main features",
+      "blockClass": "mainDescr"
+    }
+  },
+  // KEY FEATURES
+  "flex-layout.row#specifications-title": {
+    "children": [
+      "product-specification-group#table-pdp"
+    ]
+  },
+  "product-specification-group#table-pdp": {
+    "children": [
+      "flex-layout.row#spec-group-pdp"
+    ],
+    "props": {
+      "filter": {
+        "specificationGroups": [
+          "SalesFeature"
+        ],
+        "type": "show"
+      }
+    }
+  },
+  "flex-layout.row#spec-group-pdp": {
+    "props": {
+      "blockClass": "productSpecificationPdpGroup"
+    },
+    "children": [
+      "flex-layout.col#spec-group-pdp"
+    ]
+  },
+  "flex-layout.col#spec-group-pdp": {
+    "children": [
+      "product-specification#pdp"
+    ]
+  },
+  "product-specification#pdp": {
+    "children": [
+      "flex-layout.row#spec-item-pdp"
+    ]
+  },
+  "flex-layout.row#spec-item-pdp": {
+    "props": {
+      "blockClass": "productSpecificationPdp"
+    },
+    "children": [
+      // "flex-layout.col#spec-name-pdp", //TO BE REVERTED
+      "flex-layout.col#spec-value-pdp"
+    ]
+  },
+  "flex-layout.col#spec-name-pdp": {
+    "props": {
+      "blockClass": "productSpecificationPdpName",
+      "width": {
+        "mobile": "50%",
+        "desktop": "50%"
+      }
+    },
+    "children": [
+      "product-specification-text#specification-pdp"
+    ]
+  },
+  "flex-layout.col#spec-value-pdp": {
+    "props": {
+      "blockClass": "productSpecificationPdpValue"
+    },
+    "children": [
+      "product-specification-values#pdp"
+    ]
+  },
+  "product-specification-values#pdp": {
+    "children": [
+      "product-specification-text#value-pdp"
+    ]
+  },
+  "product-specification-text#group-pdp": {
+    "props": {
+      "message": "{groupName}",
+      "blockClass": "nameGroupSpec"
+    }
+  },
+  "product-specification-text#specification-pdp": {
+    "props": {
+      "message": "{specificationName}",
+      "blockClass": "fieldNameSpec"
+    }
+  },
+  "product-specification-text#value-pdp": {
+    "props": {
+      "message": "{specificationValue}",
+      "blockClass": "valueNameSpec"
+    }
+  },
+  //PRICE AND STOCK
+  "flex-layout.col#priceAndAddToCart": {
+    "title": "[COl] - Price, stock, add to cart, PayPal ecc.. col",
+    "children": [
+      "flex-layout.row#priceAndLeadTime",
+      "flex-layout.row#addToCartDesktop",
+      "flex-layout.row#paypal",
+      "flex-layout.row#roundelsLogosPDP",
+      "flex-layout.row#deliverySimulator",
+      "flex-layout.row#paymentMethods"
+    ],
+    "props": {
+      "blockClass": "priceAndAddToCartCol",
+      "width": "26%"
+    }
+  },
+  //ENERGY LABEL AND PRICE
+  "flex-layout.row#priceAndLeadTime": {
+    "title": "[ROW] - Product Price and LeadTime",
+    "children": [
+      "flex-layout.col#price-comparePDP",
+      "flex-layout.col#leadTime"
+    ],
+    "props": {
+      "blockClass": "priceAndLeadTimeRow",
+      "colSizing": "equal",
+      "preserveLayoutOnMobile": true
+    }
+  },
+  //Price PDP
+  "flex-layout.col#price-comparePDP": {
+    "title": "[COL] - Product Price",
+    "children": [
+      "product-price-custom"
+    ],
+    "props": {
+      "blockClass": [
+        "priceSection",
+        "priceSectionPDP"
+      ]
+    }
+  },
+  "product-price-custom#noPromoBadge": {
+    "props": {
+      "showStar": false,
+      "showPercentageBadge": false,
+      "sellerID": "hotpointuk"
+    }
+  },
+  //ADD TO CART
+  "flex-layout.row#addToCartDesktop": {
+    "title": "[ROW] - Add to cart",
+    "children": [
+      "condition-layout.product#hasAccessoryAssociationsNotStock"
+    ],
+    "props": {
+      "blockClass": "addToCartDesktopRow",
+      "preserveLayoutOnMobile": true
+    }
+  },
+  "condition-layout.product#hasAccessoryAssociationsNotStock": {
+    "title": " [CONDITION] isProductAvailable? showAddToCartInPdp",
+    "props": {
+      "conditions": [
+        {
+          "subject": "isProductAvailable"
+        }
+      ],
+      "Then": "condition-layout.product#hasAccessoryAssociations",
+      "Else": "flex-layout.row#buy-button"
+    }
+  },
+  "condition-layout.product#hasAccessoryAssociations": {
+    "title": " [CONDITION] hasAccessoryAssociations = true ? - xSell Modal",
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "hasAccessoryAssociations",
+            "value": "true"
+          }
+        }
+      ],
+      "Then": "condition-layout.binding#isEPP",
+      "Else": "flex-layout.row#buy-button"
+    }
+  },
+  "condition-layout.binding#isEPP": {
+    "title": " [CONDITION] isEpp = true ? hasAccessoriesInStockEpp",
+    "props": {
+      "conditions": [
+        {
+          "subject": "bindingId",
+          "arguments": {
+            "id": "fff1572c-d658-45ce-9eb1-7afedc65533d"
+          }
+        }
+      ],
+      "Then": "condition-layout.product#hasAccessoriesEPP",
+      "Else": "condition-layout.binding#isFF"
+    }
+  },
+  "condition-layout.product#hasAccessoriesEPP": {
+    "title": " [CONDITION] accessoriesHaveStockEPP = true ? xSell Modal",
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "accessoriesHaveStockEPP",
+            "value": "true"
+          }
+        }
+      ],
+      "Then": "modal-trigger#relatedAccessories",
+      "Else": "flex-layout.row#buy-button"
+    }
+  },
+  "modal-trigger#relatedAccessories": {
+    "props": {
+      "blockClass": [
+        "modalPDP"
+      ]
+    },
+    "children": [
+      "analytics-wrapper#relatedAccessoriesClick",
+      "modal-layout#relatedAccessories"
+    ]
+  },
+  "analytics-wrapper#relatedAccessoriesClick": {
+    "props": {
+      "eventName": "popupInteraction",
+      "data": [
+        {
+          "title": "eventAction",
+          "value": "related-accessories-popup"
+        },
+        {
+          "title": "eventLabel",
+          "value": "view"
+        }
+      ]
+    },
+    "children": [
+      "flex-layout.row#buy-button#relatedAccessories"
+    ]
+  },
+  "flex-layout.row#buy-button#relatedAccessories": {
+    "props": {
+      "blockClass": "AddToCArtPdp"
+    },
+    "children": [
+      "analytics-wrapper#relatedAccessoriesView"
+    ]
+  },
+  "analytics-wrapper#relatedAccessoriesView": {
+    "props": {
+      "eventName": "popupInteraction",
+      "data": [
+        {
+          "title": "eventAction",
+          "value": "related-accessories-popup"
+        },
+        {
+          "title": "eventLabel",
+          "value": "click"
+        }
+      ]
+    },
+    "children": [
+      "add-to-cart-custom#pdp"
+    ]
+  },
+  "modal-layout#relatedAccessories": {
+    "children": [
+      "analytics-wrapper#relatedAccessoriesClose",
+      "modal-content#relatedAccessories"
+    ],
+    "props": {
+      "blockClass": "relatedAccessories"
+    }
+  },
+  "analytics-wrapper#relatedAccessoriesClose": {
+    "props": {
+      "isPreventDefault": true,
+      "eventName": "popupInteraction",
+      "data": [
+        {
+          "title": "eventAction",
+          "value": "related-accessories-popup"
+        },
+        {
+          "title": "eventLabel",
+          "value": "close"
+        }
+      ]
+    },
+    "children": [
+      "modal-header#accessories"
+    ]
+  },
+  "modal-header#accessories": {
+    "props": {
+      "blockClass": "accessoriesPopup"
+    },
+    "children": []
+  },
+  "modal-content#relatedAccessories": {
+    "props": {
+      "blockClass": "relatedAccessories"
+    },
+    "children": [
+      "rich-text#titleRelatedAccessories",
+      "shelf.relatedProducts",
+      "rich-text#modalPDP"
+    ]
+  },
+  "rich-text#titleRelatedAccessories": {
+    "props": {
+      "text": "## Complete your order adding recommended accessories",
+      "textAlignment": "center",
+      "textPosition": "CENTER",
+      "blockClass": [
+        "titleModalPDP"
+      ]
+    }
+  },
+  "shelf.relatedProducts": {
+    "blocks": [
+      "product-summary.shelf.product-comparison#xsale"
+    ],
+    "props": {
+      "productList": {
+        "showTitle": false,
+        "gap": "ph3",
+        "minItemsPerPage": 1,
+        "itemsPerPage": 3
+      }
+    }
+  },
+  "product-summary.shelf.product-comparison#xsale": {
+    "children": [
+      "flex-layout.row#productBrand",
+      "stack-layout#plpAspect",
+      "flex-layout.row#commercialCode",
+      "flex-layout.row#productName",
+      "flex-layout.row#price-compare",
+      "flex-layout.row#addToCartRelated"
+    ],
+    "props": {
+      "blockClass": "shelfRelatedAccessories"
+    }
+  },
+  "flex-layout.row#price-compare": {
+    "title": "[ROW] - Product Price",
+    "children": [
+      "product-price-custom"
+    ],
+    "props": {
+      "blockClass": "priceSection"
+    }
+  },
+  "flex-layout.row#addToCartRelated": {
+    "title": "[ROW] - Add To Cart row",
+    "children": [
+      "add-to-cart-custom#relatedAccessories"
+    ],
+    "props": {
+      "blockClass": [
+        "addToCartRow",
+        "addToCartRowRelated"
+      ],
+      "preserveLayoutOnMobile": true
+    }
+  },
+  "add-to-cart-custom#relatedAccessories": {
+    "title": "[BUTTON] - Add to Cart",
+    "props": {
+      "text": "Add to cart"
+    }
+  },
+  "rich-text#modalPDP": {
+    "props": {
+      "text": "[Go to checkout](/cart)",
+      "blockClass": [
+        "buttonCard",
+        "ricambiOriginaliButton",
+        "ricessiButton",
+        "buttonGoToCartModal",
+        "relatedAccessoriesModalButton"
+      ],
+      "textPosition": "CENTER"
+    }
+  },
+  "condition-layout.binding#isFF": {
+    "title": " [CONDITION] isFF ? true - hasAccessoriesInStockFF",
+    "props": {
+      "conditions": [
+        {
+          "subject": "bindingId",
+          "arguments": {
+            "id": "5df62c7d-0555-49c0-a569-716dbe8c774d"
+          }
+        }
+      ],
+      "Then": "condition-layout.product#hasAccessoriesFF",
+      "Else": "condition-layout.binding#isVIP"
+    }
+  },
+  "condition-layout.product#hasAccessoriesFF": {
+    "title": " [CONDITION] accessoriesHaveStockVIP = true ? xSell Modal",
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "accessoriesHaveStockFF",
+            "value": "true"
+          }
+        }
+      ],
+      "Then": "modal-trigger#relatedAccessories",
+      "Else": "flex-layout.row#buy-button"
+    }
+  },
+  "condition-layout.binding#isVIP": {
+    "title": " [CONDITION] isVip ? true - hasAccessoriesInStockVip",
+    "props": {
+      "conditions": [
+        {
+          "subject": "bindingId",
+          "arguments": {
+            "id": "f024e427-bac9-4462-8a77-db3bcaa99be6"
+          }
+        }
+      ],
+      "Then": "condition-layout.product#hasAccessoriesVIP",
+      "Else": "flex-layout.row#buy-button"
+    }
+  },
+  "condition-layout.product#hasAccessoriesVIP": {
+    "title": " [CONDITION] accessoriesHaveStockVIP = true ? xSell Modal",
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "accessoriesHaveStockVIP",
+            "value": "true"
+          }
+        }
+      ],
+      "Then": "modal-trigger#relatedAccessories",
+      "Else": "flex-layout.row#buy-button"
+    }
+  },
+  "flex-layout.row#buy-button": {
+    "title": " [ROW] Add to cart",
+    "props": {
+      "blockClass": "AddToCArtPdp"
+    },
+    "children": [
+      "add-to-cart-custom#pdp"
+    ]
+  },
+  "add-to-cart-custom#pdp": {
+    "props": {
+      "canBeHidden": true,
+      "addToCartFeedback": "toast",
+      "customPixelEventId": "add-to-cart-button",
+      "onClickEventPropagation": "enabled"
+    }
+  },
+  //TABS LAYOUT
+  "flex-layout.row#tabsLayoutPdp": {
+    "title": " [ROW] Tabs layout",
+    "props": {
+      "blockClass": "tabsLayoutPdp"
+    },
+    "children": [
+      "condition-layout.product#shouldShowTabs"
+    ]
+  },
+  "condition-layout.product#shouldShowTabs": {
+    "title": " [CONDITION] constructionType = 'accessory' - specifications Table",
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "constructionType",
+            "value": "Accessory"
+          }
+        }
+      ],
+      "Else": "flex-layout.row#tab-layout"
+    }
+  },
+  "flex-layout.row#tab-layout": {
+    "children": [
+      "tab-layout#home"
+    ]
+  },
+  "tab-layout#home": {
+    "children": [
+      "tab-list#home",
+      "tab-content#home"
+    ]
+  },
+  "tab-list#home": {
+    "children": [
+      "analytics-wrapper#tabListItemFeatures-ga4",
+      "analytics-wrapper#tabListItemCharacteristics-ga4"
+    ],
+    "props": {
+      "preserveLayoutOnMobile": true,
+      "blockClass": "pdpTab-container"
+    }
+  },
+  "analytics-wrapper#tabListItemFeatures-ga4": {
+    "props": {
+      "propsAnalytics": {
+        "analyticsProperties": "provide",
+        "nameEvent": "extra_info_interaction",
+        "name": "extraInfoInteraction",
+        "nameView": "",
+        "data": [
+          {
+            "title": "type",
+            "value": "detail tab-top features"
+          }
+        ],
+        "isView": false
+      }
+    },
+    "children": [
+      "tab-list.item#features"
+    ]
+  },
+  "analytics-wrapper#tabListItemCharacteristics-ga4": {
+    "props": {
+      "propsAnalytics": {
+        "analyticsProperties": "provide",
+        "nameEvent": "extra_info_interaction",
+        "name": "extraInfoInteraction",
+        "nameView": "",
+        "data": [
+          {
+            "title": "type",
+            "value": "detail tab-technical characteristics"
+          }
+        ],
+        "isView": false
+      }
+    },
+    "children": [
+      "tab-list.item#technical"
+    ]
+  },
+  "condition-layout.product#subscriptionTabList": {
+    "title": " [CONDITION] MonthlyRate ? subscriptionTabList",
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "MonthlyRate"
+          }
+        }
+      ],
+      "Then": "tab-list.item#subscriptionTabList"
+    }
+  },
+  "tab-list.item#features": {
+    "props": {
+      "tabId": "features",
+      "label": "Features",
+      "defaultActiveTab": true,
+      "blockClass": [
+        "pdpTab",
+        "pdpTab--specialFeatures"
+      ]
+    }
+  },
+  "tab-list.item#technical": {
+    "props": {
+      "tabId": "technical",
+      "label": "Characteristics",
+      "blockClass": [
+        "pdpTab",
+        "pdpTab--techData",
+        "pdpTab--techData-2"
+      ]
+    }
+  },
+  "tab-list.item#subscriptionTabList": {
+    "props": {
+      "tabId": "subscription",
+      "label": "ABONNEMENT",
+      "blockClass": [
+        "pdpTab",
+        "pdpTab--subscription"
+      ]
+    }
+  },
+  "tab-content#home": {
+    "children": [
+      "tab-content.item#features",
+      "tab-content.item#technical"
+    ]
+  },
+  "tab-content.item#features": {
+    "children": [
+      "condition-layout.product#wpa-features"
+    ],
+    "props": {
+      "tabId": "features"
+    }
+  },
+  "tab-content.item#technical": {
+    "children": [
+      "flex-layout.row#spec"
+    ],
+    "props": {
+      "tabId": "technical"
+    }
+  },
+  "flex-layout.row#spec": {
+    "children": [
+      "flex-layout.col#spec_one",
+      "condition-layout.product#isProfessional"
+    ]
+  },
+  "flex-layout.col#spec_one": {
+    "children": [
+      "condition-layout.product#wpa-specifications"
+    ]
+  },
+  //EXTENDED REVIEW SECTION
+  "flex-layout.row#pdpReviewsExtended": {
+    "title": "[ROW] - Reviews Extended Section",
+    "children": [
+      "flex-layout.col#pdpReviewsExtended"
+    ],
+    "props": {
+      "blockClass": "pdpReviewsExtended"
+    }
+  },
+  "flex-layout.col#pdpReviewsExtended": {
+    "title": "[COL] - Reviews Extended Section",
+    "children": [
+      "rich-text#pdpReviewsExtended",
+      "reviews-container"
+    ],
+    "props": {
+      "blockClass": "pdpReviewsExtended"
+    }
+  },
+  "reviews-container": {
+    "children": [
+      "rating-product-extended"
+    ]
+  },
+  "rich-text#pdpReviewsExtended": {
+    "props": {
+      "text": "## Reviews",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": "pdpReviewsExtendedTitle"
+    }
+  }
+}

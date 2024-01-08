@@ -1,0 +1,231 @@
+{
+  "header": {
+    "blocks": ["header-layout.desktop", "header-layout.mobile"]
+  },
+  "header.full": {
+    "blocks": ["header-layout.desktop", "header-layout.mobile"]
+  },
+  "header-layout.desktop": {
+    "children": [
+      "sticky-layout#desktop",
+      "slider-layout#banner-carousel",
+      "newsletter-popup#header"
+    ]
+  },
+  "newsletter-popup#header": {
+    "props": {
+      "time": 0.25 // default time is 1 = 60 sec -> 60 / 4 = 15 res
+    },
+    "children": ["newletter-form"]
+  },
+  "sticky-layout#desktop": {
+    "props": {
+      "blockClass": "sticky-header"
+    },
+    "children": ["flex-layout.row#desktop"]
+  },
+  "flex-layout.row#desktop": {
+    "props": {
+      "horizontalAlign": "center",
+      "verticalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": true,
+      "blockClass": "headerContent"
+    },
+    "children": [
+      "flex-layout.col#logo-desktop",
+      "flex-layout.col#spacer",
+      "disclosure-layout#search",
+      "minicart.v2",
+      "conditional-login"
+    ]
+  },
+  "link#account": {
+    "props": {
+      "href": "/account",
+      "blockClass": "loginIcon"
+    },
+    "children": ["image#iconAccount"]
+  },
+  "image#iconAccount": {
+    "props": {
+      "src": "assets/account-icon.svg"
+    }
+  },
+
+  "flex-layout.col#search-bar": {
+    "props": {
+      "verticalAlign": "middle",
+      "blockClass": "sb"
+    },
+    "children": ["search-bar#header"]
+  },
+  "search-bar#header": {
+    "props": {
+      "blockClass": "searchHeader",
+      "displayMode": "search-and-clear-buttons",
+      "placeholder": "Chercher"
+    }
+  },
+  "flex-layout.col#spacer": {
+    "props": {
+      "width": "grow",
+      "verticalAlign": "middle",
+      "horizontalAlign": "center"
+    },
+    "children": ["vtex.menu@2.x:menu#ws"]
+  },
+  "flex-layout.col#logo-desktop": {
+    "props": {
+      "verticalAlign": "middle",
+      "blockClass": "logo"
+    },
+    "children": ["link#logo"]
+  },
+  "link#logo": {
+    "props": {
+      "href": "/"
+    },
+    "children": ["image#logo2"]
+  },
+  "image#logo2": {
+    "props": {
+      "height": "100%",
+      "src": "assets/whrlogo.svg",
+      "blockClass": "logoImage"
+    }
+  },
+  "header-layout.mobile": {
+    "children": [
+      "sticky-layout#mobile",
+      "slider-layout#banner-carousel",
+      "newsletter-popup#header"
+    ]
+  },
+  "sticky-layout#mobile": {
+    "children": ["flex-layout.row#mobile"]
+  },
+  "flex-layout.row#mobile": {
+    "children": [
+      "drawer",
+      "link#logo",
+      "flex-layout.col#space",
+      "disclosure-layout#search",
+      "minicart.v2",
+      "conditional-login"
+    ],
+    "props": {
+      "blockClass": "main-header-mobile",
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    }
+  },
+  "drawer": {
+    "children": ["vtex.menu@2.x:menu#mobile", "flex-layout.row#loginMobile"]
+  },
+  "flex-layout.row#loginMobile": {
+    "props": {
+      "fullWidth": true
+    },
+    "children": []
+  },
+  "vtex.menu@2.x:menu#mobile": {
+    "props": {
+      "orientation": "vertical",
+      "blockClass": "mobileMenu"
+    },
+    "children": [
+      "menu-item#prodottiMobile",
+      "menu-item#w-collectionMobile",
+      "menu-item#promozioniMobile",
+      "menu-item#ricetteMobile",
+      "menu-item#support",
+      "menu-item#ricambi-originaliMobile"
+    ]
+  },
+  "vtex.menu@2.x:menu#ws": {
+    "children": [
+      "menu-item#prodotti",
+      "menu-item#w-collection",
+      "menu-item#astuces",
+      "menu-item#offres",
+      "menu-item#spareParts",
+      "menu-item#services"
+    ]
+  },
+
+  "disclosure-layout#search": {
+    "props": {
+      "blockClass": "header"
+    },
+    "children": ["disclosure-trigger#image", "disclosure-content#search-bar"]
+  },
+  "disclosure-trigger#image": {
+    "children": ["image#search"]
+  },
+  "image#search": {
+    "props": {
+      "blockClass": "search-icon",
+      "width": "24px",
+      "src": "assets/search.svg"
+    }
+  },
+  "disclosure-content#search-bar": {
+    "children": ["flex-layout.row#searchBar"]
+  },
+  "flex-layout.row#searchBar": {
+    "props": {
+      "fullWidth": true
+    },
+    "children": ["flex-layout.col#search"]
+  },
+  "flex-layout.col#space": {
+    "props": {
+      "width": "grow"
+    }
+  },
+  "flex-layout.col#search": {
+    "props": {
+      "width": "grow"
+    },
+    "children": [
+      "responsive-layout.desktop#searchbar",
+      "responsive-layout.tablet#searchbar",
+      "responsive-layout.phone#searchbar"
+    ]
+  },
+  "responsive-layout.desktop#searchbar": {
+    "children": ["search-bar"]
+  },
+  "responsive-layout.tablet#searchbar": {
+    "children": ["search-bar"]
+  },
+  "responsive-layout.phone#searchbar": {
+    "children": ["search-bar#mobile"]
+  },
+  "search-bar": {
+    "props": {
+      "placeholder": "Wyszukaj"
+    }
+  },
+  "search-bar#mobile": {
+    "props": {
+      "placeholder": "Wyszukaj",
+      "displayMode": "search-and-clear-buttons"
+    }
+  },
+  "link#Accedi": {
+    "props": {
+      "href": "/account#"
+    },
+    "children": ["rich-text#login"]
+  },
+  "rich-text#login": {
+    "props": {
+      "text": "Login / My Account",
+      "blockClass": ["mobileMenu", "buttonCard", "margin"]
+    }
+  }
+}

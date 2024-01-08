@@ -1,0 +1,179 @@
+{
+  "name": "crm-async-integration",
+  "vendor": "plwhirlpool",
+  "version": "0.0.10",
+  "title": "CRM async connector",
+  "description": "A custom app that bridges Vtex with SAP CRM",
+  "categories": [],
+  "dependencies": {},
+  "builders": {
+    "node": "6.x",
+    "docs": "0.x"
+  },
+  "scripts": {},
+  "credentialType": "absolute",
+  "policies": [
+    {
+      "name": "ADMIN_DS"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "api.vtex.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "webservicesq.cert.whirlpool.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "webservices.cert.whirlpool.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "emeaservicesq.cert.whirlpool.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "emeaservices.cert.whirlpool.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.myvtex.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.vtexcommercestable.com.br",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "portal.vtexcommercestable.com.br",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "d2c-pl-crm-async-flow-dot-go-whr-emea-digital-d2c-mdw.ey.r.appspot.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "d2c-pl-crm-async-flow-dot-whr-emea-digital-d2c.ew.r.appspot.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "accounts.google.com/o/oauth2/auth",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "oauth2.googleapis.com/token",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "www.googleapis.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "colossus-fire-event"
+    },
+    {
+      "name": "colossus-write-logs"
+    },
+    {
+      "name": "vbase-read-write"
+    }
+  ],
+  "settingsSchema": {
+    "title": "CRM connector",
+    "type": "object",
+    "properties": {
+      "server": {
+        "title": "CRM or SAP-PO",
+        "type": "string",
+        "enum": [
+          "crm",
+          "sap-po"
+        ]
+      },
+      "crmEnvironment": {
+        "title": "CRM environment",
+        "type": "string",
+        "enum": [
+          "production",
+          "quality"
+        ]
+      },
+      "crmPassword": {
+        "title": "CRM password",
+        "type": "string"
+      },
+      "gcpHost": {
+        "title": "GCP host",
+        "type": "string"
+      },
+      "gcpProjectId": {
+        "title": "GCP project id",
+        "type": "string"
+      },
+      "gcpClientEmail": {
+        "title": "GCP client email",
+        "type": "string"
+      },
+      "gcpPrivateKey": {
+        "title": "GCP private key",
+        "type": "string"
+      },
+      "gcpTargetAudience": {
+        "title": "GCP target audience",
+        "type": "string"
+      },
+      "enabledAPICredentials": {
+        "title": "Enabled API credentials",
+        "type": "string"
+      },
+      "enabledMDKey": {
+        "title": "Enabled MD key",
+        "type": "string"
+      },
+      "authCookie": {
+        "title": "Authentication cookie",
+        "type": "string"
+      }
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

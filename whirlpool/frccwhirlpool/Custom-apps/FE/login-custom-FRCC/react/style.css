@@ -1,0 +1,374 @@
+/*--- SKELETON ---*/
+.skeletonContainer {
+  display: flex;
+  justify-content: center;
+}
+/*--- LOGIN FORM ---*/
+.loginFormContainer,
+.registrationFormContainer {
+  padding: 3rem 0;
+  background-color: #f9f9f9;
+}
+.loginFormWrapper,
+.registrationFormWrapper {
+  width: 70%;
+  max-width: 30rem;
+  margin: 0 auto;
+}
+.loginFormTitle {
+  text-align: center;
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: #505050;
+}
+.inputDiv {
+  margin-top: 0.5rem;
+}
+.inputDiv :global(.vtex-input-prefix__group) {
+  border: 1px solid #e3e4e6;
+}
+.passwordInput {
+  position: relative;
+}
+.forgotPasswordRouteContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin: 1rem 0;
+}
+.forgotPasswordRouteRouteText {
+  font-size: 0.75rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  color: #505050;
+}
+.forgotPasswordRouteRouteText:hover {
+  text-decoration: underline;
+  transition: all 0.2s ease;
+}
+.modalContainer {
+  width: 100%;
+  background: #3f3f40;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+  padding: 1rem;
+  overflow-wrap: break-word;
+}
+.modalContainer::after {
+  content: "";
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  background: #3f3f40;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%) rotate(45deg);
+}
+.modalContainerTitle {
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+.tootltipTextDiv {
+  margin: 0.3rem 0;
+}
+.tooltipText {
+  font-size: 0.85rem;
+}
+.tooltipTextLeft {
+  margin-right: 1rem;
+  display: inline-block;
+  min-width: 2.5rem;
+}
+.tooltipTextRight {
+}
+.modalContainerLabel {
+  color: #979899;
+}
+.modalContainerLabelSuccess {
+  color: #8bc34a;
+}
+.modalContainerLabelFail {
+  color: #ff4c4c;
+}
+.loginErrorContainer {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+  background-color: #ffe6e6;
+  padding: 0.3rem 0;
+}
+.loginFormFetchError {
+  color: #505050;
+  font-size: 0.8rem;
+}
+.submitbuttonContainer {
+  display: flex;
+  margin-top: 2rem;
+}
+.submitButton {
+  background-color: #edb112;
+  border: none;
+  border-radius: 0.25rem;
+  color: #fff;
+  cursor: pointer;
+  flex-grow: 1;
+  font-size: 0.875rem;
+  padding: 0.6rem 1rem;
+  transition: all 0.2s ease;
+}
+
+.submitButton:first-child {
+  margin-right: 0.5rem;
+}
+.submitButton:hover {
+  background-color: #fdc100;
+  transition: all 0.2s ease;
+}
+/* Registration route */
+
+.registrationModalTitleContainer {
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-top: 1.5rem;
+}
+.registrationModalTitle {
+  text-transform: uppercase;
+  font-weight: bolder;
+  margin: 0 0 0.5rem 0;
+}
+.registrationModalSubTitle {
+}
+.registrationRouteContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+.registrationRouteText {
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  text-align: center;
+  color: #505050;
+}
+.registrationRouteButton {
+  background: #fff;
+  color: #edb112;
+  border: 1px solid transparent;
+  width: 90%;
+  border-radius: 0.25rem;
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.registrationRouteButton:hover {
+  border: 1px solid #edb112;
+  transition: all 0.2s ease;
+}
+.connectionProblemContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 2rem;
+}
+.connectionProblemText {
+  line-height: 1.5;
+  color: #505050;
+  font-weight: bolder;
+}
+.connectionProblemLink {
+  line-height: 1.5;
+  color: #edb112;
+  transition: all 0.3s ease;
+}
+.connectionProblemLink:hover {
+  color: #fdc100;
+  transition: all 0.3s ease;
+}
+/*--- SIGNUP FORM ---*/
+.backToLoginContainer {
+  display: flex;
+  margin-bottom: 1rem;
+}
+.arrowBackIcon {
+  margin-right: 0.5rem;
+  color: #edb112;
+  cursor: pointer;
+}
+.backToLoginText {
+  color: #edb112;
+  font-weight: bolder;
+}
+.optinCheckboxDiv {
+  margin-top: 2rem;
+}
+.optinContainer {
+  font-size: 0.9rem;
+  color: #505050;
+  margin-bottom: 1rem;
+}
+.optinLabel {
+}
+.optinLabelLink {
+  color: #edb112;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.optinLabelLink:hover {
+  transition: all 0.2s ease;
+  text-decoration: underline;
+}
+.optinCheckboxDiv :global(.vtex-checkbox__label) {
+  font-size: 0.9rem;
+  color: #505050;
+}
+.optinCheckboxDiv :global(.vtex-checkbox__inner-container) {
+  border-width: thin;
+}
+.submitRegistrationButtonContainer {
+  display: flex;
+  justify-content: space-between;
+  max-width: 80%;
+  margin: 2rem auto 0 auto;
+}
+.submitRegistrationButton {
+  text-transform: uppercase;
+  font-weight: bolder;
+  width: unset;
+  padding: 0.8rem 1rem;
+  font-size: 0.7rem;
+}
+
+/*--- SET PASSWORD FORM ---*/
+.setPasswordTitleContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.setPasswordTitleTextTop {
+  margin-bottom: 1rem;
+}
+.setPasswordTitleText {
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/*--- LOADER ---*/
+.loaderForm {
+  font-size: 10px;
+  margin: 50px auto;
+  text-indent: -9999em;
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  background: #edb112;
+  background: -moz-linear-gradient(
+    left,
+    #edb112 10%,
+    rgba(237, 177, 18, 0) 42%
+  );
+  background: -webkit-linear-gradient(
+    left,
+    #edb112 10%,
+    rgba(237, 177, 18, 0) 42%
+  );
+  background: -o-linear-gradient(left, #edb112 10%, rgba(237, 177, 18, 0) 42%);
+  background: -ms-linear-gradient(left, #edb112 10%, rgba(237, 177, 18, 0) 42%);
+  background: linear-gradient(to right, #edb112 10%, rgba(237, 177, 18, 0) 42%);
+  position: relative;
+  -webkit-animation: load3 1.4s infinite linear;
+  animation: load3 1.4s infinite linear;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.loaderForm:before {
+  width: 50%;
+  height: 50%;
+  background: #edb112;
+  border-radius: 100% 0 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+}
+.loaderForm:after {
+  background: #f9f9f9;
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+  content: "";
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+@-webkit-keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+/*--- MEDIA QUERIES ---*/
+@media only screen and (min-width: 1024px) {
+  .modalContainer {
+    right: 100%;
+    transform: translateY(-50%);
+    top: 50%;
+    left: unset;
+    bottom: unset;
+    width: 52%;
+    margin-right: 1rem;
+  }
+  .modalContainer::after {
+    transform: translate(50%) rotate(45deg);
+    right: 0;
+    left: unset;
+    bottom: unset;
+    top: 50%;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  .modalContainer {
+    width: 65%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .submitRegistrationButtonContainer {
+    margin: 2rem 0 0 0;
+    max-width: unset;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .submitRegistrationButtonContainer {
+    flex-direction: column;
+  }
+  .submitRegistrationButtonContainer > button:first-child {
+    margin-bottom: 1rem;
+  }
+}

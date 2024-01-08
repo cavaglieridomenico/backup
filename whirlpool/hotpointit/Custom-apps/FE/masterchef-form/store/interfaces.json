@@ -1,0 +1,137 @@
+{
+  "masterchef-form": {
+    "component": "MasterchefForm",
+    "composition": "children",
+    "content": {
+      "properties": {
+        "customCampaign": {
+          "title": "Custom Campaign",
+          "description": "Campaign to be set if not provided via URL",
+          "type": "string",
+          "default": "FORM_LP_MASTERCHEF"
+        },
+        "successMessage": {
+          "title": "Success Message after submit",
+          "description": "Success message after correct submit of form",
+          "type": "string",
+          "default": "Grazie per averci inviato la tua ricetta!"
+        },
+        "fetchErrorMessage": {
+          "title": "Fetch Generic Error Message",
+          "description": "Error message after fetch failed",
+          "type": "string",
+          "default": "Qualcosa è andato storto, ti preghiamo di riprovare."
+        },
+        "heading": {
+          "title": "Heading Paragraph",
+          "description": "First paragraph ahed of everything",
+          "default": "Quale è il tuo piatto #HomeLove preferito?",
+          "$ref": "app:vtex.native-types#/definitions/richText"
+        },
+        "namePlaceholder": {
+          "title": "Name input's placeholder",
+          "description": "The label inside the name input",
+          "default": "Nome*",
+          "type": "string"
+        },
+        "nameErrorMessage": {
+          "title": "Name input's error",
+          "description": "The label for the Name error",
+          "default": "Questo campo è obbligatorio",
+          "type": "string"
+        },
+        "surnamePlaceholder": {
+          "title": "Surname input's placeholder",
+          "description": "The label inside the surname input",
+          "default": "Cognome*",
+          "type": "string"
+        },
+        "surnameErrorMessage": {
+          "title": "Surname input's error",
+          "description": "The label for the surname error",
+          "default": "Questo campo è obbligatorio",
+          "type": "string"
+        },
+        "emailPlaceholder": {
+          "title": "Email input's placeholder",
+          "description": "The label inside the email input",
+          "default": "Email*",
+          "type": "string"
+        },
+        "emailErrorMessage": {
+          "title": "Email input's error",
+          "description": "The label for the Email error",
+          "default": "Inserire un indirizzo email valido",
+          "type": "string"
+        },
+        "dropzoneLabel": {
+          "title": "Dropzone label",
+          "description": "The label below the dropzone icon",
+          "default": "Trascina qui la tua ricetta PNG/JPG/JPEG (max 45 MB) **o scegli un file**",
+          "$ref": "app:vtex.native-types#/definitions/richText"
+        },
+        "dropzoneLabelMobile": {
+          "title": "Dropzone label Mobile",
+          "description": "The label below the dropzone icon in mobile",
+          "default": "Clicca qui per caricare la tua ricetta PNG/JPG/JPEG (max 45 MB)",
+          "$ref": "app:vtex.native-types#/definitions/richText"
+        },
+        "dropzoneErrorMessage": {
+          "title": "Dropzone error message",
+          "description": "The label for the dropzone error",
+          "default": "Selezionare una sola immagine nei formati e dimensioni indicati",
+          "type": "string"
+        },
+        "maxImageSize": {
+          "title": "Maximum image size",
+          "description": "In kb - e.g. 1MB = 1000 - IF YOU CHANGE THIS REMEMBER TO CHANGE ALSO dropzoneLabel",
+          "type": "number",
+          "default": 45000
+        },
+        "privacyText": {
+          "title": "Privacy text/link",
+          "description": "Privacy text before checkbox",
+          "default": "Ho compreso e prendo atto del contenuto dell'[informativa sulla privacy](/pagine/informativa-sulla-privacy) e:",
+          "$ref": "app:vtex.native-types#/definitions/richText"
+        },
+        "checkboxes": {
+          "title": "Checkboxes",
+          "description": "checkbox items",
+          "type": "array",
+          "items": {
+            "title": "Checkbox Item",
+            "description": "checkbox informations",
+            "type": "object",
+            "properties": {
+              "checkboxLabel": {
+                "title": "Checkbox Text",
+                "$ref": "app:vtex.native-types#/definitions/richText"
+              },
+              "isMandatory": {
+                "title": "Is checkbox mandatory?",
+                "type": "boolean",
+                "default": false
+              },
+              "isNewsletter": {
+                "title": "Is newsletter checkbox?",
+                "type": "boolean",
+                "default": false
+              },
+              "checkboxErrorMessage": {
+                "title": "Error message (if mandatory)",
+                "type": "string",
+                "default": "Questo campo è obbligatorio"
+              }
+            }
+          }
+        },
+        "buttonLabel": {
+          "title": "Submit Button Label",
+          "description": "Text of the button",
+          "type": "string",
+          "default": "Iscriviti ora"
+        }
+      }
+    }
+  }
+}

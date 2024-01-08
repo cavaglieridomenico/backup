@@ -1,0 +1,86 @@
+.trigger--mobileFooterMenuTrigger {
+  width: 100%;
+  background: #484949;
+  border-top: solid 1px #423f40;
+  border-left: 0;
+  border-bottom: 0;
+  border-right: 0;
+  padding: 0 1.5rem;
+  position: relative;
+}
+.trigger--mobileFooterMenuTriggerFirst {
+  border-top: unset !important;
+}
+.trigger--mobileFooterMenuTriggerFirst:focus,
+.trigger--mobileFooterMenuTrigger:focus {
+  outline: none;
+}
+.trigger--mobileFooterMenuTrigger--hidden::after {
+  position: absolute;
+  content: "+";
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #979899;
+  cursor: pointer;
+}
+.trigger--mobileFooterMenuTrigger--visible::after {
+  position: absolute;
+  content: "-";
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #979899;
+  cursor: pointer;
+}
+.content--mobileFooterMenuContent {
+  background: #484949;
+}
+/*------------- NEW PDP MOBILE --------------*/
+.trigger--pdpAccordionTrigger {
+  background-color: #f9f9f9;
+  border: none;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+.trigger--pdpAccordionTrigger--hidden {
+  border-bottom: 1px solid #0d436b;
+}
+.trigger--pdpAccordionTrigger :global(.vtex-store-components-3-x-imageElement) {
+  width: 0.8rem;
+}
+/*-------------------------------------------*/
+
+
+
+/* CHECKOUT IO */
+
+.trigger--checkoutInfoBoxTrigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  border: none;
+  background-color: #ffffff;
+  border-bottom: 3px solid #edb112;
+}
+.content--checkoutInfoBox--visible {
+  max-height: 1000px;
+}
+
+.content--checkoutInfoBox--hidden {
+  max-height: 0px;
+}
+
+.content--checkoutInfoBox{
+  transition: max-height 250ms 0s;
+  transition-property: max-height;
+  transition-duration: 250ms;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
+}

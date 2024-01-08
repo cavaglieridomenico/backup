@@ -1,0 +1,464 @@
+.contentContainer .contentItem--TabContent {
+  background-color: white;
+  position: relative;
+  -webkit-animation: slide 0.6s;
+  animation: slide;
+  animation-duration: 0.6s;
+}
+
+.contentContainer .contentItem--TabContentBlack {
+  background-color: #222325;
+  position: relative;
+  -webkit-animation: slide 0.6s;
+  animation: slide;
+  animation-duration: 0.6s;
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    left: 100%;
+    top: 0px;
+  }
+  10% {
+    opacity: 0.1;
+    left: 90%;
+    top: 0px;
+  }
+  20% {
+    opacity: 0.2;
+    left: 80%;
+    top: 0px;
+  }
+  30% {
+    opacity: 0.3;
+    left: 70%;
+    top: 0px;
+  }
+  40% {
+    opacity: 0.4;
+    left: 60%;
+    top: 0px;
+  }
+  50% {
+    opacity: 0.5;
+    left: 50%;
+    top: 0px;
+  }
+  60% {
+    opacity: 0.6;
+    left: 40%;
+    top: 0px;
+  }
+  70% {
+    opacity: 0.7;
+    left: 30%;
+    top: 0px;
+  }
+  80% {
+    opacity: 0.8;
+    left: 20%;
+    top: 0px;
+  }
+  90% {
+    opacity: 0.9;
+    left: 10%;
+    top: 0px;
+  }
+  100% {
+    opacity: 1;
+    left: 0px;
+    top: 0px;
+  }
+}
+
+.container--BannerTab {
+  padding-top: 5.625rem;
+}
+
+.container--BannerTabBlack {
+  background-color: #222325;
+}
+
+.container--BannerTabBlack {
+  margin-top: -0.3rem;
+  padding-top: 5.625rem;
+}
+
+.container--BannerTab .listContainer {
+  border-bottom: 0.0625rem solid #979797;
+}
+
+.container--BannerTabBlack .listContainer {
+  border-bottom: 0.0625rem solid #979797;
+}
+
+.container--BannerTab .listItem {
+  padding: 0;
+  margin: 0;
+}
+
+.container--BannerTabBlack .listItem {
+  padding: 0;
+  margin: 0;
+}
+
+.container--BannerTab :global(.vtex-button__label) {
+  padding: 0;
+  padding-bottom: 2.1875rem !important;
+  color: #353535;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 0.8rem;
+  line-height: 1.625rem;
+  min-width: 10rem;
+}
+
+.container--BannerTabBlack :global(.vtex-button__label) {
+  padding: 0;
+  padding-bottom: 2.1875rem !important;
+  color: #ffffff;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 0.8rem;
+  line-height: 1.625rem;
+  min-width: 10rem;
+}
+
+.container--BannerTab .listItemActive :global(.vtex-button) {
+  border-bottom: 0.1875rem solid #edb112;
+  border-radius: 0;
+}
+
+.container--BannerTabBlack .listItemActive :global(.vtex-button) {
+  border-bottom: 0.1875rem solid #edb112;
+  border-radius: 0;
+}
+
+.container--BannerTab :global(.vtex-button) {
+  background-color: unset;
+  outline: unset;
+  border: unset;
+  text-transform: unset;
+  margin: 0 2.5rem;
+}
+
+.container--BannerTabBlack :global(.vtex-button) {
+  background-color: unset;
+  outline: unset;
+  border: unset;
+  text-transform: unset;
+  margin: 0 2.5rem;
+}
+
+.contentContainer--bannerTab {
+  margin-top: 3.75rem;
+}
+
+.contentContainer--bannerTabBlack {
+  margin-top: 3.75rem;
+}
+
+.contentItem--documentContainer {
+  padding-top: 2.625rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 1024px) {
+  .contentItem--documentContainer {
+    align-items: unset;
+  }
+  .listContainer--cookies-disclaimer-tab-list-style {
+    padding: 0 !important;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .container--BannerTab .listContainer {
+    display: flex;
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+    justify-content: start;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .contentContainer .contentItem--TabContent {
+    -webkit-animation: slide 0.4s;
+    animation: slide;
+    animation-duration: 0.4s;
+  }
+  .contentContainer .contentItem--TabContentBlack {
+    -webkit-animation: slide 0.4s;
+    animation: slide;
+    animation-duration: 0.4s;
+  }
+  .listContainer--caratt-tec {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    justify-content: start;
+  }
+  .listItem--caratt-tec {
+    min-width: 10rem;
+  }
+  :global(.vtex-tab-layout-0-x-listItem--targeting-cookies-tab-list-item-style)
+    :global(.vtex-button)
+    :global(.vtex-button__label),
+  :global(.vtex-tab-layout-0-x-listItem--functional-cookies-tab-list-item-style)
+    :global(.vtex-button)
+    :global(.vtex-button__label),
+  :global(.vtex-tab-layout-0-x-listItem--first-party-cookies-tab-list-item-style)
+    :global(.vtex-button)
+    :global(.vtex-button__label),
+  :global(.vtex-tab-layout-0-x-listItem--strictly-necessary-cookies-tab-list-item-style)
+    :global(.vtex-button)
+    :global(.vtex-button__label) {
+    font-size: 0.7rem !important;
+  }
+}
+
+/* ------------------ LANDING PAGES ---------------------- */
+
+.contentContainer--tab-content-tech-info {
+  width: 65vw;
+  margin-bottom: 90px !important;
+}
+
+.contentContainer--tab-content-tech-info
+  :global(.vtex-tab-layout-0-x-contentItem) {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+:global(.vtex-flex-layout-0-x-flexRowContent--innex-machine-banner) {
+  background: transparent url(assets/landing-test/landing-shadow.png) center
+    bottom no-repeat;
+  width: 55vw !important;
+  margin-bottom: 195px;
+}
+
+:global(.vtex-flex-layout-0-x-flexRowContent--innex-machine-banner)
+  :global(.vtex-flex-layout-0-x-stretchChildrenWidth) {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-top: 0px !important;
+}
+
+:global(.vtex-tab-layout-0-x-listItem--lading-innex-tabs-list-item) {
+  border-bottom: 2px solid #e0e0e0;
+  width: 10vw;
+  align-items: center !important;
+  margin: 0px !important;
+}
+
+:global(.vtex-tab-layout-0-x-listItem--lading-innex-tabs-list-item)
+  :global(.vtex-button) {
+  background-color: transparent !important;
+  border-radius: 0px;
+  border-color: #0282b900;
+}
+
+:global(.vtex-tab-layout-0-x-listItemActive--lading-innex-tabs-list-item) {
+  border-bottom: 2px solid #0090d0;
+}
+
+:global(.vtex-tab-layout-0-x-listItem--lading-innex-tabs-list-item)
+  :global(.vtex-button):hover {
+  background-color: transparent !important;
+  border-radius: 0px !important;
+  border-color: transparent !important;
+}
+
+:global(.vtex-tab-layout-0-x-listItem--lading-innex-tabs-list-item)
+  :global(.vtex-button)
+  :global(.vtex-button__label) {
+  color: black !important;
+}
+
+/*legal issues style: cookies disclaimer*/
+
+/* Container box */
+
+:global(.vtex-tab-layout-0-x-listItem--targeting-cookies-tab-list-item-style),
+:global(.vtex-tab-layout-0-x-listItem--functional-cookies-tab-list-item-style),
+:global(.vtex-tab-layout-0-x-listItem--first-party-cookies-tab-list-item-style),
+:global(.vtex-tab-layout-0-x-listItem--strictly-necessary-cookies-tab-list-item-style),
+:global(.vtex-tab-layout-0-x-listItem--targeting-cookies-tab-list-item-style),
+:global(.vtex-tab-layout-0-x-listItem--functional-cookies-tab-list-item-style),
+:global(.vtex-tab-layout-0-x-listItem--first-party-cookies-tab-list-item-style),
+:global(.vtex-tab-layout-0-x-listItem--strictly-necessary-cookies-tab-list-item-style) {
+  display: flex;
+}
+
+:global(.vtex-tab-layout-0-x-listItem--targeting-cookies-tab-list-item-style)
+  :global(.vtex-button),
+:global(.vtex-tab-layout-0-x-listItem--functional-cookies-tab-list-item-style)
+  :global(.vtex-button),
+:global(.vtex-tab-layout-0-x-listItem--first-party-cookies-tab-list-item-style)
+  :global(.vtex-button),
+:global(.vtex-tab-layout-0-x-listItem--strictly-necessary-cookies-tab-list-item-style)
+  :global(.vtex-button) {
+  background-color: #ffffff !important;
+  border: none;
+  border-radius: 0 !important;
+  height: auto !important;
+  white-space: nowrap;
+  width: fit-content !important;
+}
+
+/* Text inside */
+
+:global(.vtex-tab-layout-0-x-listItem--targeting-cookies-tab-list-item-style)
+  :global(.vtex-button)
+  :global(.vtex-button__label),
+:global(.vtex-tab-layout-0-x-listItem--functional-cookies-tab-list-item-style)
+  :global(.vtex-button)
+  :global(.vtex-button__label),
+:global(.vtex-tab-layout-0-x-listItem--first-party-cookies-tab-list-item-style)
+  :global(.vtex-button)
+  :global(.vtex-button__label),
+:global(.vtex-tab-layout-0-x-listItem--strictly-necessary-cookies-tab-list-item-style)
+  :global(.vtex-button)
+  :global(.vtex-button__label) {
+  background-color: #ffffff;
+  color: #0090d0;
+  font-family: "Roboto-light";
+  height: auto !important;
+  letter-spacing: 0;
+  padding: 0;
+  text-decoration-color: #0090d0;
+  white-space: break-spaces;
+}
+
+/* Centered disposition for the internal links */
+
+.listContainer--cookies-disclaimer-tab-list-style {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  overflow-x: auto;
+  padding: 0 13.611vw;
+}
+
+.listItemActive--targeting-cookies-tab-list-item-style,
+.listItem--functional-cookies-tab-list-item-style,
+.listItem--first-party-cookies-tab-list-item-style,
+.listItem--strictly-necessary-cookies-tab-list-item-style {
+  padding: 0.25rem;
+  margin: 0.25rem 0;
+}
+
+/* legal issues */
+
+/* cookies disclaimer tab active*/
+
+:global(.vtex-tab-layout-0-x-listItem--targeting-cookies-tab-list-item-style)
+  :global(.vtex-button)
+  :global(.vtex-button__label):hover {
+  color: #005c92 !important;
+}
+
+:global(.vtex-tab-layout-0-x-listItemActive--targeting-cookies-tab-list-item-style)
+  :global(.vtex-button):hover {
+  background: transparent !important;
+}
+
+:global(.vtex-tab-layout-0-x-listItem--functional-cookies-tab-list-item-style)
+  :global(.vtex-button)
+  :global(.vtex-button__label):hover {
+  color: #005c92 !important;
+}
+
+:global(.vtex-tab-layout-0-x-listItemActive--functional-cookies-tab-list-item-style)
+  :global(.vtex-button):hover {
+  background: transparent !important;
+}
+
+:global(.vtex-tab-layout-0-x-listItem--first-party-cookies-tab-list-item-style)
+  :global(.vtex-button)
+  :global(.vtex-button__label):hover {
+  color: #005c92 !important;
+}
+
+:global(.vtex-tab-layout-0-x-listItemActive--first-party-cookies-tab-list-item-style)
+  :global(.vtex-button):hover {
+  background: transparent !important;
+}
+
+:global(.vtex-tab-layout-0-x-listItem--strictly-necessary-cookies-tab-list-item-style)
+  :global(.vtex-button)
+  :global(.vtex-button__label):hover {
+  color: #005c92 !important;
+}
+
+:global(.vtex-tab-layout-0-x-listItemActive--strictly-necessary-cookies-tab-list-item-style)
+  :global(.vtex-button):hover {
+  background: transparent !important;
+}
+
+/* cookies disclaimer tab not active */
+
+:global(.vtex-tab-layout-0-x-listItem--targeting-cookies-tab-list-item-style)
+  :global(.vtex-button):hover {
+  background: transparent !important;
+}
+
+:global(.vtex-tab-layout-0-x-listItem--functional-cookies-tab-list-item-style)
+  :global(.vtex-button):hover {
+  background: transparent !important;
+}
+
+:global(.vtex-tab-layout-0-x-listItem--first-party-cookies-tab-list-item-style)
+  :global(.vtex-button):hover {
+  background: transparent !important;
+}
+
+:global(.vtex-tab-layout-0-x-listItem--strictly-necessary-cookies-tab-list-item-style)
+  :global(.vtex-button):hover {
+  background: transparent !important;
+}
+
+:global(.vtex-tab-layout-0-x-listItemActive--targeting-cookies-tab-list-item-style)
+  :global(.vtex-button)
+  :global(.vtex-button__label) {
+  color: #005c92 !important;
+  text-decoration: underline 2px;
+  text-underline-offset: 4px;
+  text-decoration-color: #005c92;
+}
+
+:global(.vtex-tab-layout-0-x-listItemActive--functional-cookies-tab-list-item-style)
+  :global(.vtex-button)
+  :global(.vtex-button__label) {
+  color: #005c92 !important;
+  text-decoration: underline 2px;
+  text-underline-offset: 4px;
+  text-decoration-color: #005c92;
+}
+
+:global(.vtex-tab-layout-0-x-listItemActive--first-party-cookies-tab-list-item-style)
+  :global(.vtex-button)
+  :global(.vtex-button__label) {
+  color: #005c92 !important;
+  text-decoration: underline 2px;
+  text-underline-offset: 4px;
+  text-decoration-color: #005c92;
+}
+
+:global(.vtex-tab-layout-0-x-listItemActive--strictly-necessary-cookies-tab-list-item-style)
+  :global(.vtex-button)
+  :global(.vtex-button__label) {
+  color: #005c92 !important;
+  text-decoration: underline 2px;
+  text-underline-offset: 4px;
+  text-decoration-color: #005c92;
+}

@@ -1,0 +1,166 @@
+{
+  "product-specification-group#table": {
+    "children": ["flex-layout.row#spec-group"],
+    "props": {
+      "filter": {
+        "specificationGroups": [
+          "CategoryDataCluster",
+          "Endeca",
+          "Document",
+          "Documents",
+          "EnergyLogo",
+          "RatingGroupAttrLogo",
+          "Subscription",
+          "Leasing_MonthlyRate2",
+          "Document_PLP",
+          "Other",
+          "Leasing_RV2",
+          "CommercialCode",
+          "Installments",
+          "Leasing_FullBundlePrice",
+          "Leasing_RV",
+          "Leasing_MonthlyRate"
+        ],
+        "type": "hide"
+      }
+    }
+  },
+  "product-specification-group#table-standard#performance": {
+    "children": ["flex-layout.row#spec-group"],
+    "props": {
+      "filter": {
+        "specificationGroups": [
+          // "Caratteristiche",
+          "Performance"
+          // "Dimensioni"
+          // "Programmi"
+          // "Opzioni principali"
+        ],
+        "type": "show"
+      }
+    }
+  },
+  "product-specification-group#table-standard2#dimensions": {
+    "children": ["flex-layout.row#spec-group"],
+    "props": {
+      "filter": {
+        "specificationGroups": [
+          // "Caratteristiche",
+          // "Performance",
+          "Dimensioni"
+          // "Programmi"
+          // "Opzioni principali"
+        ],
+        "type": "show"
+      }
+    }
+  },
+  "product-specification-group#table-standard3#programs": {
+    "children": ["flex-layout.row#spec-group"],
+    "props": {
+      "filter": {
+        "specificationGroups": [
+          "Programmi"
+          // "Caratteristiche"
+          // "Performance",
+          // "Dimensioni"
+          // "Opzioni principali"
+        ],
+        "type": "show"
+      }
+    }
+  },
+  "product-specification-group#table-standard4#features": {
+    "children": ["flex-layout.row#spec-group"],
+    "props": {
+      "filter": {
+        "specificationGroups": [
+          // "Programmi"
+          "Caratteristiche"
+          // "Performance",
+          // "Dimensioni"
+          // "Opzioni principali"
+        ],
+        "type": "show"
+      }
+    }
+  },
+  "product-specification-group#table-wpa": {
+    "children": ["flex-layout.row#spec-group"],
+    "props": {
+      "filter": {
+        "specificationGroups": [
+          "Performance",
+          "Dimensioni",
+          "Programmi",
+          "Caratteristiche",
+          "Opzioni principali"
+        ],
+        "type": "show"
+      }
+    }
+  },
+  "flex-layout.row#spec-group": {
+    "props": {
+      "blockClass": "productSpecificationGroup"
+    },
+    "children": ["flex-layout.col#spec-group"]
+  },
+  "flex-layout.col#spec-group": {
+    "children": ["flex-layout.row#spec-group-name", "product-specification"]
+  },
+  "flex-layout.row#spec-group-name": {
+    "props": {
+      "blockClass": "productSpecificationGroupName"
+    },
+    "children": ["product-specification-text#group"]
+  },
+  "product-specification": {
+    "children": ["flex-layout.row#spec-item"]
+  },
+  "flex-layout.row#spec-item": {
+    "props": {
+      "blockClass": "productSpecification",
+      "preserveLayoutOnMobile": true
+    },
+    "children": ["flex-layout.col#spec-name", "flex-layout.col#spec-value"]
+  },
+  "flex-layout.col#spec-name": {
+    "props": {
+      "blockClass": "productSpecificationName",
+      "width": {
+        "mobile": "50%",
+        "desktop": "50%"
+      }
+    },
+    "children": ["product-specification-text#specification"]
+  },
+  "flex-layout.col#spec-value": {
+    "props": {
+      "blockClass": "productSpecificationValue",
+      "width": {
+        "mobile": "40%",
+        "desktop": "50%"
+      }
+    },
+    "children": ["product-specification-values"]
+  },
+  "product-specification-values": {
+    "children": ["product-specification-text#value"]
+  },
+  "product-specification-text#group": {
+    "props": {
+      "message": "{groupName}"
+    }
+  },
+  "product-specification-text#specification": {
+    "props": {
+      "message": "{specificationName}"
+    }
+  },
+  "product-specification-text#value": {
+    "props": {
+      "message": "{specificationValue}"
+    }
+  }
+}

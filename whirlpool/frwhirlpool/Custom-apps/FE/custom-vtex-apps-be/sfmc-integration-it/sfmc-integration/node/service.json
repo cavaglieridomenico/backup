@@ -1,0 +1,48 @@
+{
+  "memory": 256,
+  "ttl": 10,
+  "timeout": 3,
+  "minReplicas": 2,
+  "maxReplicas": 4,
+  "workers": 1,
+  "events": {
+    "allStates": {
+      "sender": "vtex.orders-broadcast",
+      "topics": ["order-status-updated"]
+    },
+    "someStates": {
+      "sender": "vtex.orders-broadcast",
+      "topics": [ "start-handling"]
+    }
+  },
+  "routes": {
+    "confirmOrder":{
+      "path": "/v1/api/order/confirm",
+      "public": true
+    },
+    "canceledOrder":{
+      "path": "/v1/api/order/canceled",
+      "public": true
+    },
+    "productBack":{
+      "path": "/v1/api/product/back",
+      "public": true
+    },
+    "productTerminate":{
+      "path": "/v1/api/product/terminate",
+      "public": true
+    },
+    "catalogUpload":{
+      "path": "/v1/api/catalogs/sfmc/get/catalog",
+      "public": true
+    },
+    "refundOrder":{
+      "path": "/v1/api/order/refund",
+      "public": true
+    },
+    "returnOrder":{
+      "path": "/v1/api/order/return",
+      "public": true
+    }
+  }
+}

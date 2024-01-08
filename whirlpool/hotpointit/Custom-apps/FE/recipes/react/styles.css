@@ -1,0 +1,946 @@
+.container {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 3.125rem 6.875rem;
+  background: #f2f2f2;
+}
+.containerTop {
+}
+.recipeNumber,
+.recipeNumberBottom {
+  font-family: 'hotpointRegular', Arial;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  display: flex;
+  justify-content: center;
+}
+.recipeNumber {
+  text-transform: uppercase;
+  color: #B24C24;
+}
+.recipeNumberBottom {
+  margin: auto;
+  color: #637977;
+}
+.recipeNumberText {
+  padding: 1.25rem 0;
+}
+.recipeCard {
+  max-width: 32%;
+  text-decoration: none;
+  padding-bottom: 1.875rem;
+}
+.recipeImageContainer {
+  height: auto;
+}
+.recipeImage {
+  object-fit: cover;
+  height: 21.875rem;
+  width: 100%;
+  border-radius: 1.875rem;
+}
+.recipeContent {
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 31rem;
+  justify-content: space-between;
+}
+.recipeContentContainer {
+  display: flex;
+  flex-direction: column;
+}
+.recipeContentType {
+  text-transform: uppercase;
+  font-family: 'hotpointMedium', Arial;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  color: #B24C24;
+  padding-bottom: 0.3125rem;
+}
+.recipeContentName {
+  color: #B24C24;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0.9375rem;
+  word-break: break-word;
+  word-wrap: break-word;
+  font-family: 'hotpointRegular', Arial;
+  font-weight: 400;
+  font-size: 1.875rem;
+  line-height: 2.1875rem;
+  padding-right: 0.9375rem;
+}
+.recipeContentName:hover {
+  color: #953D1B;
+  transition: all 0.4s ease;
+}
+.recipeContentName::after {
+  width: 3.125rem;
+  content: '';
+  display: block;
+  height: 0.1875rem;
+  background: #B24C24;
+  margin-top: 0.625rem;
+  display: none;
+}
+.recipeContentName:hover::after {
+  background: #953D1B;
+  transition: all 0.4s ease;
+}
+.recipeContentTime {
+  font-family: 'hotpointMedium', Arial;
+  color: #607171;
+  padding-bottom: 0.625rem;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  text-transform: uppercase;
+}
+.recipeContentDescription {
+  font-family: 'hotpointRegular', Arial;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  color: #585858;
+  margin-top: 0.625rem;
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+.buttonLink {
+  background: 0 0;
+  border: 0.0625rem solid #B24C24;
+  color: #B24C24;
+  transition: all 0.2s;
+  text-decoration: none;
+  max-width: 70%;
+  text-align: center;
+  padding: 0.7rem 2rem;
+  width: fit-content;
+  position: relative;
+  border-radius: 11px;
+}
+.buttonLink:hover {
+  /* border: 0.0625rem solid transparent; */
+  transition: all 0.2s;
+  color: #fff !important;
+  background: #B24C24;
+}
+/* .buttonLink::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0.0625rem;
+  background-color: #B24C24;
+  z-index: 1;
+}
+.buttonLink:hover::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.0625rem;
+  background-color: #B24C24;
+  z-index: 1;
+  transition: all 0.4s;
+} */
+.buttonLinkText {
+  font-size: 1.125rem;
+  font-family: 'hotpointRegular', Arial;
+}
+.buttonLink.buttonLinkText:hover {
+  font-size: 1.125rem;
+  color: #fff!important;
+  font-family: 'hotpointRegular', Arial;
+}
+.buttonArrow {
+  font-family: 'hotpointMedium', Arial;
+}
+/*--- Pagination ---*/
+.paginationContainer {
+  width: 100%;
+}
+.paginationUl {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+}
+.paginationLi {
+  margin: 0 0.5rem;
+  border: 0.0625rem solid #bbc9c9;
+  width: 2.875rem;
+  height: 2.875rem;
+  transition: all 0.2s;
+}
+.paginationLiActive {
+  border: 0.0625rem solid #B24C24;
+  transition: all 0.2s;
+  width: 2.875rem;
+  height: 2.875rem;
+  margin: 0 0.5rem;
+}
+.paginationLiActive > button {
+  color: #B24C24;
+}
+.paginationLi:hover {
+  border: 0.0625rem solid #953D1B;
+  transition: all 0.2s;
+}
+.paginationButton {
+  all: unset;
+  color: #585858;
+  font-family: 'hotpointRegular', Arial;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.25rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.paginationButton:hover {
+  color: #953D1B;
+  transition: all 0.2s;
+}
+.paginationLiLast {
+  margin: 0 0.5rem;
+  background-color: #B24C24;
+  width: 2.875rem;
+  height: 2.875rem;
+  transition: all 0.2s;
+}
+.paginationButtonLast {
+  all: unset;
+  color: #fff;
+  font-family: 'hotpointRegular', Arial;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.25rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  cursor: pointer;
+  margin-top: 0.7rem;
+}
+/*--- Filters --*/
+.filtersContainer {
+  padding: 3.4375rem;
+  background-color: #000;
+}
+.filters {
+  padding-bottom: 1.25rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-top: 3.125rem;
+}
+.categoryFiltersContainer {
+  flex: 0 0 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.filtersDivider {
+  margin: 0 0.9375rem;
+  flex: 0 0 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  opacity: 0.5;
+}
+.filtersDivider > div {
+  height: 12.5rem;
+  width: 0.125rem;
+  display: block;
+  background: #bbc9c9;
+}
+.coursersFiltersContainer {
+  flex: 0 0 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.imageFilter,
+.imageFilterActive,
+.imageFilterDisabled {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  margin-bottom: 1.5625rem;
+  cursor: pointer;
+  align-items: center;
+}
+.imageFilterDisabled {
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
+}
+.imageFilter:hover > svg,
+.imageFilterActive > svg {
+  fill: #B24C24;
+  transition: 0.2s all ease-in-out;
+}
+.imageFilter:hover > span,
+.imageFilterActive > span {
+  color: #B24C24;
+  transition: 0.2s all ease-in-out;
+}
+.FilterImage {
+  fill: #fff;
+  transition: 0.2s all ease-in-out;
+  width: 5.3125rem;
+  height: 5.3125rem;
+}
+.imageFilterText {
+  font-family: 'hotpointRegular', Arial;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+  text-align: center;
+}
+.filterCourses,
+.filterCoursesActive {
+  justify-content: center;
+  border: 0.0625rem solid #fff;
+  border-radius: 0.125rem;
+  padding: 0.625rem 0;
+  transition: all 0.2s ease;
+  align-items: center;
+  display: flex;
+  width: 8.75rem;
+  margin: 0.625rem 1.25rem 1.25rem;
+  cursor: pointer;
+  border-radius: 11px;
+}
+.filterCourses:hover,
+.filterCoursesActive {
+  border: 0.0625rem solid #fff;
+  background: #fff;
+  color: #B24C24;
+  transition: all 0.2s ease;
+}
+.filterCourses:hover > span,
+.filterCoursesActive > span {
+  color: #B24C24;
+  transition: all 0.2s ease;
+}
+.filterCourserText {
+  font-family: 'hotpointRegular', Arial;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.2;
+  color: #fff;
+  transition: color 0.5s ease;
+}
+.filterDisabled {
+  justify-content: center;
+  border: 0.0625rem solid #bbc9c9;
+  border-radius: 0.125rem;
+  padding: 0.625rem 0;
+  transition: all 0.2s ease;
+  align-items: center;
+  display: flex;
+  width: 8.75rem;
+  margin: 0.625rem 1.25rem 1.25rem;
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
+}
+/*-- Loader --*/
+.loaderForm {
+  font-size: 10px;
+  margin: 50px auto;
+  text-indent: -9999em;
+  width: 11em;
+  height: 11em;
+  border-radius: 50%;
+  background: #B24C24;
+  background: -moz-linear-gradient(
+    left,
+    #B24C24 10%,
+    rgba(237, 177, 18, 0) 42%
+  );
+  background: -webkit-linear-gradient(
+    left,
+    #B24C24 10%,
+    rgba(237, 177, 18, 0) 42%
+  );
+  background: -o-linear-gradient(left, #B24C24 10%, rgba(237, 177, 18, 0) 42%);
+  background: -ms-linear-gradient(left, #B24C24 10%, rgba(237, 177, 18, 0) 42%);
+  background: linear-gradient(to right, #B24C24 10%, rgba(237, 177, 18, 0) 42%);
+  position: relative;
+  -webkit-animation: load3 1.4s infinite linear;
+  animation: load3 1.4s infinite linear;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.loaderForm:before {
+  width: 50%;
+  height: 50%;
+  background: #B24C24;
+  border-radius: 100% 0 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+}
+.loaderForm:after {
+  background: #ffffff;
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+  content: '';
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+@-webkit-keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+/*--- SINGLE RECIPE ---*/
+.sectionsContainer {
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem 3rem 0 3rem;
+}
+.sectionContainer {
+  margin: 2.5rem 0;
+}
+.breadcrumbContainer {
+  padding: 1rem 0 1rem 3.125rem;
+  max-width: 96rem;
+  margin: auto;
+  width: 100%;
+}
+.breadLink,
+.breadLinkBold {
+  font-size: 0.75rem;
+  line-height: 22px;
+  margin: auto;
+  font-weight: 300;
+  padding: 0 0.4rem;
+  text-transform: uppercase;
+  color: #505050;
+  text-decoration: none;
+}
+.breadLink:hover {
+  color: #B24C24;
+}
+.breadLinkBold {
+  font-family: 'hotpointMedium';
+}
+.mainImage {
+  width: 100%;
+  max-height: 22.8125rem;
+  object-fit: cover;
+  border-radius: 1.875rem;
+}
+/*--- SLIDER ---*/
+.carouselTopDiv {
+  display: flex;
+}
+.carouselTopContainer {
+  width: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carouselTopContainer > div > div > div {
+  transition: all 300ms linear 0ms;
+}
+.carouselTopImg {
+  pointer-events: none;
+  border-radius: 1.875rem;
+}
+.sideCarouselContainer {
+  position: absolute;
+  transform: rotate(90deg) translateY(50%);
+}
+.carouselTopImgSmallContainer {
+}
+.carouselTopImgActive {
+  border: 2px solid #B24C24;
+}
+.carouselTopImgSmall,
+.carouselTopImgSmallActive {
+  height: 100%;
+  transform: rotate(-90deg);
+  object-fit: cover;
+  border-radius: 1.25rem;
+}
+.carouselTopImgSmallActive {
+  border: 2px solid #B24C24;
+  border-radius: 1.25rem;
+  box-sizing: border-box;
+}
+.carouselTopTextDiv {
+  width: 50%;
+  padding: 0 5rem;
+}
+.carouselTopTextContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+.carouselTopTextName {
+  font-family: 'hotpointRegular', Arial;
+  font-weight: 400;
+  font-size: 2.1875rem;
+  line-height: 2.375rem;
+  color: #B24C24;
+  text-transform: uppercase;
+  margin-bottom: 1.875rem;
+}
+.carouselTopTextName::after {
+  width: 3.125rem;
+  content: '';
+  display: block;
+  height: 0.125rem;
+  background: #B24C24;
+  margin-top: 0.625rem;
+  display: none;
+}
+.carouselTopTextDesc {
+  font-family: 'hotpointMedium', Arial;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.125rem;
+  color: #607171;
+}
+.carouselTopTextSubDesc {
+  margin: 1.875rem 0;
+  font-family: 'hotpointRegular', Arial;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.4375rem;
+  color: #585858;
+  text-align: left;
+}
+.carouselTopTextTime,
+.carouselTopTextPrep,
+.carouselTopTextLevel {
+  color: #637977;
+  padding-top: 0.1875rem;
+  font-family: 'hotpointRegular', Arial;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.3125rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.clockSvg {
+  height: 40px;
+  width: 40px;
+  margin-right: 0.5rem;
+}
+/*--- INGREDIENTS ---*/
+.ingredientsTitle,
+.relatedTitle {
+  font-family: 'hotpointRegular', Arial;
+  font-weight: 400;
+  font-size: 2.625rem;
+  line-height: 2.9375rem;
+  color: #B24C24;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  margin-bottom: 2rem;
+}
+.ingredientsTitle::after,
+.relatedTitle::after {
+  width: 3.125rem;
+  content: '';
+  display: block;
+  height: 0.125rem;
+  background: #B24C24;
+  position: absolute;
+  bottom: -0.625rem;
+  display: none;
+}
+.ingredientsDiv,
+.ingredientsDivPreparation {
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 1.875rem;
+}
+.ingredientsDivPreparation {
+  justify-content: flex-start;
+}
+.ingredientsSpecs,
+.preparationSpecs {
+  padding: 3% 6%;
+}
+.preparationSpecs {
+  display: flex;
+  align-items: center;
+}
+.ingredientsSpecsTitle {
+  font-family: 'hotpointRegular', Arial;
+  font-weight: 400;
+  font-size: 1.875rem;
+  line-height: 2.9375rem;
+  color: #B24C24;
+  text-transform: uppercase;
+  position: relative;
+}
+.ingredientsSpecsTitle::after {
+  width: 3.125rem;
+  content: '';
+  display: block;
+  height: 0.125rem;
+  background: #B24C24;
+  position: absolute;
+  bottom: -0.625rem;
+  left: 0;
+  display: none;
+}
+.ingredientsListDiv {
+}
+.ingredientsListUl {
+  margin: 3rem 0 0 0;
+  list-style: none;
+}
+.ingredientsListLi {
+  font-family: 'hotpointRegular', Arial;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 2.5rem;
+  color: #585858;
+}
+.ingredientsListLi::before {
+  font-family: sans-serif;
+  content: '•';
+  padding-right: 1rem;
+  color: #B24C24;
+}
+.ingredientsImageDiv {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.ingredientsImageBG {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  height: 100%;
+  border-bottom-right-radius:1.875rem;
+  border-top-right-radius:1.875rem;
+}
+.ingredientsImage {
+  max-width: 30rem;
+  z-index: 2;
+  border-top-left-radius: 1.875rem;
+  border-bottom-left-radius: 1.875rem;
+}
+.preparationListSpan {
+  font-family: 'hotpointMedium', Arial;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.4375rem;
+  color: #585858;
+  margin-bottom: 1rem;
+}
+.preparationListUl {
+  margin: 0;
+  list-style: none;
+}
+.preparationListLi {
+  font-family: 'hotpointRegular', Arial;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  color: #585858;
+}
+.preparationListDiv {
+  margin: 0.5rem 0;
+}
+/*--- RELATED CAROUSEL ---*/
+.relatedCarouselContainer {
+  background-color: #f2f2f2;
+}
+.relatedTitle {
+  justify-content: flex-start;
+  padding-left: 3rem;
+  padding-top: 2.5rem;
+}
+.relatedCarouselDiv {
+  background-color: #000;
+  padding: 5rem 0;
+}
+.relatedImageDiv {
+  max-width: 100%;
+  max-height: 14rem;
+}
+.relatedImg {
+  width: 100%;
+  max-height: 12rem;
+  object-fit: cover;
+  border-radius: 1.875rem;
+}
+.relatedInfoDiv {
+  padding: 1rem 1.25rem;
+  width: 100%;
+  min-height: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.relatedInfo {
+  display: flex;
+  flex-direction: column;
+}
+.relatedInfoType {
+  text-transform: uppercase;
+  font-family: 'hotpointMedium', Arial;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  color: #B24C24;
+  padding-bottom: 0.3125rem;
+}
+.relatedInfoName {
+  font-size: 1.875rem;
+  color: #B24C24;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0.9375rem;
+  word-break: break-word;
+  word-wrap: break-word;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.relatedInfoName:hover {
+  color: #953D1B;
+  transition: all 0.2s ease-in-out;
+}
+.relatedInfoName::after {
+  width: 3.125rem;
+  content: '';
+  display: block;
+  height: 0.1875rem;
+  background: #B24C24;
+  margin-top: 0.625rem;
+  display: none;
+}
+.relatedInfoTime {
+  font-family: 'hotpointMedium', Arial;
+  color: #607171;
+  padding-bottom: 0.625rem;
+  font-size: 0.9375rem;
+  text-transform: uppercase;
+}
+.relatedButton {
+  background: 0 0;
+  border: 0.0625rem solid #B24C24;
+  color: #B24C24;
+  transition: all 0.2s;
+  text-decoration: none;
+  text-align: center;
+  padding: 0.7rem 2rem;
+  width: fit-content;
+  position: relative;
+  cursor: pointer;
+  border-radius: 11px;
+}
+.relatedButton:hover {
+  border: 0.0625rem solid transparent;
+  transition: all 0.2s;
+  background: #fff;
+  color: #B24C24;
+}
+/* .relatedButton::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0.0625rem;
+  background-color: #B24C24;
+  z-index: 1;
+}
+.relatedButton:hover::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.0625rem;
+  background-color: #B24C24;
+  z-index: 1;
+  transition: all 0.4s;
+} */
+.relatedButtonText {
+  font-size: 1.125rem;
+  color: #B24C24;
+  font-family: 'hotpointRegular', Arial;
+}
+.buttonLinkRelated {
+  text-decoration: none;
+}
+.carouselDotsDiv {
+  display: flex;
+  justify-content: center;
+}
+.carouselMainImageContainer {
+  background: white;
+  width: 500px;
+  height: 500px;
+  border: 30px solid white;
+  text-align: center;
+  line-height: 240px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  border-radius: 1.875rem;
+}
+/*--- Media Queries ---*/
+@media only screen and (max-width: 640px) {
+  .filters {
+    flex-direction: column;
+  }
+  .filtersContainer {
+    padding: 0;
+  }
+  .filtersDivider > div {
+    width: 12.5rem;
+    height: 0.125rem;
+    margin: 1rem 0;
+  }
+  .container {
+    padding: 0;
+  }
+  .recipeCard {
+    max-width: unset;
+  }
+  .sectionsContainer {
+    padding: 2.5rem 1rem 0 1rem;
+  }
+  .carouselTopDiv {
+    flex-direction: column;
+  }
+  .carouselTopContainer,
+  .carouselTopTextDiv {
+    width: 100%;
+  }
+  .carouselTopContainer {
+    margin-bottom: 3rem;
+  }
+  .carouselTopTextDiv {
+    padding: 0 3rem;
+  }
+  .sideCarouselContainer,
+  .ingredientsImageDiv,
+  .ingredientsImageDiv {
+    display: none;
+  }
+  .carouselTopTextName,
+  .ingredientsTitle,
+  .relatedTitle {
+    font-size: 1.875rem;
+    font-family: 'hotpointRegular', Arial;
+  }
+  .ingredientsTitle {
+    padding-right: 2.5rem;
+  }
+  .carouselTopTextDesc,
+  .carouselTopTextSubDesc {
+    font-size: 0.9375rem;
+  }
+  .preparationSpecs {
+    padding: 1.125rem 2.5rem;
+  }
+  .preparationListUl {
+    padding: 0;
+  }
+  .carouselMainImageContainer {
+    width: 300px;
+    height: 300px;
+  }
+  .mainImage {
+  border-radius: 1.25rem;
+}
+ .relatedImg{
+   border-radius: 1.25rem;
+ }
+ .ingredientsDiv,
+.ingredientsDivPreparation {
+  border-radius: 1.25rem;
+}
+.recipeImage {
+  border-radius: 1.25rem;
+}
+}
+@media only screen and (min-width: 1024px) and (max-width: 1300px) {
+  .carouselTopTextDiv {
+    padding: 0 0 0 5rem;
+  }
+  .carouselMainImageContainer {
+    width: 400px;
+    height: 400px;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+  .sideCarouselContainer {
+    left: -15% !important;
+  }
+}
+@media only screen and (min-width: 640px) and (max-width: 1200px) {
+  .recipeCard {
+    max-width: 48%;
+  }
+}

@@ -1,0 +1,183 @@
+.gobackContainer{
+  display: flex;
+  align-items: center;
+}
+.gobackIcon{
+
+}
+.goBackLink{
+  color: rgb(189, 140, 9);
+  font-family: "GothamProRRegular";
+  font-weight: 600;
+  font-size: 0.75rem;
+  margin-left: .5rem;
+}
+.goBackLinkInvoice{}
+.containerTableRow {
+    display: flex;
+    flex-direction: column;
+}
+.childContainerTableRow{
+    display: flex;
+    flex-direction: row;
+}
+.tableRowHeader{
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    padding: 1rem;
+}
+.tableRowEntites{
+    padding: 1rem;
+    border: 1px solid #f9f9f9;
+    display: flex;
+    flex-direction: column;
+}
+.colTitle, .colTitle2{
+    font-size: 0.75rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.67;
+    letter-spacing: normal;
+    text-transform: unset;
+}
+.colTitle2{
+    font-size: 1rem;
+    text-align: center;
+}
+.colTitleNoOrders{
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 1rem;
+    min-height: 8rem;
+    color: #505050;
+    font-weight: bold;
+}
+.invoiceWrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    margin-right: 13rem;
+}
+
+.colDescr{
+    font-size: 1rem;
+    font-weight: 600;
+    color: #505050;
+}
+.rowWrapper{
+    width: 90%;
+    margin: auto;
+}
+.downloadButton{
+    border: 2px solid #FDC100;
+    border-radius: 3px;
+    width: fit-content;
+}
+.invoiceLink{
+    text-decoration: underline;
+    color: #505050;
+}
+.rowWrapperLoader{
+    width: fit-content;
+    margin: auto;
+}
+.paginationWrapper{
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+.pdfIconWrapper{
+    display: flex;
+    align-items: center;
+}
+.pdfIconImage{
+    max-height: 50px;
+}
+.pdfFileName{
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 640px) {
+    .rowWrapper{
+        width: 100%;
+    }
+    .colDescr{
+        font-size: 0.8rem;
+    }
+    .invoiceWrapper{
+        margin-right: 0;
+    }
+}
+
+
+/* LOGOUT BUTTON */
+.logoutButton{}
+.logoutButton > a{
+    border-color: transparent;
+}
+.logoutModalContainer{
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logoutModalWrapper{
+    background-color: #fff;
+    padding: 1.5rem 3rem 3rem 3rem;
+    border-radius: 0.5rem;
+    position: relative;
+    width: 60%;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.logoutCloseImage{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    cursor: pointer;
+}
+.logoutModalTitleContainer{}
+.logoutModalTitle{
+    font-size: 1.25rem;
+    margin: 0;
+    padding: 1.5rem;
+}
+.logoutModalButtonsContainer{
+    display: flex;
+    justify-content: flex-end;
+}
+.logoutModalButtonUndo, .logoutModalButtonLogout{
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+}
+.logoutModalButtonUndo{
+    margin-right: 0.75rem;
+    background-color: #fff;
+    color: #edb112;
+}
+.logoutModalButtonLogout{
+    background-color: #edb112;
+    color: #fff;
+    border-radius: .25rem;
+}
+
+@media only screen and (max-width: 640px){
+    .logoutModalWrapper{
+        padding: 0.5rem 2rem 2rem 2rem;
+        width: 80%;
+    }
+}

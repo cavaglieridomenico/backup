@@ -1,0 +1,162 @@
+{
+  "store.custom#special-occasion-two-banners-template": {
+    "blocks": [
+      "responsive-layout.desktop#special-occasion-two-banners",
+      "responsive-layout.mobile#special-occasion-two-banners-mobile"
+    ]
+  },
+  "responsive-layout.desktop#special-occasion-two-banners": {
+    "children": ["flex-layout.row#special-occasion-two-banners-maxi-container"],
+    "props": {
+      "blockClass": "special-occasion-two-banners-style"
+    }
+  },
+  "flex-layout.row#special-occasion-two-banners-maxi-container": {
+    "children": ["flex-layout.col#special-occasion-two-banners-maxi-container"],
+    "props": {
+      "blockClass": "special-occasion-two-banners-maxi-container"
+    }
+  },
+  "flex-layout.col#special-occasion-two-banners-maxi-container": {
+    "children": [
+      //"analytics#landing-pages",
+      /* "breadcrumb#special-occasion-two-banners-desktop", */
+      "breadcrumb-custom#special-occasion-two-banners-desktop",
+      "flex-layout.row#special-occasion-two-banners-intro-desktop",
+      "flex-layout.row#special-occasion-two-banners-product-detail-card01-tl-desktop"
+    ],
+    "props": {
+      "blockClass": "special-occasion-two-banners-maxi-container-style"
+    }
+  },
+  "breadcrumb#special-occasion-two-banners-desktop": {
+    "props": {
+      "categories": ["/Home/", "special occasion two banners"],
+      "showOnMobile": true,
+      "blockClass": "breadcrumb-landing-template-desktop"
+    }
+  },
+  "breadcrumb-custom#special-occasion-two-banners-desktop": {
+    "props": {
+      /* "blockClass": "containerBreadcrumbs", */
+      "firstPage": "Home",
+      "currentPage": "special-occasion-two-banners"
+    }
+  },
+  /* INTRO TO PRODUCT */
+  "flex-layout.row#special-occasion-two-banners-intro-desktop": {
+    "children": [
+      "flex-layout.col#special-occasion-two-banners-intro-image-desktop-container",
+      "flex-layout.col#special-occasion-two-banners-intro-desc-desktop-container"
+    ],
+    "props": {
+      "blockClass": "container-intro-landing-template-desktop"
+    }
+  },
+  "flex-layout.col#special-occasion-two-banners-intro-image-desktop-container": {
+    "children": ["image#special-occasion-two-banners-image-intro-desktop"],
+    "props": {
+      "blockClass": "special-occasion-two-banners-intro-image-desktop-container-style"
+    }
+  },
+  "image#special-occasion-two-banners-image-intro-desktop": {
+    "props": {
+      "blockClass": "landing-template-intro-desktop",
+      "src": "https://i.picsum.photos/id/1002/4312/2868.jpg?hmac=5LlLE-NY9oMnmIQp7ms6IfdvSUQOzP_O3DPMWmyNxwo"
+    }
+  },
+  "flex-layout.col#special-occasion-two-banners-intro-desc-desktop-container": {
+    "children": [
+      "rich-text#special-occasion-two-banners-intro-desc-title-desktop",
+      "rich-text#special-occasion-two-banners-intro-desc-description-desktop",
+      "rich-text#special-occasion-two-banners-intro-button-go-to-product-desktop"
+    ],
+    "props": {
+      "blockClass": "intro-desc-desktop"
+    }
+  },
+  "rich-text#special-occasion-two-banners-intro-button-go-to-product-desktop": {
+    "props": {
+      "text": "[ GO TO PRODUCT/LINE ](/)",
+      "blockClass": ["button-intro-go-to-product-desktop"]
+    }
+  },
+  "rich-text#special-occasion-two-banners-intro-desc-title-desktop": {
+    "props": {
+      "text": "special-occasion-two-banners title lorem",
+      "blockClass": "intro-landing-template-title-desktop"
+    }
+  },
+  "rich-text#special-occasion-two-banners-intro-desc-description-desktop": {
+    "props": {
+      "text": "Brief introduction of the special-occasion-two-banners, if any context is there to be displayed(E.G. time span to accelerate urgency perception)",
+      "blockClass": "intro-landing-template-paragraph-desktop"
+    }
+  },
+  /* PRODUCT DETAIL CARD 01 WITH TEXT ON THE LEFT */
+  "flex-layout.row#special-occasion-two-banners-product-detail-card01-tl-desktop": {
+    "children": [
+      "flex-layout.col#special-occasion-two-banners-product-detail-card01-tl-desktop"
+    ]
+  },
+  "flex-layout.col#special-occasion-two-banners-product-detail-card01-tl-desktop": {
+    "children": [
+      "flex-layout.row#special-occasion-two-banners-product-detail-card01-tl-container-desktop"
+    ]
+  },
+  "flex-layout.row#special-occasion-two-banners-product-detail-card01-tl-container-desktop": {
+    "children": [
+      "flex-layout.col#special-occasion-two-banners-product-detail-card01-tl-container-desc-desktop",
+      "flex-layout.col#special-occasion-two-banners-product-detail-card01-tl-image-desktop"
+    ],
+    "props": {
+      "blockClass": "container-global-bordered-text-image-landing-template-desktop"
+    }
+  },
+  /* ------------------------------------ */
+  "flex-layout.col#special-occasion-two-banners-product-detail-card01-tl-image-desktop": {
+    "children": [
+      /*  "image#special-occasion-two-banners-product-detail-card01-tl-image-desktop" */
+      "is-image-or-video#special-occasion-two-banners"
+    ],
+    "props": {
+      "blockClass": "container-image-bordered-text-image-landing-template-desktop"
+    }
+  },
+  "is-image-or-video#special-occasion-two-banners": {},
+  /*  "image#special-occasion-two-banners-product-detail-card01-tl-image-desktop": {
+    "props": {
+      "blockClass": "image-bordered-text-image-landing-template-desktop",
+      "src": "https://i.picsum.photos/id/1002/4312/2868.jpg?hmac=5LlLE-NY9oMnmIQp7ms6IfdvSUQOzP_O3DPMWmyNxwo"
+    }
+  }, */
+  /* ------------------------------------ */
+  "flex-layout.col#special-occasion-two-banners-product-detail-card01-tl-container-desc-desktop": {
+    "children": [
+      "rich-text#special-occasion-two-banners-product-detail-card01-tl-title-desktop",
+      "rich-text#special-occasion-two-banners-product-detail-card01-tl-desc-desktop",
+      "rich-text#special-occasion-two-banners-button-go-to-product-desktop"
+    ],
+    "props": {
+      "blockClass": "container-text-bordered-text-image-landing-template-desktop"
+    }
+  },
+  "rich-text#special-occasion-two-banners-product-detail-card01-tl-title-desktop": {
+    "props": {
+      "blockClass": "title-bordered-text-image-landing-template-desktop",
+      "text": "Header about the main characterstic"
+    }
+  },
+  "rich-text#special-occasion-two-banners-product-detail-card01-tl-desc-desktop": {
+    "props": {
+      "blockClass": "description-bordered-text-image-landing-template-desktop",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt enim sit imperdiet id aenean nunc ut faucibus. Vitae ullamcorper turpis blandit semper at."
+    }
+  },
+  "rich-text#special-occasion-two-banners-button-go-to-product-desktop": {
+    "props": {
+      "text": "[ GO TO PRODUCT/LINE ](/)",
+      "blockClass": ["button-go-to-product-desktop"]
+    }
+  }
+}

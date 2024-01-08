@@ -1,0 +1,407 @@
+/* ---------------------- ACCORDION SPECIFICATION PDP ---------------------------- */
+{
+  /* Flex Layout */
+  "flex-layout.row#accordion-specification": {
+    "props": {
+      "blockClass": "accordion-specification-row"
+    },
+    "children": ["flex-layout.col#accordion-specification"]
+  },
+  "flex-layout.col#accordion-specification": {
+    "props": {
+      "blockClass": "accordion-specification-container"
+    },
+    "children": ["disclosure-layout-group#group-accordion-specification"]
+  },
+  /* disclosure Layout */
+  "disclosure-layout-group#group-accordion-specification": {
+    "props": {
+      "blockClass": "",
+      "maxVisible": "one"
+    },
+    "children": [
+      "condition-layout.product#ts-pdp",
+      "condition-layout.product#warranty-discontinued",
+      /* "disclosure-layout#warranty-pdp", */
+      "disclosure-layout#features-pdp",
+      "disclosure-layout#instructions-pdp"
+    ]
+  },
+  "condition-layout.product#ts-pdp": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "noPrograms"
+          }
+        }
+      ],
+      "Then": "rich-text#empty",
+      "Else": "disclosure-layout#technical-specifications-pdp"
+    }
+  },
+  "rich-text#empty": {},
+  "disclosure-layout#technical-specifications-pdp": {
+    "props": {
+      "blockClass": ""
+    },
+    "children": [
+      "disclosure-trigger#technical-specifications-pdp",
+      "disclosure-content#technical-specifications-pdp"
+    ]
+  },
+  /* disclosure trigger & content */
+  "disclosure-trigger#technical-specifications-pdp": {
+    "props": {
+      "blockClass": "trigger-technical-specifications"
+    },
+    "children": ["button-layer-accoordion#Specification"]
+  },
+  "disclosure-content#technical-specifications-pdp": {
+    "props": {
+      "blockClass": "content-technical-specifications"
+    },
+    "children": [
+      "flex-layout.row#product-specification-technical-specifications"
+    ]
+  },
+  /* trigger components */
+  "flex-layout.row#technical-specifications-content-pdp": {
+    "props": {
+      "blockClass": "accordion-technical-specifications-container"
+    },
+    "children": [
+      "flex-layout.col#text-technical-specifications",
+      "flex-layout.col#icon-specification-desktop"
+    ]
+  },
+  "flex-layout.col#text-technical-specifications": {
+    "children": ["flex-layout.row#Specifications-row"]
+  },
+  "flex-layout.row#Specifications-row": {
+    "props": {
+      "blockClass": "accordion-technical-specifications-row"
+    },
+    "children": ["button-layer-accoordion#Specification"]
+  },
+  "button-layer-accoordion#Specification": {
+    "props": {
+      "richText": "Technical specifications",
+      "richTextENG": "innovative",
+      "paddingTop": true
+    }
+  },
+  // "rich-text#technical-specifications-title-pdp": {
+  //   "props": {
+  //     "blockClass": "text-technical-specifications",
+  //     "text": "Technical specifications"
+  //   }
+  // },
+  "flex-layout.col#icon-specification-desktop": {
+    "props": {
+      "blockClass": "icon-accordion-specification"
+    },
+    "children": ["image#arrow-accordion-desktop-pdp"]
+  },
+  "image#arrow-accordion-desktop-pdp": {
+    "props": {
+      "src": "assets/arrow-accordion.svg",
+      "blockClass": "arrow-accordion-style"
+    }
+  },
+  /* content components */
+  "flex-layout.row#product-specification-technical-specifications": {
+    "props": {
+      "blockClass": "content-container-technical-specifications"
+    },
+    "children": [
+      "flex-layout.col#product-specification-technical-specifications"
+    ]
+  },
+  "flex-layout.col#product-specification-technical-specifications": {
+    "props": {
+      "blockClass": "content-technical-specifications"
+    },
+    "children": ["product-specifications-with-rules#technical-specifications"]
+  },
+  "product-specifications-with-rules#technical-specifications": {
+    "props": {
+      "filter": {
+        "specificationGroups": ["Performance", "Programs"],
+        "type": "show"
+      }
+    }
+  },
+  /*---------------------WARRANTY PART ------------------------*/
+  "condition-layout.product#warranty-discontinued": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "isDiscontinued",
+            "value": "false"
+          }
+        }
+      ],
+      "matchType": "any",
+      "Then": "disclosure-layout#warranty-pdp"
+    }
+  },
+  "disclosure-layout#warranty-pdp": {
+    "props": {
+      "blockClass": ""
+    },
+    "children": [
+      "disclosure-trigger#warranty-pdp",
+      "disclosure-content#warranty-pdp"
+    ]
+  },
+  /* disclosure trigger & content */
+  "disclosure-trigger#warranty-pdp": {
+    "props": {
+      "blockClass": "trigger-warranty"
+    },
+    "children": ["button-layer-accoordion#Warranty"]
+  },
+  "disclosure-content#warranty-pdp": {
+    "props": {
+      "blockClass": "content-warranty"
+    },
+    "children": ["flex-layout.row#product-specification-warranty"]
+  },
+  /* trigger components */
+  "flex-layout.row#warranty-content-pdp": {
+    "props": {
+      "blockClass": "accordion-warranty-container"
+    },
+    "children": [
+      "flex-layout.col#text-warranty",
+      "flex-layout.col#icon-specification-desktop"
+    ]
+  },
+  "flex-layout.col#text-warranty": {
+    "children": ["button-layer-accoordion#Warranty"]
+  },
+  "button-layer-accoordion#Warranty": {
+    "props": {
+      "richText": "Legal warranty",
+      "richTextENG": "warranty"
+    }
+  },
+  // "rich-text#warranty-title-pdp": {
+  //   "props": {
+  //     "blockClass": "text-warranty",
+  //     "text": "Legal warranty"
+  //   }
+  // },
+  "flex-layout.col#icon-warranty-desktop": {
+    "props": {
+      "blockClass": "icon-accordion-warranty"
+    },
+    "children": ["image#arrow-accordion-desktop-pdp"]
+  },
+  /*content*/
+  "flex-layout.row#product-specification-warranty": {
+    "props": {
+      "blockClass": "product-specification-warranty-style"
+    },
+    "children": ["flex-layout.col#legal-warranty-ps"]
+  },
+  "flex-layout.col#legal-warranty-ps": {
+    "props": {
+      "blockClass": "legal-warranty-ps"
+    },
+    "children": [
+      "rich-text#product-specification-warranty-text",
+      "link#legal-warranty"
+    ]
+  },
+  "rich-text#product-specification-warranty-text": {
+    "props": {
+      "text": "Register your product and claim your 10 years parts guarantee.",
+      "blockClass": "product-specification-warranty-text-style"
+    }
+  },
+  "link#legal-warranty": {
+    "props": {
+      "target": "_blank",
+      "href": "assets/doc/Indesit-10YearPartsGuarantee.pdf"
+    },
+    "children": ["rich-text#legal-warranty"]
+  },
+  "rich-text#legal-warranty": {
+    "props": {
+      "blockClass": "legal-warranty",
+      "text": "Terms and conditions apply"
+    }
+  },
+  /* ------------------- FEATURES PART ----------------------- */
+  "disclosure-layout#features-pdp": {
+    "props": {
+      "blockClass": ""
+    },
+    "children": [
+      "disclosure-trigger#features-pdp",
+      "disclosure-content#features-pdp"
+    ]
+  },
+  /* disclosure trigger & content */
+  "disclosure-trigger#features-pdp": {
+    "props": {
+      "blockClass": "trigger-features"
+    },
+    "children": ["button-layer-accoordion#Features"]
+  },
+  "disclosure-content#features-pdp": {
+    "props": {
+      "blockClass": "content-features"
+    },
+    "children": ["flex-layout.row#product-specification-features"]
+  },
+  /* trigger components */
+  "flex-layout.row#features-content-pdp": {
+    "props": {
+      "blockClass": "accordion-features-container"
+    },
+    "children": [
+      "flex-layout.col#text-features",
+      "flex-layout.col#icon-specification-desktop"
+    ]
+  },
+  "flex-layout.col#text-features": {
+    "children": ["button-layer-accoordion#Features"]
+  },
+  "button-layer-accoordion#Features": {
+    "props": {
+      "richText": "Structural features",
+      "richTextENG": "specs"
+    }
+  },
+  // "rich-text#features-title-pdp": {
+  //   "props": {
+  //     "blockClass": "text-features",
+  //     "text": "Structural features"
+  //   }
+  // },
+  /* content components */
+  "flex-layout.row#product-specification-features": {
+    "props": {
+      "blockClass": "content-container-features"
+    },
+    "children": ["flex-layout.col#product-specification-features"]
+  },
+  "flex-layout.col#product-specification-features": {
+    "props": {
+      "blockClass": "content-features"
+    },
+    "children": ["product-specifications-with-rules#features"]
+  },
+  "product-specifications-with-rules#features": {
+    "props": {
+      "filter": {
+        "specificationGroups": ["Structural features"],
+        "type": "show"
+      }
+    }
+  },
+  /* ------------------- INSTRUCTIONS PART ----------------------- */
+  "disclosure-layout#instructions-pdp": {
+    "props": {
+      "blockClass": ""
+    },
+    "children": [
+      "disclosure-trigger#instructions-pdp",
+      "disclosure-content#instructions-pdp"
+    ]
+  },
+  /* disclosure trigger & content */
+  "disclosure-trigger#instructions-pdp": {
+    "props": {
+      "blockClass": "trigger-instructions"
+    },
+    "children": ["button-layer-accoordion#Instructions"]
+  },
+  "disclosure-content#instructions-pdp": {
+    "props": {
+      "blockClass": "content-instructions"
+    },
+    "children": ["flex-layout.row#product-specification-instructions"]
+  },
+  /* trigger components */
+  "flex-layout.row#instructions-content-pdp": {
+    "props": {
+      "blockClass": "accordion-instructions-container"
+    },
+    "children": [
+      "flex-layout.col#text-instructions",
+      "flex-layout.col#icon-specification-desktop"
+    ]
+  },
+  "flex-layout.col#text-instructions": {
+    "children": ["button-layer-accoordion#Instructions"]
+  },
+  "button-layer-accoordion#Instructions": {
+    "props": {
+      "richText": "Instructions",
+      "richTextENG": "documents"
+    }
+  },
+  // "rich-text#instructions-title-pdp": {
+  //   "props": {
+  //     "blockClass": "text-instructions",
+  //     "text": "Instructions"
+  //   }
+  // },
+  /* content components */
+  "flex-layout.row#product-specification-instructions": {
+    "props": {
+      "blockClass": "content-container-instructions"
+    },
+    "children": ["flex-layout.col#product-specification-instructions"]
+  },
+  "flex-layout.col#product-specification-instructions": {
+    "props": {
+      "blockClass": "content-instructions"
+    },
+    "children": ["product-specification-group#instructions"]
+  },
+  "product-specification-group#instructions": {
+    "props": {
+      "filter": {
+        "specificationGroups": ["Document"],
+        "type": "show"
+      }
+    },
+    "children": [
+      "flex-layout.row#specification-instructions-container",
+      "flex-layout.row#specification-instructions-container-mobile"
+    ]
+  },
+  /* ------------------- ROW CONTAINER CONTENT ----------------- */
+  "flex-layout.row#specification-instructions-container": {
+    "props": {
+      "width": "100%",
+      "blockClass": "specification-container-row-pdp-instructions"
+    },
+    "children": ["instructions-mt"]
+  },
+  "instructions-mt": {
+    "props": {
+      "hasTargetBlank": true,
+      "filter": {
+        "specificationGroups": ["Document"],
+        "type": "show"
+      }
+    }
+  },
+  /* MOBILE */
+  /* ------------------- ROW CONTAINER CONTENT ----------------- */
+  "flex-layout.row#specification-instructions-container-mobile": {
+    "props": {
+      "blockClass": "specification-container-row-pdp-instructions-mobile"
+    },
+    "children": ["instructions-mt"]
+  }
+}

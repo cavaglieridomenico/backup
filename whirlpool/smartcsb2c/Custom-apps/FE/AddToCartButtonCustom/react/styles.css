@@ -1,0 +1,197 @@
+.modalDiv {
+    width: 100%;
+}
+
+
+.modal {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+}
+
+.checkboxDiv {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.checkboxInput {
+    margin-right: 10px;
+}
+
+.checkboxHref {
+    margin-left: 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.checkboxHref:hover {
+    cursor: pointer;
+}
+
+.subHeader {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+::global(.vtex-styleguide-9-x-scrollBar){
+    background-color: yellow;
+}
+
+.buttonCancel {
+    width: 120px;
+    height: 40px;
+    color: white;
+    background-color: #deb01a;
+    outline-width: 0;
+    border: none;
+}
+
+.buttonSend {
+    width: 120px;
+    height: 40px;
+    color: white;
+    background-color: #4d4d4d;
+    outline-width: 0;
+    border: none;
+}
+
+.modalAvailabilityDiv {
+    display: flex;
+    align-items: center;
+}
+
+.unavailableIcon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.modalImage {
+    width: 180px;
+    height: 100%;
+    margin-right: 30px;
+}
+
+.productDetailsModal {
+    display: flex;
+    align-items: center;
+}
+
+.inputEmail {
+    width: 100%;
+    height: 30px;
+    border-radius: none;
+}
+
+.inputEmail:focus { 
+    box-shadow: 4px 4px 4px 4px rgba(161, 161, 161, 0.774);
+}
+
+.errorBorder  {
+    width: 100%;
+    height: 30px;
+    border-radius: none;
+    border-color: red;
+}
+ 
+
+.sendButton :global(.vtex-button) {
+    background: #4d4d4d !important;
+    border-color: #4d4d4d !important;
+}
+
+.closeButton :global(.vtex-button) {
+    background: #deb01a !important;
+    border-color: #deb01a !important;
+    color: white;
+    margin-right: 20px;
+}
+
+.validEmail, .emailMatch {
+    color: red;
+}
+
+:global(.vtex-modal__modal) {
+    max-width: 560px;
+}
+
+.buttonDataContainer, .buttonDataContainerMail {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    position: relative;
+}
+
+.buttonText {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.shoppingIcon {
+    width: 20px;
+    height: 20px;
+    fill: white;
+    padding-top: 5px;
+}
+
+.buttonDataContainer:hover {
+    background: #be9715;
+}
+
+.buttonDataContainer:hover .shoppingIcon {
+    animation: shoppingIcon 0.25s 5;
+    animation-timing-function: ease-in-out;
+}
+
+
+@keyframes shoppingIcon {
+    0% {margin-right: 2px;}
+    10% {margin-right: 10px;}
+}
+
+.syncIcon {
+    width: 20px;
+    height: 20px;
+    fill: white;
+}
+
+.buttonDataContainer:hover .syncIcon {
+    animation: syncIcon 0.75s 1 ease-in-out;
+}
+
+@keyframes syncIcon {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+.mailIcon {
+    width: 20px;
+    height: 20px;
+    fill: white;
+    margin-right: 15px;
+    padding-top: 6px;
+}
+
+.buttonDataContainerMail:hover .mailIcon {
+    animation: mailIcon 0.2s 3 ease-out;
+}
+
+@keyframes mailIcon {
+    0% {padding-top: 6px;}
+    100% {padding-top: 0;}
+}
+
+.checkboxHref {
+    z-index: 10001;
+}
+.outOfStockPrice{
+    position: relative;
+    top: -100px;
+    left: 0;
+    font-size: 1.4rem;
+}
+ 

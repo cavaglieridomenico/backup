@@ -1,0 +1,409 @@
+{
+  "store.custom.product-comparison#plp-custom-promo": {
+    "blocks": [
+      "search-result-layout.customQuery#plpCustom",
+      "flex-layout.row#newsletter-row"
+    ],
+    "props": {
+      "context": {
+        "skusFilter": "ALL",
+        "simulationBehavior": "default",
+        "maxItemsPerPage": 20,
+        "__unstableProductOriginVtex": true
+      }
+    }
+  },
+  "search-result-layout.customQuery#plpCustom": {
+    "blocks": [
+      "search-result-layout.desktop.product-comparison#customPLP-Promo",
+      "search-result-layout.mobile#plpCustom",
+      "search-not-found-layout"
+    ],
+    "props": {
+      "querySchema": {
+        "orderByField": "OrderByReleaseDateDESC",
+        "hideUnavailableItems": true,
+        "maxItemsPerPage": 20
+      }
+    }
+  },
+  "search-result-layout.desktop.product-comparison#customPLP-Promo": {
+    "title": "Search Layout - Desktop",
+    "children": [
+      "no-index",
+      "custom-helmet",
+      "toggle-layout#sliderBannerHomeDesktop-PLPCustom",
+      "flex-layout.row#halfSpace",
+      "toggle-layout#bannerPLPCustom",
+      "toggle-layout#buttonPLPCustom-Accordion",
+      "flex-layout.row#resultCustom",
+      "product-comparison-drawer"
+    ],
+    "props": {
+      "showFacetQuantity": true,
+      "pagination": "show-more",
+      "preventRouteChange": true,
+      "defaultGalleryLayout": "grid",
+      "hiddenFacets": {
+        "specificationFilters": {
+          "hiddenFilters": [
+            {
+              "name": "Category"
+            },
+            {
+              "name": "Catégorie"
+            },
+            {
+              "name": "Subcategory"
+            }
+        ]
+        }
+      }
+    }
+  },
+  "search-result-layout.mobile#plpCustom": {
+    "title": "Search Layout - Mobile",
+    "children": [
+      "no-index",
+      "custom-helmet",
+      "toggle-layout#sliderBannerHomeMobile-PLPCustom",
+      // "toggle-layout#sliderBannerHomeMobile-PLPCustom",
+      "flex-layout.row#halfSpace",
+      "toggle-layout#bannerPLPCustom",
+      "toggle-layout#buttonPLPCustom-Accordion",
+      "flex-layout.row#searchinfomobile",
+      "flex-layout.row#productCountMobile",
+      "flex-layout.row#contentmobile",
+      "flex-layout.row#fetchmore",
+      "toggle-layout#textSEOCustom",
+      "product-comparison-drawer"
+    ],
+    "props": {
+      "pagination": "show-more",
+      "preventRouteChange": true,
+      "mobileLayout": {
+        "mode1": "small",
+        "mode2": "normal"
+      },
+      "hiddenFacets": {
+        "specificationFilters": {
+          "hiddenFilters": []
+        }
+      }
+    }
+  },
+  "flex-layout.row#plpCustomResult": {
+    "children": [
+      "flex-layout.col#plpCustomFilter",
+      "flex-layout.col#plpCustomContent"
+    ],
+    "props": {
+      "preventHorizontalStretch": true,
+      "fullWidth": true,
+      "blockClass": "paddingSearch"
+    }
+  },
+  "flex-layout.col#plpCustomFilter": {
+    "children": [
+      "filter-navigator.v3"
+    ],
+    "props": {
+      "blockClass": "filterCol"
+    }
+  },
+  "flex-layout.col#plpCustomContent": {
+    "children": [
+      "flex-layout.row#searchinfo",
+      "flex-layout.row#fetchprevious",
+      "flex-layout.row#products",
+      "flex-layout.row#fetchmore",
+      "flex-layout.row#space"
+    ],
+    "props": {
+      "width": "grow",
+      "preventVerticalStretch": true
+    }
+  },
+  "toggle-layout#plpCustomSEO": {
+    "children": [
+      "rich-text#plpCustomSEO"
+    ]
+  },
+  "toggle-layout#plpCustomBanner-mobile": {
+    "children": [
+      "flex-layout.row#bannerAdvantageForYou"
+    ]
+  },
+  "toggle-layout#plpCustomBanner-desktop": {
+    "children": [
+      "info-card#plpCustomBanner"
+    ]
+  },
+  "info-card#plpCustomBanner": {
+    "props": {
+      "id": "hero-banner-main-search",
+      "isFullModeStyle": false,
+      "textPosition": "left",
+      "imageUrl": "assets/supremecareHEROlarge.jpg",
+      "headline": "Supreme Care",
+      "subhead": "La lavatrice più silenziosa",
+      "callToActionMode": "none",
+      "blockClass": [
+        "heroBanner",
+        "heroBannerSearch"
+      ],
+      "textAlignment": "left"
+    }
+  },
+  "toggle-layout#sliderBannerHomeDesktop-PLPCustom": {
+    "title": "Toggle Layout - Slider Banner Home",
+    "children": [
+      "list-context.info-card-list#homeBannersTop-PLPCustom"
+    ]
+  },
+  "toggle-layout#sliderBannerHomeMobile-PLPCustom": {
+    "title": "Toggle Layout Mobile - Slider Banner Home",
+    "children": [
+      "list-context.info-card-list#homeBannersTop-PLPCustom"
+    ]
+  },
+  "list-context.info-card-list#homeBannersTop-PLPCustom": {
+    "title": "Info Cards List - Slider Banner Home",
+    "children": [
+      "slider-layout#bannerHomeTop-PLPCustom"
+    ],
+    "props": {
+      "infoCards": [
+        {
+          "id": "hero-banner-main",
+          "isFullModeStyle": false,
+          "textMode": "rich-text",
+          "textPosition": "left",
+          "imageUrl": "assets/supremecareHEROlarge.jpg",
+          "headline": "Supreme Care",
+          "subhead": "La lavatrice più silenziosa",
+          "callToActionText": "SCOPRI di PIÙ",
+          "callToActionUrl": "/whirlpool-supreme-8415-8-kg-la-lavatrice-piu-silenziosa/p",
+          "blockClass": "heroBannerHomeTop",
+          "textAlignment": "left"
+        }
+      ]
+    }
+  },
+  "slider-layout#bannerHomeTop-PLPCustom": {
+    "title": "Slider Layout - Banner Home",
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "autoplay": {
+        "timeout": 10000,
+        "stopOnHover": false
+      },
+      "infinite": true,
+      "showNavigationArrows": "never",
+      "showPaginationDots": "desktopOnly",
+      "blockClass": [
+        "carouselHomeTop",
+        "plpCustom"
+      ]
+    }
+  },
+  "toggle-layout#bannerPLPCustom": {
+    "title": "Banner video",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "flex-layout.row#bannerPLPCustom"
+    ]
+  },
+  "toggle-layout#buttonPLPCustom-Accordion": {
+    "title": "Accordion",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "flex-layout.row#buttonPLPCustom-Accordion"
+    ]
+  },
+  "flex-layout.row#bannerPLPCustom": {
+    "props": {
+      "blockClass": [
+        "bannerConseil",
+        "bannerPromoPlpCustom"
+      ]
+    },
+    "children": [
+      "flex-layout.col#rightPartBannerPLPCustom",
+      "flex-layout.col#leftPartBannerPLPCustom"
+    ]
+  },
+  "flex-layout.col#rightPartBannerPLPCustom": {
+    "props": {
+      "width": "50%",
+      "blockClass": [
+        "columnPostillaImage",
+        "fullheight"
+      ]
+    },
+    "children": [
+      //"iframe#promoVideoModalPLPCustom"
+      "video#promoVideoModalPLPCustom"
+    ]
+  },
+  "flex-layout.col#leftPartBannerPLPCustom": {
+    "props": {
+      "width": "50%",
+      "preventVerticalStretch": true,
+      "blockClass": [
+        "columnPostilla",
+        "columnPostillaBottom",
+        "bg-grey"
+      ]
+    },
+    "children": [
+      "rich-text#BannTitleheroPLPCustom",
+      "rich-text#BannDescheroPLPCustom",
+      "link#ButtonBannPLPCustom"
+    ]
+  },
+  "link#ButtonBannPLPCustom": {
+    "props": {
+      "label": "Scopri di più",
+      "href": "/",
+      "displayMode": "button",
+      "blockClass": [
+        "prePlpButton",
+        "longueButton",
+        "plpCustom"
+      ]
+    }
+  },
+  "rich-text#BannTitleheroPLPCustom": {
+    "props": {
+      "text": "# Frigorifero combinato 4 porte",
+      "blockClass": "titleHBannerPostilla"
+    }
+  },
+  "rich-text#BannDescheroPLPCustom": {
+    "props": {
+      "text": "33% di spazio extra per frutta e verdura *",
+      "blockClass": "descBannerPostilla"
+    }
+  },
+  "rich-text#videoPromoPLPCustom": {
+    "props": {
+      "text": "### Odkryj",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": [
+        "buttonCardConseils"
+      ]
+    }
+  },
+  "iframe#promoVideoModalPLPCustom": {
+    "props": {
+      "src": "https://www.youtube.com/embed/IkkrhUAvy10",
+      "width": "100%",
+      "height": "100%",
+      "blockClass": [
+        "videoConseils",
+        "plpCustom"
+      ]
+    }
+  },
+  "video#promoVideoModalPLPCustom": {
+    "props": {
+      "width": "100%",
+      "height": "300px",
+      "loop": true,
+      "autoPlay": true,
+      "muted": false,
+      "src": "https://www.youtube.com/embed/IkkrhUAvy10",
+      "blockClass": [
+        "videoConseils",
+        "plpCustom"
+      ]
+    }
+  },
+  "flex-layout.row#buttonPLPCustom-Accordion": {
+    "children": [
+      "disclosure-layout#buttonPLPCustom"
+    ],
+    "props": {
+      "blockClass": "buttonPLPCustom"
+    }
+  },
+  "disclosure-layout#buttonPLPCustom": {
+    "props": {
+      "blockClass": "header"
+    },
+    "children": [
+      "disclosure-trigger#buttonPLPCustom",
+      "disclosure-content#buttonPLPCustom"
+    ]
+  },
+  "disclosure-trigger#buttonPLPCustom": {
+    "children": [
+      "rich-text#buttonPLPCustom-Button"
+    ]
+  },
+  "rich-text#buttonPLPCustom-Button": {
+    "props": {
+      "text": "Promo button",
+      "blockClass": "buttonPLPCustom"
+    }
+  },
+  "disclosure-content#buttonPLPCustom": {
+    "children": [
+      "flex-layout.row#buttonPLPCustom"
+    ],
+    "props": {
+      "blockClass": "buttonPLPCustom-content"
+    }
+  },
+  "flex-layout.row#buttonPLPCustom": {
+    "props": {
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.col#buttonPLPCustom"
+    ]
+  },
+  "flex-layout.col#buttonPLPCustom": {
+    "props": {
+      "width": "grow"
+    },
+    "children": [
+      "rich-text#buttonPLPCustom-Title",
+      "rich-text#buttonPLPCustom-Subtitle"
+    ]
+  },
+  "rich-text#buttonPLPCustom-Title": {
+    "props": {
+      "text": "# Frigorifero combinato 4 porte",
+      "blockClass": [
+        "titleHBannerPostilla",
+        "titlePLPCustom"
+      ]
+    }
+  },
+  "rich-text#buttonPLPCustom-Subtitle": {
+    "props": {
+      "text": "33% di spazio extra per frutta e verdura *",
+      "blockClass": [
+        "descBannerPostilla",
+        "subtitlePLPCustom"
+      ]
+    }
+  },
+  "rich-text#plpCustomSEO": {
+    "props": {
+      "text": "### Forni Whirlpool \n Il forno da incasso costituisce un elemento imprescindibile per uno spazio moderno dedicato alla cucina, e Whirlpool propone una linea ricca di modelli e soluzioni pensati per venire incontro a ogni necessità: Forni a vapore e tradizionali completi di tutte le più avanzate funzioni di cottura, studiati per garantirti le performance di cui hai bisogno per qualsiasi ricetta.\n Con la nostra gamma di forni a vapore puoi preparare piatti deliziosi: scopri la combinazione di cottura tradizionale e a vapore, cucina piatti sani e deliziosi, preservando tutte le proprietà organolettiche degli ingredienti. Dai dolci e le torte agli arrosti di carne, dai piatti di pesce fino al pane fatto in casa; le numerose funzioni ti permettono di scegliere sempre il programma di cottura più adatto a ogni ricetta. \n Lasciati stupire dalla tecnologia 6° Senso dei forni multifunzione di Whirlpool: le ricette pre-programmate regolano autonomamente il riscaldamento e la durata del ciclo, mentre la lampada alogena interna è studiata per assicurarti la migliore illuminazione riducendo allo stesso tempo il consumo energetico. Immancabili le funzioni di pre-riscaldamento e la tecnologia autopulente pirolitica, pensate per farti risparmiare tempo: la prima consente di raggiungere velocemente la temperatura desiderata, mentre la seconda ti viene incontro nella pulizia dello spazio interno, aiutandoti a rimuovere anche i residui e lo sporco più ostinato. \n La massima praticità incontra il design accattivante e moderno: i forni a incasso di Whirlpool si integrano facilmente in ogni ambiente, completando il [piano cottura per la cucina](https://www.whirlpool.it/prodotti/cottura/piani-cottura)  e sposandosi alla perfezione con le linee dell’arredo contemporaneo. I colori vanno dall’elegante nero al brillante acciaio, con una gamma di proposte e combinazioni che ti permette di trovare con facilità quello più adatto ai tuoi gusti estetici. Scopri i forni Whirlpool sul catalogo online: scegli il meglio per la tua casa.",
+      "blockClass": "seoTexGatePageHub"
+    }
+  }
+}

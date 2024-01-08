@@ -1,0 +1,62 @@
+import React, { useEffect } from "react";
+import classnames from "classnames";
+
+import styles from "./styles.css";
+interface OnlineGaranziaProps {
+	endpoint: string;
+}
+
+const OnlineGaranzia: StorefrontFunctionComponent<OnlineGaranziaProps> = ({
+	endpoint,
+}) => {
+	useEffect(() => {
+		const script = document.createElement("script");
+		script.src = endpoint;
+		script.setAttribute("id", "booking-ref-bootstrap");
+		script.async = true;
+
+		document.head.appendChild(script);
+		return () => {
+			const previousScript = document.getElementById("booking-ref-bootstrap");
+			const previousContainer = document.getElementById("booking-ref-app");
+			if (previousScript && previousScript.parentNode) {
+				previousScript.parentNode.removeChild(previousScript);
+			}
+			if (previousContainer) {
+				previousContainer.remove();
+			}
+		};
+	}, []);
+	return (
+		<div
+			className={classnames(
+				styles.formContainer,
+				"flex w-100 items-center justify-center"
+			)}
+		>
+			{" "}
+			<div
+				id="booking-ref-app"
+				data-brand="HP"
+				data-country="IT"
+				data-locale="it_IT"
+			></div>
+		</div>
+	);
+};
+
+OnlineGaranzia.schema = {
+	title: "editor.onlineGaranzia.title",
+	description: "editor.onlineGaranzia.description",
+	type: "object",
+	properties: {
+		endpoint: {
+			title: "endpoint servizio",
+			description: "",
+			type: "string",
+			default: "",
+		},
+	},
+};
+
+export default OnlineGaranzia;

@@ -1,0 +1,80 @@
+{
+    "store.custom#finish-goods-plp": {
+        "blocks": [
+            "experimental__visibility-layout#PlpTitle",
+            "search-result-layout.customQuery#finishgoods"
+        ],
+        "props": {
+            "context": {
+                "skusFilter": "ALL",
+                "simulationBehavior": "default",
+                "maxItemsPerPage": 20,
+                "__unstableProductOriginVtex": true
+            }
+        }
+    },
+    "rich-text#pageTitle": {
+        "props": {
+          "text": "Promotion page title",
+          "blockClass": "pageTitle"
+        }
+      },
+      "search-result-layout.customQuery#finishgoods": {
+        "blocks": ["search-result-layout.desktop#test"],
+        "props": {
+            "querySchema": {
+                "orderByField": "OrderByReleaseDateDESC",
+                "hideUnavailableItems": true,
+                "maxItemsPerPage": 8,
+                "queryField": "Blue Top Retro Camera",
+                "mapField": "ft"
+            }
+        }
+    },
+
+    "search-result-layout.desktop#test": {
+        "children": [
+            "flex-layout.row#searchinfo",
+            "filter-navigator.v3",
+            "search-fetch-previous",
+            "search-content",
+            "search-fetch-more",
+            "search-not-found-layout"
+        ],
+        "props": {
+          "pagination": "show-more",
+          "preventRouteChange": true
+        }
+      },
+      "flex-layout.row#top": { 
+        "children": [
+          "total-products.v2",
+          "order-by.v2"
+        ]
+      },
+      "flex-layout.row#results": { 
+        "children": [ 
+          "flex-layout.col#filter",
+          "flex-layout.col#search"
+        ]
+      },
+      "flex-layout.col#filter": { 
+        "props": {
+          "width": "20%"
+        },
+        "children": [
+          "filter-navigator.v3"
+        ]
+      },
+      "flex-layout.col#search": { 
+        "children": [
+          "search-content"
+        ]
+      },
+      "search-content": { 
+        "blocks": ["gallery", "not-found"]
+      },
+      "gallery": {
+        "blocks": ["product-summary.shelf"]
+      }
+}

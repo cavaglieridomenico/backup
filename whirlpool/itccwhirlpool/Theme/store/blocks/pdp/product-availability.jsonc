@@ -1,0 +1,135 @@
+{
+  "condition-layout.binding#checkAccessoriesAndAvailabilityOnBinding": {
+    "title": " [CONDITION] Binding condition EPP",
+    "props": {
+      "conditions": [
+        {
+          "subject": "bindingId",
+          "arguments": {
+            "id": "8c0ae00c-9903-4189-92d7-2043fbb70eb9"
+          }
+        }
+      ],
+      "Then": "condition-layout.product#DisponibilitaEppNew",
+      "Else": "condition-layout.binding#isVipOrFF"
+    }
+  },
+  "condition-layout.product#DisponibilitaEppNew": {
+    "title": " [CONDITION] stickyAddToCart",
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "Disponibilità",
+            "value": "Prodotti disponibili"
+          }
+        },
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "Stock Availability",
+            "value": "Show In Stock Products Only"
+          }
+        }
+      ],
+      "matchType": "any",
+      "Then": "condition-layout.product#productAvailabilityEPP",
+      "Else": "flex-layout.row#avvisamiQuandoDisponibileSticky"
+    }
+  },
+  "condition-layout.product#productAvailabilityEPP": {
+    "title": "[CONDITION LAYOUT] EPP Cart Product Availability",
+    "props": {
+      "conditions": [
+        {
+          "subject": "isProductAvailable"
+        }
+      ],
+      "matchType": "any",
+      "Then": "condition-layout.product#hasAccessoryAssociationsEPPnew",
+      "Else": "flex-layout.row#avvisamiQuandoDisponibileSticky"
+    }
+  },
+  "condition-layout.binding#isVipOrFF": {
+    "title": " [CONDITION] isVipOrFF",
+    "props": {
+      "conditions": [
+        {
+          "subject": "bindingId",
+          "arguments": {
+            "id": "33164ac5-6a19-4489-9d5c-4d88fb918f95"
+          }
+        }
+      ],
+      "Then": "condition-layout.product#stickyAddToCartVip",
+      "Else": "condition-layout.product#isFF"
+    }
+  },
+  "condition-layout.product#stickyAddToCartVip": {
+    "title": " [CONDITION] stickyAddToCartVip",
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "Solo disponibili",
+            "value": "Prodotti disponibili"
+          }
+        }
+      ],
+      "Then": "condition-layout.product#productAvailabilityVIP",
+      "Else": "flex-layout.row#avvisamiQuandoDisponibileSticky"
+    }
+  },
+  "condition-layout.product#productAvailabilityVIP": {
+    "title": "[CONDITION LAYOUT] VIP Cart Product Availability",
+    "props": {
+      "conditions": [
+        {
+          "subject": "isProductAvailable"
+        }
+      ],
+      "matchType": "any",
+      "Then": "condition-layout.product#hasAccessoryAssociationsVIP",
+      "Else": "flex-layout.row#avvisamiQuandoDisponibileSticky"
+    }
+  },
+  "condition-layout.product#isFF": {
+    "title": " [CONDITION] stickyAddToCartFF",
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "Solo prodotti disponibili",
+            "value": "Si"
+          }
+        },
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "Stock Status",
+            "value": "Show In Stock Products Only"
+          }
+        }
+      ],
+      "matchType": "any",
+      "Then": "condition-layout.product#productAvailabilityFF",
+      "Else": "flex-layout.row#avvisamiQuandoDisponibileSticky"
+    }
+  },
+  "condition-layout.product#productAvailabilityFF": {
+    "title": "[CONDITION LAYOUT] FF Cart Product Availability",
+    "props": {
+      "conditions": [
+        {
+          "subject": "isProductAvailable"
+        }
+      ],
+      "matchType": "any",
+      "Then": "condition-layout.product#hasAccessoryAssociationsEFF",
+      "Else": "flex-layout.row#avvisamiQuandoDisponibileSticky"
+    }
+  }
+}

@@ -1,0 +1,102 @@
+/*------------ NEW PDP STICKY BANNERS ---------------*/
+.container--promoStickyBanner {
+  background-color: #0d436b;
+  color: #fff;
+  z-index: 98;
+}
+.wrapper--logoSearchSupport--stuck .container--logoSearchSupport,
+.wrapper--logoAndSupportMobileSticky--stuck .container--logoAndSupportMobileSticky {
+  background-color: #fff;
+  border-bottom: 1px solid #d3d3d3;
+  box-shadow: 0 4px 5px rgba(0,0,0,.1);
+}
+.wrapper--promoStickyBanner--stuck .container--promoStickyBanner {
+  top: 85px !important;
+}
+.container--pdpStickyBanner {
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+}
+.wrapper--pdpStickyBanner--stuck .container--pdpStickyBanner {
+  opacity: 1;
+  visibility: visible;
+  z-index: 999;
+}
+.wrapper--pdpStickyBanner--stuck .container--pdpStickyBanner {
+  top: 85px !important;
+}
+.wrapper--pdpStickyBanner {
+  position: absolute !important;
+  visibility: hidden;
+}
+.wrapper--pdpStickyBanner--stuck {
+  z-index: 999;
+}
+/* .wrapper--pdpStickyBanner {
+  position: absolute;
+  z-index: -1;
+} */
+/*-----------------------------------------------*/
+.container--logoAndSupportMobileSticky,
+.container--logoSearchSupport {
+  background-color: #fff;
+}
+/* .wrapper--logoAndSupportMobileSticky--stuck
+  .container--logoAndSupportMobileSticky,
+.wrapper--logoSearchSupport--stuck .container--logoSearchSupport {
+  -webkit-box-shadow: 0px 10px 13px -1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 10px 13px -1px rgba(0, 0, 0, 0.3);
+} */
+.wrapper--logoSearchSupport--stuck .container--logoSearchSupport {
+  padding-bottom: 1rem;
+}
+.wrapper--notificationHeaderMobileRow {
+  min-width: 100%;
+}
+.wrapper--stickyCardBottom {
+  position: absolute !important;
+  bottom: 0;
+  width: 100%;
+}
+
+.container--notificationHeaderMobileRow {
+  background-color: #231f20;
+  font-weight: bold;
+  font-size: 9px;
+}
+.container--mobileSearchbar {
+  top: 0 !important;
+  background-color: #fff;
+  padding: 1rem 0;
+}
+.wrapper--mobileSearchbar {
+  margin-bottom: 1rem;
+  height: auto !important;
+}
+.container--notificationHeaderMobileRow {
+  position: relative;
+}
+.container--stickyButton {
+  z-index: 998;
+}
+
+@media only screen and (min-width: 601px) {
+  .container--stickyButtons {
+    display: none;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .container--stickyButtons {
+    display: flex;
+    justify-content: center;
+    bottom: 100px !important;
+    padding: 0rem 1rem;
+    position: fixed;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .wrapper--stickyCardBottom {
+    display: none;
+  }
+}

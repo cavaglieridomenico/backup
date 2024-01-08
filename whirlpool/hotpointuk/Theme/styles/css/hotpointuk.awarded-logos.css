@@ -1,0 +1,67 @@
+.awardedLogosContainer {
+  margin: 0 0.5rem;
+  display: flex;
+  align-items: flex-end;
+}
+.awardedLogoImage {
+  /* margin-right: 0.5rem; */
+  margin-right: -1rem;
+  height: 6rem;
+  height: 6rem;
+  width: 6rem;
+  object-fit: contain;
+}
+:global(.vtex-flex-layout-0-x-flexRow--secondaryMobile) .awardedLogosContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+:global(.vtex-slider-layout-0-x-sliderLayoutContainer--shelf-steam) .awardedLogosContainer{
+  justify-content: center;
+}
+
+@media only screen and (max-width: 640px){
+	:global(.vtex-product-summary-2-x-containerNormal--searchWithout) .awardedLogosContainer {
+    	display: flex;
+    	justify-content: center;
+    }
+}
+
+@media screen and (min-width: 1040px) {
+  :global(.vtex-flex-layout-0-x-flexRowContent--badgesRowPDP)
+    .awardedLogoImage {
+    height: 4rem;
+    height: 4rem;
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  :global(.vtex-flex-layout-0-x-flexRowContent--badgesRowPDP)
+    .awardedLogoImage {
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .awardedLogosContainer {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  .awardedLogoImage {
+    margin-right: -1rem !important;
+    max-height: 6rem;
+    object-fit: contain;
+  }
+}
+@media screen and (min-width: 640px) and (max-width: 854px){
+  .awardedLogoImage {
+    width: 5rem;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1213px){
+  .awardedLogoImage {
+    width: 5rem;
+  }
+}

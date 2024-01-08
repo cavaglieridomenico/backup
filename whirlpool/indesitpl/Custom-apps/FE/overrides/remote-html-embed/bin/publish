@@ -1,0 +1,35 @@
+#!/bin/bash
+
+set -o errexit
+set -o pipefail
+
+VERSION=`jq '.version' manifest.json`
+VERSION=${VERSION//\"}
+echo $VERSION
+
+vtex login itwhirlpool
+cp manifest/manifest.it.json manifest.json
+vtex publish
+vtex deploy itwhirlpool.remote-html-embed@$VERSION --force
+
+vtex login itwhirlpoolqa
+cp manifest/manifest.itqa.json manifest.json
+vtex publish
+vtex deploy itwhirlpoolqa.remote-html-embed@$VERSION --force
+
+vtex login ruwhirlpoolqa
+cp manifest/manifest.ruqa.json manifest.json
+vtex publish
+vtex deploy ruwhirlpoolqa.remote-html-embed@$VERSION --force
+
+vtex login ruwhirlpool
+cp manifest/manifest.ru.json manifest.json
+vtex publish
+vtex deploy ruwhirlpool.remote-html-embed@$VERSION --force
+
+vtex login frwhirlpool
+cp manifest/manifest.fr.json manifest.json
+vtex publish
+vtex deploy frwhirlpool.remote-html-embed@$VERSION --force
+
+git checkout .

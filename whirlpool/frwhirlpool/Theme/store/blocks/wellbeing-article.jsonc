@@ -1,0 +1,446 @@
+{
+  "store.custom#wellbeing-article": {
+    "blocks": [
+      "head-json-component",
+      "responsive-layout.mobile#wellbeing-article",
+      "responsive-layout.desktop#wellbeing-article",
+      "flex-layout.row#newsletter-row"
+    ]
+  },
+  "responsive-layout.mobile#wellbeing-article": {
+    "children": [
+      "breadcrumb-four-levels",
+      "rich-text#titleArticle",
+      "flex-layout.row#subtitleArticle",
+      "info-card#wellbeingArticle",
+      "flex-layout.row#rowArticle",
+      "flex-layout.row#space",
+      "flex-layout.row#wellbeingArticle"
+    ]
+  },
+  "responsive-layout.desktop#wellbeing-article": {
+    "children": [
+      "breadcrumb-four-levels",
+      "rich-text#titleArticle",
+      "flex-layout.row#subtitleArticle",
+      "info-card#wellbeingArticle",
+      "flex-layout.row#rowArticle",
+      "flex-layout.row#space",
+      "analytics-wrapper#second-info-card-article",
+      "flex-layout.row#space",
+      "flex-layout.row#wellbeingArticle"
+    ]
+  },
+  "rich-text#titleArticle": {
+    "title": "Titolo articolo",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Title article",
+      "blockClass": "wellbeingTitle"
+    }
+  },
+  "rich-text#subtitleArticle": {
+    "title": "Label - Article in",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "ARTICLE IN ",
+      "blockClass": [
+        "wellbeingSubTitle",
+        "uppercaseAndBold"
+      ]
+    }
+  },
+  "link#articleCategory": {
+    "props": {
+      "label": "Category",
+      "href": "#",
+      "blockClass": [
+        "articleCategory",
+        "uppercaseAndBold"
+      ]
+    }
+  },
+  "rich-text#articleDate": {
+    "title": "Data articolo",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "-- April 20",
+      "blockClass": [
+        "articleDate",
+        "uppercaseAndBold"
+      ]
+    }
+  },
+  "flex-layout.row#subtitleArticle": {
+    "title": "Sottotitolo articolo",
+    "props": {
+      "blockClass": "subtitleArticle"
+    },
+    "children": [
+      "flex-layout.col#subtitleArticle",
+      "flex-layout.col#articleCategory",
+      "flex-layout.col#articleDate"
+    ]
+  },
+  "flex-layout.col#subtitleArticle": {
+    "props": {
+      "width": "auto"
+    },
+    "children": [
+      "rich-text#subtitleArticle"
+    ]
+  },
+  "flex-layout.col#articleCategory": {
+    "title": "Nome categoria",
+    "props": {
+      "width": "auto"
+    },
+    "children": [
+      "link#articleCategory"
+    ]
+  },
+  "flex-layout.col#articleDate": {
+    "props": {
+      "width": "auto"
+    },
+    "children": [
+      "rich-text#articleDate"
+    ]
+  },
+  "info-card#wellbeingArticle": {
+    "title": "Banner orizzontale",
+    "props": {
+      "id": "banner-grid-home",
+      "isFullModeStyle": false,
+      "imageUrl": "assets/grid6.jpg",
+      "textAlignment": "left",
+      "blockClass": "wellbeingImageBanner",
+      "textPosition": "right"
+    }
+  },
+  "flex-layout.row#rowArticle": {
+    "title": "Corpo dell'articolo",
+    "children": [
+      "flex-layout.col#firstColArticle",
+      "flex-layout.col#secondColArticle"
+    ]
+  },
+  "flex-layout.col#firstColArticle": {
+    "props": {
+      "width": "70%",
+      "blockClass": ""
+    },
+    "children": [
+      "flex-layout.col#articleRelatedTechnology",
+      "flex-layout.row#rowReadingTime",
+      "rich-text#articleBody1",
+      "image#wellbeingArticleImage",
+      "rich-text#articleBody2",
+      "image#wellbeingArticleImage2",
+      "rich-text#articleBody3"
+    ]
+  },
+  "flex-layout.row#rowReadingTime": {
+    "title": "Tempo di lettura",
+    "children": [
+      "flex-layout.col#imageReadingTime",
+      "flex-layout.col#titleReadingTime"
+    ],
+    "props": {
+      "blockClass": "rowReadingTime"
+    }
+  },
+  "flex-layout.col#imageReadingTime": {
+    "props": {
+      "width": "auto"
+    },
+    "children": [
+      "image#readingTime"
+    ]
+  },
+  "flex-layout.col#titleReadingTime": {
+    "props": {
+      "width": "auto"
+    },
+    "children": [
+      "rich-text#readingTime"
+    ]
+  },
+  "image#wellbeingArticleImage": {
+    "title": "Articolo Immagine 1",
+    "props": {
+      "src": "https://itwhirlpool.vtexassets.com/assets/vtex/assets-builder/itwhirlpool.whl-theme/4.0.151/grid6___1ac257cef795cfb4d38125d71bda5c9d.jpg",
+      "blockClass": "articleImage"
+    }
+  },
+  "image#wellbeingArticleImage2": {
+    "title": "Articolo Immagine 2",
+    "props": {
+      "src": "https://itwhirlpool.vtexassets.com/assets/vtex/assets-builder/itwhirlpool.whl-theme/4.0.151/grid6___1ac257cef795cfb4d38125d71bda5c9d.jpg",
+      "blockClass": "articleImage"
+    }
+  },
+  "flex-layout.col#secondColArticle": {
+    "props": {
+      "width": "30%",
+      "blockClass": [
+        "articlesSection",
+        "articlesSectionSticky"
+      ]
+    },
+    "children": [
+      "flex-layout.row#scrollingRow"
+      // "rich-text#textAddedOnInfoCard",
+      // "analytics-wrapper#info-card-article"
+    ]
+  },
+  "flex-layout.row#scrollingRow": {
+    "children": [
+      "flex-layout.col#stickyCol"
+    ],
+    "props": {
+      "blockClass": "scrollingRow"
+    }
+  },
+  "flex-layout.col#stickyCol": {
+    "children": [
+      "rich-text#textAddedOnInfoCard",
+      "analytics-wrapper#info-card-article"
+    ],
+    "props": {
+      "blockClass": "stickyCol"
+    }
+  },
+  // "sticky-layout#scrollingBanner": {
+  //   "props": {
+  //     "position": "top",
+  //     "blockClass": "stickyScrollingBanner",
+  //     "verticalSpacing": 40
+  //   },
+  //   "children": [
+  //     "rich-text#textAddedOnInfoCard",
+  //     "analytics-wrapper#info-card-article"
+  //   ]
+  // },
+  "rich-text#articleBody1": {
+    "title": "Articolo Paragrafo 1",
+    "props": {
+      "textAlignment": "LEFT",
+      "textPosition": "CENTER",
+      "text": "Body of the article",
+      "blockClass": [
+        "articleBody"
+      ]
+    }
+  },
+  "rich-text#articleBody2": {
+    "title": "Articolo Paragrafo 2",
+    "props": {
+      "textAlignment": "LEFT",
+      "textPosition": "CENTER",
+      "text": "Body of the article",
+      "blockClass": [
+        "articleBody"
+      ]
+    }
+  },
+  "rich-text#articleBody3": {
+    "title": "Articolo Paragrafo 3",
+    "props": {
+      "textAlignment": "LEFT",
+      "textPosition": "CENTER",
+      "text": "Body of the article",
+      "blockClass": [
+        "articleBody"
+      ]
+    }
+  },
+  "rich-text#textAddedOnInfoCard": {
+    "title": "Matching technology",
+    "props": {
+      "textAlignment": "LEFT",
+      "textPosition": "CENTER",
+      "text": "Matching technology",
+      "blockClass": [
+        "textAddedOnInfoCard"
+      ]
+    }
+  },
+  "rich-text#readingTime": {
+    "title": "Tempo di lettura",
+    "props": {
+      "textAlignment": "LEFT",
+      "textPosition": "LEFT",
+      "text": "Reading time 1 minute"
+    }
+  },
+  "image#readingTime": {
+    "title": "Logo tempo di lettura",
+    "props": {
+      "src": "assets/clock.svg",
+      "maxHeight": "40px",
+      "maxWidth": "40px",
+      "blockClass": "imageClock"
+    }
+  },
+  "flex-layout.col#articleRelatedTechnology": {
+    "children": [
+      "flex-layout.row#articleRelatedTechnologyTitle",
+      "flex-layout.row#articleRelatedTechnologySecondRow"
+    ],
+    "props": {
+      "blockClass": "articleRelatedTechnology"
+    }
+  },
+  "flex-layout.row#articleRelatedTechnologyTitle": {
+    "title": "Related Technology Title",
+    "children": [
+      "rich-text#articleRelatedTechnologyTitle"
+    ]
+  },
+  "flex-layout.row#articleRelatedTechnologySecondRow": {
+    "title": "Related Technology Seconda Riga",
+    "children": [
+      "flex-layout.col#firstColSubtitle",
+      "flex-layout.col#secondColLink"
+    ]
+  },
+  "rich-text#articleRelatedTechnologyTitle": {
+    "props": {
+      "textAlignment": "LEFT",
+      "textPosition": "LEFT",
+      "text": "RELATED TECHNOLOGY",
+      "blockClass": []
+    }
+  },
+  "flex-layout.col#firstColSubtitle": {
+    "children": [
+      "rich-text#firstColSubtitle"
+    ]
+  },
+  "rich-text#firstColSubtitle": {
+    "props": {
+      "textAlignment": "LEFT",
+      "textPosition": "LEFT",
+      "text": "Related Technology subtitle",
+      "blockClass": []
+    }
+  },
+  "flex-layout.col#secondColLink": {
+    "children": [
+      "analytics-wrapper#secondColLink"
+    ]
+  },
+  "analytics-wrapper#secondColLink": {
+    "title": "Analytics Wrapper del link 'scopri di più'",
+    "props": {
+      "isSlider": true,
+      "propsAnalytics": {
+        "analyticsProperties": "provide",
+        "nameEvent": "wellBeing_discoverMore",
+        "name": "promo",
+        "data": [
+          {
+            "title": "href",
+            "value": "/prodotti"
+          }
+        ]
+      }
+    },
+    "children": [
+      "link#secondColLink"
+    ]
+  },
+  "link#secondColLink": {
+    "props": {
+      "isPrevent": false,
+      "label": "Découvrir",
+      "href": "#",
+      "blockClass": "secondColLink"
+    }
+  },
+  "analytics-wrapper#info-card-article": {
+    "title": "Colonna di destra (AnalyticsWrapper)",
+    "props": {
+      "isSlider": true,
+      "propsAnalytics": {
+        "analyticsProperties": "provide",
+        "nameEvent": "wellBeing_discoverMore",
+        "name": "promo",
+        "data": [
+          {
+            "title": "href",
+            "value": "/produits"
+          }
+        ]
+      }
+    },
+    "children": [
+      "info-card#info-card-article"
+    ]
+  },
+  "info-card#info-card-article": {
+    "props": {
+      "id": "banner-grid-home",
+      "isFullModeStyle": false,
+      "imageUrl": "assets/grid6.jpg",
+      "headline": "Nuova asciugatrice Whirlpool FreshCare+",
+      "subhead": "100% Freschezza, anche se dimentichi il bucato",
+      "textMode": "rich-text",
+      "callToActionText": "SCOPRI di PIÙ",
+      "callToActionUrl": "/prova",
+      "textAlignment": "left",
+      "blockClass": [
+        "wellbeingInfoCardArticle",
+        "differentButtonArticle"
+      ],
+      "textPosition": "right"
+    }
+  },
+  "flex-layout.row#wellbeingArticle": {
+    "props": {
+      "blockClass": "articlesSection"
+    },
+    "children": [
+      "flex-layout.col#articlesSection"
+    ]
+  },
+  "analytics-wrapper#second-info-card-article": {
+    "title": "Seconda info-card (AnalyticsWrapper)",
+    "props": {
+      "isSlider": true,
+      "propsAnalytics": {
+        "analyticsProperties": "provide",
+        "nameEvent": "wellBeing_discoverMore",
+        "name": "promo",
+        "data": [
+          {
+            "title": "href",
+            "value": "/produits"
+          }
+        ]
+      }
+    },
+    "children": [
+      "info-card#wellbeingSecondBannerArticle"
+    ]
+  },
+  "info-card#wellbeingSecondBannerArticle": {
+    "props": {
+      "id": "banner-grid-home",
+      "isFullModeStyle": false,
+      "imageUrl": "assets/grid6.jpg",
+      "headline": "Nuova asciugatrice Whirlpool FreshCare+",
+      "subhead": "100% Freschezza, anche se dimentichi il bucato",
+      "textMode": "HTML",
+      "callToActionText": "SCOPRI di PIÙ",
+      "callToActionUrl": "/prova",
+      "textAlignment": "left",
+      "blockClass": "wellbeingSecondBanner",
+      "textPosition": "left"
+    }
+  }
+}

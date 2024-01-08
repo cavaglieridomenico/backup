@@ -1,0 +1,114 @@
+type CategoriesFields {
+  url: String,
+  name: String,
+  metaTitle: String,
+  metaDescription: String,
+  image: String,
+  id:String
+}
+
+
+type GroupFields {
+  catName:String,
+  url: String,
+  name: String,
+  image: String,
+  id:ID
+}
+
+type Faq {
+  id:ID
+  url:String
+  metaTitle:String
+  metaDescription:String
+  question:String
+  answer:String
+  featuredFrom:Boolean
+  category:String
+  group:String
+  categoryName:String
+  groupName:String
+}
+
+
+type GroupWithFaqs {
+  groupName:String,
+  groupId:ID,
+  faqs: [Faq]
+}
+
+input bothFaqInput {
+  category: FaqCategoryInput!
+  group:FaqGroupInput!
+}
+
+input FaqCategoryInput {
+  url: String,
+  name: String!,
+  metaTitle: String!,
+  metaDescription: String!,
+  image: String,
+}
+
+input FaqGroupInput {
+  url:String,
+  name:String!,
+  image:String
+}
+
+input UpdateCategoryOrGroup {
+  url:String,
+  name:String!,
+  metaTitle:String,
+  metaDescription:String,
+  image:String
+  id:ID!
+}
+
+input UpdateGroup {
+  url:String,
+  name:String!,
+  image:String,
+  id:ID!
+}
+
+input FaqGroupInputWithFather {
+  url:String,
+  name:String!,
+  image:String
+  fatherCategory:String!
+}
+
+input FaqInput{
+  url: String!,
+  metaTitle: String!,
+  metaDescription: String!,
+  question: String!,
+  answer: String!,
+  featuredFrom: Boolean!,
+  category: String!,
+  group: String!
+}
+
+
+input UpdateFaqInput {
+   url: String!,
+  metaTitle: String!,
+  metaDescription: String!,
+  question: String!,
+  answer: String!,
+  featuredFrom: Boolean!,
+  category: String!,
+  group: String!
+  id:ID!
+}
+
+
+input CategoryInput {
+    url:String,
+    name:String!,
+    metaTitle:String!,
+    metaDescription:String!,
+    image:String
+}
+

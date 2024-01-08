@@ -1,0 +1,185 @@
+.wrapper--stickyButton .container--stickyButton {
+  opacity: 0;
+  visibility: hidden;
+}
+.wrapper--stuck .container--stickyButton {
+  background: white;
+  padding-top: 1rem;
+  border-bottom: 1px solid #c9c9c9;
+  opacity: 1;
+  visibility: visible;
+  z-index: 3 !important;
+}
+.container--stickyButton :global(.vtex-button) {
+  margin: 1.5rem 3rem;
+}
+.container--stickyButton :global(.vtex-store-components-3-x-imageElement) {
+  width: 6rem;
+}
+.wrapper--stickyButton {
+  height: 50px !important;
+}
+.wrapper--mt-10 .container--mt-10 {
+  opacity: 0;
+  visibility: hidden;
+}
+.wrapper--mt-10 {
+  /*margin-top: -10rem;*/
+}
+.wrapper--stuck .container--mt-10 {
+  padding: 0 !important;
+  background: white;
+  border-bottom: 1px solid #c9c9c9;
+  opacity: 1;
+  visibility: visible;
+}
+.wrapper--stickyCardBottom {
+  visibility: hidden;
+  position: absolute !important;
+}
+:global(.vtex-sticky-layout-0-x-wrapper--stuck)
+  :global(.vtex-flex-layout-0-x-flexColChild--supportoCardBottom)
+  :global(.vtex-rich-text-0-x-paragraph--colonnaSupportoCard) {
+  display: none;
+  flex-direction: row;
+}
+:global(.vtex-sticky-layout-0-x-wrapper--stuck)
+  :global(.vtex-flex-layout-0-x-flexRowContent--supportoCardsBottom) {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  justify-content: space-between;
+  background-color: #f6f6f6;
+}
+:global(.vtex-sticky-layout-0-x-wrapper--stuck)
+  :global(.vtex-flex-layout-0-x-flexCol--supportoCard) {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly !important;
+  padding: 0;
+  margin-top: 2rem;
+}
+:global(.vtex-sticky-layout-0-x-wrapper--stuck)
+  :global(.vtex-flex-layout-0-x-flexRow--colonnaSupportoCardBottom) {
+  height: auto;
+}
+:global(.vtex-sticky-layout-0-x-wrapper--stuck)
+  :global(.vtex-flex-layout-0-x-stretchChildrenWidth) {
+  margin: 0;
+  /* width: 20% !important; */
+}
+:global(.vtex-sticky-layout-0-x-wrapper--stuck)
+  :global(.vtex-slider-layout-0-x-sliderLayoutContainer--carousel) {
+  background-color: #f2f2f2 !important;
+  margin-bottom: 0;
+  /* width: 20% !important; */
+}
+:global(.vtex-sticky-layout-0-x-wrapper--stuck)
+  :global(.vtex-slider-layout-0-x-sliderTrackContainer--carousel) {
+  max-width: 100%;
+}
+.wrapper--stuck .container--stickyCardBottom {
+  visibility: visible;
+}
+
+.container--top100 {
+  top: 125px !important;
+}
+.container--top90 {
+  top: 83px !important;
+}
+.container--sticky-header {
+  background: linear-gradient(to left, #282828 0%, #000000 100%) !important;
+}
+.container--stickyHeaderHpService {
+  background: linear-gradient(to left, #282828 0%, #000000 100%);
+  z-index: 1000;
+}
+/* Media Queries */
+@media only screen and (max-width: 1200px) and (min-width: 1026px) {
+  .wrapper--stuck .container--stickyButton {
+    /* top: 113px !important; */
+    top: 135px !important;
+    padding-top: 0;
+  }
+}
+@media only screen and (max-width: 1026px) and (min-width: 669px) {
+  .wrapper--stuck .container--stickyButton {
+    /* top: 105px !important; */
+    top: 90px !important;
+    padding-top: 0;
+  }
+}
+@media only screen and (max-width: 1026px) and (min-width: 669px) {
+  .wrapper--stuck .container--stickyButtonPdp {
+    /* top: 105px !important; */
+    /* top: 90px !important; */
+    padding-top: 0;
+  }
+}
+@media only screen and (max-width: 1200px) and (min-width: 1026px) {
+  .wrapper--stuck .container--stickyButtonPdp {
+    /* top: 113px !important; */
+    /* top: 135px !important; */
+    top: 83px !important;
+    padding-top: 0;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .container--mt-10 {
+    top: 90px !important;
+    bottom: unset !important;
+  }
+}
+@media only screen and (max-width: 668px) {
+  .container--mt-10 {
+    top: 90px !important;
+    bottom: unset !important;
+  }
+  .wrapper--stickyCardBottom {
+    display: none;
+  }
+  .container--stickyCardBottom {
+    display: none;
+  }
+  .container--stickyButton
+    :global(.vtex-flex-layout-0-x-flexRowContent--sticky) {
+    display: flex;
+    transform: scale(0.8);
+  }
+  .container--stickyButton :global(.vtex-button) {
+    margin: auto;
+    height: 58px;
+    border-radius: 0;
+  }
+  .wrapper--stuck .container--stickyButton {
+    position: fixed;
+    top: unset !important;
+    bottom: 0px;
+    padding: 0;
+  }
+}
+@media screen and (min-width: 600px) {
+  .wrapper--stickyLayoutSpareMobile {
+    display: none;
+  }
+  .wrapper--stickyLayoutSpare {
+    display: flex;
+  }
+}
+@media screen and (max-width: 600px) {
+  .wrapper--stickyLayoutSpareMobile {
+    display: flex;
+    overflow: hidden;
+  }
+  .wrapper--stickyLayoutSpare {
+    display: none;
+  }
+}
+@media only screen and (min-width: 668px) and (max-width: 1024px) {
+  .container--stickyButton :global(.vtex-button) {
+    margin: 0 !important;
+  }
+}

@@ -1,0 +1,804 @@
+{
+  "name": "crm-async-integration",
+  "vendor": "whirlpoolemea",
+  "version": "0.3.14",
+  "title": "CRM async connector",
+  "description": "App integrating Vtex with SAP CRM",
+  "categories": [],
+  "dependencies": {
+    "vtex.pixel-interfaces": "1.x"
+  },
+  "builders": {
+    "node": "6.x",
+    "react": "3.x",
+    "store": "0.x",
+    "pixel": "0.x",
+    "docs": "0.x"
+  },
+  "billingOptions": {
+    "termsURL": "https://compliance.vtex.com/gdpr/policies/vtex-privacy-policy",
+    "support": {
+      "url": "https://support.vtex.com/hc/requests"
+    },
+    "free": true
+  },
+  "scripts": {},
+  "credentialType": "absolute",
+  "policies": [
+    {
+      "name": "ADMIN_DS"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "api.vtex.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "webservicesq.cert.whirlpool.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "webservices.cert.whirlpool.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "emeaservicesq.cert.whirlpool.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "emeaservices.cert.whirlpool.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.myvtex.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.vtexcommercestable.com.br",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "portal.vtexcommercestable.com.br",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "d2c-fr-crm-async-flow-dot-go-whr-emea-digital-d2c-mdw.ey.r.appspot.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "d2c-fr-crm-async-flow-dot-whr-emea-digital-d2c.ew.r.appspot.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "d2c-pl-crm-async-flow-dot-go-whr-emea-digital-d2c-mdw.ey.r.appspot.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "d2c-pl-crm-async-flow-dot-whr-emea-digital-d2c.ew.r.appspot.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "bk-de-crm-async-flow-dot-go-whr-emea-digital-d2c-mdw.ey.r.appspot.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "bk-de-crm-async-flow-dot-whr-emea-digital-d2c.ew.r.appspot.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "d2c-uk-crm-async-flow-dot-go-whr-emea-digital-d2c-mdw.ey.r.appspot.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "d2c-uk-crm-async-flow-dot-whr-emea-digital-d2c.ew.r.appspot.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "d2c-it-crm-async-flow-dot-go-whr-emea-digital-d2c-mdw.ey.r.appspot.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "d2c-it-crm-async-flow-dot-whr-emea-digital-d2c.ew.r.appspot.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "d2c-cross-crm-async-flow-dot-go-whr-emea-digital-d2c-mdw.ey.r.appspot.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "d2c-cross-crm-async-flow-dot-whr-emea-digital-d2c.ew.r.appspot.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "accounts.google.com/o/oauth2/auth",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "oauth2.googleapis.com/token",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "www.googleapis.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "OMSViewer"
+    },
+    {
+      "name": "colossus-fire-event"
+    },
+    {
+      "name": "colossus-write-logs"
+    },
+    {
+      "name": "vbase-read-write"
+    }
+  ],
+  "settingsSchema": {
+    "title": "CRM connector",
+    "type": "object",
+    "properties": {
+      "crmEnvironment": {
+        "title": "CRM - Environment",
+        "type": "string",
+        "enum": [
+          "production",
+          "quality"
+        ],
+        "default": "quality"
+      },
+      "crmPassword": {
+        "title": "CRM - Password",
+        "type": "string"
+      },
+      "useSapPo": {
+        "title": "SAP PO",
+        "type": "boolean"
+      },
+      "isUkProject": {
+        "title": "UK integration",
+        "type": "boolean"
+      },
+      "doubleOptin": {
+        "title": "Double Optin",
+        "type": "boolean"
+      },
+      "profilingOptin": {
+        "title": "Profiling Optin",
+        "type": "boolean"
+      },
+      "checkoutAsGuest": {
+        "title": "Checkout as Guest",
+        "type": "boolean"
+      },
+      "newsletterAsGuest": {
+        "title": "Newsletter as Guest",
+        "type": "boolean"
+      },
+      "newsletterMDEntity": {
+        "title": "Newsletter - MD Entity",
+        "type": "string",
+        "default": "NL"
+      },
+      "attrOptin": {
+        "title": "CRM - Optin attributes (comma separated)",
+        "type": "string"
+      },
+      "attrChannel": {
+        "title": "CRM - Channel attributes (comma separated)",
+        "type": "string"
+      },
+      "attrProfiling": {
+        "title": "CRM - Profiling attributes (comma separated)",
+        "type": "string"
+      },
+      "attrSourceCampaign": {
+        "title": "CRM - Source campaign attributes (comma separated)",
+        "type": "string"
+      },
+      "allowedStates": {
+        "title": "CRM - Allowed states (comma separated)",
+        "type": "string"
+      },
+      "defaultLocale": {
+        "title": "CRM - Default locale (2 chars, example: EN)",
+        "type": "string"
+      },
+      "defaultSource": {
+        "title": "CRM - Default source (MAX 4 chars, example: MYAC)",
+        "type": "string"
+      },
+      "defaultCountry": {
+        "title": "CRM - Default country (2 chars, example: GB)",
+        "type": "string"
+      },
+      "webIdPrefix": {
+        "title": "CRM - WebId: prefix (e.g.: CCUK, BAUDE)",
+        "type": "string"
+      },
+      "maxNumOfCharForWebId": {
+        "title": "CRM - Web Id: maximum length",
+        "type": "number"
+      },
+      "maxNumOfDigitsForPhone": {
+        "title": "CRM - Phone number: maximum length",
+        "type": "number"
+      },
+      "crmRecoverPlan": {
+        "title": "CRM - Recover plan",
+        "type": "boolean"
+      },
+      "crmRecoverPlanStartDate": {
+        "title": "CRM - Recover plan - Start date (yyyy-mm-dd)",
+        "type": "string"
+      },
+      "newsletterAsGuestThroughGCP": {
+        "title": "Newsletter - GCP integration",
+        "type": "boolean"
+      },
+      "gcpHost": {
+        "title": "GCP - Host",
+        "type": "string"
+      },
+      "gcpProjectId": {
+        "title": "GCP - Project id",
+        "type": "string"
+      },
+      "gcpClientEmail": {
+        "title": "GCP - Client email",
+        "type": "string"
+      },
+      "gcpPrivateKey": {
+        "title": "GCP - Private key",
+        "type": "string"
+      },
+      "gcpTargetAudience": {
+        "title": "GCP - Target audience",
+        "type": "string"
+      },
+      "gcpBrand": {
+        "title": "GCP - Brand",
+        "type": "string"
+      },
+      "gcpCountry": {
+        "title": "GCP - Country",
+        "type": "string"
+      },
+      "crmEntityName": {
+        "title": "Vtex - CRM Backup: MD entity name",
+        "type": "string",
+        "default": "CC"
+      },
+      "enabledAPICredentials": {
+        "title": "Vtex - Enabled API credentials",
+        "type": "string"
+      },
+      "MDKey": {
+        "title": "Vtex - MD key",
+        "type": "string"
+      },
+      "enabledMDKeyHash": {
+        "title": "Vtex - Enabled MD key (hash)",
+        "type": "string"
+      },
+      "localTimeLocale": {
+        "title": "Vtex - Locale time - Locale (5 chars, example: en-GB)",
+        "type": "string"
+      },
+      "localTimeZone": {
+        "title": "Vtex - Locale time - Zone (example: Europe/Rome)",
+        "type": "string"
+      },
+      "authCookie": {
+        "title": "Vtex - Authentication cookie",
+        "type": "string",
+        "default": "VtexIdclientAutCookie_{{account}}"
+      },
+      "pixelCrmBackflow": {
+        "title": "Vtex - Enable pixel for CRM backflow",
+        "type": "boolean"
+      },
+      "isCCProject": {
+        "title": "CC Project",
+        "type": "boolean"
+      },
+      "epp": {
+        "title": "EPP",
+        "type": "object",
+        "properties": {
+          "mdEntityName": {
+            "title": "MD - Entity name",
+            "type": "string",
+            "default": "EM"
+          },
+          "whiteList": {
+            "title": "MD - White list",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "keyFields": {
+            "title": "SF - EPP Import - Key Fields",
+            "type": "string",
+            "enum": [
+              "email",
+              "clockNumber, hrNumber"
+            ],
+            "default": "clockNumber, hrNumber"
+          },
+          "tradePolicyId": {
+            "title": "Trade policy id",
+            "type": "string"
+          },
+          "loginUrl": {
+            "title": "Login URL",
+            "type": "string"
+          },
+          "attrOptinCC": {
+            "title": "CRM - Optin attributes for EPP (comma separated)",
+            "type": "string",
+            "default": "EU_CONSUMER_EPP"
+          }
+        }
+      },
+      "ff": {
+        "title": "FF",
+        "type": "object",
+        "properties": {
+          "mdEntityName": {
+            "title": "MD - Entity name",
+            "type": "string",
+            "default": "FF"
+          },
+          "tradePolicyId": {
+            "title": "Trade policy id",
+            "type": "string"
+          },
+          "loginUrl": {
+            "title": "Login URL",
+            "type": "string"
+          },
+          "attrOptinCC": {
+            "title": "CRM - Optin attributes for FF (comma separated)",
+            "type": "string",
+            "default": "EU_CONSUMER_FF"
+          }
+        }
+      },
+      "vip": {
+        "title": "VIP",
+        "type": "object",
+        "properties": {
+          "mdEntityName": {
+            "title": "MD - Entity name",
+            "type": "string",
+            "default": "PA"
+          },
+          "tradePolicyId": {
+            "title": "Trade policy id",
+            "type": "string"
+          },
+          "loginUrl": {
+            "title": "Login URL",
+            "type": "string"
+          },
+          "attrOptinCC": {
+            "title": "CRM - Optin attributes for VIP (comma separated)",
+            "type": "string",
+            "default": "EU_CONSUMER_VIP"
+          }
+        }
+      },
+      "productRegistration": {
+        "title": "Product Registration",
+        "type": "object",
+        "properties": {
+          "fields": {
+            "title": "Fields",
+            "type": "object",
+            "properties": {
+              "Contactallowance": {
+                "title": "Contact Allowance",
+                "type": "string",
+                "default": "3"
+              },
+              "Dataorigintype": {
+                "title": "Data Origin Type",
+                "type": "string",
+                "default": "OREG"
+              },
+              "OtherInfo": {
+                "title": "Other Info",
+                "type": "string",
+                "default": "3YCHECKUP"
+              },
+              "Zz0010": {
+                "title": "ZZ0010",
+                "type": "string",
+                "default": "32"
+              },
+              "Zz0018": {
+                "title": "ZZ0018",
+                "type": "string",
+                "default": "EUR"
+              },
+              "Zz0020": {
+                "title": "ZZ0020",
+                "type": "string",
+                "default": "OREG"
+              }
+            }
+          },
+          "taxonomy": {
+            "title": "Taxonomy",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "title": "ID",
+                  "type": "string"
+                },
+                "productFamily": {
+                  "title": "Product Family",
+                  "type": "string"
+                },
+                "magCode": {
+                  "title": "MAG Code",
+                  "type": "string"
+                }
+              }
+            },
+            "default": [
+              {
+                "id": "MICROWAVE",
+                "productFamily": "50",
+                "magCode": "F22"
+              },
+              {
+                "id": "MICROWAVE_CRISP",
+                "productFamily": "50",
+                "magCode": "ZZZ"
+              },
+              {
+                "id": "DISHWASHER",
+                "productFamily": "30",
+                "magCode": "F06"
+              },
+              {
+                "id": "WASHING",
+                "productFamily": "20",
+                "magCode": "F63"
+              },
+              {
+                "id": "FREEZER",
+                "productFamily": "11",
+                "magCode": "F13"
+              },
+              {
+                "id": "FRIDGE",
+                "productFamily": "10",
+                "magCode": "F36"
+              },
+              {
+                "id": "FRIDGE_SIDE_BY_SIDE",
+                "productFamily": "10",
+                "magCode": "F15"
+              },
+              {
+                "id": "HOB",
+                "productFamily": "42",
+                "magCode": "000"
+              },
+              {
+                "id": "OVEN",
+                "productFamily": "41",
+                "magCode": "F10"
+              },
+              {
+                "id": "DRYING",
+                "productFamily": "21",
+                "magCode": "F07"
+              },
+              {
+                "id": "HOOD",
+                "productFamily": "43",
+                "magCode": "F18"
+              },
+              {
+                "id": "AIR-COND",
+                "productFamily": "90",
+                "magCode": "F26"
+              },
+              {
+                "id": "WINE-CELLER",
+                "productFamily": "10",
+                "magCode": "F35"
+              },
+              {
+                "id": "WATER_DISPENSER",
+                "productFamily": "44",
+                "magCode": "F72"
+              },
+              {
+                "id": "STAND_MIXER",
+                "productFamily": "91",
+                "magCode": "F89"
+              },
+              {
+                "id": "BLENDER",
+                "productFamily": "91",
+                "magCode": "F75"
+              },
+              {
+                "id": "FOOD_PROCESSOR",
+                "productFamily": "91",
+                "magCode": "F76"
+              },
+              {
+                "id": "TOASTER",
+                "productFamily": "91",
+                "magCode": "F82"
+              },
+              {
+                "id": "COFFEE_MACHINE",
+                "productFamily": "90",
+                "magCode": "F61"
+              },
+              {
+                "id": "BURR_GRINDER",
+                "productFamily": "90",
+                "magCode": "F84"
+              },
+              {
+                "id": "WAFFLE_BAKER",
+                "productFamily": "91",
+                "magCode": "F85"
+              },
+              {
+                "id": "OTHERS",
+                "productFamily": "90",
+                "magCode": "F37"
+              },
+              {
+                "id": "HAND_BLENDER",
+                "productFamily": "91",
+                "magCode": "F90"
+              },
+              {
+                "id": "KETTLE",
+                "productFamily": "91",
+                "magCode": "F83"
+              },
+              {
+                "id": "COOK_PROCESSOR",
+                "productFamily": "91",
+                "magCode": "F99"
+              },
+              {
+                "id": "VACUUM_MACHINE",
+                "productFamily": "90",
+                "magCode": "F95"
+              },
+              {
+                "id": "SHOCKFREEZER",
+                "productFamily": "11",
+                "magCode": "F97"
+              },
+              {
+                "id": "ICE_MAKER",
+                "productFamily": "12",
+                "magCode": "F94"
+              },
+              {
+                "id": "WARMING_DRAWER",
+                "productFamily": "90",
+                "magCode": "F95"
+              },
+              {
+                "id": "BARBECUE",
+                "productFamily": "90",
+                "magCode": "F77"
+              },
+              {
+                "id": "JUICER",
+                "productFamily": "90",
+                "magCode": "G01"
+              },
+              {
+                "id": "COFFEE_MAKER",
+                "productFamily": "90",
+                "magCode": "F61"
+              },
+              {
+                "id": "FREE_STANDING_COOKER",
+                "productFamily": "42",
+                "magCode": "F19"
+              },
+              {
+                "id": "WASHER_DRYER",
+                "productFamily": "30",
+                "magCode": "F55"
+              },
+              {
+                "id": "WASH_DRYERS",
+                "productFamily": "20",
+                "magCode": "F47"
+              },
+              {
+                "id": "FREEZER_NO-FROST",
+                "productFamily": "11",
+                "magCode": "F13"
+              },
+              {
+                "id": "KITCHEN",
+                "productFamily": "41",
+                "magCode": "000"
+              },
+              {
+                "id": "MICROWAVE_COMBINED",
+                "productFamily": "50",
+                "magCode": "F22"
+              },
+              {
+                "id": "COMBINED_REFRIGERATOR",
+                "productFamily": "10",
+                "magCode": "F48"
+              },
+              {
+                "id": "COMBINED_REFRIGERATOR_SIDE_BY_SIDE",
+                "productFamily": "10",
+                "magCode": "F49"
+              },
+              {
+                "id": "WASHING_MACHINE",
+                "productFamily": "20",
+                "magCode": "F63"
+              },
+              {
+                "id": "HAND_MIXER",
+                "productFamily": "91",
+                "magCode": "F88"
+              },
+              {
+                "id": "COOKER",
+                "productFamily": "40",
+                "magCode": "F72"
+              },
+              {
+                "id": "MICROWAVE_OVEN",
+                "productFamily": "50",
+                "magCode": "F22"
+              },
+              {
+                "id": "WASHER-DRYER",
+                "productFamily": "20",
+                "magCode": "F47"
+              },
+              {
+                "id": "DRYER",
+                "productFamily": "21",
+                "magCode": "F07"
+              },
+              {
+                "id": "AIR_CONDITIONER",
+                "productFamily": "90",
+                "magCode": "F26"
+              },
+              {
+                "id": "FRIDGEFREEZER",
+                "productFamily": "10",
+                "magCode": "F48"
+              },
+              {
+                "id": "SPARKLING_BEVERAGE_MAKER",
+                "productFamily": "90",
+                "magCode": "F98"
+              },
+              {
+                "id": "STAND_MIXER_ACCESSORIES",
+                "productFamily": "91",
+                "magCode": "F66"
+              },
+              {
+                "id": "SIDE_BY_SIDE_REFRIGERATORS",
+                "productFamily": "10",
+                "magCode": "F15"
+              },
+              {
+                "id": "COFFEE_MAKER",
+                "productFamily": "91",
+                "magCode": "F61"
+              },
+              {
+                "id": "HOODS",
+                "productFamily": "43",
+                "magCode": "F18"
+              },
+              {
+                "id": "SINGLE-DOOR_FRIDGE",
+                "productFamily": "10",
+                "magCode": "53"
+              },
+              {
+                "id": "COOKERS",
+                "productFamily": "91",
+                "magCode": "F77"
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

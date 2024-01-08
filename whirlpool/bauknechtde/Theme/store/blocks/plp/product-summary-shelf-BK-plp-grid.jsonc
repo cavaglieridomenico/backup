@@ -1,0 +1,107 @@
+{
+  "product-summary.shelf.product-comparison#bauknechtPLP-grid": {
+    "children": [
+      "promo-countdown#plp-mobile",
+      "flex-layout.row#productPromotionAndWishlistPLPBK-grid",
+      "flex-layout.row#productImageMobilePLPBK",
+      "condition-layout.product#blackFridayPopupPLP-Grid",
+      "condition-layout.product#productTitleMobilePLPBK",
+      "condition-layout.product#productRatingMobilePLPBK",
+      "condition-layout.product#card-bottom"
+    ],
+    "props": {
+      "blockClass": "bauknechtPLPCard-mobile"
+    }
+  },
+  "product-summary.shelf.product-comparison#bauknechtPLP-grid-2": {
+    "children": [
+      "promo-countdown#plp-mobile",
+      "flex-layout.row#productPromotionAndWishlistPLPBK-grid-2",
+      "flex-layout.row#productImageMobilePLPBK",
+      "condition-layout.product#blackFridayPopupPLP-Grid",
+      "condition-layout.product#productTitleMobilePLPBK",
+      "condition-layout.product#productRatingMobilePLPBK",
+      "condition-layout.product#card-bottom"
+    ],
+    "props": {
+      "blockClass": "bauknechtPLPCard-mobile"
+    }
+  },
+  "flex-layout.row#productPromotionAndWishlistPLPBK-grid": {
+    "children": [
+      "flex-layout.col#productPromotionPLPBK-grid",
+      "flex-layout.row#comparisonAndWishlist"
+    ],
+    "props": {
+      "colSizing": "auto",
+      "blockClass": [
+        "productPromotionAndWishlistPLPBK",
+        "productPromotionAndWishlistPLPBK-grid"
+      ]
+    }
+  },
+  "flex-layout.row#productPromotionAndWishlistPLPBK-grid-2": {
+    "children": [
+      "flex-layout.col#productPromotionPLPBK-grid",
+      "flex-layout.row#comparisonAndWishlist-2"
+    ],
+    "props": {
+      "colSizing": "auto",
+      "blockClass": [
+        "productPromotionAndWishlistPLPBK",
+        "productPromotionAndWishlistPLPBK-grid"
+      ]
+    }
+  },
+  "flex-layout.col#productPromotionPLPBK-grid": {
+    "props": {
+      "blockClass": "productPromotionPLPBK-grid"
+    },
+    "children": ["flex-layout.row#promotionPLPBK-Grid"]
+  },
+  "flex-layout.row#promotionPLPBK-Grid": {
+    "children": [
+      "vtex.product-highlights@2.x:product-highlights#promotionPLPBK"
+    ],
+    "props": {
+      "blockClass": ["promotionPLPBK", "promotionPLPBK-Grid"]
+    }
+  },
+  "flex-layout.row#comparisonAndWishlist": {
+    "props": {
+      "blockClass": "promotionPLPButtons"
+    },
+    "children": [
+      "condition-layout.category#spare-comparison",
+      "flex-layout.col#productWishlistPLPBK-grid"
+    ]
+  },
+  "flex-layout.row#comparisonAndWishlist-2": {
+    "props": {
+      "blockClass": "promotionPLPButtons"
+    },
+    "children": [
+      "condition-layout.product#isSparePartsOrAccessory",
+      "flex-layout.col#productWishlistPLPBK-grid"
+    ]
+  },
+  "flex-layout.col#productComparisonPLPBK-grid": {
+    "children": ["product-comparison-block.selector#BKPLP-Grid"]
+  },
+  "product-comparison-block.selector#BKPLP-Grid": {
+    "props": {
+      "blockClass": ["compareSearchBKPLP", "productComparisonPLPBK-grid"]
+    }
+  },
+  "flex-layout.col#productWishlistPLPBK-grid": {
+    "children": ["add-to-list-btn#BKPLP"]
+  },
+  "flex-layout.row#add-to-cart-out-of-stock": {
+    "children": ["availability-subscriber-custom#sparePlp"]
+  },
+  "availability-subscriber-custom#sparePlp": {
+    "props": {
+      "isPlp": true
+    }
+  }
+}

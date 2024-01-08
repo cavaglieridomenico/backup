@@ -1,0 +1,350 @@
+{
+  /* ---------------------- FOOTER ---------------------------- */
+  "footer": {
+    "blocks": [
+      "footer-layout.desktop",
+      "footer-layout.mobile"
+    ]
+  },
+  /* ---------------------- DESKTOP ---------------------------- */
+  "footer-layout.desktop": {
+    "props": {
+      "blockClass": "footer-container-desktop"
+    },
+    "children": [
+      "flex-layout.row#footer-row"
+    ]
+  },
+  /* ---------------------- FLEX LAYOUT ---------------------------- */
+  "flex-layout.row#footer-row": {
+    "children": [
+      "vtex.menu@2.x:menu#footer-menu",
+      "flex-layout.col#follow-us"
+    ],
+    "props": {
+      "preventHorizontalStretch": true,
+      "blockClass": "footerRowDesktop"
+    }
+  },
+  "flex-layout.col#follow-us": {
+    "props": {
+      "blockClass": "follow-us-container"
+    },
+    "children": [
+      "flex-layout.row#follow-us-row"
+    ]
+  },
+  /* ---------------------- MENU ITEM LABELS ---------------------------- */
+  "vtex.menu@2.x:menu#footer-menu": {
+    "props": {
+      "blockClass": "footerMenu"
+    },
+    "children": [
+      /* "menu-item#store-locator", */
+      // "menu-item#dolt-together",
+      /*  "menu-item#faq-footer", */
+      // "menu-item#support",
+      // "menu-item#legal-issues",
+      // "menu-item#manuals",
+      // "menu-item#safety",
+      "link#footerMenu_01-item_01",
+      "link#footerMenu_01-item_02",
+      "link#footerMenu_01-item_03",
+      "link#footerMenu_01-item_04",
+      "link#footerMenu_01-item_05",
+      "link#footerMenu_01-item_youreko",
+      "toggle-display#preferences-cookies"
+    ]
+  },
+  "toggle-display#preferences-cookies": {
+    "props": {
+      "text": "Gestione preferenze"
+    }
+  },
+  /* ---------------------- FOLLOW US ROW ---------------------------- */
+  "flex-layout.row#follow-us-row": {
+    "props": {
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#follow-us-text",
+      "social-networks"
+    ]
+  },
+  /* ---------------------- FOLLOW US ---------------------------- */
+  "rich-text#follow-us-text": {
+    "props": {
+      "text": "Seguici",
+      "blockClass": "followUsText"
+    }
+  },
+  /* ---------------------- SOCIAL NETWORKS ---------------------------- */
+  "social-networks": {
+    "props": {
+      "blockClass": "social-icons",
+      "socialNetworks": [
+        {
+          "name": "Facebook",
+          "url": "https://www.facebook.com/Indesit/",
+          "target": "_blank"
+        },
+        {
+          "name": "Instagram",
+          "url": "https://www.instagram.com/indesit_italia/",
+          "target": "_blank"
+        },
+        {
+          "name": "Youtube",
+          "url": "https://www.youtube.com/c/IndesitItalia",
+          "target": "_blank"
+        }
+      ]
+    }
+  },
+  /* ---------------------- MOBILE ---------------------------- */ /* BREAK POINT DA 1025 PX */
+  "footer-layout.mobile": {
+    "props": {
+      "blockClass": "footer-container-mobile"
+    },
+    "children": [
+      "flex-layout.row#footer-row-mobile"
+    ]
+  },
+  /* ---------------------- FLEX LAYOUT ---------------------------- */
+  "flex-layout.row#footer-row-mobile": {
+    "children": [
+      "flex-layout.col#links-mobile",
+      "flex-layout.col#follow-us-mobile"
+    ],
+    "props": {
+      "preventHorizontalStretch": true,
+      "blockClass": "footerRowMobile"
+    }
+  },
+  "flex-layout.col#links-mobile": {
+    "props": {
+      "blockClass": "links-footer"
+    },
+    "children": [
+      "flex-layout.row#links-row-mobile"
+    ]
+  },
+  "flex-layout.col#follow-us-mobile": {
+    "props": {
+      "blockClass": "follow-us-footer"
+    },
+    "children": [
+      "flex-layout.row#follow-us-row-mobile"
+    ]
+  },
+  /* ---------------------- LINKS ROW ---------------------------- */
+  "flex-layout.row#links-row-mobile": {
+    "props": {
+      "preventHorizontalStretch": true,
+      "blockClass": "links"
+    },
+    "children": [
+      "flex-layout.col#links-left",
+      "flex-layout.col#links-right"
+    ]
+  },
+  "flex-layout.col#links-left": {
+    "props": {
+      "blockClass": "links-left"
+    },
+    "children": [
+      /* "link#store-locator-mobile-label", */
+      "link#legal-issues",
+      "link#support-mobile",
+      "toggle-display#preferences-cookies"
+    ]
+  },
+  "flex-layout.col#links-right": {
+    "props": {
+      "blockClass": "links-right"
+    },
+    "children": [
+      /* "link#faq-mobile", */
+      "link#doittogether",
+      "link#safety-mobile",
+      "link#manuals"
+    ]
+  },
+  /* ---------------------- LINKS LEFT ---------------------------- */
+  "link#store-locator-mobile-label": {
+    "props": {
+      "href": "/store-locator"
+    },
+    "children": [
+      "rich-text#sl-text"
+    ]
+  },
+  "rich-text#sl-text": {
+    "props": {
+      "blockClass": "links-text",
+      "text": "Store Locator"
+    }
+  },
+  "link#support-mobile": {
+    "props": {
+      "label": "Assistenza",
+      "href": "/assistenza",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "menu_footer_click",
+      "analyticsType": "",
+      "isPrevent": false,
+      "clickArea": "footer",
+      "blockClass": [
+        "footer-item"
+      ]
+    }
+    //"children": ["rich-text#sp-text"]
+  },
+  // "rich-text#sp-text": {
+  //   "props": {
+  //     "blockClass": "links-text",
+  //     "text": "Assistenza"
+  //   }
+  // },
+  "link#manuals": {
+    "props": {
+      "label": "Manuali",
+      "href": "/assistenza/manuali-istruzione",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "menu_footer_click",
+      "analyticsType": "",
+      "isPrevent": false,
+      "clickArea": "footer",
+      "blockClass": [
+        "footer-item"
+      ]
+    }
+    //"children": ["rich-text#manuals"]
+  },
+  // "rich-text#manuals": {
+  //   "props": {
+  //     "blockClass": "links-text",
+  //     "text": "Manuali"
+  //   }
+  // },
+  /* ---------------------- LINKS RIGHT ---------------------------- */
+  /*  "link#faq-mobile": {
+    "props": {
+      "href": "/faq"
+    },
+    "children": [
+      "rich-text#faq-text"
+    ]
+  },
+  "rich-text#faq-text": {
+    "props": {
+      "blockClass":"links-text",
+      "text": "FAQ"
+    }
+  }, */
+  "link#legal-issues": {
+    "props": {
+      "label": "Termini",
+      "href": "/termini",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "menu_footer_click",
+      "analyticsType": "",
+      "isPrevent": false,
+      "clickArea": "footer",
+      "blockClass": [
+        "footer-item"
+      ]
+    }
+    //"children": ["rich-text#li-text"]
+  },
+  // "rich-text#li-text": {
+  //   "props": {
+  //     "blockClass": "links-text",
+  //     "text": "Termini"
+  //   }
+  // },
+  "link#doittogether": {
+    "props": {
+      "label": "#DoItTogether",
+      "href": "/do-it-together",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "menu_footer_click",
+      "analyticsType": "",
+      "isPrevent": false,
+      "clickArea": "footer",
+      "blockClass": [
+        "footer-item"
+      ]
+    }
+    //"children": ["rich-text#dit-text"]
+  },
+  // "rich-text#dit-text": {
+  //   "props": {
+  //     "blockClass": "links-text",
+  //     "text": "#DoItTogether"
+  //   }
+  // },
+  //SAFETY
+  "link#safety-mobile": {
+    "props": {
+      "label": "Safety",
+      "href": "https://www.indesithotpointsafety.com/ ",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "menu_footer_click",
+      "analyticsType": "",
+      "isPrevent": false,
+      "clickArea": "footer",
+      "blockClass": [
+        "footer-item"
+      ]
+    }
+    //"children": ["rich-text#safety-text-mobile"]
+  },
+  // "rich-text#safety-text-mobile": {
+  //   "props": {
+  //     "blockClass": "links-text",
+  //     "text": "Safety"
+  //   }
+  // },
+  /* ---------------------- FOLLOW US ROW ---------------------------- */
+  "flex-layout.row#follow-us-row-mobile": {
+    "props": {
+      "preventHorizontalStretch": true,
+      "blockClass": "followUsRowMobile"
+    },
+    "children": [
+      "rich-text#follow-us-text-mobile",
+      "social-networks#mobile"
+    ]
+  },
+  /* ---------------------- FOLLOW US ---------------------------- */
+  "rich-text#follow-us-text-mobile": {
+    "props": {
+      "blockClass": "followUsTextMobile",
+      "text": "Seguici"
+    }
+  },
+  /* ---------------------- SOCIAL NETWORKS MOBILE ---------------------------- */
+  "social-networks#mobile": {
+    "props": {
+      "blockClass": "social-icons-mobile",
+      "socialNetworks": [
+        {
+          "name": "Facebook",
+          "url": "https://www.facebook.com/Indesit/",
+          "target": "_blank"
+        },
+        {
+          "name": "Instagram",
+          "url": "https://www.instagram.com/indesit_italia/",
+          "target": "_blank"
+        },
+        {
+          "name": "Youtube",
+          "url": "https://www.youtube.com/c/IndesitItalia",
+          "target": "_blank"
+        }
+      ]
+    }
+  }
+}

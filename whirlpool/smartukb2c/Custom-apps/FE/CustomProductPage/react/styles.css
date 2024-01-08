@@ -1,0 +1,732 @@
+.customProductPage {
+    width: 100%;
+    font-family: quicksandRegular!important;
+}
+
+.customProductPageModalImage {
+    background: #fff;
+    border: 2px solid #aaa;
+    border-radius: 5px;
+    z-index: 999;
+    max-width: 49%;
+    /* margin: -150vh auto; */
+    padding: 1em 2em 2em;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    right: 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.customProductPageModalImageOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    background-color: #000;
+    opacity: 0.75;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* Remove default arrow */
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024"%3E%3Cpath fill="currentColor" d="M831.872 340.864L512 652.672L192.128 340.864a30.592 30.592 0 0 0-42.752 0a29.12 29.12 0 0 0 0 41.6L489.664 714.24a32 32 0 0 0 44.672 0l340.288-331.712a29.12 29.12 0 0 0 0-41.728a30.592 30.592 0 0 0-42.752 0z"%2F%3E%3C%2Fsvg%3E');
+    background-position: 97%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-bottom: 100px;
+    outline: none !important;
+    color: #495057;
+}
+
+select option {
+    text-align: left;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 5px;
+}
+
+select option:nth-child(1) {
+    display: none;
+}
+
+.customProductPageHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to right, #1E6F90, #0C3E58)!important;
+    padding-top: 30px;
+    padding-bottom: 70px;
+    color: white;
+}
+
+.customProductPageSparePartsCard a {
+    text-decoration: none;
+    color: #000;
+}
+
+.customProductPageFilterBy {
+    font-size: 1.5rem;
+    margin-top: 50px;
+}
+
+.customProductPageHeaderTitle {
+    font-size: 1.5rem;
+    font-family: quicksandRegular;
+}
+
+.customProductPageHeader h4 {
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-top: 0;
+    color: #FFF;
+}
+
+.customProductPage p {
+    margin-bottom: 5px;
+}
+
+.customProductPageCategoriesWrapper {
+    flex-direction: column;
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+
+.customProductPageCategoriesWrapper>p {
+    text-align: center;
+}
+
+.customProductPageCategories {
+    width: 100%;
+    max-width: 100%!important;
+    position: relative;
+}
+
+.customProductPageCategoriesSelectLabel {
+    position: absolute;
+    color: #6c757d;
+    padding-left: 150px;
+    top: 28px;
+}
+
+.customProductPageCategory {
+    color: #6c757d;
+    font-family: quicksandRegular;
+    font-size: 0.8rem;
+    margin: 10px;
+}
+
+.customProductPageCategory span {
+    color: #6c757d;
+}
+
+.customProductPageCategory b {
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.customProductPageCategoryActive {
+    border: 1px solid #3AB5BE;
+    text-align: left;
+}
+
+.customProductPageCategory:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.customProductPageCategory img {
+    /*height: 150px;*/
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.customProductPageTablesWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 0px;
+    padding-bottom: 100px;
+    background-color: #f2f2f2;
+    color: #000;
+}
+
+.customProductPageTablesWrapper>img {
+    margin-top: 70px;
+}
+
+.customProductPageTablesWrapper p {
+    margin-top: 40px;
+    font-size: 1.4rem;
+}
+
+.customProductPageTables {
+    margin: 0 auto;
+    margin-top: 160px;
+    margin-bottom: 20px;
+    padding-top: 0px;
+    padding-bottom: 67px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    flex-wrap: wrap;
+    box-shadow: 0px -15px 11px -16px #000000;
+    background-color: #f2f2f2;
+    margin-top: -80px;
+    padding-left: 60px;
+    padding-right: 60px;
+    flex-direction: column;
+}
+
+.customProductPageTablesContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.customProductPageTables p {
+    margin-bottom: 50px;
+}
+
+.customProductPageTable {
+    flex-basis: 20%;
+    padding: 40px;
+    display: flex;
+    justify-content: space-around;
+    margin-right: 15px;
+    background-color: #fff;
+    position: relative;
+    margin-top: 15px;
+    /* gioca con le media query, trova il modo migliore */
+}
+
+.customProductPageTable img {
+    margin: 0 auto;
+    max-width: 150px;
+}
+
+
+/*
+.customProductPageTable {
+    position: relative;
+    width: 20%;
+    height: 180px
+}
+
+.customProductPageTable img {
+    position: relative;
+    max-width: 150px;
+}
+
+.customProductPageTable svg {
+    position: absolute;
+    height: 30px;
+    bottom: 10px;
+    right: 10px;
+    z-index: 999;
+}
+
+.customProductPageTable svg:hover {
+    cursor: pointer;
+}
+
+.customProductPageTable svg:hover path {
+    fill: #3AB5BE
+} */
+
+.customProductPageProductsFilter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: -70px;
+    padding: 20px 0;
+    width: 80%;
+    background-color: #fff;
+    -webkit-box-shadow: 0px -15px 11px -16px #00000051;
+    box-shadow: 0px -15px 11px -16px #00000051;
+}
+
+.customProductPageProductsFilterWrapper {
+    display: block;
+    text-align: center;
+    width: 100%;
+    color: #212529;
+    margin: 0 auto;
+    text-transform: capitalize;
+    padding-bottom: 20px;
+}
+
+.customProductPageProductsFilterWrapper p {
+    font-size: 1.5rem!important;
+}
+
+.customProductPageProductsFilterParagraph {
+    padding-right: 10px;
+}
+
+.customProductPageSpareParts {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+.customProductPageSpareParts button {
+    max-width: 200px;
+}
+
+.customProductPageSparePartsCard {
+    width: 80%;
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid #f2f2f2;
+    margin-top: 30px;
+    height: fit-content;
+    position: relative;
+}
+
+.customProductPageSparePartsCardWrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.customProductPageSparePartsCardImageContainer {
+    margin: 10px auto;
+    flex-basis: 20%;
+    max-width: 330px;
+    padding: 15px;
+}
+
+.customProductPageSparePartsCardImageContainer img {
+    height: 200px;
+}
+
+.customProductPageSparePartsCardInfo a {
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.customProductPageSparePartsCardInfo p {
+    font-size: 1rem;
+    color: #495057;
+    text-align: left;
+    font-weight: bolds;
+}
+
+.customProductPageSparePartsCardInfo {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 10px;
+    flex-basis: 80%;
+    justify-content: space-between;
+    background-color: #f2f2f2;
+    text-decoration: none;
+    color: #000;
+}
+
+.customProductPageSparePartsCardInfoRow {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.customProductPageSparePartsCardInfoRowLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.customProductPageSparePartsCardInfoRowRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.customProductPageSparePartsCardFooter {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.customProductPageSparePartsCardFooter button {
+    background: #3AB5BE!important;
+    width: fit-content;
+    border-color: #3AB5BE;
+    border-radius: 5px;
+    font-size: 0.8rem;
+}
+
+.customProductPageSparePartsCardFooter button span {
+    display: flex;
+    padding: 0 15px;
+    align-items: center;
+}
+
+.customProductPageSparePartsAvailability {
+    display: flex;
+    align-items: center;
+}
+
+.customProductPageSparePartsAvailability svg {
+    margin-left: 10px;
+}
+
+.customProductPageSparePartsCardFooter button svg {
+    height: 20px;
+    margin-left: 10px;
+    fill: #fff;
+}
+
+.customProductPageSparePartsCardFooter a {
+    max-width: 200px;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+}
+
+.customProductPageSparePartsCardProductPrice {
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: end;
+}
+
+.customProductPageSparePartsCardInfoTableReference {
+    position: absolute;
+    /* top: -40px; */
+    background-color: #aaa;
+    padding: 6px;
+    bottom: 30px;
+    color: #fff;
+}
+
+.customProductPageLoader {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    opacity: .7;
+    top: 0;
+    z-index: 9999;
+    left: 0;
+}
+
+.customProductPageLoaderSpinner {
+    height: 60px;
+    animation: rotation 1s infinite linear;
+    margin: 0 auto;
+    top: 20%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.customProductPageLine {
+    height: 1px;
+    width: 60%;
+    margin: 0 auto;
+    background-color: #FFF;
+    margin-top: 15px;
+}
+
+.customProductPageSelectCategories {
+    width: 80%;
+    margin: 0 auto;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 auto;
+    border-radius: 5px;
+    text-transform: capitalize;
+    margin-top: 30px;
+    padding: 0 3%;
+    font-size: 21px;
+    background-size: 35px!important;
+    background-position: 99%!important;
+}
+
+.customProductPageSparePartsCardInfoRowRightMobile {
+    display: none;
+}
+
+.customProductPageModalContainer {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.customProductPageFilterInput {
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+.customProductPageInputText {
+    width: 100%!important;
+    padding: 0 20px;
+    border: 1px solid #DDD!important;
+    border-radius: 5px 0 0 5px!important;
+    background-color: #f2f2f2;
+}
+
+.customProductPageIcon {
+    background-color: #3AB5BE;
+    color: #fff;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 5px 5px 0;
+}
+
+.customProductPageCloseIconContainer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.customProductPageCloseIcon {
+    width: 30px;
+    height: 30px;
+}
+
+.customProductPageTableSelected {
+    flex-basis: 20%;
+    padding: 40px;
+    display: flex;
+    justify-content: space-around;
+    margin-right: 15px;
+    background-color: #fff;
+    border: 1px solid #3AB5BE;
+    position: relative;
+    /* gioca con le media query, trova il modo migliore */
+}
+
+.customProductPageTableSelected img {
+    margin: 0 auto;
+    max-width: 150px;
+}
+
+.customProductPageCloseIcon:hover {
+    cursor: pointer;
+}
+
+.customProductPageTable:hover,
+.customProductPageTableSelected:hover,
+.customProductPageSearchIconContainer:hover {
+    cursor: pointer;
+}
+
+.customProductPageSearchIconContainer {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    height: 20px;
+    width: 20px;
+}
+
+.customProductPageSearchIconContainer path {
+    fill: #000!important;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+@media only screen and (max-width: 931px) {
+    .customProductPageSparePartsCardInfoTableReference {
+        position: relative;
+        width: fit-content;
+        background-color: #aaa;
+        padding: 6px;
+        color: #fff;
+        margin-bottom: 16px;
+    }
+    .customProductPageSparePartsCardProductPrice {
+        font-size: 1.5rem !important;
+    }
+    .customProductPageSparePartsCard {
+        width: 100%;
+    }
+    .customProductPageHeader p {
+        text-align: center;
+    }
+    .customProductPageHeader {
+        margin-top: 100px;
+    }
+    .customProductPageCategoriesWrapper {
+        width: 100%;
+        display: flex;
+        align-items: flex-start!important;
+    }
+    .customProductPageFilterBy {
+        text-align: center;
+        width: 100%;
+    }
+    .customProductPageProductsFilterParagraph {
+        margin-top: 10px;
+    }
+    .customProductPageSpareParts button {
+        max-width: 100%;
+        width: 100%;
+        margin-top: 30px;
+    }
+    .customProductPageSparePartsCardInfoRowRight {
+        display: none;
+    }
+    .customProductPageSparePartsCardInfoRowRightMobile {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .customProductPageSparePartsCardImageContainer {
+        display: flex;
+        justify-content: space-between;
+    }
+    .customProductPageSparePartsCardImageContainer img {
+        height: 155px;
+    }
+    .customProductPageSparePartsCardInfoRowLeft b {
+        text-align: left;
+    }
+    .customProductPageCategory {
+        margin-left: 0;
+        width: 30%;
+        margin-right: 3%;
+        margin-bottom: 20px;
+    }
+    .customProductPageTablesWrapper {
+        width: 100%;
+        display: flex;
+        padding-bottom: 40px;
+    }
+    .customProductPageTable {
+        width: 49%;
+        margin: 0 auto;
+    }
+    .customProductPageTableSelected {
+        width: 49%;
+        margin: 0 auto;
+    }
+    .customProductPageTables p {
+        margin-top: 0;
+        text-align: center;
+    }
+    .customProductPageTables {
+        padding: 20px;
+    }
+    .customProductPageTable img {
+        max-width: 110px;
+    }
+    .customProductPageTableSelected img {
+        max-width: 110px;
+    }
+    .customProductPageTablesContainer {
+        flex-wrap: wrap;
+    }
+    .customProductPageHeader h4 {
+        text-align: center;
+    }
+    .customProductPageCategoriesSelectLabel {
+        pointer-events: none;
+        padding-left: 35px;
+    }
+    .customProductPageProductsFilter {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .customProductPageHeader {
+        margin-top: 100px;
+        padding-bottom: 30px;
+        /*background-image: url(/arquivos/mobile-plp.png);*/
+    }
+    .customProductPageCategoriesWrapper {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+    }
+    .customProductPageCategory {
+        margin-left: 2%;
+        width: 45%;
+        margin-right: 2%;
+        margin-bottom: 20px;
+    }
+    .customProductPageTablesWrapper {
+        max-width: 100%;
+        display: flex;
+        width: 95%;
+    }
+    .customProductPageTables {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .customProductPageTable {
+        margin-bottom: 50px;
+        width: 100%;
+        max-width: 150px;
+    }
+    .customProductPageTableSelected {
+        margin-bottom: 50px;
+        width: 100%;
+        max-width: 150px;
+    }
+    .customProductPageProductsFilterWrapper {
+        max-width: 90%;
+        justify-content: space-around;
+    }
+    .customProductPageSparePartsCard {
+        flex-direction: column;
+    }
+    .customProductPageSparePartsCardInfoRow {
+        flex-direction: column;
+    }
+    .customProductPageSelectCategories {
+        width: 90%;
+    }
+    .customProductPageSparePartsCardProductPrice {
+        text-align: left;
+        margin-top: 10px;
+    }
+    .customProductPageSparePartsCardFooter {
+        justify-content: center;
+    }
+    .customProductPageModalImage {
+        z-index: 100;
+        max-width: 95%;
+        padding: 10px 1%;
+        margin: -100vh auto;
+        position: relative;
+    }
+    .customProductPageModalContainer {
+        width: 95%;
+    }
+}

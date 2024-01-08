@@ -1,0 +1,182 @@
+{
+  "name": "social-connector",
+  "vendor": "bauknechtde",
+  "version": "1.0.1",
+  "title": "Social login connector",
+  "description": "A custom connector that makes sure the required data is passed between VTEX and the supported social platforms for user registration.",
+  "mustUpdateAt": "2018-01-04",
+  "categories": [],
+  "dependencies": {
+    "vtex.styleguide": "9.x",
+    "vtex.css-handles": "0.x"
+  },
+  "builders": {
+    "messages": "1.x",
+    "store": "0.x",
+    "react": "3.x",
+    "node": "6.x",
+    "docs": "0.x"
+  },
+  "scripts": {
+    "prereleasy": "bash lint.sh"
+  },
+  "credentialType": "absolute",
+  "policies": [
+    {
+      "name": "ADMIN_DS"
+    },
+    {
+      "name": "colossus-write-logs"
+    },
+    {
+      "name": "colossus-fire-event"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "api.vtex.com",
+        "path": "/dataentities/*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "graph.facebook.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "www.facebook.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "oauth2.googleapis.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "accounts.google.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "openidconnect.googleapis.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "vbase-read-write"
+    }
+  ],
+  "settingsSchema": {
+    "title": "Social Connector",
+    "type": "object",
+    "properties": {
+      "SiteUrl": {
+        "title": "Public Site URL",
+        "type": "string"
+      },
+      "CustomLoginPageUrl": {
+        "title": "Custom Login Page URL",
+        "type": "string"
+      },
+      "VtexClientID": {
+        "title": "Vtex Client ID",
+        "type": "string"
+      },
+      "VtexClientSecret": {
+        "title": "Vtex Client Secret",
+        "type": "string"
+      },
+      "Socials": {
+        "title": "Social settings",
+        "items": {
+          "type": "object",
+          "properties": {
+            "socialName": {
+              "title": "Social Name",
+              "type": "string"
+            },
+            "socialLoginUrl": {
+              "title": "Social Login page URL",
+              "type": "string"
+            },
+            "socialScope": {
+              "title": "Social Auth scope",
+              "type": "string"
+            },
+            "socialAccessTokenEndpoint": {
+              "title": "Social Access token Endpoint",
+              "type": "string"
+            },
+            "socialAccessTokenMethod": {
+              "title": "Social Access token Method",
+              "type": "string",
+              "default": "GET",
+              "enum": [
+                "GET",
+                "POST"
+              ],
+              "enumNames": [
+                "GET",
+                "POST"
+              ]
+            },
+            "socialUserInfoUrl": {
+              "title": "Social User info URL",
+              "type": "string"
+            },
+            "socialUserInfoAuthType": {
+              "title": "Social User info Authentication type",
+              "type": "string",
+              "default": "Header",
+              "enum": [
+                "Header",
+                "Query"
+              ],
+              "enumNames": [
+                "Header",
+                "Query"
+              ]
+            },
+            "socialUserFirstNameField": {
+              "title": "Social User first name field",
+              "type": "string"
+            },
+            "socialUserLastNameField": {
+              "title": "Social User last name field",
+              "type": "string"
+            },
+            "socialUserEmailField": {
+              "title": "Social User email field",
+              "type": "string"
+            },
+            "socialUserIdField": {
+              "title": "Social User ID field",
+              "type": "string"
+            },
+            "socialClientId": {
+              "title": "Social Client ID",
+              "type": "string"
+            },
+            "socialClientSecret": {
+              "title": "Social Client Secret",
+              "type": "string"
+            }
+          }
+        },
+        "type": "array"
+      }
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

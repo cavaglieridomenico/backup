@@ -1,0 +1,36 @@
+#!/bin/bash
+
+set -o errexit
+set -o pipefail
+
+function print_usage_and_exit {
+    echo "Usage:"
+    echo "${0} [RELEASE]<major|minor|patch>"
+    echo ""
+    echo "Example:"
+    echo "${0} major"
+    exit 1
+}
+
+RELEASE=${1}
+
+if [ -z "${RELEASE}" ]; then
+    print_usage_and_exit
+fi
+
+cp manifest/manifest.it.json manifest.json
+vtex release $RELEASE stable
+cp manifest.json manifest/manifest.it.json
+
+cd manifest
+cp manifest.it.json manifest.itqa.json && \
+  cp manifest.it.json manifest.ru.json && \
+  cp manifest.it.json manifest.ruqa.json && \
+  cp manifest.it.json manifest.fr.json
+
+jq '.vendor = "itwhirlpoolqa"' manifest.itqa.json > tmp.$$.json && mv tmp.$$.json manifest.itqa.json
+jq '.vendor = "ruwhirlpool"' manifest.ru.json > tmp.$$.json && mv tmp.$$.json manifest.ru.json
+jq '.vendor = "ruwhirlpoolqa"' manifest.ruqa.json > tmp.$$.json && mv tmp.$$.json manifest.ruqa.json
+jq '.vendor = "frwhirlpool"' manifest.fr.json > tmp.$$.json && mv tmp.$$.json manifest.fr.json
+
+cd .. && git commit -am "Post-release manifest update" && git push

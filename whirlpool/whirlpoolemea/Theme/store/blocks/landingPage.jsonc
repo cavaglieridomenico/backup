@@ -1,0 +1,131 @@
+{
+  "store.custom#landingPage": {
+    "blocks": [
+      "breadcrumb#landingPage",
+      "toggle-layout#bannerWithPostilla",
+      "toggle-layout#bannerLanding",
+      "toggle-layout#bannerSliderHome",
+      "toggle-layout#bannerWithPostilla2",
+      "analytics#home",
+      "toggle-layout#heroBannerHome",
+      "__fold__",
+      "toggle-layout#halfBannerHome",
+      "toggle-layout#gridHome",
+      "toggle-layout#contattaciHome",
+      "toggle-layout#promoSlider",
+      "toggle-layout#bannerLastBanner",
+      "toggle-layout#supp",
+      "flex-layout.row#halfSpace",
+      "list-context.image-list#4porte",
+      "list-context.product-list#suggestions-w-home",
+      "list-context.product-list#suggestions-w-microonde",
+      "list-context.product-list#suggestions-w-cappe"
+    ]
+  },
+  "breadcrumb#landingPage": {
+    "props": {
+      "categories": ["Nos Offres"],
+      "showOnMobile": false
+    }
+  },
+  "toggle-layout#bannerLanding": {
+    "props": {
+      "visible": true
+    },
+    "children": ["flex-layout.row#bannerLanding"]
+  },
+  "flex-layout.row#bannerLanding": {
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": ["columnPostillaBannerLanding"]
+    },
+    "children": ["flex-layout.col#textBannerLanding"]
+  },
+  "flex-layout.col#textBannerLanding": {
+    "props": {
+      "width": "100%",
+      "preventVerticalStretch": true,
+      "blockClass": ["columnPostilla", "columnPostillaLanding"]
+    },
+    "children": [
+      "toggle-layout#LogoBannerTopCarousel",
+      "toggle-layout#BannTitle",
+      "toggle-layout#BannDesc",
+      "toggle-layout#ButtonBannerWithPostillaLanding",
+      "toggle-layout#BannPostilla"
+    ]
+  },
+  "toggle-layout#LogoBannerTopCarousel": {
+    "props": {
+      "visible": true
+    },
+    "children": ["image#LogoBannerTopCarousel"]
+  },
+  "toggle-layout#BannTitle": {
+    "props": {
+      "visible": true
+    },
+    "children": ["rich-text#BannTitle"]
+  },
+  "toggle-layout#BannDesc": {
+    "props": {
+      "visible": true
+    },
+    "children": ["rich-text#BannDescLanding"]
+  },
+  "rich-text#BannDescLanding": {
+    "props": {
+      "text": "Descrizione",
+      "blockClass": "descBannerPostillaLanding"
+    }
+  },
+  "toggle-layout#ButtonBannerWithPostillaLanding": {
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "toggle-layout#ButtonBannerWithPostillaOrange",
+      "toggle-layout#ButtonBannerWithPostillaWhite"
+    ]
+  },
+  "toggle-layout#ButtonBannerWithPostillaOrange": {
+    "props": {
+      "visible": true
+    },
+    "children": ["link#ButtonBannOrange"]
+  },
+  "link#ButtonBannOrange": {
+    "props": {
+      "label": "TESTO BOTTONE",
+      "href": "#",
+      "displayMode": "button",
+      "blockClass": "postillaButtonLanding"
+    }
+  },
+  "toggle-layout#ButtonBannerWithPostillaWhite": {
+    "props": {
+      "visible": true
+    },
+    "children": ["link#ButtonBannWhite"]
+  },
+  "link#ButtonBannWhite": {
+    "props": {
+      "label": "TESTO BOTTONE",
+      "href": "#",
+      "displayMode": "button",
+      "blockClass": "postillaButtonLandingWhite"
+    }
+  },
+  "toggle-layout#BannPostilla": {
+    "props": {
+      "visible": true
+    },
+    "children": ["rich-text#BannPostillaLanding"]
+  },
+  "rich-text#BannPostillaLanding": {
+    "props": {
+      "text": "*Considerando la capacità dello spazio convertibile impostato a 4 ° C.",
+      "blockClass": "postillaBannerPostillaLanding"
+    }
+  }
+}

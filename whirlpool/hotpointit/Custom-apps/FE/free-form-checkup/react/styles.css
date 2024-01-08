@@ -1,0 +1,411 @@
+.formContainer {
+  width: 75%;
+  margin: auto;
+  margin-top: 10rem;
+}
+.form {
+}
+.formDiv {
+  padding-bottom: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.inputDiv,
+.inputDivFull {
+  width: 47%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5625rem;
+}
+.inputDivFull {
+  width: 100%;
+}
+.inputLabel {
+  text-transform: uppercase;
+  font-family: 'hotpointMedium', Arial;
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: #607171;
+}
+.select {
+  border-radius: 0;
+  display: block;
+  border: 0;
+  background: 0;
+  position: relative;
+  z-index: 1;
+  min-height: 2.3125rem;
+  padding: 0;
+  padding-right: 1.25rem;
+  height: 2.2rem;
+  width: 100%;
+  border-bottom: 0.0625rem solid #bbc9c9;
+  font-family: 'hotpointRegular', Arial;
+  font-weight: 400;
+  font-size: 1.125rem;
+  color: #607171;
+  appearance: none;
+  line-height: 1.5625rem;
+}
+.selectDiv {
+  position: relative;
+}
+.selectDiv::after {
+  content: '';
+  display: block;
+  width: 0.375rem;
+  height: 0.375rem;
+  border: solid #B24C24;
+  border-width: 0 0.125rem 0.125rem 0;
+  transform: rotate(45deg) translate(-110%, -20%);
+  position: absolute;
+  top: 50%;
+  right: 0.1875rem;
+  z-index: 0;
+}
+.option {
+  /* color: #607171; */
+  font-size: 1.125rem;
+  font-family: 'hotpointRegular', Arial;
+}
+
+.input,
+.errorInput {
+  width: 100%;
+  display: block;
+  border: 0;
+  margin-bottom: 0;
+  color: #607171;
+  padding-left: 0;
+  height: 2.2rem;
+  font-family: 'hotpointRegular', Arial;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.25rem;
+  border-bottom: 0.0625rem solid #bbc9c9;
+}
+.errorInput {
+  border-bottom: 0.0625rem solid #d10000;
+}
+.errorLabel {
+  color: #d10000;
+  font-family: 'hotpointRegular', Arial;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  margin: 0;
+  margin-top: 0.125rem;
+}
+.submitButton {
+  color: #f2f2f2;
+  background: #B24C24;
+  border: 0.0625rem solid #B24C24;
+  padding: 0.7rem 2rem;
+  cursor: pointer;
+  font-family: 'hotpointRegular', Arial;
+  font-size: 1.125rem;
+  transition: all 0.35s ease-in-out;
+}
+.submitButton:hover {
+  background: #953D1B;
+  border: 0.0625rem solid #953D1B;
+  transition: all 0.35s ease-in-out;
+}
+
+/*--- PRIVACY SECTION ---*/
+.privacySectionDiv {
+  padding-bottom: 3rem;
+}
+.privacyTitle,
+.privacyTitle2,
+.privacyTitle3 {
+  font-family: 'hotpointMedium', Arial;
+  font-weight: 400;
+  font-size: 1rem;
+  text-align: left;
+  color: #607171;
+  display: block;
+}
+.privacyDescription {
+  font-family: 'hotpointRegular', Arial;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  text-align: left;
+  color: #585858;
+  display: block;
+  margin-top: 0.9375rem;
+}
+.privacyLink {
+  color: #B24C24;
+  text-decoration: underline;
+}
+.privacyLink:hover {
+  color: #953D1B;
+}
+.checkboxGroup {
+  padding-left: 1rem;
+}
+.brandCheckbox {
+  margin-top: 2rem;
+}
+.checkboxWrapper {
+  margin-top: 1rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.inputCheckbox {
+  position: absolute;
+  min-width: 1.25rem;
+  min-height: 1.25rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  z-index: 2;
+  opacity: 0;
+  cursor: pointer;
+}
+.customCheckbox,
+.customCheckboxFilled {
+  min-width: 1.25rem;
+  min-height: 1.25rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  display: inline-block;
+  border: 0.0625rem solid #9b9b9b;
+  position: relative;
+}
+.customCheckboxFilled {
+  background-color: #188e95;
+  border-color: #188e95;
+}
+.customCheckboxFilled::after {
+  content: '';
+  display: block;
+  width: 0.375rem;
+  height: 0.625rem;
+  border: solid #fff;
+  border-width: 0 0.125rem 0.125rem 0;
+  transform: rotate(45deg) translate(-110%, -20%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.privacyAccept {
+  font-family: 'hotpointRegular', Arial;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  text-align: left;
+  color: #585858;
+  text-transform: uppercase;
+  margin-left: 0.5rem;
+}
+/*--- PRODUCT INFO SECTION ---*/
+.productInfoDiv {
+  padding: 3rem 0;
+}
+.productInfoWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.productInfoForm {
+  width: 32%;
+  padding: 2rem 0;
+}
+.productInfoForm2 {
+  width: 100%;
+  padding-top: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+}
+.closeSectionIcon {
+  position: absolute;
+  background-image: url('./assets/close_icon.svg');
+  background-position: center;
+  width: 1rem;
+  height: 1rem;
+  top: 5rem;
+  right: 0;
+  transform: translateY(-100%);
+  cursor: pointer;
+}
+.inputDivMid {
+  width: 47%;
+}
+.inputDivMid > input {
+  box-sizing: content-box;
+}
+.productInfoForm > div:first-of-type {
+  margin-top: 0;
+}
+.productInfoHelp {
+  width: 65%;
+  background: #f9f9f9;
+  padding: 2rem;
+}
+.productInfoHelpImgWrapper {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 2.5rem;
+  max-width: 20.625rem;
+  min-height: 13rem;
+}
+.productInfoHelpImg {
+  margin: auto;
+  width: 100%;
+}
+.privacyTitle2 {
+  margin-bottom: 1.25rem;
+}
+.privacyTitle3 {
+  margin: 3rem 0 1.25rem 0;
+}
+.privacyDescription2 {
+  color: #585858;
+  margin: 0;
+  padding: 0;
+  font-family: 'hotpointRegular';
+  line-height: initial;
+}
+.addSectionButton {
+  background: 0 0;
+  border: 0.0625rem solid #B24C24;
+  color: #B24C24;
+  padding: 1rem;
+  margin-top: 4rem;
+  cursor: pointer;
+  position: relative;
+  font-family: 'hotpointRegular', Arial;
+  font-size: 1.125rem;
+  overflow: hidden;
+  transition: all 0.25s ease-in-out;
+}
+.addSectionButton:hover {
+  border: 0.0625rem solid transparent;
+  transition: all 0.25s ease-in-out;
+}
+.addSectionButton::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.0625rem;
+  z-index: 1;
+  transform: translate(-100%);
+  transition: all 0.25s ease-in-out;
+}
+.addSectionButton:hover::after {
+  background: #B24C24;
+  transform: translate(0, 0);
+  transition: all 0.5s ease-in-out;
+}
+.inputDivFullDate,
+.inputDivFullDateError {
+  position: relative;
+}
+.inputDivFullDate::after,
+.inputDivFullDateError::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 0.0625rem;
+  background: #bbc9c9;
+  bottom: 3px;
+  left: 0;
+  /* border-bottom: 0.0625rem solid #bbc9c9; */
+}
+.inputDivFullDateError::after {
+  background: #d10000;
+}
+.errorSubmitDiv {
+  margin: 2rem 0;
+  text-align: center;
+  background: #d10000;
+  padding: 1.5rem;
+}
+.errorSubmitLabel {
+  color: #fff;
+  font-family: 'hotpointRegular', Arial;
+  font-weight: 400;
+  font-size: 1rem;
+}
+.formSuccessDiv {
+  padding: 5rem 4rem;
+  background-color: #f2f2f2;
+  margin-top: 7rem;
+  width: 100%;
+}
+.formSuccessTitle {
+  font-family: 'hotpointRegular', Arial;
+  font-weight: 400;
+  font-size: 2.625rem;
+  line-height: 2.9375rem;
+  color: #B24C24;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-left: 2.875rem;
+}
+.formSuccessTitle::after {
+  width: 3.125rem;
+  content: '';
+  display: block;
+  height: 0.125rem;
+  margin-top: 0.625rem;
+  background: #B24C24;
+}
+.formSuccessSubtitleDiv {
+  background-color: #fff;
+  padding: 2.5rem;
+  text-align: center;
+}
+.formSuccessSubtitle {
+  font-family: 'hotpointRegular', Arial;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.4375rem;
+  color: #585858;
+}
+@media only screen and (max-width: 640px) {
+  .formContainer {
+    margin-top: 5rem;
+  }
+  .formDiv {
+    flex-direction: column;
+  }
+  .inputDiv,
+  .productInfoForm,
+  .productInfoHelp,
+  .addSectionButton,
+  .submitButton,
+  .inputDivMid {
+    width: 100%;
+  }
+  .productInfoWrapper,
+  .productInfoForm2 {
+    flex-direction: column;
+  }
+  .closeSectionIcon {
+    top: 4.5rem;
+  }
+  .addSectionButton:hover {
+    border: 0.0625rem solid #B24C24;
+  }
+  .addSectionButton::after {
+    width: 0;
+    height: 0;
+  }
+  .formSuccessDiv {
+    padding: 4rem 0;
+    margin-top: 2.5rem;
+  }
+  .formSuccessSubtitleDiv {
+    text-align: left;
+  }
+  .formSuccessTitle {
+    font-size: 1.875rem;
+    font-family: 'hotpointRegular', Arial;
+  }
+}

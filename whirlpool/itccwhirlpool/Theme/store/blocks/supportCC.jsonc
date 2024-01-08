@@ -1,0 +1,2033 @@
+{
+  "store.custom#supportCC": {
+    "blocks": [
+      "flex-layout.row#breadcrumb-container",
+      "flex-layout.row#supportCCrow"
+    ]
+  },
+  "flex-layout.row#supportCCrow": {
+    "title": "[ROW] - [MID] Support menu",
+    "children": [
+      "flex-layout.col#supportCC"
+    ],
+    "props": {
+      "blockClass": "supportCCrow"
+    }
+  },
+  "flex-layout.col#supportCC": {
+    "children": [
+      "flex-layout.row#supportCCTitle",
+      "flex-layout.row#supportCCTabLayout"
+    ],
+    "props": {
+      "blockClass": "supportCCCol",
+      "width": "100%"
+    }
+  },
+  "flex-layout.row#supportCCTitle": {
+    "title": "Support menu title",
+    "children": [
+      "rich-text#supportTitle"
+    ],
+    "props": {
+      "blockClass": "supportCCTitle",
+      "width": "100%"
+    }
+  },
+  "rich-text#supportTitle": {
+    "title": "Page Title",
+    "props": {
+      "text": "# Support",
+      "blockClass": "supportPageTitle"
+    }
+  },
+  "flex-layout.row#supportCCTabLayout": {
+    "title": "[ROW] - [MID] Support menu list",
+    "children": [
+      "responsive-layout.desktop#supportCCTabLayout",
+      "responsive-layout.mobile#supportCCTabLayout"
+    ],
+    "props": {
+      "blockClass": "supportCCTabLayout",
+      "width": "100%"
+    }
+  },
+  "responsive-layout.desktop#supportCCTabLayout": {
+    "children": [
+      "flex-layout.row#supportCCTabsLayoutContainer"
+    ]
+  },
+  "flex-layout.row#supportCCTabsLayoutContainer": {
+    "title": "[ROW] - [TOP] SupportCC Tabs Layout Container",
+    "children": [
+      "flex-layout.col#supportCCTabsLayoutContainerCol"
+    ]
+  },
+  "flex-layout.col#supportCCTabsLayoutContainerCol": {
+    "title": "[COL] - [TOP] SupportCC Tabs Layout Container COL",
+    "children": [
+      "flex-layout.row#supportCCTabLayoutRow",
+      "flex-layout.row#supportCCTabLayoutRowAzienda"
+    ]
+  },
+  "flex-layout.row#supportCCTabLayoutRow": {
+    "title": "[ROW] - [TOP] Support CC TabLayout Row",
+    "children": [
+      "flex-layout.col#supportCCTabLayoutCol"
+    ]
+  },
+  "flex-layout.col#supportCCTabLayoutCol": {
+    "title": "[COL] - [TOP] Support CC TabLayout COL",
+    "children": [
+      "rich-text#risorseUtili",
+      "tab-layout#supportCC"
+    ],
+    "props": {
+      "blockClass": "supportCCTabLayoutCol"
+    }
+  },
+  "rich-text#risorseUtili": {
+    "title": "[Text] - [TOP] Text Risorse Utili",
+    "props": {
+      "text": "Risorse Utili",
+      "textAlignment": "CENTER",
+      "blockClass": [
+        "risorseUtiliText"
+      ]
+    }
+  },
+  "flex-layout.row#supportCCTabLayoutRowAzienda": {
+    "title": "[ROW] - [TOP] Support CC TabLayout Row Azienda",
+    "children": [
+      "flex-layout.col#supportCCTabLayoutColAzienda"
+    ],
+    "props": {
+      "blockClass": "supportCCTabLayoutRowAziendaRow"
+    }
+  },
+  "flex-layout.col#supportCCTabLayoutColAzienda": {
+    "title": "[COL] - [TOP] Support CC TabLayout COL Azienda",
+    "children": [
+      "rich-text#risorseUtiliAzienda",
+      "tab-layout#supportCCAzienda"
+    ],
+    "props": {
+      "blockClass": "supportCCTabLayoutCol"
+    }
+  },
+  "rich-text#risorseUtiliAzienda": {
+    "title": "[Text] - [TOP] Text Risorse Utili",
+    "props": {
+      "text": "Azienda",
+      "textAlignment": "CENTER",
+      "blockClass": [
+        "risorseUtiliText"
+      ]
+    }
+  },
+  "tab-layout#supportCC": {
+    "children": [
+      "tab-list#supportCC",
+      "tab-content#supportCC"
+    ],
+    "props": {
+      "blockClass": "supportTabCC",
+      "defaultActiveTabId": "informazioniSullaConsegna"
+    }
+  },
+  "experimental__visibility-layout#supportCCAssistenzaTecnica": {
+    "title": "[TOGGLE] Toggle SupportCC Assistenza Tecnica",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "tab-list.item#supportCCAssistenzaTecnica"
+    ]
+  },
+  "experimental__visibility-layout#supportCCFamily&Friends": {
+    "title": "[TOGGLE] Toggle SupportCC Family & Friends",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "tab-list.item#supportCCFamily&Friends"
+    ]
+  },
+  "tab-list#supportCC": {
+    "title": "[DESKTOP] Left menu categories",
+    "props": {
+      "blockClass": "supportCCListContainer"
+    },
+    "children": [
+      "tab-list.item#supportCCInformazioniSullaConsegna",
+      "tab-list.item#supportCCDomandeFrequenti",
+      "tab-list.item#supportCCContatti",
+      "experimental__visibility-layout#supportCCAssistenzaTecnica",
+      "tab-list.item#supportCCSchedaProdotto",
+      "tab-list.item#supportCCIstruzioniPerUso",
+      "tab-list.item#supportCCDirittoDiRecesso",
+      "tab-list.item#supportCCSostituzioneProdottoDanneggiato",
+      "link#supportCCRisoluzioneOnlineDelleControversie",
+      //"tab-list.item#supportCCNotaImportanteSullaGaranziaLegale",
+      "experimental__visibility-layout#supportCCGaranzia",
+      "link#supportCCPromemoriaSullaGaranziaLegale",
+      "tab-list.item#supportCCRegistraIlTuoProdotto",
+      "tab-list.item#supportCCEstensioneDiGaranzia",
+      "experimental__visibility-layout#supportCCFamily&Friends",
+      "experimental__visibility-layout#supportCCClimatizzatoriF-GAS",
+      // "tab-list.item#supportCCClimatizzatoriF-GAS",
+      "tab-list.item#supportCCRecensioni-TerminiECondizioniUso"
+    ]
+  },
+  "experimental__visibility-layout#supportCCGaranzia": {
+    "title": "[TOGGLE] Toggle supportCC legal guarantee",
+    "props": {
+      "visible": false
+    },
+    "children": [
+      "tab-list.item#supportCCGaranzia"
+    ]
+  },
+  "tab-list.item#supportCCInformazioniSullaConsegna": {
+    "title": "Informazioni Sulla Consegna",
+    "props": {
+      "tabId": "informazioniSullaConsegna",
+      "label": "Informazioni Sulla Consegna",
+      "defaultActiveTab": true,
+      "blockClass": [
+        "listItemSupport",
+        "listItem1"
+      ]
+    }
+  },
+  "tab-list.item#supportCCDomandeFrequenti": {
+    "title": "Domande Frequenti",
+    "props": {
+      "tabId": "domandeFrequenti",
+      "label": "Domande Frequenti",
+      "blockClass": "listItemSupport"
+    }
+  },
+  "tab-list.item#supportCCContatti": {
+    "title": "Contatti",
+    "props": {
+      "tabId": "contatti",
+      "label": "Contatti",
+      "blockClass": "listItemSupport"
+    }
+  },
+  "tab-list.item#supportCCAssistenzaTecnica": {
+    "title": "Assistenza Tecnica",
+    "props": {
+      "tabId": "assistenzaTecnica",
+      "label": "Assistenza Tecnica",
+      "blockClass": "listItemSupport"
+    }
+  },
+  "tab-list.item#supportCCSchedaProdotto": {
+    "title": "Scheda Prodotto",
+    "props": {
+      "tabId": "schedaProdotto",
+      "label": "Scheda Prodotto",
+      "blockClass": "listItemSupport"
+    }
+  },
+  "tab-list.item#supportCCIstruzioniPerUso": {
+    "title": "Istruzioni Per Uso",
+    "props": {
+      "tabId": "istruzioniPerUso",
+      "label": "Istruzioni Per l' Uso",
+      "blockClass": "listItemSupport"
+    }
+  },
+  "tab-list.item#supportCCDirittoDiRecesso": {
+    "title": "Diritto Di Recesso",
+    "props": {
+      "tabId": "dirittoDiRecesso",
+      "label": "Diritto Di Recesso",
+      "blockClass": "listItemSupport",
+      "defaultActiveTab": true
+    }
+  },
+  "tab-list.item#supportCCSostituzioneProdottoDanneggiato": {
+    "title": "Sostituzione Prodotto Danneggiato",
+    "props": {
+      "tabId": "sostituzioneProdottoDanneggiato",
+      "label": "Sostituzione Prodotto Danneggiato",
+      "blockClass": "listItemSupport"
+    }
+  },
+  "link#supportCCRisoluzioneOnlineDelleControversie": {
+    "title": "[LINK] Risoluzione Online Delle Controversie",
+    "props": {
+      "label": "Risoluzione Online Delle Controversie",
+      "href": "https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home2.show&lng=IT",
+      "target": "_blank",
+      "blockClass": "supportCCLink"
+    }
+  },
+  "tab-list.item#supportCCNotaImportanteSullaGaranziaLegale": {
+    "title": "Nota Importante Sulla Garanzia Legale",
+    "props": {
+      "tabId": "notaImportanteSullaGaranziaLegale",
+      "label": "Nota Importante Sulla Garanzia Legale",
+      "blockClass": "listItemSupport"
+    }
+  },
+  "tab-list.item#supportCCGaranzia": {
+    "title": "Garanzia",
+    "props": {
+      "tabId": "supportCCGaranzia",
+      "label": "Nota Importante Sulla Garanzia Legale",
+      "blockClass": "listItemSupport"
+    }
+  },
+  "link#supportCCPromemoriaSullaGaranziaLegale": {
+    "title": "[LINK] Promemoria Sulla Garanzia Legale",
+    "props": {
+      "label": "Promemoria Sulla Garanzia Legale",
+      "href": "/api/dataentities/AT/documents/bea9b139-2ebe-11ed-835d-0aacdb44bb83/file/attachments/condizioni_garanzie_legali.pdf",
+      "target": "_blank",
+      "blockClass": "supportCCLink"
+    }
+  },
+  "tab-list.item#supportCCRegistraIlTuoProdotto": {
+    "title": "Registra Il Tuo Prodotto",
+    "props": {
+      "tabId": "registraIlTuoProdotto",
+      "label": "Registra Il Tuo Prodotto",
+      "blockClass": "listItemSupport"
+    }
+  },
+  "tab-list.item#supportCCEstensioneDiGaranzia": {
+    "title": "Estensione Di Garanzia",
+    "props": {
+      "tabId": "estensioneDiGaranzia",
+      "label": "Estensione Di Garanzia",
+      "blockClass": "listItemSupport"
+    }
+  },
+  "tab-list.item#supportCCFamily&Friends": {
+    "title": "Family & Friends",
+    "props": {
+      "tabId": "family&Friends",
+      "label": "Family & Friends",
+      "blockClass": "listItemSupport"
+    }
+  },
+  "experimental__visibility-layout#supportCCClimatizzatoriF-GAS": {
+    "props": {},
+    "children": [
+      "tab-list.item#supportCCClimatizzatoriF-GAS"
+    ]
+  },
+  "tab-list.item#supportCCClimatizzatoriF-GAS": {
+    "title": "Climatizzatori F-GAS",
+    "props": {
+      "tabId": "climatizzatoriF-GAS",
+      "label": "Climatizzatori F-GAS",
+      "blockClass": "listItemSupport"
+    }
+  },
+  "tab-list.item#supportCCRecensioni-TerminiECondizioniUso": {
+    "title": "Recensioni-Termini E Condizioni Uso",
+    "props": {
+      "tabId": "recensioni-TerminiECondizioniUso",
+      "label": "Recensioni-Termini e Condizioni d'Uso",
+      "blockClass": "listItemSupport"
+    }
+  },
+  "tab-content#supportCC": {
+    "title": "[DESKTOP] Content menu",
+    "props": {
+      "blockClass": "supportCCContentContainer"
+    },
+    "children": [
+      "tab-content.item#supportCCInformazioniSullaConsegna",
+      "tab-content.item#supportCCDomandeFrequenti",
+      "tab-content.item#supportCCContatti",
+      "tab-content.item#supportCCAssistenzaTecnica",
+      "tab-content.item#supportCCSchedaProdotto",
+      "tab-content.item#supportCCIstruzioniPerUso",
+      "tab-content.item#supportCCDirittoDiRecesso",
+      "tab-content.item#supportCCSostituzioneProdottoDanneggiato",
+      "tab-content.item#supportCCNotaImportanteSullaGaranziaLegale",
+      "tab-content.item#supportCCGaranzia",
+      "tab-content.item#supportCCRegistraIlTuoProdotto",
+      "tab-content.item#supportCCEstensioneDiGaranzia",
+      "tab-content.item#supportCCFamily&Friends",
+      "tab-content.item#supportCCClimatizzatoriF-GAS",
+      "tab-content.item#supportCCRecensioni-TerminiECondizioniUso"
+    ]
+  },
+  "tab-content.item#supportCCInformazioniSullaConsegna": {
+    "title": "[CONTENT] Informazioni Sulla Consegna",
+    "children": [
+      "rich-text#supportCCInformazioniSullaConsegnaTitle",
+      "rich-text#supportCCInformazioniSullaConsegnaText",
+      "rich-text#supportCCConsegnaPiuProdotti",
+      "rich-text#supportCCTempiDiConsegna",
+      "rich-text#TabellaTempiDiConsegna",
+      "rich-text#supportCCCondizioniConsegna",
+      "rich-text#supportCCInformazioniRelativeConsegna"
+    ],
+    "props": {
+      "tabId": "informazioniSullaConsegna",
+      "blockClass": "tabContent1"
+    }
+  },
+  "rich-text#supportCCInformazioniSullaConsegnaTitle": {
+    "props": {
+      "text": "# Informazioni Sulla Consegna",
+      "blockClass": "garanziaTitle"
+    }
+  },
+  "rich-text#supportCCDomandeFrequenti": {
+    "props": {
+      "text": "### Domande Frequenti",
+      "blockClass": "supportTitle"
+    }
+  },
+  "rich-text#supportCCContattiTitle": {
+    "props": {
+      "text": "# Contatti",
+      "blockClass": "garanziaTitle"
+    }
+  },
+  "rich-text#supportCCAssistenzaTecnicaTitle": {
+    "props": {
+      "text": "### Assistenza Tecnica",
+      "blockClass": "garanziaTitle"
+    }
+  },
+  "rich-text#supportCCSchedaProdottoTitle": {
+    "props": {
+      "text": "# Scheda Prodotto",
+      "blockClass": "garanziaTitle"
+    }
+  },
+  "rich-text#supportCCIstruzioniPerUsoTitle": {
+    "props": {
+      "text": "# Istruzioni Per Uso",
+      "blockClass": "garanziaTitle"
+    }
+  },
+  "rich-text#supportCCDirittoDiRecessoTitle": {
+    "props": {
+      "text": "# Diritto Di Recesso",
+      "blockClass": "garanziaTitle"
+    }
+  },
+  "rich-text#supportCCSostituzioneProdottoDanneggiatoTitle": {
+    "props": {
+      "text": "# Sostituzione Prodotto Danneggiato",
+      "blockClass": "garanziaTitle"
+    }
+  },
+  "rich-text#supportCCRegistraIlTuoProdottoTitle": {
+    "props": {
+      "text": "# Registra Il Tuo Prodotto",
+      "blockClass": "garanziaTitle"
+    }
+  },
+  "rich-text#supportCCEstensioneDiGaranziaTitle": {
+    "props": {
+      "text": "# Estensione Di Garanzia",
+      "blockClass": "garanziaTitle"
+    }
+  },
+  "rich-text#supportCCFamily&FriendsTitle": {
+    "props": {
+      "text": "# Family & Friends",
+      "blockClass": "garanziaTitle"
+    }
+  },
+  "rich-text#supportCCClimatizzatoriF-GASTitle": {
+    "title": "Climatizzatori F-GAS title",
+    "props": {
+      "text": "# Climatizzatori F-GAS",
+      "blockClass": "garanziaTitle"
+    }
+  },
+  "rich-text#supportCCRecensioni-TerminiECondizioniUsoTitle": {
+    "props": {
+      "text": "# Recensioni - Termini E Condizioni D'Uso",
+      "blockClass": "garanziaTitle"
+    }
+  },
+  "rich-text#supportTitle8": {
+    "props": {
+      "text": "### Title",
+      "blockClass": "supportTitle"
+    }
+  },
+  "rich-text#supportTitle9": {
+    "props": {
+      "text": "### Title",
+      "blockClass": "supportTitle"
+    }
+  },
+  "rich-text#supportCCInformazioniSullaConsegnaText": {
+    "title": "[TEXT] - Informazioni Sulla Consegna",
+    "props": {
+      "text": "## Informazioni sulla consegna \n Una volta individuati i prodotti ed aggiunti al carrello, puoi scegliere di riceverli all’indirizzo a te più comodo.",
+      "blockClass": "supportTitle"
+    }
+  },
+  "rich-text#supportCCConsegnaPiuProdotti": {
+    "title": "[TEXT] - Consegna Piu Prodotti",
+    "props": {
+      "text": "## Consegna di uno o piu’ prodotti \n La consegna è sempre Gratuita, che si tratti di uno o più prodotti, su tutto il territorio Nazionale (Isole comprese)    Il servizio è gestito tramite corriere partner di Whirlpool. \n    Dopo la presa in carico del tuo ordine dal Magazzino Centrale, 1-2 giorni lavorativi, verrà inviata una email, all’indirizzo di posta elettronica inserito in fase d’ordine, con un link per tracciare la consegna. \n   Il giorno di consegna verrà preventivamente concordato con il corriere che contatterà prima il Cliente, che indicherà ora e giorno di consegna preferiti, senza nessun sovrapprezzo. \n   Il Trasportatore contatterà direttamente il cliente al numero di telefono indicato in fase ordine, per concordare la data di consegna: dal Lunedì al Venerdì dalle 8:00 alle 12:30 e dalle 13:30 alle 17:30  \n  In fase d’ordine è possibile richiedere la consegna al piano (in casa) ed il ritiro contestuale del vecchio elettrodomestico. Basterà opzionarlo in fase di acquisto, direttamente nel carrello, specificando la richiesta per ciascun prodotto acquistato. Questo servizio è sempre Gratuito. \n   Nel caso in cui non sia stato richiesto il servizio di Installazione dell’elettrodomestico ( servizio a pagamento ) il prodotto da smaltire dovrà essere preventivamente svuotato e disinstallato dal Cliente. \n   ",
+      "blockClass": "supportTitle"
+    }
+  },
+  "rich-text#supportCCTempiDiConsegna": {
+    "title": "[TEXT] - Tempi Di Consegna",
+    "props": {
+      "text": "## Tempi di consegna \n La consegna verrà effettuata esclusivamente nei giorni lavorativi dalle ore 8:30 alle ore 18:00.\n  Di norma, e salvo quanto sopra specificato, i tempi indicativi per le consegne nelle varie aree geografiche sono riportati nella tabella sottostante:",
+      "blockClass": "supportTitle"
+    }
+  },
+  "rich-text#TabellaTempiDiConsegna": {
+    "title": "[TEXT] - Tabella",
+    "props": {
+      "text": "Inserire Tabella",
+      "blockClass": "deliveryTimeTable"
+    }
+  },
+  "rich-text#supportCCCondizioniConsegna": {
+    "title": "[TEXT] - Condizioni Consegna",
+    "props": {
+      "text": "## Condizioni di consegna \n Il servizio di consegna al piano è garantito solo se l’abitazione del Cliente è provvista di ascensore, montacarichi o comunque di un vano scala aventi dimensioni e portata idonee al passaggio ed al sollevamento dei prodotti. \n In mancanza di tali requisiti Whirlpool si riserva la facoltà di annullare l’ordine o di comunicare eventuali costi aggiuntivi.",
+      "blockClass": "supportTitle"
+    }
+  },
+  "rich-text#supportCCInformazioniRelativeConsegna": {
+    "title": "[TEXT] - Informazioni Relative Consegna",
+    "props": {
+      "text": "## Informazioni relative alla consegna \n Telefono: 800 140004 dal lunedì al Venerdì dalle 8:30 alle 12:30 e dalle 13:30 alle 17:30 \n Mail: directsalesonline@whirlpool.com",
+      "blockClass": "supportTitle"
+    }
+  },
+  "rich-text#supportText2": {
+    "props": {
+      "text": "#### Subtitle",
+      "blockClass": [
+        "supportTitle" /* , "supportTitleImages" */
+      ]
+    }
+  },
+  "rich-text#supportCCContattiText": {
+    "props": {
+      "text": "## Per informazioni sulla consegna o sul processo di reso: \n [directsalesonline@whirlpool.com](mailto:directsalesonline@whirlpool.com)  \n Telephone: 800 140004 from Monday to Friday from 8:30 to 12:30 and from 13:30 to 17:30 \n Per richieste di assistenza tecnica ed estensioni di garanzia:",
+      "blockClass": "supportTitle"
+    }
+  },
+  "rich-text#supportCCContattiPhone": {
+    "props": {
+      "text": "02.20.30",
+      "blockClass": "familyAndFriendsPhone"
+    }
+  },
+  "rich-text#supportCCContattiTextUnderPhone": {
+    "props": {
+      "text": "Dal lunedì al venerdì dalle 8.00 alle 19.00 \n Il sabato e la domenica dalle 9.00 alle 13.00 \n Al costo di una chiamata a rete fissa secondo il piano tariffario previsto dal proprio operatore.",
+      "blockClass": "supportTitle"
+    }
+  },
+  "rich-text#supportCCAssistenzaTecnicaText": {
+    "props": {
+      "text": "#### Assistenza Tecnica",
+      "blockClass": [
+        "supportTitle" /* , "supportTitleImages" */
+      ]
+    }
+  },
+  "rich-text#supportCCSchedaProdottoText": {
+    "props": {
+      "text": "#### Scheda Prodotto ",
+      "blockClass": "supportTitle"
+    }
+  },
+  "rich-text#supportText5-1": {
+    "props": {
+      "text": "#### Subtitle",
+      "blockClass": "supportTitle"
+    }
+  },
+  "rich-text#supportCCIstruzioniPerUsoText": {
+    "props": {
+      "text": "#### Istruzioni Per Uso ",
+      "blockClass": [
+        "supportTitle" /* , "supportTitleImages" */
+      ]
+    }
+  },
+  "rich-text#supportCCDirittoDiRecessoText": {
+    "props": {
+      "text": "#### Diritto Di Recesso Text",
+      "blockClass": [
+        "supportTitle" /* , "supportTitleImages" */
+      ]
+    }
+  },
+  "rich-text#supportCCSostituzioneProdottoDanneggiatoText": {
+    "props": {
+      "text": "#### Sostituzione Prodotto Danneggiato",
+      "blockClass": [
+        "supportTitle" /* , "supportTitleImages" */
+      ]
+    }
+  },
+  "rich-text#supportCCRegistraIlTuoProdottoText": {
+    "props": {
+      "text": "#### Registra Il Tuo Prodotto",
+      "blockClass": [
+        "supportTitle" /* , "supportTitleImages" */
+      ]
+    }
+  },
+  "rich-text#supportCCEstensioneDiGaranziaText": {
+    "props": {
+      "text": "## I prodotti Whirlpool hanno la garanzia di due anni.",
+      "blockClass": [
+        "supportTitle" /* , "supportTitleImages" */
+      ]
+    }
+  },
+  "experimental__visibility-layout#supportCCFourBrandLogos": {
+    "title": "[TOGGLE] Toggle supportCC Four Brand Logos",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "flex-layout.row#fourBrandLogosRow"
+    ]
+  },
+  "flex-layout.row#fourBrandLogosRow": {
+    "title": "[ROW] supportCC Four Brand Logos Row",
+    "children": [
+      "link#hotpointLogo",
+      "link#whirlpoolLogo",
+      "link#indesitLogo",
+      "link#kitchenaidLogo"
+    ],
+    "props": {
+      "blockClass": "fourBrandLogosRow"
+    }
+  },
+  "link#hotpointLogo": {
+    "children": [
+      "image#hotpointLogoIMG"
+    ],
+    "props": {
+      "href": "https://whirlpool.register-appliance.com/RegistroPorMarca?country=IT&language=it"
+      /* "blockClass": "subCategoryTitle" */
+    }
+  },
+  "image#hotpointLogoIMG": {
+    "props": {
+      "src": "/arquivos/hp-logo.svg",
+      "maxHeight": 48
+    }
+  },
+  "link#whirlpoolLogo": {
+    "children": [
+      "image#whirlpoolLogoIMG"
+    ],
+    "props": {
+      "href": "https://whirlpool.register-appliance.com/RegistroPorMarca?country=IT&language=it"
+      /* "blockClass": "subCategoryTitle" */
+    }
+  },
+  "image#whirlpoolLogoIMG": {
+    "props": {
+      "src": "/arquivos/whr-logo.svg",
+      "maxHeight": 48
+    }
+  },
+  "link#indesitLogo": {
+    "children": [
+      "image#indesitLogoIMG"
+    ],
+    "props": {
+      "href": "https://indesit.register-appliance.com/RegistroPorMarca?country=IT&language=it"
+      /* "blockClass": "subCategoryTitle" */
+    }
+  },
+  "image#indesitLogoIMG": {
+    "props": {
+      "src": "/arquivos/indesit-logo.svg",
+      "maxHeight": 48
+    }
+  },
+  "link#kitchenaidLogo": {
+    "children": [
+      "image#kitchenaidLogoIMG"
+    ],
+    "props": {
+      "href": "https://www.kitchenaid.it/landings/registra-il-tuo-prodotto-e-rilassati"
+      /* "blockClass": "subCategoryTitle" */
+    }
+  },
+  "image#kitchenaidLogoIMG": {
+    "props": {
+      "src": "/arquivos/ka-logo.svg",
+      "maxHeight": 48
+    }
+  },
+  "rich-text#supportCCEstensioneDiGaranziaText2": {
+    "title": "[LOGOS] Estensione Di Garanzia Text2",
+    "props": {
+      "text": "Scegli il marchio del prodotto di cui vuoi estendere la garanzia, sarai reindirizzato automaticamente alla pagina dedicata."
+    }
+  },
+  "rich-text#supportCCFamily&FriendsText": {
+    "props": {
+      "text": "#### Family & Friends",
+      "blockClass": [
+        "supportTitle" /* , "supportTitleImages" */
+      ]
+    }
+  },
+  "rich-text#supportCCFamily&FriendsPhone": {
+    "props": {
+      "text": "800 140 004",
+      "blockClass": "familyAndFriendsPhone"
+    }
+  },
+  "rich-text#supportCCClimatizzatoriF-GASText": {
+    "title": "Climatizzatori F-GAS description",
+    "props": {
+      "text": "#### Climatizzatori F-GAS ",
+      "blockClass": [
+        "supportTitle" /* , "supportTitleImages" */
+      ]
+    }
+  },
+  "rich-text#supportCCRecensioni-TerminiECondizioniUsoText": {
+    "props": {
+      "text": "#### Recensioni-Termini E Condizioni D'Uso ",
+      "blockClass": [
+        "supportTitle" /* , "supportTitleImages" */
+      ]
+    }
+  },
+  "rich-text#supportText8": {
+    "props": {
+      "text": "#### Subtitle",
+      "blockClass": "supportTitle"
+    }
+  },
+  "rich-text#supportText9": {
+    "props": {
+      "text": "#### Subtitle",
+      "blockClass": "supportTitle"
+    }
+  },
+  "rich-text#legalText": {
+    "title": "Tab Legal text",
+    "props": {
+      "text": "#### Subtitle",
+      "blockClass": [
+        "supportTitle",
+        "legalText"
+      ]
+    }
+  },
+  "tab-content.item#supportCCDomandeFrequenti": {
+    "title": "[CONTENT] Domande Frequenti",
+    "children": [
+      "rich-text#supportCCDomandeFrequenti",
+      "faq"
+    ],
+    "props": {
+      "tabId": "domandeFrequenti"
+    }
+  },
+  "tab-content.item#supportCCContatti": {
+    "title": "[CONTENT] Contatti",
+    "children": [
+      "rich-text#supportCCContattiTitle",
+      "rich-text#supportCCContattiText",
+      "experimental__visibility-layout#supportCCFourBrandLogos",
+      "rich-text#supportCCContattiPhone",
+      "rich-text#supportCCContattiTextUnderPhone"
+    ],
+    "props": {
+      "tabId": "contatti"
+    }
+  },
+  "tab-content.item#supportCCAssistenzaTecnica": {
+    "title": "[CONTENT] Assistenza tecnica",
+    "children": [
+      "rich-text#supportCCAssistenzaTecnicaTitle",
+      "rich-text#supportCCAssistenzaTecnicaText",
+      "withdrawal-right#assistenzaTecnicaForm"
+    ],
+    "props": {
+      "tabId": "assistenzaTecnica"
+    }
+  },
+  "withdrawal-right#assistenzaTecnicaForm": {
+    "props": {
+      "showAssistenza": true
+    },
+    "children": [
+      "rich-text#privacyLinkLabel",
+      "rich-text#privacyLabel",
+      "rich-text#privacyLink"
+    ]
+  },
+  "tab-content.item#supportCCSchedaProdotto": {
+    "title": "[CONTENT] Scheda Prodotto",
+    "children": [
+      "rich-text#supportCCSchedaProdottoTitle",
+      "rich-text#supportCCSchedaProdottoText",
+      "experimental__visibility-layout#supportCCSchedaProdottoFourBrandLogos",
+      "rich-text#supportCCSchedaProdottoText2"
+    ],
+    "props": {
+      "tabId": "schedaProdotto"
+    }
+  },
+  "tab-content.item#supportCCIstruzioniPerUso": {
+    "title": "[CONTENT] Istruzioni Per Uso",
+    "children": [
+      "rich-text#supportCCIstruzioniPerUsoTitle",
+      "rich-text#supportCCIstruzioniPerUsoText",
+      "experimental__visibility-layout#supportCCIstruzioniPerUsoFourBrandLogos",
+      "rich-text#supportCCIstruzioniPerUsoText2"
+    ],
+    "props": {
+      "tabId": "istruzioniPerUso"
+    }
+  },
+  "tab-content.item#supportCCDirittoDiRecesso": {
+    "title": "[CONTENT] Diritto Di Recesso",
+    "children": [
+      "withdrawal-right#supportCCDirittoDiRecesso"
+    ],
+    "props": {
+      "tabId": "dirittoDiRecesso"
+    }
+  },
+  "withdrawal-right#supportCCDirittoDiRecesso": {
+    "title": [
+      "TESTO TEMA"
+    ],
+    "children": [
+      "rich-text#appliancesFormTitleRecesso",
+      "rich-text#withdrawalRightSubTitle",
+      "rich-text#textBeforeButtons",
+      "rich-text#withdrawalButton1",
+      "rich-text#withdrawalButton2",
+      "rich-text#withdrawalButton3",
+      "rich-text#textAfterButtons",
+      "rich-text#appliancesFormTitle",
+      "rich-text#appliancesFormSubTitle",
+      "rich-text#appliancesFormSubText",
+      "rich-text#accessoriesFormTitle",
+      "rich-text#accessoriesFormTitleRecesso",
+      "rich-text#accessoriesFormSubTitle",
+      "rich-text#accessoriesFormSubText",
+      "rich-text#privacyLinkLabel",
+      "rich-text#privacyLabel",
+      "rich-text#privacyLink"
+    ],
+    "props": {}
+  },
+  "rich-text#withdrawalRightTitle": {
+    "title": "Sostituzione prodotto danneggiato",
+    "props": {
+      "text": "Sostituzione prodotto danneggiato",
+      "blockClass": "withdrawalRightTitle"
+    }
+  },
+  "rich-text#appliancesFormTitleRecesso": {
+    "title": "Diritto Di Recesso",
+    "props": {
+      "text": "Modulo di recesso online elettrodomestici",
+      "blockClass": [
+        "withdrawalRightTitle",
+        "withdrawalRightTitleRecesso"
+      ]
+    }
+  },
+  "rich-text#withdrawalRightSubTitle": {
+    "title": "Modulo di recesso online elettrodomestici",
+    "props": {
+      "text": "Modulo di recesso online elettrodomestici",
+      "blockClass": "withdrawalRightSubTitle"
+    }
+  },
+  "rich-text#textBeforeButtons": {
+    "title": "Text Before Buttons",
+    "props": {
+      "text": "L’acquirente ha il diritto di recedere dal contratto di acquisto, senza alcuna penalità e senza specificarne il motivo, entro 14 (quattordici) giorni dalla data di consegna del prodotto o dalla conclusione del contratto in caso di acquisto di un servizio, come per esempio l’estensione di assistenza.<br><br>Per esercitare il recesso è sufficiente inviare una qualsiasi dichiarazione esplicita della decisione di recedere ai nostri riferimenti indicati nell' art. 5 Modalità di esercizio di recesso qui di seguito riportato o compilare il form online (cliccando su Elettrodomestici o Accessori a seconda del prodotto) o scaricare il PDF (cliccando su Scarica) e seguire le istruzioni riportate qui di seguito all'art. 5 Modalità di esercizio del diritto di recesso delle Condizioni di acquisto online.<br>Per ulteriori informazioni relative al diritto di recesso ai sensi dell'art. 49 comma 4, clicca [qui]().",
+      "blockClass": "textBeforeButtons"
+    }
+  },
+  "rich-text#withdrawalButton1": {
+    "title": "Elettrodomestici",
+    "props": {
+      "text": "Elettrodomestici",
+      "blockClass": "buttonLink"
+    }
+  },
+  "rich-text#withdrawalButton2": {
+    "title": "Accessori",
+    "props": {
+      "text": "Accessori",
+      "blockClass": "buttonLink"
+    }
+  },
+  "rich-text#withdrawalButton3": {
+    "title": "Scarica",
+    "props": {
+      "text": "Scarica",
+      "blockClass": "buttonLink"
+    }
+  },
+  "rich-text#textAfterButtons": {
+    "title": "Text Aftere Buttons",
+    "props": {
+      "text": "Modalità di esercizio del diritto di recesso. Restituzione del Prodotto (Estratto delle Condizioni di Acquisto)<br><br>5.1<br>L’Acquirente ha diritto di recedere dal contratto di acquisto, senza alcuna penalità e senza specificarne il motivo, entro il termine di 14 (quattordici) giorni lavorativi dalla data di consegna del Prodotto o dalla conclusione del contratto (nel caso in cui l’acquirente abbia acquistato un servizio come l’estensione di assistenza sul Prodotto), secondo quanto garantito dal Codice di Consumo.<br><br>5.2<br>Il diritto di recesso dovrà essere esercitato:<br>A.  Compilando il modulo di reso online (opzione non obbligatoria) disponibile nell'area Menu Supporto -> Resi entro 14 giorni dalla data di consegna del prodotto o di conclusione del contratto (nel caso dei contratti di servizi), facendo attenzione ad inserire correttamente tutti i dati obbligatori (indicati con simbolo * asterisco ) In alternativa è possibile utilizzare sia il format cartaceo qui scaricabile che andrà debitamente compilato, oppure una qualsiasi altra dichiarazione esplicita della sua decisione di recedere dal contratto, inoltrandolo ai nostri contatti come tramite email all'indirizzo:<br>- directsalesonline@whirlpool.com (per la categoria “elettrodomestici”)<br>- servizioclienti.whirlpool.it@whirlpool.com (per la categoria “accessori”)<br><br>B.  Restituendo il prodotto:<br> - nel caso di acquisto di un elettrodomestico presso Fast Est srl - Via Livio Bertozzi, 62 42043 Gattatico (RE);",
+      "blockClass": "textAfterButtons"
+    }
+  },
+  "rich-text#appliancesFormTitle": {
+    "title": "Appliances Form Title",
+    "props": {
+      "text": "Modulo di recesso online Elettrodomestici",
+      "blockClass": "appliancesFormTitle"
+    }
+  },
+  "rich-text#appliancesFormSubTitle": {
+    "title": "Appliances Form Sub Title",
+    "props": {
+      "text": "Diritto di recesso",
+      "blockClass": "appliancesFormSubTitle"
+    }
+  },
+  "rich-text#appliancesFormSubText": {
+    "title": "Appliances Form Sub Text",
+    "props": {
+      "text": "Se hai cambiato idea puoi restituire il prodotto e ti sarà rimborsato il prezzo versato.<br><br>La richiesta di recesso deve pervenire entro 14 giorni di calendario dalla ricezione dell'ordine e puoi inserirla direttamente online compilando il modulo di reso che trovi qui sotto. <br>Per maggiori informazioni sulle Condizioni Generali di Acquisto, [clicca qui]().",
+      "blockClass": "appliancesFormSubText"
+    }
+  },
+  "rich-text#accessoriesFormSubTitle": {
+    "title": "Accessories Form Sub Title",
+    "props": {
+      "text": "Modulo di recesso online Accessori",
+      "blockClass": "accessoriesFormSubTitle"
+    }
+  },
+  "rich-text#privacyLinkLabel": {
+    "title": "Privacy Link Label",
+    "props": {
+      "text": "Informativa sulla privacy",
+      "blockClass": "privacyLinkLabel"
+    }
+  },
+  "rich-text#privacyLabel": {
+    "title": "Privacy Label",
+    "props": {
+      "text": "Tratteremo le tue informazioni personali in conformità con la nostra <a href='#' class='vtex-rich-text-0-x-formLink' target='_blank'>Informativa sulla privacy</a>",
+      "blockClass": "privacyLabel"
+    }
+  },
+  "rich-text#privacyLink": {
+    "title": "Privacy Link",
+    "props": {
+      "text": "Informativa sulla privacy",
+      "blockClass": "privacyLink"
+    }
+  },
+  "rich-text#accessoriesFormTitle": {
+    "title": "Accessories Form Title",
+    "props": {
+      "text": "Modulo online Accessori",
+      "blockClass": "accessoriesFormTitle"
+    }
+  },
+  "rich-text#accessoriesFormTitleRecesso": {
+    "title": "Accessories Form Title",
+    "props": {
+      "text": "Modulo recesso online Accessori",
+      "blockClass": "accessoriesFormTitle"
+    }
+  },
+  "rich-text#accessoriesFormSubText": {
+    "title": "Accessories Form Sub Title",
+    "props": {
+      "text": "Accessories Form Sub Title",
+      "blockClass": "accessoriesFormSubText"
+    }
+  },
+  "flex-layout.row#buttonGroups": {
+    "children": [
+      "withdrawal-right#withdrawalButton1",
+      "withdrawal-right#withdrawalButton2",
+      "withdrawal-right#withdrawalButton3"
+    ]
+  },
+  "withdrawal-right#withdrawalButton1": {
+    "props": {
+      "withdrawalButton1": "Button1"
+    }
+  },
+  "withdrawal-right#withdrawalButton2": {
+    "props": {
+      "withdrawalButton2": "Button2"
+    }
+  },
+  "withdrawal-right#withdrawalButton3": {
+    "props": {
+      "withdrawalButton3": "<a href='#'>Button3</a>"
+    }
+  },
+  "withdrawal-right#withdrawalRightTitle": {
+    "props": {
+      "withdrawalRightTitle": "Sostituzione"
+    }
+  },
+  "withdrawal-right#textBeforeButtons": {
+    "props": {
+      "textBeforeButtons": "textBeforeButtons"
+    }
+  },
+  "withdrawal-right#textAfterButtons": {
+    "props": {
+      "textAfterButtons": "textAfterButtons"
+    }
+  },
+  "withdrawal-right#withdrawalRightSubTitle": {
+    "props": {
+      "withdrawalRightSubTitle": "sub"
+    }
+  },
+  "tab-content.item#supportCCSostituzioneProdottoDanneggiato": {
+    "title": "SostituzioneProdottoDanneggiato",
+    "children": [
+      "withdrawal-right#supportCCSostituzioneProdottoDanneggiato"
+    ],
+    "props": {
+      "tabId": "sostituzioneProdottoDanneggiato"
+    }
+  },
+  "withdrawal-right#supportCCSostituzioneProdottoDanneggiato": {
+    "children": [
+      "rich-text#withdrawalRightTitle",
+      "rich-text#withdrawalRightSubTitle",
+      "rich-text#textBeforeButtons",
+      "rich-text#withdrawalButton1",
+      "rich-text#withdrawalButton2",
+      "rich-text#withdrawalButton3",
+      "rich-text#appliancesFormTitle",
+      "rich-text#appliancesFormSubTitle",
+      "rich-text#appliancesFormSubText",
+      "rich-text#accessoriesFormTitle",
+      "rich-text#accessoriesFormSubTitle",
+      "rich-text#privacyLinkLabel",
+      "rich-text#privacyLabel",
+      "rich-text#privacyLink"
+    ]
+  },
+  "tab-content.item#supportCCNotaImportanteSullaGaranziaLegale": {
+    "title": "[CONTENT] Nota Importante Sulla GaranziaLegale",
+    "children": [
+      "rich-text#garanziaTitle"
+    ],
+    "props": {
+      "tabId": "notaImportanteSullaGaranziaLegale"
+    }
+  },
+  "tab-content.item#supportCCGaranzia": {
+    "title": "[CONTENT] Garanzia",
+    "children": [
+      "rich-text#garanziaTitle",
+      "rich-text#garanziaText",
+      "rich-text#pubblicationDate",
+      "rich-text#pdfTextAndLink"
+    ],
+    "props": {
+      "tabId": "supportCCGaranzia"
+    }
+  },
+  "tab-content.item#supportCCRegistraIlTuoProdotto": {
+    "title": "[CONTENT] Registra Il Tuo Prodotto",
+    "children": [
+      "rich-text#supportCCRegistraIlTuoProdottoTitle",
+      "rich-text#supportCCRegistraIlTuoProdottoText",
+      "experimental__visibility-layout#supportCCRegistraIlTuoProdottoFourBrandLogos",
+      "rich-text#supportCCRegistraIlTuoProdottoText2"
+    ],
+    "props": {
+      "tabId": "registraIlTuoProdotto"
+    }
+  },
+  "tab-content.item#supportCCEstensioneDiGaranzia": {
+    "title": "[CONTENT] Estensione Di Garanzia",
+    "children": [
+      "rich-text#supportCCEstensioneDiGaranziaTitle",
+      "rich-text#supportCCEstensioneDiGaranziaText",
+      "experimental__visibility-layout#supportCCFourBrandLogos",
+      "rich-text#supportCCEstensioneDiGaranziaText2"
+    ],
+    "props": {
+      "tabId": "estensioneDiGaranzia"
+    }
+  },
+  "tab-content.item#supportCCFamily&Friends": {
+    "title": "[CONTENT] Family & Friends",
+    "children": [
+      "rich-text#supportCCFamily&FriendsTitle",
+      "rich-text#supportCCFamily&FriendsText",
+      "rich-text#supportCCFamily&FriendsPhone"
+    ],
+    "props": {
+      "tabId": "family&Friends"
+    }
+  },
+  "tab-content.item#supportCCClimatizzatoriF-GAS": {
+    "title": "[CONTENT] Climatizzatori F-GAS",
+    "children": [
+      "rich-text#supportCCClimatizzatoriF-GASTitle",
+      "rich-text#supportCCClimatizzatoriF-GASText"
+    ],
+    "props": {
+      "tabId": "climatizzatoriF-GAS"
+    }
+  },
+  "tab-content.item#supportCCRecensioni-TerminiECondizioniUso": {
+    "title": "[CONTENT] Recensioni-Termini E Condizioni Uso",
+    "children": [
+      "rich-text#supportCCRecensioni-TerminiECondizioniUsoTitle",
+      "rich-text#supportCCRecensioni-TerminiECondizioniUsoText"
+    ],
+    "props": {
+      "tabId": "recensioni-TerminiECondizioniUso"
+    }
+  },
+  /*------------AZIENDA-------------*/
+  "tab-layout#supportCCAzienda": {
+    "children": [
+      "tab-list#supportCCAzienda",
+      "tab-content#supportCCAzienda"
+    ],
+    "props": {
+      "blockClass": "supportTabCC",
+      "defaultActiveTabId": "supportCC1"
+    }
+  },
+  "tab-list#supportCCAzienda": {
+    "title": "[DESKTOP] Left menu categories Azienda",
+    "props": {
+      "blockClass": "supportCCListContainer"
+    },
+    "children": [
+      "link#supportCCCodiceEtico",
+      "link#supportCCModelloOrganizzativo"
+    ]
+  },
+  "link#supportCCCodiceEtico": {
+    "props": {
+      "label": "Codice Etico",
+      "href": "/api/dataentities/AT/documents/bea9b139-2ebe-11ed-835d-0aacdb44bb83/file/attachments/WhirlpoolCorp_IntegrityManual_2019_ITALIAN.pdf",
+      "target": "_blank",
+      "blockClass": "supportCCLink"
+    }
+  },
+  "link#supportCCModelloOrganizzativo": {
+    "props": {
+      "label": "Modello Organizzativo",
+      "href": "/api/dataentities/AT/documents/bea9b139-2ebe-11ed-835d-0aacdb44bb83/file/attachments/_MOG_2020_WHIRLPOOL_Italia.pdf",
+      "target": "_blank",
+      "blockClass": "supportCCLink"
+    }
+  },
+  "tab-content#supportCCAzienda": {
+    "title": "[DESKTOP] Content menu Azienda",
+    "props": {
+      "blockClass": "supportCCContentContainer"
+    },
+    "children": [
+      // "tab-content.item#supportCCCodiceEtico",
+      // "tab-content.item#supportCC2"
+    ]
+  },
+  /*------------------------*/
+  "rich-text#garanziaTitle": {
+    "title": "[TEXT] - [MID] Garanzia Title",
+    "props": {
+      "text": "# Nota importante sulla garanzia legale",
+      "blockClass": "garanziaTitle"
+    }
+  },
+  "rich-text#garanziaText": {
+    "title": "[TEXT] - [MID] Garanzia Text",
+    "props": {
+      "text": "Ricordiamo che in caso di malfunzionamenti di prodotti Whirlpool che si manifestino entro 2 anni dalla data della consegna del prodotto (debitamente documentata, ad esempio dalla ricevuta o dallo scontrino fiscale), ai sensi del codice del consumo i consumatori hanno diritto di: \n      - ottenere un intervento gratuito affinché il tecnico verifichi se il malfunzionamento dipende da un difetto di conformità esistente al momento della consegna del prodotto (il consumatore non dovrà, dunque, dimostrare che il difetto esisteva al momento della consegna, ma spetta al tecnico accertarlo); \n       - in caso affermativo, ottenere la riparazione o sostituzione del prodotto entro un congruo tempo e senza alcun addebito. La garanzia legale copre anche i difetti di conformità di tutti gli eventuali componenti del prodotto, esclusi i malfunzionamenti causati da un uso improprio o negligente o dalla normale usura conseguente all’utilizzo del prodotto; \n      - qualora il tecnico accerti che il malfunzionamento non dipende da un difetto di conformità, saranno addebitate al consumatore le spese sostenute per la verifica, nonché il costo della riparazione laddove sia richiesta dal consumatore stesso.  Per richiedere un intervento di assistenza post-vendita di prodotti Whirlpool o per ulteriori informazioni, contattaci al numero 02.20.30*, attivo dal lunedì al venerdì dalle 8,00 alle 19,00 e il sabato e la domenica dalle 9,00 alle 13,00."
+    }
+  },
+  "rich-text#pubblicationDate": {
+    "title": "[TEXT] - [MID] Pubblication Date",
+    "props": {
+      "text": "Pubblicazione del 20 ottobre 2017 ",
+      "blockClass": "garanziaPubblicationDate"
+    }
+  },
+  "rich-text#pdfTextAndLink": {
+    "title": "[TEXT] - [MID] Pdf Text and Link",
+    "props": {
+      "text": "Per maggiori informazioni relative alle Condizioni generali di Garanzia Legale clicca <a class='vtex-rich-text-0-x-link' href='/api/dataentities/AT/documents/bea9b139-2ebe-11ed-835d-0aacdb44bb83/file/attachments/condizioni_garanzie_legali.pdf' target='_blank' download >qui</a> "
+    }
+  },
+  /*------- MOBILE -------*/
+  "responsive-layout.mobile#supportCCTabLayout": {
+    "title": "[MOBILE] Left menu categories",
+    "children": [
+      "overlay-trigger#informazioniSullaConsegnaMobile",
+      "overlay-trigger#supportCCDomandeFrequentiMobile",
+      "overlay-trigger#supportCCContattiMobile",
+      "experimental__visibility-layout#assistenzaTecnicaMobile",
+      "overlay-trigger#schedaProdottoMobile",
+      "overlay-trigger#supportCCIstruzioniPerUsoMobile",
+      "overlay-trigger#supportCCDirittoDiRecessoMobile",
+      "overlay-trigger#supportCCSostituzioneProdottoDanneggiatoMobile",
+      "overlay-trigger#supportCCRisoluzioneOnlineDelleControversieMobile",
+      "experimental__visibility-layout#legalGuaranteeMobile",
+      "overlay-trigger#supportCCPromemoriaSullaGaranziaLegaleMobile",
+      "overlay-trigger#supportCCRegistraIlTuoProdottoMobile",
+      "overlay-trigger#supportCCEstensioneDiGaranziaMobile",
+      "experimental__visibility-layout#supportCCFamily&FriendsMobile",
+      "experimental__visibility-layout#supportCCClimatizzatoriF-GASMobile",
+      // "overlay-trigger#supportCCClimatizzatoriF-GASMobile",
+      "overlay-trigger#supportCCRecensioni-TerminiECondizioniUsoMobile",
+      "overlay-trigger#supportCCCodiceEticoMobile",
+      "overlay-trigger#supportCCModelloOrganizzativoMobile"
+    ]
+  },
+  "experimental__visibility-layout#legalGuaranteeMobile": {
+    "title": "[TOGGLE] Toggle supportCC legal guarantee mobile",
+    "props": {
+      "visible": false
+    },
+    "children": [
+      "overlay-trigger#garanzia"
+    ]
+  },
+  "overlay-trigger#informazioniSullaConsegnaMobile": {
+    "title": "[MOBILE] Informazioni Sulla Consegna",
+    "children": [
+      "rich-text#informazioniSullaConsegna",
+      "image#gt-icon",
+      "overlay-layout#informazioniSullaConsegnaMobile"
+    ]
+  },
+  "overlay-trigger#supportCCDomandeFrequentiMobile": {
+    "title": "[MOBILE] Domande Frequenti Mobile",
+    "children": [
+      "rich-text#supportCCDomandeFrequentiMobile",
+      "image#gt-icon",
+      "overlay-layout#supportCCDomandeFrequentiMobile"
+    ]
+  },
+  "overlay-trigger#supportCCContattiMobile": {
+    "title": "[MOBILE] Contatti Mobile",
+    "children": [
+      "rich-text#supportCCContattiMobile",
+      "image#gt-icon",
+      "overlay-layout#supportCCContattiMobile"
+    ]
+  },
+  "experimental__visibility-layout#assistenzaTecnicaMobile": {
+    "title": "[TOGGLE] Toggle SupportCC Assistenza Tecnica MObile",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "overlay-trigger#assistenzaTecnicaMobile"
+    ]
+  },
+  "overlay-trigger#assistenzaTecnicaMobile": {
+    "title": "Overlay Trigger - Assistenza Tecnica Online",
+    "children": [
+      "rich-text#assistenzaTecnicaMobile",
+      "image#gt-icon",
+      "overlay-layout#assistenzaTecnicaMobile"
+      // "overlay-layout#third"
+    ]
+  },
+  "overlay-trigger#schedaProdottoMobile": {
+    "title": "Overlay Trigger - scheda Prodotto",
+    "children": [
+      "rich-text#supportCCSchedaProdottoMobile",
+      "image#gt-icon",
+      "overlay-layout#schedaProdottoMobile"
+      // "overlay-layout#third"
+    ]
+  },
+  "overlay-trigger#supportCCIstruzioniPerUsoMobile": {
+    "title": "Overlay Trigger - supportCC Istruzioni Per Uso Mobile",
+    "children": [
+      "rich-text#supportCCIstruzioniPerUsoMobile",
+      "image#gt-icon",
+      "overlay-layout#supportCCIstruzioniPerUsoMobile"
+      // "overlay-layout#third"
+    ]
+  },
+  "overlay-trigger#supportCCDirittoDiRecessoMobile": {
+    "title": "Overlay Trigger - supportCC Diritto Di Recesso Mobile",
+    "children": [
+      "rich-text#supportCCDirittoDiRecessoMobile",
+      "image#gt-icon",
+      "overlay-layout#supportCCDirittoDiRecessoMobile"
+      // "overlay-layout#third"
+    ]
+  },
+  "overlay-trigger#supportCCSostituzioneProdottoDanneggiatoMobile": {
+    "title": "Overlay Trigger - supportCC Sostituzione Prodotto Danneggiato Mobile",
+    "children": [
+      "rich-text#supportCCSostituzioneProdottoDanneggiatoMobile",
+      "image#gt-icon",
+      "overlay-layout#supportCCSostituzioneProdottoDanneggiatoMobile"
+      // "overlay-layout#third"
+    ]
+  },
+  "overlay-trigger#supportCCRisoluzioneOnlineDelleControversieMobile": {
+    "title": "Overlay Trigger - supportCC Risoluzione On line Delle Controversie Mobile",
+    "children": [
+      "link#supportCCRisoluzioneOnlineDelleControversie",
+      "image#gt-icon"
+      //"overlay-layout#first"
+      // "overlay-layout#third"
+    ]
+  },
+  "overlay-trigger#garanzia": {
+    "title": "[MOBILE] List Garanzia",
+    "children": [
+      "rich-text#supportCCNotaImportanteSullaGaranziaLegaleMobile",
+      "image#gt-icon",
+      "overlay-layout#garanzia"
+    ]
+  },
+  "overlay-trigger#supportCCPromemoriaSullaGaranziaLegaleMobile": {
+    "title": "[MOBILE] Promemoria Sulla Garanzia Legale Mobile",
+    "children": [
+      "link#supportCCPromemoriaSullaGaranziaLegale",
+      "image#gt-icon"
+    ]
+  },
+  "rich-text#garanzia": {
+    "title": "[TRIGGER] - [MID] Trigger Garanzia",
+    "props": {
+      "text": "Garanzia",
+      "blockClass": "lisItemMobile"
+    }
+  },
+  "overlay-layout#garanzia": {
+    "title": "[MOBILE] Content Garanzia",
+    "props": {
+      "placement": "left",
+      "blockClass": "suppOverlay"
+    },
+    "children": [
+      // "image#closing-icon",
+      // "flex-layout.row#closing-icon",
+      "flex-layout.row#backButtonRow",
+      "rich-text#garanziaTitle",
+      "rich-text#garanziaText",
+      "rich-text#pubblicationDate",
+      "rich-text#pdfTextAndLink"
+    ]
+  },
+  "flex-layout.row#closing-icon": {
+    "props": {
+      "blockClass": "closing-icon"
+    },
+    "children": [
+      "image#closing-icon"
+    ]
+  },
+  "flex-layout.row#garanziaMobile": {
+    "children": [
+      "flex-layout.col#garanziaMobile"
+    ]
+  },
+  "flex-layout.col#garanziaMobile": {
+    "children": []
+  },
+  "overlay-trigger#supportCCRegistraIlTuoProdottoMobile": {
+    "title": "Overlay Trigger - Registra Il Tuo Prodotto",
+    "children": [
+      "rich-text#supportCCRegistraIlTuoProdottoMobile",
+      "image#gt-icon",
+      "overlay-layout#supportCCRegistraIlTuoProdottoMobile"
+    ]
+  },
+  "overlay-trigger#supportCCEstensioneDiGaranziaMobile": {
+    "title": "Overlay Trigger - Estensione Di Garanzia Mobile",
+    "children": [
+      "rich-text#supportCCEstensioneDiGaranziaMobile",
+      "image#gt-icon",
+      "overlay-layout#supportCCEstensioneDiGaranziaMobile"
+    ]
+  },
+  "experimental__visibility-layout#supportCCFamily&FriendsMobile": {
+    "title": "[TOGGLE] Toggle supportCC Family & Friends Mobile",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "overlay-trigger#supportCCFamily&FriendsMobile"
+    ]
+  },
+  "overlay-trigger#supportCCFamily&FriendsMobile": {
+    "title": "Overlay Trigger - supportCC Family & Friends Mobile",
+    "children": [
+      "rich-text#supportCCFamily&FriendsMobile",
+      "image#gt-icon",
+      "overlay-layout#supportCCFamily&FriendsMobile"
+    ]
+  },
+  "experimental__visibility-layout#supportCCClimatizzatoriF-GASMobile": {
+    "title": "[EXPERIMENTAL VISIBILITY] Climatizzatori F-GAS",
+    "props": {},
+    "children": [
+      "overlay-trigger#supportCCClimatizzatoriF-GASMobile"
+    ]
+  },
+  "overlay-trigger#supportCCClimatizzatoriF-GASMobile": {
+    "title": "Overlay Trigger - Fgas",
+    "children": [
+      "rich-text#supportCCClimatizzatoriF-GASMobile",
+      "image#gt-icon",
+      "overlay-layout#supportCCClimatizzatoriF-GASMobile"
+    ]
+  },
+  "overlay-trigger#supportCCRecensioni-TerminiECondizioniUsoMobile": {
+    "title": "Overlay Trigger - Recensioni-Termini E Condizioni D'Uso Mobile",
+    "children": [
+      "rich-text#supportCCRecensioni-TerminiECondizioniUsoMobile",
+      "image#gt-icon",
+      "overlay-layout#supportCCRecensioni-TerminiECondizioniUsoMobile"
+    ]
+  },
+  "overlay-trigger#supportCCCodiceEticoMobile": {
+    "title": "Overlay Trigger - Codice Etico Mobile",
+    "children": [
+      "link#supportCCCodiceEtico",
+      "image#gt-icon"
+      //"overlay-layout#first"
+    ]
+  },
+  "overlay-trigger#supportCCModelloOrganizzativoMobile": {
+    "title": "Overlay Trigger - Modello Organizzativo",
+    "children": [
+      "link#supportCCModelloOrganizzativo",
+      "image#gt-icon"
+      //"overlay-layout#first"
+    ]
+  },
+  "rich-text#informazioniSullaConsegna": {
+    "props": {
+      "text": "Informazioni Sulla Consegna",
+      "blockClass": "lisItemMobile"
+    }
+  },
+  "rich-text#assistenzaTecnicaMobile": {
+    "props": {
+      "text": "Assistenza Tecnica",
+      "blockClass": "lisItemMobile"
+    }
+  },
+  "rich-text#supportCCSchedaProdottoMobile": {
+    "props": {
+      "text": "Scheda Prodotto",
+      "blockClass": "lisItemMobile"
+    }
+  },
+  "rich-text#supportCCIstruzioniPerUsoMobile": {
+    "props": {
+      "text": "Istruzioni Per l' Uso",
+      "blockClass": "lisItemMobile"
+    }
+  },
+  "rich-text#supportCCDirittoDiRecessoMobile": {
+    "props": {
+      "text": "Diritto Di Recesso",
+      "blockClass": "lisItemMobile"
+    }
+  },
+  "rich-text#supportCCSostituzioneProdottoDanneggiatoMobile": {
+    "props": {
+      "text": "Sostituzione Prodotto Danneggiato",
+      "blockClass": "lisItemMobile"
+    }
+  },
+  "rich-text#supportCCNotaImportanteSullaGaranziaLegaleMobile": {
+    "props": {
+      "text": "Nota Importante Sulla Garanzia Legale Mobile",
+      "blockClass": "lisItemMobile"
+    }
+  },
+  "rich-text#supportCCRegistraIlTuoProdottoMobile": {
+    "props": {
+      "text": "Registra Il Tuo Prodotto",
+      "blockClass": "lisItemMobile"
+    }
+  },
+  "rich-text#supportCCEstensioneDiGaranziaMobile": {
+    "props": {
+      "text": "Estensione Di Garanzia",
+      "blockClass": "lisItemMobile"
+    }
+  },
+  "rich-text#supportCCFamily&FriendsMobile": {
+    "props": {
+      "text": "Family & Friends",
+      "blockClass": "lisItemMobile"
+    }
+  },
+  "rich-text#supportCCClimatizzatoriF-GASMobile": {
+    "title": "Climatizzatori F-GAS",
+    "props": {
+      "text": "Climatizzatori F-GAS",
+      "blockClass": "lisItemMobile"
+    }
+  },
+  "rich-text#supportCCRecensioni-TerminiECondizioniUsoMobile": {
+    "props": {
+      "text": "Recensioni - Termini E Condizioni D'Uso",
+      "blockClass": "lisItemMobile"
+    }
+  },
+  "rich-text#supportCCDomandeFrequentiMobile": {
+    "props": {
+      "text": "Domande Frequenti",
+      "blockClass": "lisItemMobile"
+    }
+  },
+  "rich-text#supportCCContattiMobile": {
+    "props": {
+      "text": "Contatti",
+      "blockClass": "lisItemMobile"
+    }
+  },
+  "image#gt-icon": {
+    "props": {
+      "src": "/arquivos/gt-black-2.svg",
+      "blockClass": "gtIcon"
+    }
+  },
+  "overlay-layout#first": {
+    "title": "[MOBILE] Content",
+    "props": {
+      "placement": "left",
+      "blockClass": "suppOverlay"
+    },
+    "children": [
+      // "image#closing-icon"
+      //"rich-text#supportTitle1",
+      //"rich-text#supportText1"
+    ]
+  },
+  "overlay-layout#informazioniSullaConsegnaMobile": {
+    "title": "[MOBILE] Content informazioni Sulla Consegna Mobile",
+    "props": {
+      "placement": "left",
+      "blockClass": "suppOverlay"
+    },
+    "children": [
+      // "image#closing-icon",
+      "flex-layout.row#backButtonRow",
+      "rich-text#supportCCInformazioniSullaConsegnaTitle",
+      "rich-text#supportCCInformazioniSullaConsegnaText",
+      "rich-text#supportCCConsegnaPiuProdotti",
+      "rich-text#supportCCTempiDiConsegna",
+      "rich-text#TabellaTempiDiConsegna",
+      "rich-text#supportCCCondizioniConsegna",
+      "rich-text#supportCCInformazioniRelativeConsegna"
+    ]
+  },
+  "overlay-layout#supportCCDomandeFrequentiMobile": {
+    "title": "[MOBILE] Content Domande Frequenti Mobile",
+    "props": {
+      "placement": "left",
+      "blockClass": "suppOverlay"
+    },
+    "children": [
+      // "image#closing-icon",
+      "flex-layout.row#backButtonRow",
+      "rich-text#supportCCDomandeFrequenti",
+      "faq"
+    ]
+  },
+  "overlay-layout#supportCCContattiMobile": {
+    "title": "[MOBILE] Content Contatti Mobile",
+    "props": {
+      "placement": "left",
+      "blockClass": "suppOverlay"
+    },
+    "children": [
+      // "image#closing-icon",
+      "flex-layout.row#backButtonRow",
+      "rich-text#supportCCContattiTitle",
+      "rich-text#supportCCContattiText",
+      "experimental__visibility-layout#supportCCFourBrandLogos",
+      "rich-text#supportCCContattiPhone",
+      "rich-text#supportCCContattiTextUnderPhone"
+    ]
+  },
+  "overlay-layout#assistenzaTecnicaMobile": {
+    "title": "[MOBILE] Content #assistenza Tecnica Mobile",
+    "props": {
+      "placement": "left",
+      "blockClass": "suppOverlay"
+    },
+    "children": [
+      // "image#closing-icon",
+      "flex-layout.row#backButtonRow",
+      "rich-text#supportCCAssistenzaTecnicaTitle",
+      "rich-text#supportCCAssistenzaTecnicaText",
+      "withdrawal-right#assistenzaTecnicaForm"
+    ]
+  },
+  "overlay-layout#schedaProdottoMobile": {
+    "title": "[MOBILE] Content scheda Prodotto Mobile",
+    "props": {
+      "placement": "left",
+      "blockClass": "suppOverlay"
+    },
+    "children": [
+      // "image#closing-icon",
+      "flex-layout.row#backButtonRow",
+      "rich-text#supportCCSchedaProdottoTitle",
+      "rich-text#supportCCSchedaProdottoText",
+      "experimental__visibility-layout#supportCCSchedaProdottoFourBrandLogos",
+      "rich-text#supportCCSchedaProdottoText2"
+    ]
+  },
+  "overlay-layout#supportCCIstruzioniPerUsoMobile": {
+    "title": "[MOBILE] Content istruzioni Per Uso Mobile",
+    "props": {
+      "placement": "left",
+      "blockClass": "suppOverlay"
+    },
+    "children": [
+      // "image#closing-icon",
+      "flex-layout.row#backButtonRow",
+      "rich-text#supportCCIstruzioniPerUsoTitle",
+      "rich-text#supportCCIstruzioniPerUsoText",
+      "experimental__visibility-layout#supportCCIstruzioniPerUsoFourBrandLogos",
+      "rich-text#supportCCIstruzioniPerUsoText2"
+    ]
+  },
+  "overlay-layout#supportCCDirittoDiRecessoMobile": {
+    "title": "[MOBILE] Content Diritto Di Recesso Mobile",
+    "props": {
+      "placement": "left",
+      "blockClass": "suppOverlay"
+    },
+    "children": [
+      // "image#closing-icon",
+      "flex-layout.row#backButtonRow",
+      "withdrawal-right#supportCCDirittoDiRecesso"
+      // "rich-text#supportCCDirittoDiRecessoTitle",
+      // "rich-text#supportCCDirittoDiRecessoText"
+    ]
+  },
+  "overlay-layout#supportCCSostituzioneProdottoDanneggiatoMobile": {
+    "title": "[MOBILE] Content Sostituzione Prodotto Danneggiato Mobile",
+    "props": {
+      "placement": "left",
+      "blockClass": "suppOverlay"
+    },
+    "children": [
+      // "image#closing-icon",
+      "flex-layout.row#backButtonRow",
+      "withdrawal-right#supportCCSostituzioneProdottoDanneggiato"
+    ]
+  },
+  "overlay-layout#supportCCRegistraIlTuoProdottoMobile": {
+    "title": "[MOBILE] Content Registra Il Tuo Prodotto Mobile",
+    "props": {
+      "placement": "left",
+      "blockClass": "suppOverlay"
+    },
+    "children": [
+      // "image#closing-icon",
+      "flex-layout.row#backButtonRow",
+      "rich-text#supportCCRegistraIlTuoProdottoTitle",
+      "rich-text#supportCCRegistraIlTuoProdottoText",
+      "experimental__visibility-layout#supportCCRegistraIlTuoProdottoFourBrandLogos",
+      "rich-text#supportCCRegistraIlTuoProdottoText2"
+    ]
+  },
+  "overlay-layout#supportCCEstensioneDiGaranziaMobile": {
+    "title": "[MOBILE] Content Registra Il Tuo Prodotto Mobile",
+    "props": {
+      "placement": "left",
+      "blockClass": [
+        "suppOverlay",
+        "overlayEstensioneGaranzia"
+      ]
+    },
+    "children": [
+      // "image#closing-icon",
+      "flex-layout.row#backButtonRow",
+      "rich-text#supportCCEstensioneDiGaranziaTitle",
+      "rich-text#supportCCEstensioneDiGaranziaText",
+      "experimental__visibility-layout#supportCCFourBrandLogos",
+      "rich-text#supportCCEstensioneDiGaranziaText2"
+    ]
+  },
+  "overlay-layout#supportCCFamily&FriendsMobile": {
+    "title": "[MOBILE] Content Registra Il Tuo Prodotto Mobile",
+    "props": {
+      "placement": "left",
+      "blockClass": "suppOverlay"
+    },
+    "children": [
+      // "image#closing-icon",
+      "flex-layout.row#backButtonRow",
+      "rich-text#supportCCFamily&FriendsTitle",
+      "rich-text#supportCCFamily&FriendsText",
+      "rich-text#supportCCFamily&FriendsPhone"
+    ]
+  },
+  "overlay-layout#supportCCClimatizzatoriF-GASMobile": {
+    "title": "[MOBILE] Content Climatizzatori F-GAS Mobile",
+    "props": {
+      "placement": "left",
+      "blockClass": "suppOverlay"
+    },
+    "children": [
+      // "image#closing-icon",
+      "flex-layout.row#backButtonRow",
+      "rich-text#supportCCClimatizzatoriF-GASTitle",
+      "rich-text#supportCCClimatizzatoriF-GASText"
+    ]
+  },
+  "overlay-layout#supportCCRecensioni-TerminiECondizioniUsoMobile": {
+    "title": "[MOBILE] Content Recensioni-Termini E Condizioni Uso Mobile",
+    "props": {
+      "placement": "left",
+      "blockClass": "suppOverlay"
+    },
+    "children": [
+      // "image#closing-icon",
+      "flex-layout.row#backButtonRow",
+      "rich-text#supportCCRecensioni-TerminiECondizioniUsoTitle",
+      "rich-text#supportCCRecensioni-TerminiECondizioniUsoText"
+    ]
+  },
+  // "overlay-layout#third": {
+  //   "title": "Overlay Layout - Garanties",
+  //   "props": {
+  //     "placement": "left",
+  //     "blockClass": "suppOverlay"
+  //   },
+  //   "children": [
+  // //     "image#closing-icon",
+  //     "rich-text#supportTitle1",
+  //     "rich-text#supportText1",
+  //     "rich-text#legalText",
+  //     "rich-text#supportText3"
+  //   ]
+  // },
+  "image#closing-icon": {
+    "props": {
+      "src": "/arquivos/times-solid-black.svg",
+      "blockClass": "closingIcon"
+    }
+  },
+  "experimental__visibility-layout#supportCCSchedaProdottoFourBrandLogos": {
+    "title": "[TOGGLE] Toggle supportCC Four Brand Logos",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "flex-layout.row#supportCCSchedaProdottoFourBrandLogos"
+    ]
+  },
+  "flex-layout.row#supportCCSchedaProdottoFourBrandLogos": {
+    "title": "[ROW] supportCC Four Brand Logos Row",
+    "children": [
+      "link#hotpointLogoSchedaProdotto",
+      "link#whirlpoolLogoSchedaProdotto",
+      "link#indesitLogoSchedaProdotto",
+      "link#kitchenaidLogoSchedaProdotto"
+    ],
+    "props": {
+      "blockClass": "fourBrandLogosRow"
+    }
+  },
+  "link#hotpointLogoSchedaProdotto": {
+    "children": [
+      "image#hotpointLogoIMGSchedaProdotto"
+    ],
+    "props": {
+      "href": "https://whirlpool.register-appliance.com/RegistroPorMarca?country=IT&language=it"
+      /* "blockClass": "subCategoryTitle" */
+    }
+  },
+  "image#hotpointLogoIMGSchedaProdotto": {
+    "props": {
+      "src": "/arquivos/hp-logo.svg",
+      "maxHeight": 48
+    }
+  },
+  "link#whirlpoolLogoSchedaProdotto": {
+    "children": [
+      "image#whirlpoolLogoIMGSchedaProdotto"
+    ],
+    "props": {
+      "href": "https://whirlpool.register-appliance.com/RegistroPorMarca?country=IT&language=it"
+      /* "blockClass": "subCategoryTitle" */
+    }
+  },
+  "image#whirlpoolLogoIMGSchedaProdotto": {
+    "props": {
+      "src": "/arquivos/whr-logo.svg",
+      "maxHeight": 48
+    }
+  },
+  "link#indesitLogoSchedaProdotto": {
+    "children": [
+      "image#indesitLogoIMGSchedaProdotto"
+    ],
+    "props": {
+      "href": "https://indesit.register-appliance.com/RegistroPorMarca?country=IT&language=it"
+      /* "blockClass": "subCategoryTitle" */
+    }
+  },
+  "image#indesitLogoIMGSchedaProdotto": {
+    "props": {
+      "src": "/arquivos/indesit-logo.svg",
+      "maxHeight": 48
+    }
+  },
+  "link#kitchenaidLogoSchedaProdotto": {
+    "children": [
+      "image#kitchenaidLogoIMGSchedaProdotto"
+    ],
+    "props": {
+      "href": "https://www.kitchenaid.it/landings/registra-il-tuo-prodotto-e-rilassati"
+      /* "blockClass": "subCategoryTitle" */
+    }
+  },
+  "image#kitchenaidLogoIMGSchedaProdotto": {
+    "props": {
+      "src": "/arquivos/ka-logo.svg",
+      "maxHeight": 48
+    }
+  },
+  "rich-text#supportCCSchedaProdottoText2": {
+    "props": {
+      "text": "Scegli il marchio del prodotto di cui vuoi visualizzare la scheda, sarai reindirizzato automaticamente alla pagina dedicata."
+      //"blockClass": "supportTitle"
+    }
+  },
+  "experimental__visibility-layout#supportCCIstruzioniPerUsoFourBrandLogos": {
+    "title": "[TOGGLE] Toggle supportCC Four Brand Logos",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "flex-layout.row#supportCCIstruzioniPerUsoFourBrandLogos"
+    ]
+  },
+  "flex-layout.row#supportCCIstruzioniPerUsoFourBrandLogos": {
+    "title": "[ROW] supportCC Four Brand Logos Row",
+    "children": [
+      "link#hotpointLogoIstruzioniPerUso",
+      "link#whirlpoolLogoIstruzioniPerUso",
+      "link#indesitLogoIstruzioniPerUso",
+      "link#kitchenaidLogoIstruzioniPerUso"
+    ],
+    "props": {
+      "blockClass": "fourBrandLogosRow"
+    }
+  },
+  "link#hotpointLogoIstruzioniPerUso": {
+    "children": [
+      "image#hotpointLogoIMGIstruzioniPerUso"
+    ],
+    "props": {
+      "href": "https://whirlpool.register-appliance.com/RegistroPorMarca?country=IT&language=it"
+      /* "blockClass": "subCategoryTitle" */
+    }
+  },
+  "image#hotpointLogoIMGIstruzioniPerUso": {
+    "props": {
+      "src": "/arquivos/hp-logo.svg",
+      "maxHeight": 48
+    }
+  },
+  "link#whirlpoolLogoIstruzioniPerUso": {
+    "children": [
+      "image#whirlpoolLogoIMGIstruzioniPerUso"
+    ],
+    "props": {
+      "href": "https://whirlpool.register-appliance.com/RegistroPorMarca?country=IT&language=it"
+      /* "blockClass": "subCategoryTitle" */
+    }
+  },
+  "image#whirlpoolLogoIMGIstruzioniPerUso": {
+    "props": {
+      "src": "/arquivos/whr-logo.svg",
+      "maxHeight": 48
+    }
+  },
+  "link#indesitLogoIstruzioniPerUso": {
+    "children": [
+      "image#indesitLogoIMGIstruzioniPerUso"
+    ],
+    "props": {
+      "href": "https://indesit.register-appliance.com/RegistroPorMarca?country=IT&language=it"
+      /* "blockClass": "subCategoryTitle" */
+    }
+  },
+  "image#indesitLogoIMGIstruzioniPerUso": {
+    "props": {
+      "src": "/arquivos/indesit-logo.svg",
+      "maxHeight": 48
+    }
+  },
+  "link#kitchenaidLogoIstruzioniPerUso": {
+    "children": [
+      "image#kitchenaidLogoIMGIstruzioniPerUso"
+    ],
+    "props": {
+      "href": "https://www.kitchenaid.it/landings/registra-il-tuo-prodotto-e-rilassati"
+      /* "blockClass": "subCategoryTitle" */
+    }
+  },
+  "image#kitchenaidLogoIMGIstruzioniPerUso": {
+    "props": {
+      "src": "/arquivos/ka-logo.svg",
+      "maxHeight": 48
+    }
+  },
+  "rich-text#supportCCIstruzioniPerUsoText2": {
+    "props": {
+      "text": "Scegli il marchio del prodotto di cui vuoi cercare le istruzioni per l'uso, sarai reindirizzato automaticamente alla pagina dedicata."
+      //"blockClass": ["supportTitle" /* , "supportTitleImages" */]
+    }
+  },
+  "experimental__visibility-layout#supportCCRegistraIlTuoProdottoFourBrandLogos": {
+    "title": "[TOGGLE] Toggle supportCC Four Brand Logos",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "flex-layout.row#supportCCRegistraIlTuoProdottoFourBrandLogos"
+    ]
+  },
+  "flex-layout.row#supportCCRegistraIlTuoProdottoFourBrandLogos": {
+    "title": "[ROW] supportCC Four Brand Logos Row",
+    "children": [
+      "link#hotpointLogoRegistraIlTuoProdotto",
+      "link#whirlpoolLogoRegistraIlTuoProdotto",
+      "link#indesitLogoRegistraIlTuoProdotto",
+      "link#kitchenaidLogoRegistraIlTuoProdotto"
+    ],
+    "props": {
+      "blockClass": "fourBrandLogosRow"
+    }
+  },
+  "link#hotpointLogoRegistraIlTuoProdotto": {
+    "children": [
+      "image#hotpointLogoIMGRegistraIlTuoProdotto"
+    ],
+    "props": {
+      "href": "https://whirlpool.register-appliance.com/RegistroPorMarca?country=IT&language=it"
+      /* "blockClass": "subCategoryTitle" */
+    }
+  },
+  "image#hotpointLogoIMGRegistraIlTuoProdotto": {
+    "props": {
+      "src": "/arquivos/hp-logo.svg",
+      "maxHeight": 48
+    }
+  },
+  "link#whirlpoolLogoRegistraIlTuoProdotto": {
+    "children": [
+      "image#whirlpoolLogoIMGRegistraIlTuoProdotto"
+    ],
+    "props": {
+      "href": "https://whirlpool.register-appliance.com/RegistroPorMarca?country=IT&language=it"
+      /* "blockClass": "subCategoryTitle" */
+    }
+  },
+  "image#whirlpoolLogoIMGRegistraIlTuoProdotto": {
+    "props": {
+      "src": "/arquivos/whr-logo.svg",
+      "maxHeight": 48
+    }
+  },
+  "link#indesitLogoRegistraIlTuoProdotto": {
+    "children": [
+      "image#indesitLogoIMGRegistraIlTuoProdotto"
+    ],
+    "props": {
+      "href": "https://indesit.register-appliance.com/RegistroPorMarca?country=IT&language=it"
+      /* "blockClass": "subCategoryTitle" */
+    }
+  },
+  "image#indesitLogoIMGRegistraIlTuoProdotto": {
+    "props": {
+      "src": "/arquivos/indesit-logo.svg",
+      "maxHeight": 48
+    }
+  },
+  "link#kitchenaidLogoRegistraIlTuoProdotto": {
+    "children": [
+      "image#kitchenaidLogoIMGRegistraIlTuoProdotto"
+    ],
+    "props": {
+      "href": "https://www.kitchenaid.it/landings/registra-il-tuo-prodotto-e-rilassati"
+      /* "blockClass": "subCategoryTitle" */
+    }
+  },
+  "image#kitchenaidLogoIMGRegistraIlTuoProdotto": {
+    "props": {
+      "src": "/arquivos/ka-logo.svg",
+      "maxHeight": 48
+    }
+  },
+  "rich-text#supportCCRegistraIlTuoProdottoText2": {
+    "props": {
+      "text": "Scegli il marchio del prodotto che vuoi registrare, sarai reindirizzato automaticamente alla pagina di registrazione dedicata."
+      // "blockClass": ["supportTitle" /* , "supportTitleImages" */]
+    }
+  },
+  "flex-layout.row#backButtonRow": {
+    "children": [
+      "image#back-arrow-icon",
+      "rich-text#backButton"
+    ],
+    "props": {
+      "blockClass": "backButtonRow"
+    }
+  },
+  "rich-text#backButton": {
+    "props": {
+      "text": "Back",
+      "textColor": "c-action-primary",
+      "blockClass": [
+        "backButton"
+      ]
+    }
+  },
+  "image#back-arrow-icon": {
+    "props": {
+      "src": "assets/icons/back-arrow.svg",
+      "blockClass": "backArrowIcon"
+    }
+  }
+}

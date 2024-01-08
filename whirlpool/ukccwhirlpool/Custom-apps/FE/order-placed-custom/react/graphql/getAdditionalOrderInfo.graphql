@@ -1,0 +1,18 @@
+query ($orderInfoRequest:OrderInfoRequest!){
+  getOrderInfo(orderInfoRequest:$orderInfoRequest){
+    customData{
+      id
+      fields{
+        key
+        value
+      }
+    }
+    itemsInfo{
+      modalType
+      specifications{
+        Name
+        Value
+      }
+    }
+  }
+}

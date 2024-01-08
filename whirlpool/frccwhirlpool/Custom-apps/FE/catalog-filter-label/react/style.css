@@ -1,0 +1,54 @@
+.filterLabelsContainer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 0 .75rem 0;
+    max-width: 78rem;
+}
+
+.filterLabelsContainer:empty {
+    margin: 0;
+}
+
+.filterLabel {
+    text-decoration: unset;
+    color: #edb112;
+    border: 1px solid #edb112;
+    padding: 0.25rem 1rem;
+    margin: .5rem .6rem .5rem 0;
+    font-weight: 400;
+    border-radius: 2px;
+    width: max-content;
+}
+
+.filterLabel:hover {
+    color: #3f3f40;
+    background-color: #edb112;
+}
+
+.showMore {
+    text-decoration: underline;
+    color: #edb112;
+    cursor: pointer;
+    margin-left: .5rem;
+}
+
+.hideFilterLabel:nth-child(n+8) {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .filterLabelsContainer {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        max-width: 55rem;
+    }
+    .filterLabel {
+        margin: .4rem .4rem .4rem 0;
+        font-size: 14px;
+        max-height: min-content;
+    }
+}

@@ -1,0 +1,509 @@
+{
+  "store.home": {
+    "blocks": [
+      // "analytics#home",
+      "responsive-layout.mobile#homepage",
+      "responsive-layout.desktop#homepage"
+    ]
+  },
+  "responsive-layout.mobile#homepage": {
+    "children": [
+      "flex-layout.row#home-page-mobile"
+    ],
+    "props": {
+      "blockClass": "homepage-container"
+    }
+  },
+  "responsive-layout.desktop#homepage": {
+    "children": [
+      "flex-layout.row#all-homepage"
+    ],
+    "props": {
+      "blockClass": "homepage-container"
+    }
+  },
+  "flex-layout.row#all-homepage": {
+    "children": [
+      "flex-layout.col#all-homepage"
+    ]
+  },
+  "flex-layout.col#all-homepage": {
+    "children": [
+      "hreflang-home-component",
+      "flex-layout.row#home-page-slider-desk",
+      "flex-layout.row#images-menu",
+      "homepage-animation#first",
+      "flex-layout.row#info-pillars",
+      "homepage-double-animation#double",
+      // "homepage-animation#second",
+      // "homepage-animation#third",
+      "flex-layout.row#containerBannerNEL"
+    ],
+    "props": {
+      "blockClass": "images-menu-all-container"
+    }
+  },
+  /* ---------------------------------------- SLIDER HOME -------------------------------- */
+  "flex-layout.row#home-page-slider-desk": {
+    "children": [
+      "analytics-wrapper#home-page-slider"
+    ]
+  },
+  "analytics-wrapper#home-page-slider": {
+    "title": "Analtics Wrapper Slider Top",
+    "props": {
+      "isHpSlider": true,
+      "propsAnalytics": {
+        "analyticsProperties": "provide",
+        "nameEvent": "slider_click",
+        "name": "sliderClick",
+        // "analyticsProperties": "provide",
+        // "nameEvent": "redeemAPromo",
+        // "name": "promo",
+        "data": [
+          {}
+        ]
+      }
+    },
+    "children": [
+      "slider-layout#text-test"
+    ]
+  },
+  //"home-page-slider-desk": {},
+  "slider-layout#text-test": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "showNavigationArrows": "desktopOnly",
+      "showPaginationDots": "mobileOnly",
+      "blockClass": "carousel"
+    },
+    "children": [
+      "flex-layout.row#slide-1",
+      "flex-layout.row#slide-2",
+      "flex-layout.row#slide-3",
+      "flex-layout.row#slide-4",
+      "flex-layout.row#slide-5"
+    ]
+  },
+  /* --- SLIDE 1 --- */
+  "flex-layout.row#slide-1": {
+    "props": {
+      "blockClass": "home-slider"
+    },
+    "children": [
+      "flex-layout.row#image-container-slide-1",
+      "flex-layout.col#text-slide-1"
+    ]
+  },
+  "flex-layout.row#image-container-slide-1": {
+    "props": {
+      "blockClass": [
+        "image-container-slide",
+        "container-slide-1"
+      ]
+    }
+  },
+  "flex-layout.col#text-slide-1": {
+    "props": {
+      "blockClass": "text-slide"
+    },
+    "children": [
+      "rich-text#title-slide-1",
+      "rich-text#desc-slide-1"
+    ]
+  },
+  "rich-text#title-slide-1": {
+    "props": {
+      "text": "# Indesit – always here for you",
+      "blockClass": "title-slide"
+    }
+  },
+  "rich-text#desc-slide-1": {
+    "props": {
+      "text": "Trusted by generation after generation, Indesit is a partner you can always rely on.",
+      "blockClass": "desc-slide"
+    }
+  },
+  /* --- SLIDE 2 --- */
+  "flex-layout.row#slide-2": {
+    "props": {
+      "blockClass": "home-slider"
+    },
+    "children": [
+      "flex-layout.row#image-container-slide-2",
+      "flex-layout.col#text-slide-2"
+    ]
+  },
+  "flex-layout.row#image-container-slide-2": {
+    "props": {
+      "blockClass": [
+        "image-container-slide",
+        "container-slide-2"
+      ]
+    }
+  },
+  "flex-layout.col#text-slide-2": {
+    "props": {
+      "blockClass": "text-slide"
+    },
+    "children": [
+      "rich-text#title-slide-2",
+      "rich-text#desc-slide-2"
+    ]
+  },
+  "rich-text#title-slide-2": {
+    "props": {
+      "text": "# Products you can trust",
+      "blockClass": "title-slide"
+    }
+  },
+  "rich-text#desc-slide-2": {
+    "props": {
+      "text": "Practical and trustworthy: our products are so **easy to use** and help modern families cope with everyday life.",
+      "blockClass": "desc-slide"
+    }
+  },
+  /* --- SLIDE 3 --- */
+  "flex-layout.row#slide-3": {
+    "props": {
+      "blockClass": "home-slider"
+    },
+    "children": [
+      "flex-layout.row#image-container-slide-3",
+      "flex-layout.col#text-slide-3"
+    ]
+  },
+  "flex-layout.row#image-container-slide-3": {
+    "props": {
+      "blockClass": [
+        "image-container-slide",
+        "container-slide-3"
+      ]
+    }
+  },
+  "flex-layout.col#text-slide-3": {
+    "props": {
+      "blockClass": "text-slide"
+    },
+    "children": [
+      "rich-text#title-slide-3",
+      "rich-text#desc-slide-3"
+    ]
+  },
+  "rich-text#title-slide-3": {
+    "props": {
+      "text": "# Be ready in just one gesture",
+      "blockClass": "title-slide"
+    }
+  },
+  "rich-text#desc-slide-3": {
+    "props": {
+      "text": "Thanks to **Push&Go and Turn&Go Indesit technologies** you can manage daily household chores in just one 1 move, with complete peace of mind.",
+      "blockClass": "desc-slide"
+    }
+  },
+  /* --- SLIDE 4 --- */
+  "flex-layout.row#slide-4": {
+    "props": {
+      "blockClass": "home-slider"
+    },
+    "children": [
+      "flex-layout.row#image-container-slide-4",
+      "flex-layout.col#text-slide-4"
+    ]
+  },
+  "flex-layout.row#image-container-slide-4": {
+    "props": {
+      "blockClass": [
+        "image-container-slide",
+        "container-slide-4"
+      ]
+    }
+  },
+  "flex-layout.col#text-slide-4": {
+    "props": {
+      "blockClass": "text-slide"
+    },
+    "children": [
+      "rich-text#title-slide-4",
+      "rich-text#desc-slide-4",
+      "flex-layout.row#btn-container-slide-4"
+    ]
+  },
+  "rich-text#title-slide-4": {
+    "props": {
+      "text": "# Cooking made fun for families",
+      "blockClass": [
+        "title-slide",
+        "title-slide-4"
+      ]
+    }
+  },
+  "rich-text#desc-slide-4": {
+    "props": {
+      "text": "With the new **Indesit Turn&Go Aria ovens** that simplify your daily cooking.",
+      "blockClass": "desc-slide"
+    }
+  },
+  "flex-layout.row#btn-container-slide-4": {
+    "props": {
+      "blockClass": "btn-container-slide"
+    },
+    "children": [
+      "button-primary#btn-slide-4"
+    ]
+  },
+  "button-primary#btn-slide-4": {
+    "props": {
+      "width": "209px",
+      "text": "Discover more",
+      "href": "/products/cooking/ovens"
+    }
+  },
+  /* ------------------------------------------------------------------------ */
+  /* --- SLIDE 5 --- */
+  "flex-layout.row#slide-5": {
+    "props": {
+      "blockClass": [
+        "home-slider",
+        "slide-5"
+      ]
+    },
+    "children": [
+      "flex-layout.row#image-container-slide-5",
+      "flex-layout.col#text-slide-5"
+    ]
+  },
+  "flex-layout.row#image-container-slide-5": {
+    "props": {
+      "blockClass": [
+        "image-container-slide-freeariel",
+        "image-container-slide",
+        "container-slide-5"
+      ]
+    }
+  },
+  "flex-layout.col#text-slide-5": {
+    "props": {
+      "blockClass": "text-slide"
+    },
+    "children": [
+      "rich-text#title-slide-5",
+      "rich-text#desc-slide-5",
+      "rich-text#desc-slide-5-postilla",
+      "flex-layout.row#btn-container-slide-5"
+    ]
+  },
+  "rich-text#title-slide-5": {
+    "props": {
+      "text": "# Free Ariel Offer",
+      "blockClass": [
+        "title-slide",
+        "title-slide-5"
+      ]
+    }
+  },
+  "rich-text#desc-slide-5": {
+    "props": {
+      "text": "For a limited time, claim your 6 month free supply of Ariel detergent with selected washing machine purchases*.",
+      "blockClass": "desc-slide"
+    }
+  },
+  "rich-text#desc-slide-5-postilla": {
+    "props": {
+      "text": "*T&Cs apply. UK & 18+ only. Subject to availability. Valid on purchases made between 1/7/23 - 30/9/23. Claim submissions can be made until 15/10/23 or whilst stocks last.",
+      "blockClass": [
+        "desc-slide",
+        "home-banner-postilla"
+      ]
+    }
+  },
+  "flex-layout.row#btn-container-slide-5": {
+    "props": {
+      "blockClass": "btn-container-slide"
+    },
+    "children": [
+      "button-primary#btn-slide-5"
+    ]
+  },
+  "button-primary#btn-slide-5": {
+    "props": {
+      "width": "209px",
+      "text": "Discover more",
+      "href": "/free-ariel"
+    }
+  },
+  //-------------------------------------------
+  "flex-layout.col#placeholder": {
+    "children": [
+      "flex-layout.row#images-menu"
+    ]
+  },
+  "homepage-animation#first": {
+    "props": {
+      "id": "first",
+      "blockClass": "svg_container_first"
+    }
+  },
+  "homepage-double-animation#double": {
+    "props": {
+      "id": "second",
+      "id2": "third",
+      "blockClass": "svg_container_second"
+    }
+  },
+  /*------------------------------- PILLARS -----------------------------------------*/
+  "flex-layout.row#info-pillars": {
+    "props": {
+      "preventHorizontalStretch": true,
+      "blockClass": "info-pillars"
+    },
+    "children": [
+      "flex-layout.col#do-it-together",
+      "flex-layout.col#product-columns"
+    ]
+  },
+  /*------------------------------- DO IT TOGETHER -----------------------------------------*/
+  "flex-layout.col#do-it-together": {
+    "children": [
+      "image#do-it-together-img",
+      "rich-text#do-it-together",
+      "link#discover-more-home-page"
+    ],
+    "props": {
+      "width": "50%",
+      "blockClass": "do-it-together-container"
+    }
+  },
+  "image#do-it-together-img": {
+    "props": {
+      "src": "assets/do-it-together.png",
+      "blockClass": "image-do-it-together"
+    }
+  },
+  "rich-text#do-it-together": {
+    "props": {
+      "text": "So easy to use, everyone can help out. \n #DoItTogether",
+      "blockClass": "do-it-together-body-text"
+    }
+  },
+  "link#discover-more-home-page": {
+    "props": {
+      "blockClass": "discover-more-link-home",
+      "label": "Discover more",
+      "href": "/do-it-together",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "cta_click",
+      "isPrevent": false,
+      "analyticsType": "do-it-together",
+      "clickArea": "main",
+      "checkpoint": "1"
+    }
+  },
+  /* ------------------- CARD HOME ----------------------- */
+  "flex-layout.col#product-columns": {
+    "props": {
+      "width": "50%",
+      "blockClass": "product-columns-home"
+    },
+    "children": [
+      "card-product-home"
+    ]
+  },
+  "card-product-home": {
+    "props": {
+      "collectionID": "162"
+    }
+  },
+  /* ------------------- BANNER ----------------------- */
+  "flex-layout.row#containerBannerNEL": {
+    "props": {
+      "blockClass": "containerBannerLandingStyle-home"
+    },
+    "children": [
+      "flex-layout.col#imageContainerBannerNEL",
+      "flex-layout.col#descriptionAndButtonContainerNEL"
+    ]
+  },
+  "flex-layout.col#imageContainerBannerNEL": {
+    "props": {
+      "blockClass": "imageContainerBannerNELStyle"
+    },
+    "children": [
+      "image#imageBannerNEL"
+    ]
+  },
+  "image#imageBannerNEL": {
+    "props": {
+      "src": "assets/NEL_desktop.png",
+      "blockClass": "imageBannerNELStyle"
+    }
+  },
+  "flex-layout.col#descriptionAndButtonContainerNEL": {
+    "props": {
+      "blockClass": "descriptionAndButtonContainerLandingStyle"
+    },
+    "children": [
+      "flex-layout.row#titleContainerBannerNEL",
+      "flex-layout.row#descriptionContainerBannerNEL"
+      /*  "flex-layout.row#buttonContainerBannerNEL" */
+    ]
+  },
+  "flex-layout.row#titleContainerBannerNEL": {
+    "props": {
+      "blockClass": "titleContainerBannerLandingStyle"
+    },
+    "children": [
+      "rich-text#titleNEL"
+    ]
+  },
+  "rich-text#titleNEL": {
+    "props": {
+      "blockClass": "titleLandingStyle",
+      "text": "The new energy efficiency classes"
+    }
+  },
+  "flex-layout.row#descriptionContainerBannerNEL": {
+    "props": {
+      "blockClass": "descriptionContainerBannerLandingStyle"
+    },
+    "children": [
+      "rich-text#descriptionNEL",
+      "link#buttonNEL"
+    ]
+  },
+  "rich-text#descriptionNEL": {
+    "props": {
+      "blockClass": "descriptionLandingStyle",
+      "text": "As of March 2021, new energy labels were introduced, with revised energy efficiency classes for household appliances. Here, you will find all relevant information on the subject."
+    }
+  },
+  "flex-layout.row#buttonContainerBannerNEL": {
+    "props": {
+      "blockClass": "buttonContainerBannerLandingStyle"
+    },
+    "children": []
+  },
+  "link#buttonNEL": {
+    "props": {
+      "blockClass": [
+        "discover-more-link-home",
+        "button-NEL"
+      ],
+      "label": "MORE INFO",
+      "href": "/Landings/THE-NEW-ENERGY-EFFICIENCY-CLASSES-INDESIT",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "cta_click",
+      "isPrevent": false,
+      "analyticsType": "energy-efficiency",
+      "clickArea": "main",
+      "checkpoint": "2"
+    }
+    //"children": ["button-primary#moreInfo"]
+  }
+}

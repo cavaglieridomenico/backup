@@ -1,0 +1,61 @@
+  {
+    "store.custom#online-garanzia-estesa": {
+      "children": [
+        "sticky-layout#supportoCardsBottom",
+      "supporto-sticky-menu",
+        "breadcrumb#online-garanzia-estesa",
+        "flex-layout.row#space",
+        "rich-text#online-garanzia-estesa",
+        "import-widget-from-sandwatch",
+        //"online-garanzia-estesa",
+        "rich-text#garanzia-estesa-aiuto",
+        "flex-layout.row#space",
+        "flex-layout.row#contattiCards"
+        //"analytics"
+
+      ]
+    },
+    "import-widget-from-sandwatch": {
+      "props": {
+        "endpoint": "//icb.prod.wpsandwatch.com/static/bootstrap.js",
+        "idext": "booking-ref-app",
+        "dataBrand": "HP",
+        "dataCountry": "IT",
+        "dataLocale": "it_IT",
+        "dataType": "",
+        "dataVersion": "2020",
+        "bookingRefBootstrap": "booking-ref-bootstrap",
+        "bookingRef": "booking-ref-app"
+      }
+    },
+
+    "breadcrumb#online-garanzia-estesa": {
+      "props": {
+        "categories": ["supporto","supporto/fissa un appuntamento","/supporto/fissa un appuntamento/online garanzia estesa"],
+        "showOnMobile": false
+      }
+    },
+    "rich-text#online-garanzia-estesa":{
+      "props":{
+        "textPosition":"CENTER",
+        "textAlignment":"CENTER",
+        "text":"Qui trovi i servizi esclusivi di Whirlpool destinati ai possessori di garanzia estesa.",
+        "blockClass":"onlineGaranziaEstesaPreTitle"
+      }
+    },
+    "rich-text#garanzia-estesa-aiuto":{
+      "props":{
+        "text":"##### Hai bisogno di aiuto ? Contattaci\n###### Contattaci - 02.20.30 - Lun - Ven 8.00 - 19.00 -  Sab - Dom 9.00 - 13.00",
+        "blockClass":["textRicambiOriginali","online-garanzia"],
+        "textPosition":"CENTER"
+      }
+    },
+    "flex-layout.row#contattiCards":{
+      "props":{
+        "blockClass":"padding5rem"
+      },
+      "children":["slider-layout#supportoCardsBottom"]
+    }
+  }
+
+

@@ -1,0 +1,1283 @@
+{
+  "name": "sfmc-integration",
+  "vendor": "whirlpoolemea",
+  "version": "2.1.13",
+  "title": "SFMC connector",
+  "description": "SFMC connector",
+  "categories": [],
+  "dependencies": {
+    "vtex.catalog-graphql": "1.x",
+    "vtex.search-resolver": "1.x"
+  },
+  "builders": {
+    "node": "6.x",
+    "docs": "0.x"
+  },
+  "billingOptions": {
+    "termsURL": "https://compliance.vtex.com/gdpr/policies/vtex-privacy-policy",
+    "support": {
+      "url": "https://support.vtex.com/hc/requests"
+    },
+    "free": true
+  },
+  "scripts": {
+    "prereleasy": "bash lint.sh"
+  },
+  "credentialType": "absolute",
+  "policies": [
+    {
+      "name": "colossus-fire-event"
+    },
+    {
+      "name": "colossus-write-logs"
+    },
+    {
+      "name": "vbase-read-write"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.vtexcommercestable.com.br",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.myvtex.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "portal.vtexcommercestable.com.br",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "api.vtex.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "ADMIN_DS"
+    },
+    {
+      "name": "OMSViewer"
+    },
+    {
+      "name": "read_prices"
+    },
+    {
+      "name": "LogisticsAdmin"
+    },
+    {
+      "name": "GerenciarPromocoesETarifas"
+    },
+    {
+      "name": "GerenciarPolicies"
+    },
+    {
+      "name": "GetPolicy"
+    },
+    {
+      "name": "ListPolicies"
+    },
+    {
+      "name": "vtex.catalog-graphql:resolve-graphql"
+    },
+    {
+      "name": "vtex.search-resolver:resolve-graphql"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "mcw785xyskn2jrl9kbr-hjtx1w88.auth.marketingcloudapis.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "mcw785xyskn2jrl9kbr-hjtx1w88.rest.marketingcloudapis.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "7329181.recs.igodigital.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "7329669.recs.igodigital.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "7330071.recs.igodigital.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "7330072.recs.igodigital.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "7331011.recs.igodigital.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "7331013.recs.igodigital.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "7331012.recs.igodigital.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "7331010.recs.igodigital.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "518000665.recs.igodigital.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "518002632.recs.igodigital.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "d2c-cross-sfmc-file-upload-flow-dot-whr-emea-digital-d2c.ew.r.appspot.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "d2c-cross-sfmc-file-upload-flow-dot-go-whr-emea-digital-d2c-mdw.ey.r.appspot.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "accounts.google.com/o/oauth2/auth",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "oauth2.googleapis.com/token",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "www.googleapis.com",
+        "path": "*"
+      }
+    }
+  ],
+  "settingsSchema": {
+    "title": "Salesforce Marketing Cloud",
+    "type": "object",
+    "properties": {
+      "vtex": {
+        "title": "Vtex Settings",
+        "type": "object",
+        "properties": {
+          "defaultLocale5C": {
+            "title": "Marketplace - Default locale 5 chars (example: fr-FR)",
+            "type": "string"
+          },
+          "multilanguage": {
+            "title": "Marketplace - Multilanguage",
+            "type": "boolean"
+          },
+          "localeList": {
+            "title": "Marketplace - Translations - Locale list (comma separated)",
+            "type": "string"
+          },
+          "additionalServices": {
+            "title": "Marketplace - Additional services",
+            "type": "object",
+            "properties": {
+              "generalInfo": {
+                "title": "General info",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "serviceIds": {
+                      "title": "Service ids (comma separated)",
+                      "type": "string"
+                    },
+                    "serviceName": {
+                      "title": "Service name",
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "key": {
+                            "title": "Locale",
+                            "type": "string"
+                          },
+                          "value": {
+                            "title": "Value",
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "infoPerSalesChannel": {
+                "title": "Specific info per trade policy",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "salesChannelId": {
+                      "title": "Sales channel id",
+                      "type": "string"
+                    },
+                    "serviceIds": {
+                      "title": "List of service ids (comma separated) per sales channel",
+                      "type": "string"
+                    },
+                    "installation": {
+                      "title": "Id of the service \"Installation\"",
+                      "type": "string"
+                    },
+                    "fiveYearsWarranty": {
+                      "title": "Id of the service \"5 years warranty\"",
+                      "type": "string"
+                    },
+                    "legalWarranty": {
+                      "title": "Id of the service \"Legal warranty\"",
+                      "type": "string"
+                    },
+                    "extendedWarranty": {
+                      "title": "Id of the service \"Carefree plus\"",
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "serviceInTotals": {
+                "title": "Send services in the order totals (order confirmation)",
+                "type": "boolean",
+                "default": false
+              }
+            }
+          },
+          "specifications": {
+            "title": "Specifications",
+            "type": "object",
+            "properties": {
+              "productDataSheet": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "default": [
+                  "product-data-sheet"
+                ]
+              }
+            }
+          },
+          "shippingInfo": {
+            "title": "Marketplace - Shipping policies & warehouses",
+            "type": "object",
+            "properties": {
+              "hdx": {
+                "title": "HDX integration",
+                "type": "boolean"
+              },
+              "inStockSP": {
+                "title": "In Stock - Shipping policy ids (comma separated)",
+                "type": "string"
+              },
+              "inStockW": {
+                "title": "In Stock - Warehouse id",
+                "type": "string"
+              },
+              "outOfStockSP": {
+                "title": "Out Of Stock - Shipping policy id",
+                "type": "string"
+              },
+              "outOfStockW": {
+                "title": "Ouf Of Stock - Warehouse id",
+                "type": "string"
+              },
+              "labelForFreeDelivery": {
+                "title": "Label for free delivery",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "key": {
+                      "title": "Locale",
+                      "type": "string"
+                    },
+                    "value": {
+                      "title": "Value",
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "deliveryServiceId": {
+                "title": "Delivery additional service ID",
+                "type": "string"
+              },
+              "noReservationDeliveryLable": {
+                "title": "Lable for delivery of orders without reservation",
+                "type": "string"
+              },
+              "checkReservationForCustomDeliveryLable": {
+                "title": "Need check for reservation on Fareye for delivery lable in confirmation email",
+                "type": "boolean",
+                "default": false
+              }
+            }
+          },
+          "premiumProducts": {
+            "title": "Marketplace - Premium products",
+            "type": "object",
+            "properties": {
+              "specification": {
+                "title": "Specification name and value (pattern: name:value)",
+                "type": "string"
+              },
+              "sourceCampaign": {
+                "title": "Source campaign",
+                "type": "string"
+              },
+              "couponPrefix": {
+                "title": "Coupon prefix",
+                "type": "string"
+              }
+            }
+          },
+          "translations": {
+            "title": "Marketplace - Category translations",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "title": "Key",
+                  "type": "string"
+                },
+                "value": {
+                  "title": "Value",
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "addressPattern": {
+            "title": "Marketplace - Address pattern",
+            "type": "string",
+            "enum": [
+              "street, number, additional info",
+              "number, street, additional info",
+              "additional info, number, street"
+            ],
+            "default": "street, number, additional info"
+          },
+          "defaultCountry": {
+            "title": "Marketplace - Default country",
+            "type": "string"
+          },
+          "defaultLocale2C": {
+            "title": "Marketplace - Default locale 2 chars (example: FR)",
+            "type": "string"
+          },
+          "phoneMaxLength": {
+            "title": "Marketplace - Phone number - Max length",
+            "type": "number",
+            "default": 14
+          },
+          "mpOrderBlackList": {
+            "title": "Marketplace - Black list of order prefixes (semicolon separated)",
+            "type": "string"
+          },
+          "eventNewOrder": {
+            "title": "Marketplace - New order - Event name",
+            "type": "string"
+          },
+          "paymentPerTransactionId": {
+            "title": "Marketplace - List of payment methods (comma separated) requiring the transaction id within the order id",
+            "type": "string"
+          },
+          "dngSettings": {
+            "title": "Marketplace - D&G Settings",
+            "type": "object",
+            "properties": {
+              "hasDnG": {
+                "title": "D&G integration",
+                "type": "boolean"
+              },
+              "mdName": {
+                "title": "Master data entity (e.g. DG)",
+                "type": "string"
+              },
+              "redirectUrl": {
+                "title": "Redirect url",
+                "type": "string"
+              }
+            }
+          },
+          "mpHasReturn": {
+            "title": "Marketplace - Return flow",
+            "type": "boolean"
+          },
+          "mpHasRefund": {
+            "title": "Marketplace - Refund flow",
+            "type": "boolean"
+          },
+          "mpHasCategoryAdvice": {
+            "title": "Marketplace - Category Advise flow",
+            "type": "boolean"
+          },
+          "mpHasProdComparison": {
+            "title": "Marketplace - Products Comparison flow",
+            "type": "boolean"
+          },
+          "mpHasBackInStock": {
+            "title": "Marketplace - Back in Stock and Out of Stock notification flow",
+            "type": "boolean"
+          },
+          "checkoutAsGuest": {
+            "title": "Marketplace - Checkout as Guest",
+            "type": "boolean"
+          },
+          "checkZipCodes": {
+            "title": "Marketplace - Check installation availability for BI products based on the shipping ZIP code",
+            "type": "boolean"
+          },
+          "mpAppKey": {
+            "title": "Marketplace - App-key",
+            "type": "string"
+          },
+          "mpAppToken": {
+            "title": "Marketplace - App-token",
+            "type": "string"
+          },
+          "mpAuthCookie": {
+            "title": "Marketplace - Authentication cookie",
+            "type": "string"
+          },
+          "allowedInBoundCredentials": {
+            "title": "Marketplace - Allowed inbound credentials (pattern: key1:token1;...;keyN:tokenN)",
+            "type": "string"
+          },
+          "isCCProject": {
+            "title": "Marketplace - CC Project",
+            "type": "boolean"
+          },
+          "isMarketplace": {
+            "title": "Marketplace",
+            "type": "boolean"
+          },
+          "sellerAccount": {
+            "title": "Seller account",
+            "type": "object",
+            "properties": {
+              "name": {
+                "title": "Name",
+                "type": "string"
+              },
+              "sellerIds": {
+                "title": "List of Seller ids (comma separated)",
+                "type": "string"
+              },
+              "apiKey": {
+                "title": "Api key",
+                "type": "string"
+              },
+              "apiToken": {
+                "title": "Api token",
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "o2p": {
+        "title": "O2P Settings",
+        "type": "object",
+        "properties": {
+          "hostname": {
+            "title": "Vtex - Hostname",
+            "type": "string"
+          },
+          "tradePolicyId": {
+            "title": "Vtex - Trade policy id",
+            "type": "string"
+          },
+          "clientId": {
+            "title": "SFMC - Client id",
+            "type": "string"
+          },
+          "clientSecret": {
+            "title": "SFMC - Client secret",
+            "type": "string"
+          },
+          "mid": {
+            "title": "SFMC - Product Recommendations - MID",
+            "type": "string"
+          },
+          "pathParam": {
+            "title": "SFMC - Product Recommendations - Path param",
+            "type": "string"
+          },
+          "orderDetailsKey": {
+            "title": "SFMC - Order Confirmation - Order details",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "title": "Locale",
+                  "type": "string"
+                },
+                "value": {
+                  "title": "Template key",
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "confirmationEmailKey": {
+            "title": "SFMC - Order Confirmation - Email",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "title": "Locale",
+                  "type": "string"
+                },
+                "value": {
+                  "title": "Template key",
+                  "type": "string"
+                },
+                "alternateValue": {
+                  "title": "Presale Template key",
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "cancellationEmailKey": {
+            "title": "SFMC - Order Cancellation - Email",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "title": "Locale",
+                  "type": "string"
+                },
+                "value": {
+                  "title": "Template key",
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "returnEmailKey": {
+            "title": "SFMC - Order Return - Email",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "title": "Locale",
+                  "type": "string"
+                },
+                "value": {
+                  "title": "Template key",
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "refundEmailKey": {
+            "title": "SFMC - Order Refund - Email",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "title": "Locale",
+                  "type": "string"
+                },
+                "value": {
+                  "title": "Template key",
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "categoryAdviceKey": {
+            "title": "SFMC - Category Advice feauture - Email key",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "title": "Locale",
+                  "type": "string"
+                },
+                "value": {
+                  "title": "Template key",
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "productsComparisonTemplate": {
+            "title": "SFMC - Products Comparison feauture - Template Html",
+            "type": "object",
+            "properties": {
+              "imgSource": {
+                "title": "Img source of page logo",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "key": {
+                      "title": "Locale",
+                      "type": "string"
+                    },
+                    "value": {
+                      "title": "Value",
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "imgLogoWidth": {
+                "title": "Image Logo - width in percent value",
+                "type": "string",
+                "default": "15%"
+              },
+              "h1": {
+                "title": "Text title h1 of the pdf",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "key": {
+                      "title": "Locale",
+                      "type": "string"
+                    },
+                    "value": {
+                      "title": "Value",
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "langHtml": {
+                "title": "Html page lang property",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "key": {
+                      "title": "Locale",
+                      "type": "string"
+                    },
+                    "value": {
+                      "title": "Value",
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "currencySimbol": {
+                "title": "Currency simbol - class fa fa ",
+                "type": "string"
+              },
+              "specGroupRowColor": {
+                "title": "Row Background color of specification group title",
+                "type": "string",
+                "default": "#FFCC00"
+              },
+              "specGroupFontColor": {
+                "title": "Font color of specification group title",
+                "type": "string",
+                "default": "#000"
+              },
+              "showPricesInProductComparison": {
+                "title": "Product Comparison flow - show product price",
+                "type": "boolean",
+                "default": true
+              },
+              "showEnergyLogoInProductComparison": {
+                "title": "Product Comparison flow - show the energy logo",
+                "type": "boolean",
+                "default": false
+              }
+            }
+          },
+          "outOfStockKey": {
+            "title": "SFMC - Back in stock feauture - out of stock key",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "title": "Locale",
+                  "type": "string"
+                },
+                "value": {
+                  "title": "Template key",
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "backInStockKey": {
+            "title": "SFMC - Back in stock feauture - back in stock key",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "title": "Locale",
+                  "type": "string"
+                },
+                "value": {
+                  "title": "Template key",
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "dropPrice": {
+            "title": "SFMC - Drop Price Service",
+            "type": "object",
+            "properties": {
+              "hasPriceDrop": {
+                "title": "Enable priceDrop service",
+                "type": "boolean",
+                "default": false
+              },
+              "hasPriceDropUnsubscribe": {
+                "title": "Enable priceDrop unsubscription service",
+                "type": "boolean",
+                "default": false
+              },
+              "dropPriceAlertKey": {
+                "title": "SFMC - Drop Price - Alert key",
+                "type": "string"
+              },
+              "dropPriceExpireKey": {
+                "title": "SFMC - Drop Price - Expire key",
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "epp": {
+        "title": "EPP Settings",
+        "type": "object",
+        "properties": {
+          "hostname": {
+            "title": "Vtex - Hostname",
+            "type": "string"
+          },
+          "tradePolicyId": {
+            "title": "Vtex - Trade policy id",
+            "type": "string"
+          },
+          "clientId": {
+            "title": "SFMC - Client id",
+            "type": "string"
+          },
+          "clientSecret": {
+            "title": "SFMC - Client secret",
+            "type": "string"
+          },
+          "mid": {
+            "title": "SFMC - Product Recommendations - MID",
+            "type": "string"
+          },
+          "pathParam": {
+            "title": "SFMC - Product Recommendations - Path param",
+            "type": "string"
+          },
+          "orderDetailsKey": {
+            "title": "SFMC - Order Confirmation - Order details",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "title": "Locale",
+                  "type": "string"
+                },
+                "value": {
+                  "title": "Template key",
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "confirmationEmailKey": {
+            "title": "SFMC - Order Confirmation - Email",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "title": "Locale",
+                  "type": "string"
+                },
+                "value": {
+                  "title": "Template key",
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "cancellationEmailKey": {
+            "title": "SFMC - Order Cancellation - Email",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "title": "Locale",
+                  "type": "string"
+                },
+                "value": {
+                  "title": "Template key",
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "returnEmailKey": {
+            "title": "SFMC - Order Return - Email",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "title": "Locale",
+                  "type": "string"
+                },
+                "value": {
+                  "title": "Template key",
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "refundEmailKey": {
+            "title": "SFMC - Order Refund - Email",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "title": "Locale",
+                  "type": "string"
+                },
+                "value": {
+                  "title": "Template key",
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "ff": {
+        "title": "FF Settings",
+        "type": "object",
+        "properties": {
+          "hostname": {
+            "title": "Vtex - Hostname",
+            "type": "string"
+          },
+          "tradePolicyId": {
+            "title": "Vtex - Trade policy id",
+            "type": "string"
+          },
+          "clientId": {
+            "title": "SFMC - Client id",
+            "type": "string"
+          },
+          "clientSecret": {
+            "title": "SFMC - Client secret",
+            "type": "string"
+          },
+          "mid": {
+            "title": "SFMC - Product Recommendations - MID",
+            "type": "string"
+          },
+          "pathParam": {
+            "title": "SFMC - Product Recommendations - Path param",
+            "type": "string"
+          },
+          "orderDetailsKey": {
+            "title": "SFMC - Order Confirmation - Order details",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "title": "Locale",
+                  "type": "string"
+                },
+                "value": {
+                  "title": "Template key",
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "confirmationEmailKey": {
+            "title": "SFMC - Order Confirmation - Email",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "title": "Locale",
+                  "type": "string"
+                },
+                "value": {
+                  "title": "Template key",
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "cancellationEmailKey": {
+            "title": "SFMC - Order Cancellation - Email",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "title": "Locale",
+                  "type": "string"
+                },
+                "value": {
+                  "title": "Template key",
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "returnEmailKey": {
+            "title": "SFMC - Order Return - Email",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "title": "Locale",
+                  "type": "string"
+                },
+                "value": {
+                  "title": "Template key",
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "refundEmailKey": {
+            "title": "SFMC - Order Refund - Email",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "title": "Locale",
+                  "type": "string"
+                },
+                "value": {
+                  "title": "Template key",
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "friendInvitationKey": {
+            "title": "SFMC - Friend Invitation - Invitation email",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "title": "Locale",
+                  "type": "string"
+                },
+                "value": {
+                  "title": "Template key",
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "friendConfirmationKey": {
+            "title": "SFMC - Friend Invitation - Welcome email",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "title": "Locale",
+                  "type": "string"
+                },
+                "value": {
+                  "title": "Template key",
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "vip": {
+        "title": "VIP Settings",
+        "type": "object",
+        "properties": {
+          "hostname": {
+            "title": "Vtex - Hostname",
+            "type": "string"
+          },
+          "tradePolicyId": {
+            "title": "Vtex - Trade policy id",
+            "type": "string"
+          },
+          "clientId": {
+            "title": "SFMC - Client id",
+            "type": "string"
+          },
+          "clientSecret": {
+            "title": "SFMC - Client secret",
+            "type": "string"
+          },
+          "mid": {
+            "title": "SFMC - Product Recommendations - MID",
+            "type": "string"
+          },
+          "pathParam": {
+            "title": "SFMC - Product Recommendations - Path param",
+            "type": "string"
+          },
+          "orderDetailsKey": {
+            "title": "SFMC - Order Confirmation - Order details",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "title": "Locale",
+                  "type": "string"
+                },
+                "value": {
+                  "title": "Template key",
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "confirmationEmailKey": {
+            "title": "SFMC - Order Confirmation - Email",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "title": "Locale",
+                  "type": "string"
+                },
+                "value": {
+                  "title": "Template key",
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "cancellationEmailKey": {
+            "title": "SFMC - Order Cancellation - Email",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "title": "Locale",
+                  "type": "string"
+                },
+                "value": {
+                  "title": "Template key",
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "returnEmailKey": {
+            "title": "SFMC - Order Return - Email",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "title": "Locale",
+                  "type": "string"
+                },
+                "value": {
+                  "title": "Template key",
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "refundEmailKey": {
+            "title": "SFMC - Order Refund - Email",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "title": "Locale",
+                  "type": "string"
+                },
+                "value": {
+                  "title": "Template key",
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "friendInvitationKey": {
+            "title": "SFMC - Friend Invitation - Invitation email",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "title": "Locale",
+                  "type": "string"
+                },
+                "value": {
+                  "title": "Template key",
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "friendConfirmationKey": {
+            "title": "SFMC - Friend Invitation - Welcome email",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "title": "Locale",
+                  "type": "string"
+                },
+                "value": {
+                  "title": "Template key",
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "gcp": {
+        "title": "GCP Settings",
+        "type": "object",
+        "properties": {
+          "gcpCountryParams": {
+            "title": "Country",
+            "type": "string"
+          },
+          "gcpBrandParams": {
+            "title": "Brands (comma separated)",
+            "type": "string"
+          },
+          "gcpHost": {
+            "title": "Host",
+            "type": "string"
+          },
+          "gcpProjectId": {
+            "title": "Project id",
+            "type": "string"
+          },
+          "gcpClientEmail": {
+            "title": "Client email",
+            "type": "string"
+          },
+          "gcpPrivateKey": {
+            "title": "Private key",
+            "type": "string"
+          },
+          "gcpTargetAudience": {
+            "title": "Target audience",
+            "type": "string"
+          },
+          "redirectToWS": {
+            "title": "Send requests from dev workspace",
+            "type": "boolean",
+            "default": false
+          },
+          "wsName": {
+            "title": "Dev workspace name",
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

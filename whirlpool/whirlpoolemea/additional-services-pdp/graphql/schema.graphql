@@ -1,0 +1,7 @@
+type Query {
+  """
+  Get additional services by sku id and sales channel id
+  """
+  additionalServices(skuId: ID!, salesChannelId: ID = 1): [AdditionalService]
+    @cacheControl(maxAge: MEDIUM, scope: PUBLIC)
+}

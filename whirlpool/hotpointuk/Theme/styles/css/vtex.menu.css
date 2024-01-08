@@ -1,0 +1,619 @@
+.styledLinkContainer--linkMenu {
+  position: relative;
+  display: inline-block;
+  margin-right: 0;
+  margin-left: 3em;
+}
+.styledLinkContent--linkMenu::before {
+  content: "";
+  width: 0;
+  transition: width 0.7s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  height: 0.125rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: #b24c24;
+}
+.styledLinkContainer--linkMenu:hover .styledLinkContent--linkMenu::before {
+  width: 100%;
+}
+.styledLinkContent {
+  font-family: "hotpointRegular";
+  font-weight: bold;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.styledLinkContent--menu {
+  letter-spacing: 0.1rem;
+  font-family: "hotpointRegular";
+  font-size: 2.5rem;
+  font-weight: 400;
+  padding: 0;
+  line-height: 1.2;
+  text-transform: none;
+  color: #979797;
+}
+.styledLinkContent--menu:hover {
+  color: #505050;
+}
+.submenu--menu {
+  padding: 2.25rem 0 0 0;
+}
+.submenuWrapper--menu {
+  display: block !important;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  content: "";
+  overflow: hidden;
+  transition: 0.5s height linear;
+  height: 0px; /*deve essere 0*/
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+.submenuWrapper--menu--isOpen.dn {
+  display: block !important;
+}
+.submenuWrapper--menu--isOpen {
+  height: 690px;
+  z-index: 1000;
+}
+.submenuWrapper--menuSupporto {
+  display: block !important;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  content: "";
+  overflow: hidden;
+  transition: 0.5s height linear;
+  height: 0px; /*deve essere 0*/
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+.submenuWrapper--menuSupporto--isOpen.dn {
+  display: block !important;
+}
+.submenuWrapper--menuSupporto--isOpen {
+  height: 405px;
+  z-index: 1000;
+  border-bottom: 1px solid lightgray;
+}
+.submenuWrapper--menuSecondoLivello {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  height: 768px;
+  z-index: 1000;
+}
+.submenu--menuSecondoLivello {
+  justify-content: flex-start !important;
+}
+.styledLinkContent--menu2 {
+  font-family: "hotpointRegular";
+  font-size: 1.5625rem;
+  line-height: 1.2;
+  font-weight: 400;
+  text-transform: none;
+  margin: 0;
+  padding: 0;
+  color: #979797;
+}
+.styledLinkContent--menu2:hover {
+  color: #505050;
+}
+.menuItem--menu {
+  width: 500px;
+  padding: 0;
+}
+.menuItem--menu {
+  padding-bottom: 1rem;
+}
+.menuItem--menu2 {
+  padding-bottom: 1.875rem;
+  width: 100%;
+}
+.menuItem--menu2:hover .container--menuProva {
+  display: block;
+  transition: transform 0.7s ease;
+}
+/*---------------  Menu Mobile ------------------------------*/
+/* .menuContainerNav--mobileMenu {
+  width: 100%;
+} */
+.submenuAccordion {
+  padding: 0 0 1rem 0;
+}
+.menuItem--First {
+  border-bottom: 1px solid lightgray;
+}
+.styledLinkContent--First {
+  padding: 0.9rem 0;
+}
+.styledLinkContainer--mobileMenu {
+  margin: 0;
+  padding: 0;
+}
+.styledLinkContent--mobileMenu {
+  font-family: "hotpointRegular";
+  font-weight: 400;
+  font-size: 1.5625rem;
+  line-height: 1.2;
+  line-height: 1.2;
+  text-transform: none;
+  color: #979797;
+  height: 3.5rem;
+  width: 85%;
+  margin: auto;
+  padding: 0;
+}
+.styledLinkContent--mobileMenu:hover {
+  color: #505050;
+}
+.submenuWrapper--mobileMenu {
+  position: absolute;
+  left: 100%;
+}
+/*---------------  secondo livello --------------------------------*/
+.styledLinkContent--itemSecondoLivello {
+  font-family: "hotpointRegular";
+  font-size: 1.5625rem;
+  line-height: 1.2;
+  font-weight: 400;
+  text-transform: none;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0;
+  color: #979797;
+}
+.styledLinkContent--itemSecondoLivello:hover {
+  color: #505050;
+}
+.menuItem--itemSecondoLivello:hover
+  :global(.vtex-store-components-3-x-imageElement) {
+  transition: 0.7s ease;
+  opacity: 1;
+}
+.menuItem--itemSecondoLivello {
+  padding-bottom: 1.875rem;
+  width: 100%;
+}
+.styledLinkContainer--terzoLivello {
+  margin-right: 0;
+}
+/*------------FOOTER----------*/
+.styledLinkContent--footerBold {
+  font-family: "hotpointMedium";
+  font-weight: 400;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  color: #ffffff;
+  line-height: 1.5rem;
+}
+.styledLinkContent--footerNormal {
+  display: block;
+  font-family: "hotpointRegular";
+  font-weight: 400;
+  font-size: 0.875rem;
+  color: #f2f2f2;
+  line-height: 1.5rem;
+  text-transform: unset;
+  letter-spacing: normal;
+}
+.styledLinkContainer--marginLeft0 {
+  margin-left: 0;
+}
+/*---------------------------------*/
+.accordionIcon--terzoLivello {
+  margin-left: 2rem;
+}
+.styledLinkContent--wrap {
+  white-space: pre-wrap;
+  width: 90%;
+}
+/* .menuItem--wcollectionMenuItem{
+  display: flex;
+  margin-right: 1.875rem;
+  padding: 0;
+} */
+.menuContainer--cotturaMenu {
+  justify-content: space-around;
+  width: 80%;
+  font-family: "hotpointRegular";
+  line-height: 1;
+  min-width: fit-content;
+  margin: auto;
+}
+.styledLinkContainer--wcollectionMenuItem:hover {
+  border-bottom: 1px solid #b24c24;
+}
+/* .styledLinkContainer--wcollectionMenuItem{
+  display: flex;
+  justify-content: center;
+} */
+.menuContainer--wcollectionMenu {
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 0.7rem;
+  margin-left: 1rem;
+}
+
+.styledLinkContent--wcollectionMenuItem1,
+.styledLinkContainer--wcollectionMenuItem {
+  height: 3rem;
+  /* width: 100% !important; */
+  /* justify-content: space-around !important; */
+}
+.styledLinkContent--wcollectionMenuItem {
+  font-family: "hotpointRegular";
+  text-transform: none !important;
+  font-family: "hotpointRegular", Arial;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1;
+  /* margin-right: 1.875rem; */
+  /* min-width: fit-content; */
+  color: #505050;
+}
+.styledLinkContent--wcollectionMenuItem1 {
+  text-transform: none !important;
+  font-family: "hotpointMedium", Arial;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+/* .menuItem--wcollectionMenuItem1{
+  }
+  .styledLinkContent--wcollectionMenuItem1{
+    width: 100%;
+  } */
+.styledLinkContainer--wcollectionMenuItem1 {
+  border-right: 0.0625rem solid #979797;
+  /* height: 37px; */
+  width: 90%;
+  vertical-align: auto;
+  height: 22px;
+  padding-top: 0px;
+  margin-top: 17px;
+  margin-bottom: 0px;
+}
+.styledLinkContainer--wcollectionMenuItem {
+  margin: 0 1.5rem;
+  padding: 0.5rem 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.styledLink--wcollectionMenuItem {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.styledLink--linkMenu.active {
+  background-color: #b24c24;
+}
+.styledLinkContent--cotturaLinkMenu:hover {
+  color: #b24c24;
+}
+.menuContainerNav--cotturaMenu {
+  border-bottom: 0.0625rem solid #f2f2f2;
+}
+/* ------------ PDP ----------- */
+.menuContainerNav--pdpTab {
+  background-color: #f2f2f2;
+}
+
+.menuContainer--pdpTab {
+  display: flex;
+  justify-content: space-around;
+}
+.styledLinkContent--pdpTab {
+  color: #505050;
+  font-size: 0.8rem;
+  position: relative;
+}
+.menuContainer--pdpTabSticky {
+  display: flex;
+  justify-content: space-evenly;
+}
+.styledLinkContent--pdpTab::after {
+  content: "";
+  position: absolute;
+  bottom: -1rem;
+  width: 0%;
+  height: 2px;
+  background: #b24c24;
+  transition: all 0.4s ease;
+}
+.styledLinkContent--pdpTab:hover::after {
+  width: 100%;
+  transition: all 0.4s ease;
+}
+.styledLinkContent--menuItemNew {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.1rem;
+  font-family: "hotpointRegular";
+  font-weight: normal !important;
+  transition: all 0.4s ease;
+  position: relative;
+  margin: 0;
+  /* margin-left: -1.5rem !important;
+  margin-right: -1.5rem !important; */
+  cursor: pointer;
+}
+.styledLinkContent--menuItemShopAppliances {
+  font-size: 1rem;
+}
+.styledLinkContainer--marginLeftHeader {
+  margin-left: 2rem;
+}
+.menuItem--menuItemt1 {
+  margin-left: -1.5rem !important;
+}
+.styledLinkContainer--menuItemDesktop {
+  margin: 0;
+}
+.styledLinkContent--menuItemDesktop {
+  color: inherit;
+  font-size: 1.3rem;
+  font-weight: normal;
+  text-transform: capitalize;
+}
+.styledLinkContent--menuTitleDesktop {
+  font-weight: bold;
+  margin: 0;
+  font-size: 1.4rem;
+  margin-top: 2rem;
+}
+
+.submenuWrapper--submenuDesktop {
+  margin-top: 2.05rem;
+  padding: 3rem;
+}
+/* .styledLinkContainer--marginBottomHeader {
+  margin-bottom: 2rem;
+} */
+.styledLinkContent--menuItemNew:hover {
+  color: #da7c43;
+  transition: all 0.4s ease;
+}
+.styledLinkContent--menuItemNew::before {
+  content: "";
+  position: absolute;
+  background-color: #b24c24;
+  top: 2rem;
+  left: 0;
+  width: 0;
+  height: 2px;
+  transition: all 0.4s ease;
+}
+.styledLinkContent--menuItemNew:hover::before {
+  content: "";
+  position: absolute;
+  background-color: #b24c24;
+  top: 2rem;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  transition: all 0.4s ease;
+}
+.styledLinkContent--menuItemNewVert {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.styledLinkContent--menuItemNewVert::after {
+  content: "";
+  position: absolute;
+  background-color: #b24c24;
+  top: 3.4rem;
+  left: 10%;
+  z-index: 100;
+  width: 0;
+  height: 2px;
+  transition: all 0.4s ease;
+}
+.styledLinkContent--menuItemNewVert:hover::after {
+  width: 80%;
+  transition: all 0.4s ease;
+}
+.styledLinkContent--menuItemNewVert {
+  color: #000;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.1rem;
+  font-family: "hotpointRegular";
+  font-weight: normal !important;
+  transition: all 0.4s ease;
+  position: relative;
+}
+.styledLinkContainer--menuItemNewVert {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+.styledLinkContainer--menuItemNewVert {
+  width: 100% !important;
+}
+.styledLinkContent--menuItemNewVert:hover {
+  color: #b24c24;
+  transition: all 0.4s ease;
+}
+.styledLinkContent--menuItemNewVert {
+  border-bottom: 1px solid #f2f2f2;
+  position: relative;
+  width: 100%;
+  height: 3.5rem !important;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+  width: 100%;
+}
+.styledLinkContent--menuItemNewVert {
+  border-bottom: 1px solid #f2f2f2;
+  position: relative;
+}
+/* HIDING MENU ITEMS */
+.menuItem--menuItemVert1,
+.menuItem--menuItemVert2,
+.menuItem--menuItemVert3,
+.menuItem--menuItemVert4,
+.menuItem--menuItemVert5,
+.menuItem--menuItemVert6,
+.menuItem--menuItemVert7,
+.menuItem--menuItemVert8,
+.menuItem--menuItemVert9,
+.menuItem--menuItemVert10,
+.menuItem--menuItemVert11 {
+  display: none;
+}
+
+.menuItem--hidden {
+  display: none;
+}
+/* HOTPOINT SERVICE HEADER */
+.submenuWrapper--submenuAppliancesSupport {
+  margin-top: 1.25rem;
+  padding: 3rem;
+  border-top: 0.2rem solid #b24c24;
+}
+.styledLinkContainer--menuItemAppliancesSupport {
+  margin: 0 !important;
+}
+.styledLinkContent--menuItemAppliancesSupport {
+  font-weight: normal;
+  text-transform: none;
+  color: #000;
+  line-height: normal !important;
+}
+.styledLinkContainer--menuItemServiceDesktop {
+  margin: 0;
+}
+.styledLinkContent--menuItemServiceDesktop {
+  color: inherit;
+  font-size: 1.3rem;
+  font-weight: normal;
+  text-transform: capitalize;
+  white-space: initial;
+}
+/* _______________________ */
+
+/* Media Queries */
+@media screen and (max-width: 1100px) and (min-width: 1025px) {
+  .submenuWrapper--submenuDesktop {
+    padding: 3rem 2rem;
+  }
+  /* HP SERVICE */
+  .submenuWrapper--submenuAppliancesSupport {
+    padding: 3rem 2rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  .menuContainerNav--wcollectionMenu {
+    overflow-x: scroll;
+    background-color: white;
+    overflow-y: hidden;
+  }
+  .styledLinkContainer {
+    margin-right: 0 !important;
+  }
+  .menuContainer--wcollectionMenu {
+    width: 55rem;
+  }
+  .menuContainerNav--cotturaMenu {
+    display: none;
+  }
+  .styledLinkContainer--pdpTab {
+    margin: 0px;
+  }
+}
+@media screen and (max-width: 1366) and (max-height: 768) {
+  .menuItem--menu {
+    padding-bottom: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .styledLinkContainer--linkMenu {
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .styledLinkContainer--linkMenu {
+    margin-right: 2.5rem;
+    margin-left: 2.5rem;
+  }
+}
+@media only screen and (max-width: 1850px) {
+  .menuItem--menuItemVert11 {
+    display: flex;
+  }
+  .menuItem--menuItemt11 {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1700px) {
+  .menuItem--menuItemVert10 {
+    display: flex;
+  }
+  .menuItem--menuItemt10 {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  .menuItem--menuItemVert9 {
+    display: flex;
+  }
+  .menuItem--menuItemt9 {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1500px) {
+  .menuItem--menuItemVert8 {
+    display: flex;
+  }
+  .menuItem--menuItemt8 {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1400px) {
+  .menuItem--menuItemVert7 {
+    display: flex;
+  }
+  .menuItem--menuItemt7 {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1300px) {
+  .menuItem--menuItemVert6 {
+    display: flex;
+  }
+  .menuItem--menuItemt6 {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1250px) {
+  .menuItem--menuItemVert5 {
+    display: flex;
+  }
+  .menuItem--menuItemt5 {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1150px) {
+  .menuItem--menuItemVert4 {
+    display: flex;
+  }
+  .menuItem--menuItemt4 {
+    display: none;
+  }
+}

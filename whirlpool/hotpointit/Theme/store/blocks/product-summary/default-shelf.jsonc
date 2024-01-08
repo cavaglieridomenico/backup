@@ -1,0 +1,67 @@
+{
+  "product-summary.shelf": {
+    "children": [
+      "vtex.product-highlights@2.x:product-highlights#promotion",
+      "stack-layout#head",
+      "vtex.store-components:product-name#summary",
+      "product-summary-space",
+      "product-list-price#summary",
+      "flex-layout.row#selling-price-savings",
+      // "product-installments#summary",
+      // "add-to-cart-custom#plp",
+      "responsive-layout.desktop#addToCartAndSpecs",
+      "responsive-layout.tablet#addToCartAndSpecs",
+      "responsive-layout.phone#addToCartAndSpecs",
+      //     "responsive-layout.desktop#addToCartPlp",
+      // "responsive-layout.tablet#addToCartPlp",
+      // "responsive-layout.phone#addToCartPlp",
+      "add-to-list-btn"
+    ]
+  },
+  "stack-layout#head": {
+    "children": [
+      "product-summary-image#shelf",
+      "conditional-cut-price#plp-Desk"
+      // "vtex.product-highlights@2.x:product-highlights#promotion"
+      //"condition-layout.product#showPercentage"
+    ]
+  },
+   "vtex.product-highlights@2.x:product-highlights#promo": {
+    "props": {
+      "type": "promotion",
+      "blockClass": "promotionHigh"
+    },
+    "children": ["product-highlight-text#promo"]
+  },
+  "product-highlight-text#promo": {
+    "props": {
+      //"message": "{highlightName}",
+      "blockClass": "promotionHigh"
+    }
+  },
+
+  // "conditional-cut-price#plp-default":{
+  //   "props":{
+  //     "Then":"flex-layout.row#percentage-pdSummary",
+  //     "Else":"vtex.product-highlights@2.x:product-highlights#promotion"
+  //   }
+  // },
+  // "flex-layout.row#percentage-pdSummary":{
+  //   "props":{
+  //     "blockClass":"percentage"
+  //   },
+  //   "children":["product-price-savings#percentage-product-summary"]
+  // },
+  "vtex.product-highlights@2.x:product-highlights#promotion": {
+    "props": {
+      "type": "promotion",
+      "blockClass": "promotionHigh"
+    },
+    "children": ["product-highlight-text#promotion"]
+  },
+  "product-highlight-text#promotion": {
+    "props": {
+      "message": "{highlightName}"
+    }
+  }
+}

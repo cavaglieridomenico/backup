@@ -1,0 +1,190 @@
+{
+  // Inizio banner con testo a destra
+  "flex-layout.row#colBanDX": {
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": "halfBannerWithPostilla4PorteBottom"
+    },
+    "children": [
+      "flex-layout.col#colBanDXLeft", // image
+      "flex-layout.col#colBanDXRight" // text
+    ]
+  },
+  "flex-layout.col#colBanDXLeft": {
+    "props": {
+      "width": "50%",
+      "preventVerticalStretch": true,
+      "blockClass": "columnPostillaImageBottom"
+    },
+    "children": ["image#colBanDX"]
+  },
+  "image#colBanDX": {
+    "props": {
+      "src": "assets/placeholders/placeholder-vertical.jpg",
+      "blockClass": "imagePostillaBannerBottom"
+    }
+  },
+  "flex-layout.col#colBanDXRight": {
+    "props": {
+      "width": "50%",
+      "blockClass": "columnPostillaBottom"
+    },
+    "children": [
+      "image#colBanDXLogo",
+      "rich-text#colBanDXTitle",
+      "rich-text#colBanDXDesc",
+      "rich-text#ColBanDXFooter"
+    ]
+  },
+  "image#colBanDXLogo": {
+    "props": {
+      "src": "assets/postillaBanner/fours2.png",
+      "width": "80px",
+      "maxHeight": "75px"
+    }
+  },
+  "rich-text#colBanDXTitle": {
+    "props": {
+      "text": "## Ecran TFT couleur 4,5\"",
+      "blockClass": "titleBannPostillaBottom"
+    }
+  },
+  "rich-text#colBanDXDesc": {
+    "props": {
+      "text": "Une nouvelle interface révolutionnaire dotée d'un écran TFT couleur 4,5 pouces pour une navigation aussi intuitive que votre smartphone. Laissez vous guider pas-à-pas par un assistant culinaire : à travers un large choix de plats, il vous préconisera les paramètres de cuisson optimaux pour la garantie d'un résultat parfait.",
+      "blockClass": "descBannerPostilla"
+    }
+  },
+  "rich-text#ColBanDXFooter": {
+    "props": {
+      "text": "",
+      "blockClass": "BannPostilla"
+    }
+  },
+  // Fine banner con testo a destra
+
+  // Inizio banner con testo a sinistra
+  "flex-layout.row#colBanSX": {
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": [
+        "halfBannerWithPostilla4PorteBottom",
+        "halfBannerWithPostilla4PorteBottomMobileReverse"
+      ]
+    },
+    "children": [
+      "flex-layout.col#colBanSXRight", // text
+      "flex-layout.col#colBanSXLeft" // image
+    ]
+  },
+  "flex-layout.col#colBanSXLeft": {
+    "props": {
+      "width": "50%",
+      "preventVerticalStretch": true,
+      "blockClass": "columnPostillaImageBottom"
+    },
+    "children": ["image#colBanSX"]
+  },
+  "image#colBanSX": {
+    "props": {
+      "src": "assets/placeholders/placeholder-vertical.jpg",
+      "blockClass": "imagePostillaBannerBottom"
+    }
+  },
+  "flex-layout.col#colBanSXRight": {
+    "props": {
+      "width": "50%",
+      "blockClass": "columnPostillaBottom"
+    },
+    "children": [
+      "image#colBanSXLogo",
+      "rich-text#colBanSXTitle",
+      "rich-text#colBanSXDesc",
+      "rich-text#ColBanSXFooter"
+    ]
+  },
+  "image#colBanSXLogo": {
+    "props": {
+      "src": "assets/postillaBanner/fours2.png",
+      "width": "80px",
+      "maxHeight": "75px"
+    }
+  },
+  "rich-text#colBanSXTitle": {
+    "props": {
+      "text": "## SteamSense+",
+      "blockClass": "titleBannPostillaBottom"
+    }
+  },
+  "rich-text#colBanSXDesc": {
+    "props": {
+      "text": "Cuisiner avec 100% de vapeur fait ressortir pleinement toutes les saveurs des aliments, permettant de préparer des repas sains en préservant les nutriments, vitamines et mineraux.",
+      "blockClass": "descBannerPostilla"
+    }
+  },
+  "rich-text#ColBanSXFooter": {
+    "props": {
+      "text": "",
+      "blockClass": "BannPostilla"
+    }
+  },
+  // Fine banner con testo a sinistra
+
+  //banner con testo a dx e immagine non croppata
+  "flex-layout.row#colBanDXFitImg": {
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": ["halfBannerWithPostilla4PorteBottom", "bannerPadding"]
+    },
+    "children": [
+      "flex-layout.col#bannerOffresDXimageContainer1", // image
+      "flex-layout.col#colBanDXRight" // text
+    ]
+  },
+  "flex-layout.col#colBanDXLeftFitImg": {
+    "props": {
+      "width": "50%",
+      "preventVerticalStretch": true,
+      "blockClass": "columnPostillaImageBottom"
+    },
+    "children": ["image#colBanDXLeftFitImg"]
+  },
+  "image#colBanDXLeftFitImg": {
+    "props": {
+      "src": "assets/placeholders/placeholder-vertical.jpg",
+      "blockClass": ["imagePostillaBannerBottom", "imageFitContent"]
+    }
+  },
+  // fine banner testo a sx e img non croppata
+
+  // Inizio banner con testo a sinistra e img non croppata
+  "flex-layout.row#colBanSXFitImg": {
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": [
+        "halfBannerWithPostilla4PorteBottom",
+        "bannerPadding",
+        "halfBannerWithPostilla4PorteBottomMobileReverse"
+      ]
+    },
+    "children": [
+      "flex-layout.col#colBanSXRight", // text
+      "flex-layout.col#colBanSXLeftFitImg" // image
+    ]
+  },
+  "flex-layout.col#colBanSXLeftFitImg": {
+    "props": {
+      "width": "50%",
+      "preventVerticalStretch": true,
+      "blockClass": "columnPostillaImageBottom"
+    },
+    "children": ["image#bannerOffresSxImage1"]
+  },
+  "image#colBanSXFitImg": {
+    "props": {
+      "src": "assets/placeholders/placeholder-vertical.jpg",
+      "blockClass": ["imagePostillaBannerBottom", "imageFitContent"]
+    }
+  }
+  //fine banner testo a sinistra e img non croppata
+}

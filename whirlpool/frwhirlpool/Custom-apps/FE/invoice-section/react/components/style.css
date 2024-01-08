@@ -1,0 +1,98 @@
+.containerTableRow {
+    display: flex;
+    flex-direction: column;
+}
+.childContainerTableRow{
+    display: flex;
+    flex-direction: row;
+}
+.tableRowHeader{
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    padding: 1rem;
+}
+.tableRowEntites{
+    padding: 1rem;
+    border: 1px solid #f9f9f9;
+    display: flex;
+    flex-direction: column;
+}
+.colTitle, .colTitle2{
+    font-size: 0.75rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.67;
+    letter-spacing: normal;
+    text-transform: unset;
+}
+.colTitle2{
+    font-size: 1rem;
+    text-align: center;
+}
+.colTitleNoOrders{
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 1rem;
+    min-height: 8rem;
+    color: #505050;
+    font-weight: bold;
+}
+.invoiceWrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    margin-right: 13rem;
+}
+
+.colDescr{
+    font-size: 1rem;
+    font-weight: 600;
+    color: #505050;
+}
+.rowWrapper{
+    width: 90%;
+    margin: auto;
+}
+.downloadButton{
+    border: 2px solid #FDC100;
+    border-radius: 3px;
+    width: fit-content;
+}
+.invoiceLink{
+    text-decoration: underline;
+    color: #505050;
+}
+.rowWrapperLoader{
+    width: fit-content;
+    margin: auto;
+}
+.paginationWrapper{
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+.pdfIconWrapper{
+    display: flex;
+    align-items: center;
+}
+.pdfIconImage{
+    max-height: 50px;
+}
+.pdfFileName{
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 640px) {
+    .rowWrapper{
+        width: 100%;
+    }
+    .colDescr{
+        font-size: 0.8rem;
+    }
+    .invoiceWrapper{
+        margin-right: 0;
+    }
+}

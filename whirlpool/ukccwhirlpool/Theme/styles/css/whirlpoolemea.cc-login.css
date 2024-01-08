@@ -1,0 +1,63 @@
+.menuItemContainer {
+    position: relative;
+}
+
+/* .menuItemLabel {
+    display: inline-block;
+    width: max-content;
+    position: absolute;
+    top: 70%;
+    left: 70%;
+    font-size: 11px;
+    background-color: white;
+    border: 1px solid #505050;
+    padding: 2px 3px;
+    z-index: 1000;
+} */
+
+/* .menuItemLabel {
+    font-family: "openSans";
+    font-size: 0.688rem;
+    color: #505050;
+    text-align: center;
+} */
+
+.menuItemContainer {
+    padding: 0;
+    margin: 0 0.9rem;
+    display: flex;
+    flex-direction: inherit;
+}
+
+.menuItemLabelName {
+    display: none;
+}
+
+:global(.vtex-flex-layout-0-x-flexRowContent--headerSupportLink) .menuItemContainer {
+    border-bottom: 1px solid rgba(147, 192, 255, 0.5);
+    margin: 0;
+    padding: 1rem 0;
+}
+
+:global(.vtex-flex-layout-0-x-flexRowContent--headerSupportLink) .accountIcon {
+    display: none
+}
+
+:global(.vtex-flex-layout-0-x-flexRowContent--headerSupportLink) .loginLabel {
+    color: #fff;
+    font-family: "openSans";
+    margin: 0 0 0 0;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.accountIcon {
+    margin-bottom: 0.2rem;
+    width: 25px !important;
+}
+
+@media only screen and (min-width: 640px) {
+    .menuItemLabelName {
+        display: flex;
+    }
+}

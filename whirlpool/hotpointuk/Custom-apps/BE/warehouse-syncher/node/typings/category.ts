@@ -1,0 +1,5 @@
+export enum CategoryKeyword {
+  PRODUCTS = "PRODUCTS",
+  ACCESSORIES = "ACCESSORIES",
+  SPARE_PARTS = "SPARE_PARTS"
+}

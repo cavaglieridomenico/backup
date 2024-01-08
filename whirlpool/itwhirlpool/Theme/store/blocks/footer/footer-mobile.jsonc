@@ -1,0 +1,511 @@
+{
+  "flex-layout.row#accordionFooter": {
+    "props": {
+      "blockClass": ["disclosureFooter"]
+    },
+    "children": [
+      "disclosure-layout#servizio-clienti",
+      "disclosure-layout#collezioni",
+      "disclosure-layout#le-nostre-policy",
+      "disclosure-layout#elettrodomestici",
+      "disclosure-layout#accessori",
+      "disclosure-layout#la-nostra-azienda"
+    ]
+  },
+  "disclosure-state-indicator#footer": {
+    "props": {
+      "Show": "image#PlusIcon",
+      "Hide": "image#MinusIcon"
+    }
+  },
+  "image#PlusIcon": {
+    "props": {
+      "src": "assets/icons/angle-down.png",
+      "blockClass": "PlusIcon",
+      "width": "24px",
+      "height": "24px"
+    }
+  },
+  "image#MinusIcon": {
+    "props": {
+      "src": "assets/icons/angle-up.png",
+      "blockClass": "MinusIcon",
+      "width": "24px",
+      "height": "24px"
+    }
+  },
+  "disclosure-layout#collezioni": {
+    "props": {
+      "blockClass": "disclosureFooter"
+    },
+    "children": [
+      "disclosure-trigger#collezioni",
+      "disclosure-content#collezioni"
+    ]
+  },
+  "disclosure-layout#servizio-clienti": {
+    "children": [
+      "disclosure-trigger#servizio-clienti",
+      "disclosure-content#servizio-clienti"
+    ]
+  },
+  "disclosure-layout#le-nostre-policy": {
+    "children": [
+      "disclosure-trigger#le-nostre-policy",
+      "disclosure-content#le-nostre-policy"
+    ]
+  },
+  "disclosure-layout#elettrodomestici": {
+    "children": ["disclosure-trigger#elettrodomestici"]
+  },
+  "disclosure-layout#accessori": {
+    "children": ["disclosure-trigger#accessori"]
+  },
+  "disclosure-layout#la-nostra-azienda": {
+    "children": [
+      "disclosure-trigger#la-nostra-azienda",
+      "disclosure-content#la-nostra-azienda"
+    ]
+  },
+  "disclosure-trigger#collezioni": {
+    "children": [
+      "rich-text#title-collezioni",
+      "disclosure-state-indicator#footer"
+    ],
+    "props": {
+      "blockClass": ["ButtonContainer", "triggerFooter"]
+    }
+  },
+  "disclosure-content#collezioni": {
+    "props": {
+      "blockClass": ["relative", "collezioni"]
+    },
+    "children": [
+      "vtex.menu@2.x:menu#collections" /* "link#collezioni-1", "link#collezioni-2", "link#collezioni-3" */
+    ]
+  },
+  "disclosure-trigger#servizio-clienti": {
+    "children": [
+      "rich-text#title-servizio-clienti",
+      "disclosure-state-indicator#footer"
+    ],
+    "props": {
+      "blockClass": ["ButtonContainer", "triggerFooter"]
+    }
+  },
+  "disclosure-content#servizio-clienti": {
+    "props": {
+      "blockClass": ["relative", "servizio-clienti"]
+    },
+    "children": [
+      "vtex.menu@2.x:menu#clients-mobile"
+      /*   "link#servizio-clienti-1",
+      "link#servizio-clienti-2",
+      "link#servizio-clienti-3",
+      "link#servizio-clienti-4",
+      "analytics-wrapper#linkRegistraMobile",
+      "link#servizio-clienti-6",
+      "link#servizio-clienti-7",
+      "link#servizio-clienti-8",
+      "link#servizio-clienti-9",
+      "link#servizio-clienti-10",
+      "link#servizio-clienti-11" */
+    ]
+  },
+  "disclosure-trigger#la-nostra-azienda": {
+    "children": [
+      "rich-text#title-la-nostra-azienda",
+      "disclosure-state-indicator#footer"
+    ],
+    "props": {
+      "blockClass": ["ButtonContainer", "triggerFooter"]
+    }
+  },
+  "disclosure-content#la-nostra-azienda": {
+    "props": {
+      "blockClass": ["relative", "laNostraAzienda"]
+    },
+    "children": [
+      "vtex.menu@2.x:menu#company-mobile" /* "link#azienda-1", "link#azienda-2", "link#azienda-3" */
+    ]
+  },
+  "disclosure-trigger#le-nostre-policy": {
+    "children": [
+      "rich-text#title-le-nostre-policy",
+      "disclosure-state-indicator#footer"
+    ],
+    "props": {
+      "blockClass": ["ButtonContainer", "triggerFooter"]
+    }
+  },
+  "disclosure-content#le-nostre-policy": {
+    "props": {
+      "blockClass": ["relative", "leNostrePolicy"]
+    },
+    "children": [
+      "vtex.menu@2.x:menu#policy-mobile",
+      /*  "link#policy-1",
+      "link#policy-2",
+      "link#policy-3",
+      "link#policy-4",
+      "link#policy-5",
+      "link#policy-6",
+      "link#policy-7",
+      "link#policy-8",
+      "link#policy-9",
+      "link#policy-10",
+      "link#policy-11",
+      "link#policy-12",
+      "link#policy-13",
+      "link#policy-14",
+      "link#policy-15",
+      "link#policy-16",*/
+      "Cookie-table.title#footer-mobile"
+      // "link#policy-17"
+    ]
+  },
+  "rich-text#title-servizio-clienti": {
+    "props": {
+      "text": "Servizio clienti",
+      "blockClass": "titoloAccordion"
+    }
+  },
+  "rich-text#title-le-nostre-policy": {
+    "props": {
+      "text": "Le nostre policy",
+      "blockClass": "titoloAccordion"
+    }
+  },
+  "rich-text#title-la-nostra-azienda": {
+    "props": {
+      "text": "Le nostra azienda",
+      "blockClass": "titoloAccordion"
+    }
+  },
+  "rich-text#title-collezioni": {
+    "props": {
+      "text": "Collezioni",
+      "blockClass": "titoloAccordion"
+    }
+  },
+  "rich-text#titleElettrodomestici": {
+    "props": {
+      "text": "Segnaposto",
+      "blockClass": "titoloAccordion"
+    }
+  },
+  "disclosure-trigger#elettrodomestici": {
+    "children": ["link#footer-mobile-elettrodomestici"],
+    "props": {
+      "blockClass": ["ButtonContainer", "triggerFooter", "elettrodomestici"]
+    }
+  },
+  "disclosure-content#elettrodomestici": {
+    "props": {
+      "blockClass": "relative"
+    },
+    "children": []
+  },
+  "disclosure-trigger#accessori": {
+    "children": ["link#footer-mobile-accessori"],
+    "props": {
+      "blockClass": ["ButtonContainer", "triggerFooter", "accessori"]
+    }
+  },
+  "disclosure-content#accessori": {
+    "props": {
+      "blockClass": "relative"
+    },
+    "children": []
+  },
+  //LINK 1 livello
+  "link#footer-mobile-elettrodomestici": {
+    "title": "Elettrodomestici",
+    "props": {
+      "label": "Elettrodomestici",
+      "href": "#",
+      "target": "_blank",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "menu_footer_click",
+      "analyticsType": "",
+      "isPrevent": false,
+      "clickArea": "footer",
+      "blockClass": ["footerLinkBold"]
+    }
+  },
+  "link#footer-mobile-accessori": {
+    "props": {
+      "label": "Accessori",
+      "href": "/supporto/accessori-wpro",
+      "target": "_blank",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "menu_footer_click",
+      "analyticsType": "",
+      "isPrevent": false,
+      "clickArea": "footer",
+      "blockClass": "accordion"
+    }
+  } /*
+  //LINK 2 livello
+  //Servizio clienti
+  "link#servizio-clienti-1": {
+    "props": {
+      "href": "/servizi-e-vantaggi",
+      "label": "Acquista direttamente da Whirlpool",
+      "blockClass": "accordionSecond"
+    }
+  },
+  "link#servizio-clienti-2": {
+    "props": {
+      "href": "/supporto",
+      "label": "Assistenza",
+      "blockClass": "accordionSecond"
+    }
+  },
+  "link#servizio-clienti-3": {
+    "props": {
+      "href": "/supporto/contattaci",
+      "label": "Contatti",
+      "blockClass": "accordionSecond"
+    }
+  },
+  "link#servizio-clienti-4": {
+    "props": {
+      "href": "/supporto/piani-di-protezione",
+      "label": "Garanzia",
+      "blockClass": "accordionSecond"
+    }
+  },
+  "analytics-wrapper#linkRegistraMobile": {
+    "props": {
+      "propsAnalytics": {
+        "analyticsProperties": "provide",
+        "nameEvent": "productRegistration",
+        "name": "",
+        "nameView": "",
+        "data": [],
+        "isView": false
+      }
+    },
+    "children": ["link#servizio-clienti-5"]
+  },
+  "link#servizio-clienti-5": {
+    "props": {
+      "href": "#", //"https://register-appliance.com/whirlpool/RegistroPorMarca?country=IT&language=it",
+      "label": "Registra il tuo prodotto",
+      "blockClass": "accordionSecond",
+      "isPrevent": false
+    }
+  },
+  "link#servizio-clienti-6": {
+    "props": {
+      "href": "/supporto/service-locator",
+      "label": "Service locator",
+      "blockClass": "accordionSecond"
+    }
+  },
+  "link#servizio-clienti-7": {
+    "props": {
+      "href": "/supporto/manuali-di-istruzione",
+      "label": "Manuali d'uso",
+      "blockClass": "accordionSecond"
+    }
+  },
+  "link#servizio-clienti-8": {
+    "props": {
+      "href": "/supporto/problemi-e-soluzioni",
+      "label": "Problemi e Soluzioni",
+      "blockClass": "accordionSecond"
+    }
+  },
+  "link#servizio-clienti-9": {
+    "props": {
+      "href": "/supporto/fissa-un-appuntamento",
+      "label": "Prenota un appuntamento",
+      "blockClass": "accordionSecond"
+    }
+  },
+  "link#servizio-clienti-10": {
+    "props": {
+      "href": "/faq",
+      "label": "Domande frequenti",
+      "blockClass": "accordionSecond"
+    }
+  },
+  "link#servizio-clienti-11": {
+    "props": {
+      "href": "https://www.sulsicuro.it/",
+      "label": "SulSicuro",
+      "blockClass": "accordionSecond"
+    }
+  }, */,
+  //Secondo livello policy
+  /* "link#policy-1": {
+    "props": {
+      "href": "/api/dataentities/AT/documents/778a790f-9902-11eb-82ac-12b5f5afd74b/file/attachments/REG OP_WHIRLPOOL-WPRO_Def.pdf",
+      "label": "Concorso a premi",
+      "blockClass": "accordionSecond"
+    }
+  },
+  "link#policy-2": {
+    "props": {
+      "href": "/pagine/informativa-sui-cookie",
+      "label": "Cookie Policy",
+      "blockClass": "accordionSecond"
+    }
+  },
+  "link#policy-3": {
+    "props": {
+      "href": "/pagine/termini-e-condizioni-d-uso-per-la-pubblicazione-delle-recensioni-dei-clienti-di-prodotti-a-marchio-whirlpool",
+      "label": "Termini e condizioni per la pubblicazione di recensioni",
+      "blockClass": "accordionSecond"
+    }
+  },
+  "link#policy-4": {
+    "props": {
+      "href": "/pagine/condizioni-di-utilizzo",
+      "label": "Termini e Condizioni",
+      "blockClass": "accordionSecond"
+    }
+  },
+  "link#policy-5": {
+    "props": {
+      "href": "/api/dataentities/AT/documents/e989c35d-9072-11eb-82ac-0e2035a19d51/file/attachments/condizioni_garanzie_legali.pdf",
+      "label": "Promemoria sulla garanzia legale",
+      "blockClass": "accordionSecond"
+    }
+  },
+  "link#policy-6": {
+    "props": {
+      "href": "/supporto/manuali-di-istruzione",
+      "label": "Etichette energetiche e Schede prodotto",
+      "blockClass": "accordionSecond"
+    }
+  },
+  "link#policy-7": {
+    "props": {
+      "href": "/pagine/informativa-sulla-privacy",
+      "label": "Informativa sulla Privacy",
+      "blockClass": "accordionSecond"
+    }
+  },
+  "link#policy-8": {
+    "props": {
+      "href": "/supporto/diritto-di-recesso",
+      "label": "Diritto di recesso",
+      "blockClass": "accordionSecond"
+    }
+  },
+  "link#policy-9": {
+    "props": {
+      "href": "/supporto/sostituzione-prodotto-danneggiato",
+      "label": "Sostituire prodotto danneggiato",
+      "blockClass": "accordionSecond"
+    }
+  },
+  "link#policy-10": {
+    "props": {
+      "href": "https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home2.show&lng=IT",
+      "label": "Risoluzione online controversie",
+      "blockClass": "accordionSecond"
+    }
+  },
+  "link#policy-11": {
+    "props": {
+      "href": "/pagine/condizioni-di-spedizione",
+      "label": "Consegna",
+      "blockClass": "accordionSecond"
+    }
+  },
+  "link#policy-12": {
+    "props": {
+      "href": "https://www.whirlpoolcorp.com/ethics/",
+      "label": "Codice Etico",
+      "blockClass": "accordionSecond"
+    }
+  },
+  "link#policy-13": {
+    "props": {
+      "href": "/api/dataentities/AT/documents/e89f1f86-9072-11eb-82ac-128882a7a3dd/file/attachments/_MOG_2020_WHIRLPOOL_Italia.pdf",
+      "label": "Modello Organizzativo",
+      "blockClass": "accordionSecond"
+    }
+  },
+  "link#policy-14": {
+    "props": {
+      "href": "/pagine/pagamenti",
+      "label": "Pagamenti",
+      "blockClass": "accordionSecond"
+    }
+  },
+  "link#policy-15": {
+    "props": {
+      "href": "/pagine/installazione",
+      "label": "Installazione",
+      "blockClass": "accordionSecond"
+    }
+  },
+  "link#policy-16": {
+    "props": {
+      "href": "/pagine/esperto-per-te",
+      "label": "L'esperto per te",
+      "blockClass": "accordionSecond"
+    }
+  },
+  "link#policy-17": {
+    "children": ["Cookie-table.title#footer-mobile"],
+    "props": {
+      "blockClass": "accordionSecond"
+    }
+  }, */
+  "Cookie-table.title#footer-mobile": {
+    "props": {
+      "customLabel": "Preferenze sui cookies",
+      "blockClass": "cookies-preferencies"
+    }
+  }
+  //La nostra azienda 2
+  /* "link#azienda-1": {
+    "props": {
+      "href": "https://www.whirlpool.eu/",
+      "label": "Whirlpool in EMEA",
+      "blockClass": "accordionSecond"
+    }
+  },
+  "link#azienda-2": {
+    "props": {
+      "href": "http://emea.whirlpoolcareers.com/",
+      "label": "Lavora con noi",
+      "blockClass": "accordionSecond"
+    }
+  },
+  "link#azienda-3": {
+    "props": {
+      "href": "/pagine/whirlpool-italia-srl",
+      "label": "Whirlpool Italia S.r.l.",
+      "blockClass": "accordionSecond"
+    }
+  },
+  //Collezioni 2
+  "link#collezioni-1": {
+    "props": {
+      "href": "/wcollection",
+      "label": "Collezioni",
+      "blockClass": "accordionSecond"
+    }
+  },
+  "link#collezioni-2": {
+    "props": {
+      "href": "/pagine/brochure#brochure",
+      "label": "Brochure",
+      "blockClass": "accordionSecond"
+    }
+  },
+  "link#collezioni-3": {
+    "props": {
+      "href": "/ricette?page=1&hash=144171060",
+      "label": "Ricette",
+      "blockClass": "accordionSecond"
+    }
+  } */
+}

@@ -1,0 +1,344 @@
+{
+  "store.custom#information-template": {
+    "blocks": [
+      "responsive-layout.desktop#information-landing",
+      "responsive-layout.mobile#information-landing-mobile"
+    ]
+  },
+  /* ---MAXI CONTAINER DESKTOP--- */
+  "responsive-layout.desktop#information-landing": {
+    "children": ["flex-layout.row#information-landing-maxi"]
+  },
+  "flex-layout.row#information-landing-maxi": {
+    "children": ["flex-layout.col#information-landing-maxi"],
+    "props": {
+      "blockClass": "information-landing-maxi-container"
+    }
+  },
+  "flex-layout.col#information-landing-maxi": {
+    "children": [
+      "breadcrumb#information-landing-desktop",
+      "flex-layout.row#information-intro-desktop",
+      "flex-layout.row#text-after-intro-desktop",
+      "flex-layout.row#first-point-desktop",
+      "flex-layout.col#learn-more-01",
+      "flex-layout.row#second-point-desktop",
+      "flex-layout.col#learn-more-02",
+      "flex-layout.row#third-point-desktop",
+      "flex-layout.col#learn-more-03",
+      "flex-layout.row#fourth-point-desktop",
+      "flex-layout.col#learn-more-04",
+      "flex-layout.row#information-title-main-products-desktop",
+      "flex-layout.row#information-last-carousel-desktop-container"
+    ],
+    "props": {
+      "blockClass": "information-landing-maxi-container"
+    }
+  },
+  /* ---BREADCRUMB--- */
+  "breadcrumb#information-landing-desktop": {
+    "props": {
+      "categories": ["/Home/", "Information landing"],
+      "showOnMobile": true,
+      "blockClass": "breadcrumb-landing-template-desktop"
+    }
+  },
+  /* ---INTRO TO INFORMATION--- */
+  "flex-layout.row#information-intro-desktop": {
+    "children": [
+      "flex-layout.col#information-intro-image-desktop",
+      "flex-layout.col#information-intro-text-desktop"
+    ],
+    "props": {
+      "blockClass": "information-intro-desktop"
+    }
+  },
+  /* LEFT INTRO */
+  "flex-layout.col#information-intro-image-desktop": {
+    "children": ["image#information-intro-desktop"],
+    "props": {
+      "blockClass": "information-image-desktop"
+    }
+  },
+  "image#information-intro-desktop": {
+    "props": {
+      "blockClass": "landing-template-intro-desktop",
+      "src": "https://i.picsum.photos/id/1002/4312/2868.jpg?hmac=5LlLE-NY9oMnmIQp7ms6IfdvSUQOzP_O3DPMWmyNxwo"
+    }
+  },
+  /* RIGHT INTRO */
+  "flex-layout.col#information-intro-text-desktop": {
+    "children": [
+      "rich-text#information-intro-text-title-desktop",
+      "rich-text#information-intro-text-paragraph-desktop"
+    ],
+    "props": {
+      "blockClass": "intro-desc-desktop"
+    }
+  },
+  "rich-text#information-intro-text-title-desktop": {
+    "props": {
+      "text": "Informative communication title",
+      "blockClass": "intro-landing-template-title-desktop"
+    }
+  },
+  "rich-text#information-intro-text-paragraph-desktop": {
+    "props": {
+      "text": "Overview and context information about the information the page should communicate",
+      "blockClass": "intro-landing-template-paragraph-desktop"
+    }
+  },
+  /* ---TEXT AFTER THE INTRO--- */
+  "flex-layout.row#text-after-intro-desktop": {
+    "children": ["flex-layout.col#desc-after-intro-desktop"],
+    "props": {
+      "blockClass": "text-after-intro-desktop"
+    }
+  },
+  "flex-layout.col#desc-after-intro-desktop": {
+    "children": ["rich-text#paragraph-text-after-intro-desktop"],
+    "props": {
+      "blockClass": "desc-after-intro-desktop-desktop"
+    }
+  },
+  "rich-text#paragraph-text-after-intro-desktop": {
+    "props": {
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt enim sit imperdiet id aenan nunc ut faucibus. Vitae ullamcorper turpis blandit semper at. Aliquam tristique eget a et lectus vestibulu, nascetur dolor.",
+      "blockClass": "desc-intro-center-landing-template-desktop"
+    }
+  },
+  /* ---FIRST POINT--- */
+  "flex-layout.row#first-point-desktop": {
+    "children": [
+      "flex-layout.col#text-first-point-desktop",
+      "flex-layout.col#image-first-point-desktop"
+    ],
+    "props": {
+      "blockClass": "container-global-text-image-landing-template-desktop"
+    }
+  },
+  /* LEFT FIRST POINT */
+  "flex-layout.col#text-first-point-desktop": {
+    "children": [
+      "rich-text#title-first-point-desktop",
+      "rich-text#paragraph-first-point-desktop"
+    ],
+    "props": {
+      "blockClass": "container-text-text-image-landing-template-desktop"
+    }
+  },
+  "rich-text#title-first-point-desktop": {
+    "props": {
+      "text": "First point, most generical",
+      "blockClass": "title-text-image-landing-template-desktop"
+    }
+  },
+  "rich-text#paragraph-first-point-desktop": {
+    "props": {
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "blockClass": "description-text-image-landing-template-desktop"
+    }
+  },
+  /* RIGHT FIRST POINT */
+  "flex-layout.col#image-first-point-desktop": {
+    "children": ["image#first-point-desktop"],
+    "props": {
+      "blockClass": "container-image-text-image-landing-template-desktop"
+    }
+  },
+  "image#first-point-desktop": {
+    "props": {
+      "blockClass": "image-text-image-landing-template-desktop",
+      "src": "https://i.picsum.photos/id/1002/4312/2868.jpg?hmac=5LlLE-NY9oMnmIQp7ms6IfdvSUQOzP_O3DPMWmyNxwo"
+    }
+  },
+
+  /* LEARN MORE */
+  "flex-layout.col#learn-more-01": {
+    "children": ["button-learn-more-information#button-01"]
+  },
+  "button-learn-more-information#button-01": {},
+
+  /* ---SECOND POINT--- */
+  "flex-layout.row#second-point-desktop": {
+    "children": [
+      "flex-layout.col#image-second-point-desktop",
+      "flex-layout.col#text-second-point-desktop"
+    ],
+    "props": {
+      "blockClass": "container-global-text-image-landing-template-desktop"
+    }
+  },
+  /* LEFT SECOND POINT */
+  "flex-layout.col#image-second-point-desktop": {
+    "children": ["image#second-point-desktop"],
+    "props": {
+      "blockClass": "container-image-text-image-landing-template-desktop"
+    }
+  },
+  "image#second-point-desktop": {
+    "props": {
+      "blockClass": "image-text-image-landing-template-desktop",
+      "src": "https://i.picsum.photos/id/1002/4312/2868.jpg?hmac=5LlLE-NY9oMnmIQp7ms6IfdvSUQOzP_O3DPMWmyNxwo"
+    }
+  },
+  /* RIGHT SECOND POINT */
+  "flex-layout.col#text-second-point-desktop": {
+    "children": [
+      "rich-text#title-second-point-desktop",
+      "rich-text#paragraph-second-point-desktop"
+    ],
+    "props": {
+      "blockClass": "container-text-text-image-landing-template-desktop"
+    }
+  },
+  "rich-text#title-second-point-desktop": {
+    "props": {
+      "text": "Second point, most generical",
+      "blockClass": "title-text-image-landing-template-desktop"
+    }
+  },
+  "rich-text#paragraph-second-point-desktop": {
+    "props": {
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "blockClass": "description-text-image-landing-template-desktop"
+    }
+  },
+
+  /* LEARN MORE */
+  "flex-layout.col#learn-more-02": {
+    "children": ["button-learn-more-information#button-02"]
+  },
+  "button-learn-more-information#button-02": {},
+
+  /* ---THIRD POINT--- */
+  "flex-layout.row#third-point-desktop": {
+    "children": [
+      "flex-layout.col#text-third-point-desktop",
+      "flex-layout.col#image-third-point-desktop"
+    ],
+    "props": {
+      "blockClass": "container-global-text-image-landing-template-desktop"
+    }
+  },
+  /* LEFT THIRD POINT */
+  "flex-layout.col#text-third-point-desktop": {
+    "children": [
+      "rich-text#title-third-point-desktop",
+      "rich-text#paragraph-third-point-desktop"
+    ],
+    "props": {
+      "blockClass": "container-text-text-image-landing-template-desktop"
+    }
+  },
+  "rich-text#title-third-point-desktop": {
+    "props": {
+      "text": "Third point, most generical",
+      "blockClass": "title-text-image-landing-template-desktop"
+    }
+  },
+  "rich-text#paragraph-third-point-desktop": {
+    "props": {
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "blockClass": "description-text-image-landing-template-desktop"
+    }
+  },
+  /* RIGHT THIRD POINT */
+  "flex-layout.col#image-third-point-desktop": {
+    "children": ["image#third-point-desktop"],
+    "props": {
+      "blockClass": "container-image-text-image-landing-template-desktop"
+    }
+  },
+  "image#third-point-desktop": {
+    "props": {
+      "blockClass": "image-text-image-landing-template-desktop",
+      "src": "https://i.picsum.photos/id/1002/4312/2868.jpg?hmac=5LlLE-NY9oMnmIQp7ms6IfdvSUQOzP_O3DPMWmyNxwo"
+    }
+  },
+
+  /* LEARN MORE */
+  "flex-layout.col#learn-more-03": {
+    "children": ["button-learn-more-information#button-03"]
+  },
+  "button-learn-more-information#button-03": {},
+
+  /* ---FOURTH POINT--- */
+  "flex-layout.row#fourth-point-desktop": {
+    "children": [
+      "flex-layout.col#image-fourth-point-desktop",
+      "flex-layout.col#text-fourth-point-desktop"
+    ],
+    "props": {
+      "blockClass": "container-global-text-image-landing-template-desktop"
+    }
+  },
+  /* LEFT FOURTH POINT */
+  "flex-layout.col#image-fourth-point-desktop": {
+    "children": ["image#fourth-point-desktop"],
+    "props": {
+      "blockClass": "container-image-text-image-landing-template-desktop"
+    }
+  },
+  "image#fourth-point-desktop": {
+    "props": {
+      "blockClass": "image-text-image-landing-template-desktop",
+      "src": "https://i.picsum.photos/id/1002/4312/2868.jpg?hmac=5LlLE-NY9oMnmIQp7ms6IfdvSUQOzP_O3DPMWmyNxwo"
+    }
+  },
+  /* RIGHT FOURTH POINT */
+  "flex-layout.col#text-fourth-point-desktop": {
+    "children": [
+      "rich-text#title-fourth-point-desktop",
+      "rich-text#paragraph-fourth-point-desktop"
+    ],
+    "props": {
+      "blockClass": "container-text-text-image-landing-template-desktop"
+    }
+  },
+  "rich-text#title-fourth-point-desktop": {
+    "props": {
+      "text": "Fourth point, most generical",
+      "blockClass": "title-text-image-landing-template-desktop"
+    }
+  },
+  "rich-text#paragraph-fourth-point-desktop": {
+    "props": {
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "blockClass": "description-text-image-landing-template-desktop"
+    }
+  },
+
+  /* LEARN MORE */
+  "flex-layout.col#learn-more-04": {
+    "children": ["button-learn-more-information#button-04"]
+  },
+  "button-learn-more-information#button-04": {},
+
+  /* TITLE CAROUSEL */
+  "flex-layout.row#information-title-main-products-desktop": {
+    "children": ["rich-text#information-title-main-products-desktop"],
+    "props": {
+      "blockClass": "information-title-main-products-desktop"
+    }
+  },
+  "rich-text#information-title-main-products-desktop": {
+    "props": {
+      "blockClass": "information-title-main-products-desktop",
+      "text": "Products you may be interested in"
+    }
+  },
+  /* CAROUSEL */
+  "flex-layout.row#information-last-carousel-desktop-container": {
+    "children": ["product-carousel-new#information-last-carousel-desktop"],
+    "props": {
+      "blockClass": "information-last-carousel-desktop-container"
+    }
+  },
+  "product-carousel-new#information-last-carousel-desktop": {
+    "props": {
+      "collectionID": "161",
+      "isBottomCarousel": true
+    }
+  }
+}

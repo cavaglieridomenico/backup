@@ -1,0 +1,65 @@
+<script>
+        var s = document.createElement("script");
+        s.type = "text/javascript";
+        s.src = "https://static.youreko.com/js/partners/gb/privilege-purchase-club/youreko.energy-review.privilege-purchase-club.all.min.js";
+        (document.getElementsByTagName("head")[0] || document.documentElement).appendChild(s);
+
+        setTimeout(() => {
+                if (window && window.orderDetails) {
+
+
+
+                        window.orderDetails.items.map((item) => {
+
+                                const options = {
+                                        method: "GET",
+                                        headers: {
+                                                "Content-Type": "application/json",
+                                                Accept: "application/json",
+                                        },
+                                };
+
+
+                                Promise.all([fetch(
+                                        "/_v/wrapper/api/product/" + item.id + "/category",
+                                        options
+                                ).then((response) => {
+                                        return response.json()
+                                })]).then((product) => {
+
+
+                                        Promise.all([fetch("/_v/wrapper/api/catalog/category/" + product[0].CategoryId, options).then(
+                                                (response) => {
+                                                        return response.json();
+                                                }
+                                        )]).then((category) => {
+
+                                                Promise.all([fetch("/_v/wrapper/api/catalog_system/products/" + item.id + "/specification", options).then(
+                                                        (response) => {
+                                                                return response.json();
+                                                        }
+                                                )]).then((specs) => {
+                                                        
+                                                        var commercialCode = specs[0].filter(spec => spec.Name == "CommercialCode_field")
+                                                        console.log(commercialCode)
+                                                        var stringPrice = item.price.toString();
+                                                        var priceLast2Digits = stringPrice.substring(stringPrice.length - 2, stringPrice.length)
+                                                        var priceBeforeDigits = stringPrice.substring(0, stringPrice.length - 2);
+                                                        var script = document.createElement("script");
+                                                        script.src = `https://static.youreko.com/js/partners/gb/privilege-purchase-club/youreko.energy-review.privilege-purchase-club.all.min.js?action=purchase&productType=${category[0].LinkId}&manufacturer=AEG&model=${commercialCode[0].Value[0]}&price=${priceBeforeDigits}.${priceLast2Digits}`
+                                                        document.body.appendChild(script);
+                                                })
+
+                                        })
+
+
+
+                                })
+
+
+
+
+                        });
+                }
+        }, 5000);
+</script>

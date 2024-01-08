@@ -1,0 +1,37 @@
+{
+  "store.custom#catalog-page": {
+    "blocks": [
+      "breadcrumb-two-levels#catalog",
+      "flex-layout.row#catalog-container",
+      "flex-layout.row#newsletter-row"
+    ]
+  },
+  "rich-text#catalog-title": {
+    "props": {
+      "text": "# Urządzenia"
+    }
+  },
+  "flex-layout.col#catalog": {
+    "children": [
+      "rich-text#catalog-title",
+      "catalog-link"
+    ]
+  },
+  "flex-layout.row#catalog-container": {
+    "children": [
+      "flex-layout.col#catalog"
+    ],
+    "props": {
+      "blockClass": "catalogContainer",
+      "fullWidth": true
+    }
+  },
+  "breadcrumb-two-levels#catalog": {
+    "props": {
+      "firstLevelName": "strona główna",
+      "secondLevelName": "urządzenia",
+      "showOnMobile": true,
+      "blockClass": "catalogBreadcrumb"
+    }
+  }
+}

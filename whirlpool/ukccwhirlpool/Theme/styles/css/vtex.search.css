@@ -1,0 +1,97 @@
+.biggy-autocomplete-wrapper {
+  position: relative;
+}
+
+.biggy-autocomplete {
+  margin-top: 1rem;
+  position: fixed;
+  left: 0;
+  flex-direction: row-reverse !important;
+  background: #f2f2f2;
+  overflow: visible;
+  max-height: 100rem !important;
+}
+
+.biggy-autocomplete::after {
+  height: 5000px;
+  width: 100%;
+  position: absolute;
+  background: #c7c7c7;
+  content: "";
+  z-index: 10;
+  opacity: 0.7;
+  /* bottom: -81px; */
+  top: 100%;
+  pointer-events: none;
+}
+
+.tileList {
+  padding: 2rem 1rem;
+  max-width: 1063px;
+  flex-wrap: wrap;
+}
+
+.tileListList {
+  margin: 0 -5px;
+  flex-wrap: wrap;
+}
+
+.tileListItem {
+  max-width: 250px;
+  max-height: 275px;
+  background: #fff;
+  border-radius: 10px;
+  margin: 0 5px 10px 5px;
+}
+
+.itemList {
+  border-left: 1px solid #e0e0e0;
+}
+
+.itemListList {
+  display: inline-flex;
+  flex-direction: column;
+  padding: 2rem 0 !important;
+  margin-left: 1rem;
+}
+
+.itemListItem {
+  background: white;
+  font-weight: 700;
+  margin-bottom: 1rem !important;
+  border-radius: 10px;
+}
+
+.biggy-js-container--hidden {
+  /*Necessary to prevent hidden items click */
+  pointer-events: none !important;
+}
+
+@media only screen and (max-width: 640px) {
+  .biggy-autocomplete {
+    display: block;
+  }
+  .itemList {
+    border-left: none;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  .itemListList {
+    padding: 0 !important;
+  }
+  .tileListItem {
+    max-width: 100%;
+    max-height: 100px;
+    flex: 1;
+    min-width: 100%;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  .tileListItem{
+    flex: auto;
+  }
+}
+@media only screen and (min-width: 640px) {
+  .tileListItem {
+    min-width: 180px;
+  }
+}

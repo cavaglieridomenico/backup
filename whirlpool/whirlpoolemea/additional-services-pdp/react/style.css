@@ -1,0 +1,262 @@
+.servTitleStyle {
+	font-weight: 700;
+	line-height: 1.5;
+}
+.servAggTooltip {
+	padding-top: 0.875rem;
+	font-size: 0.875rem;
+	line-height: 1.5;
+}
+.serviceTitle {
+	display: flex;
+	align-items: center;
+}
+.whirlClub {
+	margin-left: 0.6rem;
+	height: 1.2rem;
+	margin-bottom: -4px;
+}
+.serviziAggiuntiviTable {
+	background-color: #f9f9f9;
+	width: 100%;
+	font-size: 1rem;
+	margin: 1rem 0 2.5rem 0;
+	height: auto;
+	overflow: visible;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	padding: 1.75rem 2.5rem;
+}
+.serviziAggiuntiviTooltip {
+	padding-top: 0.875rem;
+}
+.servicePriceContainer {
+	display: flex;
+	min-width: 6em;
+	justify-content: flex-end;
+}
+
+.theoreticalValue {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	color: #d0d3d4;
+	font-size: .8rem;
+	text-decoration: line-through;
+	font-family: myriadLight,Times,serif;
+	margin: auto;
+}
+.theoreticalValue .currencyContainer {
+}
+
+
+.servAggRow {
+	display: flex;
+	flex-direction: column;
+	padding: 0.875rem 0;
+	position: relative;
+}
+
+.servAggRow:not(:last-child) {
+	border-bottom: 1px solid #d0d3d4;
+}
+.servOptions {
+	display: flex;
+	justify-content: space-between;
+	padding-right: 1rem;
+}
+.servOptionsDiscount {
+	display: flex;
+	justify-content: space-between;
+	padding-right: 2rem;
+}
+.freeLabel {
+	font-size: 0.875rem;
+	margin-left: 1rem;
+	display: flex;
+	align-items: center;
+	text-align: right;
+}
+.labelPrice {
+	color: #505050;
+	font-size: 0.875rem;
+	margin-left: 1rem;
+	align-items: center;
+	text-align: right;
+}
+.twoYearsWarranty {
+	width: 96.5%;
+}
+.servAggRow :global(.vtex__icon-caret-down),
+.servAggRow :global(.vtex__icon-caret-up) {
+	width: 10px;
+	color: #505050;
+}
+.warrantyServicesTitle {
+	white-space: pre;
+	margin-top: 1rem;
+}
+.addServicesTitleContainer {
+	display: flex;
+	align-items: center;
+}
+.addServicesTitleMarkLogo {
+	width: 18px;
+	margin-right: 0.5rem;
+  visibility: hidden;
+  max-width: 0;
+}
+.mainContainer {
+	height: 565px;
+	/* padding: 0 1rem; */
+}
+.tabLinkContainer {
+	display: flex;
+	justify-content: space-between;
+}
+.warrantyTabLink {
+	display: flex;
+	justify-content: flex-start;
+}
+.warrantySecondTitle {
+	margin-left: 4rem;
+}
+.baseTitle {
+	font-size: 1.5rem;
+	cursor: pointer;
+}
+.clicked {
+	font-size: 1.5rem;
+	cursor: pointer;
+}
+.clicked::after {
+	content: '';
+	height: 4px;
+	width: 52px;
+	display: block;
+}
+.infoIcon {
+  visibility: hidden;
+  max-width: 0;
+}
+.whrClub{
+  visibility: hidden;
+  max-width: 0;
+}
+.infoIconWarranty {
+  visibility: hidden;
+  max-width: 0;
+}
+.whrClubWarranty{
+  visibility: hidden;
+  max-width: 0;
+}
+.carefreeUnorderedContainer {
+	display: flex;
+}
+.lastParagraph {
+	padding-bottom: 2rem;
+}
+.modalListItem {
+	margin-bottom: 1rem;
+}
+
+.textMainContainer {
+	text-align: justify;
+}
+
+/* MEDIA QUERYS */
+
+@media only screen and (min-width: 1024px){
+
+	.addServicesTitle {
+		white-space: pre;
+	}
+
+}
+
+@media only screen and (max-width: 1024px) {
+	.mainContainer {
+		height: 26rem;
+	}
+	.baseTitle {
+		font-size: 1.2rem;
+	}
+	.clicked {
+		font-size: 1.2rem;
+	}
+	.modalParagraph {
+		font-size: 0.9rem;
+	}
+}
+@media only screen and (max-width: 800px) {
+	.baseTitle {
+		font-size: 1rem;
+	}
+	.clicked {
+		font-size: 1rem;
+	}
+	.addServicesTitle {
+		white-space: none;
+	}
+}
+.collapsible-container {
+	width: 100%;
+	padding-top: 0.875rem;
+	height: auto;
+	overflow: hidden;
+	transition: height 250ms ease-in-out 0s;
+}
+@media only screen and (max-width: 680px) {
+	.tabLinkContainer {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.warrantyTabLink {
+		flex-direction: column;
+	}
+	.warrantySecondTitle {
+		margin-left: 0rem;
+	}
+	.baseTitle {
+		font-size: 1.5rem;
+		margin-bottom: 0;
+	}
+	.clicked {
+		font-size: 1.5rem;
+		margin-bottom: 0;
+	}
+
+	.mainContainer {
+		height: 26rem;
+	}
+	.carefreeUnorderedContainer {
+		flex-direction: column;
+	}
+	.modalParagraph {
+		font-size: 1rem;
+	}
+	.addServicesTitle {
+		white-space: none;
+	}
+}
+@media only screen and (max-width: 640px) {
+	.serviziAggiuntiviTable {
+		padding: 1.5rem 1.3rem;
+	}
+	.serviziAggiuntiviTable {
+		font-size: 0.875rem;
+	}
+	.servTitleStyle {
+		font-size: 1rem;
+		font-weight: 500;
+	}
+	.addServicesTitleMarkLogo {
+		display: none;
+	}
+	.addServicesTitle {
+		white-space: none;
+	}
+}

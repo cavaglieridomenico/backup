@@ -1,0 +1,93 @@
+{
+  "experimental__visibility-layout#bannerWithPostillaWcollectionViceversa": {
+    "props": {
+      "visible": true
+    },
+    "children": ["flex-layout.row#bannerWithPostillaWcollectionViceversa"]
+  },
+  "flex-layout.row#bannerWithPostillaWcollectionViceversa": {
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": [
+        "columnPostillaBannerAntonio",
+        "bgColorAntonioHero",
+        "width80",
+        "marginAutoContent",
+        "wcollectionBanner",
+        "column"
+      ]
+    },
+    "children": [
+      "flex-layout.col#rightPartPostillaWcollec",
+      "flex-layout.col#leftPartPostillaWcollec"
+    ]
+  },
+  "experimental__visibility-layout#bannerWithPostillaWcollection": {
+    "props": {
+      "visible": true
+    },
+    "children": ["flex-layout.row#bannerWithPostillaWcollection"]
+  },
+  "experimental__visibility-layout#bannerWithPostillaWcollection2": {
+    "props": {
+      "visible": true
+    },
+    "children": ["flex-layout.row#bannerWithPostillaWcollection"]
+  },
+  "flex-layout.row#bannerWithPostillaWcollection": {
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": [
+        "columnPostillaBannerAntonio",
+        "bgColorAntonioHero",
+        "width80",
+        "marginAutoContent",
+        "wcollectionBanner"
+      ]
+    },
+    "children": [
+      "flex-layout.col#leftPartPostillaWcollec",
+      "flex-layout.col#rightPartPostillaWcollec"
+    ]
+  },
+  "flex-layout.col#leftPartPostillaWcollec": {
+    "props": {
+      "width": "55%",
+      "preventVerticalStretch": true,
+      "blockClass": ["columnPostilla", "columnPostillaBottom"]
+    },
+    "children": [
+      "rich-text#BannTitle",
+      "rich-text#BannDesc",
+      "experimental__visibility-layout#ButtonBannerWithPostillaWColl",
+      "rich-text#BannPostillaWColl"
+    ]
+  },
+  "flex-layout.col#rightPartPostillaWcollec": {
+    "props": {
+      "width": "45%",
+      "blockClass": "columnPostillaImage"
+    },
+    "children": ["image#bannerPostilla"]
+  },
+  "experimental__visibility-layout#ButtonBannerWithPostillaWColl": {
+    "props": {
+      "visible": true
+    },
+    "children": ["link#ButtonBannWColl"]
+  },
+  "link#ButtonBannWColl": {
+    "props": {
+      "label": "TESTO BOTTONE",
+      "href": "#",
+      "displayMode": "button",
+      "blockClass": ["postillaButton", "marginButtonWColl"]
+    }
+  },
+  "rich-text#BannPostillaWColl": {
+    "props": {
+      "text": "*Considerando la capacità dello spazio convertibile impostato a 4 ° C.",
+      "blockClass": ["postillaBannerPostilla", "noPosAbsolute"]
+    }
+  }
+}

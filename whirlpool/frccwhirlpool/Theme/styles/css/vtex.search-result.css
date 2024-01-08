@@ -1,0 +1,201 @@
+.galleryItem {
+  position: relative;
+}
+
+.buttonShowMore {
+  display: contents;
+}
+.buttonShowMore--layout {
+  padding: 0 2rem 0 5rem;
+}
+.galleryLayoutOptionButton {
+  background-color: #f0f0f0;
+  color: #3f3f40;
+  padding: 0.375rem 0.75rem 0.375rem 0.75rem;
+}
+
+.galleryLayoutOptionButton--selected {
+  background-color: #3f3f40;
+  color: #ffffff;
+}
+
+.galleryLayoutSwitcher {
+  border-radius: 4px 4px 4px 4px;
+  justify-content: center;
+  overflow: hidden;
+  width: auto !important;
+  align-self: center;
+}
+
+.galleryItem--list {
+  border-bottom: 1px #e7e9ee solid;
+}
+
+.galleryItem {
+  border: 0.0625rem solid #ececec;
+  margin: 1rem 1rem;
+  border-radius: 4px;
+  padding: 1.5rem 0.75rem;
+  transition: all 0.3s ease;
+}
+.galleryItem:hover {
+  transition: all 0.3s ease;
+  box-shadow: 0px 0px 16px #dadada;
+}
+.filter__container--selectedFilters .filterSelected {
+  padding: 0;
+  padding-top: 10px;
+}
+.filter__container--selectedFilters .filterTemplateOverflow::before {
+  content: "Votre sélection:";
+  font-family: "GothamProRRegular";
+  font-weight: 400;
+  font-size: 1rem;
+  text-transform: uppercase;
+  display: block;
+  width: 100%;
+  line-height: 35px;
+}
+.filter__container--selectedFilters .filterTemplateOverflow:empty {
+  display: none !important;
+}
+.filter__container--selectedFilters .filterSelected .filterTitle {
+  display: none;
+}
+/*-- TO BE REMOVED --*/
+.filterTitleSpan,
+.accordionFilterItemTitle {
+  text-transform: uppercase;
+}
+.accordionFilterItemTitle {
+  font-size: 1rem;
+}
+@media only screen and (min-width: 1100px) {
+  .galleryItem {
+    max-width: calc(33% - 2rem) !important;
+    flex-basis: 33% !important;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .gallery {
+    padding: unset;
+  }
+  .galleryItem {
+    margin: 0.5rem;
+    max-width: calc(50% - 1rem) !important;
+    flex-basis: calc(50% - 1rem) !important;
+    padding: unset;
+  }
+  .buttonShowMore {
+    margin-left: 0 !important;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .galleryItem {
+    margin: 0.2rem;
+    max-width: calc(100%) !important;
+    flex-basis: calc(100%) !important;
+  }
+  .filterClearButtonWrapper :global(.vtex-button):hover {
+    background-color: transparent;
+  }
+  .loadingOverlay {
+    padding: 0 1rem;
+  }
+}
+
+.buttonShowMore {
+  margin-top: 2rem;
+  margin-left: 4rem;
+  margin-bottom: 2rem;
+}
+
+.buttonShowMore :global(.vtex-button) {
+  width: 90%;
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px solid black;
+  border-radius: 0;
+  color: black;
+  font-weight: 800;
+}
+.searchResultContainer
+  :global(.vtex-search-result-3-x-buttonShowMore--searchFetchMore) {
+  display: flex !important;
+}
+
+.galleryItem :global(.vtex-button) {
+  border-color: transparent;
+}
+
+.filter__container--clearAllFilters {
+  margin-top: 1rem;
+  border: none;
+}
+.filter__container--clearAllFilters :global(.vtex-button) {
+  width: 100%;
+  border: 2px solid black;
+  background: white;
+  color: black;
+}
+
+@media only screen and (min-width: 1100px) {
+  .searchResultContainer {
+    max-width: 85%;
+    margin: auto;
+    padding: 0 !important;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .orderByButton {
+    justify-content: center !important;
+  }
+}
+
+.galleryTitle--layout::after {
+  content: '"';
+}
+
+.galleryTitle--layout::before {
+  content: '\00a0"';
+}
+
+.orderByOptionsContainer {
+  border: 1px solid white;
+  border-radius: 0;
+  font-size: 12px;
+  z-index: 4;
+}
+
+.orderByOptionItem {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.15;
+  font-family: "GothamProRRegular";
+}
+
+.filter__container {
+  border-color: rgba(0, 0, 0, 0.05);
+}
+
+.filterItem :global(.vtex-checkbox__inner-container) {
+  border-radius: 0;
+  border-width: 1px;
+}
+
+.filterItem :global(.vtex-checkbox__box) {
+  color: #000;
+}
+
+.orderByButton {
+  padding-left: 0;
+  justify-content: flex-start;
+}
+@media only screen and (min-width: 640px) and (max-width: 1280px) {
+  .galleryItem {
+    margin: 0.5rem;
+    flex-basis: calc(50% - 1rem) !important;
+    padding: unset;
+    max-width: 195px !important;
+  }
+}

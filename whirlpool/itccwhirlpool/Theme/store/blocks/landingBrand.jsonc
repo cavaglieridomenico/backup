@@ -1,0 +1,833 @@
+{
+  "store.custom#landing-brand": {
+    "blocks": [
+      "responsive-layout.desktop#rl-landing-brand",
+      "responsive-layout.mobile#rl-landing-brand"
+    ]
+  },
+  //DESKTOP
+  "responsive-layout.desktop#rl-landing-brand": {
+    "children": ["disposition-layout#landing-brand-desktop"],
+    "props": {
+      "blockClass": "templateLandingBrand"
+    }
+  },
+  "disposition-layout#landing-brand-desktop": {
+    "children": [
+      "flex-layout.row#hero-banner",
+      "flex-layout.row#text-box",
+      "flex-layout.row#video",
+      "flex-layout.row#video-two",
+      "flex-layout.row#video-three",
+      "flex-layout.row#banner-half",
+      "flex-layout.row#banner-half-reverse",
+      "flex-layout.row#design-component",
+      "flex-layout.row#slider-feature",
+      "flex-layout.row#tab-component",
+      "flex-layout.row#main-feature",
+      "flex-layout.row#design-component-reverse",
+      "flex-layout.row#gallery",
+      "flex-layout.row#products-carousel",
+      "flex-layout.row#products-carousel-two"
+    ],
+    "props": {
+      "disposition": [
+        {
+          "order": 1
+        },
+        {
+          "order": 2
+        },
+        {
+          "order": 3
+        },
+        {
+          "order": 4
+        },
+        {
+          "order": 5
+        },
+        {
+          "order": 6
+        },
+        {
+          "order": 7
+        },
+        {
+          "order": 8
+        },
+        {
+          "order": 9
+        },
+        {
+          "order": 10
+        },
+        {
+          "order": 11
+        },
+        {
+          "order": 12
+        },
+        {
+          "order": 13
+        },
+        {
+          "order": 14
+        },
+        {
+          "order": 15
+        }
+      ]
+    }
+  },
+  //HERO BANNER COMPONENT
+  "flex-layout.row#hero-banner": {
+    "title": "Hero Banner",
+    "children": ["flex-layout.col#hero-banner-col", "image#hero-banner-image"],
+    "props": {
+      "blockClass": "heroBannerContainer",
+      "fullWidth": false
+    }
+  },
+  "flex-layout.col#hero-banner-col": {
+    "title": "Col texts",
+    "children": [
+      "rich-text#hero-banner-text-header",
+      "rich-text#hero-banner-text-title",
+      "rich-text#hero-banner-text-description",
+      "rich-text#hero-banner-text-footer"
+    ],
+    "props": {
+      "blockClass": "heroBannerColumnContainer"
+    }
+  },
+  "rich-text#hero-banner-text-header": {
+    "title": "Text orange underline",
+    "props": {
+      "text": "W Collection",
+      "textAlignment": "LEFT",
+      "textPosition": "LEFT",
+      "blockClass": "heroBannerTextHeader"
+    }
+  },
+  "rich-text#hero-banner-text-title": {
+    "title": "Title",
+    "props": {
+      "text": "Total No Frost Built In Refrigerator",
+      "textAlignment": "LEFT",
+      "textPosition": "LEFT",
+      "blockClass": "heroBannerTextTitle"
+    }
+  },
+  "rich-text#hero-banner-text-description": {
+    "title": "Description",
+    "props": {
+      "text": "Discover a total no stress life thanks to the most silent ...",
+      "textAlignment": "LEFT",
+      "textPosition": "LEFT",
+      "blockClass": "heroBannerTextDescription"
+    }
+  },
+  "rich-text#hero-banner-text-footer": {
+    "title": "Text footer",
+    "props": {
+      "text": "*Referred to the bottom mount refrigerator category ...",
+      "textAlignment": "LEFT",
+      "textPosition": "LEFT",
+      "blockClass": "heroBannerTextFooter"
+    }
+  },
+  "image#hero-banner-image": {
+    "title": "Banner Image",
+    "props": {
+      "src": "assets/bannerHp/lava.png",
+      "blockClass": "heroBannerImage"
+    }
+  },
+  //TEXT BOX COMPONENT
+  "flex-layout.row#text-box": {
+    "title": "Text Box Component",
+    "children": [
+      "image#text-box-image",
+      "rich-text#text-box-title",
+      "rich-text#text-box-description"
+    ],
+    "props": {
+      "blockClass": "textBoxContainer"
+    }
+  },
+  "image#text-box-image": {
+    "title": "Text Box Image",
+    "props": {
+      "src": "assets/6thsense_2x.png",
+      "maxHeight": 128,
+      "blockClass": "textBoxImage"
+    }
+  },
+  "rich-text#text-box-title": {
+    "title": "Text Box Title",
+    "props": {
+      "text": "#### The most silent Total no frost",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": "textBoxTitle"
+    }
+  },
+  "rich-text#text-box-description": {
+    "title": "Text Box Description",
+    "props": {
+      "text": "Today more than ever, we spend much of our time at home where silence is key to ...",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": "textBoxDescription"
+    }
+  },
+  //VIDEO COMPONENT
+  "flex-layout.row#video": {
+    "title": "Video Component 1",
+    "children": ["video#landing-brand-video"],
+    "props": {
+      "blockClass": "videoContainer",
+      "fullWidth": false
+    }
+  },
+  "video#landing-brand-video": {
+    "props": {
+      "width": "100%",
+      "height": "100%",
+      "loop": false,
+      "autoPlay": false,
+      "muted": false,
+      "src": "https://www.youtube.com/watch?v=aBqOrg0Co-w",
+      "blockClass": "landingBrandVideo"
+    }
+  },
+  //VIDEO COMPONENT TWO
+  "flex-layout.row#video-two": {
+    "title": "Video Component 2",
+    "children": ["video#landing-brand-video"],
+    "props": {
+      "blockClass": "videoContainer",
+      "fullWidth": false
+    }
+  },
+  //VIDEO COMPONENT THREE
+  "flex-layout.row#video-three": {
+    "title": "Video Component 3",
+    "children": ["video#landing-brand-video"],
+    "props": {
+      "blockClass": "videoContainer",
+      "fullWidth": false
+    }
+  },
+  //BANNER HALF COMPONENT
+  "flex-layout.row#banner-half": {
+    "title": "Half Banner",
+    "children": ["flex-layout.col#banner-half-col", "image#banner-half-image"],
+    "props": {
+      "blockClass": "bannerHalfContainer",
+      "horizontalAlign": "center"
+    }
+  },
+  "flex-layout.col#banner-half-col": {
+    "title": "Col Half Banner Texts",
+    "children": [
+      "rich-text#banner-half-text-header",
+      "rich-text#banner-half-text-title",
+      "rich-text#banner-half-text-description",
+      "rich-text#banner-half-text-footer"
+    ],
+    "props": {
+      "blockClass": "bannerHalfColumnContainer"
+    }
+  },
+  "image#banner-half-image": {
+    "title": "Half Banner Image",
+    "props": {
+      "src": "assets/header-subscription.png",
+      "blockClass": "bannerHalfImage"
+    }
+  },
+  "rich-text#banner-half-text-header": {
+    "title": "Half Banner text underlined",
+    "props": {
+      "text": "W Collection",
+      "textAlignment": "LEFT",
+      "textPosition": "LEFT",
+      "blockClass": "halfBannerTextHeader"
+    }
+  },
+  "rich-text#banner-half-text-title": {
+    "title": "Half Banner Title",
+    "props": {
+      "text": "Total No Frost Built In Refrigerator",
+      "textAlignment": "LEFT",
+      "textPosition": "LEFT",
+      "blockClass": "heroBannerTextTitle"
+    }
+  },
+  "rich-text#banner-half-text-description": {
+    "title": "Half Banner Description",
+    "props": {
+      "text": "Discover a total no stress life thanks to the most silent ...",
+      "textAlignment": "LEFT",
+      "textPosition": "LEFT",
+      "blockClass": "heroBannerTextDescription"
+    }
+  },
+  "rich-text#banner-half-text-footer": {
+    "title": "Half Banner Footer",
+    "props": {
+      "text": "*Referred to the bottom mount refrigerator category ...",
+      "textAlignment": "LEFT",
+      "textPosition": "LEFT",
+      "blockClass": "heroBannerTextFooter"
+    }
+  },
+  //BANNER HALF REVERSE COMPONENT
+  "flex-layout.row#banner-half-reverse": {
+    "title": "Half Banner Reverse",
+    "children": ["flex-layout.col#banner-half-col", "image#banner-half-image"],
+    "props": {
+      "blockClass": "bannerHalfReverseContainer",
+      "horizontalAlign": "center"
+    }
+  },
+  //DESIGN COMPONENT
+  "flex-layout.row#design-component": {
+    "title": "Info Card Design",
+    "children": ["info-card#design"],
+    "props": {
+      "blockClass": "infocardDesignContainer",
+      "fullWidth": false
+    }
+  },
+  "info-card#design": {
+    "props": {
+      "id": "info-card-design",
+      "isFullModeStyle": false,
+      "textPosition": "left",
+      "callToActionMode": "none",
+      "imageUrl": "assets/bannerHp/lavatriceBanner.png",
+      "headline": "Total no stress in organizing your food",
+      "subhead": "Для хранения продуктов и поддержания их свежести важное значение имеет правильная организация пространства. В новом холодильнике серии W Collection Total No Frost* на 10 % больше пространства**, то есть он не только соответствует ожиданиям, но и превосходит их. Для максимального удобства организации хранения продуктов мы предлагаем большой набор аксессуаров.",
+      "blockClass": "info-card-design",
+      "textAlignment": "left"
+    }
+  },
+  //SECONDARY FEATURE COMPONENT
+  "flex-layout.row#slider-feature": {
+    "title": "Secondary Feature Component",
+    "children": [
+      "rich-text#slider-feature-title",
+      "slider-layout#secondary-feature"
+    ],
+    "props": {
+      "blockClass": "sliderFeatureContainer",
+      "fullWidth": false
+    }
+  },
+  "rich-text#slider-feature-title": {
+    "title": "Secondary Feature Slider Title",
+    "props": {
+      "text": "УМНЫЕ РЕШЕНИЯ ДЛЯ ЭФФЕКТИВНОЙ ОРГАНИЗАЦИИ ВНУТРЕННЕГО ПРОСТРАНСТВА",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": "featureTitle"
+    }
+  },
+  "slider-layout#secondary-feature": {
+    "title": "Slider Layout Secondary Feature",
+    "props": {
+      "itemsPerPage": {
+        "desktop": 3,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": false,
+      "showNavigationArrows": "never",
+      "usePagination": "false",
+      "blockClass": "secondaryFeatureCarousel"
+    },
+    "children": [
+      "flex-layout.col#secondary-feature-col1",
+      "flex-layout.col#secondary-feature-col2",
+      "flex-layout.col#secondary-feature-col3",
+      "flex-layout.col#secondary-feature-col4",
+      "flex-layout.col#secondary-feature-col5"
+    ]
+  },
+  "flex-layout.col#secondary-feature-col1": {
+    "title": "Col 1 Secondary Feature",
+    "children": [
+      "rich-text#secondary-feature-title",
+      "rich-text#secondary-feature-text"
+    ],
+    "props": {
+      "blockClass": "secondaryFeatureColumnContainer"
+    }
+  },
+  "rich-text#secondary-feature-title": {
+    "title": "Secondary Feature Title",
+    "props": {
+      "text": "###### Держатель для бутылок «2 в 1»",
+      "textAlignment": "LEFT",
+      "textPosition": "LEFT",
+      "blockClass": "featureTitle"
+    }
+  },
+  "rich-text#secondary-feature-text": {
+    "title": "Secondary Feature Text",
+    "props": {
+      "text": "Полка со встроенным держателем для бутылок, на которой можно хранить и продукты, и бутылки. Кроме того, держатель для бутылок можно снять и разместить на любой другой полке.",
+      "textAlignment": "LEFT",
+      "textPosition": "LEFT",
+      "blockClass": "featureText"
+    }
+  },
+  "flex-layout.col#secondary-feature-col2": {
+    "title": "Col 2 Secondary Feature",
+    "children": [
+      "rich-text#secondary-feature-title",
+      "rich-text#secondary-feature-text"
+    ],
+    "props": {
+      "blockClass": "secondaryFeatureColumnContainer"
+    }
+  },
+  "flex-layout.col#secondary-feature-col3": {
+    "title": "Col 3 Secondary Feature",
+    "children": [
+      "rich-text#secondary-feature-title",
+      "rich-text#secondary-feature-text"
+    ],
+    "props": {
+      "blockClass": "secondaryFeatureColumnContainer"
+    }
+  },
+  "flex-layout.col#secondary-feature-col4": {
+    "title": "Col 4 Secondary Feature",
+    "children": [
+      "rich-text#secondary-feature-title",
+      "rich-text#secondary-feature-text"
+    ],
+    "props": {
+      "blockClass": "secondaryFeatureColumnContainer"
+    }
+  },
+  "flex-layout.col#secondary-feature-col5": {
+    "title": "Col 5 Secondary Feature",
+    "children": [
+      "rich-text#secondary-feature-title",
+      "rich-text#secondary-feature-text"
+    ],
+    "props": {
+      "blockClass": "secondaryFeatureColumnContainer"
+    }
+  },
+  //TAB COMPONENT
+  "flex-layout.row#tab-component": {
+    "title": "Tab Component",
+    "children": [
+      "rich-text#tab-component-title",
+      "tab-layout#template-landing-brand"
+    ],
+    "props": {
+      "blockClass": "tabComponentContainer"
+    }
+  },
+  "rich-text#tab-component-title": {
+    "title": "Title",
+    "props": {
+      "text": "The most intuitive technology for food preservation",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": "tabComponentTitle"
+    }
+  },
+  "tab-layout#template-landing-brand": {
+    "title": "Tab Layout",
+    "children": [
+      "tab-list#template-landing-brand",
+      "tab-content#template-landing-brand"
+    ],
+    "props": {
+      "blockClass": "tabLandingBrand",
+      "defaultActiveTabId": "tab1"
+    }
+  },
+  "tab-list#template-landing-brand": {
+    "title": "Tab List",
+    "children": [
+      "tab-list.item#tab1",
+      "tab-list.item#tab2",
+      "toggle-layout#tabItem3",
+      "toggle-layout#tabItem4",
+      "toggle-layout#tabItem5"
+    ],
+    "props": {
+      "blockClass": "tabLandingBrandContainer"
+    }
+  },
+  "tab-list.item#tab1": {
+    "title": "Tab Item 1",
+    "props": {
+      "tabId": "tab1",
+      "label": "Deli box*",
+      "defaultActiveTab": true,
+      "blockClass": "tabItemLandingBrand"
+    }
+  },
+  "tab-list.item#tab2": {
+    "title": "Tab Item 2",
+    "props": {
+      "tabId": "tab2",
+      "label": "Multi FreshBox*",
+      "blockClass": "tabItemLandingBrand"
+    }
+  },
+  "toggle-layout#tabItem3": {
+    "title": "Toggle Layout Tab Item 3",
+    "children": ["tab-list.item#tab3"]
+  },
+  "tab-list.item#tab3": {
+    "title": "Tab Item 3",
+    "props": {
+      "tabId": "tab3",
+      "label": "Fresh Box+*",
+      "blockClass": "tabItemLandingBrand"
+    }
+  },
+  "toggle-layout#tabItem4": {
+    "title": "Toggle Layout Tab Item 4",
+    "children": ["tab-list.item#tab4"]
+  },
+  "tab-list.item#tab4": {
+    "title": "Tab Item 4",
+    "props": {
+      "tabId": "tab4",
+      "label": "Fresh pad*",
+      "blockClass": "tabItemLandingBrand"
+    }
+  },
+  "toggle-layout#tabItem5": {
+    "title": "Toggle Layout Tab Item 5",
+    "children": ["tab-list.item#tab5"]
+  },
+  "tab-list.item#tab5": {
+    "title": "Tab Item 5",
+    "props": {
+      "tabId": "tab5",
+      "label": "Fresh pad*",
+      "blockClass": "tabItemLandingBrand"
+    }
+  },
+  "tab-content#template-landing-brand": {
+    "title": "Tab Content",
+    "children": [
+      "tab-content.item#tab1",
+      "tab-content.item#tab2",
+      "toggle-layout#tabContentItem3",
+      "toggle-layout#tabContentItem4",
+      "toggle-layout#tabContentItem5"
+    ]
+  },
+  "tab-content.item#tab1": {
+    "title": "Tab Content Item 1",
+    "children": ["flex-layout.row#tab-banner"],
+    "props": {
+      "tabId": "tab1"
+    }
+  },
+  "tab-content.item#tab2": {
+    "title": "Tab Content Item 2",
+    "children": ["flex-layout.row#tab-banner"],
+    "props": {
+      "tabId": "tab2"
+    }
+  },
+  "toggle-layout#tabContentItem3": {
+    "title": "Toggle Layout Tab Content Item 3",
+    "children": ["tab-content.item#tab3"]
+  },
+  "tab-content.item#tab3": {
+    "title": "Tab Content Item 3",
+    "children": ["flex-layout.row#tab-banner"],
+    "props": {
+      "tabId": "tab3"
+    }
+  },
+  "toggle-layout#tabContentItem4": {
+    "title": "Toggle Layout Tab Content Item 4",
+    "children": ["tab-content.item#tab4"]
+  },
+  "tab-content.item#tab4": {
+    "title": "Tab Content Item 4",
+    "children": ["flex-layout.row#tab-banner"],
+    "props": {
+      "tabId": "tab4"
+    }
+  },
+  "toggle-layout#tabContentItem5": {
+    "title": "Toggle Layout Tab Content Item 5",
+    "children": ["tab-content.item#tab5"]
+  },
+  "tab-content.item#tab5": {
+    "title": "Tab Content Item 5",
+    "children": ["flex-layout.row#tab-banner"],
+    "props": {
+      "tabId": "tab5"
+    }
+  },
+  "flex-layout.row#tab-banner": {
+    "title": "Tab Banner",
+    "children": ["image#tab-banner-image", "flex-layout.col#tab-banner-col"],
+    "props": {
+      "blockClass": "tabBannerContainer"
+    }
+  },
+  "image#tab-banner-image": {
+    "title": "Tab Banner Image",
+    "props": {
+      "src": "assets/bannerHp/image4.png",
+      "blockClass": "tabBannerImage"
+    }
+  },
+  "flex-layout.col#tab-banner-col": {
+    "title": "Tab Banner Col Texts",
+    "children": [
+      "rich-text#tab-banner-title",
+      "rich-text#tab-banner-description",
+      "rich-text#tab-banner-footer"
+    ],
+    "props": {
+      "blockClass": "tabBannerColumnContainer"
+    }
+  },
+  "rich-text#tab-banner-title": {
+    "title": "Tab Banner Title",
+    "props": {
+      "text": "###### Deli box*",
+      "blockClass": "tabBannerTitleText"
+    }
+  },
+  "rich-text#tab-banner-description": {
+    "title": "Tab Banner Description",
+    "props": {
+      "text": "Отдельное пространство для скоропортящихся продуктов еще лучше сохраняет их вкус и внешний вид.",
+      "blockClass": "tabBannerDescriptionText"
+    }
+  },
+  "rich-text#tab-banner-footer": {
+    "title": "Tab Banner Footer",
+    "props": {
+      "text": "*Дэли бокс",
+      "blockClass": "tabBannerFooterText"
+    }
+  },
+  //MAIN FEATURE COMPONENT
+  "flex-layout.row#main-feature": {
+    "title": "Main Feature Component",
+    "children": ["flex-layout.col#banner-half-col", "image#banner-half-image"],
+    "props": {
+      "blockClass": "mainFeatureContainer"
+    }
+  },
+  //DESIGN REVERSE COMPONENT
+  "flex-layout.row#design-component-reverse": {
+    "title": "Info Card Design Reverse",
+    "children": ["info-card#design-reverse"],
+    "props": {
+      "blockClass": "infocardDesignContainer",
+      "fullWidth": false
+    }
+  },
+  "info-card#design-reverse": {
+    "title": "Info Card Reverse",
+    "props": {
+      "id": "info-card-design",
+      "isFullModeStyle": false,
+      "textPosition": "right",
+      "callToActionMode": "none",
+      "imageUrl": "assets/bannerHp/lavatriceBanner.png",
+      "headline": "Элегантный дизайн, высокая производительность",
+      "subhead": " был обновлен с особым вниманием к деталям, чтобы он идеально вписывался в интерьер любой кухни, а организация внутреннего пространства холодильника полностью переосмыслена.",
+      "blockClass": "info-card-design",
+      "textAlignment": "left"
+    }
+  },
+  //GALLERY COMPONENT
+  "flex-layout.row#gallery": {
+    "title": "Gallery Component",
+    "children": ["list-context.image-list#gallery-component"],
+    "props": {
+      "blockClass": "galleryContainer",
+      "fullWidth": false
+    }
+  },
+  "list-context.image-list#gallery-component": {
+    "title": "Gallery Image List",
+    "children": ["slider-layout#gallery"],
+    "props": {
+      "preload": true,
+      "blockClass": "galleryCarouselList",
+      "images": [
+        {
+          "image": "assets/bannerHp/lavatriceBanner.png",
+          "description": "something something",
+          "mobileImage": ""
+        }
+      ]
+    }
+  },
+  "slider-layout#gallery": {
+    "title": "Slider Layout Gallery",
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "fullWidth": true,
+      "showNavigationArrows": "desktopOnly",
+      "showPaginationDots": "none",
+      "blockClass": ["galleryCarousel"]
+    }
+  },
+  //PRODUCTS CAROUSEL
+  "flex-layout.row#products-carousel": {
+    "title": "Products Carousel",
+    "children": ["list-context.product-list#listProductsBrandLp"],
+    "props": {
+      "blockClass": "mainFeatureContainer"
+    }
+  },
+  "list-context.product-list#listProductsBrandLp": {
+    "title": "Products Carousel List",
+    "blocks": ["product-summary.shelf"],
+    "children": ["slider-layout#products-carousel-brand-lp"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC",
+      "collection": "200"
+    }
+  },
+  "slider-layout#products-carousel-brand-lp": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 4,
+        "tablet": 3,
+        "phone": 1
+      },
+      "infinite": true,
+      "fullWidth": false,
+      "showNavigationArrows": "desktopOnly",
+      "blockClass": "productsCarousel",
+      "showPaginationDots": "always"
+    }
+  },
+  //PRODUCTS CAROUSEL TWO
+  "flex-layout.row#products-carousel-two": {
+    "title": "Products Carousel Two",
+    "children": ["list-context.product-list#listProductsBrandLpTwo"],
+    "props": {
+      "blockClass": "mainFeatureContainer"
+    }
+  },
+  "list-context.product-list#listProductsBrandLpTwo": {
+    "title": "Products Carousel Two List",
+    "blocks": ["product-summary.shelf"],
+    "children": ["slider-layout#products-carousel-two-brand-lp"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC",
+      "collection": "201"
+    }
+  },
+  "slider-layout#products-carousel-two-brand-lp": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 4,
+        "tablet": 3,
+        "phone": 1
+      },
+      "infinite": true,
+      "fullWidth": false,
+      "showNavigationArrows": "desktopOnly",
+      "blockClass": "productsCarousel",
+      "showPaginationDots": "always"
+    }
+  },
+  //MOBILE
+  "responsive-layout.mobile#rl-landing-brand": {
+    "children": ["disposition-layout#landing-brand-mobile"]
+  },
+  "disposition-layout#landing-brand-mobile": {
+    "title": "Disposition Layout Mobile",
+    "children": [
+      "flex-layout.row#hero-banner",
+      "flex-layout.row#text-box",
+      "flex-layout.row#video",
+      "flex-layout.row#video-two",
+      "flex-layout.row#video-three",
+      "flex-layout.row#banner-half",
+      "flex-layout.row#banner-half-reverse",
+      "flex-layout.row#design-component",
+      "flex-layout.row#slider-feature",
+      "flex-layout.row#tab-component",
+      "flex-layout.row#main-feature",
+      "flex-layout.row#design-component-reverse",
+      "flex-layout.row#gallery",
+      "flex-layout.row#products-carousel",
+      "flex-layout.row#products-carousel-two"
+    ],
+    "props": {
+      "disposition": [
+        {
+          "order": 1
+        },
+        {
+          "order": 2
+        },
+        {
+          "order": 3
+        },
+        {
+          "order": 4
+        },
+        {
+          "order": 5
+        },
+        {
+          "order": 6
+        },
+        {
+          "order": 7
+        },
+        {
+          "order": 8
+        },
+        {
+          "order": 9
+        },
+        {
+          "order": 10
+        },
+        {
+          "order": 11
+        },
+        {
+          "order": 12
+        },
+        {
+          "order": 13
+        },
+        {
+          "order": 14
+        },
+        {
+          "order": 15
+        }
+      ]
+    }
+  }
+}

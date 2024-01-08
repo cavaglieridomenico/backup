@@ -1,0 +1,125 @@
+{
+  "slider-layout#banner-carousel": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 4,
+        "tablet": 4,
+        "phone": 1
+      },
+      "infinite": false,
+      "autoplay": {
+        "timeout": 3000
+      },
+      "showNavigationArrows": "never",
+      "showPaginationDots": "never",
+      "blockClass": "bannerHeaderContainer"
+    },
+    "children": [
+      "flex-layout.row#prima",
+      "flex-layout.row#seconda",
+      "flex-layout.row#terza",
+      "flex-layout.row#quarta"
+    ]
+  },
+
+  "flex-layout.row#prima": {
+    "props": {
+      "blockClass": ["bannerheader", "BorderCenterElements"],
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true,
+      "horizontalAlign": "center",
+      "colSizing": "auto"
+    },
+    "children": ["image#logoBannerHeader-1", "rich-text#BannerHeaderText1"]
+  },
+  "image#logoBannerHeader-1": {
+    "props": {
+      "src": "assets/bannerHeader/icon-home-black.png",
+      "width": "24px",
+      "blockClass": "sliderBanner"
+    }
+  },
+  "rich-text#BannerHeaderText1": {
+    "props": {
+      "text": "[Consegna gratuita al piano](/consegna-gratuita-al-piano)",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": ["bannerheader", "noLinkEffect"]
+    }
+  },
+  "flex-layout.row#seconda": {
+    "props": {
+      "blockClass": ["bannerheader", "BorderCenterElements"],
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true,
+      "horizontalAlign": "center",
+      "colSizing": "auto"
+    },
+    "children": ["image#logoBannerHeader-2", "rich-text#BannerHeaderText2"]
+  },
+  "image#logoBannerHeader-2": {
+    "props": {
+      "src": "assets/bannerHeader/icon-wrench-black.png",
+      "width": "20px",
+      "blockClass": "sliderBanner"
+    }
+  },
+  "rich-text#BannerHeaderText2": {
+    "props": {
+      "text": "Installazione su richiesta",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": "bannerheader"
+    }
+  },
+  "flex-layout.row#terza": {
+    "props": {
+      "blockClass": ["bannerheader", "BorderCenterElements"],
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true,
+      "horizontalAlign": "center",
+      "colSizing": "auto"
+    },
+    "children": ["image#logoBannerHeader-3", "rich-text#BannerHeaderText3"]
+  },
+  "image#logoBannerHeader-3": {
+    "props": {
+      "src": "assets/bannerHeader/icon-paypal-black.png",
+      "width": "24px",
+      "blockClass": "sliderBanner"
+    }
+  },
+  "rich-text#BannerHeaderText3": {
+    "props": {
+      "text": "Spedizione in 3-5 giorni lavorativi*",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": "bannerheader"
+    }
+  },
+  "flex-layout.row#quarta": {
+    "props": {
+      "blockClass": "bannerheader",
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true,
+      "horizontalAlign": "center",
+      "colSizing": "auto"
+    },
+    "children": ["image#logoBannerHeader-4", "rich-text#BannerHeaderText4"]
+  },
+  "image#logoBannerHeader-4": {
+    "props": {
+      "src": "assets/bannerHeader/icon-truck-black.png",
+      "width": "24px",
+      "blockClass": "sliderBanner"
+    }
+  },
+  "rich-text#BannerHeaderText4": {
+    "props": {
+      "text": "Se richiesto, ritiro contestuale del tuo usato",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": "bannerheader"
+    }
+  }
+}

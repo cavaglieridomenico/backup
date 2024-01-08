@@ -1,0 +1,162 @@
+{
+  "vtex.menu@2.x:menu#produits-mobile": {
+    "props": {
+      "orientation": "vertical",
+      "blockClass": "accordionFooterMobile"
+    },
+    "children": ["image#payment-methods", "menu-item#produits-mobile"]
+  },
+  "image#payment-methods": {
+    "props": {
+      "blockClass": "imagePayment",
+      "horizontalAlign": "center",
+      "src": "https://frwhirlpool.vtexassets.com/arquivos/payment-methods-3.svg"
+    }
+  },
+  "menu-item#produits-mobile": {
+    "props": {
+      "id": "menu-item-produits",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "noFollow": true,
+        "tagTitle": "PRODUITS",
+        "text": "PRODUITS"
+      },
+      "blockClass": ["footerBold", "footerBoldP10"]
+    },
+    "blocks": ["vtex.menu@2.x:submenu.accordion#produits"]
+  },
+  "vtex.menu@2.x:submenu.accordion#produits": {
+    "children": ["vtex.menu@2.x:menu#produits-accordion"]
+  },
+  "vtex.menu@2.x:menu#produits-accordion": {
+    "props": {
+      "orientation": "vertical"
+    },
+    "children": [
+      "menu-item#lavage",
+      "menu-item#cuisson",
+      "menu-item#froid",
+      "menu-item#lave-vaisselle",
+      "menu-item#climatisation",
+      "menu-item#accessories-wpro"
+    ]
+  },
+  "vtex.menu@2.x:menu#notre-entreprise-mobile": {
+    "props": {
+      "orientation": "vertical",
+      "blockClass": "accordionFooterMobile"
+    },
+    "children": ["menu-item#notre-entreprise-mobile"]
+  },
+  "menu-item#notre-entreprise-mobile": {
+    "props": {
+      "id": "menu-item-notre-entreprise",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "noFollow": true,
+        "tagTitle": "NOTRE ENTREPRISE",
+        "text": "NOTRE ENTREPRISE"
+      },
+      "blockClass": ["footerBold", "footerBoldP10"]
+    },
+    "blocks": ["vtex.menu@2.x:submenu.accordion#notre-entreprise"]
+  },
+  "vtex.menu@2.x:submenu.accordion#notre-entreprise": {
+    "children": ["vtex.menu@2.x:menu#notre-entreprise-accordion"]
+  },
+  "vtex.menu@2.x:menu#notre-entreprise-accordion": {
+    "props": {
+      "orientation": "vertical"
+    },
+    "children": [
+      "link#whirlpool-europe",
+      "link#manuel-dintegrite",
+      "link#carriere",
+      "menu-item#contactez-nous"
+    ]
+  },
+  "vtex.menu@2.x:menu#policy-and-terms-mobile": {
+    "props": {
+      "orientation": "vertical",
+      "blockClass": "accordionFooterMobile"
+    },
+    "children": ["menu-item#policy-and-terms-mobile"]
+  },
+  "menu-item#policy-and-terms-mobile": {
+    "props": {
+      "id": "menu-item-policy-and-terms",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "noFollow": true,
+        "tagTitle": "NOTRE POLITIQUE",
+        "text": "NOTRE POLITIQUE"
+      },
+      "blockClass": ["footerBold", "footerBoldP10"]
+    },
+    "blocks": ["vtex.menu@2.x:submenu.accordion#policy-and-terms"]
+  },
+  "vtex.menu@2.x:submenu.accordion#policy-and-terms": {
+    "children": ["vtex.menu@2.x:menu#policy-and-terms-accordion"]
+  },
+  "vtex.menu@2.x:menu#policy-and-terms-accordion": {
+    "props": {
+      "orientation": "vertical"
+    },
+    "children": [
+      "menu-item#mentions-légales",
+      "menu-item#politique-dusage-des-cookies",
+      "menu-item#politique-de-donnees-personnelles",
+      "menu-item#conditions-generales-de-vente",
+      "menu-item#conditions-de-livraison",
+      "link#installation",
+      "link#rappel-sur-la-garantie-legale",
+      "menu-item#droit-de-retractation",
+      "link#mediation",
+      "menu-item#toutes-les-reponses-a-vos-questions-new",
+      "Cookie-table.title#footer"
+    ]
+  },
+  "vtex.menu@2.x:menu#blog-mobile": {
+    "props": {
+      "orientation": "vertical",
+      "blockClass": "accordionFooterMobile"
+    },
+    "children": ["menu-item#blog-mobile"]
+  },
+  "menu-item#blog-mobile": {
+    "props": {
+      "id": "menu-item-blog",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": true,
+        "tagTitle": "BLOG",
+        "text": "BLOG"
+      },
+      "blockClass": ["footerBold", "footerBoldP10"]
+    },
+    "blocks": ["vtex.menu@2.x:submenu.accordion#blog"]
+  },
+  "vtex.menu@2.x:submenu.accordion#blog": {
+    "children": ["vtex.menu@2.x:menu#blog-accordion"]
+  },
+  "vtex.menu@2.x:menu#blog-accordion": {
+    "props": {
+      "orientation": "vertical"
+    },
+    "children": ["menu-item#news", "menu-item#useful-tips"]
+  }
+}

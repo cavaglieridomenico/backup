@@ -1,0 +1,106 @@
+{
+  /* mobile WHATSAPP */
+  "responsive-layout.mobile#whatsapp-page-mobile": {
+    "children": ["flex-layout.row#whatsapp-page-mobile"]
+  },
+  "flex-layout.row#whatsapp-page-mobile": {
+    "children": ["flex-layout.col#whatsapp-page-mobile"]
+  },
+  "flex-layout.col#whatsapp-page-mobile": {
+    "children": [
+      "flex-layout.row#whatsapp-breadcrumb-mobile",
+      "flex-layout.row#accesso-whatsapp-mobile",
+      "flex-layout.row#qr-code-whatsapp-mobile"
+    ]
+  },
+  /* BREADCRUMB */
+  "flex-layout.row#whatsapp-breadcrumb-mobile": {
+    "props": {
+      "blockClass": ["productBread"],
+      "showOnMobile": true
+    },
+    "children": ["breadcrumb-custom#whatsapp-mobile"]
+  },
+  "breadcrumb-custom#whatsapp-mobile": {
+    "props": {
+      /* "blockClass": "containerBreadcrumbs", */
+      "currentPage": "Canale whatsapp"
+    }
+  },
+  /* ACCEDI A WHATSAPP */
+  "flex-layout.row#accesso-whatsapp-mobile": {
+    "children": ["link#accesso-whatsapp-mobile"]
+  },
+  "link#accesso-whatsapp-mobile": {
+    "children": [
+      "image#whatsapp-logo-mobile",
+      "rich-text#accesso-whatsapp-mobile",
+      "rich-text#servizio-attivo-mobile"
+    ],
+    "props": {
+      "blockClass": "accesso-whatsapp-container-mobile",
+      "href": "https://wa.me/message/MIKJ4WDQGB3LM1"
+    }
+  },
+  "image#whatsapp-logo-mobile": {
+    "props": {
+      "blockClass": "whatsapp-logo-mobile",
+      "src": "assets/whatsapp-it.svg"
+    }
+  },
+  "rich-text#accesso-whatsapp-mobile": {
+    "props": {
+      "blockClass": "accesso-whatsapp-desc-mobile",
+      "text": "Accedi al nostro canale WhatsApp"
+    }
+  },
+  "rich-text#servizio-attivo-mobile": {
+    "props": {
+      "blockClass": "servizio-attivo-mobile",
+      "text": "Il servizio è attivo dal Lunedì al Venerdì dalle ore 9.00 alle ore 18.00 giorn festivi esclusi."
+    }
+  },
+  /* QR CODE WHATSAPP */
+  "flex-layout.row#qr-code-whatsapp-mobile": {
+    "children": ["flex-layout.col#qr-code-whatsapp-mobile"],
+    "props": {
+      "blockClass": "qr-code-whatsapp-mobile"
+    }
+  },
+  "flex-layout.col#qr-code-whatsapp-mobile": {
+    "children": [
+      "rich-text#qr-code-title-mobile",
+      "flex-layout.col#qr-code-desc-container-mobile"
+    ],
+    "props": {
+      "blockClass": "qr-code-whatsapp-container-mobile"
+    }
+  },
+  "rich-text#qr-code-title-mobile": {
+    "props": {
+      "blockClass": "qr-code-title-mobile",
+      "text": "QR Code"
+    }
+  },
+  "flex-layout.col#qr-code-desc-container-mobile": {
+    "children": [
+      "rich-text#qr-code-desc-mobile",
+      "image#qr-code-desc-image-mobile"
+    ],
+    "props": {
+      "blockClass": "qr-code-desc-container-mobile"
+    }
+  },
+  "rich-text#qr-code-desc-mobile": {
+    "props": {
+      "blockClass": "qr-code-desc-mobile",
+      "text": "Scansiona il QR Code per raggiungerci immediatamente dal tuo telefono"
+    }
+  },
+  "image#qr-code-desc-image-mobile": {
+    "props": {
+      "blockClass": "qr-code-desc-image-mobile",
+      "src": "assets/wa-qrcode.png"
+    }
+  }
+}

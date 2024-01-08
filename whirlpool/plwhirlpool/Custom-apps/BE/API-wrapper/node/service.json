@@ -1,0 +1,122 @@
+{
+  "memory": 256,
+  "ttl": 60,
+  "timeout": 20,
+  "minReplicas": 2,
+  "maxReplicas": 8,
+  "workers": 4,
+  "routes": {
+    "getsku": {
+      "path": "/_v/wrapper/api/catalog_system/sku/stockkeepingunitbyid/:id",
+      "public": true
+    },
+    "getorder": {
+      "path": "/_v/wrapper/api/oms/orders/billingaddress/:id",
+      "public": true
+    },
+    "getproductspec": {
+      "path": "/_v/wrapper/api/catalog_system/products/:id/specification",
+      "public": true
+    },
+    "productbyrefid": {
+      "path": "/_v/wrapper/api/catalog_system/products/productgetbyrefid/:refid",
+      "public": true
+    },
+    "getcategory": {
+      "path": "/_v/wrapper/api/catalog/category/:id",
+      "public": true
+    },
+    "newsletteroptin": {
+      "path": "/_v/wrapper/api/user/newsletteroptin",
+      "public": true
+    },
+    "userinfo": {
+      "path": "/_v/wrapper/api/user/userinfo",
+      "public": true
+    },
+    "userinfobyemail": {
+      "path": "/_v/wrapper/api/user/email/userinfo",
+      "public": true
+    },
+    "hasorders": {
+      "path": "/_v/wrapper/api/user/hasorders",
+      "public": true
+    },
+    "userorders": {
+      "path": "/_v/wrapper/api/user/orders",
+      "public": true
+    },
+    "productcategory": {
+      "path": "/_v/wrapper/api/product/:id/category",
+      "public": true
+    },
+    "user": {
+      "path": "/_v/wrapper/api/user",
+      "public": true
+    },
+    "getbrands": {
+      "path": "/_v/wrapper/api/catalog_system/brand/list",
+      "public": true
+    },
+    "getspecvalues": {
+      "path": "/_v/wrapper/api/catalog_system/pub/specification/fieldGet/:id",
+      "public": true
+    },
+    "getpromotions": {
+      "path": "/_v/wrapper/api/rnb/benefits/calculatorconfiguration",
+      "public": true
+    },
+    "sfmcrecommend": {
+      "path": "/_v/wrapper/api/sfmc/recommendations",
+      "public": true
+    },
+    "GetPromoBySkuId": {
+      "path": "/_v/wrapper/api/catalog/promo",
+      "public": true
+    },
+    "getInvoice": {
+      "path": "/_v/wrapper/api/invoice",
+      "public": true
+    },
+    "getInvoices": {
+      "path": "/_v/wrapper/api/invoices",
+      "public": true
+    },
+    "GetCouponBySkuId": {
+      "path": "/_v/wrapper/api/catalog/coupon",
+      "public": true
+    },
+    "GetCategoryTree": {
+      "path": "/_v/wrapper/api/catalog_system/pub/category/tree/:levels",
+      "public": true
+    },
+    "isServedZipCode": {
+      "path": "/_v/wrapper/api/catalog/service/installation",
+      "public": true
+    },
+    "signUpForBlackFriday": {
+      "path": "/_v/wrapper/api/campaigns/black-friday",
+      "public": true
+    },
+    "additionalServicesInfo": {
+      "path": "/_v/wrapper/api/additionalservice/info",
+      "public": true
+    },
+    "orderHasFgas": {
+      "path": "/_v/wrapper/api/oms/orders/hasfgas",
+      "public": true
+    },
+    "recipesList": {
+      "path": "/_v/wrapper/api/recipes/receipeList",
+      "public": true
+    },
+    "recipeDetail": {
+      "path": "/_v/wrapper/api/recipes/receipeDetail",
+      "public": true
+    },
+    "getHotnCold": {
+      "path": "/_v/wrapper/api/HotCold",
+      "public": true
+    }
+  }
+}

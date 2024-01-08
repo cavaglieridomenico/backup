@@ -1,0 +1,34 @@
+{
+  "store.login": {
+    "parent": {
+      "footer": "footer#login"
+    },
+    "blocks": [
+      "login-content#default",
+      "login-custom-flow#button"
+      //"analytics"
+    ]
+  },
+  "login-custom-flow#button": {
+    "props": {
+      "textButton": "Create new account"
+    }
+  },
+  "login-content#default": {
+    "props": {
+      "isInitialScreenOptionOnly": false,
+      "defaultOption": 1,
+      "showPasswordVerificationIntoTooltip": true
+    }
+  },
+  "footer#login": {
+    "blocks": [
+      "footer-layout.desktop#login"
+    ]
+  },
+  "footer-layout.desktop#login": {
+    "children": [
+      "flex-layout.row#footer-1-desktop"
+    ]
+  }
+}

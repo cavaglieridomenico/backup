@@ -1,0 +1,512 @@
+.containerPopup {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  margin: 2rem 30% 0 30%;
+  padding: 2rem 0;
+  border: 3px solid #f9f9f9;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.description {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 2rem;
+  font-family: "myriadLight";
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+@media only screen and (max-width: 1100px) {
+  .containerPopup {
+    margin: 2rem 0 0 0;
+    border-left: unset;
+    border-right: unset;
+    border-bottom: unset;
+    background-color: #ffffff;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .containerPopup {
+    flex-direction: column;
+  }
+
+  .description {
+    margin: 0 0 2rem;
+    text-align: center;
+  }
+
+  .containerPopup :global(.vtex-button) {
+    width: 60%;
+    margin: auto;
+  }
+}
+
+/*  LandingPageForm */
+.containerLandingPageForm {
+  background-color: #F2F2F2;
+  margin: 0;
+  padding: 0px 0px 30px 10px;
+}
+
+.titleLandingPageForm {
+  margin-left: 50px;
+  padding-top: 70px;
+  padding-bottom: 15px;
+  margin: 3px, auto, auto, auto;
+  text-transform: uppercase;
+  font-family: "myriadBold";
+  letter-spacing: 0.2rem;
+  color: #007d69;
+  position: relative;
+}
+
+.titleLandingPageForm::after {
+  content: "-";
+  font-size: 1px;
+  border-radius: 100px;
+  height: 0.125rem;
+  width: 100px;
+  background-color: #007d69;
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+}
+
+.intoLandingPageForm {
+  background-color: #fff;
+  padding: 0 15px 130px 120px;
+}
+
+
+
+/* THANK YOU PAGE */
+.containerThankYouPage {
+  background-color: #F2F2F2;
+  margin: 0;
+  padding: 0px 0px 60px 0px;
+}
+
+.titleThankYouPage {
+  margin-left: 50px;
+  padding-top: 50px;
+  padding-bottom: 15px;
+  margin: 3px, auto, auto, auto;
+  text-transform: uppercase;
+  font-family: "myriadBold";
+  letter-spacing: 0.2rem;
+  color: #007d69;
+  position: relative;
+}
+
+.titleThankYouPage::after {
+  content: "-";
+  font-size: 1px;
+  border-radius: 100px;
+  height: 5px;
+  width: 100px;
+  background-color: #007d69;
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+}
+
+.intoThankYouPage {
+  background-color: #fff;
+  padding: 30px 7.5px 30px 10px;
+  text-align: center;
+  height: 100%;
+}
+
+.intoThankYouPage p {
+  padding: 0 0 3px 0;
+  margin: 0;
+}
+
+.childrenBoxThankYouPage {
+  padding-top: 60px;
+}
+
+/*  */
+
+/* NewsLetterForm styles */
+.containerForm {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.containerFormRight {
+ display: flex;
+ flex-direction: column;
+ background: #f2f2f2;
+ padding-left: 1.5rem;
+ padding-right: 1.5rem;
+ padding-bottom: 0.5rem;
+ width: 50%;
+}
+:global(.vtex-modal__modal) {
+  max-width: 46rem;
+  border-radius: 2rem;
+  overflow-x: hidden;
+  padding: unset;
+}
+:global(.vtex-styleguide-9-x-scrollBar){
+  padding: 0 !important;
+}
+.containerFormOld {
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+
+.imageFormNewsletter {
+  width: 100%;
+  height: 100px;
+}
+
+ .containerForm .imageFormNewsletter {
+  width: 100%;
+  height: 100%;
+}
+
+.privacy {
+  font-size: 0.8rem !important;
+}
+
+.downTextPopFormNew {
+  margin: 0 0 5px 0;
+  font-size: 0.8rem;
+}
+
+
+.titleFormNewsletter {
+  margin: 0px auto, auto, auto;
+  padding-bottom: 15px;
+  text-align: left;
+  text-transform: uppercase;
+  font-family: "myriadBold";
+  color: #000;
+  position: relative;
+  margin-bottom: 5px !important;
+}
+
+.titleFormNewsletter::after {
+  content: "-";
+    font-size: 1px;
+    border-radius: 100px;
+    height: 5px;
+    width: 100%;
+    background-color: #007d69;
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    max-width: 28.8rem;
+}
+
+.downTextPopForm {
+  margin: 0 0 5px 0;
+}
+
+
+
+.rightButtonNewsLetterPage {}
+
+.leftButtonNewsLetterPage {}
+
+
+/*  */
+
+.fieldContainerNew {
+  margin: 1rem 0 1.5rem;
+  padding: 0;
+}
+
+
+.fieldContainerNew :global(.vtex-input-prefix__group) {
+  /* border-top: unset;
+  border-right: unset;
+  border-left: unset;
+  border-radius: unset;
+  border-bottom: unset; */
+}
+
+.fieldContainerErrorNew :global(.vtex-input-prefix__group) {
+  border-top: 1px solid red;
+  border-right: 1px solid red;
+  border-left: 1px solid red;
+  border-radius: 1px solid red;
+  border-bottom: 1px solid red;
+}
+.errorLabelNew {
+  color: red;
+  font-size: 0.8rem;
+}
+.descriptionInfo{
+  font-size: 0.9rem
+}
+.paragraph {
+  font-size: 0.9rem !important;
+  margin: 0;
+}
+.informativaNew {
+  margin: unset;
+}
+.informativaNew p {
+  font-size: 0.8rem;
+  line-height: 1.1rem;
+}
+
+/* containerFormOld*/
+.errorLabel {
+  border-top: 2px solid red;
+  color: red;
+}
+
+.descriptionFormNewsletter {
+  margin: 10px 0px 35px 0px;
+  font-family: "myriadLight";
+}
+.descriptionFormNewsletterPopup {
+  font-size: 0.9rem;
+}
+
+.fieldContainer {
+  margin: 1rem 0 1.5rem;
+  padding: 0;
+}
+
+
+.fieldContainer :global(.vtex-input-prefix__group) {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-radius: unset;
+}
+
+.fieldContainerError :global(.vtex-input-prefix__group) {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-radius: unset;
+  border-bottom: none;
+}
+
+.submitContainer {
+  margin: 1rem 0 0;
+  padding: 0;
+}
+
+.informativa {
+  margin: 1rem 0 1.5rem;
+}
+
+.privacyBold {
+  text-align: left;
+  font-family: "myriadBold";
+  color: #505050;
+  margin-bottom: 0.5rem;
+}
+.privacy {
+  margin: 0;
+  text-align: left;
+  font-family: "myriadLight";
+  color: #505050;
+}
+
+.colorEdb112 {
+  color: #007d69;
+  margin: 0 0.2rem 0 0;
+}
+
+.informativa :global(.vtex-checkbox__label) {
+  font-family: "myriadLight";
+}
+.informativaNew :global(.vtex-checkbox__label) {
+  font-family: "myriadLight";
+  font-size: 0.9rem !important;
+}
+
+.submitContainer :global(.vtex-input-prefix__group) {
+  border: none;
+}
+
+.submitContainer :global(.vtex-styleguide-9-x-input) {
+  cursor: pointer;
+  background-color: #007d69;
+  color: white;
+  font-family: "myriadBold";
+  text-transform: uppercase;
+  width: auto;
+  padding: 0.3rem 1.5rem;
+  margin: 0 auto;
+  border-radius: 0.25rem;
+}
+
+.submitContainer :global(.vtex-styleguide-9-x-input):hover {
+  background-color: #40a08c;
+  border-color: #007d69;
+}
+
+.containerForm :global(.vtex-input__label) {
+  font-family: "myriadBold";
+}
+
+:global(.vtex-modal__close-icon) {
+  padding: 4px 4px 0 0;
+  color: #007d69;
+}
+
+.successClass {
+  text-align: center;
+  font-family: "myriadBold";
+  font-size: 1rem;
+  background: #007d69;
+  color: white;
+  border-radius: 0;
+  width: 100%;
+  padding: 0.6rem 1.5rem;
+}
+
+.errorClass {
+  text-align: center;
+  font-family: "myriadBold";
+  background: #007d69;
+  color: white;
+  border-radius: unset;
+  width: 100%;
+  padding: 0.5rem;
+  margin: auto;
+}
+
+
+
+.loaderForm {
+  border: 16px solid #f9f9f9;
+  border-radius: 50%;
+  border-top: 16px solid #007d69;
+  width: 80px;
+  height: 80px;
+  margin: auto;
+  -webkit-animation: spin 2s linear infinite;
+  /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+
+/* Media Queries */
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+.informativa {
+  margin: 1rem 0 1.5rem;
+  font-size: 0.8rem;
+}
+.titleForm {
+  font-size: 2.1rem;
+}
+  
+}
+
+@media only screen and (max-width: 768px) {
+  .containerForm img {
+    display: none;
+  }
+  .informativa {
+  margin: 1rem 0 1.5rem;
+  font-size: 0.8rem;
+  }
+ .titleForm {
+  font-size: 2.1rem;
+  }
+ .containerFormRight {
+  width: 100%;
+  padding-bottom: 2rem;
+ }
+ .formButton button{
+  border: none !important;
+  min-width: 14rem !important;
+}
+
+:global(.vtex-modal__modal) {
+  background: #f2f2f2;
+}
+}
+@media only screen and (max-width: 1100px) {
+  .containerPopup {
+    margin: 2rem 0 0 0;
+    border-left: unset;
+    border-right: unset;
+    border-bottom: unset;
+    background-color: #ffffff;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .containerPopup {
+    flex-direction: column;
+  }
+  .description {
+    margin: 0 0 2rem;
+    text-align: center;
+  }
+  .containerPopup :global(.vtex-button) {
+    width: 60%;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .imageFormNewsletter {
+    display: none;
+  }
+
+  .intoLandingPageForm {
+    background-color: #fff;
+    padding: 0 30px 100px 30px;
+  }
+
+  .containerLandingPageForm {
+    background-color: #F2F2F2;
+    margin: 0;
+    padding: 0px 0px 30px 0px;
+  }
+
+  .titleLandingPageForm {
+    margin-left: 30px;
+    padding-top: 70px;
+    padding-bottom: 15px;
+    margin: 3px, auto, auto, auto;
+    text-transform: uppercase;
+    font-family: "myriadBold";
+    letter-spacing: 0.2rem;
+    color: #007d69;
+    position: relative;
+  }
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

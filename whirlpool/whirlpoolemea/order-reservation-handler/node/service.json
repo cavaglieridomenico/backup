@@ -1,0 +1,22 @@
+{
+  "memory": 256,
+  "ttl": 60,
+  "timeout": 60,
+  "minReplicas": 1,
+  "maxReplicas": 4,
+  "workers": 1,
+  "routes": {
+    "handlePendingOrders": {
+      "path": "/_v/private/handle-pending-orders",
+      "public": true
+    }
+  },
+  "events": {
+    "onAppInstalled": {
+      "sender": "apps",
+      "keys": [
+        "setup"
+      ]
+    }
+  }
+}

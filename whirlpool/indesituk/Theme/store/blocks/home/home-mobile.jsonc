@@ -1,0 +1,541 @@
+/* ---------------------- MOBILE ---------------------------- */
+{
+  "flex-layout.row#home-page-mobile": {
+    "props": {
+      "blockClass": "home-page-container-style"
+    },
+    "children": ["flex-layout.col#home-container-mobile"]
+  },
+  "flex-layout.col#home-container-mobile": {
+    "props": {
+      "blockClass": "home-container-mobile"
+    },
+    "children": [
+            "hreflang-home-component",
+      "flex-layout.row#home-carousel-mobile",
+      "image#animated-arrow-home",
+      "image#animated-line-home",
+      "flex-layout.row#home-appliances-mobile",
+      "flex-layout.row#home-page-layer-1-mobile",
+      "flex-layout.row#home-page-layer-2-mobile",
+      "flex-layout.row#home-page-layer-3-mobile",
+      "flex-layout.row#long-lasting-mobile",
+      "flex-layout.row#do-it-together-home-mobile",
+      "flex-layout.row#solution-mobile",
+      "flex-layout.row#product-card-home-mobile",
+      "flex-layout.row#simple-to-use-mobile",
+      "flex-layout.row#containerBannerNEL"
+    ]
+  },
+  /* ---------------------- HOME CAROUSEL MOBILE ---------------------------- */
+  "flex-layout.row#home-carousel-mobile": {
+    "children": ["analytics-wrapper#home-page-slider"]
+  },
+  /* ---------------------- ANIMATED ARROW MOBILE ---------------------------- */
+  "image#animated-arrow-home": {
+    "props": {
+      "src": "assets/animated-arrow-home.svg",
+      "blockClass": "animated-arrow-home-style"
+    }
+  },
+  "image#animated-line-home": {
+    "props": {
+      "src": "assets/animated-line-home.svg",
+      "blockClass": "animated-line-home-style"
+    }
+  },
+  /* ---------------------- APPLIANCES MOBILE ---------------------------- */
+  "flex-layout.row#home-appliances-mobile": {
+    "props": {
+      "blockClass": "appliances-row"
+    },
+    "children": [
+      "flex-layout.col#appliances-title",
+      "flex-layout.col#appliances-paragraph"
+    ]
+  },
+  "flex-layout.col#appliances-title": {
+    "props": {
+      "blockClass": "appliances-col-title"
+    },
+    "children": ["rich-text#appliances-title"]
+  },
+  "flex-layout.col#appliances-paragraph": {
+    "props": {
+      "blockClass": "appliances-col-paragraph"
+    },
+    "children": ["rich-text#appliances-paragraph"]
+  },
+  "rich-text#appliances-title": {
+    "props": {
+      "blockClass": "appliances-title-mobile",
+      "text": "# Indesit Kitchen <br/> & Home Appliances"
+    }
+  },
+  "rich-text#appliances-paragraph": {
+    "props": {
+      "blockClass": "appliances-paragraph-mobile",
+      "text": "Explore our range of appliances - they’re packed with features to save you time and money, which means you can spend more time doing the things you love."
+    }
+  },
+  /* ---------------------- HOME MENU IMAGES MOBILE ---------------------------- */
+  "flex-layout.row#home-page-layer-1-mobile": {
+    "props": {
+      "blockClass": "home-page-menu-layer-1"
+    },
+    "children": [
+      "flex-layout.col#washing-machines-container-home-mobile",
+      "flex-layout.col#dishwashers-container-home-mobile"
+    ]
+  },
+  /* washing machines */
+  "flex-layout.col#washing-machines-container-home-mobile": {
+    "props": {
+      "blockClass": "washing-machines-container-home-mobile"
+    },
+    "children": ["link#washing-machines-home-mobile"]
+  },
+  "link#washing-machines-home-mobile": {
+    "props": {
+      "href": "/products/laundry/washing-machines"
+    },
+    "children": ["flex-layout.col#washing-machines-home-page-mobile"]
+  },
+  "flex-layout.col#washing-machines-home-page-mobile": {
+    "props": {
+      "blockClass": "washing-home-style"
+    },
+    "children": [
+      "image#washing-machines-home-mobile",
+      "rich-text#washing-machines-home-mobile"
+    ]
+  },
+  "image#washing-machines-home-mobile": {
+    "props": {
+      "height": 116,
+      "width": "100%",
+      "src": "assets/menu-images/washing-machines-menu.svg",
+      "blockClass": "image-washing-home-mobile"
+    }
+  },
+  "rich-text#washing-machines-home-mobile": {
+    "props": {
+      "blockClass": "text-washing-home-mobile",
+      "text": "Washing machines"
+    }
+  },
+  /* dishwashers */
+  "flex-layout.col#dishwashers-container-home-mobile": {
+    "props": {
+      "blockClass": "dryers-container-home-mobile"
+    },
+    "children": ["link#dishwashers-home-mobile"]
+  },
+  "link#dishwashers-home-mobile": {
+    "props": {
+      "href": "/products/dishwashing/dishwashers"
+    },
+    "children": ["flex-layout.col#dishwashers-home-page-mobile"]
+  },
+  "flex-layout.col#dishwashers-home-page-mobile": {
+    "props": {
+      "blockClass": "dryers-home-style"
+    },
+    "children": [
+      "image#dishwashers-home-mobile",
+      "rich-text#dishwashers-home-mobile"
+    ]
+  },
+  "image#dishwashers-home-mobile": {
+    "props": {
+      "height": 116,
+      "width": "100%",
+      "blockClass": "image-dryers-home-mobile",
+      "src": "assets/menu-images/dishwashers-menu.svg"
+    }
+  },
+  "rich-text#dishwashers-home-mobile": {
+    "props": {
+      "blockClass": "text-dryers-home-mobile",
+      "text": "Dishwashers"
+    }
+  },
+  /* --------------------------------------------------------------------------- */
+  "flex-layout.row#home-page-layer-2-mobile": {
+    "props": {
+      "blockClass": "home-page-menu-layer-2"
+    },
+    "children": [
+      "flex-layout.col#ovens-container-home-mobile",
+      "flex-layout.col#cookers-container-home-mobile"
+    ]
+  },
+  /* ovens */
+  "flex-layout.col#ovens-container-home-mobile": {
+    "props": {
+      "blockClass": "ovens-container-home-mobile"
+    },
+    "children": ["link#ovens-home-mobile"]
+  },
+  "link#ovens-home-mobile": {
+    "props": {
+      "href": "/products/cooking/ovens"
+    },
+    "children": ["flex-layout.col#ovens-home-page-mobile"]
+  },
+  "flex-layout.col#ovens-home-page-mobile": {
+    "props": {
+      "blockClass": "ovens-home-style"
+    },
+    "children": ["image#ovens-home-mobile", "rich-text#ovens-home-mobile"]
+  },
+  "image#ovens-home-mobile": {
+    "props": {
+      "height": 116,
+      "width": "100%",
+      "src": "assets/menu-images/ovens-menu.svg",
+      "blockClass": "image-ovens-home-mobile"
+    }
+  },
+  "rich-text#ovens-home-mobile": {
+    "props": {
+      "blockClass": "text-ovens-home-mobile",
+      "text": "Ovens"
+    }
+  },
+  /* cookers */
+  "flex-layout.col#cookers-container-home-mobile": {
+    "props": {
+      "blockClass": "cookers-container-home-mobile"
+    },
+    "children": ["link#cookers-home-mobile"]
+  },
+  "link#cookers-home-mobile": {
+    "props": {
+      "href": "/products/cooking/cookers"
+    },
+    "children": ["flex-layout.col#cookers-home-page-mobile"]
+  },
+  "flex-layout.col#cookers-home-page-mobile": {
+    "props": {
+      "blockClass": "cookers-home-style"
+    },
+    "children": ["image#cookers-home-mobile", "rich-text#cookers-home-mobile"]
+  },
+  "image#cookers-home-mobile": {
+    "props": {
+      "height": 116,
+      "width": "100%",
+      "blockClass": "image-cookers-home-mobile",
+      "src": "assets/menu-images/cookers-menu.svg"
+    }
+  },
+  "rich-text#cookers-home-mobile": {
+    "props": {
+      "blockClass": "text-cookers-home-mobile",
+      "text": "Cookers"
+    }
+  },
+  /* --------------------------------------------------------------------------- */
+  "flex-layout.row#home-page-layer-3-mobile": {
+    "props": {
+      "blockClass": "home-page-menu-layer-3"
+    },
+    "children": [
+      "flex-layout.col#fridges-container-home-mobile",
+      "flex-layout.col#freezers-container-home-mobile"
+    ]
+  },
+  /* fridges */
+  "flex-layout.col#fridges-container-home-mobile": {
+    "props": {
+      "blockClass": "fridges-container-home-mobile"
+    },
+    "children": ["link#fridges-home-mobile"]
+  },
+  "link#fridges-home-mobile": {
+    "props": {
+      "href": "/products/cooling/fridges"
+    },
+    "children": ["flex-layout.col#fridges-home-page-mobile"]
+  },
+  "flex-layout.col#fridges-home-page-mobile": {
+    "props": {
+      "blockClass": "fridges-home-style"
+    },
+    "children": ["image#fridges-home-mobile", "rich-text#fridges-home-mobile"]
+  },
+  "image#fridges-home-mobile": {
+    "props": {
+      "height": 116,
+      "width": "100%",
+      "src": "assets/menu-images/fridges-menu.svg",
+      "blockClass": "image-fridges-home-mobile"
+    }
+  },
+  "rich-text#fridges-home-mobile": {
+    "props": {
+      "blockClass": "text-fridges-home-mobile",
+      "text": "Fridges"
+    }
+  },
+  /* freezers */
+  "flex-layout.col#freezers-container-home-mobile": {
+    "props": {
+      "blockClass": "freezers-container-home-mobile"
+    },
+    "children": ["link#freezers-home-mobile"]
+  },
+  "link#freezers-home-mobile": {
+    "props": {
+      "href": "/products/cooling/freezers"
+    },
+    "children": ["flex-layout.col#freezers-home-page-mobile"]
+  },
+  "flex-layout.col#freezers-home-page-mobile": {
+    "props": {
+      "blockClass": "freezers-home-style"
+    },
+    "children": ["image#freezers-home-mobile", "rich-text#freezers-home-mobile"]
+  },
+  "image#freezers-home-mobile": {
+    "props": {
+      "height": 116,
+      "width": "100%",
+      "blockClass": "image-freezers-home-mobile",
+      "src": "assets/menu-images/freezer.svg"
+    }
+  },
+  "rich-text#freezers-home-mobile": {
+    "props": {
+      "blockClass": "text-freezers-home-mobile",
+      "text": "Freezers"
+    }
+  },
+  /* ---------------------- LONG LASTING MOBILE ---------------------------- */
+  "flex-layout.row#long-lasting-mobile": {
+    "props": {
+      "blockClass": "long-lasting-mobile"
+    },
+    "children": [
+      "flex-layout.col#image-long-lasting-mobile",
+      "flex-layout.col#text-long-lasting-mobile"
+    ]
+  },
+  /* image */
+  "flex-layout.col#image-long-lasting-mobile": {
+    "props": {
+      "blockClass": "image-long-lasting-mobile"
+    },
+    "children": ["image#long-lasting-mobile"]
+  },
+  "image#long-lasting-mobile": {
+    "props": {
+      "height": 230,
+      "width": 335,
+      "blockClass": "long-lasting-home-mobile",
+      "src": "assets/INDESIT_DITY4__86A1931-1.png"
+    }
+  },
+  /* text */
+  "flex-layout.col#text-long-lasting-mobile": {
+    "props": {
+      "blockClass": "text-long-lasting-mobile"
+    },
+    "children": [
+      "rich-text#title-long-lasting-home-mobile",
+      "rich-text#paragraph-long-lasting-home-mobile"
+    ]
+  },
+  "rich-text#title-long-lasting-home-mobile": {
+    "props": {
+      "blockClass": "title-long-lasting-home-mobile",
+      "text": "Long-lasting, <br/> trustworthy, proven."
+    }
+  },
+  "rich-text#paragraph-long-lasting-home-mobile": {
+    "props": {
+      "blockClass": "paragraph-long-lasting-home-mobile",
+      "text": "Indesit home appliances are safe and <br/> reliable, and withstand even little kids."
+    }
+  },
+  /* ---------------------- DO IT TOGETHER HOME PAGE MOBILE ---------------------------- */
+  "flex-layout.row#do-it-together-home-mobile": {
+    "props": {
+      "blockClass": "do-it-together-home-mobile"
+    },
+    "children": ["flex-layout.col#do-it-together-home-mobile"]
+  },
+  "flex-layout.col#do-it-together-home-mobile": {
+    "props": {
+      "blockClass": "do-it-together-home-mobile"
+    },
+    "children": [
+      "flex-layout.row#image-do-it-together-home-mobile",
+      "flex-layout.row#description-do-it-together-home-mobile",
+      "flex-layout.row#discover-more-do-it-together-home-mobile"
+    ]
+  },
+  "flex-layout.row#image-do-it-together-home-mobile": {
+    "props": {
+      "preventHorizontalStretch": true,
+      "blockClass": "image-do-it-together-home-mobile"
+    },
+    "children": ["image#do-it-together-home-mobile"]
+  },
+  "flex-layout.row#description-do-it-together-home-mobile": {
+    "props": {
+      "blockClass": "description-do-it-together-home-mobile"
+    },
+    "children": ["rich-text#description-do-it-together-home-mobile"]
+  },
+  "flex-layout.row#discover-more-do-it-together-home-mobile": {
+    "props": {
+      "blockClass": "discover-more-do-it-together-home-mobile"
+    },
+    "children": ["link#discover-more-do-it-together-home-mobile"]
+  },
+  /* image */
+  "image#do-it-together-home-mobile": {
+    "props": {
+      "width": 319,
+      "height": 225,
+      "blockClass": "do-it-together-home-mobile",
+      "src": "assets/Enjoy-delicious-dishes-in-just-one-hour_indesit_compressed-1.png"
+    }
+  },
+  /* description */
+  "rich-text#description-do-it-together-home-mobile": {
+    "props": {
+      "blockClass": "description-do-it-together-home-mobile",
+      "text": "So easy to use, so everyone can help <br/> out. **#DoItTogether**."
+    }
+  },
+  /* discover more */
+  "link#discover-more-do-it-together-home-mobile": {
+    "props": {
+      "blockClass": "discover-more-do-it-together-home-mobile",
+      "label": "Discover more",
+      "href": "/do-it-together",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "cta_click",
+      "isPrevent": false,
+      "analyticsType": "do-it-together",
+      "clickArea": "main",
+      "checkpoint": "1"
+    }
+  },
+  /* ---------------------- SOLUTION MOBILE ---------------------------- */
+  "flex-layout.row#solution-mobile": {
+    "props": {
+      "blockClass": "solution-mobile"
+    },
+    "children": [
+      "flex-layout.col#image-solution-mobile",
+      "flex-layout.col#text-solution-mobile"
+    ]
+  },
+  /* image */
+  "flex-layout.col#image-solution-mobile": {
+    "props": {
+      "blockClass": "image-solution-mobile"
+    },
+    "children": ["image#solution-mobile"]
+  },
+  "image#solution-mobile": {
+    "props": {
+      "height": 230,
+      "width": 335,
+      "blockClass": "solution-home-mobile",
+      "src": "assets/INDESIT_DITY4__86A1986-1.png"
+    }
+  },
+  /* text */
+  "flex-layout.col#text-solution-mobile": {
+    "props": {
+      "blockClass": "text-solution-mobile"
+    },
+    "children": [
+      "rich-text#title-solution-home-mobile",
+      "rich-text#paragraph-solution-home-mobile"
+    ]
+  },
+  "rich-text#title-solution-home-mobile": {
+    "props": {
+      "blockClass": "title-solution-home-mobile",
+      "text": "Your solution to saving <br/> time, money and effort."
+    }
+  },
+  "rich-text#paragraph-solution-home-mobile": {
+    "props": {
+      "blockClass": "paragraph-solution-home-mobile",
+      "text": "Always ready, intuitive and easy to <br/> use, our appliances give you exactly <br/> what you need."
+    }
+  },
+  /* ---------------------- HOME PAGE CARDS MOBILE ---------------------------- */
+  "flex-layout.row#product-card-home-mobile": {
+    "props": {
+      "blockClass": "product-card-home-mobile"
+    },
+    "children": ["flex-layout.col#product-columns-mobile"]
+  },
+  "flex-layout.col#product-columns-mobile": {
+    "props": {
+      "width": "100%",
+      "blockClass": "product-columns-mobile"
+    },
+    "children": ["card-product-home#mobile"]
+  },
+  "card-product-home#mobile": {
+    "props": {
+      "collectionID": "162"
+    }
+  },
+  /* ---------------------- SIMPLE TO USE MOBILE ---------------------------- */
+  "flex-layout.row#simple-to-use-mobile": {
+    "props": {
+      "blockClass": "simple-to-use-mobile"
+    },
+    "children": [
+      "flex-layout.col#image-simple-to-use-mobile",
+      "flex-layout.col#text-simple-to-use-mobile"
+    ]
+  },
+  /* image */
+  "flex-layout.col#image-simple-to-use-mobile": {
+    "props": {
+      "blockClass": "image-simple-to-use-mobile"
+    },
+    "children": ["image#simple-to-use-mobile"]
+  },
+  "image#simple-to-use-mobile": {
+    "props": {
+      "height": 230,
+      "width": 335,
+      "blockClass": "simple-to-use-home-mobile",
+      "src": "assets/INDESIT_DITY4__86A2112-1.png"
+    }
+  },
+  /* text */
+  "flex-layout.col#text-simple-to-use-mobile": {
+    "props": {
+      "blockClass": "text-simple-to-use-mobile"
+    },
+    "children": [
+      "rich-text#title-simple-to-use-home-mobile",
+      "rich-text#paragraph-simple-to-use-home-mobile"
+    ]
+  },
+  "rich-text#title-simple-to-use-home-mobile": {
+    "props": {
+      "blockClass": "title-simple-to-use-home-mobile",
+      "text": "Simple to use, solid <br/>build quality, easy on <br/> the eye."
+    }
+  },
+  "rich-text#paragraph-simple-to-use-home-mobile": {
+    "props": {
+      "blockClass": "paragraph-simple-to-use-home-mobile",
+      "text": "User-friendly design made to keep up <br/> with peace of family life."
+    }
+  }
+}

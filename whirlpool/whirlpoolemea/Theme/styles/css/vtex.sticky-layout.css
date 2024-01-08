@@ -1,0 +1,190 @@
+.wrapper--stickyButton .container--stickyButton {
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: hidden;
+}
+.wrapper--stickyButton .container--stickyButton {
+  /* background: white; */
+  /* background: #f9f9f9; */
+  padding-top: 1rem;
+  /* border-bottom: 1px solid #c9c9c9; */
+}
+.container--stickyButton :global(.vtex-button) {
+  margin: 1.25rem 3rem;
+}
+.container--stickyButton :global(.vtex-store-components-3-x-imageElement) {
+  width: 6rem;
+}
+.wrapper--stickyButton {
+  height: 50px !important;
+}
+.wrapper--stickyCardBottom {
+  visibility: hidden;
+  position: absolute !important;
+}
+:global(.vtex-sticky-layout-0-x-wrapper--stuck)
+  :global(.vtex-flex-layout-0-x-flexColChild--supportoCardBottom)
+  :global(.vtex-rich-text-0-x-paragraph--colonnaSupportoCard) {
+  display: none;
+  flex-direction: row;
+}
+:global(.vtex-sticky-layout-0-x-wrapper--stuck)
+  :global(.vtex-flex-layout-0-x-flexColChild--supportoCardBottom)
+  :global(.vtex-rich-text-0-x-paragraph--colonnaSupportoCardPostilla) {
+  display: none;
+  flex-direction: row;
+}
+:global(.vtex-sticky-layout-0-x-wrapper--stuck)
+  :global(.vtex-flex-layout-0-x-flexRowContent--supportoCardsBottom) {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  justify-content: space-between;
+  background-color: #f6f6f6;
+}
+:global(.vtex-sticky-layout-0-x-wrapper--stuck)
+  :global(.vtex-flex-layout-0-x-flexCol--supportoCard) {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly !important;
+  padding: 0;
+  margin-top: 2rem;
+}
+:global(.vtex-sticky-layout-0-x-wrapper--stuck)
+  :global(.vtex-flex-layout-0-x-flexRow--colonnaSupportoCardBottom) {
+  height: auto;
+}
+:global(.vtex-sticky-layout-0-x-wrapper--stuck)
+  :global(.vtex-flex-layout-0-x-stretchChildrenWidth) {
+  margin: 0;
+  /* width: 20% !important; */
+}
+:global(.vtex-sticky-layout-0-x-wrapper--stuck)
+  :global(.vtex-slider-layout-0-x-sliderLayoutContainer--carousel) {
+  background-color: #f9f9f9 !important;
+  margin-bottom: 0;
+  /* width: 20% !important; */
+}
+:global(.vtex-sticky-layout-0-x-wrapper--stuck)
+  :global(.vtex-slider-layout-0-x-sliderTrackContainer--carousel) {
+  max-width: 100%;
+}
+.wrapper--stickyButton .container--stickyCardBottom {
+  visibility: visible;
+}
+/* 
+.wrapper--stickyButton .container--stickyButton {
+  top: 93px !important;
+  max-width: 96rem;
+  margin: auto;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+} */
+.wrapper--stuck .container--stickyButton {
+  top: 93px !important;
+  max-width: 96rem;
+  margin: auto;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  background: #f9f9f9;
+  padding-top: 1rem;
+  /* border-bottom: 1px solid #c9c9c9; */
+  opacity: 1;
+  visibility: visible;
+  z-index: 3 !important;
+}
+/* Media Queries */
+@media only screen and (max-width: 640px) {
+  .wrapper--stuck .container--stickyButton,
+  .wrapper--stickyButton .container--stickyButton {
+    background-color: #505050;
+  }
+  .container--stickyButton
+    :global(.vtex-product-price-1-x-sellingPriceValue--summary) {
+    color: white;
+  }
+}
+@media only screen and (max-width: 1200px) and (min-width: 1000px) {
+  .wrapper--stuck .container--stickyButton {
+    top: 85px !important;
+  }
+}
+@media only screen and (min-width: 1024px),
+  (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .wrapper--stuck .container--stickyButton {
+    top: 85px !important;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 600px) {
+  .container--stickyButton :global(.vtex-button) {
+    margin: unset;
+  }
+}
+.wrapper--stickyButton .container--stickyButton {
+}
+
+@media only screen and (max-width: 1024px),
+  (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .wrapper--stickyButton {
+    z-index: 999999;
+  }
+  .wrapper--stickyButton .container--stickyButton {
+    bottom: 0px !important;
+    top: unset !important;
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+    z-index: 3 !important;
+    bottom: 0px !important;
+    top: unset !important;
+    width: 100%;
+    position: fixed;
+  }
+  /* .flexRowContent--stickyImageProd .stretchChildrenWidth .flexCol   */
+  :global(.vtex-flex-layout-0-x-flexColChild--EtichettaEnergeticaNew) {
+    display: none;
+  }
+  .flexRowContent--stickyContainer {
+    background-color: aqua !important;
+  }
+  .wrapper--stickyCardBottom {
+    display: none;
+  }
+  .container--stickyCardBottom {
+    display: none;
+  }
+  .flexRowContent--stickyPDPMenu {
+    display: none !important;
+  }
+  .container--stickyButton
+    :global(.vtex-flex-layout-0-x-flexRowContent--sticky) {
+    display: flex;
+    transform: scale(0.8);
+  }
+  .container--stickyButton :global(.vtex-button) {
+    margin: auto;
+  }
+  /* .wrapper--stuck .container--stickyButton {
+    top: 90px !important;
+  } */
+}
+/* .wrapper--bannerCarousel {
+  top: 104.984px;
+} */
+
+/* .wrapper--stickyButton .container--stickyButton {
+  background: #505050;
+} */
+
+.container--stickyButton
+  :global(.vtex-product-price-1-x-sellingPriceValue--summary) {
+  /* color: #fff; */
+}
+
+.container--stickyButton :global(.vtex-button) {
+  /* background: #505050; */
+  /* border: none; */
+}

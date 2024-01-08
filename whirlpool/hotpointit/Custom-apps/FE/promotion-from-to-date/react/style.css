@@ -1,0 +1,51 @@
+.couponContainer{
+    position: relative;
+}
+.couponClass{
+    border: 1px solid #b24c24;
+    padding: 0.4rem;
+    width: max-content;
+    border-radius: .25rem;
+    background: linear-gradient(to right, #b24c24 0%, #b24c24 40%, white 40%, white 100%);
+    cursor: pointer;
+    position: absolute;
+    text-align: center;
+    right: 0;
+}
+.spanTitle{
+    width: 40%;
+    padding: 0.4rem;
+    text-align: center;
+    color: white;
+}
+.spanCode{
+    padding: 1rem;
+    color: #b24c24;
+    font-weight: bold;
+}
+.hide {
+    display: none;
+  }
+.couponClass:hover + .hide {
+    display: block;
+    padding: 2rem 0rem 0rem 0rem;
+    right: 0;
+}
+@media screen and (max-width:1200px){
+    .couponClass{
+        margin-top: 1rem;
+        margin-right: 2rem;
+        left: 0;
+    }
+    .promoDateClass{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        margin-left: 0rem;
+    }
+    .hide {
+        display: none;
+    } 
+    .couponClass:hover + .hide {
+      display: none;
+    } 
+}

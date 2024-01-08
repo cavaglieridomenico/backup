@@ -1,0 +1,57 @@
+query Fotos {
+  contents {
+    totalCount
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+      startCursor
+      endCursor
+    }
+    edges {
+      node {
+        id
+        name
+        updatedAt
+        createdAt
+        numberOfReleases
+        status
+        variants {
+          totalCount
+          edges {
+            cursor
+            node {
+              id
+              author {
+                id
+                email
+              }
+              lastUpdatedAt
+              configurationDataSets {
+                name
+              }
+              sections {
+                id
+                name
+                data
+              }
+              status
+            }
+          }
+        }
+        builder {
+          id
+          webhookUrl
+          saveWebhookUrl
+          checkBuildUrl
+          previewUrl
+          productionBaseUrl
+        }
+        contentType {
+          id
+          name
+        }
+      }
+      cursor
+    }
+  }
+}

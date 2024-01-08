@@ -1,0 +1,8 @@
+query getSpecifications ($field: ProductUniqueIdentifierField!, $values: [ID!]){
+  productsByIdentifier(field: $field, values: $values){
+    properties {
+      name
+      values
+    }
+  }
+}

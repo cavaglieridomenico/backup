@@ -1,0 +1,21 @@
+mutation selectDeliveryOption(
+  $orderFormId: ID
+  $deliveryOption: String
+) {
+  selectDeliveryOption(
+    orderFormId: $orderFormId,
+    deliveryOptionId: $deliveryOption
+  ) {
+    id,
+    canEditData,
+    shipping {
+  	  deliveryOptions {
+        id,
+        deliveryChannel,
+        price,
+        estimate,
+        isSelected
+      }
+  	}
+  }
+}

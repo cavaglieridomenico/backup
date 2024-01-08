@@ -1,0 +1,758 @@
+{
+  "footer": {
+    "blocks": ["footer-layout.desktop", "footer-layout.mobile"],
+    "props": {
+      "blockClass": "provaprova"
+    }
+  },
+  "footer-layout.desktop": {
+    "children": [
+      // "flex-layout.row#footer-1-desktop",
+      "flex-layout.row#newsletter-cc-container",
+      "flex-layout.row#footer-2-desktop",
+      "flex-layout.row#footer-3-desktop",
+      "flex-layout.row#footer-4-desktop"
+    ]
+  },
+  "flex-layout.row#footer-1-desktop": {
+    "title": "Newsletter",
+    "children": ["cc-newsletter-form"],
+    "props": {
+      "blockClass": ["news-letters", "news-letters-footer"],
+      "paddingTop": 3,
+      "paddingBottom": 3,
+      "colSizing": "100%",
+      "horizontalAlign": "CENTER"
+    }
+  },
+  //// NEWSLETTER CC
+  "flex-layout.row#newsletter-cc-container": {
+    "title": "Newsletter title",
+    "props": {
+      "blockClass": ["newsletter-cc", "newsletter-cc-footer"]
+    },
+    "children": ["flex-layout.row#newsletter-cc"]
+  },
+  // END NEWSLETTER CC
+  "newsletter-submit": {
+    "props": {
+      "submitButtonLabel": "Abonnez-vous à la newsletter",
+      "blockClass": ["newsletter-submit", "desktop"]
+    }
+  },
+  "rich-text#news-letters": {
+    "props": {
+      "blockClass": ["textNewsLetters", "textFooterFsM"],
+      "textPosition": "CENTER",
+      "text": "**Je veux me tenir au courant des promotions et des nouveaux produits**"
+    }
+  },
+  "rich-text#news-letters-subscribe": {
+    "props": {
+      "text": "**Abonnez-vous à la newsletter**",
+      "textPosition": "CENTER",
+      "blockClass": "subscribeTrigger"
+    }
+  },
+  "flex-layout.row#footer-2-desktop": {
+    "children": [
+      "logo#footer"
+      // "flex-layout.row#whirlpoolInfos",
+      // "flex-layout.col#phone-number"
+    ],
+    "props": {
+      "blockClass": "footerRow-2",
+      "paddingTop": 6,
+      "paddingBottom": 3,
+      "marginTop": 0,
+      "marginBottom": 0
+    }
+  },
+  "flex-layout.col#phone-number": {
+    "children": [
+      "flex-layout.row#phone-number1",
+      "flex-layout.row#phone-number2"
+    ],
+    "props": {
+      "blockClass": "footerNumberCol"
+    }
+  },
+  "rich-text#online-market": {
+    "props": {
+      "blockClass": "textFooter",
+      "text": "**Whirlpool Official Website**"
+    }
+  },
+  "flex-layout.row#whirlpoolInfos": {
+    "children": ["rich-text#online-market"],
+    "props": {
+      "blockClass": "txt-with-icon-row",
+      "colSizing": "auto",
+      "horizontalAlign": "RIGHT"
+    }
+  },
+  "flex-layout.row#phone-number1": {
+    "children": ["logo#footer-phone", "analytics-wrapper#footerPhone"],
+    "props": {
+      "blockClass": ["footerCallBtn", "mrbottom05"],
+      "colSizing": "auto",
+      "horizontalAlign": "RIGHT"
+    }
+  },
+  "analytics-wrapper#footerPhone": {
+    "props": {
+      "eventName": "contact_click",
+      "data": [{ "title": "eventLabel", "value": "phone" }]
+    },
+    "children": ["rich-text#phone-number1"]
+  },
+  "rich-text#phone-number1": {
+    "props": {
+      "blockClass": [
+        "textFooter",
+        "textFooterPt8",
+        "textFooterFsM",
+        "phoneNumber"
+      ],
+      "textPosition": "LEFT",
+      "text": "[Assistence boutique en ligne](tel:0969676140)"
+    }
+  },
+  "flex-layout.row#phone-number2": {
+    "children": ["logo#footer-phone", "analytics-wrapper#footerPhone2"],
+    "props": {
+      "blockClass": "footerCallBtn",
+      "colSizing": "auto",
+      "horizontalAlign": "RIGHT"
+    }
+  },
+  "analytics-wrapper#footerPhone2": {
+    "props": {
+      "eventName": "contact_click",
+      "data": [{ "title": "eventLabel", "value": "phone" }]
+    },
+    "children": ["rich-text#phone-number2"]
+  },
+  "rich-text#phone-number2": {
+    "props": {
+      "blockClass": [
+        "textFooter",
+        "textFooterPt8",
+        "textFooterFsM",
+        "phoneNumber"
+      ],
+      "textPosition": "LEFT",
+      "text": "[Service Consommateurs](tel:0969676140)"
+    }
+  },
+  "modal-trigger#request-call": {
+    "children": [
+      "rich-text#request-call-trigger",
+      "modal-layout#request-call-modal"
+    ]
+  },
+  "modal-layout#request-call-modal": {
+    "children": ["modal-header#request-a-call"],
+    "props": {
+      "blockClass": "requestACallContainer"
+    }
+  },
+  "modal-header#request-a-call": {
+    "children": ["logo#request-a-call"],
+    "props": {
+      "iconCloseSize": 25,
+      "blockClass": "requestACallHeader"
+    }
+  },
+  "logo#request-a-call": {
+    "props": {
+      "title": "Logo",
+      "url": "assets/logoHeader.svg",
+      "blockClass": "requestACallLogo"
+    }
+  },
+  "rich-text#hello": {
+    "props": {
+      "text": "Комментарий/Предпочтительное время для связи",
+      "blockClass": "modalTextParagraph"
+    }
+  },
+  "rich-text#request-call-trigger": {
+    "props": {
+      "text": "**Demander un appel**",
+      "textPosition": "CENTER",
+      "blockClass": ["requestCallTrigger", "textFooterMt10", "callMeBack"]
+    }
+  },
+  "flex-layout.row#footer-3-desktop": {
+    "children": [
+      "vtex.menu@2.x:menu#notre-entreprise",
+      "vtex.menu@2.x:menu#policy-and-terms",
+      "vtex.menu@2.x:menu#produits"
+    ],
+    "props": {
+      "blockClass": "footerRow-3",
+      "paddingTop": 6,
+      "paddingBottom": 3
+    }
+  },
+  "flex-layout.row#footer-4-desktop": {
+    "children": ["rich-text#copyright", "rich-text#site"],
+    "props": {
+      "blockClass": "footerRow"
+    }
+  },
+  "rich-text#copyright": {
+    "props": {
+      "blockClass": "footerNormal",
+      "textPosition": "LEFT",
+      "text": "© 2021 Whirlpool is a registered trademark of Whirlpool, USA"
+    }
+  },
+  "rich-text#site": {
+    "props": {
+      "blockClass": "footerNormal",
+      "textPosition": "RIGHT",
+      "text": "WHIRLPOOL.COM"
+    }
+  },
+  "logo#footer": {
+    "props": {
+      "title": "Logo",
+      "href": "/",
+      "url": "assets/logo-footer-whr.svg",
+      "blockClass": "logoFooter"
+    }
+  },
+  "logo#footer-phone": {
+    "props": {
+      "title": "Logo",
+      "url": "assets/logoPhone.svg",
+      "blockClass": ["logoFooterIcon"]
+    }
+  },
+  "flex-layout.row#socials": {
+    "props": {
+      "blockClass": ["socialsRow"],
+      "fullWidth": true
+    },
+    "children": [
+      "link#logo-facebook",
+      "link#logo-instagram",
+      "link#logo-youtube",
+      "link#logo-vcontact",
+      "link#logo-social"
+    ]
+  },
+  "link#logo-facebook": {
+    "props": {
+      "href": "https://www.facebook.com/HotpointRussia/",
+      "target": "_blank",
+      "blockClass": [
+        "logoSocialFooter",
+        "logoFacebookFooter",
+        "logoFacebookAnal"
+      ]
+    },
+    "children": ["image#facebook"]
+  },
+  "image#facebook": {
+    "props": {
+      "src": "assets/facebookIcon.svg"
+    }
+  },
+  "link#logo-instagram": {
+    "props": {
+      "href": "https://www.instagram.com/whirlpoolrussia/",
+      "target": "_blank",
+      "blockClass": [
+        "logoSocialFooter",
+        "logoInstagramFooter",
+        "logoInstagramAnal"
+      ]
+    },
+    "children": ["image#instagram"]
+  },
+  "image#instagram": {
+    "props": {
+      "src": "assets/instagramIcon.svg"
+    }
+  },
+  "link#logo-youtube": {
+    "props": {
+      "href": "https://www.youtube.com/user/HotpointAristonRU",
+      "target": "_blank",
+      "blockClass": ["logoSocialFooter", "logoYoutubeFooter", "logoYouTubeAnal"]
+    },
+    "children": ["image#youtube"]
+  },
+  "image#youtube": {
+    "props": {
+      "src": "assets/youtubeIcon.svg"
+    }
+  },
+  "link#logo-vcontact": {
+    "props": {
+      "href": "https://vk.com/indesitrussia/",
+      "target": "_blank",
+      "blockClass": ["logoSocialFooter", "logoVcontactFooter", "logoVAnal"]
+    },
+    "children": ["image#vcontact"]
+  },
+  "image#vcontact": {
+    "props": {
+      "src": "assets/vcontactIcon.svg"
+    }
+  },
+  "link#logo-social": {
+    "props": {
+      "href": "https://ok.ru/indesit.russia/",
+      "target": "_blank",
+      "blockClass": ["logoSocialFooter", "logoOtherSocialFooter", "logoOkAnal"]
+    },
+    "children": ["image#social"]
+  },
+  "image#social": {
+    "props": {
+      "src": "assets/socialIcon.svg"
+    }
+  },
+  "logo#facebook": {
+    "props": {
+      "title": "Logo",
+      "href": "https://www.facebook.com/HotpointRussia/",
+      "url": "assets/facebookIcon.svg",
+      "blockClass": [
+        "logoSocialFooter",
+        "logoFacebookFooter",
+        "logoFacebookAnal"
+      ]
+    }
+  },
+  "logo#instagram": {
+    "props": {
+      "title": "Logo",
+      "href": "https://www.instagram.com/whirlpoolrussia/",
+      "url": "assets/instagramIcon.svg",
+      "blockClass": [
+        "logoSocialFooter",
+        "logoInstagramFooter",
+        "logoInstagramAnal"
+      ]
+    }
+  },
+  "logo#youtube": {
+    "props": {
+      "title": "Logo",
+      "href": "https://www.youtube.com/user/HotpointAristonRU",
+      "url": "assets/youtubeIcon.svg",
+      "blockClass": ["logoSocialFooter", "logoYoutubeFooter", "logoYouTubeAnal"]
+    }
+  },
+  "logo#vcontact": {
+    "props": {
+      "title": "Logo",
+      "href": "https://vk.com/indesitrussia/",
+      "url": "assets/vcontactIcon.svg",
+      "blockClass": ["logoSocialFooter", "logoVcontactFooter", "logoVAnal"]
+    }
+  },
+  "logo#social": {
+    "props": {
+      "title": "Logo",
+      "href": "https://ok.ru/indesit.russia/",
+      "url": "assets/socialIcon.svg",
+      "blockClass": ["logoSocialFooter", "logoOtherSocialFooter", "logoOkAnal"]
+    }
+  },
+  "footer-layout.mobile": {
+    "children": [
+      // "flex-layout.row#news-letters-mobile",
+      "flex-layout.row#newsletter-cc-container",
+      "flex-layout.row#logo-and-phone-row-mobile",
+      "disclosure-layout#notre-entreprise",
+      "disclosure-layout#notre-politique",
+      "disclosure-layout#produits-mobile",
+      "flex-layout.row#payments-images",
+      // "flex-layout.row#produits-mobile",
+      // "flex-layout.row#policy-and-terms-mobile",
+      // "flex-layout.row#notre-entreprise-mobile",
+      "flex-layout.row#footer-copyright-mobile",
+      "flex-layout.row#filler"
+    ]
+  },
+  //New menus mobile
+  "flex-layout.row#payments-images": {
+    "children": ["flex-layout.col#payments-images"],
+    "props": {
+      "blockClass": ["paymentsImagesRow"]
+    }
+  },
+  "flex-layout.col#payments-images": {
+    "children": [
+      "image#payment-methods",
+      "flex-layout.row#payments-methods-others"
+    ]
+  },
+  //notre politique
+  "disclosure-layout#notre-politique": {
+    "children": [
+      "disclosure-trigger#notre-politique",
+      "disclosure-content#notre-politique"
+    ]
+  },
+  "disclosure-trigger#notre-politique": {
+    "props": {
+      "blockClass": "mobileFooterMenuTrigger"
+    },
+    "children": ["rich-text#notrePolitiqueTrigger"]
+  },
+  "disclosure-content#notre-politique": {
+    "props": {
+      "blockClass": "mobileFooterMenuContent"
+    },
+    "children": [
+      // "menu-item#politique-dusage-des-cookies",
+      // "menu-item#politique-de-donnees-personnelles",
+      // "menu-item#conditions-de-livraison",
+      // "menu-item#conditions-generales-de-vente",
+      // "menu-item#droit-de-retractation",
+      // "menu-item#toutes-les-reponses-a-vos-questions-new",
+      // "menu-item#online-dispute-resolution",
+      //"link#condizioni-garanzia-legale",
+      "link#cookie-policy",
+      "link#informativa-privacy",
+      "link#termini-condizioni",
+      "link#consegna",
+      "link#diritto-recesso",
+      "link#sostituzione-prodotto-danneggiato",
+      "link#risoluzione-online",
+      "link#promemoria-garanzia-legale",
+      "itcc-cookie-table.title#footer"
+    ]
+  },
+  "rich-text#notrePolitiqueTrigger": {
+    "props": {
+      "text": "LE NOSTRE POLICY",
+      "blockClass": "notrePolitiqueTrigger"
+    }
+  },
+  //notre-entreprise
+  "disclosure-layout#notre-entreprise": {
+    "children": [
+      "disclosure-trigger#notre-entreprise",
+      "disclosure-content#notre-entreprise"
+    ]
+  },
+  "disclosure-trigger#notre-entreprise": {
+    "props": {
+      "blockClass": "mobileFooterMenuTrigger"
+    },
+    "children": ["rich-text#notreEntrepriseTrigger"]
+  },
+  "disclosure-content#notre-entreprise": {
+    "props": {
+      "blockClass": "mobileFooterMenuContent"
+    },
+    "children": [
+      // "menu-item#contactez-nous",
+      // "menu-item#our-integrity-manual",
+      // "menu-item#organisational-model"
+      "link#contatti",
+      "link#manuale-integrita",
+      "link#modello-organizzativo"
+    ]
+  },
+  "rich-text#notreEntrepriseTrigger": {
+    "props": {
+      "text": "LA NOSTRA AZIENDA",
+      "blockClass": "notrePolitiqueTrigger"
+    }
+  },
+  //produits-mobile
+  "disclosure-layout#produits-mobile": {
+    "children": [
+      "disclosure-trigger#produits-mobile",
+      "disclosure-content#produits-mobile"
+    ]
+  },
+  "disclosure-trigger#produits-mobile": {
+    "props": {
+      "blockClass": ["mobileFooterMenuTrigger", "mobileFooterMenuTriggerFirst"]
+    },
+    "children": ["rich-text#produitsMobileTrigger"]
+  },
+  "disclosure-content#produits-mobile": {
+    "props": {
+      "blockClass": "mobileFooterMenuContent"
+    },
+    "children": [
+      // "menu-item#lavage",
+      // "menu-item#cuisson",
+      // "menu-item#froid",
+      // "menu-item#lave-vaisselle",
+      // "menu-item#climatisation",
+      // "menu-item#accessories-wpro"
+      "link#lavaggio",
+      "link#cottura",
+      "link#refrigerazione",
+      "link#lavastoviglie",
+      "link#climatizzazione",
+      "link#accessori-wpro"
+    ]
+  },
+  "rich-text#produitsMobileTrigger": {
+    "props": {
+      "text": "PRODOTTI",
+      "blockClass": "notrePolitiqueTrigger"
+    }
+  },
+  /*-----------------------*/
+  "flex-layout.row#news-letters-mobile": {
+    // "children": ["newsletter-popup#footermobile"],
+    "props": {
+      "fullWidth": false,
+      "paddingBottom": 6,
+      "blockClass": ["fxCol", "news-letters", "news-letters-footer"]
+    }
+  },
+  // "newsletter-popup#footermobile": {
+  //   "props": {
+  //     "textDescription": "Je veux me tenir au courant des promotions et des nouveaux produits",
+  //     "button": true,
+  //     "blockClass": "fxCol",
+  //     "textButton": "Abonnez-vous à la newsletter"
+  //   },
+  //   "children": ["newletter-form#mobile"]
+  // },
+  // "newletter-form#mobile": {
+  //   "props": {
+  //     "title": "Newsletter",
+  //     "textButton": "Abonnez-vous à la newsletter"
+  //   }
+  // },
+  "flex-layout.row#logo-and-phone-row-mobile": {
+    "children": [
+      "flex-layout.row#logo-row-mobile"
+      // "flex-layout.row#phone-mobile"
+    ],
+    "props": {
+      "blockClass": [
+        "footerRowMobile",
+        "fxCenter",
+        "fxColumn",
+        "footerRowMobilePadding"
+      ],
+      "colSizing": "auto",
+      "preserveLayoutOnMobile": true
+    }
+  },
+  "flex-layout.row#logo-row-mobile": {
+    "children": [
+      "logo#footer-mobile"
+      //  "rich-text#online-market-mobile"
+    ],
+    "props": {
+      "blockClass": ["footerRowMobile", "fxCenter", "logo-row-mobile"],
+      "width": "100%"
+    }
+  },
+  "logo#footer-mobile": {
+    "props": {
+      "title": "Logo",
+      "href": "/",
+      "url": "assets/logo-footer-whr.svg",
+      "blockClass": "logoFooterMobile"
+    }
+  },
+  "rich-text#online-market-mobile": {
+    "props": {
+      "blockClass": ["textFooter", "textFooterPl20px"],
+      "text": "**Whirlpool Official Website**"
+    }
+  },
+  "flex-layout.row#phone-mobile": {
+    "children": [
+      "flex-layout.row#phone-number-mobile-1",
+      "flex-layout.row#phone-number-mobile-2"
+    ],
+    "props": {
+      "blockClass": [
+        "footerRowMobile",
+        "footerRowPhoneMobile",
+        "footerRowMobilePhone"
+      ],
+      "width": "100%"
+    }
+  },
+  "flex-layout.row#phone-number-mobile-1": {
+    "children": [
+      "logo#footer-phone-mobile",
+      "analytics-wrapper#footerPhoneMobile"
+    ],
+    "props": {
+      "blockClass": [
+        "txt-with-icon-row-mobile",
+        "footerRowMobile",
+        "footerRowMobileLeft"
+      ],
+      "colSizing": "auto",
+      "horizontalAlign": "RIGHT"
+    }
+  },
+  "analytics-wrapper#footerPhoneMobile": {
+    "props": {
+      "eventName": "contact_click",
+      "data": [{ "title": "eventLabel", "value": "phone" }]
+    },
+    "children": ["rich-text#phone-number-mobile-1"]
+  },
+  "flex-layout.row#phone-number-mobile-2": {
+    "children": [
+      "logo#footer-phone-mobile",
+      "analytics-wrapper#footerPhoneMobile2"
+    ],
+    "props": {
+      "blockClass": [
+        "txt-with-icon-row-mobile",
+        "footerRowMobile",
+        "footerRowMobileRight"
+      ],
+      "colSizing": "auto",
+      "horizontalAlign": "RIGHT"
+    }
+  },
+  "analytics-wrapper#footerPhoneMobile2": {
+    "props": {
+      "eventName": "contact_click",
+      "data": [{ "title": "eventLabel", "value": "phone" }]
+    },
+    "children": ["rich-text#phone-number-mobile-2"]
+  },
+  "logo#footer-phone-mobile": {
+    "props": {
+      "title": "Logo",
+      "url": "assets/logoPhone.svg",
+      "blockClass": "logoFooterIconMobile",
+      "href": "tel:8003333887"
+    }
+  },
+  "rich-text#phone-number-mobile-1": {
+    "props": {
+      "blockClass": [
+        "textFooter",
+        "textFooterPt8",
+        "textFooterFsM",
+        "phoneNumber"
+      ],
+      "textPosition": "LEFT",
+      "text": "[Assistence boutique en Ligne](tel:0969676140)"
+    }
+  },
+  "rich-text#phone-number-mobile-2": {
+    "props": {
+      "blockClass": [
+        "textFooter",
+        "textFooterPt8",
+        "textFooterFsM",
+        "phoneNumber"
+      ],
+      "textPosition": "LEFT",
+      "text": "[Service consommateurs](tel:0969676140)"
+    }
+  },
+  "modal-trigger#request-call-mobile": {
+    "children": [
+      "rich-text#request-call-trigger-mobile",
+      "modal-layout#request-call-modal"
+    ]
+  },
+  "modal-layout#request-call-modal-mobile": {
+    "children": ["rich-text#hello"]
+  },
+  "rich-text#hello-mobile": {
+    "props": {
+      "text": "Комментарий/Предпочтительное время для связи",
+      "blockClass": "modalTextParagraph"
+    }
+  },
+  "rich-text#request-call-trigger-mobile": {
+    "props": {
+      "text": "[**Demander un appel**](tel:88003333887)",
+      "textPosition": "CENTER",
+      "blockClass": ["requestCallTriggerMobile"]
+    }
+  },
+  "rich-text#our-socials": {
+    "props": {
+      "blockClass": ["textFooter", "textFooterMarginMobile"],
+      "textPosition": "LEFT",
+      "text": "Nous sommes dans les réseaux sociaux"
+    }
+  },
+  "flex-layout.row#socials-mob": {
+    "props": {
+      "blockClass": ["socialsRowMobile"]
+    },
+    "children": [
+      "link#logo-facebook",
+      "link#logo-instagram",
+      "link#logo-youtube",
+      "link#logo-vcontact",
+      "link#logo-social"
+    ]
+  },
+  "flex-layout.row#footer-copyright-mobile": {
+    "children": ["rich-text#copyright-mobile", "rich-text#site-mobile"],
+    "props": {
+      "blockClass": ["footerRowMobile", "fxCol", "footerRowMobileWhirlpool"]
+    }
+  },
+  "rich-text#copyright-mobile": {
+    "props": {
+      "blockClass": "footerNormal",
+      "textPosition": "LEFT",
+      "text": "© 2021 Whirlpool is a registered trademark of Whirlpool, USA"
+    }
+  },
+  "rich-text#site-mobile": {
+    "props": {
+      "blockClass": "footerNormal",
+      "textPosition": "LEFT",
+      "text": "WHIRLPOOL.COM"
+    }
+  },
+  "flex-layout.row#produits-mobile": {
+    "props": {
+      "blockClass": ["footerRowMobile", "bt"],
+      "fullWidth": true
+    },
+    "children": ["vtex.menu@2.x:menu#produits-mobile"]
+  },
+  "flex-layout.row#notre-entreprise-mobile": {
+    "props": {
+      "blockClass": ["footerRowMobile", "bt"],
+      "fullWidth": true
+    },
+    "children": ["vtex.menu@2.x:menu#notre-entreprise-mobile"]
+  },
+  "flex-layout.row#policy-and-terms-mobile": {
+    "props": {
+      "blockClass": ["footerRowMobile", "bt"],
+      "fullWidth": true
+    },
+    "children": ["vtex.menu@2.x:menu#policy-and-terms-mobile"]
+  },
+  "flex-layout.row#blog-mobile": {
+    "props": {
+      "blockClass": ["footerRowMobile", "bt"],
+      "fullWidth": true
+    },
+    "children": ["vtex.menu@2.x:menu#blog-mobile"]
+  },
+  "flex-layout.row#filler": {
+    "props": {
+      "blockClass": "FooterFiller"
+    }
+  }
+}

@@ -1,0 +1,1102 @@
+{
+  "store.custom#aktionen-page": {
+    "blocks": [
+      "flex-layout.row#bread-theme-service-locator",
+      /*BANNER SLIDER */
+      "experimental__visibility-layout#sliderAktionen",
+      /*CAROUSEL*/
+      "experimental__visibility-layout#carouselAktionenPage",
+      /*BANNER 2*/
+      "experimental__visibility-layout#bannerAktionen2",
+      /* BANNER 3 */
+      "experimental__visibility-layout#bannerAktionen3",
+      /* BANNER 4 */
+      "experimental__visibility-layout#bannerAktionen4",
+      /*BANNER 7*/
+      "experimental__visibility-layout#bannerAktionen7",
+      /*BANNER 5*/
+      "experimental__visibility-layout#bannerAktionen5",
+      /*BANNER 6*/
+      "experimental__visibility-layout#bannerAktionen6",
+      /* BANNER 8 */
+      "experimental__visibility-layout#bannerAktionen8",
+      /*SLIDER TEXT*/
+      "experimental__visibility-layout#slidertext"
+    ]
+  },
+  /*---------------------CAROUSEL----------------------------------*/
+  "experimental__visibility-layout#carouselAktionenPage": {
+    "title": "[CAROUSEL] - Carousel Aktionen",
+    "props": {
+      "visible": false
+    },
+    "children": [
+      "flex-layout.row#halfSpace",
+      "rich-text#titleCarousel",
+      "tab-content#carouselContent",
+      "flex-layout.row#halfSpace"
+    ]
+  },
+  "rich-text#titleCarousel": {
+    "title": "[text] - TOP -  Title Carousel ",
+    "props": {
+      "htmlId": "carouselAktionen",
+      "blockClass": ["TitleAndLine", "f2f2f2"],
+      "text": "Text test",
+      "textPosition": "LEFT"
+    }
+  },
+  "tab-content#carouselContent": {
+    "title": "[CAROUSEL-CONTENT] - MID - Carousel contents",
+    "children": ["tab-content.item#Carouseltab"]
+  },
+  "tab-content.item#Carouseltab": {
+    "title": "[TAB-CONTENT] - MID - Tab content",
+    "children": ["list-context.product-list#CarouselSlider"],
+    "props": {
+      "tabId": "1",
+      "blockClass": ["f2f2f2", "Itslider1OurBest"]
+    }
+  },
+  "list-context.product-list#CarouselSlider": {
+    "title": "[PRODUCT-LIST] - MID - Carousel Aktionen",
+    "blocks": [
+      "product-summary.shelf.product-comparison#bauknechtPLP-carousel-no-comparison-button"
+    ],
+    "children": ["slider-layout#Itslider3"],
+    "props": {
+      "collection": "234"
+    }
+  },
+  /*---------------------BANNER SLIDER----------------------------------*/
+  "experimental__visibility-layout#sliderAktionen": {
+    "title": "[TOGGLE] - TOP - BANNER Slider aktionen",
+    "children": [
+      // "list-context.info-card-list#sliderAktionen"
+      "responsive-layout.desktop#sliderAktionen",
+      "responsive-layout.mobile#sliderAktionen"
+    ]
+  },
+  "responsive-layout.desktop#sliderAktionen": {
+    "title": "[DESKTOP] - TOP - Slider Aktionen",
+    "children": [
+      "list-context.info-card-list#sliderAktionen"
+    ]
+  },
+  "responsive-layout.mobile#sliderAktionen": {
+    "title": "[MOBILE] - TOP - Slider Aktionen",
+    "children": [
+      "list-context.info-card-list#sliderAktionen"
+    ]
+  },
+  "list-context.info-card-list#sliderAktionen": {
+    "title": "[LIST] - TOP - Slider Aktionen Banners List ",
+    "children": [
+      "slider-layout#aktionenInfoCardSlider"
+    ],
+    "props": {
+      "infoCards": [
+        {
+          "isFullModeStyle": false,
+          "textPosition": "left",
+          "imageUrl": "assets/ph-square.jpg",
+          "textMode": "rich-text",
+          "headline": "# Head Text",
+          "subhead": "Description Text",
+          "textAlignment": "left",
+          "blockClass": [
+            "aktionenMainSlider"
+          ]
+        }
+      ],
+      "blockClass": [
+        "aktionenListContext"
+      ]
+    }
+  },
+  "slider-layout#aktionenInfoCardSlider": {
+    "title": "[SLIDER] - TOP - Slider Aktionen",
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "blockClass": [
+        "aktionenMainSlider",
+        "carouselHomeTop",
+        "aktionenSlider"
+      ]
+    }
+  },
+  /*  "slider-layout#sliderAktionen": {
+    "title": "[SLIDER] - TOP - Slider Aktionen",
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "showNavigationArrows": "desktopOnly",
+      "autoplay": {
+        "timeout": 5000,
+        "stopOnHover": false
+      },
+      "slideTransition": {
+        "speed": 2000,
+        "delay": 0,
+        "timing": ""
+      },
+      "blockClass": ["carousel", "sliderHome"]
+    }
+  }, */
+  /*BANNER 1*/
+  "experimental__visibility-layout#bannerAktionen1": {
+    "title": "[TOGGLE] - TOP - Banner aktionen 1 ",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "flex-layout.row#bannerAktionen1"
+    ]
+  },
+  "flex-layout.row#bannerAktionen1": {
+    "title": "[ROW] - TOP - banner Aktionen1 ",
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": [
+        "columnPostillaBannerAntonio",
+        "bgColorAntonioHero"
+      ]
+    },
+    "children": [
+      "flex-layout.col#leftPartbannerAktionen1",
+      "flex-layout.col#rightPartbannerAktionen1"
+    ]
+  },
+  "flex-layout.col#rightPartbannerAktionen1": {
+    "title": "[COL] - TOP - Slide Part",
+    "props": {
+      "width": "65%",
+      "blockClass": "columnPostillaImage"
+    },
+    "children": [
+      "image#bannerPostilla"
+    ]
+  },
+  "flex-layout.col#leftPartbannerAktionen1": {
+    "title": "[COL] - TOP - Slide Part",
+    "props": {
+      "width": "35%",
+      "preventVerticalStretch": true,
+      "blockClass": [
+        "columnPostillaPromo",
+        "leftPartBannerAktionen1",
+        "columnPostillaBottom"
+      ]
+    },
+    "children": [
+      "experimental__visibility-layout#bannerAktionen1Title",
+      "experimental__visibility-layout#bannerAktionen1Desc"
+    ]
+  },
+  "experimental__visibility-layout#bannerAktionen1Desc": {
+    "title": "[layout] - MID -  banner Description",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "rich-text#bannerAktionen1Desc"
+    ]
+  },
+  "experimental__visibility-layout#bannerAktionen1Title": {
+    "title": "[layout] - MID -  banner Description",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "rich-text#bannerAktionen1Title"
+    ]
+  },
+  "rich-text#bannerAktionen1Title": {
+    "title": "[TEXT] - TOP - Slide Title",
+    "props": {
+      "text": "# Frigorifero combinato 4 porte",
+      "blockClass": "titleHBannerPostillaPromo"
+    }
+  },
+  "rich-text#bannerAktionen1Desc": {
+    "title": "[TEXT] - TOP - Slide Description",
+    "props": {
+      "textColor": "c-on-emphasis",
+      "text": "33% di spazio extra per frutta e verdura *",
+      "blockClass": [
+        "descBannerPostillaPromo",
+        "descBannerAktionen1"
+      ]
+    }
+  },
+  /*BANNER 2*/
+  "experimental__visibility-layout#bannerAktionen2": {
+    "title": "[layout] - MID -  banner Aktionen 2",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "responsive-layout.desktop#bannerAktionen2",
+      // "responsive-layout.tablet#bannerAktionen2",
+      "responsive-layout.mobile#bannerAktionen2"
+    ]
+  },
+  "responsive-layout.desktop#bannerAktionen2": {
+    "title": "[desktop] - MID -  banner Aktionen 2",
+    "children": [
+      "flex-layout.row#bannerAktionen2"
+    ]
+  },
+  // "responsive-layout.tablet#bannerAktionen2": {
+  //   "title": "[tablet] - MID -  banner Aktionen 2",
+  //   "children": ["flex-layout.row#bannerAktionen2"]
+  // },
+  "responsive-layout.mobile#bannerAktionen2": {
+    "title": "[mobile] - MID -  banner Aktionen 2",
+    "children": [
+      "flex-layout.row#bannerAktionen2"
+    ]
+  },
+  "flex-layout.row#bannerAktionen2": {
+    "title": "[ROW] - MID - row banner Aktionen 2",
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": [
+        "bannerPostilla",
+        "classico",
+        "columnReverse"
+      ]
+    },
+    "children": [
+      "flex-layout.col#rightPartbannerAktionen2",
+      "flex-layout.col#leftPartClassico"
+    ]
+  },
+  "flex-layout.col#rightPartbannerAktionen2": {
+    "title": "[COL] - MID - banner Part",
+    "props": {
+      "width": "50%",
+      "preventVerticalStretch": true,
+      "blockClass": [
+        "columnPostilla",
+        "columnPostillaBottom"
+      ]
+    },
+    "children": [
+      "rich-text#bannerAktionen2Title",
+      "experimental__visibility-layout#BannDescTop",
+      "experimental__visibility-layout#ButtonBannerAktionen",
+      "experimental__visibility-layout#bannerAktionen2Desc"
+    ]
+  },
+  "experimental__visibility-layout#bannerAktionen2Desc": {
+    "title": "[layout] - MID -  banner Description",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "rich-text#bannerAktionen2Desc"
+    ]
+  },
+  "rich-text#bannerAktionen2Title": {
+    "title": "[TEXT] - Top - banner Title",
+    "props": {
+      "text": "# Frigorifero combinato 4 porte",
+      "blockClass": "titleHBannerPostillaPromo"
+    }
+  },
+  "experimental__visibility-layout#ButtonBannerAktionen": {
+    "title": "[layout] - MID - banner Button",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "link#ButtonBannerAktionen"
+    ]
+  },
+  "link#ButtonBannerAktionen": {
+    "title": "[link] - MID -Button",
+    "props": {
+      "label": "Testo bottone",
+      "href": "#",
+      "displayMode": "button",
+      "blockClass": [
+        "marginBottomClassico",
+        "SupportImmagesButton",
+        "ButtonAktionen"
+      ]
+    }
+  },
+  "rich-text#bannerAktionen2Desc": {
+    "title": "[TEXT] - TOP - banner Description",
+    "props": {
+      "text": "33% di spazio extra per frutta e verdura *",
+      "blockClass": [
+        "descBannerAktionen2bottom",
+        "descBannerPostillaPromo"
+      ]
+    }
+  },
+  /* BANNER 3 */
+  "experimental__visibility-layout#bannerAktionen3": {
+    "title": "[layout] - MID -  banner Aktionen 3",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "responsive-layout.desktop#bannerAktionen3",
+      // "responsive-layout.tablet#bannerAktionen3",
+      "responsive-layout.mobile#bannerAktionen3"
+    ]
+  },
+  "responsive-layout.desktop#bannerAktionen3": {
+    "title": "[desktop] - MID -  banner Aktionen 3",
+    "children": [
+      "flex-layout.row#bannerAktionen3"
+    ]
+  },
+  // "responsive-layout.tablet#bannerAktionen3": {
+  //   "title": "[tablet] - MID -  banner Aktionen 3",
+  //   "children": ["flex-layout.row#bannerAktionen2"]
+  // },
+  "responsive-layout.mobile#bannerAktionen3": {
+    "title": "[mobile] - MID -  banner Aktionen 3",
+    "children": [
+      "flex-layout.row#bannerAktionen2"
+    ]
+  },
+  "flex-layout.row#bannerAktionen3": {
+    "title": "[ROW] - MID - row banner Aktionen 3",
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": [
+        "bannerPostilla",
+        "classico",
+        "columnReverse"
+      ]
+    },
+    "children": [
+      "flex-layout.col#leftPartClassico",
+      "flex-layout.col#rightPartbannerAktionen3"
+    ]
+  },
+  "flex-layout.col#rightPartbannerAktionen3": {
+    "title": "[COL] - MID - banner Part",
+    "props": {
+      "width": "50%",
+      "preventVerticalStretch": true,
+      "blockClass": [
+        "columnPostilla",
+        "columnPostillaBottom"
+      ]
+    },
+    "children": [
+      "rich-text#bannerAktionen3Title",
+      "experimental__visibility-layout#BannDescTop",
+      "experimental__visibility-layout#ButtonBannerAktionen",
+      "experimental__visibility-layout#bannerAktionen3Desc"
+    ]
+  },
+  "experimental__visibility-layout#bannerAktionen3Desc": {
+    "title": "[layout] - MID -  banner Description",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "rich-text#bannerAktionen3Desc"
+    ]
+  },
+  "rich-text#bannerAktionen3Title": {
+    "title": "[TEXT] - TOP - banner Title",
+    "props": {
+      "text": "# Frigorifero combinato 4 porte",
+      "blockClass": "titleHBannerPostillaPromo"
+    }
+  },
+  "rich-text#bannerAktionen3Desc": {
+    "title": "[TEXT] - bottom - Slide Description",
+    "props": {
+      "text": "33% di spazio extra per frutta e verdura *",
+      "blockClass": [
+        "descBannerAktionen2bottom",
+        "descBannerPostillaPromo"
+      ]
+    }
+  },
+  /* BANNER 4 */
+  "experimental__visibility-layout#bannerAktionen4": {
+    "title": "[layout] - MID -  banner Aktionen 4",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "responsive-layout.desktop#bannerAktionen4",
+      // "responsive-layout.tablet#bannerAktionen4",
+      "responsive-layout.mobile#bannerAktionen4"
+    ]
+  },
+  "responsive-layout.desktop#bannerAktionen4": {
+    "title": "[desktop] - MID -  banner Aktionen 4",
+    "children": [
+      "flex-layout.row#bannerAktionen4"
+    ]
+  },
+  // "responsive-layout.tablet#bannerAktionen4": {
+  //   "title": "[tablet] - MID -  banner Aktionen 4",
+  //   "children": ["flex-layout.row#bannerAktionen2"]
+  // },
+  "responsive-layout.mobile#bannerAktionen4": {
+    "title": "[mobile] - MID -  banner Aktionen 4",
+    "children": [
+      "flex-layout.row#bannerAktionen2"
+    ]
+  },
+  "flex-layout.row#bannerAktionen4": {
+    "title": "[ROW] - MID - row banner Aktionen 4",
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": [
+        "bannerPostilla",
+        "classico",
+        "columnReverse"
+      ]
+    },
+    "children": [
+      "flex-layout.col#rightPartbannerAktionen4",
+      "flex-layout.col#leftPartClassico"
+    ]
+  },
+  "flex-layout.col#rightPartbannerAktionen4": {
+    "title": "[COL] - MID - banner Part",
+    "props": {
+      "width": "50%",
+      "preventVerticalStretch": true,
+      "blockClass": [
+        "columnPostilla",
+        "columnPostillaBottom"
+      ]
+    },
+    "children": [
+      "rich-text#bannerAktionen4Title",
+      "experimental__visibility-layout#BannDescTop",
+      "experimental__visibility-layout#ButtonBannerAktionen",
+      "experimental__visibility-layout#bannerAktionen4Desc"
+    ]
+  },
+  "experimental__visibility-layout#bannerAktionen4Desc": {
+    "title": "[layout] - MID -  banner Description",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "rich-text#bannerAktionen4Desc"
+    ]
+  },
+  "rich-text#bannerAktionen4Title": {
+    "title": "[TEXT] - TOP - banner Title",
+    "props": {
+      "text": "# Frigorifero combinato 4 porte",
+      "blockClass": "titleHBannerPostillaPromo"
+    }
+  },
+  "rich-text#bannerAktionen4Desc": {
+    "title": "[TEXT] - Bottom - banner Description",
+    "props": {
+      "text": "33% di spazio extra per frutta e verdura *",
+      "blockClass": [
+        "descBannerAktionen2bottom",
+        "descBannerPostillaPromo"
+      ]
+    }
+  },
+  /*BANNER 5*/
+  "experimental__visibility-layout#bannerAktionen5": {
+    "title": "[layout] - MID -  banner Aktionen 5",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "responsive-layout.desktop#bannerAktionen5",
+      // "responsive-layout.tablet#bannerAktionen5",
+      "responsive-layout.mobile#bannerAktionen5"
+    ]
+  },
+  "responsive-layout.desktop#bannerAktionen5": {
+    "title": "[desktop] - MID -  banner Aktionen 5",
+    "children": [
+      "flex-layout.row#bannerAktionen5"
+    ]
+  },
+  // "responsive-layout.tablet#bannerAktionen5": {
+  //   "title": "[tablet] - MID -  banner Aktionen 5",
+  //   "children": ["flex-layout.row#bannerAktionen2"]
+  // },
+  "responsive-layout.mobile#bannerAktionen5": {
+    "title": "[mobile] - MID -  banner Aktionen 5",
+    "children": [
+      "flex-layout.row#bannerAktionen2"
+    ]
+  },
+  "flex-layout.row#bannerAktionen5": {
+    "title": "[ROW] - MID - row banner Aktionen 5",
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": [
+        "bannerPostilla",
+        "classico",
+        "columnReverse"
+      ]
+    },
+    "children": [
+      "flex-layout.col#rightPartbannerAktionen5",
+      "flex-layout.col#leftPartClassico"
+    ]
+  },
+  "flex-layout.col#rightPartbannerAktionen5": {
+    "title": "[COL] - MID - banner Part",
+    "props": {
+      "width": "50%",
+      "preventVerticalStretch": true,
+      "blockClass": [
+        "columnPostilla",
+        "columnPostillaBottom"
+      ]
+    },
+    "children": [
+      "rich-text#bannerAktionen5Title",
+      "experimental__visibility-layout#BannDescTop",
+      "experimental__visibility-layout#ButtonBannerAktionen",
+      "experimental__visibility-layout#ButtonBannerAktionentype2",
+      "experimental__visibility-layout#bannerAktionen5Desc"
+    ]
+  },
+  "experimental__visibility-layout#bannerAktionen5Desc": {
+    "title": "[layout] - MID -  banner Description",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "rich-text#bannerAktionen5Desc"
+    ]
+  },
+  "experimental__visibility-layout#ButtonBannerAktionentype2": {
+    "title": "[layout] - MID - banner Button white",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "link#ButtonBannerAktionentype2"
+    ]
+  },
+  "link#ButtonBannerAktionentype2": {
+    "title": "[link] - MID -Button white",
+    "props": {
+      "label": "Testo bottone",
+      "href": "#",
+      "displayMode": "button",
+      "blockClass": [
+        "marginBottomClassico",
+        "SupportImmagesButton",
+        "ButtonAktionen",
+        "ButtonAktionenType2"
+      ]
+    }
+  },
+  "rich-text#bannerAktionen5Title": {
+    "title": "[TEXT] - TOP - banner Title",
+    "props": {
+      "text": "# Frigorifero combinato 4 porte",
+      "blockClass": "titleHBannerPostillaPromo"
+    }
+  },
+  "rich-text#bannerAktionen5Desc": {
+    "title": "[TEXT] - TOP - banner Description",
+    "props": {
+      "text": "33% di spazio extra per frutta e verdura *",
+      "blockClass": [
+        "descBannerAktionen2bottom",
+        "descBannerPostillaPromo"
+      ]
+    }
+  },
+  /*BANNER 6*/
+  "experimental__visibility-layout#bannerAktionen6": {
+    "title": "[layout] - MID -  banner Aktionen 6",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "responsive-layout.desktop#bannerAktionen6",
+      // "responsive-layout.tablet#bannerAktionen6",
+      "responsive-layout.mobile#bannerAktionen6"
+    ]
+  },
+  "responsive-layout.desktop#bannerAktionen6": {
+    "title": "[desktop] - MID -  banner Aktionen 6",
+    "children": [
+      "flex-layout.row#bannerAktionen6"
+    ]
+  },
+  // "responsive-layout.tablet#bannerAktionen6": {
+  //   "title": "[tablet] - MID -  banner Aktionen 6",
+  //   "children": ["flex-layout.row#bannerAktionen2"]
+  // },
+  "responsive-layout.mobile#bannerAktionen6": {
+    "title": "[mobile] - MID -  banner Aktionen 6",
+    "children": [
+      "flex-layout.row#bannerAktionen2"
+    ]
+  },
+  "flex-layout.row#bannerAktionen6": {
+    "title": "[ROW] - MID - row banner Aktionen 6",
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": [
+        "bannerPostilla",
+        "classico",
+        "columnReverse"
+      ]
+    },
+    "children": [
+      "flex-layout.col#leftPartClassico",
+      "flex-layout.col#rightPartbannerAktionen6"
+    ]
+  },
+  "flex-layout.col#rightPartbannerAktionen6": {
+    "title": "[COL] - MID - banner Part",
+    "props": {
+      "width": "50%",
+      "preventVerticalStretch": true,
+      "blockClass": [
+        "columnPostilla",
+        "columnPostillaBottom"
+      ]
+    },
+    "children": [
+      "rich-text#bannerAktionen6Title",
+      "experimental__visibility-layout#BannDescTop",
+      "experimental__visibility-layout#ButtonBannerAktionen"
+    ]
+  },
+  "rich-text#bannerAktionen6Title": {
+    "title": "[TEXT] - TOP - banner Title",
+    "props": {
+      "text": "# Frigorifero combinato 4 porte",
+      "blockClass": "titleHBannerPostillaPromo"
+    }
+  },
+  "rich-text#bannerAktionen6Desc": {
+    "title": "[TEXT] - TOP - banner Description",
+    "props": {
+      "text": "33% di spazio extra per frutta e verdura *",
+      "blockClass": [
+        "descBannerAktionen2bottom",
+        "descBannerPostillaPromo"
+      ]
+    }
+  },
+  /*BANNER 7*/
+  "experimental__visibility-layout#bannerAktionen7": {
+    "title": "[layout] - MID -  banner Aktionen 7",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "responsive-layout.desktop#bannerAktionen7",
+      // "responsive-layout.tablet#bannerAktionen7",
+      "responsive-layout.mobile#bannerAktionen7"
+    ]
+  },
+  "responsive-layout.desktop#bannerAktionen7": {
+    "title": "[desktop] - MID -  banner Aktionen 7",
+    "children": [
+      "flex-layout.row#bannerAktionen7"
+    ]
+  },
+  // "responsive-layout.tablet#bannerAktionen7": {
+  //   "title": "[tablet] - MID -  banner Aktionen 7",
+  //   "children": ["flex-layout.row#bannerAktionen2"]
+  // },
+  "responsive-layout.mobile#bannerAktionen7": {
+    "title": "[mobile] - MID -  banner Aktionen 7",
+    "children": [
+      "flex-layout.row#bannerAktionen2"
+    ]
+  },
+  "flex-layout.row#bannerAktionen7": {
+    "title": "[ROW] - MID - row banner Aktionen 7",
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": [
+        "bannerPostilla",
+        "classico",
+        "columnReverse"
+      ]
+    },
+    "children": [
+      "flex-layout.col#leftPartClassico",
+      "flex-layout.col#rightPartbannerAktionen7"
+    ]
+  },
+  "flex-layout.col#rightPartbannerAktionen7": {
+    "title": "[COL] - MID - banner Part",
+    "props": {
+      "width": "50%",
+      "preventVerticalStretch": true,
+      "blockClass": [
+        "columnPostilla",
+        "columnPostillaBottom"
+      ]
+    },
+    "children": [
+      "rich-text#bannerAktionen7Title",
+      "experimental__visibility-layout#BannDescTop",
+      "experimental__visibility-layout#ButtonBannerAktionen",
+      "rich-text#bannerAktionen7Desc"
+    ]
+  },
+  "rich-text#bannerAktionen7Title": {
+    "title": "[TEXT] - TOP - banner Title",
+    "props": {
+      "text": "# Frigorifero combinato 4 porte",
+      "blockClass": "titleHBannerPostillaPromo"
+    }
+  },
+  "rich-text#bannerAktionen7Desc": {
+    "title": "[TEXT] - TOP - banner Description",
+    "props": {
+      "text": "33% di spazio extra per frutta e verdura *",
+      "blockClass": [
+        "descBannerAktionen2bottom",
+        "descBannerPostillaPromo"
+      ]
+    }
+  },
+  /* BANNER 8 */
+  "experimental__visibility-layout#bannerAktionen8": {
+    "title": "[layout] - MID -  banner Aktionen 8",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "responsive-layout.desktop#bannerAktionen8",
+      // "responsive-layout.tablet#bannerAktionen8",
+      "responsive-layout.mobile#bannerAktionen8"
+    ]
+  },
+  "responsive-layout.desktop#bannerAktionen8": {
+    "title": "[desktop] - MID -  banner Aktionen 8",
+    "children": [
+      "flex-layout.row#bannerAktionen8"
+    ]
+  },
+  // "responsive-layout.tablet#bannerAktionen8": {
+  //   "title": "[tablet] - MID -  banner Aktionen 8",
+  //   "children": ["flex-layout.row#bannerAktionen2"]
+  // },
+  "responsive-layout.mobile#bannerAktionen8": {
+    "title": "[mobile] - MID -  banner Aktionen 8",
+    "children": [
+      "flex-layout.row#bannerAktionen2"
+    ]
+  },
+  "flex-layout.row#bannerAktionen8": {
+    "title": "[ROW] - MID - row banner Aktionen 8",
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": [
+        "bannerPostilla",
+        "classico",
+        "columnReverse"
+      ]
+    },
+    "children": [
+      "flex-layout.col#rightPartbannerAktionen8",
+      "flex-layout.col#leftPartClassico"
+    ]
+  },
+  "flex-layout.col#rightPartbannerAktionen8": {
+    "title": "[COL] - MID - banner Part",
+    "props": {
+      "width": "50%",
+      "preventVerticalStretch": true,
+      "blockClass": [
+        "columnPostilla",
+        "columnPostillaBottom"
+      ]
+    },
+    "children": [
+      "rich-text#bannerAktionen8Title",
+      "experimental__visibility-layout#BannDescTop",
+      "experimental__visibility-layout#ButtonBannerAktionen",
+      "experimental__visibility-layout#bannerAktionen8Desc"
+    ]
+  },
+  "experimental__visibility-layout#bannerAktionen8Desc": {
+    "title": "[layout] - MID -  banner Description",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "rich-text#bannerAktionen8Desc"
+    ]
+  },
+  "rich-text#bannerAktionen8Title": {
+    "title": "[TEXT] - TOP - banner Title",
+    "props": {
+      "text": "# Frigorifero combinato 8 porte",
+      "blockClass": "titleHBannerPostillaPromo"
+    }
+  },
+  "rich-text#bannerAktionen8Desc": {
+    "title": "[TEXT] - Bottom - banner Description",
+    "props": {
+      "text": "33% di spazio extra per frutta e verdura *",
+      "blockClass": [
+        "descBannerAktionen2bottom",
+        "descBannerPostillaPromo"
+      ]
+    }
+  },
+  /*---------------------BANNER TEXT----------------------------------*/
+  "experimental__visibility-layout#slidertext": {
+    "title": "[experimental__visibility-layout] - BOTTOM - Slider text",
+    "children": [
+      "responsive-layout.desktop#slidertext",
+      "responsive-layout.mobile#slidertext"
+    ]
+  },
+  "responsive-layout.desktop#slidertext": {
+    "title": "[DESKTOP] - TOP - Slider Aktionen",
+    "children": [
+      "slider-layout#slidertext"
+    ]
+  },
+  "responsive-layout.mobile#slidertext": {
+    "title": "[MOBILE] - TOP - Slider Aktionen",
+    "children": [
+      "slider-layout#slidertext"
+    ]
+  },
+  "slider-layout#slidertext": {
+    "title": "[SLIDER] - TOP - Slider text",
+    "props": {
+      "itemsPerPage": {
+        "desktop": 3,
+        "tablet": 2,
+        "phone": 1
+      },
+      "infinite": true,
+      "showNavigationArrows": "desktopOnly",
+      "slideTransition": {
+        "speed": 2000,
+        "delay": 0,
+        "timing": ""
+      },
+      "blockClass": [
+        "sliderHome",
+        "slidertext"
+      ]
+    },
+    "children": [
+      "experimental__visibility-layout#slidertextBox1",
+      "experimental__visibility-layout#slidertextBox2",
+      "experimental__visibility-layout#slidertextBox3"
+    ]
+  },
+  "experimental__visibility-layout#slidertextBox1": {
+    "title": "[layout] - bottom -   box1",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "flex-layout.row#slidertextBox1"
+    ]
+  },
+  "flex-layout.row#slidertextBox1": {
+    "title": "BOX1",
+    "children": [
+      "flex-layout.col#slidertextBox1"
+    ],
+    "props": {
+      "blockClass": [
+        "FourTextboxesBox1",
+        "slidertextBox1"
+      ]
+    }
+  },
+  "flex-layout.col#slidertextBox1": {
+    "title": "[COL] - TOP - First ",
+    "children": [
+      "rich-text#slidertextBox1Title",
+      "rich-text#slidertextBox1Paragraph",
+      "rich-text#slidertextBox1Paragraph2"
+    ],
+    "props": {
+      "blockClass": "firstColMenuImagesHome"
+    }
+  },
+  "rich-text#slidertextBox1Title": {
+    "title": "[TEXT] - MID -  text",
+    "props": {
+      "textPosition": "CENTER",
+      "text": "Waschmaschinen",
+      "blockClass": [
+        "SupportNumber"
+      ]
+    }
+  },
+  "rich-text#slidertextBox1Paragraph": {
+    "title": "[TEXT] - MID -  text",
+    "props": {
+      "textPosition": "CENTER",
+      "text": "Waschmaschinen",
+      "blockClass": [
+        "SupportTitle"
+      ]
+    }
+  },
+  "rich-text#slidertextBox1Paragraph2": {
+    "title": "[TEXT] - MID -  text",
+    "props": {
+      "textPosition": "CENTER",
+      "text": "Waschmaschinen",
+      "blockClass": [
+        "slidertextBox1Paragraph"
+      ]
+    }
+  },
+  "experimental__visibility-layout#slidertextBox2": {
+    "title": "[layout] - bottom -   box2",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "flex-layout.row#slidertextBox2"
+    ]
+  },
+  "flex-layout.row#slidertextBox2": {
+    "title": "BOX2",
+    "children": [
+      "flex-layout.col#slidertextBox2"
+    ],
+    "props": {
+      "blockClass": [
+        "FourTextboxesBox1",
+        "slidertextBox1"
+      ]
+    }
+  },
+  "flex-layout.col#slidertextBox2": {
+    "title": "[COL] - TOP - second ",
+    "children": [
+      "rich-text#slidertextBox2Title",
+      "rich-text#slidertextBox2Paragraph",
+      "rich-text#slidertextBox2Paragraph2"
+    ],
+    "props": {
+      "blockClass": "firstColMenuImagesHome"
+    }
+  },
+  "rich-text#slidertextBox2Title": {
+    "title": "[TEXT] - MID -  text",
+    "props": {
+      "textPosition": "CENTER",
+      "text": "Waschmaschinen",
+      "blockClass": [
+        "SupportNumber"
+      ]
+    }
+  },
+  "rich-text#slidertextBox2Paragraph": {
+    "title": "[TEXT] - MID -  text",
+    "props": {
+      "textPosition": "CENTER",
+      "text": "Waschmaschinen",
+      "blockClass": [
+        "SupportTitle"
+      ]
+    }
+  },
+  "rich-text#slidertextBox2Paragraph2": {
+    "title": "[TEXT] - MID -  text",
+    "props": {
+      "textPosition": "CENTER",
+      "text": "Waschmaschinen",
+      "blockClass": [
+        "slidertextBox1Paragraph"
+      ]
+    }
+  },
+  "experimental__visibility-layout#slidertextBox3": {
+    "title": "[layout] - bottom -   box3",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "flex-layout.row#slidertextBox3"
+    ]
+  },
+  "flex-layout.row#slidertextBox3": {
+    "title": "BOX3",
+    "children": [
+      "flex-layout.col#slidertextBox3"
+    ],
+    "props": {
+      "blockClass": [
+        "FourTextboxesBox1",
+        "slidertextBox1"
+      ]
+    }
+  },
+  "flex-layout.col#slidertextBox3": {
+    "title": "[COL] - TOP - third ",
+    "children": [
+      "rich-text#slidertextBox3Title",
+      "rich-text#slidertextBox3Paragraph",
+      "rich-text#slidertextBox3Paragraph2"
+    ],
+    "props": {
+      "blockClass": "firstColMenuImagesHome"
+    }
+  },
+  "rich-text#slidertextBox3Title": {
+    "title": "[TEXT] - MID -  text",
+    "props": {
+      "textPosition": "CENTER",
+      "text": "Waschmaschinen",
+      "blockClass": [
+        "SupportNumber"
+      ]
+    }
+  },
+  "rich-text#slidertextBox3Paragraph": {
+    "title": "[TEXT] - MID -  text",
+    "props": {
+      "textPosition": "CENTER",
+      "text": "Waschmaschinen",
+      "blockClass": [
+        "SupportTitle"
+      ]
+    }
+  },
+  "rich-text#slidertextBox3Paragraph2": {
+    "title": "[TEXT] - MID -  text",
+    "props": {
+      "textPosition": "CENTER",
+      "text": "Waschmaschinen",
+      "blockClass": [
+        "slidertextBox1Paragraph"
+      ]
+    }
+  }
+}

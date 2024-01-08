@@ -1,0 +1,81 @@
+{
+  "vendor": "whirlpoolemea",
+  "name": "cc-myaccount-custom-sections",
+  "version": "1.0.19",
+  "title": "My Account Custom Sections",
+  "description": "Custom sections for my account",
+  "defaultLocale": "en-GB",
+  "builders": {
+    "react": "3.x",
+    "messages": "1.x",
+    "docs": "0.x",
+    "store": "0.x"
+  },
+  "dependencies": {
+    "vtex.my-account-commons": "1.x",
+    "vtex.order-placed": "2.x",
+    "vtex.css-handles": "1.x",
+    "vtex.styleguide": "9.x",
+    "vtex.render-runtime": "8.x",
+    "vtex.store-graphql": "2.x",
+    "vtex.apps-graphql": "2.x",
+    "vtex.pixel-manager": "1.x"
+  },
+  "registries": [
+    "smartcheckout"
+  ],
+  "billingOptions": {
+    "termsURL": "https://compliance.vtex.com/gdpr/policies/vtex-privacy-policy",
+    "support": {
+      "url": "https://support.vtex.com/hc/requests"
+    },
+    "free": true
+  },
+  "settingsSchema": {
+    "title": "MyAccount Custom Sections",
+    "type": "object",
+    "properties": {
+      "EPP_bindingId": {
+        "title": "EPP_bindingId",
+        "description": "Enter the EPP binding ID",
+        "type": "string"
+      },
+      "FF_bindingId": {
+        "title": "FF_bindingId",
+        "description": "Enter the FF binding ID",
+        "type": "string"
+      },
+      "VIP_bindingId": {
+        "title": "VIP_bindingId",
+        "description": "Enter the VIP binding ID",
+        "type": "string"
+      },
+      "ProfileSectionUrl": {
+        "title": "Profile Section Url",
+        "description": "Enter the Profile section Url",
+        "default": "/profile",
+        "type": "string"
+      },
+      "FnFSectionUrl": {
+        "title": "Family & Friends Section Url",
+        "description": "Enter the F&F section Url",
+        "default": "/friends",
+        "type": "string"
+      },
+      "InvoiceSectionUrl": {
+        "title": "Invoice Section Url",
+        "description": "Enter the Invoice section Url",
+        "default": "/invoices",
+        "type": "string"
+      },
+      "hasGA4": {
+        "title": "Has GA4 Events",
+        "description": "Set to true if GA4 is integrated",
+        "default": false,
+        "type": "boolean"
+      }
+    }
+  },
+  "policies": [],
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

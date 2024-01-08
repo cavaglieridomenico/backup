@@ -1,0 +1,19 @@
+query getGroupsWithItsFaqs($categoryId: ID!){
+   getGroupsWithItsFaqs(categoryId: $categoryId)
+    {
+    groupName
+    groupId
+    image
+    faqs{
+        id
+        url
+        metaTitle
+        metaDescription
+        question
+        answer
+        featuredFrom
+        category
+        group
+    }
+    }
+}

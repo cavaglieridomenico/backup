@@ -1,0 +1,115 @@
+/*---- Coupon ----*/
+.couponForm {
+	height: 3rem;
+	display: flex;
+	align-items: center;
+}
+.couponInput {
+	padding: 1rem;
+	border-radius: 11px 0 0 11px;
+	border: 1px solid #979797;
+	border-right: none;
+	font-size: 15px;
+	height: 100%;
+	transition: all 0.3s ease;
+	min-height: 55px;
+	width: 100%;
+}
+.couponInput:focus {
+	box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(0 0 0 / 40%);
+	outline: none;
+	transition: all 0.3s ease;
+}
+.couponButton {
+	border: none;
+	color: #fff;
+	height: 100%;
+	border-radius: 0 11px 11px 0;
+	cursor: pointer;
+	text-transform: uppercase;
+	transition: all 0.4s ease;
+	min-height: 55px;
+	min-width: 91px;
+}
+.couponButton:hover {
+	transition: all 0.4s ease;
+}
+/*---- Subtotal ----*/
+.subtotalContainer,
+.totalContainer,
+.shippingContainer {
+	display: flex;
+	padding: 1.5rem 0;
+	justify-content: space-between;
+}
+.subtotalContainer {
+	align-items: center;
+}
+.shippingContainer {
+	padding-top: 0;
+}
+.subtotalContainer,
+.shippingContainer {
+	font-size: 0.8rem;
+}
+.totalContainer {
+	padding-bottom: 0;
+	font-size: 1.5rem;
+}
+.subtotalLabel,
+.shippingLabel {
+	font-weight: normal;
+}
+.subtotalPrice{
+	font-size: 1.5rem;
+}
+/*---- Go to checkout Button ----*/
+.GoToCheckoutButton {
+	color: #fff;
+	border: 0;
+	padding: 1rem 1.1rem;
+	width: 100%;
+	cursor: pointer;
+	transition: all ease 0.3s;
+	border-radius: 11px;
+	margin-top: 2rem;
+}
+.GoToCheckoutButton:hover {
+	transition: all ease 0.3s;
+}
+/* --------COUPON---------- */
+.couponAlertContainer {
+	position: fixed;
+	top: 0%;
+	left: 35%;
+}
+.couponAlertContainer > div > div > div > div:first-child{
+	display: none;
+}
+.couponSubmitted {
+	gap: 1rem;
+	min-width: 313px;
+}
+:global(.vtex-styleguide-9-x-popup) {
+	background-color: #ffffff !important;
+	color: #000000 !important;
+}
+/* ---------------- */
+
+@media only screen and (max-width: 1024px) {
+	.subtotalContainer,
+	.shippingContainer {
+		font-size: 1rem;
+	}
+}
+@media only screen and (max-width: 640px) {
+	.GoToCheckoutButton {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		border-radius: 0;
+	}
+	.couponAlertContainer {
+		left: unset;
+	}
+}

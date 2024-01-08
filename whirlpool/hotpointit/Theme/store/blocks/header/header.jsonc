@@ -1,0 +1,384 @@
+{
+  "header": {
+    "title": "Header",
+    "blocks": [
+      "header-layout.desktop",
+      "header-layout.mobile"
+    ]
+  },
+  "header.full": {
+    "title": "Header",
+    "blocks": [
+      "header-layout.desktop",
+      "header-layout.mobile"
+    ]
+  },
+  "header-layout.desktop": {
+    "title": "Header Desktop",
+    "children": [
+      "wia-canonical-fix",
+      "sticky-layout#desktop",
+      "slider-layout#banner-carousel",
+      "newsletter-automatic-popup#header"
+    ]
+  },
+  "newsletter-automatic-popup#header": {
+    "title": "Newsletter Popup shown automatically",
+    "props": {
+      "time": 0.25 // default time is 1 = 60 sec -> 60 / 4 = 15 res
+    },
+    "children": [
+      "flex-layout.row#newsletterForm"
+    ]
+  },
+  "flex-layout.row#newsletterForm": {
+    "children": [
+      "experimental__visibility-layout#image-newsletter-form",
+      "newsletter-form"
+    ],
+    "props": {
+      "blockClass": "containerForm"
+    }
+  },
+  "sticky-layout#desktop": {
+    "props": {
+      "blockClass": "sticky-header"
+    },
+    "children": [
+      "flex-layout.row#desktopTop",
+      "flex-layout.row#desktopBottom"
+    ]
+  },
+  "flex-layout.row#desktopTop": {
+    "props": {
+      "horizontalAlign": "left",
+      "verticalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": true,
+      "blockClass": "headerContentTop"
+    },
+    "children": [
+      "flex-layout.col#logo-desktop",
+      "search-bar#headerBlock",
+      //         "flex-layout.col#leftPartHeaderTop",
+      "flex-layout.col#rightPartHeaderTop"
+    ]
+  },
+  "flex-layout.row#desktopBottom": {
+    "props": {
+      "horizontalAlign": "center",
+      "verticalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": true,
+      "blockClass": "headerContent"
+    },
+    "children": [
+      "flex-layout.col#spacer"
+    ] //, "link#account"
+  },
+  "flex-layout.row#desktop": {
+    "props": {
+      "horizontalAlign": "center",
+      "verticalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": true,
+      "blockClass": "headerContent"
+    },
+    "children": [
+      "flex-layout.col#leftPartHeaderTop",
+      "flex-layout.col#spacer",
+      "disclosure-layout#search",
+      "minicart.v2",
+      "conditional-login"
+    ]
+  },
+  "flex-layout.col#leftPartHeaderTop": {
+    "props": {
+      "blockClass": [
+        "leftPartHeaderTop",
+        "headerTop"
+      ]
+    },
+    "children": [
+      "flex-layout.col#logo-desktop",
+      "search-bar#headerBlock"
+    ]
+  },
+  "search-bar#headerBlock": {
+    "blocks": [
+      "autocomplete-result-list.v2"
+    ],
+    "props": {
+      "openAutocompleteOnFocus": true,
+      "blockClass": "headerSearch"
+    }
+  },
+  "autocomplete-result-list.v2": {
+    "blocks": [
+      "product-summary.shelf#headerSearch"
+    ],
+    "props": {
+      "maxSuggestedProducts": 8,
+      "maxSuggestedTerms": 3,
+      "maxTopSearches": 5,
+      "maxHistory": 3
+      // "hideTitles": true
+    }
+  },
+  "product-summary.shelf#headerSearch": {
+    "children": [
+      "product-summary-image#headerSearchShelf",
+      "vtex.store-components:product-name#headerSearchSummary"
+    ],
+    "props": {
+      "blockClass": "shelfHeaderSearch"
+    }
+  },
+  "product-summary-image#headerSearchShelf": {
+    "props": {
+      "showBadge": false,
+      "aspectRatio": "1:1",
+      "maxHeight": 100,
+      "blockClass": "headerSearchShelfImage"
+    }
+  },
+  "vtex.store-components:product-name#headerSearchSummary": {
+    "props": {
+      "tag": "div",
+      "displayMode": "linkToProductPage",
+      "blockClass": [
+        "headerSearchSummaryName",
+        "summaryName"
+      ]
+    }
+  },
+  "flex-layout.col#rightPartHeaderTop": {
+    "props": {
+      "blockClass": "rightPartHeaderTop"
+    },
+    "children": [
+      "disclosure-layout#search",
+      "minicart.v2",
+      "conditional-login"
+    ]
+  },
+  "link#account": {
+    "props": {
+      "href": "/account",
+      "blockClass": "loginIcon"
+    },
+    "children": [
+      "image#iconAccount"
+    ]
+  },
+  "image#iconAccount": {
+    "props": {
+      "src": "assets/account-icon.svg"
+    }
+  },
+  "flex-layout.col#search-bar": {
+    "props": {
+      "verticalAlign": "middle",
+      "blockClass": "sb"
+    },
+    "children": [
+      "search-bar#header"
+    ]
+  },
+  "search-bar#header": {
+    "props": {
+      "blockClass": "searchHeader",
+      "displayMode": "search-and-clear-buttons",
+      "placeholder": "Ricerca"
+    }
+  },
+  "flex-layout.col#spacer": {
+    "props": {
+      "width": "grow",
+      "verticalAlign": "middle",
+      "horizontalAlign": "center"
+    },
+    "children": [
+      "vtex.menu@2.x:menu#ws"
+    ]
+  },
+  "flex-layout.col#logo-desktop": {
+    "props": {
+      "verticalAlign": "middle",
+      "blockClass": "logo"
+    },
+    "children": [
+      "link#logo"
+    ]
+  },
+  "link#logo": {
+    "props": {
+      "href": "/",
+      "blockClass": "logo-container"
+    },
+    "children": [
+      "image#logo"
+    ]
+  },
+  "image#logo": {
+    "props": {
+      "height": "100%",
+      "src": "assets/hotpoint_logo.svg",
+      "blockClass": "logoImage"
+    }
+  },
+  "header-layout.mobile": {
+    "title": "Header Mobile",
+    "children": [
+      "wia-canonical-fix",
+      "sticky-layout#mobile",
+      "flex-layout.row#searchBarMobile",
+      // "search-bar#headerBlock",
+      "slider-layout#banner-carousel",
+      "newsletter-automatic-popup#header"
+    ]
+  },
+  "flex-layout.row#searchBarMobile": {
+    "props": {
+      "blockClass": "searchbar-mobile-row",
+      "preventHorizontalStretch": true,
+      //"preserveLayoutOnMobile": true,
+      "fullWidth": true,
+      "horizontalAlign": "center"
+    },
+    "children": [
+      "search-bar#headerBlock"
+    ]
+  },
+  "sticky-layout#mobile": {
+    "children": [
+      "flex-layout.row#mobile"
+    ]
+  },
+  "flex-layout.row#mobile": {
+    "children": [
+      "link#logo",
+      "flex-layout.col#space",
+      "disclosure-layout#search",
+      "minicart.v2",
+      "conditional-login",
+      "drawer"
+    ],
+    "props": {
+      "blockClass": "main-header-mobile",
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    }
+  },
+  "drawer": {
+    "props": {
+     "renderingStrategy":"eager",
+      "blockClass": "drawer-header-mobile",
+      "slideDirection": "rightToLeft"
+    },
+    "children": [
+      "vtex.menu@2.x:menu#mobile",
+      "flex-layout.row#loginMobile"
+    ]
+  },
+  "flex-layout.row#loginMobile": {
+    "props": {
+      "fullWidth": true
+    },
+    "children": []
+  },
+  "vtex.menu@2.x:menu#mobile": {
+    "props": {
+
+      "orientation": "vertical",
+      "blockClass": "mobileMenu"
+    },
+    "children": [
+      "menu-item#prodottiMobile",
+      "menu-item#innovationMobile",
+      "menu-item#promozioniMobile",
+      "menu-item#ricetteMobile",
+      "menu-item#homeloveMobile",
+      "menu-item#supportoMobile"
+    ]
+  },
+  "vtex.menu@2.x:menu#ws": {
+    "children": [
+      "menu-item#prodotti",
+      "menu-item#innovation",
+      "menu-item#promozioni",
+      "menu-item#ricette",
+      "menu-item#homelove",
+      "menu-item#supporto"
+    ]
+  },
+  "disclosure-layout#search": {
+    "props": {
+      "blockClass": "header"
+    },
+    "children": [
+      "disclosure-trigger#image",
+      "disclosure-content#search-bar"
+    ]
+  },
+  "disclosure-trigger#image": {
+    "children": [
+      "image#search"
+    ]
+  },
+  "image#search": {
+    "props": {
+      "blockClass": "search-icon",
+      "width": "24px",
+      "src": "assets/search.svg"
+    }
+  },
+  "disclosure-content#search-bar": {
+    "children": [
+      "flex-layout.row#searchBar"
+    ]
+  },
+  "flex-layout.row#searchBar": {
+    "props": {
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.col#search"
+    ]
+  },
+  "flex-layout.col#space": {
+    "props": {
+      "width": "grow"
+    }
+  },
+  "flex-layout.col#search": {
+    "props": {
+      "width": "grow"
+    },
+    "children": [
+      "search-bar"
+    ]
+  },
+  "link#Accedi": {
+    "props": {
+      "href": "/account#"
+    },
+    "children": [
+      "rich-text#login"
+    ]
+  },
+  "rich-text#login": {
+    "props": {
+      "text": "Login / My Account",
+      "blockClass": [
+        "mobileMenu",
+        "buttonCard",
+        "margin"
+      ]
+    }
+  }
+}

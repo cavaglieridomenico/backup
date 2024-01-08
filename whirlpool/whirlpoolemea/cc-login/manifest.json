@@ -1,0 +1,273 @@
+{
+  "vendor": "whirlpoolemea",
+  "name": "cc-login",
+  "version": "1.1.26",
+  "title": "VTEX CC login",
+  "description": "App for managing login of CC users",
+  "mustUpdateAt": "2018-01-04",
+  "categories": [],
+  "dependencies": {
+    "vtex.search-resolver": "1.x",
+    "vtex.rewriter": "1.x",
+    "vtex.styleguide": "9.x",
+    "vtex.css-handles": "0.x",
+    "vtex.render-runtime": "8.x",
+    "vtex.store-graphql": "2.x"
+  },
+  "builders": {
+    "node": "6.x",
+    "docs": "0.x",
+    "messages": "1.x",
+    "store": "0.x",
+    "react": "3.x"
+  },
+  "billingOptions": {
+    "termsURL": "https://compliance.vtex.com/gdpr/policies/vtex-privacy-policy",
+    "support": {
+      "url": "https://support.vtex.com/hc/requests"
+    },
+    "free": true
+  },
+  "scripts": {
+    "prereleasy": "bash lint.sh"
+  },
+  "credentialType": "absolute",
+  "policies": [
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "portal.vtexcommercestable.com.br",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.myvtex.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "vtexid.vtex.com.br",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "portal.vtexcommercebeta.com.br",
+        "path": "*"
+      }
+    },
+    {
+      "name": "ADMIN_DS"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "api.vtex.com",
+        "path": "/dataentities/*"
+      }
+    },
+    {
+      "name": "colossus-fire-event"
+    },
+    {
+      "name": "colossus-write-logs"
+    },
+    {
+      "name": "OMSViewer"
+    },
+    {
+      "name": "vbase-read-write"
+    }
+  ],
+  "settingsSchema": {
+    "title": "Login",
+    "type": "object",
+    "properties": {
+      "authCookie": {
+        "title": "Vtex - Authentication cookie",
+        "type": "string",
+        "default": "VtexIdclientAutCookie_{{account}}"
+      },
+      "inboundCredentials": {
+        "title": "Vtex - Hashed inbound credentials (pattern: key0:token0;key1:token1;...)",
+        "type": "string"
+      },
+      "O2P": {
+        "title": "O2P Settings",
+        "type": "object",
+        "properties": {
+          "hostname": {
+            "title": "Hostname",
+            "type": "string"
+          },
+          "tradePolicyId": {
+            "title": "Trade policy id",
+            "type": "string"
+          }
+        }
+      },
+      "isCCProject": {
+        "title": "CC Project",
+        "type": "boolean"
+      },
+      "EPP": {
+        "title": "EPP Settings",
+        "type": "object",
+        "properties": {
+          "hostname": {
+            "title": "Hostname",
+            "type": "string"
+          },
+          "tradePolicyId": {
+            "title": "Trade policy id",
+            "type": "string"
+          },
+          "ordersLimitNumber": {
+            "title": "Limit on orders - Number of placeable orders",
+            "type": "number"
+          },
+          "ordersLimitDays": {
+            "title": "Limit on orders - Validity (days)",
+            "type": "number"
+          },
+          "recordsMDName": {
+            "title": "Email address list - MD name (e.g. EM)",
+            "type": "string",
+            "default": "EM"
+          },
+          "cluster": {
+            "title": "User's cluster identifier",
+            "type": "string",
+            "default": "EPP"
+          }
+        }
+      },
+      "FF": {
+        "title": "FF Settings",
+        "type": "object",
+        "properties": {
+          "hostname": {
+            "title": "Hostname",
+            "type": "string"
+          },
+          "tradePolicyId": {
+            "title": "Trade policy id",
+            "type": "string"
+          },
+          "ordersLimitNumber": {
+            "title": "Limit on orders - Number of placeable orders",
+            "type": "number"
+          },
+          "ordersLimitDays": {
+            "title": "Limit on orders - Validity (days)",
+            "type": "number"
+          },
+          "recordsMDName": {
+            "title": "Invitations - MD name (e.g. FF)",
+            "type": "string",
+            "default": "FF"
+          },
+          "cluster": {
+            "title": "User's cluster identifier",
+            "type": "string",
+            "default": "FF"
+          }
+        }
+      },
+      "VIP": {
+        "title": "VIP Settings",
+        "type": "object",
+        "properties": {
+          "hostname": {
+            "title": "Hostname",
+            "type": "string"
+          },
+          "tradePolicyId": {
+            "title": "Trade policy id",
+            "type": "string"
+          },
+          "ordersLimitNumber": {
+            "title": "Limit on orders - Number of placeable orders",
+            "type": "number"
+          },
+          "ordersLimitDays": {
+            "title": "Limit on orders - Validity (days)",
+            "type": "number"
+          },
+          "recordsMDName": {
+            "title": "Partner list - MD name (e.g. PA)",
+            "type": "string",
+            "default": "PA"
+          },
+          "invitationToken": {
+            "title": "Access code for invited VIP users",
+            "type": "string",
+            "default": "vipInvitation"
+          },
+          "cluster": {
+            "title": "User's cluster identifier",
+            "type": "string",
+            "default": "VIP"
+          },
+          "checkoutRegistrationEnabled": {
+            "title": "Enable checkout registration ",
+            "type": "boolean",
+            "default": false
+          }
+        }
+      },
+      "llLoggerConstants": {
+        "title": "LL Logger Contants",
+        "type": "object",
+        "properties": {
+          "loginEvent": {
+            "title": "Login Event",
+            "type": "string",
+            "default": "LOGIN"
+          },
+          "signupEvent": {
+            "title": "Registration Event",
+            "type": "string",
+            "default": "SIGN_UP"
+          },
+          "resetPasswordEvent": {
+            "title": "Reset Password Event",
+            "type": "string",
+            "default": "RESET_PASSWORD"
+          },
+          "setPasswordEvent": {
+            "title": "Set Password Event",
+            "type": "string",
+            "default": "SET_PASSWORD"
+          },
+          "increaseOrderNumberEvent": {
+            "title": "Increase Number of Orders Event",
+            "type": "string",
+            "default": "INCREASE_ORDERS"
+          },
+          "autologinEvent": {
+            "title": "Autologin Event",
+            "type": "string",
+            "default": "AUTOLOGIN"
+          },
+          "vipUserUpdate": {
+            "title": "VIP checkout registration update",
+            "type": "string",
+            "default": "VIP_CHECKOUT_REGISTRATION"
+          },
+          "patternsToExcludeExport": {
+            "title": "Logs export - patterns to exclude for the field \"email\" (comma separated)",
+            "type": "string",
+            "default": "test,yopmail"
+          }
+        }
+      }
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

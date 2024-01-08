@@ -1,0 +1,633 @@
+{
+  "store.custom#service": {
+    "blocks": [
+      // "breadcrumb-custom#service",
+      "flex-layout.row#breadcrumb-container",
+      "flex-layout.row#head",
+      // "slider-layout#serviceBanners",
+      "toggle-layout#bannerSliderPromo",
+      "toggle-layout#servicePrograms",
+      "flex-layout.row#space",
+      "toggle-layout#service-locator"
+    ]
+  },
+  "toggle-layout#bannerSliderPromo": {
+    "props": {
+      "visible": true
+    },
+    "children": ["slider-layout#bannerPromo"]
+  },
+  "toggle-layout#servicePrograms": {
+    "props": {
+      "visible": true
+    },
+    "children": ["flex-layout.row#servicePrograms"]
+  },
+  "slider-layout#bannerPromo": {
+    "props": {
+      "totalItems": 2,
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "autoplay": {
+        "timeout": 3000,
+        "stopOnHover": false
+      },
+      "infinite": true,
+      "showPaginationDots": "mobileOnly",
+      "showNavigationArrows": "desktopOnly",
+      "blockClass": "imageCarousel"
+    },
+    "children": ["toggle-layout#bannerNewHome1", "toggle-layout#bannerNewHome2"]
+  },
+  "toggle-layout#bannerNewHome1": {
+    "children": ["flex-layout.row#bannerNewHome"]
+  },
+  "toggle-layout#bannerNewHome2": {
+    "children": ["flex-layout.row#bannerNewHome"]
+  },
+  "flex-layout.row#bannerNewHome": {
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": [
+        "columnPostillaBannerAntonio",
+        "bgColorAntonioHero2",
+        "bannerNewHomepage"
+      ]
+    },
+    "children": [
+      "flex-layout.col#rightPartbannerNewHome",
+      "flex-layout.col#leftPartbannerNewHome"
+    ]
+  },
+  "flex-layout.col#leftPartbannerNewHome": {
+    "props": {
+      "width": "50%",
+      "preventVerticalStretch": true,
+      "blockClass": ["columnPostilla", "columnPostillaBottom"]
+    },
+    "children": [
+      "rich-text#BanntitleParag2",
+      "rich-text#BannDesc",
+      // "experimental__visibility-layout#pricesBannerHome",
+      "experimental__visibility-layout#ButtonBannerWithPostillaNew"
+      // "experimental__visibility-layout#warrantyLogo"
+    ]
+  },
+
+  "experimental__visibility-layout#pricesBannerHome": {
+    "props": {
+      "visible": true
+    },
+    "children": ["flex-layout.row#pricesBannerHome"]
+  },
+  "flex-layout.row#pricesBannerHome": {
+    "props": {
+      "width": "100%",
+      "preventVerticalStretch": true,
+      "blockClass": ["pricesBannerHome"]
+    },
+    "children": ["flex-layout.col#prices", "flex-layout.col#postillaHP"]
+  },
+  "flex-layout.col#prices": {
+    "props": {
+      "width": "40%",
+      "preventVerticalStretch": true,
+      "blockClass": [""]
+    },
+    "children": ["rich-text#BannListPrice", "rich-text#BannPrice"]
+  },
+  "flex-layout.col#postillaHP": {
+    "props": {
+      "width": "60%",
+      "preventVerticalStretch": true,
+      "blockClass": ["descBannerPostillaHP"]
+    },
+    "children": ["rich-text#BannDesc2"]
+  },
+  "rich-text#BannDesc2": {
+    "props": {
+      "text": "*Descrizione",
+      "blockClass": "descBannerPostillaHP"
+    }
+  },
+  "flex-layout.col#rightPartbannerNewHome": {
+    "props": {
+      "width": "50%",
+      "blockClass": ["columnPostillaImage", "columnPostillaImageHomeBanner"]
+    },
+    "children": ["image#bannerPostilla2"]
+  },
+  "image#bannerPostilla2": {
+    "props": {
+      "src": "assets/postillaBanner/frigoBannerPostilla.jpg",
+      "blockClass": ["imagePostillaBanner2"]
+    }
+  },
+  "rich-text#BanntitleParag2": {
+    "props": {
+      "text": "# Titolo",
+      "blockClass": "titlePBannerPostillaNewHP"
+    }
+  },
+  "experimental__visibility-layout#ButtonBannerWithPostillaNew": {
+    "props": {
+      "visible": true
+    },
+    "children": ["link#ButtonBannNew"]
+  },
+  "link#ButtonBannNew": {
+    "props": {
+      "label": "TESTO BOTTONE",
+      "href": "#",
+      "displayMode": "button",
+      "blockClass": ["postillaButton", "noMargin"]
+    }
+  },
+  "experimental__visibility-layout#warrantyLogo": {
+    "props": {
+      "visible": true
+    },
+    "children": ["flex-layout.row#warrantyLogo"]
+  },
+  "flex-layout.row#warrantyLogo": {
+    "props": {
+      "preventVerticalStretch": true,
+      "blockClass": ["warrantyLogo"]
+    },
+    "children": ["image#warranty5yearsPLP2"]
+  },
+  "image#warranty5yearsPLP2": {
+    "props": {
+      "src": "assets/logo-warranty.svg",
+      "maxHeight": 60,
+      "blockClass": "garantieLogo"
+    }
+  },
+  "rich-text#BannListPrice": {
+    "props": {
+      "text": "799 €",
+      "blockClass": "NewHPListPrice"
+    }
+  },
+  "rich-text#BannPrice": {
+    "props": {
+      "text": "699 €",
+      "blockClass": "NewHPPrice"
+    }
+  },
+  "toggle-layout#service-locator": {
+    "title": "service locator",
+    "children": ["service-locator", "link#France"]
+  },
+  "breadcrumb-custom#service": {
+    "props": {
+      "showOnMobile": false,
+      "categories": ["/services"],
+      "blockClass": [
+        "contentBreadcrumb",
+        "breadcrumbContainer",
+        "serviceBreadcrumb"
+      ]
+    }
+  },
+  "flex-layout.row#head": {
+    "children": ["rich-text#title-service", "flex-layout.row#brands"],
+    "props": {
+      "blockClass": "serviceHeadContainer"
+    }
+  },
+  "rich-text#title-service": {
+    "props": {
+      "text": "# Official service from a manufacturer of household appliances",
+      "blockClass": "serviceTitle"
+    }
+  },
+  "flex-layout.row#brands": {
+    "children": [
+      "image#whirlpool-logo",
+      "image#indesit-logo",
+      "image#hotpoint-logo-2",
+      "image#kitchenaid-logo"
+    ],
+    "props": {
+      "blockClass": "serviceBrandsContainer"
+    }
+  },
+  "image#whirlpool-logo": {
+    "props": {
+      "src": "assets/brands/Whirlpool logo.svg",
+      "blockClass": "serviceLogoWhirlpool"
+    }
+  },
+  "image#indesit-logo": {
+    "props": {
+      "src": "assets/brands/Indesit logo.svg",
+      "blockClass": "serviceLogoIndesit"
+    }
+  },
+  "image#hotpoint-logo-2": {
+    "props": {
+      "src": "/arquivos/hotpoint.png",
+      "blockClass": "serviceLogoHotpoint"
+    }
+  },
+  "image#kitchenaid-logo": {
+    "props": {
+      "src": "assets/brands/KitchenAid logo.svg",
+      "blockClass": "serviceLogoKitchenAid"
+    }
+  },
+  "slider-layout#serviceBanners": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "showNavigationArrows": "desktopOnly",
+      "showPaginationDots": "always",
+      "blockClass": ["serviceSlider"]
+    },
+    "children": ["flex-layout.row#firstBanner", "flex-layout.row#secondBanner"]
+  },
+  "flex-layout.row#firstBanner": {
+    "children": ["info-card#firstBanner", "modal-trigger#repair-scrap-modal"]
+  },
+  "flex-layout.row#secondBanner": {
+    "children": ["info-card#secondBanner"]
+  },
+  "info-card#firstBanner": {
+    "props": {
+      "id": "firstBanner",
+      "isFullModeStyle": true,
+      "imageUrl": "assets/service/first-banner-Desktop.svg",
+      "mobileImageUrl": "assets/service/first-banner-Mobile.svg",
+      "blockClass": "serviceBannerImage",
+      "callToActionMode": "none"
+    }
+  },
+  "info-card#secondBanner": {
+    "props": {
+      "id": "secondBanner",
+      "isFullModeStyle": true,
+      "imageUrl": "assets/service/second-banner-Desktop.svg",
+      "mobileImageUrl": "assets/service/second-banner-Mobile.svg",
+      "blockClass": "serviceBannerImage",
+      "callToActionMode": "none"
+    }
+  },
+  "rich-text#scrap-modal-trigger": {
+    "props": {
+      "text": "**Оставить заявку**",
+      "textPosition": "CENTER",
+      "blockClass": "serviceModalButton"
+    }
+  },
+  "modal-trigger#repair-scrap-modal": {
+    "children": ["modal-layout#service-programs-modal"],
+    "props": {
+      "blockClass": "repairScrapModalContainer"
+    }
+  },
+  "rich-text#repair-scrap-modal-trigger": {
+    "props": {
+      "text": "**Заявка на ремонт**",
+      "textPosition": "CENTER",
+      "blockClass": "serviceModalButton"
+    }
+  },
+
+  "flex-layout.row#servicePrograms": {
+    "children": [
+      "toggle-layout#title-service-programs",
+      "flex-layout.row#service-programs-cards"
+    ],
+    "props": {
+      "blockClass": "serviceProgramsContainer"
+    }
+  },
+  "toggle-layout#title-service-programs": {
+    "children": ["rich-text#title-service-programs"]
+  },
+  "rich-text#title-service-programs": {
+    "props": {
+      "text": "## Our service programs",
+      "textPosition": "CENTER",
+      "blockClass": "serviceProgramsTitle"
+    }
+  },
+  "flex-layout.row#service-programs-cards": {
+    "children": [
+      "flex-layout.row#service-programs-firstCard",
+      "flex-layout.row#service-programs-secondCard",
+      "flex-layout.row#service-programs-thirdCard"
+    ],
+    "props": {
+      "blockClass": "serviceProgramsCardsContainer"
+    }
+  },
+  "flex-layout.row#service-programs-firstCard": {
+    "children": [
+      "logo#wrenchIcon",
+      "flex-layout.row#service-programs-firstTitle-container",
+      "rich-text#service-programs-firstCard-badge",
+      "rich-text#service-programs-firstCard-firstDesc",
+      "rich-text#service-programs-firstCard-secondDesc",
+      "rich-text#service-programs-firstCard-price",
+      "modal-trigger#service-programs-modal-trigger",
+      "flex-layout.row#service-programs-firstCard-bottomDesc"
+    ],
+    "props": {
+      "blockClass": ["serviceProgramsCard"]
+    }
+  },
+  "logo#wrenchIcon": {
+    "props": {
+      "title": "Logo",
+      "url": "assets/wrench.svg",
+      "blockClass": ["wrenchIcon"]
+    }
+  },
+  "flex-layout.row#service-programs-firstTitle-container": {
+    "children": [
+      "rich-text#service-programs-firstCard-title",
+      "tooltip#service-programs-tooltip-firstCard"
+    ],
+    "props": {
+      "blockClass": ["serviceProgramsTitleContainer"]
+    }
+  },
+  "rich-text#service-programs-firstCard-title": {
+    "props": {
+      "text": "**No worries**",
+      "textPosition": "CENTER",
+      "blockClass": "serviceProgramsCardTitle"
+    }
+  },
+  "rich-text#service-programs-firstCard-badge": {
+    "props": {
+      "text": "For equipment under warranty",
+      "textPosition": "CENTER",
+      "blockClass": [
+        "serviceProgramsCardGreenBadge",
+        "serviceProgramsCardBadge"
+      ]
+    }
+  },
+  "rich-text#service-programs-firstCard-firstDesc": {
+    "props": {
+      "text": "Diagnostics, repair, spare parts during the program period.",
+      "textPosition": "CENTER",
+      "blockClass": "serviceProgramsCardFirstDesc"
+    }
+  },
+  "rich-text#service-programs-firstCard-secondDesc": {
+    "props": {
+      "text": "***For equipment within 10 years from the date of purchase.***",
+      "textPosition": "CENTER",
+      "blockClass": "serviceProgramsCardSecondDesc"
+    }
+  },
+  "rich-text#service-programs-firstCard-price": {
+    "props": {
+      "text": "*250 ₽/мес*",
+      "textPosition": "CENTER",
+      "blockClass": "serviceProgramsCardPrice"
+    }
+  },
+  "flex-layout.row#service-programs-secondCard": {
+    "children": [
+      "logo#wrenchIcon",
+      "flex-layout.row#service-programs-secondTitle-container",
+      "rich-text#service-programs-secondCard-badge",
+      "rich-text#service-programs-secondCard-firstDesc",
+      "rich-text#service-programs-secondCard-secondDesc",
+      "flex-layout.row#service-programs-secondCard-price",
+      "modal-trigger#service-programs-modal-trigger",
+      "rich-text#service-programs-secondCard-bottomDesc"
+    ],
+    "props": {
+      "blockClass": ["serviceProgramsCard"]
+    }
+  },
+  "flex-layout.row#service-programs-secondTitle-container": {
+    "children": [
+      "rich-text#service-programs-secondCard-title",
+      "tooltip#service-programs-tooltip-secondCard"
+    ],
+    "props": {
+      "blockClass": ["serviceProgramsTitleContainer"]
+    }
+  },
+  "rich-text#service-programs-secondCard-title": {
+    "props": {
+      "text": "**All inclusive**",
+      "textPosition": "CENTER",
+      "blockClass": "serviceProgramsCardTitle"
+    }
+  },
+  "rich-text#service-programs-secondCard-badge": {
+    "props": {
+      "text": "For non-warranty equipment",
+      "textPosition": "CENTER",
+      "blockClass": ["serviceProgramsCardBadge", "serviceProgramsCardRedBadge"]
+    }
+  },
+  "rich-text#service-programs-secondCard-firstDesc": {
+    "props": {
+      "text": "Diagnostics, repair, spare parts during the program period.",
+      "textPosition": "CENTER",
+      "blockClass": "serviceProgramsCardFirstDesc"
+    }
+  },
+  "rich-text#service-programs-secondCard-secondDesc": {
+    "props": {
+      "text": "***For equipment within 10 years from the date of purchase.***",
+      "textPosition": "CENTER",
+      "blockClass": "serviceProgramsCardSecondDesc"
+    }
+  },
+  "flex-layout.row#service-programs-secondCard-price": {
+    "children": [
+      "rich-text#service-programs-secondCard-price-prefix",
+      "rich-text#service-programs-secondCard-price-suffix"
+    ],
+    "props": {
+      "blockClass": ["serviceProgramsCardPriceContainer"]
+    }
+  },
+  "rich-text#service-programs-secondCard-price-prefix": {
+    "props": {
+      "text": "*взнос 4 892 ₽*",
+      "textPosition": "CENTER",
+      "blockClass": "serviceProgramsCardPricePrefix"
+    }
+  },
+  "rich-text#service-programs-secondCard-price-suffix": {
+    "props": {
+      "text": "+528 ₽/мес",
+      "textPosition": "CENTER",
+      "blockClass": "serviceProgramsCardPriceSuffix"
+    }
+  },
+  "flex-layout.row#service-programs-thirdCard": {
+    "children": [
+      "logo#wrenchIcon",
+      "flex-layout.row#service-programs-thirdTitle-container",
+      "rich-text#service-programs-thirdCard-badge",
+      "rich-text#service-programs-thirdCard-firstDesc",
+      "rich-text#service-programs-thirdCard-secondDesc",
+      "rich-text#service-programs-thirdCard-price",
+      "modal-trigger#service-programs-modal-trigger",
+      "flex-layout.row#service-programs-thirdCard-bottomDesc"
+    ],
+    "props": {
+      "blockClass": ["serviceProgramsCard"]
+    }
+  },
+  "flex-layout.row#service-programs-thirdTitle-container": {
+    "children": [
+      "rich-text#service-programs-thirdCard-title",
+      "tooltip#service-programs-tooltip-thirdCard"
+    ],
+    "props": {
+      "blockClass": ["serviceProgramsTitleContainer"]
+    }
+  },
+  "rich-text#service-programs-thirdCard-title": {
+    "props": {
+      "text": "**Single tariff**",
+      "textPosition": "CENTER",
+      "blockClass": "serviceProgramsCardTitle"
+    }
+  },
+  "rich-text#service-programs-thirdCard-badge": {
+    "props": {
+      "text": "For non-warranty equipment",
+      "textPosition": "CENTER",
+      "blockClass": ["serviceProgramsCardRedBadge", "serviceProgramsCardBadge"]
+    }
+  },
+  "rich-text#service-programs-thirdCard-firstDesc": {
+    "props": {
+      "text": "Diagnostics, repair, spare parts.",
+      "textPosition": "CENTER",
+      "blockClass": "serviceProgramsCardFirstDesc"
+    }
+  },
+  "rich-text#service-programs-thirdCard-secondDesc": {
+    "props": {
+      "text": "***One time repair***",
+      "textPosition": "CENTER",
+      "blockClass": "serviceProgramsCardSecondDesc"
+    }
+  },
+  "rich-text#service-programs-thirdCard-price": {
+    "props": {
+      "text": "*9 200 ₽*",
+      "textPosition": "CENTER",
+      "blockClass": "serviceProgramsCardPrice"
+    }
+  },
+  "modal-trigger#service-programs-modal-trigger": {
+    "children": [
+      "rich-text#service-programs-modal-trigger",
+      "modal-layout#service-programs-modal"
+    ]
+  },
+  "rich-text#service-programs-modal-trigger": {
+    "props": {
+      "text": "**Make a request**",
+      "textPosition": "CENTER",
+      "blockClass": "serviceProgramsTrigger"
+    }
+  },
+
+  "modal-layout#service-programs-modal": {
+    "children": ["modal-header#service-programs-modal", "contact-us-form"],
+    "props": {
+      "blockClass": "serviceModalContainer"
+    }
+  },
+  "modal-header#service-programs-modal": {
+    "props": {
+      "showCloseIcon": true,
+      "iconCloseSize": 25,
+      "blockClass": "serviceModalHeader"
+    }
+  },
+  "tooltip#service-programs-tooltip-firstCard": {
+    "blocks": ["rich-text#service-programs-tooltip-text-firstCard"],
+    "props": {
+      "isOnRight": true
+    }
+  },
+  "rich-text#service-programs-tooltip-text-firstCard": {
+    "props": {
+      "text": "\n \n [Узнать подробнее](https://www.whirlpoolgroup.ru/support/services#s1)",
+      "blockClass": ["withLink", "testoTooltip"]
+    }
+  },
+  "tooltip#service-programs-tooltip-secondCard": {
+    "blocks": ["rich-text#service-programs-tooltip-text-secondCard"],
+    "props": {
+      "isOnRight": true
+    }
+  },
+  "rich-text#service-programs-tooltip-text-secondCard": {
+    "props": {
+      "text": "\n \n [Узнать подробнее](https://www.whirlpoolgroup.ru/support/services#s2)",
+      "blockClass": ["withLink", "testoTooltip"]
+    }
+  },
+  "tooltip#service-programs-tooltip-thirdCard": {
+    "blocks": ["rich-text#service-programs-tooltip-text-thirdCard"],
+    "props": {
+      "isOnRight": true
+    }
+  },
+  "rich-text#service-programs-tooltip-text-thirdCard": {
+    "props": {
+      "text": "\n \n [Узнать подробнее](https://www.whirlpoolgroup.ru/support/services#s3)",
+      "blockClass": ["withLink", "testoTooltip"]
+    }
+  },
+  "tooltip#service-programs-tooltip-fourthCard": {
+    "blocks": ["rich-text#service-programs-tooltip-text-fourthCard"],
+    "props": {
+      "isOnRight": true
+    }
+  },
+  "rich-text#service-programs-tooltip-text-fourthCard": {
+    "props": {
+      "text": "\n \n [Узнать подробнее](https://www.whirlpoolgroup.ru/support/services#s4)",
+      "blockClass": ["withLink", "testoTooltip"]
+    }
+  },
+  "flex-layout.row#service-programs-firstCard-bottomDesc": {
+    "props": {
+      "blockClass": "serviceProgramsCardBottomDesc"
+    }
+  },
+  "rich-text#service-programs-secondCard-bottomDesc": {
+    "props": {
+      "text": "В зависимости от возраста техники",
+      "textPosition": "CENTER",
+      "blockClass": "serviceProgramsCardBottomDesc"
+    }
+  },
+  "flex-layout.row#service-programs-thirdCard-bottomDesc": {
+    "props": {
+      "blockClass": "serviceProgramsCardBottomDesc"
+    }
+  },
+  "flex-layout.row#service-programs-fourthCard-bottomDesc": {
+    "props": {
+      "blockClass": "serviceProgramsCardBottomDesc"
+    }
+  }
+}

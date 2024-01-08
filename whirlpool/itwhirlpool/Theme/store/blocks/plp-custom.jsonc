@@ -1,0 +1,340 @@
+{
+  "store.custom.product-comparison#plpCustom": {
+    "blocks": [
+      "search-result-layout.customQuery#plpCustom",
+      "newsletter-popup#footer"
+    ],
+    "props": {
+      "context": {
+        "skusFilter": "ALL",
+        "simulationBehavior": "default",
+        "maxItemsPerPage": 20,
+        "__unstableProductOriginVtex": true
+      }
+    }
+  },
+  "search-result-layout.customQuery#plpCustom": {
+    "blocks": [
+      "search-result-layout.desktop.product-comparison#plpCustom",
+      "search-result-layout.mobile#plpCustom",
+      "search-not-found-layout"
+    ],
+    "props": {
+      "querySchema": {
+        "orderByField": "OrderByReleaseDateDESC",
+        "hideUnavailableItems": true,
+        "maxItemsPerPage": 20
+      }
+    }
+  },
+  "search-result-layout.desktop.product-comparison#plpCustom": {
+    "children": [
+      // "plp-structured-data",
+      "flex-layout.row#searchbread",
+      "toggle-layout#plpCustomBanner-desktop",
+      "__fold__.experimentalLazyAssets",
+      "flex-layout.row#plpCustomResult",
+      "toggle-layout#plpCustomSEO",
+      "product-comparison-drawer"
+    ],
+    "props": {
+      "showFacetQuantity": true,
+      "pagination": "show-more",
+      "preventRouteChange": true,
+      "defaultGalleryLayout": "grid",
+      "hiddenFacets": {
+        "priceRange": false,
+        "specificationFilters": {
+          "hiddenFilters": [
+            {
+              "name": "Capacità di carico (asciugatura) (kg):"
+            },
+            {
+              "name": "apacità di carico (kg):"
+            },
+            {
+              "name": "Capacità di raffreddamento (BTU):"
+            },
+            {
+              "name": "Altezza:"
+            },
+            {
+              "name": "Capacità (l):"
+            },
+            {
+              "name": "Colore:"
+            },
+            {
+              "name": "Efficenza energetica (in raffreddamento):"
+            },
+            {
+              "name": "Frost Free:"
+            },
+            {
+              "name": "Inverter:"
+            },
+            {
+              "name": "Larghezza (cm):"
+            },
+            {
+              "name": "Numero zone di cottura:"
+            },
+            {
+              "name": "Posizione dei comandi:"
+            },
+            {
+              "name": "Promozione"
+            },
+            {
+              "name": "Tipo di asciugatura:"
+            },
+            {
+              "name": "Tipo di elettrodomestico:"
+            },
+            {
+              "name": "Tipo di piano cottura:"
+            },
+            {
+              "name": "Tipologia:"
+            },
+            {
+              "name": "Velocità di centrifuga:"
+            },
+            {
+              "name": "Ventilato:"
+            },
+            {
+              "name": "DISPONIBILITÀ"
+            },
+            {
+              "name": "Funzioni Speciali:"
+            },
+            {
+              "name": "RECENSIONI"
+            },
+            {
+              "name": "Capacità di aspirazione massima (m3h):"
+            },
+            {
+              "name": "Capacità di carico (kg):"
+            },
+            {
+              "name": "Larghezza:"
+            },
+            {
+              "name": "Modalità di carico:"
+            },
+            {
+              "name": "No Frost:"
+            },
+            {
+              "name": "Profondità:"
+            },
+            {
+              "name": "Sistema di cottura:"
+            },
+            {
+              "name": "Tecnologia auto-pulente:"
+            },
+            {
+              "name": "Tipo di forno:"
+            },
+            {
+              "name": "Tipologia installazione:"
+            },
+            {
+              "name": "Profondità (cm):"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "search-result-layout.mobile#plpCustom": {
+    "children": [
+      "flex-layout.row#searchbread",
+      "experimental__visibility-layout#CarouselPLP",
+      "__fold__.experimentalLazyAssets",
+      "toggle-layout#plpCustomBanner-mobile",
+      "flex-layout.row#searchinfomobile",
+      "flex-layout.row#productCountMobile",
+      "flex-layout.row#contentmobile",
+      "flex-layout.row#fetchmore",
+      "toggle-layout#plpCustomSEO",
+      "link#chat"
+      //"analytics#plp"
+    ],
+    "props": {
+      "pagination": "show-more",
+      "preventRouteChange": true,
+      "mobileLayout": {
+        "mode1": "small",
+        "mode2": "normal"
+      },
+      "hiddenFacets": {
+        "specificationFilters": {
+          "hiddenFilters": [
+            {
+              "name": "Capacità di carico (asciugatura) (kg):"
+            },
+            {
+              "name": "apacità di carico (kg):"
+            },
+            {
+              "name": "Capacità di raffreddamento (BTU):"
+            },
+            {
+              "name": "Altezza:"
+            },
+            {
+              "name": "Capacità (l):"
+            },
+            {
+              "name": "Colore:"
+            },
+            {
+              "name": "Efficenza energetica (in raffreddamento):"
+            },
+            {
+              "name": "Frost Free:"
+            },
+            {
+              "name": "Inverter:"
+            },
+            {
+              "name": "Larghezza (cm):"
+            },
+            {
+              "name": "Numero zone di cottura:"
+            },
+            {
+              "name": "Posizione dei comandi:"
+            },
+            {
+              "name": "Promozione"
+            },
+            {
+              "name": "Tipo di asciugatura:"
+            },
+            {
+              "name": "Tipo di elettrodomestico:"
+            },
+            {
+              "name": "Tipo di piano cottura:"
+            },
+            {
+              "name": "Tipologia:"
+            },
+            {
+              "name": "Velocità di centrifuga:"
+            },
+            {
+              "name": "Ventilato:"
+            },
+            {
+              "name": "DISPONIBILITÀ"
+            },
+            {
+              "name": "Funzioni Speciali:"
+            },
+            {
+              "name": "RECENSIONI"
+            },
+            {
+              "name": "Capacità di aspirazione massima (m3h):"
+            },
+            {
+              "name": "Capacità di carico (kg):"
+            },
+            {
+              "name": "Larghezza:"
+            },
+            {
+              "name": "Modalità di carico:"
+            },
+            {
+              "name": "No Frost:"
+            },
+            {
+              "name": "Profondità:"
+            },
+            {
+              "name": "Sistema di cottura:"
+            },
+            {
+              "name": "Tecnologia auto-pulente:"
+            },
+            {
+              "name": "Tipo di forno:"
+            },
+            {
+              "name": "Tipologia installazione:"
+            },
+            {
+              "name": "Profondità (cm):"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "flex-layout.row#plpCustomResult": {
+    "children": [
+      "flex-layout.col#plpCustomFilter",
+      "flex-layout.col#plpCustomContent"
+    ],
+    "props": {
+      "preventHorizontalStretch": true,
+      "fullWidth": true,
+      "blockClass": "paddingSearch"
+    }
+  },
+  "flex-layout.col#plpCustomFilter": {
+    "children": ["filter-navigator.v3"],
+    "props": {
+      "blockClass": "filterCol"
+    }
+  },
+  "flex-layout.col#plpCustomContent": {
+    "children": [
+      "flex-layout.row#searchinfo",
+      "flex-layout.row#fetchprevious",
+      "flex-layout.row#products",
+      "flex-layout.row#newProductCard",
+      "flex-layout.row#fetchmore",
+      "flex-layout.row#space"
+    ],
+    "props": {
+      "width": "grow",
+      "preventVerticalStretch": true
+    }
+  },
+  "toggle-layout#plpCustomSEO": {
+    "children": ["rich-text#plpCustomSEO"]
+  },
+  "toggle-layout#plpCustomBanner-desktop": {
+    "children": ["info-card#plpCustomBanner"]
+  },
+  "toggle-layout#plpCustomBanner-mobile": {
+    "children": ["flex-layout.row#bannerAdvantageForYou"]
+  },
+  "info-card#plpCustomBanner": {
+    "props": {
+      "id": "hero-banner-main-search",
+      "isFullModeStyle": false,
+      "textPosition": "left",
+      "imageUrl": "assets/supremecareHEROlarge.jpg",
+      "headline": "Supreme Care",
+      "subhead": "La lavatrice più silenziosa",
+      "callToActionMode": "none",
+      "blockClass": ["heroBanner", "heroBannerSearch"],
+      "textAlignment": "left"
+    }
+  },
+  "rich-text#plpCustomSEO": {
+    "props": {
+      "text": "### Forni Whirlpool \n Il forno da incasso costituisce un elemento imprescindibile per uno spazio moderno dedicato alla cucina, e Whirlpool propone una linea ricca di modelli e soluzioni pensati per venire incontro a ogni necessità: Forni a vapore e tradizionali completi di tutte le più avanzate funzioni di cottura, studiati per garantirti le performance di cui hai bisogno per qualsiasi ricetta.\n Con la nostra gamma di forni a vapore puoi preparare piatti deliziosi: scopri la combinazione di cottura tradizionale e a vapore, cucina piatti sani e deliziosi, preservando tutte le proprietà organolettiche degli ingredienti. Dai dolci e le torte agli arrosti di carne, dai piatti di pesce fino al pane fatto in casa; le numerose funzioni ti permettono di scegliere sempre il programma di cottura più adatto a ogni ricetta. \n Lasciati stupire dalla tecnologia 6° Senso dei forni multifunzione di Whirlpool: le ricette pre-programmate regolano autonomamente il riscaldamento e la durata del ciclo, mentre la lampada alogena interna è studiata per assicurarti la migliore illuminazione riducendo allo stesso tempo il consumo energetico. Immancabili le funzioni di pre-riscaldamento e la tecnologia autopulente pirolitica, pensate per farti risparmiare tempo: la prima consente di raggiungere velocemente la temperatura desiderata, mentre la seconda ti viene incontro nella pulizia dello spazio interno, aiutandoti a rimuovere anche i residui e lo sporco più ostinato. \n La massima praticità incontra il design accattivante e moderno: i forni a incasso di Whirlpool si integrano facilmente in ogni ambiente, completando il [piano cottura per la cucina](https://www.whirlpool.it/prodotti/cottura/piani-cottura)  e sposandosi alla perfezione con le linee dell’arredo contemporaneo. I colori vanno dall’elegante nero al brillante acciaio, con una gamma di proposte e combinazioni che ti permette di trovare con facilità quello più adatto ai tuoi gusti estetici. Scopri i forni Whirlpool sul catalogo online: scegli il meglio per la tua casa.",
+      "blockClass": "seoTexGatePageHub"
+    }
+  }
+}

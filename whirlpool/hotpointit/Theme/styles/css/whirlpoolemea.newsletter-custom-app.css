@@ -1,0 +1,153 @@
+/*
+  NEWSLETTER FORM
+*/
+/* Main container */
+.container__form {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 1.5rem 0.5rem;
+  overflow: hidden;
+}
+
+/* Title */
+.form__title {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: hotpointMedium;
+  letter-spacing: .2rem;
+  margin: 0.6rem;
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+  .form__title {
+    font-size: 2.1rem;
+  }
+}
+
+/* Subtitle */
+.headingLevel4 {
+  margin: 0.5rem auto 1.5rem auto;
+  text-align: center;
+  font-family: hotpointRegular;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Form inputs */
+.container__form-input {
+  min-height: 65px;
+}
+
+.container__form-input :global(.vtex-input-prefix__group) {
+  border: none;
+}
+
+.container__form-input--error :global(.vtex-input-prefix__group) {
+  border: 2px solid #ff4c4c;
+}
+
+.container__form-input :global(.vtex-styleguide-9-x-input) {
+  line-height: initial;
+}
+
+.container__form-input :global(.vtex-input__error) {
+  display: block;
+  color: red;
+  margin-top: 0;
+  margin-left: 20px;
+  font-size: .8rem;
+}
+
+/* Privacy section */
+.container__text-privacy .paragraph {
+  text-align: justify;
+  font-family: hotpointRegular;
+  color: #505050;
+  font-size: .8rem;
+}
+
+.link {
+  text-decoration: none;
+  color: #b24c24;
+}
+
+.container__text-messages--error {
+  text-align: center;
+  font-family: hotpointMedium;
+  background: red;
+  color: #fff !important;
+  border-radius: unset;
+  width: 100%;
+  padding: 0.5rem;
+  margin: auto;
+  margin-top: 0.5rem;
+}
+
+.text__message-error {
+  color: #fff !important;
+}
+
+/* Privacy checkbox */
+.container__form-checkbox .paragraph {
+  text-align: justify;
+  font-family: hotpointRegular;
+  color: #505050;
+  font-size: .8rem;
+  margin: 0px !important;
+}
+
+.container__form-checkbox {
+  text-align: justify;
+}
+
+.container__form-checkbox--error :global(.vtex-checkbox__box-wrapper) {
+  border: 1px solid #ff4c4c;
+}
+
+.container__form-checkbox--error {
+  background: white;
+  padding: 0.5rem;
+  outline: #ff4c4c solid 2px;
+  border-radius: 0.25rem;
+}
+
+/* After submit messages */
+.text__message-success {
+  color: #b24c24;
+  font-weight: 400;
+}
+
+/*
+  ----------------------------
+*/
+
+/*
+  NEWSLETTER BUTTON
+*/
+.container__btn :global(.vtex-button) {
+  background: #b24c24;
+  transition: all .5s ease-in-out;
+  border-radius: 11px;
+}
+
+/*
+  -----------------------------
+*/
+
+/*
+  NEWSLETTER AUTOMATIC POPUP
+*/
+:global(.vtex-modal__modal) {
+  max-width: 46rem !important;
+  border-radius: 2rem;
+  overflow-x: hidden;
+  padding: unset !important;
+}
+
+:global(.vtex-styleguide-9-x-scrollBar) {
+  padding: 0rem !important;
+}
+
+/*
+  -----------------------------
+*/

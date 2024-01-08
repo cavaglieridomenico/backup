@@ -1,0 +1,336 @@
+{
+  "vendor": "whirlpoolemea",
+  "name": "catalog-export",
+  "version": "1.0.5",
+  "title": "Catalog export",
+  "description": "Catalog export",
+  "builders": {
+    "admin": "0.x",
+    "react": "3.x",
+    "messages": "1.x",
+    "docs": "0.x",
+    "node": "6.x"
+  },
+  "dependencies": {
+    "vtex.styleguide": "9.x"
+  },
+  "registries": [
+    "smartcheckout"
+  ],
+  "policies": [
+    {
+      "name": "ADMIN_DS"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.vtexcommercestable.com.br",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "api.vtex.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "portal.vtexcommercestable.com.br",
+        "path": "*"
+      }
+    },
+    {
+      "name": "colossus-fire-event"
+    },
+    {
+      "name": "colossus-write-logs"
+    }
+  ],
+  "settingsSchema": {
+    "title": "Catalog export",
+    "type": "object",
+    "properties": {
+      "mp": {
+        "title": "Marketplace",
+        "type": "object",
+        "properties": {
+          "hostname": {
+            "title": "Hostname",
+            "type": "string"
+          },
+          "apiKey": {
+            "title": "VTEX - Api key (read app's documentation)",
+            "type": "string"
+          },
+          "apiToken": {
+            "title": "VTEX - Api token (read app's documentation)",
+            "type": "string"
+          },
+          "salesChannelsIds": {
+            "title": "Sales channels ids (comma separated)",
+            "type": "string"
+          },
+          "servicesIds": {
+            "title": "Services ids (comma separated)",
+            "type": "string"
+          }
+        }
+      },
+      "sellableMap": {
+        "title": "Sellable Map",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "key": {
+              "title": "Key",
+              "type": "string"
+            },
+            "value": {
+              "title": "Value",
+              "type": "string"
+            }
+          }
+        },
+        "default": [
+          {
+            "key": "EPP",
+            "value": "sellableEPP"
+          },
+          {
+            "key": "FF",
+            "value": "sellableFF"
+          },
+          {
+            "key": "VIP",
+            "value": "sellableVIP"
+          }
+        ]
+      },
+      "isCCProject": {
+        "title": "CC Project",
+        "type": "boolean"
+      },
+      "seller": {
+        "title": "Seller",
+        "type": "object",
+        "properties": {
+          "accountName": {
+            "title": "Account name",
+            "type": "string"
+          },
+          "apiKey": {
+            "title": "Encrypted Api key (read app's documentation)",
+            "type": "string"
+          },
+          "apiToken": {
+            "title": "Encrypted Api token (read app's documentation)",
+            "type": "string"
+          }
+        }
+      },
+      "catalogExportFields": {
+        "title": "Catalog Export Fields Checklist (fill the columns you want to export)",
+        "type": "object",
+        "properties": {
+          "skuId": {
+            "title": "Sku Id",
+            "type": "boolean",
+            "default": true
+          },
+          "productId": {
+            "title": "Product Id",
+            "type": "boolean",
+            "default": true
+          },
+          "12nc": {
+            "title": "12nc",
+            "type": "boolean",
+            "default": true
+          },
+          "commercialCode": {
+            "title": "Commercial Code",
+            "type": "boolean",
+            "default": true
+          },
+          "description": {
+            "title": "Description",
+            "type": "boolean",
+            "default": true
+          },
+          "category": {
+            "title": "Category",
+            "type": "boolean",
+            "default": true
+          },
+          "brand": {
+            "title": "Brand",
+            "type": "boolean",
+            "default": true
+          },
+          "constructionType": {
+            "title": "Construction type",
+            "type": "boolean",
+            "default": true
+          },
+          "visible": {
+            "title": "Visibile",
+            "type": "boolean",
+            "default": true
+          },
+          "discontinued": {
+            "title": "Discontinued",
+            "type": "boolean",
+            "default": true
+          },
+          "giftPromoVisible": {
+            "title": "Gift Promo Visible? (gift promo name, beginDate and endDate)",
+            "type": "boolean",
+            "default": true
+          },
+          "giftPromoName": {
+            "title": "Gift Promo Name",
+            "type": "boolean",
+            "default": true
+          },
+          "giftPromoBeginDate": {
+            "title": "Gift Promo Begin Date",
+            "type": "boolean",
+            "default": true
+          },
+          "giftPromoEndDate": {
+            "title": "Gift Promo End Date",
+            "type": "boolean",
+            "default": true
+          },
+          "listPrice": {
+            "title": "List price",
+            "type": "boolean",
+            "default": true
+          },
+          "salePrice": {
+            "title": "Sale price",
+            "type": "boolean",
+            "default": true
+          },
+          "marketPrice": {
+            "title": "Market price",
+            "type": "boolean",
+            "default": true
+          },
+          "discount": {
+            "title": "Discount",
+            "type": "boolean",
+            "default": true
+          },
+          "stock": {
+            "title": "Stock",
+            "type": "boolean",
+            "default": true
+          },
+          "available": {
+            "title": "Available (depends on Stock property)",
+            "type": "boolean",
+            "default": true
+          },
+          "minimumQuantityThreshold": {
+            "title": "Minimum quantity threshold",
+            "type": "boolean",
+            "default": true
+          },
+          "skuPromoVisible": {
+            "title": "Sku Promo Visible? (sku promo name, beginDate and endDate)",
+            "type": "boolean",
+            "default": true
+          },
+          "skuActivePromo": {
+            "title": "Sku Active promo",
+            "type": "boolean",
+            "default": true
+          },
+          "skuPromoBeginDate": {
+            "title": "Sku Promo Begin date",
+            "type": "boolean",
+            "default": true
+          },
+          "skuPromoEndDate": {
+            "title": "Sku Promo End Date",
+            "type": "boolean",
+            "default": true
+          },
+          "energyLabel": {
+            "title": "Energy label",
+            "type": "boolean",
+            "default": true
+          },
+          "score": {
+            "title": "Score",
+            "type": "boolean",
+            "default": true
+          },
+          "mdaCrossSell": {
+            "title": "MDA Cross-sell",
+            "type": "boolean",
+            "default": true
+          },
+          "mdaUpSell": {
+            "title": "MDA Up-sell",
+            "type": "boolean",
+            "default": true
+          },
+          "wproCrossSell": {
+            "title": "WPRO Cross-sell",
+            "type": "boolean",
+            "default": true
+          },
+          "productUrl": {
+            "title": "Product url",
+            "type": "boolean",
+            "default": true
+          },
+          "additionalServices": {
+            "title": "Additional Services (one column per service)",
+            "type": "boolean",
+            "default": true
+          },
+          "energyCategory": {
+            "title": "Energy category",
+            "type": "boolean",
+            "default": true
+          },
+          "width": {
+            "title": "Width",
+            "type": "boolean",
+            "default": true
+          },
+          "depth": {
+            "title": "Depth",
+            "type": "boolean",
+            "default": true
+          },
+          "height": {
+            "title": "Height",
+            "type": "boolean",
+            "default": true
+          },
+          "sellable": {
+            "title": "Sellable",
+            "type": "boolean",
+            "default": true
+          }
+        }
+      }
+    }
+  },
+  "billingOptions": {
+    "termsURL": "https://compliance.vtex.com/gdpr/policies/vtex-privacy-policy",
+    "support": {
+      "url": "https://support.vtex.com/hc/requests"
+    },
+    "free": true
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

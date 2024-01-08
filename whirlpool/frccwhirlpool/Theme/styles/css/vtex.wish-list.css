@@ -1,0 +1,74 @@
+.outline {
+  background: url("https://frccwhirlpool.vteximg.com.br/arquivos/heart.svg");
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+}
+
+.outline:hover {
+  background: url("https://frccwhirlpool.vteximg.com.br/arquivos/heart_red.svg") !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+}
+
+.fill {
+  background: url("https://frccwhirlpool.vteximg.com.br/arquivos/heart_red.svg");
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+}
+.wishlistIconContainer {
+  display: flex;
+  justify-content: center;
+}
+.wishlistIconContainer::after {
+  content: "Favoris";
+  display: flex;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 0.8rem;
+  color: #3f3f40;
+}
+.wishlistIconContainer :global(.vtex-button) {
+  background-color: transparent !important;
+  width: fit-content !important;
+  /* margin-right: 0.2rem !important; */
+  display: flex;
+  align-items: flex-end;
+  min-height: unset;
+}
+
+.wishlistIconContainer :global(.vtex-button__label) {
+  padding: 0 !important;
+}
+.iconSize {
+  height: 12px;
+  width: 12px;
+  padding-right: 0.2rem;
+}
+.wishlistIconContainer {
+  align-items: flex-end;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .wishlistIconContainer :global(.vtex-button__label) {
+    padding: 0 !important;
+  }
+  .wishlistIconContainer :global(.vtex-button) {
+    margin-right: 0.4rem !important;
+  }
+  .outline:hover {
+    background: unset !important;
+    background-repeat: unset !important;
+    background-size: unset !important;
+  }
+  .wishlistIconContainer::after {
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .wishlistIconContainer :global(.vtex-button) {
+    margin-right: unset !important;
+  }
+}

@@ -1,0 +1,246 @@
+{
+  "store.custom#pack-cuisine": {
+    "blocks": [
+      "toggle-layout#breadcrumb",
+      "rich-text#title-pack-cuisine",
+      // "flex-layout.row#pack-main-banner",
+      "flex-layout.row#halfSpace",
+      "toggle-layout#halfBannerHomePack"
+      // "analytics"
+    ]
+  },
+  "toggle-layout#breadcrumb": {
+    "props": {
+      "visible": false
+    },
+    "children": ["breadcrumb#pack"]
+  },
+  "breadcrumb#pack": {
+    "props": {
+      "categories": ["kolekcje"],
+      "showOnMobile": false
+    }
+  },
+  "flex-layout.row#pack-main-banner": {
+    "props": {
+      "blockClass": ["promoBanner", "reverse"]
+    },
+    "children": ["flex-layout.col#text-pack", "flex-layout.col#image-pack"]
+  },
+  "flex-layout.col#bannerFooterContainer": {
+    "props": {},
+    "children": ["rich-text#packBannerFooter1", "rich-text#packBannerFooter2"]
+  },
+  "flex-layout.col#image-pack": {
+    "children": ["image#packCardImage"]
+  },
+  "image#packCardImage": {
+    "props": {
+      "src": "assets/placeholders/placeholder-image-square.jpg",
+      "blockClass": "promoBanner"
+    }
+  },
+  "flex-layout.col#text-pack": {
+    "props": {
+      "blockClass": ["promoBanner", "bannerPackPromo"]
+    },
+    "children": ["rich-text#titlepack", "flex-layout.col#bannerFooterContainer"]
+  },
+  "rich-text#titlepack": {
+    "props": {
+      "blockClass": "titleCard",
+      "textAlignment": "left",
+      "text": "Sélectionnez les appareils électroménager de votre pack et bénéficiez de remises* à partir de 2 produits**"
+    }
+  },
+  "rich-text#packBannerFooter1": {
+    "props": {
+      "blockClass": ["postilla"],
+      "textAlignment": "left",
+      "text": "*Mention légale: la remise s’applique sur les produits encastrables (four, plaque, hotte, micro-ondes, lave-vaisselle) et dans la limite d’un produit par catégorie."
+    }
+  },
+  "rich-text#packBannerFooter2": {
+    "props": {
+      "blockClass": ["postilla", "biggerTextPostilla"],
+      "textAlignment": "left",
+      "text": "**Réduction de -10% sur votre commande à partir de 2 produits commandés."
+    }
+  },
+  "rich-text#title-pack-cuisine": {
+    "props": {
+      "text": "Équipez ou renouveler intégralement votre cuisine!",
+      "textAlignment": "center",
+      "blockClass": ["textHome"],
+      "textPosition": "CENTER"
+    }
+  },
+  "toggle-layout#halfBannerHomePack": {
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "info-card#halfPack1",
+      "info-card#halfPack2",
+      "info-card#halfPack3",
+      "info-card#halfPack4",
+      "info-card#halfPack5",
+      "toggle-layout#halfBannerPack"
+    ]
+  },
+  "info-card#halfPack1": {
+    "props": {
+      "id": "half-banner-seconf",
+      "isFullModeStyle": false,
+      "imageUrl": "assets/placeholders/placeholder-image-square.jpg",
+      "headline": "Everest Serie400",
+      "subhead": "La più grande rivoluzione nel mondo del built-in.",
+      "callToActionText": "En savoir plus",
+      "callToActionUrl": "#",
+      "blockClass": "halfBannerReverse",
+      "textAlignment": "left"
+    }
+  },
+  "info-card#halfPack3": {
+    "props": {
+      "id": "half-banner-seconf",
+      "isFullModeStyle": false,
+      "imageUrl": "assets/placeholders/placeholder-image-square.jpg",
+      "headline": "Everest Serie400",
+      "subhead": "La più grande rivoluzione nel mondo del built-in.",
+      "callToActionText": "En savoir plus",
+      "callToActionUrl": "#",
+      "blockClass": "halfBannerReverse",
+      "textAlignment": "left"
+    }
+  },
+  "info-card#halfPack5": {
+    "props": {
+      "id": "half-banner-seconf",
+      "isFullModeStyle": false,
+      "imageUrl": "assets/placeholders/placeholder-image-square.jpg",
+      "headline": "Everest Serie400",
+      "subhead": "La più grande rivoluzione nel mondo del built-in.",
+      "callToActionText": "En savoir plus",
+      "callToActionUrl": "#",
+      "blockClass": "halfBannerReverse",
+      "textAlignment": "left"
+    }
+  },
+  "info-card#halfPack2": {
+    "props": {
+      "id": "half-banner-first",
+      "isFullModeStyle": false,
+      "imageUrl": "assets/placeholders/placeholder-image-square.jpg",
+      "headline": "W Collection",
+      "subhead": "Capi Freschi fino a 6 ore dopo la fine del ciclo di lavaggio. Fresh Care permette di tenere fresca la biancheria anche se non è possibile scaricarla alla fine del ciclo grazie a movimenti periodici del cestello.",
+      "callToActionText": "En savoir plus",
+      "callToActionUrl": "/wcollection",
+      "blockClass": "halfBanner",
+      "textAlignment": "left"
+    }
+  },
+  "info-card#halfPack4": {
+    "props": {
+      "id": "half-banner-first",
+      "isFullModeStyle": false,
+      "imageUrl": "assets/placeholders/placeholder-image-square.jpg",
+      "headline": "W Collection",
+      "subhead": "Capi Freschi fino a 6 ore dopo la fine del ciclo di lavaggio. Fresh Care permette di tenere fresca la biancheria anche se non è possibile scaricarla alla fine del ciclo grazie a movimenti periodici del cestello.",
+      "callToActionText": "En savoir plus",
+      "callToActionUrl": "/wcollection",
+      "blockClass": "halfBanner",
+      "textAlignment": "left"
+    }
+  },
+  "info-card#halfPack6": {
+    "props": {
+      "id": "half-banner-first",
+      "isFullModeStyle": false,
+      "imageUrl": "assets/placeholders/placeholder-image-square.jpg",
+      "headline": "W Collection",
+      "subhead": "Capi Freschi fino a 6 ore dopo la fine del ciclo di lavaggio. Fresh Care permette di tenere fresca la biancheria anche se non è possibile scaricarla alla fine del ciclo grazie a movimenti periodici del cestello.",
+      "callToActionText": "En savoir plus",
+      "callToActionUrl": "/wcollection",
+      "blockClass": "halfBanner",
+      "textAlignment": "left"
+    }
+  },
+  "toggle-layout#halfBannerPack": {
+    "props": {
+      "visible": false
+    },
+    "children": ["flex-layout.row#halfBannerPack"]
+  },
+  "flex-layout.row#halfBannerPack": {
+    "props": {
+      "blockClass": ["halfBanner", "packHalfBanner", "reverse"]
+    },
+    "children": [
+      "flex-layout.col#text-half-pack",
+      "flex-layout.col#image-half-pack"
+    ]
+  },
+  "flex-layout.col#halfBannerPackFooter": {
+    "props": {},
+    "children": [
+      "rich-text#packHalfBannerFooter1",
+      "rich-text#packHalfBannerFooter2"
+    ]
+  },
+  "flex-layout.col#image-half-pack": {
+    "children": ["image#halfPackCardImage"]
+  },
+  "image#halfPackCardImage": {
+    "props": {
+      "src": "assets/placeholders/placeholder-image-square.jpg",
+      "blockClass": "promoBanner"
+    }
+  },
+  "flex-layout.col#text-half-pack": {
+    "props": {
+      "blockClass": ["promoBanner", "packHalfBanner"]
+    },
+    "children": [
+      "rich-text#titleHalfBannerPack",
+      "rich-text#halfPackSubtitle",
+      "rich-text#halfPackButton",
+      "flex-layout.col#halfBannerPackFooter"
+    ]
+  },
+  "rich-text#titleHalfBannerPack": {
+    "props": {
+      "blockClass": "titleCard",
+      "textAlignment": "left",
+      "text": "Personnalisez votre pack"
+    }
+  },
+  "rich-text#packHalfBannerFooter1": {
+    "props": {
+      "blockClass": "postilla",
+      "textAlignment": "left",
+      "text": "*Mention légale: la remise s’applique sur les produits encastrables (four, plaque, hotte, micro-ondes, lave-vaisselle) et dans la limite d’un produit par catégorie. "
+    }
+  },
+  "rich-text#packHalfBannerFooter2": {
+    "props": {
+      "blockClass": "postilla",
+      "textAlignment": "left",
+      "text": "**Réduction de -10% sur votre commande à  partir de 2 produits commandés."
+    }
+  },
+  "rich-text#halfPackSubtitle": {
+    "props": {
+      "blockClass": "subtitleCard",
+      "textAlignment": "left",
+      "text": "Laissez libre cours à votre imagination pour concrétiser votre projet cuisine! Sélectionnez dans l'ensemble de notre gamme 2 à 4 produits encastrables* et bénéficiez d’une réduction**."
+    }
+  },
+  "rich-text#halfPackButton": {
+    "props": {
+      "blockClass": "buttonCard",
+      "textAlignment": "left",
+      "text": "Odkryj"
+    }
+  }
+}

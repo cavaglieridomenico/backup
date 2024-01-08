@@ -1,0 +1,49 @@
+{
+    "store.custom#expired-warranty": {
+        "blocks": [
+            "responsive-layout.desktop#expired-warranty",
+            "responsive-layout.mobile#expired-warranty"
+        ]
+    },
+    "store.custom#expired-warranty_up": {
+        "blocks": [
+            "responsive-layout.desktop#expired-warranty",
+            "responsive-layout.mobile#expired-warranty"
+        ]
+    },
+    "responsive-layout.desktop#expired-warranty": {
+        "children": [
+            "flex-layout.row#expired-warranty-container-maxi-desktop"
+        ]
+    },
+    "responsive-layout.mobile#expired-warranty": {
+        "children": [
+            "flex-layout.row#expired-warranty-container-maxi-desktop"
+        ]
+    },
+    "flex-layout.row#expired-warranty-container-maxi-desktop": {
+        "children": [
+            "flex-layout.col#expired-warranty-container-maxi-desktop"
+        ],
+        "props": {
+            "blockClass": "expired-warranty-container-maxi-desktop"
+        }
+    },
+    /* MAXI CONTAINER OF ALL ELEMENT IN THE PAGE */
+    "flex-layout.col#expired-warranty-container-maxi-desktop": {
+        "children": [
+            "rich-text#expired-warranty-title",
+            "embedded-expired-warranty"
+        ],
+        "props": {
+            "blockClass": "expired-warranty-container-maxi-desktop"
+        }
+    },
+    "rich-text#expired-warranty-title": {
+        "props": {
+            "blockClass": "title01-text-expired-warranty",
+            "text": "Hai bisogno di una riparazione per il tuo elettrodomestico fuori garanzia?"
+        }
+    },
+    "embedded-expired-warranty": {}
+}

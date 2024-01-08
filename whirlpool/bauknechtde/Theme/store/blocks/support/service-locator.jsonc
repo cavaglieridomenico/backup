@@ -1,0 +1,64 @@
+{
+  "store.custom#service-locator": {
+    "children": [
+      "flex-layout.row#bread-theme-service-locator",
+      "flex-layout.row#top-service-locator-page",
+      "rich-text#service-locator-paragraph",
+      "service-locator"
+    ]
+  },
+  "flex-layout.row#bread-theme-service-locator": {
+    "title": "[ROW] - TOP - bread crumbs",
+    "children": [
+      "link#home",
+      "image#arrowBread",
+      "link#2level",
+      "experimental__visibility-layout#arrowBread",
+      "experimental__visibility-layout#3level"
+    ],
+    "props": {
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true,
+      "blockClass": ["breadCustom-service-locator"]
+    }
+  },
+  "flex-layout.row#top-service-locator-page": {
+    "title": "[ROW] - TOP - Title page row",
+    "props": {
+      "blockClass": "Service-locator-page"
+    },
+    "children": ["rich-text#Title-service-locator-page"]
+  },
+  "rich-text#Title-service-locator-page": {
+    "title": "[TEXT] - TOP - Title page",
+    "props": {
+      "blockClass": "titleServiceLocatorPage",
+      "text": "text test",
+      "textPosition": "LEFT"
+    }
+  },
+  "rich-text#service-locator-paragraph": {
+    "title": "[TEXT] - paragraph page",
+    "props": {
+      "textPosition": "CENTER",
+      "textAlignment": "CENTER",
+      "text": "paragraph",
+      "blockClass": ["serviceLocatorParagraph"]
+    }
+  },
+  "link#Italia": {
+    "props": {
+      "href": "/supporto/service-locator/italia",
+      "textAlignment": "CENTER",
+      "blockClass": ["pb50", "tc", "items-center", "justify-center"]
+    },
+    "children": ["rich-text#Italia"]
+  },
+  "rich-text#Italia": {
+    "props": {
+      "blockClass": "linkService",
+      "textAlignment": "CENTER",
+      "text": "Italia"
+    }
+  }
+}

@@ -1,0 +1,109 @@
+<!-- GCM SCRIPT -->
+<script data-cookieconsent="{{settings.data_coookieconsent}}">
+  (function () {
+    const canonicalBaseAddress = window?.__RUNTIME__?.binding?.canonicalBaseAddress
+    const basePath = window?.location?.host
+
+    const binding = new URLSearchParams(window.location.search).get('__bindingAddress');
+    const isWHParts = basePath.includes("parts.whirlpool") || (binding !== undefined && binding !== null && binding.includes("parts.whirlpool"));
+    const isINParts = basePath.includes("parts.indesit") || (binding !== undefined && binding !== null && binding.includes("parts.indesit"));
+    const isBKParts = basePath.includes("parts.bauknecht") || (binding !== undefined && binding !== null && binding.includes("parts.bauknecht"));
+
+    var gtmId = isBKParts ? "{{settings.gtmIdBK}}" : isINParts ? "{{settings.gtmIdIN}}" : "{{settings.gtmId}}"
+    if (!gtmId) {
+      console.error('Warning: No Google Tag Manager ID is defined. Please configure it in the apps admin.');
+    } else {
+      window.dataLayer = window.dataLayer || [];
+      //consent mode
+      function gtag() { window.dataLayer.push(arguments); }
+      window.dataLayer.push({ 'gtm.blacklist': "{{ settings.blacklist }}"});
+      gtag("consent", "default", {
+        ad_storage: "{{settings.ad_storage}}",
+        analytics_storage: "{{settings.analytics_storage}}",
+        functionality_storage: "{{settings.functionality_storage}}",
+        personalization_storage: "{{settings.personalization_storage}}",
+        security_storage: "{{settings.security_storage}}",
+        wait_for_update: "{{settings.wait_for_update}}",
+      });
+      gtag("set", "ads_data_redaction", true);
+      // GTM script snippet. Taken from: https://developers.google.com/tag-manager/quickstart
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+          'gtm.start':
+            new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', gtmId)
+    }
+  }) ()
+</script>
+
+<!-- ONE TRUST SCRIPT -->
+<link href="https://{{settings.s}}" />
+<script type="text/javascript">
+  const canonicalBaseAddress = window?.__RUNTIME__?.binding?.canonicalBaseAddress
+  const basePath = window?.location?.host
+
+  const binding = new URLSearchParams(window.location.search).get('__bindingAddress');
+  const isWHParts = basePath.includes("parts.whirlpool") || (binding !== undefined && binding !== null && binding.includes("parts.whirlpool"));
+  const isINParts = basePath.includes("parts.indesit") || (binding !== undefined && binding !== null && binding.includes("parts.indesit"));
+  const isBKParts = basePath.includes("parts.bauknecht") || (binding !== undefined && binding !== null && binding.includes("parts.bauknecht"));
+
+  const scriptID = canonicalBaseAddress?.includes("vip") || basePath.includes("vip") || isBKParts ? "{{settings.domainVIP}}" : canonicalBaseAddress?.includes("ff") || basePath.includes("ff") || isINParts ? "{{settings.domainFF}}" : "{{settings.domain}}";
+
+  script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src = 'https://{{settings.s}}/{{settings.url}}/{{settings.cdnId}}';
+  script.defer = true
+  script.charset = "UTF-8"
+  script.setAttribute("data-domain-script", scriptID)
+  script.setAttribute("data-document-language", "true")
+  document.head.appendChild(script);
+
+
+  function OptanonWrapper() {
+    var first = true
+    function injectAcceptButton() {
+      if (!document.cookie.split(';').find(row => row.startsWith('OneTrust-custom')) &&
+        '{{settings.one_trust_custom}}' === 'true' &&
+        '{{settings.one_trust_uk}}' === 'false'
+      ) {
+        //settings.one_trust_custom should be true in italy with the 'consenti tutti' label
+        var acceptBtn = document.getElementById(
+          'accept-recommended-btn-handler'
+        )
+        acceptBtn.innerText = decodeURIComponent('{{settings.one_trust_custom_label}}')
+        var rejectBtn = document.querySelector('.ot-pc-refuse-all-handler')
+        rejectBtn.before(acceptBtn)
+        document.cookie = `OneTrust-custom=True; expires=${new Date(
+          new Date().getTime() + 1000 * 60 * 60 * 24 * 365
+        ).toGMTString()}; path=/`
+      } else if (
+        !document.cookie
+          .split(';')
+          .find(row => row.startsWith('OneTrust-custom')) &&
+        '{{settings.one_trust_uk}}' === 'true'
+      ) {
+        var rejectBtn = document.querySelector('.ot-pc-refuse-all-handler')
+        var acceptButton = document.getElementById(
+          'accept-recommended-btn-handler'
+        )
+        acceptButton.before(rejectBtn)
+        if (
+          /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+            navigator.userAgent
+          )
+        ) {
+          var recommended = document.getElementById(
+            'accept-recommended-btn-handler'
+          )
+          document
+            .querySelector('.ot-pc-refuse-all-handler')
+            .before(recommended)
+        }
+      }
+    }
+    injectAcceptButton()
+  }
+</script>

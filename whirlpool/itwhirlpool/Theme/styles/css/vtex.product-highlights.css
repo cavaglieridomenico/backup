@@ -1,0 +1,149 @@
+.productHighlightWrapper--collection {
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  width: 200px;
+}
+
+.productHighlightText--Product {
+  background: #fdc100;
+  border-radius: 20px;
+  padding: 0.85rem;
+  margin: 0.5rem auto;
+  font-family: "myriadSemibold";
+  width: auto !important;
+  color: #ffffff;
+}
+
+:global(.vtex-search-result-3-x-galleryItem--newProductCard) .productHighlightWrapper--coupon {
+  display: none;
+}
+
+.productHighlightText {
+  background-color: #fdc100;
+  color: #fff;
+  position: absolute;
+  left: -10px;
+  text-transform: uppercase;
+  font-family: "myriadBold";
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1.375rem;
+  padding: 0.3125rem 0.9375rem;
+  z-index: 2;
+}
+
+:global(.vtex-search-result-3-x-galleryItem--newProductCard) .productHighlightText {
+  background-color: #fdc100;
+  color: #fff;
+  position: absolute;
+  left: 4px;
+  text-transform: uppercase;
+  font-family: "myriadBold";
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1.375rem;
+  padding: 0.3125rem 0.9375rem;
+  z-index: 2;
+  margin-top: 0.5rem;
+}
+
+.productHighlightText--coupon {
+  background-color: unset;
+  color: black;
+  position: relative;
+  font-size: 0.5rem !important;
+  padding-left: 5px;
+}
+
+.productHighlightWrapper {
+  border-radius: 5px;
+  border-style: solid;
+  white-space: nowrap;
+  font-size: 0.5rem !important;
+  width: fit-content;
+  padding: 0px 3px;
+  text-transform: uppercase;
+  font-family: "myriadBold";
+  font-weight: 400;
+  background: linear-gradient(to left, white 60%, #edb112 40%);
+  border-color: #edb112;
+}
+
+.productHighlightText--promotionHighPDP {
+  background-color: #fdc100;
+  color: #fff;
+  position: relative;
+  text-transform: uppercase;
+  font-family: "myriadBold";
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1.375rem;
+  padding: 0.3125rem 0.9375rem;
+  z-index: 2;
+  margin-top: -1rem;
+  border-radius: unset;
+  margin-left: 92px;
+}
+
+.productHighlightText::before {
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  content: "";
+  transform: rotate(45deg);
+  border-left: 0.4rem solid transparent;
+  border-right: 0.4rem solid transparent;
+  border-bottom: 0.4rem solid #966e02;
+}
+
+.productHighlightText--coupon::before {
+  border-bottom: unset;
+}
+
+.productHighlightText--promotionCarousel {
+  top: 20px;
+}
+
+@media only screen and (max-width: 668px) {
+  .productHighlightText {
+    z-index: 2;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .productHighlightText {
+    left: -10px;
+  }
+
+  .productHighlightText--coupon {
+    left: unset;
+    white-space: nowrap;
+    padding: 0.1rem;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .productHighlightWrapper {
+    background: linear-gradient(to left, white 75%, #edb112 25%);
+    right: 0.5rem;
+    position: relative;
+    margin: 0rem -0.5rem;
+    padding: 0;
+  }
+
+  .productHighlightWrapper--coupon {
+    background: linear-gradient(to left, white 55%, #edb112 45%);
+    right: 0.5rem;
+    position: relative;
+    margin: 0rem -0.5rem;
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .productHighlightWrapper--coupon {
+    margin: 1rem 0.5rem;
+    background: linear-gradient(to left, white 55%, #edb112 45%);
+  }
+}

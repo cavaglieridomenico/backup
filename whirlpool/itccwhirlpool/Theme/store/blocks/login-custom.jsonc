@@ -1,0 +1,103 @@
+{
+  //   "store.login#custom": {
+  //     "blocks": ["login-content", "rich-text#BanntitleParag"]
+  //   }
+  "store.custom#custom-login": {
+    "blocks": [
+      "toggle-layout#disclaimerLoginVIP",
+      "login-custom",
+      "experimental__visibility-layout#infosLogin"
+    ],
+    "parent": {
+      "header": "header#login",
+      "footer": "footer#login"
+    }
+  },
+  "toggle-layout#disclaimerLoginVIP": {
+    "title": "disclaimerLoginVIP",
+    "children": ["rich-text#disclaimerLoginVIP"]
+  },
+  "rich-text#disclaimerLoginVIP": {
+    "props": {
+      "textAlignment": "center",
+      "textPosition": "center",
+      "text": "Il nostro sito si sta rinnovando! Per connetterti e avere accesso a questa nuova versione, registra il tuo account.",
+      "blockClass": "disclaimerLoginVIP"
+    }
+  },
+  "header#login": {
+    "blocks": ["header-layout.desktop#login", "header-layout.mobile#login"]
+  },
+  "header-layout.desktop#login": {
+    "children": ["flex-layout.row#header-login"]
+  },
+  "header-layout.mobile#login": {
+    "children": ["flex-layout.row#header-login"]
+  },
+  "flex-layout.row#header-login": {
+    "props": {
+      "blockClass": "headerDesktopLogin",
+      "fullWidth": "true"
+    },
+    "children": ["condition-layout.binding#conditionalHeaderLogo"]
+  },
+  "image#logo-header-login": {
+    "props": {
+      "src": "assets/whr-logo-epp.png",
+      "blockClass": "logo-header-login"
+    }
+  },
+  "footer#login": {
+    "blocks": ["footer-layout.desktop#login", "footer-layout.mobile#login"]
+  },
+  "footer-layout.desktop#login": {
+    "children": ["flex-layout.row#footer-4-desktop"]
+  },
+  "footer-layout.mobile#login": {
+    "children": ["flex-layout.row#footer-4-desktop"]
+  },
+  "experimental__visibility-layout#infosLogin": {
+    "title": "Infos Login",
+    "children": ["flex-layout.row#infosLogin"]
+  },
+  "flex-layout.row#infosLogin": {
+    "props": {
+      "blockClass": "infosLoginRow",
+      "fullWidth": "true"
+    },
+    "children": ["flex-layout.col#infosLogin"]
+  },
+  "flex-layout.col#infosLogin": {
+    "props": {
+      "blockClass": "infosLoginCol",
+      "fullWidth": "true"
+    },
+    "children": [
+      "rich-text#infoLoginQuestion",
+      "link#infoLoginEmail",
+      "link#infoLoginPhone"
+    ]
+  },
+  "rich-text#infoLoginQuestion": {
+    "props": {
+      "textAlignment": "center",
+      "textPosition": "center",
+      "text": "Problemi di connessione? \n Contattaci:",
+      "blockClass": "infoLoginQuestion"
+    }
+  },
+  "link#infoLoginEmail": {
+    "props": {
+      "label": "consumers_VIP@whirlpool.com",
+      "href": "mailto:consumers_vip@whirlpool.com",
+      "blockClass": "infoLoginLink"
+    }
+  },
+  "link#infoLoginPhone": {
+    "props": {
+      "label": "03448 224 224",
+      "href": "tel:03448224224",
+      "blockClass": "infoLoginLink"
+    }
+  }
+}

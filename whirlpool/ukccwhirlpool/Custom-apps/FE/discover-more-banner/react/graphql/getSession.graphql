@@ -1,0 +1,8 @@
+query getSession($items: [String]) {
+  session(items: $items) {
+    ... on SessionSuccess {
+      id
+      namespaces
+    }
+  }
+}

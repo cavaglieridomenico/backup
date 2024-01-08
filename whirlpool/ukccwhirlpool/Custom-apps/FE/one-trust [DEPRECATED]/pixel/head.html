@@ -1,0 +1,39 @@
+
+<link href="https://{{settings.s}}" />
+<script type="text/javascript">
+
+  const url = window?.location?.hostname
+  const scriptID = url?.includes("epp") ? "{{settings.EPPid}}" : url?.includes("ff") ? "{{settings.FFid}}" : "{{settings.VIPid}}"
+
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src = 'https://{{settings.s}}/{{settings.url}}/{{settings.cdnId}}';    
+  script.defer = true
+  script.charset = "UTF-8"
+  script.setAttribute("data-domain-script", scriptID)
+  script.setAttribute("data-document-language", "true")
+  document.head.appendChild(script);
+
+  function OptanonWrapper() { 
+      var first = true;
+      function injectAcceptButton() {
+          if (!document.cookie.split(';').find(row => row.startsWith('OneTrust-custom'))) {
+              // var btnContainer = document.querySelector(".ot-btn-container");
+              // btnContainer.setAttribute("id", "ot-button-container");
+            //   var acceptBtn = document.createElement("button");
+            //   acceptBtn.setAttribute("id", "accept-recommended-btn-handler");
+            //   acceptBtn.setAttribute("class", "button-theme");
+            //   acceptBtn.innerText = "TOUT AUTORISER";
+              // var poweredByLogo = document.querySelector(".ot-pc-footer-logo");
+              // poweredByLogo.setAttribute("id", "powered-by-onetrust");
+              var rejectBtn =document.querySelector('.ot-pc-refuse-all-handler');
+            //   rejectBtn.before(acceptBtn)
+              var acceptButton = document.getElementById("accept-recommended-btn-handler")
+              acceptButton.before(rejectBtn)
+              // btnContainer.append(acceptBtn, poweredByLogo)
+              document.cookie=`OneTrust-custom=True; expires=${new Date(new Date().getTime()+1000*60*60*24*365).toGMTString()}; path=/`;
+              }
+          }
+      injectAcceptButton();
+  }
+  </script>

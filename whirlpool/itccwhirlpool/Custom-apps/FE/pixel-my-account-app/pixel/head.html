@@ -1,0 +1,285 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- My account gdpr-->
+<script type="text/javascript">
+  ; (function () {
+    var pushState = history.pushState;
+    var replaceState = history.replaceState;
+
+    history.pushState = function () {
+      pushState.apply(history, arguments);
+      window.dispatchEvent(new Event('pushstate'));
+      window.dispatchEvent(new Event('locationchange'));
+    };
+
+    history.replaceState = function () {
+      replaceState.apply(history, arguments);
+      window.dispatchEvent(new Event('replacestate'));
+      window.dispatchEvent(new Event('locationchange'));
+    };
+
+    window.addEventListener('popstate', function () {
+      window.dispatchEvent(new Event('locationchange'))
+    });
+  })();
+  const replaceFsp = () => {
+    let freeServicesQuery = 'tr.vtex-my-orders-app-3-x-bundleItem'
+    let freeServicesPriceQuery = 'td.pl1.pt3.tl.v-top.v-mid'
+    waitForEl(freeServicesQuery, () => {
+      let freeServices = $('tr.vtex-my-orders-app-3-x-bundleItem')
+      let freeServicesPrice = $('td.pl1.pt3.tl.v-top.v-mid')
+      freeServices.each(function (element) {
+        if ($(this).find(freeServicesPrice)) {
+          let foundFsp = $(this).find(freeServicesPrice)
+          if (foundFsp.text() == "0,00 €") {
+            foundFsp.text("Gratuito")
+          }
+        }
+      })
+    })
+  }
+
+  // const addDefaultServices = () => {
+  //   let productRowQuery = '.vtex-my-orders-app-3-x-productRow'
+  //   let rendered = false
+  //   waitForEl(productRowQuery, () => {
+  //     let productRow = $(productRowQuery)
+  //     let hasLivraison = false
+  //     let hasGarantie = false
+  //     let livraisonText = "Livraison à domicile"
+  //     let garantieText = "Garantie 2 ans"
+  //     let LivraisonRowHtml = '<tr class="vtex-my-orders-app-3-x-bundleItem myo-bundle-item bt bw1 b--muted-5"><td class="tl v-top pv3 v-mid overflow-hidden"><div class="ml3 fl overflow-hidden w-80-ns"><p class="fw7 f6 mb0">Livraison à domicile</p></div></td><td class="pv3 tl v-top dn dtc-ns"></td><td></td><td class="pl1 pt3 tl v-top v-mid">Inclus</td></tr>'
+  //     let GarantieRowHtml = '<tr class="vtex-my-orders-app-3-x-bundleItem myo-bundle-item bt bw1 b--muted-5"><td class="tl v-top pv3 v-mid overflow-hidden"><div class="ml3 fl overflow-hidden w-80-ns"><p class="fw7 f6 mb0">Garantie 2 ans</p></div></td><td class="pv3 tl v-top dn dtc-ns"></td><td></td><td class="pl1 pt3 tl v-top v-mid">Inclus</td></tr>'
+  //     productRow.each(function(element) {
+  //       if($(this).hasClass("rdy") == false) {
+  //         $(this).after(LivraisonRowHtml)
+  //         $(this).after(GarantieRowHtml)
+  //         $(this).addClass("rdy")
+  //       }
+  //     })
+  //   } )
+  // }
+  // replace free services price with "inclus" instead of "0.00€"
+
+  const changeLabels = () => {
+    const locale = __RUNTIME__.culture.locale == "it-IT" ? true : false
+    waitForEl('.vtex-my-account-1-x-phoneNumberSubContainer', function () {
+      setInterval(() => {
+        let phoneNumber = document.getElementsByClassName(
+          'vtex-my-account-1-x-phoneNumberSubContainer',
+        )[0].children[0]
+        if (phoneNumber && phoneNumber?.innerHTML.toLowerCase() != 'Numero di telefono') {
+          phoneNumber.innerHTML = 'Numero di telefono'
+        }
+      }, 500)
+    })
+    waitForEl('.whirlpoolemea-cc-myaccount-custom-sections-1-x-goBackLinkInvoice', function () {
+      setInterval(() => {
+        const backButtonContainer = [...document.getElementsByClassName(
+          'whirlpoolemea-cc-myaccount-custom-sections-1-x-goBackLinkInvoice',
+        )].forEach(item => {
+          locale ? item.innerHTML = "Indietro" : item.innerHTML = "Back"
+        }
+        )
+      }, 500)
+    })
+    waitForEl('.vtex-my-account-1-x-menuLinks', function () {
+      setInterval(() => {
+        const backButtonContainer = [...document.getElementsByClassName(
+          'vtex-account_menu-link',
+        )].forEach(item => {
+          if (locale) {
+            item.innerHTML == "Wishlist" ? item.innerHTML = "Preferiti" : null
+          }
+        }
+        )
+      }, 500)
+    })
+    waitForEl('.vtex-my-account-1-x-dateOfBirthSubContainer', function () {
+      setInterval(() => {
+        const dateOfBirthInput = document.querySelector('.vtex-my-account-1-x-dateOfBirthSubContainer .vtex-my-account-1-x-dataEntryChildren')
+        if (dateOfBirthInput.innerHTML.length <= 0) {
+          dateOfBirthInput.setAttribute("data-placeholder", locale ? "Data di nascita" : "Date of Birth")
+          dateOfBirthInput.innerHTML == "" && (dateOfBirthInput.innerHTML = dateOfBirthInput.getAttribute("data-placeholder"))
+        }
+      }, 500)
+    })
+    waitForEl('.vtex-my-account-1-x-phoneNumberSubContainer', function () {
+      setInterval(() => {
+        const phoneInput = document.querySelector('.vtex-my-account-1-x-phoneNumberSubContainer .vtex-my-account-1-x-dataEntryChildren')
+        if (phoneInput.innerHTML.length <= 0) {
+          phoneInput.setAttribute("data-placeholder", locale ? "Telefono" : "Phone Number")
+          phoneInput.innerHTML == "" && (phoneInput.innerHTML = phoneInput.getAttribute("data-placeholder"))
+        }
+      }, 500)
+    })
+  }
+
+  const modifyEditButton = () => {
+    let editButtonQuery = '.vtex-button__label.flex.items-center.justify-center.h-100.ph5'
+    waitForEl(editButtonQuery, () => {
+      let editButton = $('.vtex-button__label.flex.items-center.justify-center.h-100.ph5')
+      editButton.each(function (element) {
+        // Only change Modifier buttons
+        if ($(this).text() == "Modifier") {
+          $(this).addClass('bg-action-primary')
+          $(this).removeClass('c-action-primary')
+          $(this).addClass('bg-action-primary c-on-action-primary br2')
+        }
+      })
+    })
+  }
+  const modifyOrderDetailButton = () => {
+    let orderDetailButtonQuery = '.vtex-my-orders-app-3-x-detailsBtn'
+    waitForEl(orderDetailButtonQuery, () => {
+      let orderDetailButton = $(orderDetailButtonQuery)
+      // Only change details buttons
+      if (orderDetailButton.text() == "Afficher les détails de la commande") {
+        orderDetailButton.removeClass('bg-action-secondary c-on-action-secondary')
+        orderDetailButton.addClass('bg-action-primary c-on-action-primary ')
+        orderDetailButton.css("background-color", "#edb112")
+      }
+    })
+  }
+  const setEditButtonInterval = () => {
+    setInterval(() => {
+      modifyEditButton()
+    }, 1000)
+  }
+
+  const modifyBundleItems = () => {
+    let bundleItemNames = ".vtex-my-orders-app-3-x-bundleItem > td > div > p";
+    waitForEl(bundleItemNames, () => {
+      let elements = $(bundleItemNames);
+      elements.each(function (index, element) {
+        let el = element;
+        let text = $(this).text();
+        $(this).text(removeBundlePrefix(text));
+      });
+    });
+  };
+
+  const removeBundlePrefix = (bundleName) => {
+    return bundleName
+      .replace("O2P_", "")
+      .replace("EPP_", "")
+      .replace("VIP_", "")
+      .replace("FF_", "");
+  };
+
+  const removeFiltersForBinding = () => {
+    // If the current page is a PLP
+    if (window?.location?.href?.includes("/prodotti/") || window?.location?.href?.includes("/accessori")) {
+      if (window?.location?.href?.includes("epp")) {
+        // Remove availability filters related to FF and VIP
+        waitForEl(".vtex-search-result-3-x-filtersWrapper", () => {
+          $(".vtex-search-result-3-x-filter__container--solo-disponibili")?.css("display", "none")
+          $(".vtex-search-result-3-x-filter__container--solo-prodotti-disponibili")?.css("display", "none")
+        })
+        waitForEl(".vtex-search-result-3-x-accordionFilter", () => {
+          $(".vtex-search-result-3-x-accordionFilterContainer--solo-disponibili")?.css("display", "none")
+          $(".vtex-search-result-3-x-accordionFilterContainer--solo-prodotti-disponibili")?.css("display", "none")
+        })
+      } else if (window?.location?.href?.includes("ff")) {
+        // Remove availability filters related to EPP and VIP
+        waitForEl(".vtex-search-result-3-x-filtersWrapper", () => {
+          $(".vtex-search-result-3-x-filter__container--disponibilita")?.css("display", "none")
+          $(".vtex-search-result-3-x-filter__container--solo-disponibili")?.css("display", "none")
+        })
+        waitForEl(".vtex-search-result-3-x-accordionFilter", () => {
+          $(".vtex-search-result-3-x-accordionFilterContainer--disponibilita")?.css("display", "none")
+          $(".vtex-search-result-3-x-accordionFilterContainer--solo-disponibili")?.css("display", "none")
+        })
+      } else if (window?.location?.href?.includes("vip")) {
+        // Remove availability filters related to EPP and FF
+        waitForEl(".vtex-search-result-3-x-filtersWrapper", () => {
+          $(".vtex-search-result-3-x-filter__container--disponibilita")?.css("display", "none")
+          $(".vtex-search-result-3-x-filter__container--solo-prodotti-disponibili")?.css("display", "none")
+        })
+        waitForEl(".vtex-search-result-3-x-accordionFilter", () => {
+          $(".vtex-search-result-3-x-accordionFilterContainer--disponibilita")?.css("display", "none")
+          $(".vtex-search-result-3-x-accordionFilterContainer--solo-prodotti-disponibili")?.css("display", "none")
+        })
+      }
+    }
+  }
+
+  const modifyConsent = () => {
+    if (
+      window.location.href.indexOf("account") > 0 &&
+      window.location.hash &&
+      window.location.href.includes("#/profile")
+    ) {
+      waitForEl(".vtex-my-account-1-x-newsletterContainerMessage", function () {
+        $(".vtex-my-account-1-x-newsletterContainerTitle")
+          .text("")
+          .append(
+            '<span style="text-decoration:underline; font-weight: bolder;">Newsletter</span>'
+          );
+        $(".vtex-my-account-1-x-newsletterContainerMessage").text(
+          "Ho compreso e prendo atto del contenuto dell'"
+        );
+        var optin =
+          '<span><a class=\'vtex-rich-text-0-x-link vtex-rich-text-0-x-link--spaziature-impaginazione vtex-rich-text-0-x-link--paragraph-text-page\' href="/pagine/informativa-sulla-privacy" target="_blank">informativa sulla privacy</a> e:</span>';
+        $(optin).appendTo($(".vtex-my-account-1-x-newsletterContainerMessage"));
+        $("label[for='newsletterOptIn']").html(
+          `Acconsento al trattamento dei miei dati personali per permettere a Whirlpool di inviarmi newsletter/comunicazioni di marketing (in forma elettronica e non, anche tramite telefono, posta tradizionale, e-mail, SMS, MMS, notifiche push su siti di terze parti tra cui sulle piattaforme Facebook e Google) riguardanti prodotti e servizi di Whirlpool, anche da me acquistati o registrati, nonché di svolgere ricerche di mercato`
+        );
+      });
+
+      waitForEl("#newsletterOptIn", function () {
+        const checkbox = document.getElementById("newsletterOptIn");
+
+        checkbox.addEventListener("change", (event) => {
+          event.stopPropagation();
+          event.stopImmediatePropagation();
+          window.dataLayer = window.dataLayer || [];
+          if (event.currentTarget.checked) {
+            window.dataLayer.push({
+              event: "optin",
+            });
+          }
+        });
+      });
+    }
+  };
+
+  window.addEventListener('locationchange', function () {
+    modifyConsent();
+    replaceFsp();
+    modifyOrderDetailButton();
+    modifyBundleItems();
+    setEditButtonInterval();
+    changeLabels();
+    removeFiltersForBinding();
+    // addDefaultServices();
+  })
+  $(document).on('focus', '.vtex-address-form__state input', function () {
+    $('.vtex-address-form__state input').attr('maxLength', 2)
+  })
+  window.addEventListener('DOMContentLoaded', function () {
+    modifyConsent();
+    replaceFsp();
+    modifyOrderDetailButton();
+    modifyBundleItems();
+    setEditButtonInterval();
+    changeLabels();
+    removeFiltersForBinding();
+    // addDefaultServices();
+  });
+  window.addEventListener('hashchange', function () {
+    modifyConsent()
+    changeLabels()
+  });
+
+  var waitForEl = function (selector, callback) {
+    if (jQuery(selector).is(":visible") || jQuery(selector).length > 0) {
+      callback();
+    } else {
+      setTimeout(function () {
+        waitForEl(selector, callback);
+      }, 100);
+    }
+  };
+
+</script>

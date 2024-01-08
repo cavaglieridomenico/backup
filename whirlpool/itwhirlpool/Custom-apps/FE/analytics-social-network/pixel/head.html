@@ -1,0 +1,34 @@
+<script>
+
+  function setEventiListener(element, type, callback) {
+    let listOfElements = document.querySelectorAll(element)
+    if (listOfElements && listOfElements.length > 0) {
+      listOfElements.forEach(e => {
+        e.addEventListener(type, callback)
+      })
+      return
+    } else {
+      setTimeout(() => setEventiListener(element, type, callback), 250)
+    }
+  }
+
+  setEventiListener('.vtex-rich-text-0-x-link--colonnaMenuSupportoLast', 'click', (event) => {
+    let dataLayer = window.dataLayer || []
+    dataLayer.push({
+      'event': 'footerInteraction',
+      'interactionType': 'PhoneNumber',
+      'socialType': null
+    })
+  })
+
+  setEventiListener('.vtex-store-footer-2-x-socialNetworkLink', 'click', (event) => {
+    let socialName = event.path[0].toString().split('.')[1]
+    let dataLayer = window.dataLayer || []
+    dataLayer.push({
+      'event': 'footerInteraction',
+      'interactionType': 'SocialIcons',
+      'socialType': socialName
+    })
+  })
+
+</script>

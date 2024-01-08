@@ -1,0 +1,17 @@
+{
+  "memory": 512,
+  "ttl": 60,
+  "timeout": 20,
+  "minReplicas": 2,
+  "maxReplicas": 50,
+  "routes": {
+    "productData": {
+      "path": "/v1/api/analytics/product",
+      "public": true
+    },
+    "pageView": {
+      "path": "/v1/api/analytics/pageview",
+      "public": true
+    }
+  }
+}

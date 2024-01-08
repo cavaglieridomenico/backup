@@ -1,0 +1,82 @@
+.wishlistIconContainer {
+  justify-content: center;
+  display: flex;
+}
+.wishlistIconContainer :global(.vtex-button) {
+  width: auto;
+  margin: 0;
+}
+.wishlistIconContainer :global(.vtex-button):hover,
+.wishlistIconContainer :global(.vtex-button):focus {
+  background-color: unset !important;
+}
+.wishlistIconContainer :global(.vtex-button):hover .outline,
+.wishlistIconContainer :global(.vtex-button):focus .outline {
+  background: url("assets/heart-icon-filled.svg") !important;
+}
+.wishlistIconContainer :global(.vtex-button__label) {
+  padding-left: unset;
+  padding-right: 0.5rem;
+}
+.wishlistIconContainer::after {
+  content: "Preferiti";
+  display: flex;
+  margin: auto 0;
+  color: #505050;
+  font-family: "hotpointRegular";
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+}
+.outline {
+  background: url("assets/heart-icon.svg") !important;
+}
+.fill {
+  background: url("assets/heart-icon-filled.svg") !important;
+}
+.iconSize {
+  width: 28px;
+}
+@media only screen and (max-width: 640px) {
+  .wishlistIconContainer--wishListMobile {
+    justify-content: flex-end !important;
+  }
+  .iconSize {
+    width: 20px !important;
+    height: 17px !important;
+  }
+  .wishlistIconContainer :global(.vtex-button__label) {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  .wishlistIconContainer--wishListMobile :global(.vtex-button__label) {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    justify-content: flex-end;
+    margin-right: 3rem;
+  }
+  .wishlistIconContainer :global(.vtex-button) {
+    min-height: auto !important;
+  }
+  .wishlistIconContainer--wishListMobile :global(.vtex-button) {
+    min-height: auto !important;
+    width: 100%;
+  }
+  .wishlistIconContainer--wishListMobile::after {
+    content: "Preferiti";
+    position: absolute;
+    text-decoration: underline;
+    display: flex;
+    margin: auto 0;
+
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0;
+    pointer-events: none;
+  }
+}
+@media only screen and (max-width: 1200px) and (min-width: 600px) {
+  .wishlistIconContainer {
+    width: auto !important;
+  }
+}

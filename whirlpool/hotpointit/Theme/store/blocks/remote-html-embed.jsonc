@@ -1,0 +1,44 @@
+{
+  "store.custom#remote-html-embed-page": {
+    "children": [
+      "remote-html-embed#sandwatch",
+      "list-context.product-list#product-carousel",
+      "flex-layout.row#newsletter-row"
+    ]
+  },
+  "remote-html-embed#sandwatch": {
+    "props": {
+      "sourceUrl": "https://idit.pages.prod.wpsandwatch.com/landings/promo-dash"
+    }
+  },
+  "list-context.product-list#product-carousel": {
+    "blocks": [
+      "product-summary.shelf"
+    ],
+    "children": [
+      "slider-layout#wcollection"
+    ],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC",
+      "maxItems": 5
+    }
+  },
+  "slider-layout#wcollection": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 5,
+        "tablet": 2,
+        "phone": 1
+      },
+      "collection": "300",
+      "infinite": true,
+      "fullWidth": false,
+      "showPaginationDots": "desktopOnly",
+      "showNavigationArrows": "always",
+      "blockClass": [
+        "shelfEmbed",
+        "shelfEmbedMobile"
+      ]
+    }
+  }
+}

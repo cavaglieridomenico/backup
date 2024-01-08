@@ -1,0 +1,153 @@
+{
+  "store.custom#form-service-care-template": {
+    "blocks": [
+      "modal-trigger#oow-popup",
+      "responsive-layout.desktop#contact-us-support-main-desktop",
+      "responsive-layout.mobile#contact-us-support-main-mobile"
+      //"analytics#support"
+    ]
+  },
+  "store.custom#form-service-care-template_up": {
+    "blocks": [
+      "responsive-layout.desktop#contact-us-support-main-desktop",
+      "responsive-layout.mobile#contact-us-support-main-mobile",
+      "form-service-care-template"
+    ]
+  },
+  "responsive-layout.desktop#contact-us-support-main-desktop": {
+    "children": [
+      "breadcrumb-custom#form-service",
+      "flex-layout.row#form-service-care-contact-us-support-main-desktop",
+      "form-service-care-template",
+      "flex-layout.row#form-service-care-contact-us-support-main-desktop"
+    ]
+  },
+  "responsive-layout.mobile#contact-us-support-main-mobile": {
+    "children": [
+      "breadcrumb-custom#form-service-mobile",
+      "flex-layout.row#form-service-care-contact-us-support-main-mobile",
+      "contact-us-carousel-mobile",
+      "form-service-care-template",
+      "flex-layout.row#form-service-care-contact-us-support-main-mobile",
+      "contact-us-carousel-mobile"
+    ]
+  },
+  /* BREADCRUMB */
+  "breadcrumb-custom#form-service": {
+    "props": {
+      /* "blockClass": "containerBreadcrumbs", */
+      "firstPage": "Home",
+      "previousPage": "Assistenza",
+      "previousPath": "/assistenza",
+      "currentPage": "Servizio clienti"
+    }
+  },
+  /* BREADCRUMB MOBILE */
+  "breadcrumb-custom#form-service-mobile": {
+    "props": {
+      /* "blockClass": "containerBreadcrumbs", */
+      "currentPage": "Servizio clienti"
+    }
+  },
+  /* CONTACT US MOBILE VTEX-native + CUSTOMAPP */
+  "flex-layout.row#form-service-care-contact-us-support-main-mobile": {
+    "children": [
+      "flex-layout.row#form-service-care-contact-us-mobile"
+      // "contact-us-carousel-mobile"
+    ]
+  },
+  "flex-layout.row#form-service-care-carousel": {
+    "props": {
+      "blockClass": "contact-us"
+    },
+    "children": ["flex-layout.col#form-service-care-carousel"]
+  },
+  "flex-layout.col#form-service-care-carousel": {
+    "props": {
+      "blockClass": "contact-us"
+    },
+    "children": ["contact-us-carousel-mobile"]
+  },
+  "flex-layout.row#form-service-care-contact-us-mobile": {
+    "props": {
+      "blockClass": "contact-us"
+    },
+    "children": ["flex-layout.col#form-service-care-contact-us-mobile"]
+  },
+  "flex-layout.col#form-service-care-contact-us-mobile": {
+    "props": {
+      "blockClass": "contact-us"
+    },
+    "children": [
+      "flex-layout.row#form-service-care-cu-title-container-mobile",
+      "flex-layout.row#cu-desc-container-mobile"
+    ]
+  },
+  "flex-layout.row#form-service-care-cu-title-container-mobile": {
+    "props": {
+      "blockClass": "cu-title-container-mobile"
+    },
+    "children": ["rich-text#form-service-care-cu-title-mobile"]
+  },
+  "rich-text#form-service-care-cu-title-mobile": {
+    "props": {
+      "text": "Hai bisogno di aiuto? Contattateci.",
+      "blockClass": "cu-title-mobile"
+    }
+  },
+  /* CONTACT US DESKTOP */
+  "flex-layout.row#form-service-care-contact-us-support-main-desktop": {
+    "props": {
+      "blockClass": "contact-us-support-main-desktop"
+    },
+    "children": ["flex-layout.col#contact-us-support-main-desktop"]
+  },
+  "flex-layout.col#form-service-care-contact-us-support-main-desktop": {
+    "props": {
+      "blockClass": "contact-us-support-main-desktop"
+    },
+    "children": [
+      "flex-layout.row#contact-us",
+      "flex-layout.row#cu-mini-card-desktop"
+    ]
+  },
+  "flex-layout.row#form-service-care-contact-us": {
+    "props": {
+      "blockClass": "contact-us"
+    },
+    "children": ["flex-layout.col#contact-us"]
+  },
+  "flex-layout.col#form-service-care-contact-us": {
+    "props": {
+      "blockClass": "contact-us"
+    },
+    "children": [
+      "flex-layout.row#cu-title-container-desktop",
+      "flex-layout.row#cu-desc-container-desktop"
+    ]
+  },
+  "flex-layout.row#form-service-care-cu-title-container-desktop": {
+    "props": {
+      "blockClass": "cu-title-container-desktop"
+    },
+    "children": ["rich-text#cu-title-desktop"]
+  },
+  "rich-text#form-service-care-cu-title-desktop": {
+    "props": {
+      "text": "Hai bisogno di aiuto? Contattateci.",
+      "blockClass": "cu-title-desktop"
+    }
+  },
+  "flex-layout.row#form-service-care-cu-desc-container-desktop": {
+    "props": {
+      "blockClass": "cu-desc-container-desktop"
+    },
+    "children": ["rich-text#cu-desc-desktop"]
+  },
+  "rich-text#form-service-care-cu-desc-desktop": {
+    "props": {
+      "text": "Se non hai trovato una soluzione con i nostri servizi, mettiti in contatto con il nostro servizio clienti.",
+      "blockClass": "cu-desc-desktop"
+    }
+  }
+}

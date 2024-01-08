@@ -1,0 +1,19 @@
+type Query {
+
+  doNotCall: String
+
+  """
+  Check cart limitations
+  """
+  checkCart(orderFormId: ID!): OrderForm
+}
+
+type Mutation {
+
+  doNotCall: String
+
+  """
+  Update cart items
+  """
+  updateCartItems(orderFormId: ID!, cartData: UpdateCartItemsReq!): OrderForm
+}

@@ -1,0 +1,464 @@
+{
+  "header": {
+    "blocks": ["header-layout.desktop", "header-layout.mobile"]
+  },
+  "header.full": {
+    "blocks": ["header-layout.desktop", "header-layout.mobile"]
+  },
+  "header-layout.desktop": {
+    "title": "[LAYOUT] - [TOP] - Header Desktop",
+    "children": [
+      "experimental__visibility-layout#top-bar",
+      "d2c-chatbot",
+      "sticky-layout#desktop",
+      "slider-layout#banner-carousel",
+      "newsletter-popup#header"
+    ]
+  },
+  "experimental__visibility-layout#top-bar": {
+    "title": "[LAYOUT] - [TOP] - Top Bar",
+    "props": {
+      "visible": true
+    },
+    "children": ["popup-custom#top-bar"]
+  },
+  "popup-custom#top-bar": {
+    "children": ["rich-text#top-bar"]
+  },
+  "rich-text#top-bar": {
+    "title": "Top bar text",
+    "props": {
+      "blockClass": "topbar-text",
+      "text": "Top-bar test; we have recently updated our privacy notice. Please review the updated version here.",
+      "textAlignment": "LEFT",
+      "textPosition": "CENTER"
+    }
+  },
+  "newsletter-popup#header": {
+    "props": {
+      "time": 0.25 // default time is 1 = 60 sec -> 60 / 4 = 15 res
+    },
+    "children": ["newletter-form"]
+  },
+  "newletter-form": {
+    "children": ["image#newletter-form-image"],
+    "props": {
+      "emailPlaceholder": "E-Mail*",
+      "namePlaceholder": "Vorname*",
+      "surnamePlaceholder": "Nachname*"
+    }
+  },
+  "image#newletter-form-image": {
+    "props": {
+      "blockClass": "newletter-form-image",
+      "width": "100%",
+      "height": "100%",
+      "src": "https://bauknechtde.vtexassets.com/assets/vtex.file-manager-graphql/images/f09fae9c-3e11-47ef-b2e1-9105095159ce___8f9bbe3a0feab58bef29b68bcf503ee4.jpg"
+    }
+  },
+  "sticky-layout#desktop": {
+    "props": {
+      "blockClass": "sticky-header"
+    },
+    "children": ["flex-layout.row#desktopTop"]
+  },
+  "flex-layout.row#desktopTop": {
+    "props": {
+      "horizontalAlign": "left",
+      "verticalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": true,
+      "blockClass": "headerContentTop"
+    },
+    "children": [
+      "flex-layout.col#logo-desktop",
+      "search-bar#headerBlock",
+      //         "flex-layout.col#leftPartHeaderTop",
+      "flex-layout.row#desktopBottom",
+      "flex-layout.col#rightPartHeaderTop"
+    ]
+  },
+  "flex-layout.row#desktopBottom": {
+    "props": {
+      "horizontalAlign": "center",
+      "verticalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": true
+    },
+    "children": ["flex-layout.col#spacer"] //, "link#account"
+  },
+  /*"flex-layout.row#desktop": {
+    "props": {
+      "horizontalAlign": "center",
+      "verticalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": true,
+      "blockClass": "headerContent"
+    },
+    "children": [
+      "flex-layout.col#leftPartHeaderTop",
+      // "flex-layout.col#spacer",
+      "disclosure-layout#search",
+      "minicart.v2",
+      "conditional-login"
+    ]
+  },*/
+  "flex-layout.col#leftPartHeaderTop": {
+    "props": {
+      "blockClass": ["leftPartHeaderTop"]
+    },
+    "children": ["flex-layout.col#logo-desktop", "search-bar#headerBlock"]
+  },
+  "search-bar#headerBlock": {
+    "title": "[SEARCH] - [TOP] - Search Bar Header",
+    "blocks": [
+      "autocomplete-result-list.v2"
+      //"autocomplete-result-list"
+    ],
+    "props": {
+      "openAutocompleteOnFocus": true,
+      "blockClass": "headerSearch"
+    }
+  },
+  //UNUSED
+  "flex-layout.col#menuHeaderTop": {
+    "children": ["vtex.menu@2.x:menu#ws"]
+  },
+  "flex-layout.col#rightPartHeaderTop": {
+    "title": "[ROW] - [TOP] - Header Right Container",
+    "props": {
+      "blockClass": "rightPartHeaderTop"
+    },
+    "children": [
+      "disclosure-layout#search",
+      "flex-layout.col#headerStoreLocator",
+      "conditional-login",
+      "minicart.v2"
+    ]
+  },
+  "flex-layout.col#headerStoreLocator": {
+    "title": "[COL] - [TOP] - Header Store Locator Container",
+    "props": {
+      "verticalAlign": "middle",
+      "blockClass": "storeLocatorHeader"
+    },
+    "children": ["link#headerStoreLocator"]
+  },
+  "link#headerStoreLocator": {
+    "title": "[LINK] - [TOP] - Header Store Locator Link",
+    "props": {
+      "href": "https://www.bauknecht.de/seiten/haendlersuche",
+      "blockClass": "storeLocatorHeader"
+    },
+    "children": ["image#headerStoreLocator"]
+  },
+  "image#headerStoreLocator": {
+    "title": "[IMAGE] - [TOP] - Header Store Locator",
+    "props": {
+      "src": "assets/icons/map_white.svg",
+      "blockClass": "storeLocatorHeader"
+    }
+  },
+  /*"link#account": {
+    "props": {
+      "href": "/account",
+      "blockClass": "loginIcon"
+    },
+    "children": [
+      "image#iconAccount"
+    ]
+  },
+  "image#iconAccount": {
+    "props": {
+      "src": "assets/icons/account-icon.svg"
+    }
+  },*/
+  "flex-layout.col#search-bar": {
+    "props": {
+      "verticalAlign": "middle",
+      "blockClass": "sb"
+    },
+    "children": ["search-bar#header"]
+  },
+  "search-bar#header": {
+    "props": {
+      "blockClass": "searchHeader",
+      "displayMode": "search-and-clear-buttons",
+      "placeholder": "Ricerca"
+    }
+  },
+  "flex-layout.col#spacer": {
+    "props": {
+      "width": "grow",
+      "verticalAlign": "middle",
+      "horizontalAlign": "center"
+    },
+    "children": ["vtex.menu@2.x:menu#ws"]
+  },
+  "flex-layout.col#logo-desktop": {
+    "title": "[COL] - [TOP] - Header Logo Container",
+    "props": {
+      "verticalAlign": "middle",
+      "blockClass": "logo"
+    },
+    "children": ["link#logo"]
+  },
+  "link#logo": {
+    "title": "[LINK] - [TOP] - Header Logo Link",
+    "props": {
+      "href": "/",
+      "blockClass": "logo-container"
+    },
+    "children": ["image#logo"]
+  },
+  "image#logo": {
+    "title": "[IMAGE] - [TOP] - Header Logo",
+    "props": {
+      "height": "100%",
+      "src": "assets/logos/bauknecht_logo.svg",
+      "blockClass": "logoImage"
+    }
+  },
+  "header-layout.mobile": {
+    "title": "[LAYOUT] - [TOP] - Header Mobile",
+    "children": [
+      "experimental__visibility-layout#top-bar",
+      "responsive-layout.tablet#headerTablet",
+      "responsive-layout.phone#headerPhone"
+      // "d2c-chatbot",
+      // // "sticky-layout#mobile",
+      // "scroll-listener-wrapper#headerWrapper",
+      // // "search-bar#headerBlock",
+      // "slider-layout#banner-carousel",
+      // "newsletter-popup#header"
+    ]
+  },
+  "scroll-listener-wrapper#headerWrapper": {
+    "title": "[WRAPPER] - [TOP] - Revealable Wrapper Header Mobile",
+    "props": {
+      "htmlId": "headerStickyWrapper",
+      "minPosition": 100
+    },
+    "children": ["sticky-layout#mobile", "search-bar#headerBlock"]
+  },
+  "scroll-listener-wrapper#headerWrapperPhone": {
+    "title": "[WRAPPER] - [TOP] - Revealable Wrapper Header Mobile",
+    "props": {
+      "htmlId": "headerStickyWrapper",
+      "minPosition": 100
+    },
+    "children": ["sticky-layout#mobilePhone"]
+  },
+  "sticky-layout#mobile": {
+    "title": "[LAYOUT] - [TOP] - Sticky Top Row Header Mobile",
+    "children": ["flex-layout.row#mobile", "search-bar#headerBlock"]
+  },
+  "sticky-layout#mobilePhone": {
+    "title": "[LAYOUT] - [TOP] - Sticky Top Row Header Mobile",
+    "children": ["flex-layout.row#mobilePhone"]
+  },
+  "flex-layout.row#mobile": {
+    "title": "[ROW] - [TOP] - Top Row Header Mobile Container",
+    "children": [
+      "drawer",
+      "link#logo",
+      "flex-layout.col#space",
+      //"disclosure-layout#search",
+      //"flex-layout.col#headerStoreLocator",
+      //"conditional-login",
+      //"minicart.v2"
+      "flex-layout.col#rightPartHeaderTop-mobile"
+    ],
+    "props": {
+      "blockClass": "main-header-mobile",
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    }
+  },
+  "flex-layout.row#mobilePhone": {
+    "title": "[ROW] - [TOP] - Top Row Header Mobile Container",
+    "children": [
+      "flex-layout.col#mobilePhoneTop",
+      "flex-layout.col#mobilePhoneSearch"
+      // "drawer",
+      // "link#logo",
+      // "flex-layout.col#space",
+      // //"disclosure-layout#search",
+      // //"flex-layout.col#headerStoreLocator",
+      // //"conditional-login",
+      // //"minicart.v2"
+      // "flex-layout.col#rightPartHeaderTop-mobile"
+    ],
+    "props": {
+      "blockClass": "main-header-mobile",
+      // "preventHorizontalStretch": true,
+      // "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    }
+  },
+  "flex-layout.col#mobilePhoneTop": {
+    "children": [
+      "flex-layout.col#mobilePhoneTopLeft",
+      "flex-layout.col#mobilePhoneTopRight"
+
+      //"disclosure-layout#search",
+      //"flex-layout.col#headerStoreLocator",
+      //"conditional-login",
+      //"minicart.v2"
+    ],
+    "props": {
+      "blockClass": "mobilePhoneTop"
+    }
+  },
+  "flex-layout.col#mobilePhoneTopLeft": {
+    "props": {
+      "blockClass": "mobilePhoneTopLeft"
+    },
+    "children": ["drawer", "link#logo", "flex-layout.col#space"]
+  },
+  "flex-layout.col#mobilePhoneTopRight": {
+    "children": ["flex-layout.col#rightPartHeaderTop-mobile"],
+    "props": {
+      "blockClass": "mobilePhoneTopRight"
+    }
+  },
+  "responsive-layout.tablet#headerTablet": {
+    "children": [
+      "d2c-chatbot",
+      "sticky-layout#mobile",
+      //"scroll-listener-wrapper#headerWrapper",
+      //"search-bar#headerBlock",
+      "slider-layout#banner-carousel",
+      "newsletter-popup#header"
+    ],
+    "props": {}
+  },
+  "flex-layout.col#mobilePhoneSearch": {
+    "children": ["search-bar#headerBlock"],
+    "props": {
+      "blockClass": "mobilePhoneSearch"
+    }
+  },
+  "responsive-layout.phone#headerPhone": {
+    "children": [
+      "d2c-chatbot",
+      "sticky-layout#mobile",
+      //"scroll-listener-wrapper#headerWrapperPhone",
+      //"search-bar#headerBlock",
+      "slider-layout#banner-carousel",
+      "newsletter-popup#header"
+    ]
+  },
+  "drawer": {
+    "title": "[DRAWER] - [TOP] - Drawer Menu Header Mobile",
+    "props": {
+      "blockClass": "drawer-header-mobile",
+      "slideDirection": "leftToRight"
+    },
+    "children": ["vtex.menu@2.x:menu#mobile", "flex-layout.row#loginMobile"]
+  },
+  "flex-layout.row#loginMobile": {
+    "props": {
+      "fullWidth": true
+    },
+    "children": []
+  },
+  "vtex.menu@2.x:menu#mobile": {
+    "title": "[MENU] - TOP - Header Menu Mobile",
+    "props": {
+      "orientation": "vertical",
+      "blockClass": "mobileMenu"
+    },
+    "children": [
+      "menu-item#prodottiMobile",
+      "menu-item#promozioniMobile",
+      "menu-item#innovationMobile",
+      //"menu-item#ricetteMobile",
+      //"menu-item#supportoMobile"
+      "menu-item#pezziRicambioMobile",
+      "menu-item#servizioClientiMobile"
+    ]
+  },
+  "vtex.menu@2.x:menu#ws": {
+    "title": "[MENU] - TOP - Header Menu Desktop",
+    "children": [
+      "menu-item#prodotti",
+      "analytics-wrapper#menuPromozioni",
+      "analytics-wrapper#menuInnovation",
+      //"menu-item#ricette",
+      "analytics-wrapper#menuPezzi-ricambio",
+      "analytics-wrapper#menuServizio-clienti"
+      //"menu-item#supporto"
+    ]
+  },
+  "disclosure-layout#search": {
+    "title": "[LAYOUT] - [TOP] - Disclosure Search Header",
+    "props": {
+      "blockClass": "header"
+    },
+    "children": ["disclosure-trigger#image", "disclosure-content#search-bar"]
+  },
+  "disclosure-trigger#image": {
+    "children": ["image#search"]
+  },
+  "image#search": {
+    "props": {
+      "blockClass": "search-icon",
+      "width": "24px",
+      "src": "assets/icons/search.svg"
+    }
+  },
+  "disclosure-content#search-bar": {
+    "children": ["flex-layout.row#searchBar"]
+  },
+  "flex-layout.row#searchBar": {
+    "props": {
+      "fullWidth": true
+    },
+    "children": ["flex-layout.col#search"]
+  },
+  "flex-layout.col#space": {
+    "title": "[COL] - [TOP] - Top Row Header Spacer Container",
+    "props": {
+      "width": "grow"
+    }
+  },
+  "flex-layout.col#rightPartHeaderTop-mobile": {
+    "title": "[COL] - [TOP] - Top Row Right Part Header Mobile Container",
+    "children": ["flex-layout.row#rightPartHeaderTop-mobile"]
+  },
+  "flex-layout.row#rightPartHeaderTop-mobile": {
+    "title": "[ROW] - [TOP] - Top Row Right Part Header Mobile Container",
+    "children": [
+      "disclosure-layout#search",
+      "flex-layout.col#headerStoreLocator",
+      "conditional-login",
+      "minicart.v2"
+    ],
+    "props": {
+      "blockClass": "rightPartHeaderTop-mobile"
+    }
+  },
+  "flex-layout.col#search": {
+    "props": {
+      "width": "grow"
+    },
+    "children": ["search-bar"]
+  },
+  "link#Accedi": {
+    "props": {
+      "href": "/account#"
+    },
+    "children": ["rich-text#login"]
+  },
+  "rich-text#login": {
+    "props": {
+      "text": "Login / My Account",
+      "blockClass": ["mobileMenu", "buttonCard", "margin"]
+    }
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "store.custom#template-value-proposition": {
+    "blocks": [
+      "flex-layout.row#bread-theme",
+      "experimental__visibility-layout#bannerTop",
+      "rich-text#VP",
+
+      "experimental__visibility-layout#valueProp",
+      "experimental__visibility-layout#bannerClassicoImmSin50",
+      "experimental__visibility-layout#bannerClassicoImmDes50",
+      "experimental__visibility-layout#bannerClassicoImmSin502",
+      "shelf.relatedProducts#suggestions-vp"
+    ]
+  },
+  "rich-text#VP": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Perchè scegliere Whirlpool?",
+      "blockClass": "textVP"
+    }
+  },
+  "experimental__visibility-layout#valueProp": {
+    "props": {
+      "visible": true
+    },
+    "children": ["slider-layout#linkCardsValueProp"]
+  },
+  "slider-layout#linkCardsValueProp": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 3,
+        "tablet": 3,
+        "phone": 1
+      },
+      "infinite": false,
+      "showNavigationArrows": "never",
+      "autoplay": {
+        "timeout": 5000,
+        "stopOnHover": false
+      },
+      "blockClass": ["carousel", "cardsSupp", "VP"]
+    },
+    "children": [
+      "flex-layout.row#linkCardVP1",
+      "flex-layout.row#linkCardVP2",
+      "flex-layout.row#linkCardVP3"
+    ]
+  },
+  "flex-layout.row#linkCardVP1": {
+    "props": {
+      "blockClass": "linkCards"
+    },
+    "children": ["link#VP"]
+  },
+  "link#VP": {
+    "props": {
+      "blockClass": "linkCards",
+      "href": "#"
+    },
+    "children": [
+      "image#logoLinkCardVP",
+      "rich-text#TitleLinkCardVP",
+      "rich-text#SubTitleLinkCardVP"
+    ]
+  },
+  "image#logoLinkCardVP": {
+    "props": {
+      "blockClass": "linkCards",
+      "width": "2.6875rem",
+      "src": "assets/icons/manuale.svg"
+    }
+  },
+  "rich-text#TitleLinkCardVP": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Manuali di istruzioni",
+      "blockClass": "linkCardsTitle"
+    }
+  },
+  "rich-text#SubTitleLinkCardVP": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Accedi o scarica i manuali dei tuoi prodotti.",
+      "blockClass": "linkCardsSubTitle"
+    }
+  },
+  "flex-layout.row#linkCardVP2": {
+    "props": {
+      "blockClass": "linkCards"
+    },
+    "children": ["link#VP"]
+  },
+  "link#VP2": {
+    "props": {
+      "blockClass": "linkCards",
+      "href": "#"
+    },
+    "children": [
+      "image#logoLinkCardVP",
+      "rich-text#TitleLinkCardVP",
+      "rich-text#SubTitleLinkCardVP"
+    ]
+  },
+  "image#logoLinkCardVP2": {
+    "props": {
+      "blockClass": "linkCards",
+      "width": "2.6875rem",
+      "src": "assets/icons/manuale.svg"
+    }
+  },
+  "rich-text#TitleLinkCardVP2": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Manuali di istruzioni2",
+      "blockClass": "linkCardsTitle"
+    }
+  },
+  "rich-text#SubTitleLinkCardVP2": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Accedi o scarica i manuali dei tuoi prodotti.",
+      "blockClass": "linkCardsSubTitle"
+    }
+  },
+  "flex-layout.row#linkCardVP3": {
+    "props": {
+      "blockClass": "linkCards"
+    },
+    "children": ["link#VP"]
+  },
+  "link#VP3": {
+    "props": {
+      "blockClass": "linkCards",
+      "href": "#"
+    },
+    "children": [
+      "image#logoLinkCardVP",
+      "rich-text#TitleLinkCardVP",
+      "rich-text#SubTitleLinkCardVP"
+    ]
+  },
+  "image#logoLinkCardVP3": {
+    "props": {
+      "blockClass": "linkCards",
+      "width": "2.6875rem",
+      "src": "assets/icons/manuale.svg"
+    }
+  },
+  "rich-text#TitleLinkCardVP3": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Manuali di istruzioni3",
+      "blockClass": "linkCardsTitle"
+    }
+  },
+  "rich-text#SubTitleLinkCardVP3": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Accedi o scarica i manuali dei tuoi prodotti.",
+      "blockClass": "linkCardsSubTitle"
+    }
+  },
+  "shelf.relatedProducts#suggestions-vp": {
+    "blocks": ["product-summary.shelf"],
+    "props": {
+      "collection": "145",
+      "productList": {
+        "maxItems": 10,
+        "itemsPerPage": 3,
+        "minItemsPerPage": 1,
+        "scroll": "BY_PAGE",
+        "arrows": true,
+        "titleText": "Non sai da dove iniziare? Scopri i prodotti Whirlpool più venduti"
+      },
+      "blockClass": ["margin3125", "slideMargin", "slide20width"]
+    }
+  }
+}

@@ -1,0 +1,569 @@
+.formContainer {
+  /* width: 50%; */
+  margin: auto;
+  margin-top: 10rem;
+}
+.form {
+}
+.formWrapper{
+  width: 50%;
+  margin: auto;
+}
+.formDiv {
+  padding-bottom: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.inputDiv,
+.inputDivFull {
+  width: 47%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5625rem;
+}
+.inputDiv33{
+  width: 30%;
+}
+.inputDivFull {
+  width: 100%;
+}
+.inputLabel {
+  text-transform: uppercase;
+  font-family: 'GothamProRRegular';
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: #000;
+  margin-top: 0.5rem;
+}
+.select {
+  border-radius: 0;
+  display: block;
+  border: 0.0625rem solid #e7e7e7;
+  background: 0;
+  position: relative;
+  z-index: 1;
+  padding: 0.875rem;
+  width: 100%;
+  border-bottom: 0.0625rem solid #bbc9c9;
+  font-family: 'quicksandregular', Arial;
+  font-weight: 400;
+  font-size: 1.125rem;
+  color: #607171;
+  appearance: none;
+  line-height: 1.5625rem;
+  outline: none;
+  cursor: pointer;
+}
+.selectDiv {
+  position: relative;
+  margin: 3rem 0 5rem 0;
+}
+.selectDiv::after {
+  content: '';
+  display: block;
+  width: 0.375rem;
+  height: 0.375rem;
+  border: solid #fdc100;
+  border-width: 0 0.125rem 0.125rem 0;
+  transform: rotate(45deg) translate(-110%, -20%);
+  position: absolute;
+  top: 50%;
+  right: 0.875rem;
+  z-index: 0;
+}
+.option {
+  /* color: #607171; */
+  font-size: 1.125rem;
+  font-family: 'quicksandregular', Arial;
+}
+
+.input,
+.errorInput {
+  width: 100%;
+  display: block;
+  border: 0;
+  margin-bottom: 0;
+  color: #505050;
+  padding-left: 0;
+  height: 2.2rem;
+  font-family: 'gothamproregular';
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.25rem;
+  border-bottom: 0.0625rem solid #e7e7e7;
+  outline: none;
+}
+.errorInput {
+  border-bottom: 0.0625rem solid #d10000;
+}
+.errorLabel {
+  color: #d10000;
+  font-family: 'quicksandlight', Arial;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  margin: 0;
+  margin-top: 0.125rem;
+}
+.submitButton {
+  color: #fff;
+  background: #edb112;
+  border: 0.0625rem solid #edb112;
+  padding: 0.7rem 2rem;
+  cursor: pointer;
+  font-family: 'quicksandregular', Arial;
+  font-size: 1.125rem;
+  transition: all 0.35s ease-in-out;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+.submitButton:hover {
+  background: #fdc100;
+  border: 0.0625rem solid #fdc100;
+  transition: all 0.35s ease-in-out;
+}
+
+/*--- PRIVACY SECTION ---*/
+.privacySectionDiv {
+  padding: 3rem 0;
+  width: 50%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+.privacyTitle,
+.privacyTitle2,
+.privacyTitle3 {
+  font-family: 'quicksandmedium', Arial;
+  font-weight: 400;
+  font-size: 1rem;
+  text-align: left;
+  color: #607171;
+  display: block;
+}
+.privacyDescription {
+  font-family: 'quicksandregular', Arial;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  text-align: left;
+  color: #585858;
+  display: block;
+  margin-top: 0.9375rem;
+}
+.privacyLink {
+  color: #edb112;
+  text-decoration: underline;
+}
+.privacyLink:hover {
+  color: #fdc100;
+}
+.checkboxGroup {
+  
+}
+.brandCheckbox {
+  margin-top: 2rem;
+}
+.checkboxWrapper {
+  margin-top: 1rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.inputCheckbox {
+  position: absolute;
+  min-width: 1.25rem;
+  min-height: 1.25rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  z-index: 2;
+  opacity: 0;
+  cursor: pointer;
+}
+.customCheckbox,
+.customCheckboxFilled {
+  min-width: 1.25rem;
+  min-height: 1.25rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  display: inline-block;
+  border: 0.0625rem solid #9b9b9b;
+  position: relative;
+}
+.customCheckboxFilled {
+  background-color: #edb112;
+  border-color: #edb112;
+}
+.customCheckboxFilled::after {
+  content: '';
+  display: block;
+  width: 0.375rem;
+  height: 0.625rem;
+  border: solid #fff;
+  border-width: 0 0.125rem 0.125rem 0;
+  transform: rotate(45deg) translate(-110%, -20%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.privacyAccept {
+  font-family: 'quicksandregular', Arial;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  text-align: left;
+  color: #585858;
+  margin-left: 0.5rem;
+}
+/*--- PRODUCT INFO SECTION ---*/
+.productInfoDiv {
+  padding: 3rem 0;
+}
+.productInfoWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.productInfoForm {
+  width: 32%;
+  padding: 2rem 0;
+}
+.productInfoForm2 {
+  width: 100%;
+  padding-top: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+}
+.closeSectionIcon {
+  position: absolute;
+  background-image: url('./assets/close_icon.svg');
+  background-position: center;
+  width: 1rem;
+  height: 1rem;
+  top: 5rem;
+  right: 0;
+  transform: translateY(-100%);
+  cursor: pointer;
+}
+.inputDivMid {
+  width: 47%;
+}
+.inputDivMid > input {
+  box-sizing: content-box;
+}
+.productInfoForm > div:first-of-type {
+  margin-top: 0;
+}
+.productInfoHelp {
+  /* width: 65%; */
+  background: #f9f9f9;
+  padding: 2rem;
+}
+.productInfoHelpWrapper{
+  width: 50%;
+  margin: auto;
+}
+.productInfoHelpImgWrapper {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 2.5rem;
+  max-width: 20.625rem;
+  min-height: 13rem;
+}
+.productInfoHelpImg {
+  margin: auto;
+  width: 100%;
+}
+.privacyTitle2 {
+  margin-bottom: 1.25rem;
+}
+.privacyTitle3 {
+  margin: 3rem 0 1.25rem 0;
+}
+.privacyDescription2 {
+  color: #585858;
+  margin: 0;
+  padding: 0;
+  font-family: 'quicksandRegular';
+  line-height: initial;
+}
+.addSectionButton {
+  background: 0 0;
+  border: 0.0625rem solid #197c83;
+  color: #197c83;
+  padding: 1rem;
+  margin-top: 4rem;
+  cursor: pointer;
+  position: relative;
+  font-family: 'quicksandregular', Arial;
+  font-size: 1.125rem;
+  overflow: hidden;
+  transition: all 0.25s ease-in-out;
+}
+.addSectionButton:hover {
+  border: 0.0625rem solid transparent;
+  transition: all 0.25s ease-in-out;
+}
+.addSectionButton::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.0625rem;
+  z-index: 1;
+  transform: translate(-100%);
+  transition: all 0.25s ease-in-out;
+}
+.addSectionButton:hover::after {
+  background: #197c83;
+  transform: translate(0, 0);
+  transition: all 0.5s ease-in-out;
+}
+.inputDivFullDate,
+.inputDivFullDateError {
+  position: relative;
+}
+.inputDivFullDate::after,
+.inputDivFullDateError::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 0.0625rem;
+  background: #bbc9c9;
+  bottom: 3px;
+  left: 0;
+  /* border-bottom: 0.0625rem solid #bbc9c9; */
+}
+.inputDivFullDateError::after {
+  background: #d10000;
+}
+.errorSubmitDiv {
+  margin: 2rem 0;
+  text-align: center;
+  background: #d10000;
+  padding: 1.5rem;
+}
+.errorSubmitLabel {
+  color: #fff;
+  font-family: 'quicksandlight', Arial;
+  font-weight: 400;
+  font-size: 1rem;
+}
+.formSuccessDiv {
+  padding: 5rem 4rem;
+  background-color: #f2f2f2;
+  margin-top: 7rem;
+  width: 100%;
+}
+.formSuccessTitle {
+  font-family: 'quicksandlight', Arial;
+  font-weight: 400;
+  font-size: 2.625rem;
+  line-height: 2.9375rem;
+  color: #197c83;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-left: 2.875rem;
+}
+.formSuccessTitle::after {
+  width: 3.125rem;
+  content: '';
+  display: block;
+  height: 0.125rem;
+  margin-top: 0.625rem;
+  background: #197c83;
+}
+.formSuccessSubtitleDiv {
+  background-color: #fff;
+  padding: 2.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.formSuccessSubtitle {
+  font-family: 'quicksandlight', Arial;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.4375rem;
+  color: #585858;
+}
+@media only screen and (max-width: 640px) {
+  .formContainer {
+    margin-top: 5rem;
+  }
+  .formDiv {
+    flex-direction: column;
+  }
+  .inputDiv,
+  .productInfoForm,
+  .productInfoHelp,
+  .addSectionButton,
+  .submitButton,
+  .inputDivMid {
+    width: 100%;
+  }
+  .productInfoWrapper,
+  .productInfoForm2 {
+    flex-direction: column;
+  }
+  .closeSectionIcon {
+    top: 4.5rem;
+  }
+  .addSectionButton:hover {
+    border: 0.0625rem solid #197c83;
+  }
+  .addSectionButton::after {
+    width: 0;
+    height: 0;
+  }
+  .formSuccessDiv {
+    padding: 4rem 0;
+    margin-top: 2.5rem;
+  }
+  .formSuccessSubtitleDiv {
+    text-align: left;
+  }
+  .formSuccessTitle {
+    font-size: 1.875rem;
+    font-family: 'quicksandregular', Arial;
+  }
+}
+
+/*-- NEW --*/
+
+.title{
+  font-weight: 400;
+  font-size: 1.5625rem;
+  line-height: 2.625rem;
+  text-align: center;
+  font-family: 'gothamproregular';
+}
+.description{
+  font-family: 'gothamproregular';
+  text-align: center;
+}
+.textArea{
+  width: 100%;
+  background: 0 0;
+  height: 1.5625rem;
+  resize: none;
+  height: 100%;
+  border: 0.0625rem solid #c6c6c5;
+  padding: 0.3125rem;
+  font-size: 1.125rem;
+  line-height: 1.25rem;
+  color: #282828;
+  outline: none;
+}
+.inputWarranty > option:disabled{
+  color: #c6c6c5;
+}
+
+.postillaText{
+  margin-top: 4rem;
+  font-size: .75rem;
+  font-family: 'gothamproregular';
+}
+.descriptionPrivacy{
+  text-align: left;
+  margin-top: 2rem;
+}
+.submitButtonWrapper{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 0;
+}
+.formLink{
+  color: #edb112;
+  transition: all 0.2s ease;
+  margin-top: .5rem;
+}
+.formLink:hover{
+  color: #fdc100;
+  transition: all 0.2s ease;
+}
+
+.loaderForm {
+  font-size: 10px;
+  margin: 50px auto;
+  text-indent: -9999em;
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  background: #edb112;
+  background: -moz-linear-gradient(
+    left,
+    #edb112 10%,
+    rgba(237, 177, 18, 0) 42%
+  );
+  background: -webkit-linear-gradient(
+    left,
+    #edb112 10%,
+    rgba(237, 177, 18, 0) 42%
+  );
+  background: -o-linear-gradient(left, #edb112 10%, rgba(237, 177, 18, 0) 42%);
+  background: -ms-linear-gradient(left, #edb112 10%, rgba(237, 177, 18, 0) 42%);
+  background: linear-gradient(to right, #edb112 10%, rgba(237, 177, 18, 0) 42%);
+  position: relative;
+  -webkit-animation: load3 1.4s infinite linear;
+  animation: load3 1.4s infinite linear;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.loaderForm:before {
+  width: 50%;
+  height: 50%;
+  background: #edb112;
+  border-radius: 100% 0 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+}
+.loaderForm:after {
+  background: #ffffff;
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+  content: "";
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+@-webkit-keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  .formWrapper, .productInfoHelpWrapper, .privacySectionDiv{
+    width: 80%;
+  }
+  .inputDiv, .inputDivFull{
+    width: 100%;
+  }
+}

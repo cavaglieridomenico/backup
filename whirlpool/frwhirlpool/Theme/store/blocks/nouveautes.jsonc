@@ -1,0 +1,139 @@
+{
+  "store.custom#nouveautes": {
+    "children": [
+      // "breadcrumb#nouveautes",
+      "breadcrumb-two-levels",
+      "toggle-layout#H1Title",
+      "experimental__visibility-layout#nouveautesBanner",
+      "toggle-layout#OffresSpeciales2",
+      "toggle-layout#OffresSpeciales3",
+      "toggle-layout#OffresSpeciales4",
+      "flex-layout.row#halfSpace",
+      "experimental__visibility-layout#CarouselNouveaute",
+      "experimental__visibility-layout#gridNouveautes",
+      "flex-layout.row#newsletter-row"
+    ]
+  },
+  "breadcrumb#nouveautes": {
+    "props": {
+      "categories": [
+        "NOUVEAUTÉS"
+      ],
+      "showOnMobile": false
+    }
+  },
+  "toggle-layout#H1Title": {
+    "children": [
+      "rich-text#H1Title"
+    ]
+  },
+  "rich-text#H1Title": {
+    "props": {
+      "text": "# Title",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": [
+        "h1Title"
+      ]
+    }
+  },
+  "experimental__visibility-layout#nouveautesBanner": {
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "info-card#nouveautesBanner",
+      "info-card#half4"
+    ]
+  },
+  "info-card#nouveautesBanner": {
+    "props": {
+      "id": "half-banner-seconf",
+      "isFullModeStyle": false,
+      "imageUrl": "assets/half2.jpg",
+      "headline": "Lave-linge FreshCare+",
+      "subhead": "100% fraîcheur, même si vous oubliez votre linge",
+      "callToActionText": "En savoir plus",
+      "callToActionUrl": "#",
+      "blockClass": [
+        "halfBannerReverse"
+      ],
+      "textAlignment": "left"
+    }
+  },
+  "experimental__visibility-layout#CarouselNouveaute": {
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "rich-text#titleCarouselNouveautes",
+      "list-context.product-list#CarouselNouveautes"
+    ]
+  },
+  "rich-text#titleCarouselNouveautes": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Notre Sélection Nouveauté",
+      "blockClass": "textHome"
+    }
+  },
+  "list-context.product-list#CarouselNouveautes": {
+    "blocks": [
+      "product-summary.shelf#caroselliLanding"
+    ],
+    "children": [
+      "slider-layout#CarouselNouveautes"
+    ],
+    "props": {
+      "collection": "148",
+      "productList": {
+        "maxItems": 10,
+        "itemsPerPage": 5,
+        "minItemsPerPage": 1,
+        "scroll": "BY_PAGE",
+        "arrows": true,
+        "titleText": "Non sai da dove iniziare? Scopri i prodotti Whirlpool più venduti"
+      }
+    }
+  },
+  "slider-layout#CarouselNouveautes": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 5,
+        "tablet": 2,
+        "phone": 1
+      },
+      "showPaginationDots": "always",
+      "showNavigationArrows": "desktopOnly",
+      "infinite": true,
+      "fullWidth": false,
+      "blockClass": [
+        "shelf",
+        "shelfMobile"
+      ]
+    }
+  },
+  "experimental__visibility-layout#gridNouveautes": {
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "flex-layout.row#space",
+      "rich-text#Technology",
+      "flex-layout.row#gridNouveautes",
+      "flex-layout.row#space"
+    ]
+  },
+  "flex-layout.row#gridNouveautes": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "gridHomePage"
+    },
+    "children": [
+      "flex-layout.col#left",
+      "flex-layout.col#middle",
+      "flex-layout.col#right"
+    ]
+  }
+}

@@ -1,0 +1,397 @@
+{ 
+  "product-summary-name": {
+    "props": {
+      "tag": "div"
+    }
+  },
+  "product-summary-image#shelf": {
+    "props": {
+      "fullWidth": "50%",
+      "showBadge": false,
+      "aspectRatio": "1:1",
+      "maxHeight": 300,
+      "blockClass": "image-container-product"
+    }
+  },
+  "product-summary-image#shelf-card-new-product": {
+    "props": {
+      "fullWidth": "50%",
+      "showBadge": false,
+      "aspectRatio": "1:1",
+      "maxHeight": 300,
+      "blockClass": "image-container-product"
+    }
+  },
+  "product-summary-image#shelf-new": {
+    "props": {
+      "fullWidth": "50%",
+      "showBadge": false,
+      "aspectRatio": "1:1",
+      "maxHeight": 300,
+      "blockClass": "image-container-product"
+    }
+  },
+  "product-summary-image#shelfMobile": {
+    "props": {
+      "fullWidth": "50%",
+      "showBadge": false,
+      "aspectRatio": "1:1",
+      "maxHeight": 300,
+      "blockClass": "image-container-product-mobile"
+    }
+  },
+  "product-summary-image#shelfMobile-new-product": {
+    "props": {
+      "fullWidth": "50%",
+      "showBadge": false,
+      "aspectRatio": "1:1",
+      "maxHeight": 300,
+      "blockClass": "image-container-product-mobile"
+    }
+  },
+  "product-comparison-block.selector": {
+    "props": {
+      "blockClass": "compareSearchPage"
+    }
+  },
+  "product-comparison-block.selector#plp-compare": {
+    "props": {
+      "blockClass": "plp-compare-style"
+    }
+  },
+  "vtex.product-highlights@2.x:product-highlights#collection": {
+    "props": {
+      "type": "promotion"
+    },
+    "children": [
+      "product-highlight-text#c"
+    ]
+  },
+  "product-highlight-text#c": {
+    "props": {
+      "message": "{highlightName}"
+    }
+  },
+  "product-specification-group#codiceProdottoPLP": {
+    "children": [
+      "product-specification#codiceProdottoPLP"
+    ],
+    "props": {
+      "filter": {
+        "specificationGroups": [
+          "CommercialCode"
+        ],
+        "type": "show"
+      },
+      "blockClass": "paddingModelName"
+    }
+  },
+  "product-specification#codiceProdottoPLP": {
+    "children": [
+      "product-specification-values#codiceProdottoPLP"
+    ]
+  },
+  "product-specification-values#codiceProdottoPLP": {
+    "children": [
+      "product-specification-text#codiceProdottoPLP"
+    ]
+  },
+  "product-specification-text#codiceProdottoPLP": {
+    "props": {
+      "message": "{specificationValue}",
+      "blockClass": "noPaddingBottom"
+    }
+  },
+  "flex-layout.row#productType": {
+    "children": [
+      "flex-layout.col#wcollection",
+      "flex-layout.col#badge"
+    ],
+    "props": {
+      "preserveLayoutOnMobile": true,
+      "preventHorizontalStretch": false,
+      "blockClass": "badges",
+      "colSizing": "equal"
+    }
+  },
+  "flex-layout.col#wcollection": {
+    "children": [
+      "condition-layout.product#collectionBadge"
+    ]
+  },
+  "flex-layout.col#badge": {
+    "children": [
+      "condition-layout.product#premiumBadge"
+    ]
+  },
+  "condition-layout.product#collectionBadge": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "productClusters",
+          "arguments": {
+            "id": "150"
+          }
+        }
+      ],
+      "Then": "flex-layout.row#premium",
+      "Else": "flex-layout.row#empty"
+    }
+  },
+  "flex-layout.row#empty": {
+    "children": []
+  },
+  "flex-layout.row#premium": {
+    "children": [
+      "rich-text#wcollectionpremium"
+    ]
+  },
+  "rich-text#wcollectionpremium": {
+    "props": {
+      "text": "W COLLECTION",
+      "blockClass": "premium"
+    }
+  },
+  "condition-layout.product#premiumBadge": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "productType",
+            "value": "PREMIUM"
+          }
+        }
+      ],
+      "Then": "flex-layout.row#clubImage"
+    }
+  },
+  "flex-layout.row#clubImage": {
+    "children": [
+      "image#clubImage"
+    ],
+    "props": {
+      "blockClass": "clubImage"
+    }
+  },
+  "image#clubImage": {
+    "props": {
+      /* "src": "assets/whirlpoolClub.svg", */
+      "maxHeight": 32,
+      "alt": "premium product",
+      "title": "Whirlpool Club",
+      "blockClass": "clubImage"
+    }
+  },
+  "flex-layout.row#commercialCode": {
+    "children": [
+      "product-specification-group#modelSummary"
+    ],
+    "props": {
+      "blockClass": "commercialCodeRow"
+    }
+  },
+  "product-specification-group#modelSummary": {
+    "children": [
+      "product-specification#modelSummary"
+    ],
+    "props": {
+      "filter": {
+        "specificationGroups": [
+          "CommercialCode"
+        ],
+        "type": "show"
+      }
+    }
+  },
+  "product-specification#modelSummary": {
+    "children": [
+      "product-specification-values#modelSummary"
+    ]
+  },
+  "product-specification-values#modelSummary": {
+    "children": [
+      "product-specification-text#modelSummary"
+    ]
+  },
+  "product-specification-text#modelSummary": {
+    "props": {
+      "message": "{specificationValue}"
+    }
+  },
+  "flex-layout.row#summary-price": {
+    "children": [
+      "condition-layout.product#showPriceOrNot",
+      "condition-layout.product#showPriceOrNotProduct-price-savings#saving"
+    ],
+    "props": {
+      "fullWidth": false,
+      "preventHorizontalStretch": false,
+      "colGap": 5,
+      "colSizing": "auto",
+      "blockClass": "priceSummarySaving"
+    }
+  },
+  "condition-layout.product#showPriceOrNot": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "showPrice",
+            "value": "true"
+          }
+        }
+      ],
+      "Then": "product-list-price#summary"
+    }
+  },
+  "condition-layout.product#showPriceOrNotProduct-price-savings#saving": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "showPrice",
+            "value": "true"
+          }
+        }
+      ],
+      "Then": "product-price-savings#saving"
+    }
+  },
+  "product-price-savings#saving": {
+    "props": {
+      "markers": [
+        "highlight"
+      ],
+      "blockClass": "saving",
+      "message": "Risparmi: {savingsValue}"
+    }
+  },
+  "product-list-price#summary": {
+    "props": {
+      "blockClass": "summary"
+    }
+  },
+  "product-list-price#summary-new": {
+    "props": {
+      "blockClass": "summaryNew"
+    }
+  },
+  "flex-layout.row#selling-price-savings": {
+    "props": {
+      "preserveLayoutOnMobile": true,
+      "preventHorizontalStretch": false,
+      "blockClass": "priceSummaryCont",
+      "colSizing": "equal"
+    },
+    "children": [
+      "flex-layout.col#price-selling"
+    ]
+  },
+  "flex-layout.col#price-selling": {
+    "children": [
+      "flex-layout.row#price-selling"
+    ]
+  },
+  "flex-layout.row#price-selling": {
+    "props": {
+      "marginRight": 5
+    }
+  },
+  "product-installments#summary": {
+    "props": {
+      "blockClass": "summary"
+    }
+  },
+  "condition-layout.product#showPriceOrNotProduct-selling-price-PLP": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "showPrice",
+            "value": "true"
+          }
+        }
+      ],
+      "Then": "product-selling-price#summary"
+    }
+  },
+  "product-selling-price#summary": {
+    "props": {
+      "blockClass": "summary",
+      "markers": [
+        "Tax"
+      ],
+      "message": "{sellingPriceValue} IVA inclusa "
+    }
+  },
+  "product-price-savings#summary": {
+    "props": {
+      "markers": [
+        "discount"
+      ],
+      "message": "{savingsPercentage}",
+      "blockClass": [
+        "summary",
+        "padding",
+        "backWhitheBorderFdc100ColorFdc100"
+      ]
+    }
+  },
+  "flex-layout.row#dimensioni": {
+    "props": {
+      "blockClass": "dimensioni"
+    },
+    "children": [
+      "print-specification#dimensioni"
+    ]
+  },
+  "print-specification#dimensioni": {
+    "props": {
+      "specificationToPrint": [
+        {
+          "specGroup": "Dimensioni",
+          "specAttribute": "Larghezza (cm)",
+          "measureUnit": "cm"
+        },
+        {
+          "specGroup": "Dimensioni",
+          "specAttribute": "Altezza (cm)",
+          "measureUnit": "cm"
+        },
+        {
+          "specGroup": "Dimensioni",
+          "specAttribute": "Profondità (cm)",
+          "measureUnit": "cm"
+        }
+      ],
+      "aggregate": true,
+      "label": "Dimensioni: ",
+      "aggregateSymbol": "x",
+      "blockClass": "dimensioni"
+    }
+  },
+  "flex-layout.row#specifiche": {
+    "props": {
+      "blockClass": "specifiche"
+    },
+    "children": [
+      "print-specification#capacita"
+    ]
+  },
+  "print-specification#capacita": {
+    "props": {
+      "specificationToPrint": [
+        {
+          "specGroup": "Endeca",
+          "specAttribute": "CAPACITÀ"
+        }
+      ],
+      "aggregate": false,
+      "label": "Capacità: "
+    }
+  }
+}

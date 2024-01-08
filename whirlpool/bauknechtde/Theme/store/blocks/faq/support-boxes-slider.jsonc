@@ -1,0 +1,116 @@
+{
+  "experimental__visibility-layout#faqSupportBoxes": {
+    "title": "[EXPERIMENTAL-VISIBILITY] - BOTTOM - FAQ Support cards slider",
+    "props": {
+      "visible": true
+    },
+    "children": ["slider-layout#faqLinkCards", "rich-text#labelUnderCards"]
+  },
+  "slider-layout#faqLinkCards": {
+    "title": "[SLIDER] - BOTTOM - Support cards slider",
+    "props": {
+      "itemsPerPage": {
+        "desktop": 5,
+        "tablet": 3,
+        "phone": 1
+      },
+      "infinite": false,
+      "showNavigationArrows": "never",
+      "autoplay": {
+        "timeout": 5000,
+        "stopOnHover": false
+      },
+      "blockClass": ["carousel", "cardsSupp", "faqCardsSupp"]
+    },
+    "children": [
+      // "flex-layout.row#faqLinkCard1",
+      "flex-layout.row#faqLinkCard2",
+      "flex-layout.row#faqLinkCard3",
+      "flex-layout.row#faqLinkCard4",
+      "flex-layout.row#faqLinkCard5"
+    ]
+  },
+  "flex-layout.row#faqLinkCard1": {
+    "title": "[ROW] - BOTTOM - Old First FAQ Support card Container",
+    "props": {
+      "blockClass": ["linkCards", "faqLinkCards"]
+    },
+    "children": ["link#card1"]
+  },
+  "flex-layout.row#faqLinkCard2": {
+    "title": "[ROW] - BOTTOM - First FAQ Support card Container",
+    "props": {
+      "blockClass": ["linkCards", "faqLinkCards"]
+    },
+    "children": ["link#card2"]
+  },
+  "flex-layout.row#faqLinkCard3": {
+    "title": "[ROW] - BOTTOM - Second FAQ Support card Container",
+    "props": {
+      "blockClass": ["linkCards", "faqLinkCards"]
+    },
+    "children": ["link#card3"]
+  },
+  "flex-layout.row#faqLinkCard4": {
+    "title": "[ROW] - BOTTOM - Third FAQ Support card Container",
+    "props": {
+      "blockClass": ["linkCards", "faqLinkCards"]
+    },
+    "children": ["link#card4"]
+  },
+  "flex-layout.row#faqLinkCard5": {
+    "title": "[ROW] - BOTTOM - Fourth FAQ Support card Container",
+    "props": {
+      "blockClass": ["linkCards", "faqLinkCards"]
+    },
+    "children": ["link#card5"]
+  },
+  "link#card5": {
+    "title": "[LINK] - BOTTOM - Fourth Support card",
+    "props": {
+      "blockClass": "linkCards",
+      "href": "https://bauknechtde.myvtex.com/kundencenter/buchen-sie-einen-reparaturtermin"
+    },
+    "children": [
+      "image#logoLinkCard5",
+      "rich-text#TitleLinkCard5",
+      "rich-text#SubTitleLinkCard5",
+      "rich-text#ButtonLinkCard5"
+    ]
+  },
+  "image#logoLinkCard5": {
+    "title": "[IMAGE] - BOTTOM - Fourth Support card Image",
+    "props": {
+      "blockClass": "linkCards",
+      "width": "2.6875rem",
+      "src": "assets/icons/riparazione.svg"
+    }
+  },
+  "rich-text#TitleLinkCard5": {
+    "title": "[TEXT] - BOTTOM - Fourth Support card Text title",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "TERMIN BUCHEN",
+      "blockClass": "linkCardsTitle"
+    }
+  },
+  "rich-text#SubTitleLinkCard5": {
+    "title": "[TEXT] - BOTTOM - Fourth Support card Image description",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Buchen Sie einen Reparaturtermin",
+      "blockClass": "linkCardsSubTitle"
+    }
+  },
+  "rich-text#ButtonLinkCard5": {
+    "title": "[TEXT] - BOTTOM - Fourth Support card Image Button",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Reparartur",
+      "blockClass": "linkCardsButton"
+    }
+  }
+}

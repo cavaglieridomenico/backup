@@ -1,0 +1,158 @@
+{
+  "product-summary.shelf#bestSeller": {
+    "children": [
+      "vtex.product-highlights@2.x:product-highlights#promotion",
+      "product-summary-image#shelf",
+      "flex-layout.row#commercialCode",
+      "vtex.store-components:product-name#summary",
+      "product-summary-space",
+      "flex-layout.row#selling-price-savings-no-comparison-bs",
+      "flex-layout.row#leadTime",
+      "condition-layout.product#isAvailableButtonPlp",
+      "where-to-buy.button",
+      "flex-layout.row#ratingProductCardBestSellers",
+      "flex-layout.row#energyLabelAndDataSheet-bs"
+    ]
+  },
+  "product-summary.shelf#pdpCarouselsBs": {
+    "title": "Product Summary in PDP's Carousels",
+    "children": [
+      "vtex.product-highlights@2.x:product-highlights#promotion",
+      "promo-countdown#pdp-carousels",
+      "product-summary-image#shelf",
+      "flex-layout.row#commercialCode",
+      "vtex.store-components:product-name#summary",
+      "product-summary-space",
+      "flex-layout.row#selling-price-savings-no-comparison-bs",
+      "flex-layout.row#leadTime",
+      "condition-layout.product#isAvailableButtonPlp",
+      "where-to-buy.button",
+      "flex-layout.row#ratingProductCardBestSellers",
+      "flex-layout.row#energyLabelAndDataSheet-bs"
+    ]
+  },
+  "flex-layout.row#ratingProductCardBestSellers": {
+    "children": [
+      "flex-layout.row#reevoo",
+      "flex-layout.row#youreko",
+      "flex-layout.row#awardedLogos"
+    ],
+    "props": {
+      "blockClass": ["ratingProductCard", "ratingProductCardBs"],
+      "colSizing": "auto"
+    }
+  },
+  "flex-layout.row#selling-price-savings-no-comparison-bs": {
+    "props": {
+      "preserveLayoutOnMobile": true,
+      "preventHorizontalStretch": false,
+      "blockClass": "priceSummaryCont",
+      "colSizing": "equal"
+    },
+    "children": ["flex-layout.col#price-selling-bs"]
+  },
+  "flex-layout.col#price-selling-bs": {
+    "children": ["flex-layout.row#price-selling-bs"]
+  },
+  "flex-layout.row#price-selling-bs": {
+    "props": {
+      "marginRight": 5
+    },
+    "children": [
+      "condition-layout.product#showPriceOrNotProduct-selling-price-PLP-bs"
+    ]
+  },
+  "condition-layout.product#showPriceOrNotProduct-selling-price-PLP-bs": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "showPrice",
+            "value": "true"
+          }
+        }
+      ],
+      "Then": "flex-layout.col#price-selling-plp-bs"
+    }
+  },
+  "flex-layout.col#price-selling-plp-bs": {
+    "title": "Col - Price selling",
+    "children": [
+      "flex-layout.row#saving-pdp",
+      "flex-layout.row#product-selling-price"
+    ],
+    "props": {
+      "blockClass": "discountedPricePlp",
+      "verticalAlign": "middle",
+      "horizontalAlign": "right"
+    }
+  },
+  "flex-layout.row#energyLabelAndDataSheet-bs": {
+    "title": "[Row] - Energy Label and Data Sheet",
+    "props": {
+      "blockClass": ["energyLabelAndDataSheet","energyLabelAndDataSheetBs"],
+      "horizontalAlign": "center",
+      "verticalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "preserveLayoutOnMobile": true
+    },
+    "children": ["flex-layout.col#energyLabel", "flex-layout.col#productDataSheet-bs"]
+  },
+  "flex-layout.col#productDataSheet-bs": {
+    "title": "[Col] - Product Data Sheet in PDP",
+    "props": {
+      "verticalAlign": "middle",
+      "marginLeft": 4
+    },
+    "children": ["condition-layout.product#nelProductDataSheet-bs"]
+  },
+  "condition-layout.product#nelProductDataSheet-bs": {
+    "title": "[PRODUCT-CONDITION] - Product Data Sheet",
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "nel-data-sheet"
+          }
+        }
+      ], 
+      "Then": "link.product#nelProductDataSheet-bs",
+      "Else": "condition-layout.product#oldProductDataSheet-bs"
+    }
+  },
+  "link.product#nelProductDataSheet-bs": {
+    "props": {
+      "href": "{specificationGroups.Document.specifications.nel-data-sheet}",
+      "blockClass": ["productDataSheet"],
+      "target": "_blank",
+      "escapeLinkRegex": "[%+]"
+    },
+    "children": ["rich-text#productDataSheet"]
+  },
+  "condition-layout.product#oldProductDataSheet-bs": {
+    "title": "[PRODUCT-CONDITION] - Old Product Data Sheet",
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "product-data-sheet"
+          }
+        }
+      ],
+      "Then": "link.product#oldProductDataSheet-bs"
+    }
+  },
+  "link.product#oldProductDataSheet-bs": {
+    "props": {
+      "href": "{specificationGroups.Document.specifications.product-data-sheet}",
+      "blockClass": ["productDataSheet"],
+      "target": "_blank",
+      "escapeLinkRegex": "[%+]"
+    },
+    "children": ["rich-text#productDataSheet"]
+  }
+}

@@ -1,0 +1,267 @@
+{
+  /* ---------------------- HEADER ---------------------------- */
+  "header": {
+    "blocks": ["header-layout.desktop", "header-layout.mobile"],
+    "props": {
+      "blockClass": "header-container"
+    }
+  },
+  "header.full": {
+    "blocks": ["header-layout.desktop", "header-layout.mobile"],
+    "props": {
+      "height": "100%"
+    }
+  },
+  "header-layout.desktop": {
+    "children": [
+      /* "flex-layout.row#desktop-label-covid", */
+      "flex-layout.row#desktop-row"
+    ]
+  },
+  "header-layout.mobile": {
+    "children": [
+      /*  "flex-layout.row#desktop-label-covid-mobile", */
+      "flex-layout.row#mobile-row"
+    ]
+  },
+  /*   rich text desktop*/
+  "flex-layout.row#desktop-label-covid": {
+    "props": {
+      "blockClass": "banner-covid-container"
+    },
+    "children": [
+      "rich-text#covid" //,
+      //"rich-text#contact-us"
+    ]
+  },
+  "rich-text#covid": {
+    "props": {
+      "text": "Coronavirus update: we continue to support you for delivery and repair of appliances. [Contact us](/pomoc)",
+      "blockClass": "covid-container"
+    }
+  },
+  /*   rich text mobile*/
+  "flex-layout.row#desktop-label-covid-mobile": {
+    "props": {
+      "blockClass": "banner-covid-container"
+    },
+    "children": ["rich-text#covid-mobile"]
+  },
+  "rich-text#covid-mobile": {
+    "props": {
+      "text": "Coronavirus update: we continue to support you for delivery and repair of appliances. [Contact us](/pomoc)",
+      "blockClass": "covid-container-mobile"
+    }
+  },
+  /* ---------------------- FLEX LAYOUT DESKTOP ---------------------------- */
+  "flex-layout.row#desktop-row": {
+    "props": {
+      "preventHorizontalStretch": true,
+      "blockClass": "header-container-row"
+    },
+    "children": [
+      "logo",
+      "vtex.menu@2.x:menu#websites" /* , */
+      /* "flex-layout.col#locator" */
+    ]
+  },
+  "notification.bar#covid": {
+    "props": {
+      "content": "Coronavirus update: we continue to support you for delivery and repair of appliances.",
+      "blockClass": "covid-container"
+    }
+  },
+  "flex-layout.col#locator": {
+    "children": ["flex-layout.row#locator-row"],
+    "props": {
+      "height": "100%",
+      "width": "100%"
+    }
+  },
+  /* ---------------------- LOGO ---------------------------- */
+  "logo": {
+    "props": {
+      "preventHorizontalStretch": true,
+      "url": "assets/logo.svg",
+      "blockClass": "logo-style",
+      "href": "/"
+    }
+  },
+  /* ---------------------- MENU ITEM LABELS ---------------------------- */
+  "vtex.menu@2.x:menu#websites": {
+    "children": [
+      "modal-trigger#searchbar",
+      "menu-item#laundry",
+      "menu-item#coocking",
+      "menu-item#cooling",
+      "menu-item#dishwashing",
+      /* "menu-item#spareparts", */
+      "menu-item#supportheader",
+      "link#do-it-together",
+      "link#store-locator"
+    ]
+  },
+  /* ---------------------- SEARCH BAR ---------------------- */
+  "modal-trigger#searchbar-mobile": {
+    "children": ["image#search", "modal-layout#searchbar"]
+  },
+  "modal-trigger#searchbar": {
+    "children": ["image#search", "modal-layout#searchbar"]
+  },
+  "modal-layout#searchbar": {
+    "children": ["search-bar", "modal-actions.close#close-search-modal"],
+    "props": {
+      "blockClass": "search-modal-layout"
+    }
+  },
+  "modal-actions.close#close-search-modal": {
+    "props": {
+      "label": "",
+      "blockClass": "close-modal-button"
+    }
+  },
+  "image#search": {
+    "props": {
+      "blockClass": "search-image",
+      "src": "assets/search.svg",
+      "width": 24,
+      "height": 24,
+      "mobileHeight": 26,
+      "mobileWidth": 26
+    }
+  },
+  /* ---------------------- LOCATOR ROW ---------------------------- */
+  "flex-layout.row#locator-row": {
+    "props": {
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      /* "link#do-it-together",
+      "link#store-locator" */
+    ]
+  },
+  /* ---------------------- DO IT TOGETHER ---------------------------- */
+  "link#do-it-together": {
+    "props": {
+      "href": "/do-it-together",
+      "blockClass": "label-container-dit"
+    },
+    "children": ["rich-text#link-dit"]
+  },
+  "rich-text#link-dit": {
+    "props": {
+      "text": "#DoItTogether",
+      "blockClass": "textdit"
+    }
+  },
+  /* ---------------------- Store locator ---------------------------- */
+  "link#store-locator": {
+    "props": {
+      "href": "/gdzie-kupic",
+      "blockClass": "locator-icon-container"
+    },
+    "children": ["image#sl"]
+  },
+  "image#sl": {
+    "props": {
+      "height": "100%",
+      "blockClass": "locator-icon-style",
+      "src": "assets/store.svg"
+    }
+  },
+  /* ---------------------- FLEX LAYOUT MOBILE ---------------------------- */
+  "flex-layout.row#mobile-row": {
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": "header-container-row-mobile"
+    },
+    "children": [
+      "vtex.menu@2.x:menu#websites-mobile",
+      "logo#logo-mobile",
+      "link#store-locator-mobile"
+    ]
+  },
+  "notification.bar#covid-mobile": {
+    "props": {
+      "content": "Coronavirus update: we continue to support you for delivery and repair of appliances.",
+      "blockClass": "covid-container-mobile"
+    }
+  },
+  /* ---------------------- LOGO ---------------------------- */
+  "logo#logo-mobile": {
+    "props": {
+      "href": "/",
+      "mobileWidth": 100,
+      "mobileHeight": 33.45,
+      "url": "assets/logo.svg",
+      "blockClass": "logo-style-mobile"
+    }
+  },
+  /* ---------------------- MENU ITEM LABELS ---------------------------- */
+  "vtex.menu@2.x:menu#websites-mobile": {
+    "props": {
+      "blockClass": "icons-container"
+    },
+    "children": ["drawer", "modal-trigger#searchbar-mobile"]
+  },
+  /*-------------------   Menu mobile icon disclosure  ---------------- */
+  "disclosure-layout#menu-mobile": {
+    "children": ["disclosure-trigger#menu-mobile"]
+  },
+  "disclosure-trigger#menu-mobile": {
+    "children": ["image#menu-mobile"]
+  },
+  "image#menu-mobile": {
+    "props": {
+      "blockClass": "menu-mobile",
+      "src": "assets/menu-mobile.svg",
+      "width": 24,
+      "height": 24,
+      "mobileHeight": 26,
+      "mobileWidth": 26
+    }
+  },
+  /* ---------------------- Store locator Icon---------------------------- */
+  "link#store-locator-mobile": {
+    "props": {
+      "href": "/gdzie-kupic",
+      "blockClass": "locator-icon-container-mobile"
+    },
+    "children": ["image#store-locator-mobile-img"]
+  },
+  "image#store-locator-mobile-img": {
+    "props": {
+      "height": "100%",
+      "blockClass": "locator-icon-style",
+      "src": "assets/store.svg"
+    }
+  },
+  /* Header opening MENU */
+  "drawer": {
+    "props": {
+      "blockClass": "menu-opened-mobile",
+      "isFullWidth": true,
+      "backdropMode": "none"
+    },
+    "children": ["vtex.menu@2.x:menu#mobile"],
+    "blocks": ["drawer-trigger"]
+  },
+  "drawer-trigger": {
+    "children": ["disclosure-layout#menu-mobile"]
+  },
+  "vtex.menu@2.x:menu#mobile": {
+    "props": {
+      "orientation": "vertical",
+      "blockClass": "mobileMenu"
+    },
+    "children": [
+      "menu-item#laundry-category-mobile",
+      "menu-item#cooking-category-mobile",
+      "menu-item#cooling-category-mobile",
+      "menu-item#dishwashing-category-mobile",
+      /* "menu-item#spareParts-mobile", */
+      "menu-item#support-menu-mobile",
+      "menu-item#do-it-together-mobile"
+    ]
+  }
+}

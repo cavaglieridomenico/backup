@@ -1,0 +1,102 @@
+query productReviews($sort: String!, $filter: Int, $offset: Int, $pageId: String, $quantity: Int) {
+	productReviews(sort: $sort, offset: $offset, pageId: $pageId, filter: $filter, quantity: $quantity) @context(provider:"itwhirlpool.custom-bazaarvoice-whirlpool") {
+    Limit
+    Offset
+    TotalResults
+    Results {
+      Id
+      Rating
+      TotalCommentCount
+      IsRatingsOnly
+      TotalFeedbackCount
+      IsRecommended
+      IsSyndicated
+      SecondaryRatingsOrder
+      TotalNegativeFeedbackCount
+      TotalPositiveFeedbackCount
+      UserNickname
+      UserLocation
+      SubmissionTime
+      Title
+      ReviewText
+      ProductId
+      SecondaryRatings {
+        Value
+        Id
+        ValueRange
+        ValueLabel
+        MinLabel
+        Label
+        DisplayType
+        MaxLabel
+      }
+      TagDimensions {
+        Pros {
+          Values
+          Id
+          Label
+        }
+        Cons {
+          Values
+          Id
+          Label
+        }
+      }
+      Photos {
+        Sizes {
+          normal {
+            Url
+          }
+          thumbnail {
+            Url
+          }
+        }
+      }
+      ClientResponses {
+        Department
+        Response
+        ResponseType
+        ResponseSource
+        Name
+        Date
+      }
+      BadgesOrder
+      SyndicationSource{
+        ClientId
+        ContentLink
+        LogoImageUrl
+        Name
+      }
+    }
+    Includes {
+      AllProducts {
+        ProductId
+        Name
+      }
+      Products {
+        ReviewStatistics {
+          TotalReviewCount
+          AverageOverallRating
+          RatingDistribution {
+            RatingValue
+            Count
+          }
+          AverageLocalRating
+          LocalRatingDistribution {
+            RatingValue
+            Count
+          }
+          SecondaryRatingsAverages {
+            AverageRating
+            Id
+            ValueRange
+            MinLabel
+            Label
+            DisplayType
+            MaxLabel
+          }
+        }
+      }
+    }
+  }
+}

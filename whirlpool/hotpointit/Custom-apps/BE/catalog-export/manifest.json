@@ -1,0 +1,130 @@
+{
+  "vendor": "hotpointit",
+  "name": "catalog-export",
+  "version": "1.0.0",
+  "title": "Custom Catalog Export",
+  "description": "custom exporter",
+  "builders": {
+    "admin": "0.x",
+    "react": "3.x",
+    "messages": "1.x",
+    "docs": "0.x",
+    "node": "6.x",
+    "graphql": "1.x"
+  },
+  "dependencies": {
+    "vtex.styleguide": "9.x"
+  },
+  "registries": [
+    "smartcheckout"
+  ],
+  "policies": [
+    {
+      "name": "ADMIN_DS"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.vtexcommercestable.com.br",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "api.vtex.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "portal.vtexcommercestable.com.br",
+        "path": "*"
+      }
+    },
+    {
+      "name": "colossus-fire-event"
+    },
+    {
+      "name": "colossus-write-logs"
+    }
+  ],
+  "settingsSchema": {
+    "title": "Catalog Export",
+    "type": "object",
+    "properties": {
+      "servicesPerSC": {
+        "title": "Additional services per sales channel",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "scid": {
+              "title": "sales channel id",
+              "type": "string"
+            },
+            "services": {
+              "title": "Sevices ids",
+              "description": "Services available in the sales channel (comma separated)",
+              "type": "string"
+            },
+            "installationId": {
+              "title": "Id of the service \"Installation\"",
+              "type": "string"
+            }
+          }
+        }
+      },
+      "serviceInfo": {
+        "title": "Service info",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "title": "Ids (comma separated)",
+              "type": "string"
+            },
+            "name": {
+              "title": "Name",
+              "type": "string"
+            },
+            "description": {
+              "title": "Description",
+              "type": "string"
+            },
+            "position": {
+              "title": "Position",
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        }
+      },
+      "isMarketplace": {
+        "title": "Marketplace",
+        "type": "boolean"
+      },
+      "sellerAccount": {
+        "title": "Seller account",
+        "type": "object",
+        "properties": {
+          "name": {
+            "title": "Name",
+            "type": "string"
+          },
+          "apiKey": {
+            "title": "Api key",
+            "type": "string"
+          },
+          "apiToken": {
+            "title": "Api token",
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

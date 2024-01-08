@@ -1,0 +1,440 @@
+{
+  "footer": {
+    "blocks": ["footer-layout.desktop", "footer-layout.mobile"]
+  },
+  "footer-layout.desktop": {
+    "title": "[LAYOUT] - [BOTTOM] - Footer Desktop",
+    "children": [
+      "flex-layout.row#footerNewsletter",
+      "flex-layout.row#spaceFooter",
+      "flex-layout.row#footer-1-desktop"
+    ]
+  },
+  "flex-layout.row#spaceFooter": {
+    "props": {
+      "blockClass": ["halfRowSpace", "bgWhite"]
+    }
+  },
+  "flex-layout.row#footerNewsletter": {
+    "title": "[ROW] - [BOTTOM] - Newsletter Footer",
+    "children": [
+      "flex-layout.row#footerNewsletterSubscription",
+      "flex-layout.row#footerNewsletterDescription"
+    ],
+    "props": {
+      "horizontalAlign": "center",
+      "blockClass": "footerNewsletter"
+    }
+  },
+  "flex-layout.row#footerNewsletterSubscription": {
+    "title": "[ROW] - [BOTTOM] - Newsletter Subscription",
+    "children": [
+      "flex-layout.col#footerNewsletterLateralText",
+      "flex-layout.col#footerNewsletterLinkButton"
+    ],
+    "props": {
+      "horizontalAlign": "center",
+      "width": "100%",
+      "blockClass": "footerNewsletterNone"
+    }
+  },
+  "flex-layout.row#footerNewsletterDescription": {
+    "title": "[ROW] - [BOTTOM] - Newsletter Description",
+    "children": ["flex-layout.col#footerNewsletterDescription"],
+    "props": {
+      "width": "100%"
+    }
+  },
+  "flex-layout.col#footerNewsletterLateralText": {
+    "title": "[COL] - [BOTTOM] - Newsletter Lateral Container",
+    "children": ["rich-text#footerNewsletterLateralText"],
+    "props": {
+      "horizontalAlign": "left",
+      "verticalAlign": "middle",
+      "blockClass": "titleSearchPage"
+    }
+  },
+  "flex-layout.col#footerNewsletterLinkButton": {
+    "title": "[COL] - [BOTTOM] - Newsletter Link Container",
+    "children": ["analytics-wrapper#newsletterLink"],
+    "props": {
+      "horizontalAlign": "left",
+      "verticalAlign": "middle",
+      "blockClass": "footerNewsletterSubscription"
+    }
+  },
+  "analytics-wrapper#newsletterLink": {
+    "title": "[Analytics Wrapper] - Newsletter Link",
+    "props": {
+      "propsAnalytics": {
+        "analyticsProperties": "provide",
+        "nameEvent": "newsletterLink",
+        "name": "newsletterLink",
+        "nameView": "",
+        "data": [
+          {
+            "title": "text",
+            "value": "placeholder"
+          }
+        ],
+        "isView": false
+      }
+    },
+    "children": [
+      "link#footerNewsletterLinkButton"
+    ]
+  },
+  "rich-text#footerNewsletterLateralText": {
+    "title": "[TEXT] - [BOTTOM] - Newsletter Lateral Text",
+    "props": {
+      "text": "REGISTER NOW: ",
+      "blockClass": "footerNewsletterLateralText"
+    }
+  },
+  "link#footerNewsletterLinkButton": {
+    "title": "[LINK] - [BOTTOM] - Newsletter Link",
+    "props": {
+      "href": "/hp-account/newsletter",
+      "blockClass": "footerNewsletterLinkButton",
+      "isPrevent": false
+    },
+    "children": [
+      "rich-text#footerNewsletterButtonText",
+      "image#footerNewsletterButtonLogo"
+    ]
+  },
+  "rich-text#footerNewsletterButtonText": {
+    "title": "[TEXT] - [BOTTOM] - Newsletter Link Text",
+    "props": {
+      "text": "NEWSLETTER ABONNIEREN",
+      "blockClass": "footerNewsletterButtonText"
+    }
+  },
+  "image#footerNewsletterButtonLogo": {
+    "title": "[IMAGE] - [BOTTOM] - Newsletter Link Image",
+    "props": {
+      "src": "assets/icons/white_email.svg",
+      "blockClass": "newsletterButtonLogo"
+    }
+  },
+  "flex-layout.col#footerNewsletterDescription": {
+    "title": "[COL] - [BOTTOM] - Newsletter Description Container",
+    "children": ["flex-layout.col#footerNewsletterLateralText","rich-text#footerNewsletterDescription",
+  "flex-layout.col#footerNewsletterLinkButton"],
+    "props": {
+      "horizontalAlign": "left",
+      "blockClass": "newsletterPosition"
+    }
+  },
+  "rich-text#footerNewsletterDescription": {
+    "title": "[TEXT] - [BOTTOM] - Newsletter Description Text",
+    "props": {
+      "text": "Subscribe to the Bauknecht newsletter and receive a €20 voucher for the Bauknecht shop",
+      "blockClass": "footerNewsletterDescription"
+    }
+  },
+  "flex-layout.row#footer-1-desktop": {
+    "title": "[ROW] - [BOTTOM] - Footer Information",
+    "children": [
+      "flex-layout.col#social",
+      "vtex.menu@2.x:menu#customer-center",
+      "vtex.menu@2.x:menu#our-company",
+      "vtex.menu@2.x:menu#our-policies",
+      "vtex.menu@2.x:menu#our-shop"
+    ],
+    "props": {
+      "blockClass": "footerRow",
+      "paddingTop": 6,
+      "paddingBottom": 3
+    }
+  },
+  "flex-layout.col#social": {
+    "title": "[COL] - [BOTTOM] - Footer Social Container",
+    "children": [
+      "logo#footer",
+      "flex-layout.row#footerCopyrights",
+      "social-networks",
+      "flex-layout.row#payments-methods-others"
+    ]
+  },
+  "flex-layout.row#footerCopyrights": {
+    "children": ["rich-text#footer"]
+  },
+  "rich-text#footer": {
+    "title": "[TEXT] - LEFT - Footer",
+    "props": {
+      "width": "50%",
+      "textAlignment": "left",
+      "text": "©2022 Whirlpool UK Appliances Ltd. All rights reserved.",
+      "blockClass": "textFooter"
+    }
+  },
+  "logo#footer": {
+    "title": "[LOGO] - LEFT - Footer",
+    "props": {
+      "title": "Logo",
+      "href": "/",
+      "url": "/arquivos/logo-white-footer.png",
+      "blockClass": "logoFooter"
+    }
+  },
+  "social-networks": {
+    "title": "[IMAGE] - LEFT - Social Networks Footer",
+    "props": {
+      "socialNetworks": [
+        {
+          "name": "Facebook",
+          "url": "https://www.facebook.com/bauknechtschweiz/",
+          "target": "_blank"
+        },
+        {
+          "name": "Instagram",
+          "url": "https://www.instagram.com/bauknechtschweiz/",
+          "target": "_blank"
+        },
+        {
+          "name": "Youtube",
+          "url": "https://www.youtube.com/channel/UC5DREeEXyM-zExsbzBG_fwQ?view_as=subscriber",
+          "target": "_blank"
+        }
+      ]
+    }
+  },
+  "flex-layout.row#payments-methods-others": {
+    "title": "[ROW] - [BOTTOM] - Footer Payment Methods",
+    "props": {
+      "blockClass": ["imagePayment", "paymentsMethods"]
+    },
+    "children": [
+      "image#payment-methods-visa",
+      "image#payment-methods-mastercard",
+      "image#payment-methods-visa-electron",
+      "image#payment-methods-klarna",
+      "image#payment-methods-paypal"
+    ]
+  },
+  "image#payment-methods-visa": {
+    "title": "[IMAGE] - LEFT - Visa Payment Footer",
+    "props": {
+      "blockClass": "payment",
+      "horizontalAlign": "center",
+      //"src": "assets/payment-logos/visa_logo.svg"
+      "src": "assets/payment-logos/visa_logo.png"
+    }
+  },
+  "image#payment-methods-mastercard": {
+    "title": "[IMAGE] - LEFT - MasterCard Payment Footer",
+    "props": {
+      "blockClass": "payment",
+      "horizontalAlign": "center",
+      "src": "assets/payment-logos/mastercard_logo.svg"
+    }
+  },
+  "image#payment-methods-visa-electron": {
+    "title": "[IMAGE] - LEFT - Visa Electron Payment Footer",
+    "props": {
+      "blockClass": "payment",
+      "horizontalAlign": "center",
+      //"src": "assets/payment-logos/visa_electron_logo.svg"
+      "src": "assets/payment-logos/visa_electron_logo.png"
+    }
+  },
+  "image#payment-methods-klarna": {
+    "title": "[IMAGE] - LEFT - Klarna Payment Footer",
+    "props": {
+      "blockClass": "payment",
+      "horizontalAlign": "center",
+      "src": "assets/payment-logos/klarna_logo.svg"
+    }
+  },
+  "image#payment-methods-paypal": {
+    "title": "[IMAGE] - LEFT - Paypal Payment Footer",
+    "props": {
+      "blockClass": "payment",
+      "horizontalAlign": "center",
+      "src": "assets/payment-logos/paypal_logo.svg"
+    }
+  },
+  // USED in login, assistenza tecnica
+  "image#payment-methods-mobile": {
+    "props": {
+      "blockClass": ["imagePayment", "flex"],
+      "horizontalAlign": "center",
+      "src": "assets/logos/payments-methods.svg"
+    }
+  },
+  "footer-layout.mobile": {
+    "title": "[LAYOUT] - [BOTTOM] - Footer Mobile",
+    "children": [
+      "flex-layout.row#footerNewsletter-mobile",
+      "flex-layout.row#menusRow1-mobile",
+      "flex-layout.row#menusRow2-mobile",
+      "flex-layout.row#social-mobile"
+    ],
+    "props": {
+      "blockClass": "footerMobile"
+    }
+  },
+  "flex-layout.row#footerNewsletter-mobile": {
+    "title": "[ROW] - [BOTTOM] - Newsletter Footer",
+    "children": ["flex-layout.col#footerNewsletter-mobile"],
+    "props": {
+      "blockClass": "footerNewsletterMobile"
+    }
+  },
+  "flex-layout.col#footerNewsletter-mobile": {
+    "title": "[COL] - [BOTTOM] - Newsletter Footer Container",
+    "children": [
+      "flex-layout.row#footerNewsletterUpperText-mobile",
+      "flex-layout.row#footerNewsletterDescription-mobile",
+      "flex-layout.row#footerNewsletterSubscription-mobile"
+    ],
+    "props": {
+      "horizontalAlign": "left",
+      "blockClass": "footerNewsletterMobile"
+    }
+  },
+  "flex-layout.row#footerNewsletterUpperText-mobile": {
+    "title": "[ROW] - [BOTTOM] - Newsletter Footer Upper Text Container",
+    "children": ["rich-text#footerNewsletterUpperText-mobile"]
+  },
+  "rich-text#footerNewsletterUpperText-mobile": {
+    "title": "[TEXT] - [BOTTOM] - Newsletter Footer Upper Text",
+    "props": {
+      "text": "REGISTER NOW: ",
+      "blockClass": "footerNewsletterUpperTextMobile"
+    }
+  },
+  "flex-layout.row#footerNewsletterSubscription-mobile": {
+    "title": "[ROW] - [BOTTOM] - Newsletter Footer Subscription Container",
+    "children": ["analytics-wrapper#newsletterLink"]
+  },
+  "flex-layout.row#footerNewsletterDescription-mobile": {
+    "title": "[ROW] - [BOTTOM] - Newsletter Footer Description Container",
+    "children": ["rich-text#footerNewsletterDescription"]
+  },
+  "flex-layout.row#menusRow1-mobile": {
+    "title": "[ROW] - [BOTTOM] - Menus Footer Row-1 Container",
+    "children": [
+      "flex-layout.col#menuCustomerCenter-mobile",
+      "flex-layout.col#menuOurCompany-mobile"
+    ],
+    "props": {
+      "blockClass": "footerMenusMobile"
+    }
+  },
+  "flex-layout.col#menuCustomerCenter-mobile": {
+    "title": "[COL] - [BOTTOM] - Menu Footer Customer Center Container",
+    "children": ["vtex.menu@2.x:menu#customer-center"]
+  },
+  "flex-layout.col#menuOurCompany-mobile": {
+    "title": "[COL] - [BOTTOM] - Menu Footer Our Company Container",
+    "children": ["vtex.menu@2.x:menu#our-company"]
+  },
+  "flex-layout.row#menusRow2-mobile": {
+    "title": "[ROW] - [BOTTOM] - Menus Footer Row-2 Container",
+    "children": [
+      "flex-layout.col#menuOurPolicies-mobile",
+      "flex-layout.col#menuOurShop-mobile"
+    ],
+    "props": {
+      "blockClass": "footerMenusMobile"
+    }
+  },
+  "flex-layout.col#menuOurPolicies-mobile": {
+    "title": "[COL] - [BOTTOM] - Menu Footer Our Policy Container",
+    "children": ["vtex.menu@2.x:menu#our-policies"]
+  },
+  "flex-layout.col#menuOurShop-mobile": {
+    "title": "[COL] - [BOTTOM] - Menu Footer Our Shop Container",
+    "children": ["vtex.menu@2.x:menu#our-shop"]
+  },
+  "flex-layout.row#social-mobile": {
+    "title": "[ROW] - [BOTTOM] - Footer Social Container",
+    "children": ["flex-layout.col#social-mobile"]
+  },
+  "flex-layout.col#social-mobile": {
+    "title": "[COL] - [BOTTOM] - Footer Social Container",
+    "children": [
+      "flex-layout.row#logoFooter-mobile",
+      "flex-layout.row#copyrights-mobile",
+      "flex-layout.row#socialNetworks-mobile",
+      "flex-layout.row#paymentMethods-mobile"
+    ],
+    "props": {
+      "horizontalAlign": "center"
+    }
+  },
+  "flex-layout.row#logoFooter-mobile": {
+    "title": "[ROW] - [BOTTOM] - Footer Logo Container",
+    "children": ["logo#footer"]
+  },
+  "flex-layout.row#copyrights-mobile": {
+    "title": "[ROW] - [BOTTOM] - Footer Copyrights Container",
+    "children": ["rich-text#footer"],
+    "props": {
+      "blockClass": "footerCopyrightsMobile"
+    }
+  },
+  "flex-layout.row#socialNetworks-mobile": {
+    "title": "[ROW] - [BOTTOM] - Footer Social Networks Container",
+    "children": ["social-networks"]
+  },
+  "flex-layout.row#paymentMethods-mobile": {
+    "title": "[ROW] - [BOTTOM] - Footer Payment Methods Container",
+    "children": ["flex-layout.row#payments-methods-others"],
+    "props": {
+      "blockClass": "footerLastRowMobile"
+    }
+  },
+  // USED in login, assistenza-tecnica
+  "flex-layout.row#3-footer-mobile": {
+    "props": {
+      "horizontalAlign": "center",
+      "blockClass": "width100"
+    },
+    "children": ["logo#footerMobile"]
+  },
+  // USED in login, assistenza tecnica
+  "rich-text#footer-mobile": {
+    "props": {
+      "fullWidth": "true",
+      "textAlignment": "CENTER",
+      "text": "Hotpoint è un marchio registrato di Hotpoint, U.S.A.",
+      "blockClass": ["textFooter mobile", "mobileTextFooter"]
+    }
+  },
+  // USED in login, assistenza tecnica
+  "logo#footerMobile": {
+    "props": {
+      "horizontalAlign": "center",
+      "blockClass": "footerMobile",
+      "title": "Logo",
+      "href": "/",
+      "url": "assets/logos/hotpoint_logo.svg"
+    }
+  },
+  // USED in login, assistenza tecnica
+  "social-networks#mobile": {
+    "props": {
+      "blockClass": "footerMobile",
+      "socialNetworks": [
+        {
+          "name": "Facebook",
+          "url": "https://www.facebook.com/WhirlpoolItalia",
+          "target": "_blank"
+        },
+        {
+          "name": "Instagram",
+          "url": "https://www.instagram.com/whirlpool_italia",
+          "target": "_blank"
+        },
+        {
+          "name": "Youtube",
+          "url": "https://www.youtube.com/user/WhirlpoolItalia",
+          "target": "_blank"
+        }
+      ]
+    }
+  }
+}

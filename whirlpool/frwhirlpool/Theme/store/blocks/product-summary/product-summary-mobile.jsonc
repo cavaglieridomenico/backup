@@ -1,0 +1,320 @@
+{
+  "product-summary.shelf.product-comparison#searchMobile": {
+    "children": [
+      "flex-layout.row#collection-badges",
+      "flex-layout.row#imageAndPriceMobile",
+      "flex-layout.row#preOrderWarrantyBadge",
+      "vtex.store-components:product-name#summary",
+      "flex-layout.col#commercialCodeMobile",
+      "flex-layout.row#stockFewPiecesLabel",
+      "flex-layout.col#WPROkeyMobile"
+    ]
+  },
+  "flex-layout.row#imageAndPriceMobile": {
+    "props": {
+      "blockClass": "imageAndPriceMobile"
+    },
+    "children": [
+      "flex-layout.col#imageMobile",
+      "flex-layout.col#plpPriceMobile"
+    ]
+  },
+  "flex-layout.col#imageMobile": {
+    "props": {
+      "blockClass": "imageMobile"
+    },
+    "children": ["product-summary-image#shelfMobile"]
+  },
+  "product-summary-image#shelfMobile": {
+    "props": {
+      "showBadge": false,
+      "aspectRatio": "1:1",
+      "width": {
+        "mobile": 150,
+        "desktop": 266
+      },
+      "height": {
+        "mobile": 150,
+        "desktop": 266
+      },
+      "maxHeight": {
+        "mobile": 150,
+        "desktop": 266
+      },
+      "blockClass": "productImageMobile"
+    }
+  },
+  "flex-layout.col#plpPriceMobile": {
+    "children": [
+      "condition-layout.product#pricePLPMobile",
+      "condition-layout.product#isAccessorioEtichetteMobile"
+    ],
+    "props": {
+      "blockClass": ["plpPriceColMobile"]
+    }
+  },
+  "condition-layout.product#pricePLPMobile": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "sellable",
+            "value": "true"
+          }
+        }
+      ],
+      "Then": "flex-layout.col#priceAndPostillaMobile"
+    }
+  },
+  "flex-layout.col#priceAndPostillaMobile": {
+    "children": [
+      "product-summary-price#mobile",
+      "rich-text#pricePostillaMobile"
+    ],
+    "props": {
+      "blockClass": ""
+    }
+  },
+  "product-summary-price#mobile": {
+    "props": {
+      "showListPrice": true,
+      "blockClass": "priceUnavailableProdMobile"
+    }
+  },
+  "rich-text#pricePostillaMobile": {
+    "props": {
+      "text": " *Le prix comprend la TVA, la DEEE et les promotions",
+      "blockClass": "pricePostillaMobile"
+    }
+  },
+  "flex-layout.col#commercialCodeMobile": {
+    "children": ["flex-layout.row#commercialCodeMobile"],
+    "props": {
+      "blockClass": ["commercialCodeColMobile"]
+    }
+  },
+  "flex-layout.row#commercialCodeMobile": {
+    "children": [
+      "flex-layout.col#commercialCode",
+      "product-rating-inline.bazaarvoice"
+    ],
+    "props": {
+      "blockClass": ["commercialCodeRow", "commercialCodeRowMobile"],
+      "preserveLayoutOnMobile": true
+    }
+  },
+  "flex-layout.row#stockFewPiecesLabel": {
+    "children": ["condition-layout.product#stockFewPiecesLabel"],
+    "props": {
+      "blockClass": "availableBadge"
+    }
+  },
+  "flex-layout.col#WPROkeyMobile": {
+    "children": ["flex-layout.row#WPROKeyMobile"],
+    "props": {
+      "paddingLeft": 5,
+      "blockClass": "WPROKeyColMobile"
+    }
+  },
+  "flex-layout.row#WPROKeyMobile": {
+    "children": ["flex-layout.col#WPROkeyMobilecontent"]
+  },
+  "flex-layout.col#WPROkeyMobilecontent": {
+    "children": ["product-specification-group#WPROkeyMobile"],
+    "props": {
+      "blockClass": "WPROkeyColMobilecontent"
+    }
+  },
+  "product-specification-group#WPROkeyMobile": {
+    "children": ["product-specification#WPROKeyMobile"],
+    "props": {
+      "filter": {
+        "specificationGroups": ["SalesFeature"],
+        "type": "show"
+      }
+    }
+  },
+  "condition-layout.product#inStockLabel": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "DISPONIBILITÉ EN LIGNE",
+            "value": "Achat sur Whirlpool.fr"
+          }
+        }
+      ],
+      "Then": "rich-text#inStockMobile",
+      "Else": "condition-layout.product#outOfStockLabel"
+    }
+  },
+  "rich-text#outOfStockMobile": {
+    "props": {
+      "text": "Temporairement indisponible",
+      "blockClass": ["notInStockProp"]
+    }
+  },
+  "rich-text#inStockMobile": {
+    "props": {
+      "text": "En stock",
+      "blockClass": ["inStockProp"]
+    }
+  },
+  "condition-layout.product#outOfStockLabel": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "leadTime",
+            "value": "1"
+          }
+        }
+      ],
+      "Then": "rich-text#outOfStockMobile24h",
+      "Else": "condition-layout.product#outOfStockLabel2"
+    }
+  },
+  "condition-layout.product#outOfStockLabel2": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "leadTime",
+            "value": "7"
+          }
+        }
+      ],
+      "Then": "rich-text#outOfStockMobile7d",
+      "Else": "condition-layout.product#outOfStockLabel3"
+    }
+  },
+  "condition-layout.product#outOfStockLabel3": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "leadTime",
+            "value": "14"
+          }
+        }
+      ],
+      "Then": "rich-text#outOfStockMobile14d",
+      "Else": "condition-layout.product#outOfStockLabel4"
+    }
+  },
+  "condition-layout.product#outOfStockLabel4": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "DISPONIBILITÉ EN LIGNE",
+            "value": "Achat sur Whirlpool.fr"
+          }
+        }
+      ],
+      "Else": "condition-layout.product#outOfStockLabel5"
+    }
+  },
+  "condition-layout.product#outOfStockLabel5": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "sellable",
+            "value": "true"
+          }
+        }
+      ],
+      "Then": "rich-text#outOfStockMobile"
+    }
+  },
+  "rich-text#outOfStockMobile24h": {
+    "props": {
+      "text": "De retour en stock sous 24 h",
+      "blockClass": ["notInStockProp"]
+    }
+  },
+  "rich-text#outOfStockMobile7d": {
+    "props": {
+      "text": "De retour en stock sous 7 jours",
+      "blockClass": ["notInStockProp"]
+    }
+  },
+  "rich-text#outOfStockMobile14d": {
+    "props": {
+      "text": "De retour en stock sous 14 jours",
+      "blockClass": ["notInStockProp"]
+    }
+  },
+  "product-specification#WPROKeyMobile": {
+    "children": ["product-specification-values#WPROKeyMobile"]
+  },
+  "product-specification-values#WPROKeyMobile": {
+    "children": ["product-specification-text#WPROKeyvalueMobile"]
+  },
+  "product-specification-text#WPROKeyvalueMobile": {
+    "props": {
+      "message": "{specificationValue}",
+      "blockClass": ["wProKeyValueMobile"]
+    }
+  },
+  "condition-layout.product#isAccessorioEtichetteMobile": {
+    "props": {
+      "conditions": [
+        { "subject": "categoryId", "arguments": { "id": "2" } },
+        { "subject": "categoryId", "arguments": { "id": "13" } },
+        { "subject": "categoryId", "arguments": { "id": "11" } },
+        { "subject": "categoryId", "arguments": { "id": "10" } },
+        { "subject": "categoryId", "arguments": { "id": "14" } },
+        { "subject": "categoryId", "arguments": { "id": "9" } },
+        { "subject": "categoryId", "arguments": { "id": "12" } },
+        { "subject": "categoryId", "arguments": { "id": "15" } },
+        { "subject": "categoryId", "arguments": { "id": "39" } },
+        { "subject": "categoryId", "arguments": { "id": "34" } },
+        { "subject": "categoryId", "arguments": { "id": "37" } },
+        { "subject": "categoryId", "arguments": { "id": "35" } },
+        { "subject": "categoryId", "arguments": { "id": "36" } },
+        { "subject": "categoryId", "arguments": { "id": "33" } },
+        { "subject": "categoryId", "arguments": { "id": "32" } },
+        { "subject": "categoryId", "arguments": { "id": "42" } },
+        { "subject": "categoryId", "arguments": { "id": "41" } },
+        { "subject": "categoryId", "arguments": { "id": "40" } },
+        { "subject": "categoryId", "arguments": { "id": "29" } },
+        { "subject": "categoryId", "arguments": { "id": "31" } },
+        { "subject": "categoryId", "arguments": { "id": "30" } },
+        { "subject": "categoryId", "arguments": { "id": "38" } }
+      ],
+      "matchType": "any",
+      "Then": "flex-layout.row#etichettePlaceHolderMobile",
+      "Else": "flex-layout.row#etichetteMobile"
+    }
+  },
+  "flex-layout.row#etichettePlaceHolderMobile": {
+    "props": {
+      "blockClass": ["etichetteRowMobile"]
+    }
+  },
+  "flex-layout.row#etichetteMobile": {
+    "props": {
+      "blockClass": ["etichetteRowMobile"]
+    },
+    "children": [
+      "flex-layout.col#energy-label-plp",
+      "flex-layout.col#indexRepairabilityMobile",
+      "condition-layout.product#showGarantie"
+    ]
+  },
+  "flex-layout.col#indexRepairabilityMobile": {
+    "children": ["image-from-specification#indexRepairability"],
+    "props": {
+      "blockClass": ["colIndexRepairabilityMobile"]
+    }
+  }
+}

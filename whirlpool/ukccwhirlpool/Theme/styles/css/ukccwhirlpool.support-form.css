@@ -1,0 +1,111 @@
+.supportForm{
+  background-color: #F9F9F9;
+	display: flex;
+	justify-content: center;
+	padding: 0 32px;
+}
+.supportFormWrapper {
+	width: 50%;
+}
+.supportFormTitle {
+	color: #848484;
+	font-size: 16px;
+	font-weight: 700;
+	padding: 16px 0 8px 0;
+	text-align: center;
+}
+.supportFormSubtitle {
+	color: #848484;
+	font-size: 13px;
+	margin-bottom: 24px;
+	text-align: center;
+}
+.supportForm .row, .supportForm .buttonRow {
+  display: flex;
+}
+.supportForm .buttonRow {
+	justify-content: center;
+}
+
+.supportForm :global(.vtex-dropdown) {
+	margin: 18px 0;
+	width: 50%;
+}
+.supportForm :global(.vtex-input__label), 
+.supportForm :global(.vtex-dropdown__label) {
+  color: #848484;
+  font-size: 14px;
+  font-weight: 700;
+}
+.supportForm :global(.vtex-input-prefix__group), .supportForm :global(.vtex-dropdown__container), .supportForm :global(.vtex-textarea__input) {
+	border: 1px solid lightgrey;
+}
+.supportForm .row :global(.vtex-input):last-child:not(:first-child),.supportForm .row :global(.vtex-dropdown):last-child:not(:first-child) {
+	margin-left: 32px;
+}
+.supportForm :global(.vtex-textarea) {
+	width: 100%;
+}
+.supportForm :global(.vtex-button) {
+	margin-bottom: 40px;
+	margin-top: 50px;
+	width: 40%;
+}
+.supportForm .supportThanks {
+	align-items: center;
+	display: flex;
+	margin-top: 40px;
+}
+.supportForm .supportTitle {
+	color: #134468;
+	font-weight: 700;
+	margin-left: 10px;
+}
+.supportForm .supportSubtitle {
+	color: #848484;
+	font-size: 14px;
+	margin-left: 10px;
+}
+.supportForm .additionalSupport {
+	text-align: center;
+	margin: 110px 0 280px 0;
+}
+.supportForm .additionalSupportText {
+	font-size: 16px;
+	font-weight: 700;
+	margin-bottom: 0;
+}
+.supportForm .additionalSupportLink {
+	color: #145B94;
+	font-size: 16px;
+	font-weight: 700;
+}
+@media screen and (max-width: 1024px) {
+	.supportFormWrapper {
+		width: 60%;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.supportFormWrapper {
+		width: 100%;
+	}
+}
+@media screen and (max-width: 600px) {
+	.supportForm .row {
+		flex-direction: column;
+	}
+	.supportForm .row:first-child :global(.vtex-input):last-child {
+		margin-top: 18px;
+	}
+	.supportForm .row :global(.vtex-input):last-child:not(:first-child),.supportForm .row :global(.vtex-dropdown):last-child:not(:first-child) {
+		margin-left: 0;
+	}
+	.supportForm .row :global(.vtex-dropdown):last-child {
+		margin-top: 0;
+	}
+
+	.supportForm :global(.vtex-dropdown) {
+		width: 100%;
+	}
+}

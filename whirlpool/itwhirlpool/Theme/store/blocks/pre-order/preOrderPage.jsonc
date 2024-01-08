@@ -1,0 +1,1108 @@
+{
+  "store.custom#pre-order-page": {
+    "blocks": [
+      "toggle-layout#pre-order-page-bradcrumb",
+      "flex-layout.row#HeadPreOrder",
+      "responsive-layout.mobile#stickyMenuButton",
+      "experimental__visibility-layout#stickyMenu",
+      "rich-text#howItWorks",
+      "flex-layout.row#secondContainerPreOrder", //Hidden in CMS
+      "rich-text#howWorksTitlePreOrder",
+      "rich-text#howWorksTitlePreOrderSubTitle",
+      "flex-layout.row#halfSpace",
+      "flex-layout.row#deliveryAndWarrentyIcons",
+      "experimental__visibility-layout#textUnderFirstSection",
+      "rich-text#newFeaturesAnchor",
+      "rich-text#newFeatures",
+      "toggle-layout#mediaContent1",
+      "toggle-layout#videoBanner",
+      "toggle-layout#mediaContent2",
+      "toggle-layout#mediaContent3",
+      "toggle-layout#mediaContent4",
+      "toggle-layout#mediaContent5",
+      "toggle-layout#mediaContent6",
+      "toggle-layout#mediaContent7",
+      "toggle-layout#mediaContent8",
+      "toggle-layout#mediaContent9",
+      "toggle-layout#mediaContent10",
+      "toggle-layout#offersSectionPreOrder",
+      "toggle-layout#imagesSlider",
+      "toggle-layout#faqPreOrder",
+      "newsletter-popup#footer"
+    ]
+  },
+  // NEW PREORDER PAGE
+  // BREADCRUMB
+  "toggle-layout#pre-order-page-bradcrumb": {
+    "children": ["breadcrumb#pre-order-page"]
+  },
+  "breadcrumb#pre-order-page": {
+    "props": {
+      "categories": ["/maxispace dishwasher/"],
+      "showOnMobile": true,
+      "blockClass": "prOrderBreadcrumb"
+    }
+  },
+  // HEAD PREORDER
+  "flex-layout.row#HeadPreOrder": {
+    "title": "[ROW] Head pre order page",
+    "props": {
+      "blockClass": "rowElsePreOrder"
+    },
+    "children": ["flex-layout.col#HeadPreOrder", "image#preOrderImageDesk"]
+  },
+  "flex-layout.col#HeadPreOrder": {
+    "title": "[ROW] Head pre order page",
+    "children": [
+      "flex-layout.row#countdownRow",
+      "flex-layout.row#HeadPreOrderTexts",
+      "flex-layout.row#HeadPreOrderPostilla"
+    ],
+    "props": {
+      "width": "45%",
+      "blockClass": "containerPreOrderCol"
+    }
+  },
+  "flex-layout.row#countdownRow": {
+    "title": "[ROW] CountDown Row",
+    "children": ["flex-layout.col#countdownCol"],
+    "props": {
+      "blockClass": "countdownRow"
+    }
+  },
+  "flex-layout.col#countdownCol": {
+    "title": "[COL] CountDown COL",
+    "children": ["rich-text#countdownTitle", "toggle-layout#timerPreOrder"],
+    "props": {
+      "blockClass": "countdownCol"
+    }
+  },
+  "rich-text#countdownTitle": {
+    "title": "[TITLE] - Countdown Title",
+    "props": {
+      "text": "Days left to pre-order:",
+      "blockClass": "countdownTitle"
+    }
+  },
+  "toggle-layout#timerPreOrder": {
+    "title": "Timer toggle",
+    "children": ["countdown-component"]
+  },
+  "countdown-component": {
+    "title": "Timer attesa",
+    "props": {
+      "Else": "rich-text#preOrderEndCountdown"
+    }
+  },
+  "rich-text#preOrderEndCountdown": {},
+  "flex-layout.row#HeadPreOrderTexts": {
+    "title": "[ROW] Head PreOrder Texts",
+    "children": ["flex-layout.col#HeadPreOrderTexts"],
+    "props": {
+      "blockClass": "HeadPreOrderTextsRow"
+    }
+  },
+  "flex-layout.col#HeadPreOrderTexts": {
+    "title": "[COL] Head PreOrder Texts",
+    "children": [
+      "rich-text#titlePreOrder",
+      "rich-text#subTitlePreOrder",
+      "experimental__visibility-layout#ctaUnderCountdown",
+      "link#preOrder-page"
+    ],
+    "props": {
+      "blockClass": "HeadPreOrderTextsCol"
+    }
+  },
+  "sticky-layout#preOrder-page-button": {
+    "props": {
+      "position": "TOP"
+    },
+    "children": ["experimental__visibility-layout#ctaUnderCountdown"]
+  },
+  "rich-text#titlePreOrder": {
+    "title": "[TITLE] Banner Title Pre-Order",
+    "props": {
+      "text": "PRE-ORDER TITLE",
+      "blockClass": ["titlePreOrderDesk"]
+    }
+  },
+  "rich-text#subTitlePreOrder": {
+    "title": "[SUBTITLE] Banner Subtitle Pre-Order",
+    "props": {
+      "blockClass": ["subTestPreOrderDesk"],
+      "text": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+    }
+  },
+  "experimental__visibility-layout#ctaUnderCountdown": {
+    "title": "[Toggle] - CTA under countdown",
+    "props": {
+      "visible": true
+    },
+    "children": ["flex-layout.row#ctaUnderCountdown"]
+  },
+  "flex-layout.row#ctaUnderCountdown": {
+    "title": "[Row] - CTA under countdown",
+    "props": {
+      "blockClass": "ctaUnderCountdown"
+    },
+    "children": ["link#ctaUnderCountdown"]
+  },
+  "link#ctaUnderCountdown": {
+    "title": "[Link] - CTA under countdown",
+    "props": {
+      "blockClass": "cta-under-countdown",
+      "href": "/pagine/condizioni-di-utilizzo",
+      "target": "_blank",
+      "label": "Get the voucher",
+      "displayMode": "button"
+    }
+  },
+  "link#preOrder-page": {
+    "title": "[URL] Pre-Order Termini e Condizioni",
+    "props": {
+      "href": "/pagine/condizioni-di-utilizzo",
+      "target": "_blank",
+      "label": "Termini e Condizioni",
+      "blockClass": ["terminiPreOrder"]
+    }
+  },
+  "flex-layout.row#HeadPreOrderPostilla": {
+    "title": "[ROW] Head PreOrder Postilla",
+    "children": ["rich-text#postillaPreOrder"],
+    "props": {
+      "blockClass": "HeadPreOrderPostillaRow"
+    }
+  },
+  "rich-text#postillaPreOrder": {
+    "title": "[TEXT] - postillaPreOrder",
+    "props": {
+      "text": "*Based on the volume calculated among top 5 leading brands based on GFK 2022.",
+      "blockClass": "postillaPreOrder"
+    }
+  },
+  "image#preOrderImageDesk": {
+    "title": "[DESKTOP-IMAGE] Pre-Order Page",
+    "props": {
+      "src": "assets/imagePreOrder.jpeg",
+      "blockClass": ["imagePreOrder"]
+    }
+  },
+  // STICKY MENU
+  "experimental__visibility-layout#stickyMenu": {
+    "title": "[Toggle] - Sticky Menu",
+    "props": {
+      "visible": true
+    },
+    "children": ["sticky-layout#stickyMenu"]
+  },
+  "sticky-layout#stickyMenu": {
+    "title": "[Sticky] - Menu under banner",
+    "props": {
+      "blockClass": "stickyMenu",
+      "position": "top",
+      "verticalSpacing": 123
+    },
+    "children": [
+      "responsive-layout.desktop#stickyMenuLinks",
+      "responsive-layout.mobile#stickyMenuLinks"
+    ]
+  },
+  "responsive-layout.mobile#stickyMenuButton": {
+    "children": ["sticky-layout#stickyMenuButton"]
+  },
+  "sticky-layout#stickyMenuButton": {
+    "title": "[Sticky] - Menu under banner",
+    "props": {
+      "blockClass": ["stickyMenuButton"],
+      "position": "top",
+      "verticalSpacing": 300
+    },
+    "children": ["flex-layout.row#ctaUnderCountdown"]
+  },
+  "responsive-layout.desktop#stickyMenuLinks": {
+    "children": ["flex-layout.row#stickyMenuDesktop"]
+  },
+  "responsive-layout.mobile#stickyMenuLinks": {
+    "children": ["flex-layout.row#stickyMenuMobile"]
+  },
+  "flex-layout.row#stickyMenuDesktop": {
+    "title": "[Row] - Sticky menu",
+    "props": {
+      "blockClass": "stickyMenu",
+      "colSizing": "auto",
+      "preserveLayoutOnMobile": true
+    },
+    "children": [
+      "flex-layout.row#stickyMenuLinksDesktop",
+      "flex-layout.col#stickyColButton"
+    ]
+  },
+  "flex-layout.row#stickyMenuMobile": {
+    "title": "[Row] - Sticky menu",
+    "props": {
+      "blockClass": "stickyMenu",
+      "colSizing": "equal",
+      "preserveLayoutOnMobile": true
+    },
+    "children": ["flex-layout.row#stickyMenuLinksMobile"]
+  },
+  "flex-layout.row#stickyMenuLinksDesktop": {
+    "title": "[Row] - Sticky menu Links",
+    "props": {
+      "blockClass": "stickyMenuLinks",
+      "colSizing": "auto",
+      "preserveLayoutOnMobile": true
+    },
+    "children": [
+      "flex-layout.col#stickyColLink1",
+      "flex-layout.col#stickyColLink2",
+      "flex-layout.col#stickyColLink4"
+    ]
+  },
+  "flex-layout.row#stickyMenuLinksMobile": {
+    "title": "[Row] - Sticky menu Links",
+    "props": {
+      "blockClass": "stickyMenuLinks",
+      "colSizing": "auto",
+      "preserveLayoutOnMobile": true
+    },
+    "children": [
+      "flex-layout.col#stickyColLink1",
+      "flex-layout.col#stickyColLink2",
+      "flex-layout.col#stickyColLink4"
+    ]
+  },
+  "flex-layout.col#stickyColLink1": {
+    "title": "[Col] - Sticky Col Link 1",
+    "props": {
+      "blockClass": "stickyMenu",
+      "verticalAlign": "middle"
+    },
+    "children": ["experimental__visibility-layout#stickyLink1"]
+  },
+  "experimental__visibility-layout#stickyLink1": {
+    "title": "[Toggle] - Sticky Link 1",
+    "props": {
+      "visible": true
+    },
+    "children": ["link#stickyLink1"]
+  },
+  "link#stickyLink1": {
+    "title": "[Link] - Sticky Link 1",
+    "props": {
+      "blockClass": "stickyLink",
+      "label": "How it works",
+      "href": "#how-it-works"
+    }
+  },
+  "flex-layout.col#stickyColLink2": {
+    "title": "[Col] - Sticky Col Link 2",
+    "props": {
+      "blockClass": "stickyMenu",
+      "verticalAlign": "middle"
+    },
+    "children": ["experimental__visibility-layout#stickyLink2"]
+  },
+  "experimental__visibility-layout#stickyLink2": {
+    "title": "[Toggle] - Sticky Link 2",
+    "props": {
+      "visible": true
+    },
+    "children": ["link#stickyLink2"]
+  },
+  "link#stickyLink2": {
+    "title": "[Link] - Sticky Link 2",
+    "props": {
+      "blockClass": "stickyLink",
+      "label": "New features",
+      "href": "#tech-and-innovation"
+    }
+  },
+  "flex-layout.col#stickyColLink3": {
+    "title": "[Col] - Sticky Col Link 3",
+    "props": {
+      "blockClass": "stickyMenu",
+      "verticalAlign": "middle"
+    },
+    "children": ["experimental__visibility-layout#stickyLink3"]
+  },
+  "experimental__visibility-layout#stickyLink3": {
+    "title": "[Toggle] - Sticky Link 3",
+    "props": {
+      "visible": true
+    },
+    "children": ["link#stickyLink3"]
+  },
+  "link#stickyLink3": {
+    "title": "[Link] - Sticky Link 3",
+    "props": {
+      "blockClass": "stickyLink",
+      "label": "Products",
+      "href": "#products"
+    }
+  },
+  "flex-layout.col#stickyColLink4": {
+    "title": "[Col] - Sticky Col Link 4",
+    "props": {
+      "blockClass": "stickyMenu",
+      "verticalAlign": "middle"
+    },
+    "children": ["experimental__visibility-layout#stickyLink4"]
+  },
+  "experimental__visibility-layout#stickyLink4": {
+    "title": "[Toggle] - Sticky Link 4",
+    "props": {
+      "visible": true
+    },
+    "children": ["link#stickyLink4"]
+  },
+  "link#stickyLink4": {
+    "title": "[Link] - Sticky Link 4",
+    "props": {
+      "blockClass": "stickyLink",
+      "label": "FAQ",
+      "href": "#faq"
+    }
+  },
+  "flex-layout.col#stickyColButton": {
+    "title": "[Col] - Sticky Col Button",
+    "props": {
+      "blockClass": "stickyMenu",
+      "verticalAlign": "middle"
+    },
+    "children": ["experimental__visibility-layout#stickyButton"]
+  },
+  "experimental__visibility-layout#stickyButton": {
+    "title": "[Toggle] - Sticky Button",
+    "props": {
+      "visible": true
+    },
+    "children": ["link#stickyButton"]
+  },
+  "link#stickyButton": {
+    "title": "[Link] - Sticky Button",
+    "props": {
+      "blockClass": "stickyButton",
+      "label": "Get the voucher",
+      "href": "#product-carousel",
+      "displayMode": "button"
+    }
+  },
+  // TEXT - HOW IT WORKS (ANCHOR)
+  "rich-text#howItWorks": {
+    "title": "[Text] - DON'T TOUCH THIS IT'S DUMMY",
+    "props": {
+      "text": "",
+      "htmlId": "how-it-works",
+      "blockClass": "anchorForm"
+    }
+  },
+  // SECOND CONTAINER
+  "flex-layout.row#secondContainerPreOrder": {
+    "title": "[COL] - Registration form + text",
+    "children": ["toggle-layout#secondContainerPreOrder"],
+    "props": {
+      "blockClass": "secondContainerPreOrder"
+    }
+  },
+  "toggle-layout#secondContainerPreOrder": {
+    "title": "[TOGGLE] - Registration form + text",
+    "children": ["flex-layout.col#secondContainerPreOrder"]
+  },
+  "flex-layout.col#secondContainerPreOrder": {
+    "title": "Registration form",
+    "children": [
+      "rich-text#preOrderDisclaimer",
+      "black-friday-registration-form#preOrderPage"
+    ],
+    "props": {
+      "blockClass": "secondContainerPreOrder"
+    }
+  },
+  "rich-text#preOrderDisclaimer": {
+    "title": "[TEXT] - Registration form",
+    "props": {
+      "text": "Arrivano i grandi sconti del Black Friday! Iscriviti alla nostra mailing list segreta e ottieni l'opportunità di acquistare elettrodomestici con uno **sconto aggiuntivo**!",
+      "blockClass": "blackFriday2022Disclaimer"
+    }
+  },
+  "black-friday-registration-form#preOrderPage": {
+    "title": "Registration form",
+    "props": {
+      "blockClass": "blackFriday",
+      "textButton": "Registra",
+      "nameLabel": "Nome *",
+      "surnameLabel": "Cognome *",
+      "emailLabel": "Email *",
+      "errorName": "Il nome è obbligatorio",
+      "errorSurname": "Il cognome è obbligatorio",
+      "errorEmail": "L'e-mail è obbligatoria",
+      "errorCheckbox": "Questo campo è necessario",
+      "genericErrorMessage": "Questo campo è obbligatorio",
+      "checkBoxText": "",
+      "successMessage": "Grazie per la registrazione!",
+      "successMessage2": "Controlla la tua email per rimanere aggiornato.",
+      "registeredErrorMessage": "Sei già registrato!",
+      "shouldLogInErrorMessage": "La tua email è già registrata nei nostri sistemi. Modifica le tue preferenze nella sezione \"Il mio account\", accedendo con le tue credenziali. Grazie.",
+      "genericApiErrorMessage": "Qualcosa è andato storto riprova.",
+      "linkToRedirect": "https://www.whirlpool.it",
+      "checkboxes": [
+        {
+          "checkboxTitle": "Acconsento al trattamento dei miei dati personali per permettere a Whirlpool Italia Srl di inviarmi newsletter/comunicazioni di marketing (in forma elettronica e non, anche tramite telefono, posta tradizionale, e-mail, SMS, notifiche push su siti di terze parti tra cui sulle piattaforme Facebook e Google) riguardanti prodotti e servizi di Whirlpool Italia Srl, anche da me acquistati o registrati, nonché di svolgere ricerche di mercato.",
+          "checkboxRequired": true,
+          "checkboxNewsLetter": true
+        }
+      ],
+      "errorOptin": "",
+      "customCampaign": "FORM_LP_BLACKFRIDAY"
+    }
+  },
+  // TEXT - HOW IT WORKS
+  "rich-text#newFeaturesAnchor": {
+    "title": "[TEXT] Tech&Innovation anchor",
+    "props": {
+      "blockClass": "anchorForm",
+      "htmlId": "tech-and-innovation",
+      "text": ""
+    }
+  },
+  "rich-text#howWorksTitlePreOrder": {
+    "title": "[TEXT] Title works",
+    "props": {
+      "text": "## HOW IT WORKS",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": [
+        "sectionTitlePreOrder",
+        "marginTopWorksPreOrder",
+        "howItWorksTitle"
+      ]
+    }
+  },
+  // TEXT - HOW IT WORKS, SUBTITLE
+  "rich-text#howWorksTitlePreOrderSubTitle": {
+    "title": "[TEXT] Title works SubTitle",
+    "props": {
+      "text": "HOW IT WORKS",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": ["howWorksTitlePreOrderSubTitle"]
+      // "htmlId": "how-it-works"
+    }
+  },
+  // DELIVERY AND WARRANTY ICONS
+  "flex-layout.row#deliveryAndWarrentyIcons": {
+    "title": "[ROW] - Delivery and warrenty icons",
+    "props": {
+      "blockClass": ["deliveryAndWarrentyIcons", "marginTopMobile"],
+      "colSizing": "equal"
+    },
+    "children": [
+      "flex-layout.col#preOrderFirst",
+      "flex-layout.col#preOrderSecond",
+      "flex-layout.col#preOrderThird",
+      "flex-layout.col#preOrderFourth"
+    ]
+  },
+  //1
+  "flex-layout.col#preOrderFirst": {
+    "title": "[ROW] - Delivery and warrenty icons first",
+    "props": {
+      "blockClass": ["deliveryAndWarrentyIcon", "deliveryAndWarrentyIconFirst"],
+      "colSizing": "auto"
+    },
+    "children": [
+      "flex-layout.row#deliveryAndWarrentyImageFirst",
+      "rich-text#deliveryAndWarrentyTitleFirst",
+      "rich-text#deliveryAndWarrentySubTitleFirst",
+      "rich-text#deliveryAndWarrentyDescriptionFirst"
+    ]
+  },
+  "flex-layout.row#deliveryAndWarrentyImageFirst": {
+    "title": "[ROW] - Delivery and warrenty icons",
+    "props": {
+      "blockClass": ["deliveryAndWarrentyImage"]
+    },
+    "children": ["image#deliveryAndWarrentyImageFirst"]
+  },
+  "image#deliveryAndWarrentyImageFirst": {
+    "title": "[IMAGE] - Delivery and warrenty icons first",
+    "props": {
+      "src": "assets/bannerHeader/icon1.svg",
+      "blockClass": ["deliveryAndWarrentyImage"]
+    }
+  },
+  "rich-text#deliveryAndWarrentyTitleFirst": {
+    "title": "[TEXT] - Delivery and warrenty icons first",
+    "props": {
+      "text": "Step 1",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": ["deliveryAndWarrentyTitle"]
+    }
+  },
+  "rich-text#deliveryAndWarrentySubTitleFirst": {
+    "title": "[TEXT] - Delivery and warrenty icons first",
+    "props": {
+      "text": "Step 1",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": ["deliveryAndWarrentySubtitle"]
+    }
+  },
+  "rich-text#deliveryAndWarrentyDescriptionFirst": {
+    "title": "[TEXT] - Delivery and warrenty icons first",
+    "props": {
+      "text": "Free delivery",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": ["deliveryAndWarrentyDescription"]
+    }
+  },
+  // 2
+  "flex-layout.col#preOrderSecond": {
+    "title": "[COL] - Delivery and warrenty icons second",
+    "props": {
+      "blockClass": "deliveryAndWarrentyIcon",
+      "colSizing": "auto"
+    },
+    "children": [
+      "flex-layout.row#deliveryAndWarrentyImageFirst",
+      "rich-text#deliveryAndWarrentyTitleFirst",
+      "rich-text#deliveryAndWarrentySubTitleFirst",
+      "rich-text#deliveryAndWarrentyDescriptionFirst"
+    ]
+  },
+  //3
+  "flex-layout.col#preOrderThird": {
+    "title": "[COL] - Delivery and warrenty icons third",
+    "props": {
+      "blockClass": "deliveryAndWarrentyIcon",
+      "colSizing": "auto"
+    },
+    "children": [
+      "flex-layout.row#deliveryAndWarrentyImageFirst",
+      "rich-text#deliveryAndWarrentyTitleFirst",
+      "rich-text#deliveryAndWarrentySubTitleFirst",
+      "rich-text#deliveryAndWarrentyDescriptionFirst"
+    ]
+  },
+  //4
+  "flex-layout.col#preOrderFourth": {
+    "title": "[COL] - Delivery and warrenty icons fourth",
+    "props": {
+      "blockClass": ["deliveryAndWarrentyIcon", "deliveryAndWarrentyIconLast"],
+      "colSizing": "auto"
+    },
+    "children": [
+      "flex-layout.row#deliveryAndWarrentyImageFirst",
+      "rich-text#deliveryAndWarrentyTitleFirst",
+      "rich-text#deliveryAndWarrentySubTitleFirst",
+      "rich-text#deliveryAndWarrentyDescriptionFirst"
+    ]
+  },
+  // TEXT UNDER FIRST SECTION
+  "experimental__visibility-layout#textUnderFirstSection": {
+    "title": "[Toggle] - Text Under First Section",
+    "props": {
+      "visible": true
+    },
+    "children": ["flex-layout.row#underFirstSectionRow"]
+  },
+  "flex-layout.row#underFirstSectionRow": {
+    "title": "[Row] - under First Section Row",
+    "props": {
+      "blockClass": ["underFirstSectionRow"],
+      "colSizing": "auto",
+      "preserveLayoutOnMobile": true
+    },
+    "children": [
+      "image#underFirstSectionImage",
+      "rich-text#textUnderFirstSection",
+      "link#underFirstSectionButton"
+    ]
+  },
+  "image#underFirstSectionImage": {
+    "title": "[DESKTOP-IMAGE] under First Section Image",
+    "props": {
+      "src": "assets/chat-logo.svg",
+      "blockClass": ["underFirstSectionImage"]
+    }
+  },
+  "rich-text#textUnderFirstSection": {
+    "title": "[Text] - Text Under First Section",
+    "props": {
+      "blockClass": ["underFirstSection"],
+      "text": "Questions? Read our FAQs to know more",
+      "textPosition": "CENTER"
+    }
+  },
+  "link#underFirstSectionButton": {
+    "title": "[Link] - link Under First Section",
+    "props": {
+      "blockClass": "underFirstSectionButton",
+      "label": "Read our FAQs",
+      "href": "#faq"
+    }
+  },
+  //TEXT - NEW FEATURES
+  "rich-text#newFeatures": {
+    "title": "[TITLE] New Features",
+    "props": {
+      "text": "## NEW FEATURES",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": ["sectionTitlePreOrder", "titleWorks"]
+      // "htmlId": "new-features"
+    }
+  },
+  // MEDIA CONTENTS
+  "toggle-layout#mediaContent1": {
+    "title": "[MEDIA CONTENT] - 1 Media Content",
+    "children": ["flex-layout.row#media1", "flex-layout.row#halfSpace"],
+    "props": {
+      "visible": "true"
+    }
+  },
+  "flex-layout.row#media1": {
+    "title": "[ROW CONTENT] - 1 Media Content",
+    "children": [
+      "list-context.media-list#mediaDesktop1",
+      "flex-layout.col#textMediaDesktop1"
+    ],
+    "props": {
+      "blockClass": ["mediaPreOrder"]
+    }
+  },
+  "list-context.media-list#mediaDesktop1": {
+    "title": "[LIST CONTENT DESKTOP] - 1 Media Content",
+    "children": ["slider-layout#media"],
+    "props": {
+      "height": 720,
+      "mediaList": [
+        {
+          "image": "assets/imagePreOrder.jpeg"
+        }
+      ],
+      "blockClass": "mediaPreOrder"
+    }
+  },
+  "slider-layout#media": {
+    "props": {
+      "itemsPerPage": 1,
+      "infinite": true
+    }
+  },
+  "flex-layout.col#textMediaDesktop1": {
+    "title": "[TEXT CONTENT DESKTOP] - 1 Media Content",
+    "children": [
+      "rich-text#mediaContentDeskTitle1",
+      "rich-text#mediaContentDeskSubTitle1",
+      "rich-text#mediaContentDeskParag1",
+      "rich-text#mediaContentDeskPostilla1"
+    ],
+    "props": {
+      "blockClass": "mediaTextPreOrder"
+    }
+  },
+  "rich-text#mediaContentDeskTitle1": {
+    "title": "[TITLE MEDIA CONTENT] - 1 Media Content",
+    "props": {
+      "text": "## Meet SpaceClean 3rd rack",
+      "blockClass": "tileMediaPreOrder"
+    }
+  },
+  "rich-text#mediaContentDeskSubTitle1": {
+    "title": "[SUBTITLE MEDIA CONTENT] - 1 Media Content",
+    "props": {
+      "text": "Extra space and flexibility for a thought-free experience.",
+      "blockClass": "subTileMediaPreOrder"
+    }
+  },
+  "rich-text#mediaContentDeskParag1": {
+    "title": "[PARAGRAPH MEDIA CONTENT] - 1 Media Content",
+    "props": {
+      "text": "The largest 3rd rack* is perfectly designed and angled to make it possible to load everything without effort - including tall glasses up to 13 cm and big bowls - and free up space in the middle rack for extra items. Moreover, the exclusive SpaceClean features integrated water jets that reach all the rack corners, ensuring perfect cleaning.",
+      "blockClass": "paragraphMediaPreOrder"
+    }
+  },
+  "rich-text#mediaContentDeskPostilla1": {
+    "title": "[PARAGRAPH MEDIA CONTENT] - 1 Media Content Postilla",
+    "props": {
+      "text": "*Based on the volume calculated among top 5 leading brands based on GFK 2022.",
+      "blockClass": "postillaMediaPreOrder"
+    }
+  },
+  //2
+  "toggle-layout#mediaContent2": {
+    "title": "[MEDIA CONTENT] - 2 Media Content",
+    "children": ["flex-layout.row#media2", "flex-layout.row#halfSpace"],
+    "props": {
+      "visible": "true"
+    }
+  },
+  "flex-layout.row#media2": {
+    "title": "[ROW CONTENT] - 2 Media Content",
+    "children": [
+      "flex-layout.col#textMediaDesktop1",
+      "list-context.media-list#mediaDesktop1"
+    ],
+    "props": {
+      "blockClass": ["mediaPreOrder", "preOrderColumnReverse"]
+    }
+  },
+  //3
+  "toggle-layout#mediaContent3": {
+    "title": "[MEDIA CONTENT] - 3 Media Content",
+    "children": ["flex-layout.row#media1", "flex-layout.row#halfSpace"],
+    "props": {
+      "visible": "true"
+    }
+  },
+  //4
+  "toggle-layout#mediaContent4": {
+    "title": "[MEDIA CONTENT] - 3 Media Content",
+    "children": ["flex-layout.row#media2", "flex-layout.row#halfSpace"],
+    "props": {
+      "visible": "true"
+    }
+  },
+  //5
+  "toggle-layout#mediaContent5": {
+    "title": "[MEDIA CONTENT] - 3 Media Content",
+    "children": ["flex-layout.row#media1", "flex-layout.row#halfSpace"],
+    "props": {
+      "visible": "true"
+    }
+  },
+  //6
+  "toggle-layout#mediaContent6": {
+    "title": "[MEDIA CONTENT] - 3 Media Content",
+    "children": ["flex-layout.row#media2", "flex-layout.row#halfSpace"],
+    "props": {
+      "visible": "true"
+    }
+  },
+  //7
+  "toggle-layout#mediaContent7": {
+    "title": "[MEDIA CONTENT] - 3 Media Content",
+    "children": ["flex-layout.row#media1", "flex-layout.row#halfSpace"],
+    "props": {
+      "visible": "true"
+    }
+  },
+  //8
+  "toggle-layout#mediaContent8": {
+    "title": "[MEDIA CONTENT] - 3 Media Content",
+    "children": ["flex-layout.row#media2", "flex-layout.row#halfSpace"],
+    "props": {
+      "visible": "true"
+    }
+  },
+  //9
+  "toggle-layout#mediaContent9": {
+    "title": "[MEDIA CONTENT] - 3 Media Content",
+    "children": ["flex-layout.row#media1", "flex-layout.row#halfSpace"],
+    "props": {
+      "visible": "true"
+    }
+  },
+  //10
+  "toggle-layout#mediaContent10": {
+    "title": "[MEDIA CONTENT] - 3 Media Content",
+    "children": ["flex-layout.row#media2", "flex-layout.row#halfSpace"],
+    "props": {
+      "visible": "true"
+    }
+  },
+  //VIDEO BANNER
+  "toggle-layout#videoBanner": {
+    "title": "[MEDIA CONTENT] - Video Banner",
+    "children": ["flex-layout.row#videoBanner"],
+    "props": {
+      "visible": "true"
+    }
+  },
+  "flex-layout.row#videoBanner": {
+    "title": "[ROW] Video Banner row",
+    "props": {
+      "blockClass": "videoBanner"
+    },
+    "children": ["flex-layout.col#videoBanner"]
+  },
+  "flex-layout.col#videoBanner": {
+    "title": "[COL] Video Banner col",
+    "props": {
+      "blockClass": "videoBanner"
+    },
+    "children": ["rich-text#videoBannerTitle", "video#videoPreOrder"]
+  },
+  "rich-text#videoBannerTitle": {
+    "title": "[TEXT] Title offers",
+    "props": {
+      "text": "## Discover the integrated water jets of the SpaceClean 3rd rack",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": ["videoBannerTitle"]
+    }
+  },
+  "video#videoPreOrder": {
+    "props": {
+      "width": "794px",
+      "height": "445px",
+      "loop": false,
+      "autoPlay": false,
+      "muted": false,
+      "poster": "assets/videoPreOrder-cover.jpg",
+      "src": "https://www.youtube.com/watch?v=-oMqt4_JvlA",
+      "blockClass": "videoPreOrder"
+    }
+  },
+  //OFFERS SELECTION
+  "toggle-layout#offersSectionPreOrder": {
+    "title": "Offers Section",
+    "children": ["flex-layout.row#offersSectionPreOrder"]
+  },
+  "flex-layout.row#offersSectionPreOrder": {
+    "title": "[ROW] Offers Section",
+    "props": {
+      "blockClass": "offersSectionPreOrder"
+    },
+    "children": ["flex-layout.col#offersSectionPreOrder"]
+  },
+  "flex-layout.col#offersSectionPreOrder": {
+    "title": "[COL] Offers Section",
+    "props": {
+      "blockClass": "offersSectionPreOrder"
+    },
+    "children": [
+      "rich-text#offersTitlePreOrderAnchor",
+      "rich-text#offersTitlePreOrder",
+      "responsive-layout.desktop#offersSectionPreOrder",
+      "responsive-layout.mobile#offersSectionPreOrder"
+    ]
+  },
+  "responsive-layout.desktop#offersSectionPreOrder": {
+    "children": ["list-context.product-list#offersSectionPreOrderDesktop"]
+  },
+  "responsive-layout.mobile#offersSectionPreOrder": {
+    "children": ["list-context.product-list#offersSectionPreOrderMobile"]
+  },
+  "rich-text#offersTitlePreOrderAnchor": {
+    "title": "[TEXT] Title offers Text Anchor",
+    "props": {
+      "text": "",
+      "htmlId": "product-carousel",
+      "blockClass": ["anchorFormCarousel"]
+    }
+  },
+  "rich-text#offersTitlePreOrder": {
+    "title": "[TEXT] Title offers",
+    "props": {
+      "text": "## NEW ARRIVALS",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": ["offersTitlePreOrder"]
+    }
+  },
+  "list-context.product-list#offersSectionPreOrderDesktop": {
+    "blocks": ["product-summary.shelf#caroselliLanding"],
+    "children": ["slider-layout-whl#offersSectionPreOrder"],
+    "props": {
+      "collection": "150",
+      "productList": {
+        "maxItems": 10,
+        "itemsPerPage": 3,
+        "minItemsPerPage": 1,
+        "scroll": "BY_PAGE",
+        "arrows": true
+      }
+    }
+  },
+  "list-context.product-list#offersSectionPreOrderMobile": {
+    "blocks": ["product-summary.shelf.product-comparison#searchNew"],
+    "children": ["slider-layout-whl#offersSectionPreOrder"],
+    "props": {
+      "collection": "150",
+      "productList": {
+        "maxItems": 10,
+        "itemsPerPage": 3,
+        "minItemsPerPage": 1,
+        "scroll": "BY_PAGE",
+        "arrows": true
+      }
+    }
+  },
+  "slider-layout-whl#offersSectionPreOrder": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 3,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "fullWidth": false,
+      "showNavigationArrows": "desktopOnly",
+      "showPaginationDots": "desktopOnly",
+      "blockClass": ["shelf", "offersSectionPreOrder"]
+    }
+  },
+  //IMAGES SLIDER
+  "toggle-layout#imagesSlider": {
+    "title": "[MEDIA CONTENT] - Images Slider",
+    "children": ["flex-layout.row#imagesSlider"],
+    "props": {
+      "visible": "true"
+    }
+  },
+  "flex-layout.row#imagesSlider": {
+    "title": "[ROW] Images Slider row",
+    "props": {
+      "blockClass": "imagesSlider"
+    },
+    "children": ["flex-layout.col#imagesSlider"]
+  },
+  "flex-layout.col#imagesSlider": {
+    "title": "[COL] Images Slider col",
+    "props": {
+      "blockClass": "imagesSlider"
+    },
+    "children": [
+      "rich-text#imagesSliderTitle",
+      "list-context.image-list#imagesSliderTitle"
+    ]
+  },
+  "rich-text#imagesSliderTitle": {
+    "title": "[TEXT] Title images slider",
+    "props": {
+      "text": "## Intuitive design and perfect integration in every space",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": [
+        "sectionTitlePreOrder",
+        "marginTopFaqPreOrder",
+        "imagesSliderTitle"
+      ]
+    }
+  },
+  "list-context.image-list#imagesSliderTitle": {
+    "children": ["slider-layout#imagesSliderTitle"],
+    "props": {
+      "preload": true,
+      "images": [
+        {
+          "image": "https://storecomponents.vteximg.com.br/arquivos/banner-infocard2.png",
+          "description": "something something"
+        }
+      ]
+    }
+  },
+  "slider-layout#imagesSliderTitle": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "showNavigationArrows": "desktopOnly",
+      "blockClass": "imagesSliderTitle"
+    }
+  },
+  // FAQ PREORDER
+  "toggle-layout#faqPreOrder": {
+    "title": "[TOGGLE] Faq pre order page",
+    "children": ["flex-layout.row#faqPreOrder"]
+  },
+  "flex-layout.row#faqPreOrder": {
+    "title": "[ROW] Faq pre order page",
+    "children": ["flex-layout.col#faqPreOrder"],
+    "props": {
+      "blockClass": ["rowPreOrder", "faqPreOrder"]
+    }
+  },
+  "flex-layout.col#faqPreOrder": {
+    "title": "[COL] Faq pre order page",
+    "children": [
+      "rich-text#preOrderfaqTitleAnchor",
+      "rich-text#preOrderfaqTitle",
+      "faq#preOrder",
+      "toggle-layout#preOrderScopriDipiu"
+    ]
+  },
+  "rich-text#preOrderfaqTitleAnchor": {
+    "title": "[TEXT] Faq title anchor",
+    "props": {
+      "text": "",
+      "htmlId": "faq",
+      "blockClass": ["anchorFormCarousel"]
+    }
+  },
+  "rich-text#preOrderfaqTitle": {
+    "title": "[TEXT] Title Domande Comuni",
+    "props": {
+      "text": "## DOMANDE COMUNI",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": ["sectionTitlePreOrder"]
+    }
+  },
+  "faq#preOrder": {
+    "title": "Faq pre order",
+    "props": {
+      "blockClass": ["blackFriday", "preOrder"],
+      "faq": [
+        {
+          "Question": "### Quando cade il Black Friday 2022?",
+          "Answer": "In Italia, e per noi di Whirlpool, il Black Friday 2022 si terrà Venerdì 25 novembre, quarto venerdì del mese."
+        },
+        {
+          "Question": "### Come funziona e quanto dura il Black Friday Whirlpool?",
+          "Answer": "Le **offerte Black Friday** di **elettrodomestici Whirlpool** dureranno più di un giorno: non solo saranno seguite da altri imperdibili sconti in occasione del nostro **Cyber Monday**, ma il calendario promozionale del mese di Novembre sarà ricco di novità e occasioni irripetibili. Per rimanere sempre aggiornato su tutte le offerte Whirlpool, i prodotti e le innovazioni, iscriviti alla nostra [Newsletter](https://www.whirlpool.it/newsletter?popup_HP_promo_freexprdel) : avrai accesso a una serie di **sconti personalizzati**, validi per un periodo limitato, nonché il **5% di sconto sul tuo primo ordine**, applicabile a tutti i prodotti presenti nel nostro catalogo. Inoltre, se farai l’iscrizione in concomitanza delle **offerte Black Friday**, tale sconto sarà cumulabile alle promozioni già previste per l’occasione!"
+        },
+        {
+          "Question": "### Quali sono i tempi di consegna di Whirlpool Italia per il Black Friday?",
+          "Answer": "Tutta la merce acquistata in occasione del **Black Friday**: [lavatrici](https://www.whirlpool.it/prodotti/lavaggio-e-asciugatura/lavatrici), asciugatrici, forni, [frigoriferi](https://www.whirlpool.it/prodotti/refrigerazione/frigoriferi), [condizionatori](https://www.whirlpool.it/prodotti/aria-condizionata/condizionatori) e tutti gli altri prodotti elettrodomestici Whirlpool verranno **consegnati direttamente a casa tua** in 4-7 giorni lavorativi. Perché ordinare da Whirlpool conviene? Scoprilo nella nostra sezione Servizi e Vantaggi."
+        },
+        {
+          "Question": "### Le offerte del Black Friday Whirlpool coinvolgono tutte le categorie di prodotto?",
+          "Answer": "Si, Whirlpool ha pensato di coinvolgere - nelle varie iniziative dedicate - tutte le categorie di prodotto."
+        },
+        {
+          "Question": "### Che vantaggio c’è ad iscriversi alla Newsletter durante il periodo di Black Friday Whirlpool?",
+          "Answer": "L'iscrizione alla nostra newsletter offre la possibilità di essere sempre informati sulle promozioni e offerte esclusive sui prodotti Whirlpool. Whirlpool ha pensato ad una convenienza ancora maggiore: una volta iscritto, il cliente riceverà uno sconto del 5% che potrà applicare a tutto il catalogo e sarà cumulabile alle promozioni già previste nel periodo del Black Friday. L’iscrizione permette l’accesso ad una serie di offerte personalizzate, valide per un periodo limitato."
+        },
+        {
+          "Question": "### Le offerte Black Friday sugli elettrodomestici di Whirlpool valgono per tutti i prodotti?",
+          "Answer": "Sì, la nostra azienda ha pensato di coinvolgere nelle **offerte di elettrodomestici Black Friday** – e nelle varie iniziative dedicate - **tutte le categorie del catalogo Whirlpool**."
+        },
+        {
+          "Question": "### Quali servizi sono inclusi nel Black Friday Whirlpool?",
+          "Answer": "Anche **durante il Black Friday 2022** potrai usufruire di tutti i servizi e vantaggi pensati per venire incontro alle tue necessità e abitudini. **Whirpool Italia** offre [Supporto](https://www.whirlpool.it/supporto) **gratuito** e **senza costi aggiuntivi** per i tuoi elettrodomestici, con **servizi di assistenza** erogabili sia telefonicamente che a domicilio. [Scopri come nella sezione Contatti](https://www.whirlpool.it/supporto/contattaci) che comprendono se richiesto il **ritiro del tuo usato**."
+        },
+        {
+          "Question": "### Come funzionano i resi?",
+          "Answer": "Per ulteriori informazioni sul diritto di recesso clicca [qui](https://www.whirlpool.it/supporto/diritto-di-recesso)."
+        },
+        {
+          "Question": "### E negli altri 364 giorni? Scopri le promozioni Whirlpool più vantaggiose!",
+          "Answer": "Il bello deve ancora venire! In attesa delle **offerte Black Friday** di **elettrodomestici** lasciati ispirare dalle allettanti **occasioni di sconto** tra le tante di proposte di [Promozioni](https://www.whirlpool.it/promozioni) Whirlpool."
+        }
+      ]
+    }
+  },
+  "toggle-layout#preOrderScopriDipiu": {
+    "title": "[TOGGLE] Scopri di più",
+    "children": ["link#preOrderScopriDipiu"]
+  },
+  "link#preOrderScopriDipiu": {
+    "title": "[LINK] Scopri di più",
+    "props": {
+      "label": "Scopri di più",
+      "href": "#",
+      "blockClass": "preOrderDiscoverMoreFaq",
+      "displayMode": "button"
+    }
+  }
+}

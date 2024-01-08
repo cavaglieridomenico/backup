@@ -1,0 +1,600 @@
+.content--visible {
+  transition: height 0.7s ease;
+  height: max-content;
+  /*20vh;*/
+}
+
+:global(.vtex-sticky-layout-0-x-container--sticky-header) .content--visible {
+  height: 200px;
+}
+
+/*--------------------------------- LANDING PAGE INNEX WASHING MACHINE ---------------------------------*/
+
+.content--landing-innex-disclosure-position-fixed--visible {
+  height: max-content !important;
+  color: #fff;
+  background: #3b3e42;
+  padding: 5rem;
+}
+
+.content--landing-innex-disclosure-position-fixed {
+  position: relative !important;
+  margin-top: 25px;
+  /* height: 1000px; */
+}
+
+.trigger--disclosure-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 47vw;
+  margin-top: -80px;
+}
+
+.trigger--disclosure-trigger--hidden {
+  animation-name: toggle-up;
+  animation-duration: 0.5s;
+  /* animation-fill-mode: forwards;  */
+}
+
+:global(.vtex-store-drawer-0-x-drawerTriggerContainer) .trigger--hidden {
+  background: transparent !important;
+}
+
+@media screen and (max-width: 1024px) {
+  :global(.vtex-store-drawer-0-x-drawerTriggerContainer) .trigger--hidden {
+    padding: 0;
+    height: 24px;
+  }
+}
+
+:global(.vtex-store-drawer-0-x-drawerTriggerContainer) .trigger--visible {
+  background: transparent !important;
+}
+
+.trigger--disclosure-trigger--visible {
+  animation-name: toggle-down;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+/*animations*/
+
+@keyframes toggle-up {
+  0% {
+    transform: rotate(45deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes toggle-down {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(45deg);
+  }
+}
+
+/* ACCORDION SPECIFICATION DESKTOP PDP */
+
+/* Technical specifications */
+
+.trigger--trigger-technical-specifications--hidden {
+  width: 100%;
+  padding: 0;
+  background: #f3fafd;
+  border-top-right-radius: 32px;
+  border-top-left-radius: 32px;
+  cursor: pointer;
+}
+
+.trigger--trigger-technical-specifications--visible {
+  width: 100%;
+  padding: 0;
+  background: #f3fafd;
+  border-top-right-radius: 32px;
+  border-top-left-radius: 32px;
+  cursor: pointer;
+}
+
+/* OPEN */
+
+.content--content-technical-specifications--visible {
+  position: unset !important;
+  padding: unset !important;
+  transition: all 1s ease;
+  height: auto;
+  border-bottom: 1px solid #e5f6ff;
+  width: auto;
+  /* margin: 0 104px; */
+  /*   min-height: 0%;
+  max-height: 1000px; */
+}
+
+@media screen and (max-width: 1024px) {
+  /*  .content--content-technical-specifications--visible {
+    margin: 0 30px;
+  } */
+}
+
+/* CLOSE */
+
+.content--content-technical-specifications--hidden {
+  position: unset !important;
+  padding: unset !important;
+  transition: all 1s ease;
+  max-height: 0;
+  border-bottom: 1px solid #e5f6ff;
+  /* margin: 0 104px; */
+  width: auto;
+}
+
+@media screen and (max-width: 1024px) {
+  /*  .content--content-technical-specifications--hidden {
+    margin: 0 30px;
+  } */
+}
+
+@media (max-width: 1024px) {
+  .trigger--trigger-technical-specifications--hidden {
+    width: 100%;
+    background: #f3fafd;
+    border-top-right-radius: 24px;
+    border-top-left-radius: 24px;
+  }
+
+  .trigger--trigger-technical-specifications--visible {
+    width: 100%;
+    background: #f3fafd;
+    border-top-right-radius: 24px;
+    border-top-left-radius: 24px;
+  }
+}
+
+/* warranty */
+
+.trigger--trigger-warranty--hidden {
+  width: 100%;
+  padding: 0;
+  background: #f3fafd;
+  border-top-right-radius: 32px;
+  border-top-left-radius: 32px;
+  cursor: pointer;
+}
+
+.trigger--trigger-warranty--visible {
+  width: 100%;
+  padding: 0;
+  background: #f3fafd;
+  border-top-right-radius: 32px;
+  border-top-left-radius: 32px;
+  cursor: pointer;
+}
+
+/* OPEN */
+
+.content--content-warranty--visible {
+  position: unset !important;
+  padding: unset !important;
+  transition: all 1s ease;
+  height: auto;
+  border-bottom: 1px solid #e5f6ff;
+  width: auto;
+  /* margin: 0 104px; */
+  /*   min-height: 0%;
+  max-height: 1000px; */
+}
+
+@media screen and (max-width: 1024px) {
+  /* .content--content-warranty--visible {
+    margin: 0 30px;
+  } */
+}
+
+/* CLOSE */
+
+.content--content-warranty--hidden {
+  position: unset !important;
+  padding: unset !important;
+  transition: all 1s ease;
+  max-height: 0;
+  border-bottom: 1px solid #e5f6ff;
+  /* margin: 0 104px; */
+  width: auto;
+}
+
+@media screen and (max-width: 1024px) {
+  /* .content--content-warranty--hidden {
+    margin: 0 30px;
+  } */
+}
+
+@media (max-width: 1024px) {
+  .trigger--trigger-warranty--hidden {
+    width: 100%;
+    background: #f3fafd;
+    border-top-right-radius: 24px;
+    border-top-left-radius: 24px;
+  }
+
+  .trigger--trigger-warranty--visible {
+    width: 100%;
+    background: #f3fafd;
+    border-top-right-radius: 24px;
+    border-top-left-radius: 24px;
+  }
+}
+
+/* Features */
+
+.trigger--trigger-features--hidden {
+  width: 100%;
+  padding: 0;
+  background: #f3fafd;
+  cursor: pointer;
+}
+
+.trigger--trigger-features--visible {
+  width: 100%;
+  padding: 0;
+  background: #f3fafd;
+  cursor: pointer;
+}
+
+.content--content-features--visible {
+  position: unset !important;
+  padding: unset !important;
+  transition: all 0.5s ease-in-out;
+  /* min-height: 100%; */
+  height: auto;
+  border-bottom: 1px solid #e5f6ff;
+  width: auto;
+  /* margin: 0 104px; */
+}
+
+@media screen and (max-width: 1024px) {
+  /* .content--content-features--visible {
+    margin: 0 30px;
+  } */
+}
+
+.content--content-features--hidden {
+  position: unset !important;
+  padding: unset !important;
+  transition: all 0.5s ease-in-out;
+  height: 0px;
+  border-bottom: 1px solid #e5f6ff;
+  width: auto;
+  /* margin: 0 104px; */
+}
+
+@media screen and (max-width: 1024px) {
+  /*   .content--content-features--hidden {
+    margin: 0 30px;
+  } */
+}
+
+/* instructions */
+
+.trigger--trigger-instructions--hidden {
+  width: 100%;
+  padding: 0;
+  background: #f3fafd;
+  border-bottom-right-radius: 32px;
+  border-bottom-left-radius: 32px;
+  cursor: pointer;
+}
+
+.trigger--trigger-instructions--visible {
+  width: 100%;
+  padding: 0;
+  background: #f3fafd;
+  border-bottom-right-radius: 32px;
+  border-bottom-left-radius: 32px;
+  cursor: pointer;
+}
+
+.content--content-instructions--visible {
+  position: unset !important;
+  padding: unset !important;
+  transition: all 0.5s ease-in-out;
+  /* min-height: 100%; */
+  height: auto;
+}
+
+.content--content-instructions--hidden {
+  position: unset !important;
+  padding: unset !important;
+  transition: all 0.5s ease-in-out;
+  min-height: 0px;
+  max-height: 100%;
+}
+
+/* ACCORDION SPECIFICATION DESKTOP PDP */
+
+/* Technical specifications */
+
+.trigger--trigger-click-and-clean--hidden {
+  width: 100%;
+  padding: 0;
+}
+
+.trigger--trigger-click-and-clean--visible {
+  width: 100%;
+  padding: 0;
+}
+
+/* OPEN */
+
+.content--content-click-and-clean--visible {
+  position: unset !important;
+  padding: unset !important;
+  transition: all 1s ease;
+  min-height: 0%;
+  max-height: 1000px;
+}
+
+/* CLOSE */
+
+.content--content-click-and-clean--hidden {
+  position: unset !important;
+  padding: unset !important;
+  transition: all 1s ease;
+  max-height: 0;
+}
+
+@media (max-width: 1024px) {
+  .trigger--trigger-click-and-clean--hidden {
+    width: 100%;
+    background: #f3fafd;
+    border-top-right-radius: 32px;
+    border-top-left-radius: 32px;
+  }
+
+  .trigger--trigger-click-and-clean--visible {
+    width: 100%;
+    background: #f3fafd;
+    border-top-right-radius: 32px;
+    border-top-left-radius: 32px;
+  }
+}
+
+/*cookies disclaimer*/
+
+@media (max-width: 1024px) {
+  .trigger--disclosure-trigger-targeting {
+    width: 100% !important;
+  }
+
+  .trigger--disclosure-trigger-functional {
+    width: 100% !important;
+  }
+
+  .trigger--disclosure-trigger-first-party {
+    width: 100% !important;
+  }
+
+  .trigger--disclosure-trigger-strictly-necessary {
+    width: 100% !important;
+  }
+
+  .content--disclosure-content-first-party {
+    position: unset !important;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .content--disclosure-content-targeting {
+    position: unset !important;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .content--disclosure-content-functional {
+    position: unset !important;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .content--disclosure-content-strictly-necessary {
+    position: unset !important;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  :global(.vtex-disclosure-layout-1-x-trigger--disclosure-trigger-targeting--visible) :global(.vtex-store-components-3-x-imageElement--arrow-disclosure-mobile-style) {
+    background: none;
+    transform: scaleY(-1);
+    transition: all 0.2s, tranform 0.2s;
+  }
+
+  :global(.vtex-disclosure-layout-1-x-trigger--disclosure-trigger-targeting--hidden) :global(.vtex-store-components-3-x-imageElement--arrow-disclosure-mobile-style) {
+    background: none;
+    transform: scaleY(1);
+    transition: all 0.2s, tranform 0.2s;
+  }
+
+  :global(.vtex-disclosure-layout-1-x-trigger--disclosure-trigger-functional--visible) :global(.vtex-store-components-3-x-imageElement--arrow-disclosure-mobile-style) {
+    background: none;
+    transform: scaleY(-1);
+    transition: all 0.2s, tranform 0.2s;
+  }
+
+  :global(.vtex-disclosure-layout-1-x-trigger--disclosure-trigger-functional--hidden) :global(.vtex-store-components-3-x-imageElement--arrow-disclosure-mobile-style) {
+    background: none;
+    transform: scaleY(1);
+    transition: all 0.2s, tranform 0.2s;
+  }
+
+  :global(.vtex-disclosure-layout-1-x-trigger--disclosure-trigger-first-party--visible) :global(.vtex-store-components-3-x-imageElement--arrow-disclosure-mobile-style) {
+    background: none;
+    transform: scaleY(-1);
+    transition: all 0.2s, tranform 0.2s;
+  }
+
+  :global(.vtex-disclosure-layout-1-x-trigger--disclosure-trigger-first-party--hidden) :global(.vtex-store-components-3-x-imageElement--arrow-disclosure-mobile-style) {
+    background: none;
+    transform: scaleY(1);
+    transition: all 0.2s, tranform 0.2s;
+  }
+
+  :global(.vtex-disclosure-layout-1-x-trigger--disclosure-trigger-strictly-necessary--visible) :global(.vtex-store-components-3-x-imageElement--arrow-disclosure-mobile-style) {
+    background: none;
+    transform: scaleY(-1);
+    transition: all 0.2s, tranform 0.2s;
+  }
+
+  :global(.vtex-disclosure-layout-1-x-trigger--disclosure-trigger-strictly-necessary--hidden) :global(.vtex-store-components-3-x-imageElement--arrow-disclosure-mobile-style) {
+    background: none;
+    transform: scaleY(1);
+    transition: all 0.2s, tranform 0.2s;
+  }
+
+  :global(.vtex-disclosure-layout-1-x-trigger--disclosure-trigger-targeting--visible) {
+    background: none;
+  }
+
+  :global(.vtex-disclosure-layout-1-x-trigger--disclosure-trigger-targeting--hidden) {
+    background: none;
+  }
+
+  :global(.vtex-disclosure-layout-1-x-trigger--disclosure-trigger-functional--visible) {
+    background: none;
+  }
+
+  :global(.vtex-disclosure-layout-1-x-trigger--disclosure-trigger-functional--hidden) {
+    background: none;
+  }
+
+  :global(.vtex-disclosure-layout-1-x-trigger--disclosure-trigger-first-party--visible) {
+    background: none;
+  }
+
+  :global(.vtex-disclosure-layout-1-x-trigger--disclosure-trigger-first-party--hidden) {
+    background: none;
+  }
+
+  :global(.vtex-disclosure-layout-1-x-trigger--disclosure-trigger-strictly-necessary--visible) {
+    background: none;
+  }
+
+  :global(.vtex-disclosure-layout-1-x-trigger--disclosure-trigger-strictly-necessary--hidden) {
+    background: none;
+  }
+
+  /*pdp accordion*/
+  /*specifications*/
+  :global(.vtex-disclosure-layout-1-x-trigger--trigger-technical-specifications--hidden) :global(.vtex-store-components-3-x-imageElement--arrow-accordion-style) {
+    transform: scaleY(1) !important;
+    transition: all 0.2s, tranform 0.2s !important;
+  }
+
+  :global(.vtex-disclosure-layout-1-x-trigger--trigger-technical-specifications--visible) :global(.vtex-store-components-3-x-imageElement--arrow-accordion-style) {
+    transform: scaleY(-1) !important;
+    transition: all 0.2s, tranform 0.2s !important;
+  }
+
+  /*warranty*/
+  :global(.vtex-disclosure-layout-1-x-trigger--trigger-warranty--hidden) :global(.vtex-store-components-3-x-imageElement--arrow-accordion-style) {
+    transform: scaleY(1) !important;
+    transition: all 0.2s, tranform 0.2s !important;
+  }
+
+  :global(.vtex-disclosure-layout-1-x-trigger--trigger-warranty--visible) :global(.vtex-store-components-3-x-imageElement--arrow-accordion-style) {
+    transform: scaleY(-1) !important;
+    transition: all 0.2s, tranform 0.2s !important;
+  }
+
+  /*features*/
+  :global(.vtex-disclosure-layout-1-x-trigger--trigger-features--hidden) :global(.vtex-store-components-3-x-imageElement--arrow-accordion-style) {
+    transform: scaleY(1) !important;
+    transition: all 0.2s, tranform 0.2s !important;
+  }
+
+  :global(.vtex-disclosure-layout-1-x-trigger--trigger-features--visible) :global(.vtex-store-components-3-x-imageElement--arrow-accordion-style) {
+    transform: scaleY(-1) !important;
+    transition: all 0.2s, tranform 0.2s !important;
+  }
+
+  /*instructions*/
+  :global(.vtex-disclosure-layout-1-x-trigger--trigger-instructions--hidden) :global(.vtex-store-components-3-x-imageElement--arrow-accordion-style) {
+    transform: scaleY(1) !important;
+    transition: all 0.2s, tranform 0.2s !important;
+  }
+
+  :global(.vtex-disclosure-layout-1-x-trigger--trigger-instructions--visible) :global(.vtex-store-components-3-x-imageElement--arrow-accordion-style) {
+    transform: scaleY(-1) !important;
+    transition: all 0.2s, tranform 0.2s !important;
+  }
+}
+
+/*pdp accordion*/
+
+/*specifications*/
+
+:global(.vtex-disclosure-layout-1-x-trigger--trigger-technical-specifications--hidden) :global(.vtex-store-components-3-x-imageElement--arrow-accordion-style) {
+  transform: scaleY(1) !important;
+  transition: all 0.2s, tranform 0.2s !important;
+}
+
+:global(.vtex-disclosure-layout-1-x-trigger--trigger-technical-specifications--visible) :global(.vtex-store-components-3-x-imageElement--arrow-accordion-style) {
+  transform: scaleY(-1) !important;
+  transition: all 0.2s, tranform 0.2s !important;
+}
+
+/*warranty*/
+
+:global(.vtex-disclosure-layout-1-x-trigger--trigger-warranty--hidden) :global(.vtex-store-components-3-x-imageElement--arrow-accordion-style) {
+  transform: scaleY(1) !important;
+  transition: all 0.2s, tranform 0.2s !important;
+}
+
+:global(.vtex-disclosure-layout-1-x-trigger--trigger-warranty--visible) :global(.vtex-store-components-3-x-imageElement--arrow-accordion-style) {
+  transform: scaleY(-1) !important;
+  transition: all 0.2s, tranform 0.2s !important;
+}
+
+/*features*/
+
+:global(.vtex-disclosure-layout-1-x-trigger--trigger-features--hidden) :global(.vtex-store-components-3-x-imageElement--arrow-accordion-style) {
+  transform: scaleY(1) !important;
+  transition: all 0.2s, tranform 0.2s !important;
+}
+
+:global(.vtex-disclosure-layout-1-x-trigger--trigger-features--visible) :global(.vtex-store-components-3-x-imageElement--arrow-accordion-style) {
+  transform: scaleY(-1) !important;
+  transition: all 0.2s, tranform 0.2s !important;
+}
+
+/*instructions*/
+
+:global(.vtex-disclosure-layout-1-x-trigger--trigger-instructions--hidden) :global(.vtex-store-components-3-x-imageElement--arrow-accordion-style) {
+  transform: scaleY(1) !important;
+  transition: all 0.2s, tranform 0.2s !important;
+}
+
+:global(.vtex-disclosure-layout-1-x-trigger--trigger-instructions--visible) :global(.vtex-store-components-3-x-imageElement--arrow-accordion-style) {
+  transform: scaleY(-1) !important;
+  transition: all 0.2s, tranform 0.2s !important;
+}
+
+.trigger {
+  border: none;
+}
+
+.trigger--trigger-technical-specifications--hidden {
+  border-bottom: 1px solid #e5f6ff;
+}
+
+.trigger--trigger-warranty--hidden {
+  border-bottom: 1px solid #e5f6ff;
+}
+
+.trigger--trigger-features--hidden {
+  border-bottom: 1px solid #e5f6ff;
+}

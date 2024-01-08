@@ -1,0 +1,53 @@
+{
+  "product-summary.shelf": {
+    "children": [
+      "stack-layout#head",
+      "vtex.store-components:product-name#summary",
+      "product-summary-space",
+      "product-list-price#summary",
+      // "flex-layout.row#selling-price-savings",
+      "responsive-layout.desktop#addToCartAndSpecs",
+      "responsive-layout.tablet#addToCartAndSpecs",
+      "responsive-layout.phone#addToCartAndSpecs",
+      "flex-layout.row#etichettaAndScheda2"
+    ]
+  },
+  "flex-layout.row#etichettaAndScheda2": {
+    "props": {
+      "blockClass": "etichettaSchedaRow"
+    },
+    "children": [
+      "add-to-list-btn",
+      "condition-layout.product#etichetta-image",
+      // "link.product#schedaProdottoTab"
+      "condition-layout.product#schedaProdottoTab"
+    ]
+  },
+  "stack-layout#head": {
+    "children": [
+      "product-summary-image#shelf",
+      "conditional-cut-price#plp-Desk",
+      // "vtex.product-highlights@2.x:product-highlights#promotion"
+      "vtex.product-highlights@2.x:product-highlights#promo"
+    ]
+  },
+
+  "vtex.product-highlights@2.x:product-highlights#promo": {
+    "props": {
+      "type": "promotion",
+      "blockClass": "promotionHigh"
+      //Promo prova
+      // "filter": {
+      //   "type": "show",
+      //   "highlightNames": ["Testcarnevale1"]
+      // }
+    },
+    "children": ["product-highlight-text#promo"]
+  },
+  "product-highlight-text#promo": {
+    "props": {
+      "message": "{highlightName}",
+      "blockClass": "promotionHigh"
+    }
+  }
+}

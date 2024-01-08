@@ -1,0 +1,155 @@
+.cookieInfoMainContainer {
+  margin: 0px 0rem;
+}
+
+.cookieInfoContainer {
+  margin-bottom: 3rem;
+  background-color: white;
+}
+.tableContainer {
+  border-collapse: inherit;
+  margin: auto;
+  border: 1px solid #d7d7d7;
+  border-radius: 5px;
+  border-spacing: initial;
+  width: 100%;
+  overflow: hidden;
+}
+.groupName {
+  color: #696969;
+  font-size: 1em;
+  margin-bottom: 0.6em;
+  font-weight: 600;
+  font-family: myriadLight;
+}
+.groupDescription {
+  font-size: 0.9em;
+  color: #696969;
+  margin: 0 0 1em 0;
+  font-family: myriadLight;
+  line-height: normal;
+}
+.tableTitle {
+  background-color: #f8f8f8;
+  font-size: 1rem;
+  font-weight: 400;
+  border-bottom: 1px solid #d7d7d7;
+  border-right: 1px solid #d7d7d7;
+  color: #696969;
+  min-width: 75px;
+  height: 50px;
+  padding: 12px 15px;
+  text-align: left;
+  font-family: myriadLight;
+}
+/* .tableTitle,
+.tableText {
+  border: 1px solid #dddddd;
+  text-align: left;
+  font-size: 1rem;
+  font-family: myriadLight;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+} */
+.tableText {
+  font-family: myriadLight;
+  border-bottom: 1px solid #d7d7d7;
+  border-right: 1px solid #d7d7d7;
+  color: #696969;
+  font-size: 0.9em;
+  padding: 12px 15px;
+  text-align: left;
+  height: 50px;
+}
+
+.optanonToggleDisplay {
+  color: #007d69;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.optanonToggleContainer p {
+  font-family: myriadLight;
+  color: #585858;
+}
+.footerPopupLabel{
+  color: #c0c0c0;
+  position: relative;
+  bottom: 10px;
+  margin: 0 1.5rem;
+}
+
+.footerPopupLabel:hover{
+  color: #007d69;
+  transition: all 0.7s ease;
+  cursor: pointer;
+  white-space: nowrap;
+}
+@media screen and (max-width: 600px) {
+  .cookieInfoMainContainer {
+    width: 100%;
+    text-align: justify;
+    padding: 0 1rem;
+  }
+  .tableHeadContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .tableTitle {
+    width: 100% !important;
+  }
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 100px;
+  }
+
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: 0.625em;
+  }
+
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: 0.8em;
+    text-align: right;
+  }
+
+  table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .tableContainer {
+    margin-left: -1rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  .footerPopupLabel {
+    margin: 0 1rem;
+    white-space: nowrap;
+  }
+}

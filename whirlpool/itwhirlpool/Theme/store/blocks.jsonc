@@ -1,0 +1,91 @@
+/* Blocks can be defined both on the store/blocks.json file, and in any number of json
+ * files inside the store/blocks directory, with any arbitrary directory structure.
+ *
+ * Additionally, all blocks files can support comments, such as this one, if given the
+ * .jsonc file extension.
+ *
+ * The store/blocks.json file is intended for backwards compatibility, for miscellaneous
+ * blocks, or if the app is simple enough that it doesn't warrant splitting the file.
+ */
+{
+  "store.orderplaced": {
+    "blocks": [
+      "order-placed"
+      //"analytics#purchase"
+    ]
+  },
+
+  "store.account": {
+    "blocks": [
+      "my-account",
+      "newsletter-popup#footer"
+      //"analytics"
+    ],
+    "parent": {
+      "challenge": "challenge.profile"
+    }
+  },
+
+  "store.not-found#product": {
+    "children": [
+      "rich-text#not-found-page",
+      "rich-text#buttonNotFound",
+      "image#404",
+      "newsletter-popup#footer"
+      //"analytics#error"
+    ],
+    "props": {
+      "blockClass": ["flexDisplay", "flexColDir", "center"]
+    }
+  },
+
+  "store.not-found#search": {
+    "children": [
+      "rich-text#not-found-page",
+      "rich-text#buttonNotFound",
+      "image#404",
+      "newsletter-popup#footer"
+      //"analytics#error"
+    ],
+    "props": {
+      "blockClass": ["flexDisplay", "flexColDir", "center"]
+    }
+  },
+
+  "store.custom#teste": {
+    "children": [
+      "rich-text#not-found-page",
+      "rich-text#buttonNotFound",
+      "image#404",
+      "newsletter-popup#footer"
+      //"analytics"
+    ],
+    "props": {
+      "blockClass": ["flexDisplay", "flexColDir", "center"],
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER"
+    }
+  },
+  "rich-text#not-found-page": {
+    "props": {
+      "text": "Siamo spiacenti, nessun risultato",
+      "textAlignment": "center",
+      "blockClass": ["notFound", "center"],
+      "textPosition": "CENTER"
+    }
+  },
+  "rich-text#buttonNotFound": {
+    "props": {
+      "text": "[ ritorna alla homepage ](/)",
+      "blockClass": ["buttonCard", "linkNotFound", "center"],
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER"
+    }
+  },
+  "image#404": {
+    "props": {
+      "src": "assets/404.jpg",
+      "blockClass": "center"
+    }
+  }
+}

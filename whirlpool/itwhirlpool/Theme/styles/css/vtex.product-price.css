@@ -1,0 +1,190 @@
+.listPrice {
+  color: #d0d3d4;
+  font-size: 1rem;
+  font-family: "myriadRegular";
+  text-align: start;
+}
+.currencyContainer--SearchResult{
+  font-size: 1rem;
+}
+.sellingPrice--SearchResult{
+  justify-content: right;
+}
+.sellingPriceValue {
+  font-size: 1.5rem !important;
+  line-height: 1.5;
+  font-family: "myriadRegular";
+}
+:global(.vtex-flex-layout-0-x-flexRow--row-tertiary) .sellingPriceValue {
+  font-size: 1.5rem !important;
+  line-height: 1.5;
+  font-family: "myriadRegular";
+  margin-bottom: -0.5rem;
+}
+.sellingPrice--summary {
+  font-size: 0.65rem;
+  margin: 0;
+  color: #505050;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+:global(.vtex-flex-layout-0-x-flexRow--row-tertiary) .sellingPrice--summary {
+  font-size: 0.65rem;
+  margin: 0;
+  color: #505050;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 1.1rem;
+}
+.sellingPriceValue--summary {
+  padding: 0;
+}
+.sellingPrice--summary2 {
+  font-size: 1.25rem;
+  margin: 0;
+  color: #505050;
+  display: flex;
+  align-items: flex-start;
+  font-family: "myriadRegular";
+}
+.sellingPriceValue--summary2 {
+  color: #505050;
+  padding: 0;
+  font-size: 1.85rem;
+  font-family: "myriadRegular";
+}
+.savings--summary {
+  background: #fdc100;
+  border-radius: 1000px;
+  padding: 0.2rem;
+  align-items: center;
+  display: flex;
+  color: #ffffff;
+}
+.savings-discount--summary {
+  font-size: 0.875rem;
+  font-weight: 600;
+  vertical-align: baseline;
+  color: #ffffff;
+}
+.listPrice--summary {
+  margin-bottom: 0;
+  padding: 0rem 1rem;
+}
+.listPrice--comparison {
+  padding-left: 20px;
+}
+.savings--saving {
+  padding: 0 0.3rem;
+  color: #505050;
+  font-weight: 600;
+}
+:global(.vtex-flex-layout-0-x-flexCol--summary-right) .savings--saving {
+ display: none;
+}
+.savings--savingPdp {
+  color: #edb112;
+  font-family: "myriadRegular";
+  font-size: 1.25rem;
+}
+.savings--widthMinContent {
+  width: min-content;
+}
+.currencyContainer--savingPdp {
+  padding-left: 0.2rem;
+}
+.savings--savingPdpMobile {
+  background: #edb112;
+  color: #ffffff;
+  padding: 0.3rem 0.6rem;
+  margin: 0rem 1rem;
+  height: 1.5rem;
+}
+:global(.vtex-flex-layout-0-x-flexCol--summary-right) .savings--savingPdpMobile {
+  background: #edb112;
+  color: #ffffff;
+  padding: 0.3rem;
+  margin: 0rem 1rem;
+  height: 1rem;
+  margin-right: 1rem;
+  margin-top: 1.9rem;
+}
+.sellingPriceValue--priceMobile {
+  font-family: "myriadSemibold";
+  margin-right: 1rem;
+}
+.savings--savingPlpMobile {
+  padding: 0.4rem 0.6rem;
+}
+.savings--desktop {
+  padding: 0.3rem 2.5rem;
+  font-size: 1rem;
+}
+/* :global(.vtex-flex-layout-0-x-flexColChild--colPreOrder) .sellingPrice--summaryPL{
+  padding:1rem;
+} */
+:global(.vtex-flex-layout-0-x-flexColChild--colPreOrder) .sellingPriceValue--summaryPL{
+  font-weight: 400 !important;
+}
+:global(.vtex-product-summary-2-x-container--blackfriday) .sellingPriceValue--summaryPL{
+  font-weight: 400 !important;
+}
+/* Media Queries */
+@media only screen and (max-width: 600px) {
+  .currencyContainer--summary {
+    /* font-size: 1rem; */
+  }
+  .savings--saving {
+    padding: 0;
+  }
+  /* .sellingPrice--summary {
+    padding-left: 0.9rem;
+  } */
+  .currencyContainer--SearchResult {
+    position: relative;
+    bottom: 8rem;
+  }
+  .sellingPrice--SearchResult{
+    justify-content: left;
+    padding-left: 4rem;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .listPrice {
+    font-family: "myriadLight";
+  }
+  .listPrice--summary {
+    padding: 0;
+  }
+  .sellingPriceValue--SearchResult{
+    position: relative;
+    top: -3.5rem;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .savings--desktop{
+    display: none;
+  }
+  .sellingPriceValue--summaryPL {
+    line-height: 1;
+    margin-right: 0.5rem;
+  }
+  .listPrice--summary {
+    padding: 0;
+    /* margin: 0rem 0rem 0rem 1rem; */
+  }
+  .sellingPrice--summary {
+    flex-direction: row;
+    align-items: center;
+    /* margin: 0rem 0rem 0rem 1rem; */
+  }
+  /* .currencyContainer--summary {
+    font-size: 1rem;
+  } */
+  .sellingPriceValue--summary {
+    line-height: 1;
+    font-weight: bold;
+  }
+}

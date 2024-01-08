@@ -1,0 +1,369 @@
+{
+  "store.custom#legal-issues": {
+    "props": {
+      "blockClass": "store-custom-legal-issues-style"
+    },
+    "blocks": [
+      //"analytics#legal-issues",
+      "flex-layout.row#legal-issues-maxi-container"
+    ]
+  },
+  "breadcrumb#legalIssues": {
+    "props": {
+      "categories": ["/Home/", "Termini"],
+      "showOnMobile": false,
+      "blockClass": "breadcrumb-legal-issues-style"
+    }
+  },
+  "flex-layout.row#legal-issues-maxi-container": {
+    "props": {
+      "blockClass": "legal-issues-maxi-container-style"
+    },
+    "children": ["flex-layout.col#legal-issues-maxi-container-col"]
+  },
+  "flex-layout.col#legal-issues-maxi-container-col": {
+    "props": {
+      "blockClass": "legal-issues-maxi-container-col-style"
+    },
+    "children": [
+      "breadcrumb#legalIssues",
+      "flex-layout.row#legal-issues-title-container",
+      "flex-layout.row#legal-issues-buttons-container"
+    ]
+  },
+  "flex-layout.row#legal-issues-title-container": {
+    "props": {
+      "blockClass": "legal-issues-title-container-style"
+    },
+    "children": ["rich-text#legal-issues-title"]
+  },
+  "rich-text#legal-issues-title": {
+    "props": {
+      "text": "Termini",
+      "blockClass": "legal-issues-title-style"
+    }
+  },
+  "flex-layout.row#legal-issues-buttons-container": {
+    "props": {
+      "blockClass": "legal-issues-buttons-container-style"
+    },
+    "children": [
+      "flex-layout.col#legal-issues-buttons-terms-site",
+      "flex-layout.col#legal-issues-buttons-privacy-share",
+      "flex-layout.col#legal-issues-buttons-cookies"
+
+      /* "flex-layout.col#legal-issues-buttons-terms-buy-online",
+      "flex-layout.col#legal-issues-buttons-dispute resolution" */
+    ]
+  },
+  //BUTTONS TERMS SITE******************************************************
+  "flex-layout.col#legal-issues-buttons-terms-site": {
+    "props": {
+      "blockClass": "legal-issues-buttons-terms-site-container-style"
+    },
+    "children": [
+      "link#legal-issues-terms-link",
+      "link#legal-issues-withdrawal-link",
+      "link#legal-issues-memo-garantie-link",
+      "remove-link"
+      /* "link#legal-issues-share-link" */
+    ]
+  },
+  "link#legal-issues-terms-link": {
+    "props": {
+      "href": "/site-policy"
+    },
+    "children": ["flex-layout.row#legal-issues-terms-button"]
+  },
+  "link#legal-issues-site-link": {
+    "props": {
+      "href": "/legal-issues/sitemap"
+    },
+    "children": ["flex-layout.row#legal-issues-site-button"]
+  },
+  "flex-layout.row#legal-issues-terms-button": {
+    "props": {
+      "blockClass": "legal-issues-terms-button-style"
+    },
+    "children": [
+      "flex-layout.col#text-terms-container",
+      "flex-layout.col#button-arrow"
+    ]
+  },
+  "flex-layout.col#text-terms-container": {
+    "props": {
+      "blockClass": "text-terms-container-style"
+    },
+    "children": ["rich-text#text-terms"]
+  },
+  "flex-layout.row#button-arrow-row": {
+    "props": {
+      "blockClass": "button-arrow-style"
+    }
+  },
+  "flex-layout.col#button-arrow": {
+    "props": {
+      "blockClass": "button-arrow-container-style"
+    },
+    "children": ["flex-layout.row#button-arrow-row"]
+  },
+  "rich-text#text-terms": {
+    "props": {
+      "blockClass": "text-terms-style",
+      "text": "Site policy"
+    }
+  },
+  "flex-layout.row#legal-issues-site-button": {
+    "props": {
+      "blockClass": "legal-issues-site-button-style"
+    },
+    "children": [
+      "flex-layout.col#text-site-container",
+      "flex-layout.col#button-arrow"
+    ]
+  },
+  "flex-layout.col#text-site-container": {
+    "props": {
+      "blockClass": "text-site-container-style"
+    },
+    "children": ["rich-text#text-site"]
+  },
+  "rich-text#text-site": {
+    "props": {
+      "blockClass": "text-site-style",
+      "text": "Sitemap"
+    }
+  },
+  //BUTTONS PRIVACY SHARE******************************************************
+  "flex-layout.col#legal-issues-buttons-privacy-share": {
+    "props": {
+      "blockClass": "legal-issues-buttons-privacy-share-container-style"
+    },
+    "children": [
+      "link#legal-issues-privacy-link",
+      "link#legal-issues-terms-buy-online-link"
+    ]
+  },
+  "link#legal-issues-privacy-link": {
+    "props": {
+      "href": "/Informativa-sulla-Privacy"
+    },
+    "children": ["flex-layout.row#legal-issues-privacy-button"]
+  },
+  "link#legal-issues-share-link": {
+    "props": {
+      "href": "/legal-issues/share-your-content"
+    },
+    "children": ["flex-layout.row#legal-issues-share-button"]
+  },
+  "flex-layout.row#legal-issues-privacy-button": {
+    "props": {
+      "blockClass": "legal-issues-privacy-button-style"
+    },
+    "children": [
+      "flex-layout.col#text-privacy-container",
+      "flex-layout.col#button-arrow"
+    ]
+  },
+  "flex-layout.col#text-privacy-container": {
+    "props": {
+      "blockClass": "text-privacy-container-style"
+    },
+    "children": ["rich-text#text-privacy"]
+  },
+  "rich-text#text-privacy": {
+    "props": {
+      "blockClass": "text-privacy-style",
+      "text": "Informativa sulla privacy"
+    }
+  },
+  "flex-layout.row#legal-issues-share-button": {
+    "props": {
+      "blockClass": "legal-issues-share-button-style"
+    },
+    "children": [
+      "flex-layout.col#text-share-container",
+      "flex-layout.col#button-arrow"
+    ]
+  },
+  "flex-layout.col#text-share-container": {
+    "props": {
+      "blockClass": "text-share-container-style"
+    },
+    "children": ["rich-text#text-share"]
+  },
+  "rich-text#text-share": {
+    "props": {
+      "blockClass": "text-share-style",
+      "text": "Share your content"
+    }
+  },
+  //BUTTONS COOKIES******************************************************
+  "flex-layout.col#legal-issues-buttons-cookies": {
+    "props": {
+      "blockClass": "legal-issues-buttons-cookies-container-style"
+    },
+    "children": [
+      "link#legal-issues-cookies-link",
+      "link#legal-issues-dispute-resolution-link"
+    ]
+  },
+  "link#legal-issues-cookies-link": {
+    "props": {
+      "href": "/informativa-sui-cookie"
+    },
+    "children": ["flex-layout.row#legal-issues-cookies-button"]
+  },
+  "flex-layout.row#legal-issues-cookies-button": {
+    "props": {
+      "blockClass": "legal-issues-cookies-button-style"
+    },
+    "children": [
+      "flex-layout.col#text-cookies-container",
+      "flex-layout.col#button-arrow"
+    ]
+  },
+  "flex-layout.col#text-cookies-container": {
+    "props": {
+      "blockClass": "text-cookies-container-style"
+    },
+    "children": ["rich-text#text-cookies"]
+  },
+  "rich-text#text-cookies": {
+    "props": {
+      "blockClass": "text-cookies-style",
+      "text": "Informativa sui cookies"
+    }
+  },
+  //MEMO GARANTIE
+  "link#legal-issues-memo-garantie-link": {
+    "props": {
+      "href": "/promemoria-garanzia-legale"
+    },
+    "children": ["flex-layout.row#legal-issues-memo-garantie-button"]
+  },
+  "flex-layout.row#legal-issues-memo-garantie-button": {
+    "props": {
+      "blockClass": "legal-issues-cookies-button-style"
+    },
+    "children": [
+      "flex-layout.col#text-memo-garantie-container",
+      "flex-layout.col#button-arrow"
+    ]
+  },
+  "flex-layout.col#text-memo-garantie-container": {
+    "props": {
+      "blockClass": "text-cookies-container-style"
+    },
+    "children": ["rich-text#text-memo-garantie"]
+  },
+  "rich-text#text-memo-garantie": {
+    "props": {
+      "blockClass": "text-cookies-style",
+      "text": "Promemoria sulla\n Garanzia Legale"
+    }
+  },
+  // DIRITTO DI RECESSO
+  "flex-layout.col#legal-issues-buttons-withdrawal": {
+    "props": {
+      "blockClass": "legal-issues-buttons-withdrawal-container-style"
+    },
+    "children": ["link#legal-issues-withdrawal-link"]
+  },
+  "link#legal-issues-withdrawal-link": {
+    "props": {
+      "href": "/Diritto-di-Recesso"
+    },
+    "children": ["flex-layout.row#legal-issues-withdrawal-button"]
+  },
+  "flex-layout.row#legal-issues-withdrawal-button": {
+    "props": {
+      "blockClass": "legal-issues-withdrawal-button-style"
+    },
+    "children": [
+      "flex-layout.col#text-withdrawal-container",
+      "flex-layout.col#button-arrow"
+    ]
+  },
+  "flex-layout.col#text-withdrawal-container": {
+    "props": {
+      "blockClass": "text-withdrawal-container-style"
+    },
+    "children": ["rich-text#text-withdrawal"]
+  },
+  "rich-text#text-withdrawal": {
+    "props": {
+      "blockClass": "text-terms-style",
+      "text": "Diritto di recesso"
+    }
+  },
+  // CONDIZIONI GENERALI DI ACQUISTO ONLINE
+  "flex-layout.col#legal-issues-buttons-terms-buy-online": {
+    "props": {
+      "blockClass": "legal-issues-buttons-terms-buy-online-container-style"
+    },
+    "children": ["link#legal-issues-terms-buy-online-link"]
+  },
+  "link#legal-issues-terms-buy-online-link": {
+    "props": {
+      "href": "/condizioni-generali-di-acquisto-online"
+    },
+    "children": ["flex-layout.row#legal-issues-terms-buy-online-button"]
+  },
+  "flex-layout.row#legal-issues-terms-buy-online-button": {
+    "props": {
+      "blockClass": "legal-issues-terms-buy-online-button-style"
+    },
+    "children": [
+      "flex-layout.col#text-terms-buy-online-container",
+      "flex-layout.col#button-arrow"
+    ]
+  },
+  "flex-layout.col#text-terms-buy-online-container": {
+    "props": {
+      "blockClass": "text-terms-buy-online-container-style"
+    },
+    "children": ["rich-text#text-terms-buy-online"]
+  },
+  "rich-text#text-terms-buy-online": {
+    "props": {
+      "blockClass": "text-terms-style",
+      "text": "Condizioni generali di<br> acquisto online"
+    }
+  },
+  //RISOLUZIONE CONTROVERSIE ONLINE
+  "flex-layout.col#legal-issues-buttons-dispute-resolution": {
+    "props": {
+      "blockClass": "legal-issues-buttons-dispute-resolution-container-style"
+    },
+    "children": ["link#legal-issues-dispute-resolution-link"]
+  },
+  "link#legal-issues-dispute-resolution-link": {
+    "props": {
+      "href": "https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home2.show&lng=IT",
+      "target": "_blank"
+    },
+    "children": ["flex-layout.row#legal-issues-dispute-resolution-button"]
+  },
+  "flex-layout.row#legal-issues-dispute-resolution-button": {
+    "props": {
+      "blockClass": "legal-issues-dispute-resolution-button-style"
+    },
+    "children": [
+      "flex-layout.col#text-dispute-resolution-container",
+      "flex-layout.col#button-arrow"
+    ]
+  },
+  "flex-layout.col#text-dispute-resolution-container": {
+    "props": {
+      "blockClass": "text-dispute-resolution-container-style"
+    },
+    "children": ["rich-text#text-dispute-resolution"]
+  },
+  "rich-text#text-dispute-resolution": {
+    "props": {
+      "blockClass": "text-terms-style",
+      "text": "Risoluzione delle<br> controversie online"
+    }
+  }
+}

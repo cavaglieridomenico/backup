@@ -1,0 +1,100 @@
+{
+  "product-summary.shelf#carouselMobile": {
+    // eg. home carouseles
+    "children": [
+      "flex-layout.row#collection-badges",
+      "condition-layout.product#productBrand",
+      // "stack-layout#plpAspect",
+      "flex-layout.row#imageAndPriceRowMobile",
+      "flex-layout.row#productName",
+      "flex-layout.row#commercialAndLeadTimeMobile"
+      //"flex-layout.row#cardLogosAndAspect",
+      // "flex-layout.row#quickviewFra",
+      // "flex-layout.row#garantieLogo",
+      //"flex-layout.row#commercialAndName",
+      // "product-rating-summary.bazaarvoice",
+      //"flex-layout.row#keyFeatures",
+      //"flex-layout.row#cardLogosMobile"
+      //"flex-layout.row#energyAndPriceMobile",
+      // "flex-layout.row#lead-time",
+      // "flex-layout.row#pricePlp",
+      // "flex-layout.row#product-specification-group",
+      //  "flex-layout.row#buttons-BuyCompareWishlist"
+      // "add-to-cart-custom#plp"
+    ],
+    "props": {
+      "blockClass": "homeCarousel"
+    }
+  },
+  "flex-layout.row#aspectPriceEnergyMobile": {
+    "props": {
+      "blockClass": "aspectPriceEnergyMobile"
+    },
+    "children": [
+      "flex-layout.col#aspectCarouselMobile",
+      "flex-layout.col#energyAndPriceCarouselMobile"
+      //   "flex-layout.row#energyAndPriceCarousel"
+    ]
+  },
+  "flex-layout.col#aspectCarouselMobile": {
+    "props": {
+      "blockClass": "aspectPriceEnergyMobile"
+    },
+    "children": ["stack-layout#plpAspect"]
+  },
+  "flex-layout.col#energyAndPriceCarouselMobile": {
+    "props": {
+      "blockClass": "energyAndPriceCarouselMobile"
+    },
+    "children": ["flex-layout.row#energyAndPriceCarousel"]
+  },
+  "flex-layout.row#energyAndPriceCarouselMobile": {
+    "props": {
+      "blockClass": "energyAndPriceCarousel"
+    },
+    "children": [
+      "flex-layout.col#energyAndReparability",
+      "flex-layout.col#productPriceCarousel"
+    ]
+  },
+  // "flex-layout.row#cardLogosMobile": {
+  //   "props": {
+  //     "blockClass": ["cardLogosAndAspect", "cardLogosMobile"]
+  //   },
+  //   "children": ["flex-layout.col#cardLogos"]
+  // },
+  "flex-layout.row#commercialAndNameMobile": {
+    "children": [
+      "flex-layout.row#productName",
+      "flex-layout.row#commercialCodeLeadMobile"
+      // "flex-layout.row#lead-time"
+    ],
+    "props": {
+      "blockClass": "commercialAndName"
+    }
+  },
+  "flex-layout.row#commercialCodeLeadMobile": {
+    "children": ["product-specification-group#modelSummary", "lead-time"],
+    "props": {
+      "blockClass": ["commercialCode", "commercialCodeLeadMobile"]
+    }
+  },
+  "flex-layout.row#keyFeaturesCarouselMobile": {
+    "title": "[ROW] - Key Features row",
+    "children": [
+      "condition-layout.product#keyFeature1",
+      "condition-layout.product#keyFeature2",
+      "condition-layout.product#keyFeature3",
+      "condition-layout.product#keyFeature4"
+    ],
+    "props": {
+      "blockClass": [
+        "keyFeaturesRow",
+        "keyFeaturesRowCarousel",
+        "keyFeaturesRowCarouselMobile"
+      ],
+      "preserveLayoutOnMobile": true,
+      "colSizing": "auto"
+    }
+  }
+}

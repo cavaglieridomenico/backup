@@ -1,0 +1,130 @@
+{
+  "slider-layout#banner-carousel2": {
+    "title": "[SLIDER] Header Proposition Banner",
+    "props": {
+      "itemsPerPage": {
+        "desktop": 4,
+        "tablet": 4,
+        "phone": 1
+      },
+      "infinite": false,
+      "autoplay": {
+        "timeout": 4000
+      },
+      "showNavigationArrows": "never",
+      "showPaginationDots": "never",
+      "blockClass": "bannerHeaderContainer"
+    },
+    "children": [
+      "flex-layout.row#prima",
+      "flex-layout.row#seconda",
+      "flex-layout.row#terza",
+      "flex-layout.row#quarta"
+    ]
+  },
+
+  "flex-layout.row#prima": {
+    "props": {
+      "blockClass": ["bannerheader", "BorderCenterElements"],
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true,
+      "horizontalAlign": "center",
+      "colSizing": "auto",
+      "href": "/services-exclusifs"
+
+    },
+    "children": ["image#logoBannerHeader1", "rich-text#BannerHeaderText1"]
+  },
+  "image#logoBannerHeader1": {
+    "props": {
+      "src": "assets/bannerHeader/icon1.svg",
+      "width": "24px",
+      "blockClass":"propologo"
+    }
+  },
+  "rich-text#BannerHeaderText1": {
+    "props": {
+      "text": "[Livraison offerte](/services-exclusifs)",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": ["bannerheader", "noLinkEffect"]
+    }
+  },
+  "flex-layout.row#seconda": {
+    "props": {
+      "blockClass": ["bannerheader", "BorderCenterElements"],
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true,
+      "horizontalAlign": "center",
+      "colSizing": "auto"
+    },
+    "children": ["image#logoBannerHeader2", "rich-text#BannerHeaderText2"]
+  },
+  "image#logoBannerHeader2": {
+    "props": {
+      "src": "assets/bannerHeader/icon2.svg",
+      "width": "20px",
+      "blockClass":"propologo"
+
+    }
+  },
+  "rich-text#BannerHeaderText2": {
+    "props": {
+      "text": "[Installation offerte](/services-exclusifs)",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": "bannerheader",
+      "href": "/services-exclusifs"
+    }
+  },
+  "flex-layout.row#terza": {
+    "props": {
+      "blockClass": ["bannerheader", "BorderCenterElements"],
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true,
+      "horizontalAlign": "center",
+      "colSizing": "auto"
+    },
+    "children": ["image#logoBannerHeader3", "rich-text#BannerHeaderText3"]
+  },
+  "image#logoBannerHeader3": {
+    "props": {
+      "src": "assets/bannerHeader/icon3.svg",
+      "width": "28px",
+      "blockClass":"propologo"
+    }
+  },
+  "rich-text#BannerHeaderText3": {
+    "props": {
+      "text": "[Services exclusifs](/services-exclusifs)",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": "bannerheader"
+    }
+  },
+  "flex-layout.row#quarta": {
+    "props": {
+      "blockClass": "bannerheader",
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true,
+      "horizontalAlign": "center",
+      "colSizing": "auto"
+    },
+    "children": ["image#logoBannerHeader4", "rich-text#BannerHeaderText4"]
+  },
+  "image#logoBannerHeader4": {
+    "props": {
+      "src": "assets/bannerHeader/icon4.svg",
+      "width": "20px",
+      "blockClass":"propologo"
+    }
+  },
+  "rich-text#BannerHeaderText4": {
+    "props": {
+      "text": "[Livraison express 48h](/services-exclusifs)",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": "bannerheader"
+    }
+  }
+}

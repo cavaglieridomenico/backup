@@ -1,0 +1,26 @@
+{
+  "store.custom#catalog": {
+    "blocks": ["breadcrumb-two-levels#catalog", "flex-layout.row#catalog-container"]
+  },
+  "rich-text#catalog-title": {
+    "props": {
+      "text": "# Tout l'électroménager"
+    }
+  },
+  "flex-layout.col#catalog": {
+    "children": ["rich-text#catalog-title", "catalog-link"]
+  },
+  "flex-layout.row#catalog-container": {
+    "children": ["flex-layout.col#catalog"],
+    "props": {
+      "blockClass": "catalogContainer"
+    }
+  },
+  "breadcrumb-two-levels#catalog": {
+    "props": {
+      "firstLevelName": "accueil",
+      "secondLevelName": "produits",
+      "showOnMobile": true
+    }
+  }
+}

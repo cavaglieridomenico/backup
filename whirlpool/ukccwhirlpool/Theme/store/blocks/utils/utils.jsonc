@@ -1,0 +1,125 @@
+{
+    "flex-layout.row#breadcrumb-container": {
+        "children": [
+            "breadcrumb-custom"
+        ],
+        "props": {
+            "blockClass": "breadcrumbContainer"
+        }
+    },
+    "flex-layout.row#breadcrumb-containerNoMargin": {
+        "children": [
+            "breadcrumb-custom"
+        ],
+        "props": {
+            "blockClass": "bcContNoMargin"
+        }
+    },
+    "rich-text#test": {
+        "props": {
+            "text": "<-- TEST -->"
+        }
+    },
+    /*----- breadcrumb Vtex -----*/
+    "flex-layout.row#breadCrumbs-theme4": {
+        "title": "[ROW] breadCrumbs Theme",
+        "children": [
+            "link#home",
+            //"image#arrowBread",
+            "rich-text#arrowBread",
+            "experimental__visibility-layout#2level",
+            "experimental__visibility-layout#arrowBread",
+            "experimental__visibility-layout#3level",
+            "experimental__visibility-layout#arrowBread2",
+            "experimental__visibility-layout#3level2"
+        ],
+        "props": {
+            "preserveLayoutOnMobile": true,
+            "fullWidth": true,
+            "blockClass": "breadCustom"
+        }
+    },
+    "link#home": {
+        "props": {
+            "href": "/",
+            "label": "Home",
+            "blockClass": "breadLink"
+        }
+    },
+    "link#2level": {
+        "props": {
+            "href": "/",
+            "label": "2ndlevel",
+            "blockClass": "breadLink"
+        }
+    },
+    "link#3level": {
+        "props": {
+            "href": "/",
+            "label": "Terms & Conditions",
+            "blockClass": [
+                "breadLink",
+                "breadLinkBold"
+            ]
+        }
+    },
+    "rich-text#arrowBread": {
+        "title": "[TEXT] Arrow Bread",
+        "props": {
+            "text": "-",
+            "blockClass": [
+                "arrowBread"
+            ]
+        }
+    },
+    "image#arrowBread": {
+        "props": {
+            "src": "assets/icons/arrowIconBread.svg"
+        }
+    },
+    "experimental__visibility-layout#2level": {
+        "title": "[LAYOUT] breadCrumb  2 level",
+        "props": {
+            "visible": false
+        },
+        "children": [
+            "link#2level"
+        ]
+    },
+    "experimental__visibility-layout#3level": {
+        "title": "[LAYOUT] breadCrumb  3 level",
+        "props": {
+            "visible": false
+        },
+        "children": [
+            "link#3level"
+        ]
+    },
+    "experimental__visibility-layout#3level2": {
+        "title": "[LAYOUT] breadCrumb  Current level",
+        "props": {
+            "visible": true
+        },
+        "children": [
+            "link#3level"
+        ]
+    },
+    "experimental__visibility-layout#arrowBread": {
+        "props": {
+            "visible": false
+        },
+        "children": [
+            //"image#arrowBread",
+            "rich-text#arrowBread"
+        ]
+    },
+    "experimental__visibility-layout#arrowBread2": {
+        "props": {
+            "visible": false
+        },
+        "children": [
+            //"image#arrowBread"
+            "rich-text#arrowBread"
+        ]
+    }
+}

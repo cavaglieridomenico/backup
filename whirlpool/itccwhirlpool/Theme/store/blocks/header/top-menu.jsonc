@@ -1,0 +1,291 @@
+{
+  "vtex.menu@2.x:menu#websites": {
+    "children": [
+      "flex-layout.row#top-menu"
+    ]
+  },
+  "flex-layout.row#top-menu": {
+    "children": [
+      "conditional-login",
+      "menu-item#help",
+      "flex-layout.col#serviceMenuItem",
+      "menu-item#wishlist",
+      "minicart.v2"
+    ],
+    "props": {
+      "blockClass": "topMenuContainer"
+    }
+  },
+  "menu-item#sign-in": {
+    "props": {
+      "id": "menu-item-sign-in",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "blockClass": "top-menu",
+      "itemProps": {
+        "type": "internal",
+        "href": "/account",
+        "noFollow": false,
+        "tagTitle": "Entrer",
+        "text": "Entrer"
+      },
+      "iconProps": {
+        "id": "inf-login",
+        "size": 16,
+        "viewBox": "0 0 16 16"
+      },
+      "iconToTheRight": true
+    }
+  },
+  "menu-item#help": {
+    "props": {
+      "id": "menu-item-help",
+      "type": "custom",
+      "highlight": false,
+      "blockClass": "top-menu",
+      "itemProps": {
+        "type": "internal",
+        "href": "/support",
+        "noFollow": false,
+        "tagTitle": "Support",
+        "text": "Support"
+      },
+      "iconProps": {
+        "id": "inf-info",
+        "size": 16,
+        "viewBox": "0 0 16 16"
+      },
+      "iconToTheRight": true
+    }
+  },
+  "menu-item#help2": {
+    "props": {
+      "id": "menu-item-help2",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Help2",
+        "text": "Help2"
+      }
+    }
+  },
+  "menu-item#service": {
+    "props": {
+      "id": "menu-item-service",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "blockClass": "top-menu",
+      "itemProps": {
+        "type": "internal",
+        "href": "/services",
+        "noFollow": false,
+        "tagTitle": "Services",
+        "text": "Service"
+      },
+      "iconProps": {
+        "id": "inf-settings",
+        "size": 16,
+        "viewBox": "0 0 16 16"
+      },
+      "iconToTheRight": true
+    }
+  },
+  "flex-layout.col#serviceMenuItem": {
+    "children": [
+      "logo#service",
+      "menu-item#serviceNew"
+    ],
+    "props": {
+      "blockClass": "top-menu-item-container"
+    }
+  },
+  "logo#service": {
+    "props": {
+      "title": "Logo",
+      "url": "assets/icons/services-pictobis.png",
+      "width": 16,
+      "height": 16,
+      "blockClass": [
+        "top-menu-item-logo"
+      ],
+      "href": "/services"
+    }
+  },
+  "menu-item#serviceNew": {
+    "props": {
+      "id": "menu-item-service",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "blockClass": "top-menu-service",
+      "itemProps": {
+        "type": "internal",
+        "href": "/services",
+        "noFollow": false,
+        "tagTitle": "Services",
+        "text": "Service"
+      }
+    }
+  },
+  "menu-item#comparison": {
+    "props": {
+      "id": "menu-item-comparison",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "blockClass": "top-menu",
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Сравнение",
+        "text": "Сравнение"
+      },
+      "iconProps": {
+        "id": "inf-stats",
+        "size": 16,
+        "viewBox": "0 0 16 16"
+      },
+      "iconToTheRight": true
+    }
+  },
+  "menu-item#cart": {
+    "props": {
+      "id": "menu-item-cart",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "blockClass": "icon",
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Cart",
+        "text": "Cart"
+      },
+      "iconProps": {
+        "id": "sti-discount",
+        "size": 16,
+        "viewBox": "0 0 16 16"
+      },
+      "iconToTheRight": true
+    }
+  },
+  "vtex.menu@2.x:menu#institutional": {
+    "children": [
+      "link#logoHeaderUkcc"
+    ],
+    "props": {
+      "blockClass": "logoHeader"
+    }
+  },
+  "link#logoHeaderUkcc": {
+    "props": {
+      "href": "/",
+      "blockClass": "logoHeaderLink"
+    },
+    "children": [
+      "condition-layout.binding#conditionalHeaderLogo"
+    ]
+  },
+  "condition-layout.binding#conditionalHeaderLogo": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "bindingId",
+          "arguments": {
+            "id": "8c0ae00c-9903-4189-92d7-2043fbb70eb9"
+          }
+        }
+      ],
+      "Then": "image#logoEpp",
+      "Else": "condition-layout.binding#conditionalHeaderLogoFf"
+    }
+  },
+  "condition-layout.binding#conditionalHeaderLogoFf": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "bindingId",
+          "arguments": {
+            "id": "0a4ac151-c0f1-4d4b-be7d-2a741ba24be8"
+          }
+        }
+      ],
+      "Then": "image#logoFf",
+      "Else": "condition-layout.binding#conditionalHeaderLogoVip"
+    }
+  },
+  "condition-layout.binding#conditionalHeaderLogoVip": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "bindingId",
+          "arguments": {
+            "id": "33164ac5-6a19-4489-9d5c-4d88fb918f95"
+          }
+        }
+      ],
+      "Then": "image#logoVip"
+    }
+  },
+  "image#logoEpp": {
+    "props": {
+      "src": "/arquivos/whr-logo-epp.png",
+      "maxWidth": 200,
+      "blockClass": [
+        "logoFooter",
+        "logo-top-menu"
+      ]
+    }
+  },
+  "image#logoFf": {
+    "props": {
+      "src": "/arquivos/whr-logo-ff.png",
+      "maxWidth": 200,
+      "blockClass": [
+        "logoFooter",
+        "logo-top-menu"
+      ]
+    }
+  },
+  "image#logoVip": {
+    "props": {
+      "src": "/arquivos/whr-logo-vip.png",
+      "maxWidth": 200,
+      "blockClass": [
+        "logoFooter",
+        "logo-top-menu"
+      ]
+    }
+  },
+  "menu-item#whirlpool-website": {
+    "props": {
+      "id": "menu-item-whirlpool-website",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "external",
+        "href": "http://whirlpool.com",
+        "noFollow": false,
+        "tagTitle": "Whirlpool",
+        "text": "Whirlpool"
+      }
+    }
+  },
+  "logo#header": {
+    "props": {
+      "title": "Logo",
+      "href": "/",
+      "url": "assets/logo-header.svg",
+      "blockClass": "logoFooter"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+query getProductInfos($identifier: ProductUniqueIdentifier) {
+  productData(identifier: $identifier) {
+    brand
+    categoryId
+    productName
+    productReference
+    productId
+    linkText
+    properties {
+      name
+      values
+    }
+    items {
+      images {
+        imageId
+      }
+    }
+    items {
+      sellers {
+        commertialOffer {
+          AvailableQuantity
+        }
+      }
+    }
+    category
+    macroCategory
+    totalReviews
+    averageOverallRating
+    secondaryRatingsAverages {
+      Id
+      AverageRating
+    }
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "toggle-layout#bannerTop": {
+    "props": {
+      "visible": true
+    },
+    "children": ["flex-layout.row#bannerTop"]
+  },
+  "flex-layout.row#bannerTop": {
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": "bannerPostilla"
+    },
+    "children": ["flex-layout.col#leftPartTop", "flex-layout.col#rightPartTop"]
+  },
+  "flex-layout.col#leftPartTop": {
+    "props": {
+      "width": "40%",
+      "preventVerticalStretch": true,
+      "blockClass": ["columnPostilla", "columnPostillaBottom"]
+    },
+    "children": [
+      "toggle-layout#logoBannerTop",
+      "toggle-layout#TitleBannerTop",
+      "toggle-layout#BannDescTop",
+      "toggle-layout#ButtonBannerTop",
+      "rich-text#bannerTopPostilla"
+    ]
+  },
+  "toggle-layout#logoBannerTop": {
+    "props": {
+      "visible": true
+    },
+    "children": ["image#LogoBannerTop"]
+  },
+  "toggle-layout#logoBannerTop2": {
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "image#LogoBannerTop2",
+      "rich-text#titltebannertabBannerBlack2",
+      "rich-text#descbannertabBannerBlack2"
+    ]
+  },
+  "toggle-layout#TitleBannerTop": {
+    "props": {
+      "visible": true
+    },
+    "children": ["rich-text#BannTitleTop"]
+  },
+  "toggle-layout#BannDescTop": {
+    "props": {
+      "visible": true
+    },
+    "children": ["rich-text#BannDescTop"]
+  },
+  "toggle-layout#ButtonBannerTop": {
+    "props": {
+      "visible": true
+    },
+    "children": ["link#ButtonBannTop"]
+  },
+  "toggle-layout#bannerTopPostilla": {
+    "props": {
+      "visible": true
+    },
+    "children": ["rich-text#bannerTopPostilla"]
+  },
+  "image#LogoBannerTop": {
+    "props": {
+      "src": "assets/postillaBanner/logoGoogle.jpg",
+      "width": "2rem",
+      "blockClass": "marginBottom"
+    }
+  },
+  "image#LogoBannerTop2": {
+    "props": {
+      "src": "assets/postillaBanner/logoGoogle.jpg",
+      "width": "2rem",
+      "blockClass": ["marginBottom"]
+    }
+  },
+  "flex-layout.col#rightPartTop": {
+    "props": {
+      "width": "60%",
+      "blockClass": "columnPostillaImage"
+    },
+    "children": ["image#bannerTopImage"]
+  },
+  "rich-text#BannTitleTop": {
+    "props": {
+      "text": "# Condizionatori Smart",
+      "blockClass": "titleHBannerPostilla"
+    }
+  },
+  "rich-text#BannDescTop": {
+    "props": {
+      "text": "Imposta il tuo condizionatore da ovunque e in ogni momento, semplicemente utilizzando la tua voce con l'Assistente vocale di Google*.",
+      "blockClass": "descBannerPostilla"
+    }
+  },
+  "link#ButtonBannTop": {
+    "props": {
+      "label": "TESTO BOTTONE",
+      "href": "#",
+      "displayMode": "button",
+      "blockClass": "postillaButton"
+    }
+  },
+  "rich-text#bannerTopPostilla": {
+    "props": {
+      "text": "Google è un marchio registrato di Google LLC.",
+      "blockClass": "postillaBannerPostilla"
+    }
+  },
+  "image#bannerTopImage": {
+    "props": {
+      "src": "assets/placeholders/image-placeholder-16-9.png",
+      "blockClass": "imagePostillaBanner"
+    }
+  }
+}

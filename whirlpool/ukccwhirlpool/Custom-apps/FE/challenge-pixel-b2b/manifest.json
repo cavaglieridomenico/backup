@@ -1,0 +1,29 @@
+{
+  "name": "challenge-pixel-b2b",
+  "vendor": "ukccwhirlpool",
+  "version": "0.0.32",
+  "title": "Challenge Pixel",
+  "description": "Challenge Pixel for B2Bs",
+  "builders": {
+    "store": "0.x",
+    "pixel": "0.x",
+    "docs": "0.x"
+  },
+  "dependencies": {
+    "vtex.pixel-interfaces": "1.x"
+  },
+  "settingsSchema": {
+    "title": "Login configs",
+    "type": "object",
+    "properties": {
+      "urlsToBeSkipped": {
+        "title": "Urls to be skipped from validation",
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

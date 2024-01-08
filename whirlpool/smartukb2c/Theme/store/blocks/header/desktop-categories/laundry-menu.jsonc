@@ -1,0 +1,408 @@
+{
+  "menu-item#laundry" : {
+    "props": {
+      "id": "menu-item-laundry",
+      "orientation": "horizontal",
+      "type": "custom",
+      "highlight": false,
+      "blockClass" : "first-level-category",
+      "itemProps": {
+        "type": "custom",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Laundry",
+        "text": "Laundry"
+      }
+    },
+    "blocks": [ "vtex.menu@2.x:submenu#laundry" ]
+  },
+
+  "vtex.menu@2.x:submenu#laundry" : {
+    "props": {
+      "orientation": "vertical",
+      "placement":"left"
+    },
+    "children": [ 
+      "menu-item#wasmachine",
+      "menu-item#washerdryer",
+      "menu-item#tumbledryer"
+    ]
+  },
+
+  // WASHING MACHINES
+
+  "menu-item#wasmachine": {
+    "props": {
+      "placement": "right",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "noFollow": false,
+        "tagTitle": "wasmachine",
+        "text": "Hotpoint Washing Machine Parts",
+        "href" : "/spare-parts/laundry/washing-machine"
+      }
+    },
+    "blocks": [
+      "vtex.menu@2.x:submenu#wasmachine"
+    ]
+  },
+  "vtex.menu@2.x:submenu#wasmachine": {
+    "props": {
+      "orientation": "vertical",
+      "placement":"right"
+    },
+    "children": [
+        "menu-item#wm_gaskets_and_seals",
+        "menu-item#wm_knobs",
+        "menu-item#wm_drum",
+        "menu-item#wm_belts_and_pulleys",
+        "menu-item#wm_doors",
+        "menu-item#all-wasmachine"
+    ]
+  },
+
+  "menu-item#wm_gaskets_and_seals": {
+    "props": {
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/spare-parts/laundry/washing-machine/gaskets-and-seals",
+        "noFollow": false,
+        "tagTitle": "Washing Machine Gaskets And Seals",
+        "text": "Washing Machine Gaskets And Seals"
+      }
+    }
+  },
+  "menu-item#wm_knobs": {
+    "props": {
+      "type": "custom",
+      
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "noFollow": false,
+        "tagTitle": "Washing Machine Knobs",
+        "text": "Washing Machine Knobs",
+        "href": "/spare-parts/laundry/washing-machine/knobs"
+
+      }
+    }
+  },
+  "menu-item#wm_drum": {
+    "props": {
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "noFollow": false,
+        "tagTitle": "Washing Machine Drum",
+        "text": "Washing Machine Drum",
+        "href": "/spare-parts/laundry/washing-machine/drum"
+      }
+    }
+  },
+  "menu-item#wm_belts_and_pulleys": {
+    "props": {
+      "type": "custom",
+      "blockClass": "dropdownRowMenu",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "noFollow": false,
+        "tagTitle": "Washing Machine Belts and Pulleys",
+        "text": "Washing Machine Belts and Pulleys",
+        "href": "/spare-parts/laundry/washing-machine/belts-and-pulleys"
+
+      }
+    }
+  }, 
+
+  "menu-item#wm_doors": {
+    "props": {
+      "type": "custom",
+      "blockClass": "dropdownRowMenu",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "noFollow": false,
+        "tagTitle": "Doors",
+        "text": "Washing Machine Doors",
+        "href": "/spare-parts/laundry/washing-machine/doors"
+      }
+    }
+  },
+
+  "menu-item#all-wasmachine": {
+    "props": {
+      "type": "category",
+      "blockClass": "dropdownRowMenu",
+      "categoryId": "14",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "noFollow": false,
+        "tagTitle": "Washing Machines",
+        "text" : "See all Hotpoint Wasihing Machine Parts"
+      }
+    }
+  },
+
+  /***   END  WASHING MACHINES  ***/
+
+  /***   BEGIN  WASHER DRYERS  ***/
+  "menu-item#washerdryer" : {
+    "props": {
+        "placement": "right",
+        "type": "custom",
+        "highlight": false,
+        "itemProps": {
+          "type": "internal",
+          "noFollow": false,
+          "tagTitle": "Washer Dryer",
+          "text": "Hotpoint Washer Dryer Parts",
+          "href" : "/spare-parts/laundry/washer-dryer"
+        }
+      },
+      "blocks": [
+        "vtex.menu@2.x:submenu#washerdryer"
+      ]
+  },
+
+  "vtex.menu@2.x:submenu#washerdryer": {
+    "props": {
+      "orientation": "vertical",
+      "placement":"right"
+    },
+    "children": [
+        "menu-item#wd_gaskets_and_seals",
+        "menu-item#wd_knobs",
+        "menu-item#wd_drum",
+        "menu-item#wd_heating_elements",
+        "menu-item#wd_doors",
+        "menu-item#all-washerdryer"
+    ]
+  },
+
+  "menu-item#wd_gaskets_and_seals": {
+    "props": {
+      "type": "custom",
+      "blockClass": "dropdownRowMenu",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "noFollow": false,
+        "tagTitle": "Washer Dryer Gaskets And Seals", 
+        "href":"/spare-parts/laundry/washer-dryer/gaskets-and-seals",
+        "text" : "Washer Dryer Gaskets And Seals"
+      }
+    }
+  },
+
+  "menu-item#wd_knobs": {
+    "props": {
+      "type": "custom",
+      "blockClass": "dropdownRowMenu",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "noFollow": false,
+        "tagTitle": "Washer Dryer Knobs",
+        "href":"/spare-parts/laundry/washer-dryer/gaskets-and-seals",
+        "text": "Washer Dryer Knobs"
+      }
+    }
+  },
+
+  "menu-item#wd_drum": {
+    "props": {
+      "type": "custom",
+      "blockClass": "dropdownRowMenu",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "noFollow": false,
+        "tagTitle": "Washer Dryer Drums",
+        "href": "/spare-parts/laundry/washer-dryer/drums",
+        "text": "Washer Dryer Drums"
+      }
+    }
+  },
+
+  "menu-item#wd_heating_elements": {
+    "props": {
+      "type": "custom",
+      "blockClass": "dropdownRowMenu",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "noFollow": false,
+        "tagTitle": "Washer Dryer Heating Elements",
+        "href": "/spare-parts/laundry/washer-dryer/heating-elements", 
+        "text": "Washer Dryer Heating Elements"
+      }
+    }
+  },
+
+  "menu-item#wd_doors": {
+    "props": {
+      "type": "custom",
+      "blockClass": "dropdownRowMenu",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "noFollow": false,
+        "tagTitle": "Washer Dryer Doors",
+        "href": "/spare-parts/laundry/washer-dryer/doors", 
+        "text": "Washer Dryer Doors"
+      }
+    }
+  },
+
+  "menu-item#all-washerdryer": {
+    "props": {
+      "type": "custom",
+      "blockClass": "dropdownRowMenu",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "noFollow": false,
+        "tagTitle": "Washing Dryers",
+        "text" : "See all Hotpoint Washer Dryer Parts",
+        "href" : "/spare-parts/laundry/washer-dryer/"
+      }
+    }
+  },
+  
+  /***   END  WASHER DRYERS  ***/
+
+  /***   BEGIN  TUMBLE DRYERS  ***/
+
+  "menu-item#tumbledryer" : {
+    "props": {
+        "placement": "right",
+        "type": "custom",
+        "highlight": false,
+        "itemProps": {
+          "type": "internal",
+          "noFollow": false,
+          "tagTitle": "Tumble Dryer",
+          "href" : "/spare-parts/laundry/tumble-dryer",
+          "text" : "Hotpoint Tumble Dryer Parts"
+        }
+      },
+      "blocks": [
+        "vtex.menu@2.x:submenu#tumbledryer"
+      ]
+  },
+
+  "vtex.menu@2.x:submenu#tumbledryer": {
+    "props": {
+      "orientation": "vertical",
+      "placement":"right"
+    },
+    "children": [
+        "menu-item#td_filters",
+        "menu-item#td_hoses_and_pipes",
+        "menu-item#td_knobs",
+        "menu-item#td_pumps",
+        "menu-item#td_heating_elements",
+        "menu-item#all-tumbledryer"
+    ]
+  },
+
+  "menu-item#td_filters": {
+    "props": {
+      "type": "custom",
+      "blockClass": "dropdownRowMenu",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "noFollow": false,
+        "tagTitle": "Tumble Dryer Filters",
+        "text" : "Tumble Dryer Filters", 
+        "href" : "/spare-parts/laundry/tumble-dryer/filters"
+      }
+    }
+  },
+
+  "menu-item#td_hoses_and_pipes": {
+    "props": {
+      "type": "custom",
+      "blockClass": "dropdownRowMenu",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "noFollow": false,
+        "tagTitle": "Tumble Dryer Hoses and Pipes",
+        "text" : "Tumble Dryer Hoses and Pipes", 
+        "href" : "/spare-parts/laundry/tumble-dryer/hoses-and-pipes"
+      }
+    }
+  },
+
+  "menu-item#td_knobs": {
+    "props": {
+      "type": "custom",
+      "blockClass": "dropdownRowMenu",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "noFollow": false,
+        "tagTitle": "Tumble Dryer Knobs",
+        "text" : "Tumble Dryer Knobs", 
+        "href" : "/spare-parts/laundry/tumble-dryer/knobs"
+      }
+    }
+  },
+
+  "menu-item#td_pumps": {
+    "props": {
+      "type": "custom",
+      "blockClass": "dropdownRowMenu",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "noFollow": false,
+        "tagTitle": "Tumble Dryer Pumps",
+        "text" : "Tumble Dryer Pumps", 
+        "href" : "/spare-parts/laundry/tumble-dryer/pumps"
+      }
+    }
+  },
+
+  "menu-item#td_heating_elements": {
+    "props": {
+      "type": "custom",
+      "blockClass": "dropdownRowMenu",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "noFollow": false,
+        "tagTitle": "Tumble Dryer Heating Elements",
+        "text" : "Tumble Dryer Heating Elements", 
+        "href" : "/spare-parts/laundry/tumble-dryer/heating-elements"
+      }
+    }
+  },
+
+  "menu-item#all-tumbledryer": {
+    "props": {
+      "type": "custom",
+      "blockClass": "dropdownRowMenu",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "noFollow": false,
+        "tagTitle": "Tumble Dryers",
+        "text" : "See All Tumble Dryers Parts",
+        "href" : "/spare-parts/laundry/tumble-dryer"
+      }
+    }
+  }
+
+  /***   END  TUMBLE DRYERS  ***/
+
+}

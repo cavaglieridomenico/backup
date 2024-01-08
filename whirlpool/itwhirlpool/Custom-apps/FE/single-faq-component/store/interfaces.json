@@ -1,0 +1,32 @@
+{
+  "single-faq-page": {
+    "component": "SingleFaqPage"
+  },
+  "single-faq-tab": {
+    "component": "SingleFaqQuestion"
+  },
+  "faq-layout": {
+    "component": "ContainerFaq",
+    "composition": "children",
+    "content": {
+      "properties": {
+        "visibility": {
+          "type": "array",
+          "title": "Visibilità",
+          "canAdd": false,
+          "items": {
+            "type": "object",
+            "properties": {
+              "show": {
+                "title": "Mostra il componente",
+                "description": "Permette di nascondere la relativa faq",
+                "type": "boolean",
+                "default": true
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "definitions": {
+    "StoreLink": {
+      "title": "Link",
+      "type": "object",
+      "required": [
+        "href",
+        "label"
+      ],
+      "properties": {
+        "label": {
+          "title": "admin/editor.link.label.title",
+          "description": "admin/editor.link.label.description",
+          "$ref": "app:vtex.native-types#/definitions/text"
+        },
+        "href": {
+          "title": "Link",
+          "type": "string",
+          "description": "admin/editor.link.href.description"
+        },
+        "target": {
+          "title": "admin/editor.link.target.title",
+          "type": "string",
+          "description": "admin/editor.link.target.description"
+        },
+        "isAnalyticsEvent": {
+          "title": "admin/editor.link.isAnalyticsEvent.title",
+          "type": "boolean",
+          "default": false
+        },
+        "analyticsEventName": {
+          "title": "admin/editor.link.analyticsEventName.title",
+          "description": "admin/editor.link.analyticsEventName.description",
+          "type": "string",
+          "default": null
+        },
+        "analyticsType": {
+          "title": "admin/editor.link.analyticsType.title",
+          "description": "admin/editor.link.analyticsType.description",
+          "type": "string",
+          "default": null
+        },
+        "isPrevent": {
+          "title": "admin/editor.link.isPrevent.title",
+          "type": "boolean",
+          "default": true
+        },
+        "clickArea": {
+          "title": "admin/editor.link.clickArea.title",
+          "description": "admin/editor.link.clickArea.description",
+          "type": "string",
+          "default": null
+        },
+        "checkpoint": {
+          "title": "admin/editor.link.checkpoint.title",
+          "description": "admin/editor.link.checkpoint.description",
+          "type": "string",
+          "default": null
+        }
+      }
+    },
+    "ProductLink": {
+      "title": "admin/editor.product-link.title",
+      "$ref": "app:plwhirlpool.store-link-custom#/definitions/StoreLink"
+    }
+  }
+}

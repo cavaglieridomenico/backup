@@ -1,0 +1,484 @@
+{
+  "footer": {
+    "blocks": [
+      "footer-layout.desktop",
+      "footer-layout.mobile"
+    ]
+  },
+  "footer-layout.desktop": {
+    "children": [
+      // "newsletter-popup#footer",
+      "flex-layout.row#spaceFooter",
+      "flex-layout.row#footer-1-desktop"
+    ]
+  },
+  /* NEWSLETTER BUTTON */
+  "flex-layout.row#newsletter-row": {
+    "title": "[BOTTOM] Row - Newsletter Row",
+    "children": [
+      "rich-text#newsletter-text",
+      "newsletter-button"
+    ],
+    "props": {
+      "blockClass": "newsletterRow"
+    }
+  },
+  "rich-text#newsletter-text": {
+    "title": "Rich Text - Newsletter Row",
+    "props": {
+      "text": "#### Odbierz 50 zł rabatu",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": "newsletterText"
+    }
+  },
+  "newsletter-button": {
+    "props": {
+      "linkUrl": "/newsletter",
+      "buttonText": "Zapisz się na nasz newsletter",
+      "pixelEventName": "newsletterLink"
+    }
+  },
+  /*________________________*/
+  "flex-layout.row#spaceFooter": {
+    "props": {
+      "blockClass": [
+        "rowSpace",
+        "bgWhite"
+      ]
+    }
+  },
+  "newsletter-popup#footer": {
+    "props": {
+      "textDescription": "Zyskaj kod promocyjny z rabatem 10%",
+      "button": true,
+      "textButton": "Zapisz się na nasz newsletter"
+    },
+    "children": [
+      "newletter-form"
+    ]
+  },
+  "newletter-form": {
+    "props": {
+      "title": "Zapisz się na nasz newsletter",
+      "description": "Zyskaj kod promocyjny z rabatem 10%",
+      "textButton": "Potwierdzam"
+    }
+  },
+  "rich-text#titleNewsletterFooter": {
+    "props": {
+      "text": "#### Abonnez-vous à la newsletter!"
+    }
+  },
+  "flex-layout.row#footer-1-desktop": {
+    "children": [
+      "flex-layout.col#social",
+      "vtex.menu@2.x:menu#products",
+      "vtex.menu@2.x:menu#clients",
+      "vtex.menu@2.x:menu#policy",
+      "vtex.menu@2.x:menu#company"
+    ],
+    "props": {
+      "blockClass": "footerRow",
+      "paddingTop": 6,
+      "paddingBottom": 3
+    }
+  },
+  "flex-layout.col#social": {
+    "children": [
+      "logo#footer",
+      "rich-text#footer",
+      "social-networks",
+      "flex-layout.row#AllPaymentOptions"
+    ]
+  },
+  "rich-text#footer": {
+    "props": {
+      "width": "50%",
+      "textAlignment": "left",
+      "text": "Whirlpool est une marque déposée de Whirlpool USA. Tous contenus © 2004 Whirlpool. Tous droits réservés",
+      "blockClass": "textFooter"
+    }
+  },
+  "logo#footer": {
+    "props": {
+      "title": "Logo",
+      "href": "/",
+      "url": "assets/logo.png",
+      "blockClass": "logoFooter"
+    }
+  },
+  "social-networks": {
+    "props": {
+      "socialNetworks": [
+        {
+          "name": "Facebook",
+          "url": "https://www.facebook.com/WhirlpoolPL/",
+          "target": "_blank"
+        },
+        {
+          "name": "Instagram",
+          "url": "https://www.instagram.com/whirlpoolpolska",
+          "target": "_blank"
+        },
+        {
+          "name": "Youtube",
+          "url": "https://www.youtube.com/channel/UCeTzExI6JERlLciV9hi59WA",
+          "target": "_blank"
+        }
+      ]
+    }
+  },
+  "flex-layout.row#AllPaymentOptions": {
+    "props": {
+      "blockClass": [
+        "paymentOptions"
+      ]
+    },
+    "children": [
+      "image#payment-methods"
+      // "image#payment-methods-ppp",
+      // "image#payment-methods-blik"
+    ]
+  },
+  "image#payment-methods": {
+    "props": {
+      "blockClass": "imagePayment",
+      "horizontalAlign": "center",
+      "src": "assets/footer/payment-logos.png"
+    }
+  },
+  "image#payment-methods-ppp": {
+    "props": {
+      "blockClass": "imagePayment",
+      "horizontalAlign": "center",
+      "src": "assets/footer/przelewy24_logo.png"
+    }
+  },
+  "image#payment-methods-blik": {
+    "props": {
+      "blockClass": "imagePayment",
+      "horizontalAlign": "center",
+      "src": "assets/footer/blikImage.png"
+    }
+  },
+  "footer-layout.mobile": {
+    "children": [
+      // "newsletter-popup#footer",
+      // "flex-layout.row#1-footer-mobile",
+      // "flex-layout.row#2-footer-mobile",
+      "flex-layout.row#0-footer-mobile",
+      "flex-layout.row#footer-accordion",
+      "flex-layout.row#3-footer-mobile",
+      "flex-layout.row#3b-footer-mobile",
+      "flex-layout.row#4-footer-mobile"
+    ]
+  },
+  "flex-layout.row#1-footer-mobile": {
+    "props": {
+      "blockClass": [
+        "flex",
+        "centered",
+        "floating50"
+      ]
+    },
+    "children": [
+      "flex-layout.col#footer-1-mobile",
+      "flex-layout.col#footer-2-mobile"
+    ]
+  },
+  "flex-layout.col#footer-1-mobile": {
+    "props": {
+      "blockClass": "flex50",
+      "width": "grown"
+    },
+    "children": [
+      "vtex.menu@2.x:menu#products"
+    ]
+  },
+  "flex-layout.col#footer-2-mobile": {
+    "props": {
+      "blockClass": "flex50",
+      "width": "grown"
+    },
+    "children": [
+      "vtex.menu@2.x:menu#clients"
+    ]
+  },
+  "flex-layout.row#2-footer-mobile": {
+    "props": {
+      "blockClass": [
+        "flex",
+        "centered",
+        "floating50"
+      ]
+    },
+    "children": [
+      "flex-layout.col#footer-3-mobile",
+      "flex-layout.col#footer-4-mobile"
+    ]
+  },
+  "flex-layout.col#footer-3-mobile": {
+    "props": {
+      "blockClass": "flex50",
+      "width": "grown"
+    },
+    "children": [
+      "vtex.menu@2.x:menu#policy"
+    ]
+  },
+  "flex-layout.col#footer-4-mobile": {
+    "props": {
+      "blockClass": "flex50",
+      "width": "grown"
+    },
+    "children": [
+      "vtex.menu@2.x:menu#company"
+    ]
+  },
+  "flex-layout.row#3-footer-mobile": {
+    "props": {
+      "horizontalAlign": "center",
+      "blockClass": "width100"
+    },
+    "children": [
+      "logo#footerMobile"
+    ]
+  },
+  "flex-layout.row#3b-footer-mobile": {
+    "props": {
+      "horizontalAlign": "center",
+      "blockClass": "width100"
+    },
+    "children": [
+      "rich-text#footer-mobile"
+    ]
+  },
+  "rich-text#footer-mobile": {
+    "props": {
+      "fullWidth": "true",
+      "textAlignment": "CENTER",
+      "text": "Whirlpool est une marque déposée de Whirlpool USA. Tous contenus © 2004 Whirlpool. Tous droits réservés",
+      "blockClass": "textFooter mobile"
+    }
+  },
+  "flex-layout.row#4-footer-mobile": {
+    "props": {
+      "horizontalAlign": "center",
+      "blockClass": "width100"
+    },
+    "children": [
+      "social-networks#mobile"
+    ]
+  },
+  "logo#footerMobile": {
+    "props": {
+      "blockClass": "footerMobile",
+      "title": "Logo",
+      "href": "/",
+      "url": "assets/logo.png"
+    }
+  },
+  "social-networks#mobile": {
+    "props": {
+      "blockClass": "footerMobile",
+      "socialNetworks": [
+        {
+          "name": "Facebook",
+          "url": "https://www.facebook.com/WhirlpoolPL/",
+          "target": "_blank"
+        },
+        {
+          "name": "Instagram",
+          "url": "https://www.instagram.com/whirlpoolpolska",
+          "target": "_blank"
+        },
+        {
+          "name": "Youtube",
+          "url": "https://www.youtube.com/channel/UCeTzExI6JERlLciV9hi59WA",
+          "target": "_blank"
+        }
+      ]
+    }
+  },
+  "flex-layout.row#0-footer-mobile": {
+    "props": {
+      "horizontalAlign": "center",
+      "blockClass": "width100"
+    },
+    "children": ["flex-layout.row#AllPaymentOptions"]
+  },
+  "flex-layout.row#footer-accordion": {
+    "props": {
+      "blockClass": [
+        "disclosureFooter"
+      ]
+    },
+    "children": [
+      "disclosure-layout#products-mobile",
+      "disclosure-layout#services-mobile",
+      "disclosure-layout#policy-mobile",
+      "disclosure-layout#enterprise-mobile"
+    ]
+  },
+  "disclosure-layout#products-mobile": {
+    "children": [
+      "disclosure-trigger#products-mobile",
+      "disclosure-content#products-mobile"
+    ]
+  },
+  "disclosure-layout#services-mobile": {
+    "children": [
+      "disclosure-trigger#services-mobile",
+      "disclosure-content#services-mobile"
+    ]
+  },
+  "disclosure-layout#policy-mobile": {
+    "children": [
+      "disclosure-trigger#policy-mobile",
+      "disclosure-content#policy-mobile"
+    ]
+  },
+  "disclosure-layout#enterprise-mobile": {
+    "children": [
+      "disclosure-trigger#enterprise-mobile",
+      "disclosure-content#enterprise-mobile"
+    ]
+  },
+  "disclosure-trigger#products-mobile": {
+    "children": [
+      "rich-text#title-products-mobile",
+      "disclosure-state-indicator#footer"
+    ],
+    "props": {
+      "blockClass": [
+        "ButtonContainer",
+        "triggerFooter"
+      ]
+    }
+  },
+  "disclosure-trigger#services-mobile": {
+    "children": [
+      "rich-text#title-service-mobile",
+      "disclosure-state-indicator#footer"
+    ],
+    "props": {
+      "blockClass": [
+        "ButtonContainer",
+        "triggerFooter"
+      ]
+    }
+  },
+  "disclosure-trigger#policy-mobile": {
+    "children": [
+      "rich-text#title-policy-mobile",
+      "disclosure-state-indicator#footer"
+    ],
+    "props": {
+      "blockClass": [
+        "ButtonContainer",
+        "triggerFooter"
+      ]
+    }
+  },
+  "disclosure-trigger#enterprise-mobile": {
+    "children": [
+      "rich-text#title-enterprise-mobile",
+      "disclosure-state-indicator#footer"
+    ],
+    "props": {
+      "blockClass": [
+        "ButtonContainer",
+        "triggerFooter"
+      ]
+    }
+  },
+  "disclosure-content#products-mobile": {
+    "props": {
+      "blockClass": [
+        "relative",
+        "footerAccordionProducts"
+      ]
+    },
+    "children": [
+      "vtex.menu@2.x:menu#products-footer-mobile"
+    ]
+  },
+  "disclosure-content#services-mobile": {
+    "props": {
+      "blockClass": [
+        "relative",
+        "footerAccordionServices"
+      ]
+    },
+    "children": [
+      "vtex.menu@2.x:menu#clients-mobile"
+    ]
+  },
+  "disclosure-content#policy-mobile": {
+    "props": {
+      "blockClass": [
+        "relative",
+        "footerAccordionPolicy"
+      ]
+    },
+    "children": [
+      "vtex.menu@2.x:menu#policy-mobile"
+    ]
+  },
+  "disclosure-content#enterprise-mobile": {
+    "props": {
+      "blockClass": [
+        "relative",
+        "footerAccordionEnterprice"
+      ]
+    },
+    "children": [
+      "vtex.menu@2.x:menu#enterprise-mobile"
+    ]
+  },
+  "rich-text#title-products-mobile": {
+    "props": {
+      "text": "PRODUKTY",
+      "blockClass": "titoloAccordion"
+    }
+  },
+  "rich-text#title-service-mobile": {
+    "props": {
+      "text": "OBSŁUGA KLIENTA",
+      "blockClass": "titoloAccordion"
+    }
+  },
+  "rich-text#title-policy-mobile": {
+    "props": {
+      "text": "NASZE ZASADY",
+      "blockClass": "titoloAccordion"
+    }
+  },
+  "rich-text#title-enterprise-mobile": {
+    "props": {
+      "text": "NASZA FIRMA",
+      "blockClass": "titoloAccordion"
+    }
+  },
+  "disclosure-state-indicator#footer": {
+    "props": {
+      "Show": "image#PlusIcon",
+      "Hide": "image#MinusIcon"
+    }
+  },
+  "image#PlusIcon": {
+    "props": {
+      "src": "assets/iconaArrow.svg",
+      "blockClass": "PlusIcon",
+      "width": "24px"
+    }
+  },
+  "image#MinusIcon": {
+    "props": {
+      "src": "assets/iconaArrow.svg",
+      "blockClass": "MinusIcon",
+      "width": "24px"
+    }
+  }
+}

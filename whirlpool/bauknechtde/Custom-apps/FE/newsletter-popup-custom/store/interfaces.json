@@ -1,0 +1,105 @@
+{
+  "newsletter-popup": {
+    "component": "NewsLetterPopup",
+    "composition": "children"
+  },
+  "newletter-form": {
+    "component": "NewsLetterForm",
+    "composition": "children",
+    "content": {
+      "properties": {
+        "isLandingPage": {
+          "title": "isLandingPage?",
+          "description": "",
+          "default": "",
+          "type": "boolean"
+        },
+        "linkPrivacy": {
+          "title": "Link to privacy page",
+          "description": "url privacy page",
+          "default": "/pagine/informativa-sulla-privacy",
+          "type": "string"
+        },
+        "linkThankYouPage": {
+          "title": "Link to Thank You Page",
+          "description": "url Thank You Page",
+          "default": "/newsletter-thank-you",
+          "type": "string"
+        },
+        "popupTitle": {
+          "title": "Title of the Popup",
+          "description": "Set the title of the Popup",
+          "default": "",
+          "type": "string"
+        },
+        "popupDescriptionBold": {
+          "title": "Description 1st Paragraph of the Popup",
+          "description": "Set the bold paragraph of the Popup",
+          "default": "",
+          "type": "string"
+        },
+        "popupDescription": {
+          "title": "Description 2nd Paragraph of the Popup",
+          "description": "Set the paragraph of the Popup",
+          "default": "",
+          "$ref": "app:vtex.native-types#/definitions/richText"
+        },
+        "alreadyRegisteredForNewsletterUserLabel": {
+          "title": "Label to be displayed when the user is already registered to the newsletter",
+          "description": "Label to be displayed when the user is already registered to the newsletter",
+          "default": "Are you already registered!",
+          "type": "string"
+        },
+        "alreadyRegisteredUserLabel": {
+          "title": "Label to be displayed when the user is already registered to the site",
+          "description": "Label to be displayed when the user is registered to the site but not to the newsletter",
+          "default": "Your email is already registered in our systems. You can change your preferences on the MyAccount page, by accessing the site with your credentials. Thank you.",
+          "type": "string"
+        },
+        "emailPlaceholder": {
+          "title": "Email Placeholder",
+          "description": "This is the Email placholder label",
+          "default": "Email",
+          "type": "string"
+        },
+        "namePlaceholder": {
+          "title": "Name Placeholder",
+          "description": "This is the Name placholder label",
+          "default": "Name",
+          "type": "string"
+        },
+        "surnamePlaceholder": {
+          "title": "Name Placeholder",
+          "description": "This is the Surname placholder label",
+          "default": "Surname",
+          "type": "string"
+        },
+        "campaignName": {
+          "title": "Campaign",
+          "description": "Set the campaign name (remember to make it in upper case ex: MY_CAMPAIGN)",
+          "type": "array",
+          "items": {
+            "properties": {
+              "item": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "promotionText": {
+          "title": "Promotion Text",
+          "description": "Set the text of the promotion that will be displayed at the bottom of the form",
+          "default": "",
+          "type": "string",
+          "widget": {
+            "ui:widget": "textarea"
+          }
+        }
+      }
+    }
+  },
+  "newletter-thank-you": {
+    "component": "ThankYou",
+    "composition": "children"
+  }
+}

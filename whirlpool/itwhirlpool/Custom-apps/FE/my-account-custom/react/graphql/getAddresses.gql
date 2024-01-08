@@ -1,0 +1,21 @@
+query Addresses @context(scope: "private") {
+  profile {
+    cacheId
+    addresses: address {
+      addressId: id
+      addressType
+      addressName
+      city
+      complement
+      country
+      neighborhood
+      number
+      postalCode
+      geoCoordinates
+      receiverName
+      reference
+      state
+      street
+    }
+  }
+}

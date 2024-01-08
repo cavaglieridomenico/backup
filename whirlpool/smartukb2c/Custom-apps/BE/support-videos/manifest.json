@@ -1,0 +1,50 @@
+{
+  "name": "support-videos",
+  "vendor": "smartukb2cqa",
+  "version": "0.0.3",
+  "title": "Support Videos",
+  "description": "App to Support Videos",
+  "categories": [],
+  "dependencies": {},
+  "builders": {
+    "graphql": "1.x",
+    "node": "6.x",
+    "docs": "0.x"
+  },
+  "scripts": {
+    "prereleasy": "bash lint.sh"
+  },
+  "credentialType": "absolute",
+  "policies": [
+    {
+      "name": "ADMIN_DS"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "api.vtex.com",
+        "path": "/dataentities/*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "portal.vtexcommercestable.com.br",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.myvtex.com",
+        "path": "*"
+      }
+    }
+  ],
+  "settingsSchema": {
+    "title": "Video Support",
+    "type": "object",
+    "properties": {}
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

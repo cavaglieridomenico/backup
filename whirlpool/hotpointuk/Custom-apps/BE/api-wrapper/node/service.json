@@ -1,0 +1,102 @@
+{
+  "memory": 512,
+  "ttl": 30,
+  "timeout": 60,
+  "minReplicas": 2,
+  "maxReplicas": 50,
+  "workers": 1,
+  "events": {
+    "newOrder": {
+      "sender": "vtex.orders-broadcast",
+      "topics": [
+        "order-created"
+      ]
+    }
+  },
+  "routes": {
+    "getsku": {
+      "path": "/_v/wrapper/api/catalog_system/sku/stockkeepingunitbyid/:id",
+      "public": true
+    },
+    "getorder": {
+      "path": "/_v/wrapper/api/oms/orders/billingaddress/:id",
+      "public": true
+    },
+    "getproductspec": {
+      "path": "/_v/wrapper/api/catalog_system/products/:id/specification",
+      "public": true
+    },
+    "productbyrefid": {
+      "path": "/_v/wrapper/api/catalog_system/products/productgetbyrefid/:refid",
+      "public": true
+    },
+    "getcategory": {
+      "path": "/_v/wrapper/api/catalog/category/:id",
+      "public": true
+    },
+    "newsletteroptin": {
+      "path": "/_v/wrapper/api/user/newsletteroptin",
+      "public": true
+    },
+    "userinfo": {
+      "path": "/_v/wrapper/api/user/userinfo",
+      "public": true
+    },
+    "userinfobyemail": {
+      "path": "/_v/wrapper/api/user/email/userinfo",
+      "public": true
+    },
+    "hasorders": {
+      "path": "/_v/wrapper/api/user/hasorders",
+      "public": true
+    },
+    "productcategory": {
+      "path": "/_v/wrapper/api/product/:id/category",
+      "public": true
+    },
+    "user": {
+      "path": "/_v/wrapper/api/user",
+      "public": true
+    },
+    "getbrands": {
+      "path": "/_v/wrapper/api/catalog_system/brand/list",
+      "public": true
+    },
+    "sfmcrecommend": {
+      "path": "/_v/wrapper/api/sfmc/recommendations",
+      "public": true
+    },
+    "tradeplace": {
+      "path": "/_v/wrapper/api/tradeplace/product/availability",
+      "public": true
+    },
+    "ptv": {
+      "path": "/_v/wrapper/api/ptv/:postalCode",
+      "public": true
+    },
+    "isServedZipCode": {
+      "path": "/_v/wrapper/api/catalog/service/installation/:postalCodeInput",
+      "public": true
+    },    
+    "additionalServicesContents": {
+      "path": "/_v/wrapper/api/additional-services/contents",
+      "public": true
+    },
+    "getOrderShipmentCustomData": {
+      "path": "/_v/wrapper/api/orders/:orderId/customData",
+      "public": true
+    },
+    "getOrderHDXCustomData": {
+      "path": "/_v/wrapper/api/orders/:orderId/hdxCustomData",
+      "public": true
+    },
+    "getPromoInfoBySkuId": {
+      "path": "/v2/wrapper/api/catalog/promo",
+      "public": true
+    },
+    "signUpForCampaign": {
+      "path": "/_v/wrapper/api/campaigns/signup",
+      "public": true
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "store.custom#thank-you-page": {
+    "blocks": [
+      "flex-layout.row#thank-you-page-title-container",
+      "newletter-thank-you"
+    ]
+  },
+  "flex-layout.row#thank-you-page-title-container": {
+    "props": {
+      "blockClass": "TopNewsletter-page"
+    },
+    "children": ["rich-text#thank-you-page-text-title"]
+  },
+  "rich-text#thank-you-page-text-title": {
+    "props": {
+      "blockClass": "titleNewsletterPage",
+      "text": "text test",
+      "textPosition": "LEFT"
+    }
+  },
+  "newletter-thank-you": {
+    "children": ["link#thank-you-page"]
+  },
+  "link#thank-you-page": {
+    "props": {
+      "href": "/",
+      "label": "Zurück zur Startseite",
+      "displayMode": "button",
+      "blockClass": "thank-you-page-link"
+    }
+  }
+}

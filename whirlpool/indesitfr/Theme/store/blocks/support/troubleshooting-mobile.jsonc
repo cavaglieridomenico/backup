@@ -1,0 +1,43 @@
+{
+  "responsive-layout.mobile#trouble-shooting-mobile": {
+    "children": ["flex-layout.row#trouble-shooting-container-maxi-mobile"]
+  },
+  "flex-layout.row#trouble-shooting-container-maxi-mobile": {
+    "children": ["flex-layout.col#trouble-shooting-container-maxi-mobile"],
+    "props": {
+      "blockClass": "trouble-shooting-container-maxi-mobile"
+    }
+  },
+  /* MAXI CONTAINER OF ALL ELEMENT IN THE PAGE */
+  "flex-layout.col#trouble-shooting-container-maxi-mobile": {
+    "children": [
+      "breadcrumb-custom#trouble-shooting-mobile",
+      "rich-text#trouble-shooting-title-mobile",
+      "rich-text#trouble-shooting-desc-mobile",
+      "trouble-shooting-page#mobile"
+    ],
+    "props": {
+      "blockClass": "trouble-shooting-container-maxi-mobile"
+    }
+  },
+  /* BREADCRUMB SUPPORT */
+  "breadcrumb-custom#trouble-shooting-mobile": {
+    "props": {
+      /* "blockClass": "containerBreadcrumbs", */
+      "currentPage": "Résolution en ligne"
+    }
+  },
+  "rich-text#trouble-shooting-title-mobile": {
+    "props": {
+      "text": "Problèmes et solutions",
+      "blockClass": "ts-title-mobile"
+    }
+  },
+  "rich-text#trouble-shooting-desc-mobile": {
+    "props": {
+      "text": "Questions et réponses pour vous aider à résoudre un problème avec votre appareil",
+      "blockClass": "ts-desc-mobile"
+    }
+  },
+  "trouble-shooting-page#mobile": {}
+}

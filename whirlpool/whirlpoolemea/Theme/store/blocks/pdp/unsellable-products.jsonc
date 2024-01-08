@@ -1,0 +1,133 @@
+{
+  "store.custom#unsellable-products": {
+    "blocks": [
+      "responsive-layout.mobile#unsellable-products",
+      "responsive-layout.desktop#unsellable-products"
+    ]
+  },
+  "unsellable-products": {
+    "children": [
+      "flex-layout.row#product-name"
+    ]
+  },
+  "responsive-layout.desktop#unsellable-products": {
+    "children": ["unsellable-products#desktop"]
+  },
+  "responsive-layout.mobile#unsellable-products": {
+    "children": ["unsellable-products#mobile"]
+  },
+  "unsellable-products#desktop": {
+    "children": [
+      "flex-layout.row#product-breadcrumb",
+      "flex-layout.row#product-name",
+      "flex-layout.row#product-main",
+      "condition-layout.product#bannerPromoWithBadge1",
+      "condition-layout.product#bannerPromoWithBadge3",
+      "condition-layout.product#isAccessorioIntestazioneTab",
+      "condition-layout.product#isAccessorioTab",
+      "condition-layout.product#similars",
+      "condition-layout.product#suggestions",
+      "condition-layout.product#showtogether",
+      "product-comparison-drawer"
+    ]
+  },
+  "flex-layout.row#productPreServizi-unsellable": {
+    "props": {
+      "blockClass": "preServizi"
+    },
+    "children": [
+      "condition-layout.product#etichetta-image-pre-unsellable",
+      "condition-layout.product#rating"
+    ]
+  },
+  "condition-layout.product#etichetta-image-pre-unsellable": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "energy-label"
+          }
+        }
+      ],
+      "Then": "flex-layout.row#old-label-pre-unsellable",
+      "Else": "flex-layout.row#new-label-pre-unsellable" 
+    }
+  },
+  "flex-layout.row#new-label-pre-unsellable": {
+    "children": [
+      "image-from-specification#EtichettaEnergeticaNew-pre-unsellable"
+    ]
+  },
+  "flex-layout.row#old-label-pre-unsellable": {
+    "children": ["image-from-specification#EtichettaEnergetica-pre-unsellable"]
+  },
+  "image-from-specification#EtichettaEnergeticaNew-pre-unsellable": {
+    "props": {
+      "specificationName": "EnergyLogo_image",
+      "imageLink": "Specification.new-energy-label",
+      "labelWithHref": true,
+      "target": "_blank"
+    }
+  },
+  "image-from-specification#EtichettaEnergetica-pre-unsellable": {
+    "props": {
+      "specificationName": "EnergyLogo_image",
+      "imageLink": "Specification.energy-label",
+      "labelWithHref": true,
+      "target": "_blank"
+    }
+  },
+  "unsellable-products#mobile": {
+    "children": ["flex-layout.row#product-main-mobile", 
+      "condition-layout.product#isAccessorioTab"
+    ]
+  },
+  "condition-layout.product#sticky-discontinuedMobile-unsellable": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "showPrice",
+            "value": "true"
+          }
+        }
+      ],
+      "Then": "condition-layout.product#sticky-discontinued-with-priceMobile-unsellable"
+    }
+  },
+  "condition-layout.product#sticky-discontinued-with-priceMobile-unsellable": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "isDiscontinued",
+            "value": "false"
+          }
+        }
+      ],
+      "Then": "flex-layout.row#pdpSticky"
+    }
+  },
+  "flex-layout.col#single-col-unsellable": {
+    "props": {
+      "blockClass": "product-desc-info",
+      "preventVerticalStretch": true,
+      "rowGap": 0
+    },
+    "children": [
+      "condition-layout.product#discontinued",
+      "flex-layout.row#productTypePDP",
+      "stack-layout#imagesPDP",
+      "flex-layout.row#product-name",
+      "flex-layout.row#specificationsRowMobile",
+      "flex-layout.row#productPreServiziMobile",
+      "condition-layout.product#isAvailableButton",
+      "condition-layout.product#servizi",
+      "condition-layout.product#premium-banner",
+      "condition-layout.product#isAccessoriosku-selector"
+    ]
+  }
+}

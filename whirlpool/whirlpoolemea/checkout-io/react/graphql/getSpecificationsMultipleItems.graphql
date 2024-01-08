@@ -1,0 +1,16 @@
+query getSpecificationsMultipleItems(
+	$productIds: [String]
+	$specificationNames: [String]
+) {
+	specificationsMultipleItems(
+		productIds: $productIds
+		specificationNames: $specificationNames
+	) {
+		productId
+		specifications {
+			Id
+			Name
+			Value
+		}
+	}
+}

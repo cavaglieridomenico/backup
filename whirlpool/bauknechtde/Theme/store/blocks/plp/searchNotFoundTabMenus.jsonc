@@ -1,0 +1,672 @@
+{
+  "tab-layout#searchNotFound": {
+    "title": "[TAB-LAYOUT] - MID - Search Not Found Tab Layout",
+    "children": ["tab-list#searchNotFound", "tab-content#searchNotFound"],
+    "props": {
+      "blockClass": "searchNotFound"
+    }
+  },
+  /* TAB-LIST */
+  "tab-list#searchNotFound": {
+    "title": "[TAB-LIST] - MID - Products tab",
+    "children": [
+      "tab-list.item#searchNotFoundProductCategories",
+      "tab-list.item#searchNotFoundCustomerService"
+    ],
+    "props": {
+      "blockClass": ["tabList", "searchNotFound"]
+    }
+  },
+  "tab-list.item#searchNotFoundProductCategories": {
+    "title": "[TAB-LIST] - MID - Product Categories Head",
+    "props": {
+      "tabId": "1",
+      "label": "Hausgeräte",
+      "blockClass": ["tabItem", "tabItemSearchNotFound"],
+      "defaultActiveTab": true
+    }
+  },
+  "tab-list.item#searchNotFoundCustomerService": {
+    "title": "[TAB-LIST] - MID - Customer Service Head",
+    "props": {
+      "tabId": "2",
+      "label": "Kundencenter",
+      "blockClass": ["tabItem", "tabItemSearchNotFound"]
+    }
+  },
+  /* ------------------------------------------------ */
+
+  /* TAB-CONTENT */
+  "tab-content#searchNotFound": {
+    "title": "[TAB-CONTENT] - MID - Tab contents",
+    "children": [
+      "tab-content.item#searchNotFoundProductCategories",
+      "tab-content.item#searchNotFoundCustomerService"
+    ]
+  },
+  "tab-content.item#searchNotFoundProductCategories": {
+    "title": "[TAB-CONTENT] - MID - Product Categories Menu",
+    "children": ["flex-layout.row#searchNotFoundProductCategoriesMenu"],
+    "props": {
+      "tabId": "1"
+    }
+  },
+  "tab-content.item#searchNotFoundCustomerService": {
+    "title": "[TAB-CONTENT] - MID - Customer Service Menu",
+    "children": ["flex-layout.row#searchNotFoundCustomerServicesMenu"],
+    "props": {
+      "tabId": "2"
+    }
+  },
+  /* ------------------------------------------------ */
+
+  /* PRODUCT CATEGORIES MENU */
+  "flex-layout.row#searchNotFoundProductCategoriesMenu": {
+    "title": "[ROW] - [MID] - Search Not Found Product Categories Menu Container",
+    "children": [
+      "link#searchNotFoundItemLavatrici",
+      "link#searchNotFoundItemAsciugatrici",
+      "link#searchNotFoundItemLavasciuga",
+      "link#searchNotFoundItemCombinati",
+      "link#searchNotFoundItemFrigoriferi",
+      "link#searchNotFoundItemCongelatori",
+      "link#searchNotFoundItemForni",
+      "link#searchNotFoundItemBundlesForniCucine",
+      "link#searchNotFoundItemMicroonde",
+      "link#searchNotFoundItemPianiCottura",
+      "link#searchNotFoundItemCappe",
+      "link#searchNotFoundItemCucine",
+      "link#searchNotFoundItemElettrodomesticiCompatti",
+      "link#searchNotFoundItemLavastoviglie",
+      "link#searchNotFoundItemCondizionatori"
+    ],
+    "props": {
+      "blockClass": "searchNotFoundProductsMenu"
+    }
+  },
+  "link#searchNotFoundItemLavatrici": {
+    "title": "[LINK] - [MID] - Search Not Found Washing Machine Item Link",
+    "children": [
+      "flex-layout.col#searchNotFoundItemLavatrici"
+    ],
+    "props": {
+      "blockClass": "searchNotFoundProductItem",
+      "href": "/hausgeraete/waschen-trocknen/waschmaschinen"
+    }
+  },
+  "flex-layout.col#searchNotFoundItemLavatrici": {
+    "title": "[COL] - [MID] - Search Not Found Washing Machine Item Container",
+    "children": [
+      "image#searchNotFoundItemLavatrici",
+      "rich-text#searchNotFoundItemLavatrici"
+    ],
+    "props": {
+      "blockClass": "searchNotFoundProductItem"
+    }
+  },
+  "image#searchNotFoundItemLavatrici": {
+    "title": "[IMAGE] - [MID] - Search Not Found Washing Machine Item Image",
+    "props": {
+      "blockClass": ["searchNotFoundProductItem"],
+      "src": "assets/ph-square.jpg"
+    }
+  },
+  "rich-text#searchNotFoundItemLavatrici": {
+    "title": "[TEXT] - [MID] - Search Not Found Washing Machine Item Text",
+    "props": {
+      "text": "waschmaschinen",
+      "blockClass": "searchNotFoundProductItem"
+    }
+  },
+  "link#searchNotFoundItemAsciugatrici": {
+    "title": "[LINK] - [MID] - Search Not Found Clothes Dryer Item Link",
+    "children": [
+      "flex-layout.col#searchNotFoundItemAsciugatrici"
+    ],
+    "props": {
+      "blockClass": "searchNotFoundProductItem",
+      "href": "/hausgeraete/waschen-trocknen/waeschetrockner"
+    }
+  },
+  "flex-layout.col#searchNotFoundItemAsciugatrici": {
+    "title": "[COL] - [MID] - Search Not Found Clothes Dryer Item Container",
+    "children": [
+      "image#searchNotFoundItemAsciugatrici",
+      "rich-text#searchNotFoundItemAsciugatrici"
+    ],
+    "props": {
+      "blockClass": "searchNotFoundProductItem"
+    }
+  },
+  "image#searchNotFoundItemAsciugatrici": {
+    "title": "[IMAGE] - [MID] - Search Not Found Clothes Dryer Item Image",
+    "props": {
+      "blockClass": ["searchNotFoundProductItem"],
+      "src": "assets/ph-square.jpg"
+    }
+  },
+  "rich-text#searchNotFoundItemAsciugatrici": {
+    "title": "[TEXT] - [MID] - Search Not Found Clothes Dryer Item Text",
+    "props": {
+      "text": "wäschetrockner",
+      "blockClass": "searchNotFoundProductItem"
+    }
+  },
+  "link#searchNotFoundItemLavasciuga": {
+    "title": "[LINK] - [MID] - Search Not Found Washer Dryer Item Link",
+    "children": [
+      "flex-layout.col#searchNotFoundItemLavasciuga"
+    ],
+    "props": {
+      "blockClass": "searchNotFoundProductItem",
+      "href": "/hausgeraete/waschen-trocknen/waschtrockner"
+    }
+  },
+  "flex-layout.col#searchNotFoundItemLavasciuga": {
+    "title": "[COL] - [MID] - Search Not Found Washer Dryer Item Container",
+    "children": [
+      "image#searchNotFoundItemLavasciuga",
+      "rich-text#searchNotFoundItemLavasciuga"
+    ],
+    "props": {
+      "blockClass": "searchNotFoundProductItem"
+    }
+  },
+  "image#searchNotFoundItemLavasciuga": {
+    "title": "[IMAGE] - [MID] - Search Not Found Washer Dryer Item Image",
+    "props": {
+      "blockClass": ["searchNotFoundProductItem"],
+      "src": "assets/ph-square.jpg"
+    }
+  },
+  "rich-text#searchNotFoundItemLavasciuga": {
+    "title": "[TEXT] - [MID] - Search Not Found Washer Dryer Item Text",
+    "props": {
+      "text": "waschtrockner",
+      "blockClass": "searchNotFoundProductItem"
+    }
+  },
+  "link#searchNotFoundItemFrigoriferi": {
+    "title": "[LINK] - [MID] - Search Not Found Refrigerator Item Link",
+    "children": [
+      "flex-layout.col#searchNotFoundItemFrigoriferi"
+    ],
+    "props": {
+      "blockClass": "searchNotFoundProductItem",
+      "href": "/hausgeraete/kuehlen-gefrieren/kuehlschraenke"
+    }
+  },
+  "flex-layout.col#searchNotFoundItemFrigoriferi": {
+    "title": "[COL] - [MID] - Search Not Found Refrigerator Item Container",
+    "children": [
+      "image#searchNotFoundItemFrigoriferi",
+      "rich-text#searchNotFoundItemFrigoriferi"
+    ],
+    "props": {
+      "blockClass": "searchNotFoundProductItem"
+    }
+  },
+  "image#searchNotFoundItemFrigoriferi": {
+    "title": "[IMAGE] - [MID] - Search Not Found Refrigerator Item Image",
+    "props": {
+      "blockClass": ["searchNotFoundProductItem"],
+      "src": "assets/ph-square.jpg"
+    }
+  },
+  "rich-text#searchNotFoundItemFrigoriferi": {
+    "title": "[TEXT] - [MID] - Search Not Found Refrigerator Item Text",
+    "props": {
+      "text": "Kühlschränke",
+      "blockClass": "searchNotFoundProductItem"
+    }
+  },
+  "link#searchNotFoundItemCongelatori": {
+    "title": "[LINK] - [MID] - Search Not Found Freezer Item Link",
+    "children": [
+      "flex-layout.col#searchNotFoundItemCongelatori"
+    ],
+    "props": {
+      "blockClass": "searchNotFoundProductItem",
+      "href": "/hausgeraete/kuehlen-gefrieren/gefriergeraete"
+    }
+  },
+  "flex-layout.col#searchNotFoundItemCongelatori": {
+    "title": "[COL] - [MID] - Search Not Found Freezer Item Container",
+    "children": [
+      "image#searchNotFoundItemCongelatori",
+      "rich-text#searchNotFoundItemCongelatori"
+    ],
+    "props": {
+      "blockClass": "searchNotFoundProductItem"
+    }
+  },
+  "image#searchNotFoundItemCongelatori": {
+    "title": "[IMAGE] - [MID] - Search Not Found Freezer Item Image",
+    "props": {
+      "blockClass": ["searchNotFoundProductItem"],
+      "src": "assets/ph-square.jpg"
+    }
+  },
+  "rich-text#searchNotFoundItemCongelatori": {
+    "title": "[TEXT] - [MID] - Search Not Found Freezer Item Text",
+    "props": {
+      "text": "Gefriergeräte",
+      "blockClass": "searchNotFoundProductItem"
+    }
+  },
+  "link#searchNotFoundItemCombinati": {
+    "title": "[LINK] - [MID] - Search Not Found Fridge-Freezer Item Link",
+    "children": [
+      "flex-layout.col#searchNotFoundItemCombinati"
+    ],
+    "props": {
+      "blockClass": "searchNotFoundProductItem",
+      "href": "/hausgeraete/kuehlen-gefrieren/kuehl-gefrierkombinationen"
+    }
+  },
+  "flex-layout.col#searchNotFoundItemCombinati": {
+    "title": "[COL] - [MID] - Search Not Found Fridge-Freezer Item Container",
+    "children": [
+      "image#searchNotFoundItemCombinati",
+      "rich-text#searchNotFoundItemCombinati"
+    ],
+    "props": {
+      "blockClass": "searchNotFoundProductItem"
+    }
+  },
+  "image#searchNotFoundItemCombinati": {
+    "title": "[IMAGE] - [MID] - Search Not Found Fridge-Freezer Item Image",
+    "props": {
+      "blockClass": ["searchNotFoundProductItem"],
+      "src": "assets/ph-square.jpg"
+    }
+  },
+  "rich-text#searchNotFoundItemCombinati": {
+    "title": "[TEXT] - [MID] - Search Not Found Fridge-Freezer Item Text",
+    "props": {
+      "text": "Kühl-Gefrierkombinationen",
+      "blockClass": "searchNotFoundProductItem"
+    }
+  },
+  "link#searchNotFoundItemForni": {
+    "title": "[LINK] - [MID] - Search Not Found Oven Item Link",
+    "children": [
+      "flex-layout.col#searchNotFoundItemForni"
+    ],
+    "props": {
+      "blockClass": "searchNotFoundProductItem",
+      "href": "/hausgeraete/kochen-backen/herde-backoefen"
+    }
+  },
+  "flex-layout.col#searchNotFoundItemForni": {
+    "title": "[COL] - [MID] - Search Not Found Oven Item Container",
+    "children": [
+      "image#searchNotFoundItemForni",
+      "rich-text#searchNotFoundItemForni"
+    ],
+    "props": {
+      "blockClass": "searchNotFoundProductItem"
+    }
+  },
+  "image#searchNotFoundItemForni": {
+    "title": "[IMAGE] - [MID] - Search Not Found Oven Item Image",
+    "props": {
+      "blockClass": ["searchNotFoundProductItem"],
+      "src": "assets/ph-square.jpg"
+    }
+  },
+  "rich-text#searchNotFoundItemForni": {
+    "title": "[TEXT] - [MID] - Search Not Found Oven Item Text",
+    "props": {
+      "text": "Herde & Backöfen",
+      "blockClass": "searchNotFoundProductItem"
+    }
+  },
+  "link#searchNotFoundItemBundlesForniCucine": {
+    "title": "[LINK] - [MID] - Search Not Found Bundle Ovens and Hobs Item Link",
+    "children": [
+      "flex-layout.col#searchNotFoundItemBundlesForniCucine"
+    ],
+    "props": {
+      "blockClass": "searchNotFoundProductItem",
+      "href": "/landings/herd-und-backofensets"
+    }
+  },
+  "flex-layout.col#searchNotFoundItemBundlesForniCucine": {
+    "title": "[COL] - [MID] - Search Not Found Bundle Ovens and Hobs Item Container",
+    "children": [
+      "image#searchNotFoundItemBundlesForniCucine",
+      "rich-text#searchNotFoundItemBundlesForniCucine"
+    ],
+    "props": {
+      "blockClass": "searchNotFoundProductItem"
+    }
+  },
+  "image#searchNotFoundItemBundlesForniCucine": {
+    "title": "[IMAGE] - [MID] - Search Not Found Bundle Ovens and Hobs Item Image",
+    "props": {
+      "blockClass": ["searchNotFoundProductItem"],
+      "src": "assets/ph-square.jpg"
+    }
+  },
+  "rich-text#searchNotFoundItemBundlesForniCucine": {
+    "title": "[TEXT] - [MID] - Search Not Found Bundle Ovens and Hobs Item Text",
+    "props": {
+      "text": "Herd- & Backofen Sets",
+      "blockClass": "searchNotFoundProductItem"
+    }
+  },
+  "link#searchNotFoundItemMicroonde": {
+    "title": "[LINK] - [MID] - Search Not Found Microwave Item Link",
+    "children": [
+      "flex-layout.col#searchNotFoundItemMicroonde"
+    ],
+    "props": {
+      "blockClass": "searchNotFoundProductItem",
+      "href": "/hausgeraete/kochen-backen/mikrowellen"
+    }
+  },
+  "flex-layout.col#searchNotFoundItemMicroonde": {
+    "title": "[COL] - [MID] - Search Not Found Microwave Item Container",
+    "children": [
+      "image#searchNotFoundItemMicroonde",
+      "rich-text#searchNotFoundItemMicroonde"
+    ],
+    "props": {
+      "blockClass": "searchNotFoundProductItem"
+    }
+  },
+  "image#searchNotFoundItemMicroonde": {
+    "title": "[IMAGE] - [MID] - Search Not Found Microwave Item Image",
+    "props": {
+      "blockClass": ["searchNotFoundProductItem"],
+      "src": "assets/ph-square.jpg"
+    }
+  },
+  "rich-text#searchNotFoundItemMicroonde": {
+    "title": "[TEXT] - [MID] - Search Not Found Microwave Item Text",
+    "props": {
+      "text": "Mikrowellen",
+      "blockClass": "searchNotFoundProductItem"
+    }
+  },
+  "link#searchNotFoundItemPianiCottura": {
+    "title": "[LINK] - [MID] - Search Not Found Hob Item Link",
+    "children": [
+      "flex-layout.col#searchNotFoundItemPianiCottura"
+    ],
+    "props": {
+      "blockClass": "searchNotFoundProductItem",
+      "href": "/hausgeraete/kochen-backen/kochfelder"
+    }
+  },
+  "flex-layout.col#searchNotFoundItemPianiCottura": {
+    "title": "[COL] - [MID] - Search Not Found Hob Item Container",
+    "children": [
+      "image#searchNotFoundItemPianiCottura",
+      "rich-text#searchNotFoundItemPianiCottura"
+    ],
+    "props": {
+      "blockClass": "searchNotFoundProductItem"
+    }
+  },
+  "image#searchNotFoundItemPianiCottura": {
+    "title": "[IMAGE] - [MID] - Search Not Found Hob Item Image",
+    "props": {
+      "blockClass": ["searchNotFoundProductItem"],
+      "src": "assets/ph-square.jpg"
+    }
+  },
+  "rich-text#searchNotFoundItemPianiCottura": {
+    "title": "[TEXT] - [MID] - Search Not Found Hob Item Text",
+    "props": {
+      "text": "Kochfelder",
+      "blockClass": "searchNotFoundProductItem"
+    }
+  },
+  "link#searchNotFoundItemCappe": {
+    "title": "[LINK] - [MID] - Search Not Found Extractor Hood Item Link",
+    "children": [
+      "flex-layout.col#searchNotFoundItemCappe"
+    ],
+    "props": {
+      "blockClass": "searchNotFoundProductItem",
+      "href": "/hausgeraete/kochen-backen/dunstabzugshauben"
+    }
+  },
+  "flex-layout.col#searchNotFoundItemCappe": {
+    "title": "[COL] - [MID] - Search Not Found Extractor Hood Item Container",
+    "children": [
+      "image#searchNotFoundItemCappe",
+      "rich-text#searchNotFoundItemCappe"
+    ],
+    "props": {
+      "blockClass": "searchNotFoundProductItem"
+    }
+  },
+  "image#searchNotFoundItemCappe": {
+    "title": "[IMAGE] - [MID] - Search Not Found Extractor Hood Item Image",
+    "props": {
+      "blockClass": ["searchNotFoundProductItem"],
+      "src": "assets/ph-square.jpg"
+    }
+  },
+  "rich-text#searchNotFoundItemCappe": {
+    "title": "[TEXT] - [MID] - Search Not Found Extractor Hood Item Text",
+    "props": {
+      "text": "Dunstabzugshauben",
+      "blockClass": "searchNotFoundProductItem"
+    }
+  },
+  "link#searchNotFoundItemCucine": {
+    "title": "[LINK] - [MID] - Search Not Found Stove Item Link",
+    "children": [
+      "flex-layout.col#searchNotFoundItemCucine"
+    ],
+    "props": {
+      "blockClass": "searchNotFoundProductItem",
+      "href": "/hausgeraete/kochen-backen/standherde"
+    }
+  },
+  "flex-layout.col#searchNotFoundItemCucine": {
+    "title": "[COL] - [MID] - Search Not Found Stove Item Container",
+    "children": [
+      "image#searchNotFoundItemCucine",
+      "rich-text#searchNotFoundItemCucine"
+    ],
+    "props": {
+      "blockClass": "searchNotFoundProductItem"
+    }
+  },
+  "image#searchNotFoundItemCucine": {
+    "title": "[IMAGE] - [MID] - Search Not Found Stove Item Image",
+    "props": {
+      "blockClass": ["searchNotFoundProductItem"],
+      "src": "assets/ph-square.jpg"
+    }
+  },
+  "rich-text#searchNotFoundItemCucine": {
+    "title": "[TEXT] - [MID] - Search Not Found Stove Item Text",
+    "props": {
+      "text": "Standherde",
+      "blockClass": "searchNotFoundProductItem"
+    }
+  },
+  "link#searchNotFoundItemElettrodomesticiCompatti": {
+    "title": "[LINK] - [MID] - Search Not Found Compact Built-In Devices Item Link",
+    "children": [
+      "flex-layout.col#searchNotFoundItemElettrodomesticiCompatti"
+    ],
+    "props": {
+      "blockClass": "searchNotFoundProductItem",
+      "href": "/hausgeraete/kochen-backen/einbau-kompaktgeraete"
+    }
+  },
+  "flex-layout.col#searchNotFoundItemElettrodomesticiCompatti": {
+    "title": "[COL] - [MID] - Search Not Found Compact Built-In Devices Item Container",
+    "children": [
+      "image#searchNotFoundItemElettrodomesticiCompatti",
+      "rich-text#searchNotFoundItemElettrodomesticiCompatti"
+    ],
+    "props": {
+      "blockClass": "searchNotFoundProductItem"
+    }
+  },
+  "image#searchNotFoundItemElettrodomesticiCompatti": {
+    "title": "[IMAGE] - [MID] - Search Not Found Compact Built-In Devices Item Image",
+    "props": {
+      "blockClass": ["searchNotFoundProductItem"],
+      "src": "assets/ph-square.jpg"
+    }
+  },
+  "rich-text#searchNotFoundItemElettrodomesticiCompatti": {
+    "title": "[TEXT] - [MID] - Search Not Found Compact Built-In Devices Item Text",
+    "props": {
+      "text": "Einbau-Kompaktgeräte",
+      "blockClass": "searchNotFoundProductItem"
+    }
+  },
+  "link#searchNotFoundItemLavastoviglie": {
+    "title": "[LINK] - [MID] - Search Not Found Dishwasher Item Link",
+    "children": [
+      "flex-layout.col#searchNotFoundItemLavastoviglie"
+    ],
+    "props": {
+      "blockClass": "searchNotFoundProductItem",
+      "href": "/hausgeraete/geschirrspueler/geschirrspueler"
+    }
+  },
+  "flex-layout.col#searchNotFoundItemLavastoviglie": {
+    "title": "[COL] - [MID] - Search Not Found Dishwasher Item Container",
+    "children": [
+      "image#searchNotFoundItemLavastoviglie",
+      "rich-text#searchNotFoundItemLavastoviglie"
+    ],
+    "props": {
+      "blockClass": "searchNotFoundProductItem"
+    }
+  },
+  "image#searchNotFoundItemLavastoviglie": {
+    "title": "[IMAGE] - [MID] - Search Not Found Dishwasher Item Image",
+    "props": {
+      "blockClass": ["searchNotFoundProductItem"],
+      "src": "assets/ph-square.jpg"
+    }
+  },
+  "rich-text#searchNotFoundItemLavastoviglie": {
+    "title": "[TEXT] - [MID] - Search Not Found Dishwasher Item Text",
+    "props": {
+      "text": "Geschirrspüler",
+      "blockClass": "searchNotFoundProductItem"
+    }
+  },
+  "link#searchNotFoundItemCondizionatori": {
+    "title": "[LINK] - [MID] - Search Not Found Air Conditioner Item Link",
+    "children": [
+      "flex-layout.col#searchNotFoundItemCondizionatori"
+    ],
+    "props": {
+      "blockClass": "searchNotFoundProductItem",
+      "href": "/hausgeraete/klimaanlagen/klimaanlagen"
+    }
+  },
+  "flex-layout.col#searchNotFoundItemCondizionatori": {
+    "title": "[COL] - [MID] - Search Not Found Air Conditioner Item Container",
+    "children": [
+      "image#searchNotFoundItemCondizionatori",
+      "rich-text#searchNotFoundItemCondizionatori"
+    ],
+    "props": {
+      "blockClass": "searchNotFoundProductItem"
+    }
+  },
+  "image#searchNotFoundItemCondizionatori": {
+    "title": "[IMAGE] - [MID] - Search Not Found Air Conditioner Item Image",
+    "props": {
+      "blockClass": ["searchNotFoundProductItem"],
+      "src": "assets/ph-square.jpg"
+    }
+  },
+  "rich-text#searchNotFoundItemCondizionatori": {
+    "title": "[TEXT] - [MID] - Search Not Found Air Conditioner Item Text",
+    "props": {
+      "text": "Klimaanlagen",
+      "blockClass": "searchNotFoundProductItem"
+    }
+  },
+  /* - END OF PRODUCT CATEGORIES MENU - */
+
+  /* CUSTOMER SERVICE MENU */
+  "flex-layout.row#searchNotFoundCustomerServicesMenu": {
+    "title": "[ROW] - [MID] - Search Not Found Product Categories Menu Container",
+    "children": [
+      "rich-text#searchNotFoundItemCustomerService",
+      "rich-text#searchNotFoundItemManuali",
+      "rich-text#searchNotFoundItemRicambiOriginali",
+      "rich-text#searchNotFoundItemGaranzia",
+      "rich-text#searchNotFoundItemRiparazione",
+      "rich-text#searchNotFoundItemContatti",
+      "rich-text#searchNotFoundItemFAQ",
+      "rich-text#searchNotFoundItemCorrezioneErrore"
+    ],
+    "props": {
+      "blockClass": "searchNotFoundServiceMenu"
+    }
+  },
+  "rich-text#searchNotFoundItemCustomerService": {
+    "title": "[TEXT] - [MID] - Search Not Found Customer Service Item Text",
+    "props": {
+      "text": "[Kundencenter](/kundencenter)",
+      "blockClass": "searchNotFoundServiceItem"
+    }
+  },
+  "rich-text#searchNotFoundItemManuali": {
+    "title": "[TEXT] - [MID] - Search Not Found Manuals Item Text",
+    "props": {
+      "text": "[Bedienungsanleitungen](/kundencenter/bedienungsanleitungen)",
+      "blockClass": "searchNotFoundServiceItem"
+    }
+  },
+  "rich-text#searchNotFoundItemRicambiOriginali": {
+    "title": "[TEXT] - [MID] - Search Not Found Spare Parts Item Text",
+    "props": {
+      "text": "[Ersatzteile](/kundencenter/ersatzteile)",
+      "blockClass": "searchNotFoundServiceItem"
+    }
+  },
+  "rich-text#searchNotFoundItemGaranzia": {
+    "title": "[TEXT] - [MID] - Search Not Found Warranty Item Text",
+    "props": {
+      "text": "[Garantien](/kundencenter/garantien)",
+      "blockClass": "searchNotFoundServiceItem"
+    }
+  },
+  "rich-text#searchNotFoundItemRiparazione": {
+    "title": "[TEXT] - [MID] - Search Not Found Repair Item Text",
+    "props": {
+      "text": "[Termin buchen](/kundencenter/buchen-sie-einen-reparaturtermin)",
+      "blockClass": "searchNotFoundServiceItem"
+    }
+  },
+  "rich-text#searchNotFoundItemContatti": {
+    "title": "[TEXT] - [MID] - Search Not Found Contacts Item Text",
+    "props": {
+      "text": "[Kontakt](/kundencenter/kontakt)",
+      "blockClass": "searchNotFoundServiceItem"
+    }
+  },
+  "rich-text#searchNotFoundItemFAQ": {
+    "title": "[TEXT] - [MID] - Search Not Found FAQ Item Text",
+    "props": {
+      "text": "[FAQ](/kundencenter/haeufige-fragen)",
+      "blockClass": "searchNotFoundServiceItem"
+    }
+  },
+  "rich-text#searchNotFoundItemCorrezioneErrore": {
+    "title": "[TEXT] - [MID] - Search Not Found Error Fixing Item Text",
+    "props": {
+      "text": "[Fehler beheben](/kundencenter/fehlerbehebung)",
+      "blockClass": "searchNotFoundServiceItem"
+    }
+  }
+}

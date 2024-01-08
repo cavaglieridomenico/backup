@@ -1,0 +1,224 @@
+/* PRE ORDER PAGE */
+.wrapper--stickyMenu {
+  max-width: 122rem;
+  margin: auto;
+}
+@media only screen and (max-width: 1024px) {
+  .wrapper--stickyMenu {
+    height: unset !important;
+  }
+  .wrapper--stickyMenuButton {
+    opacity: 0;
+    height: 0 !important;
+  }
+  .wrapper--stickyMenuButton--stuck {
+    opacity: 1;
+    height: 100%;
+  }
+  .wrapper--stickyMenuButton--stuck .container--stickyMenuButton {
+    display: block;
+    bottom: 0;
+    top: unset !important;
+  }
+  .wrapper--stickyMenuButton--stuck
+    :global(.vtex-store-components-3-x-container) {
+    padding: 0;
+  }
+  .wrapper--stickyMenuButton--stuck
+    :global(.vtex-store-components-3-x-container) {
+    padding: 0;
+  }
+}
+/* -------------------- */
+.wrapper--stickyButton .container--stickyButton {
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: hidden;
+}
+.wrapper--oldSearchBar {
+  display: none;
+}
+/* .wrapper--newSearchBar{
+  display: none;
+}  */
+.container--oldSearchBar :global(.vtex-minicart-2-x-minicartWrapperContainer) {
+  position: relative;
+  bottom: 0rem;
+}
+.wrapper--stuck .container--stickyButton {
+  background: #f9f9f9;
+  padding: 1rem 0rem 1rem 0rem;
+  opacity: 1;
+  visibility: visible;
+  z-index: 3 !important;
+}
+.container--stickyButton :global(.vtex-button) {
+  margin: 1.25rem 3rem;
+}
+.container--stickyButton :global(.vtex-store-components-3-x-imageElement) {
+  width: 6rem;
+}
+.wrapper--stickyButton {
+  height: 50px !important;
+  min-width: auto;
+  position: absolute !important;
+  left: 0;
+  max-width: 100%;
+}
+.wrapper--stickyCardBottom {
+  visibility: hidden;
+  position: absolute !important;
+}
+:global(.vtex-sticky-layout-0-x-wrapper--stuck)
+  :global(.vtex-flex-layout-0-x-flexColChild--supportoCardBottom)
+  :global(.vtex-rich-text-0-x-paragraph--colonnaSupportoCard) {
+  display: none;
+  flex-direction: row;
+}
+:global(.vtex-sticky-layout-0-x-wrapper--stuck)
+  :global(.vtex-flex-layout-0-x-flexRowContent--supportoCardsBottom) {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  justify-content: space-between;
+  background-color: #f6f6f6;
+}
+:global(.vtex-sticky-layout-0-x-wrapper--stuck)
+  :global(.vtex-flex-layout-0-x-flexCol--supportoCard) {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly !important;
+  padding: 0;
+  margin-top: 2rem;
+}
+:global(.vtex-sticky-layout-0-x-wrapper--stuck)
+  :global(.vtex-flex-layout-0-x-flexRow--colonnaSupportoCardBottom) {
+  height: auto;
+}
+:global(.vtex-sticky-layout-0-x-wrapper--stuck)
+  :global(.vtex-flex-layout-0-x-stretchChildrenWidth) {
+  margin: 0;
+  /* width: 20% !important; */
+}
+:global(.vtex-sticky-layout-0-x-wrapper--stuck)
+  :global(.vtex-slider-layout-0-x-sliderLayoutContainer--carousel) {
+  background-color: #f9f9f9 !important;
+  margin-bottom: 0;
+  /* width: 20% !important; */
+}
+:global(.vtex-sticky-layout-0-x-wrapper--stuck)
+  :global(.vtex-slider-layout-0-x-sliderTrackContainer--carousel) {
+  max-width: 100%;
+}
+.wrapper--stuck .container--stickyCardBottom {
+  visibility: visible;
+}
+
+.wrapper--stuck .container--stickyButton {
+  top: 93px !important;
+  max-width: 96rem;
+  margin: auto;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  padding-top: 1rem;
+}
+/* .container--stickyScrollingBanner {
+  left: unset;
+  right: unset;
+  z-index: 99;
+}
+.wrapper--stickyScrollingBanner--stuck .container--stickyScrollingBanner {
+  width: 29.8%;
+  box-shadow: none !important;
+  height: 100vh;
+  background-color: #f9f9f9;
+} */
+.container--stickyMenu {
+  z-index: 998;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 1200px) and (min-width: 1000px) {
+  .wrapper--stuck .container--stickyButton {
+    top: 120px !important;
+  }
+}
+@media only screen and (min-width: 1024px),
+  (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .wrapper--stuck .container--stickyButton {
+    top: 120px !important;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 600px) {
+  .container--stickyButton :global(.vtex-button) {
+    margin: unset;
+  }
+}
+
+@media only screen and (max-width: 1024px),
+  (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .wrapper--stickyButton {
+    z-index: 999999;
+    height: 0 !important;
+  }
+  .wrapper--stuck .container--stickyButton {
+    bottom: 0px !important;
+    top: unset !important;
+    width: 100%;
+  }
+  :global(.vtex-flex-layout-0-x-flexColChild--EtichettaEnergeticaNew) {
+    display: none;
+  }
+  .wrapper--stickyCardBottom {
+    display: none;
+  }
+  .container--stickyCardBottom {
+    display: none;
+  }
+  .flexRowContent--stickyPDPMenu {
+    display: none !important;
+  }
+  .container--stickyButton
+    :global(.vtex-flex-layout-0-x-flexRowContent--sticky) {
+    display: flex;
+    transform: scale(0.8);
+  }
+  .container--stickyButton :global(.vtex-button) {
+    margin: auto;
+  }
+  .wrapper--stuck .container--stickyButton {
+    background: #505050;
+  }
+  .wrapper--newSearchBar :global(.vtex-minicart-2-x-minicartWrapperContainer) {
+    position: relative;
+    bottom: 0rem;
+  }
+}
+/* @media only screen and (max-width: 640px) {
+  .container--stickyScrollingBanner {
+    position: relative;
+  }
+  .wrapper--stickyScrollingBanner {
+    height: unset !important;
+  }
+  .wrapper--stickyScrollingBanner--stuck .container--stickyScrollingBanner {
+  width: unset;
+  box-shadow: none !important;
+  height: unset;
+  background-color: unset;
+  top: 0 !important;
+}
+} */
+@media only screen and (max-width: 1024px) {
+  .wrapper--stickyMenu--stuck .container--stickyMenu {
+    top: 94px !important;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .wrapper--stickyMenu--stuck .container--stickyMenu {
+    top: 94px !important;
+  }
+}

@@ -1,0 +1,933 @@
+{
+  "header": {
+    "title": "Header",
+    "blocks": [
+      "header-layout.desktop",
+      "header-layout.mobile"
+    ]
+  },
+  "header.full": {
+    "title": "Header",
+    "blocks": [
+      "header-layout.desktop",
+      "header-layout.mobile"
+    ]
+  },
+  "header-layout.desktop": {
+    "title": "Header Desktop",
+    "children": [
+      //"sticky-layout#desktop",
+      "wia-canonical-fix",
+      "experimental__visibility-layout#popup-home",
+      "sticky-layout#desktop-newSearchBar",
+      "slider-layout#banner-carousel",
+      "newsletter-popup#header_new"
+    ]
+  },
+  "experimental__visibility-layout#popup-home": {
+    "title": "Toggle layout Desktop - Stripe Banner (Homepage)",
+    "props": {
+      "visible": false
+    },
+    "children": ["popup-custom#home"]
+  },
+  "popup-custom#home": {
+    "props": {
+      "blockClass": "popupHome"
+    },
+    "children": ["image#popup-home", "rich-text#popup-home", "analytics-wrapper#popup-home"]
+  },
+  "image#popup-home": {
+    "title": "Icona dello Stripe - Pop Up Banner",
+    "props": {
+      "blockClass": "popupHome",
+      "alt": "icon of stripe",
+      "src": "assets/account-icon.svg",
+      "width": 24,
+      "height": 24
+    }
+  },
+  "rich-text#popup-home": {
+    "title": "Testo dello Stripe - Pop Up Banner",
+    "props": {
+      "blockClass": "popupHome",
+      "text": "TESTO DI PROVA DELLO STRIPE - POP UP CUSTOM IN HOMEPAGE",
+      "textAlignment": "LEFT",
+      "textPosition": "CENTER"
+    }
+  },
+  "analytics-wrapper#popup-home": {
+    "title": "[Analytics] CTA dello Stripe",
+    "props": {
+      "isSlider": false,
+      "isLazy": false,
+      "propsAnalytics": {
+        "analyticsProperties": "provide",
+        "nameEvent": "stripeBanner_clickCTA",
+        "name": "data",
+        "data": [
+          {
+            "title": "section",
+            "value": "Homepage"
+          }
+        ]
+      },
+      "isView": true
+    },
+    "children": ["link#popup-home"]
+  },
+  "link#popup-home": {
+    "title": "CTA dello Stripe - Pop Up Banner",
+    "props": {
+      "blockClass": "popupHome",
+      "label": "Scopri di più",
+      "href": "#",
+      "displayMode": "button",
+      "buttonProps": {
+        "variant": "primary",
+        "size": "small"
+      },
+      "isPrevent": false
+    }
+  },
+  "newsletter-popup#header_new": {
+    "title": "Newsletter Popup shown automatically",
+    "props": {
+      "time": 0.25, // default time is 1 = 60 sec -> 60 / 4 = 15 res
+      "campaignName": [
+        {
+          "item": "popup_HP_promo_freexprdel",
+          "title": "popup_HP_promo_freexprdel"
+        },
+        {
+          "item": "popup_PDP_promo_freexprdel"
+        },
+        {
+          "item": "popup_PLP_promo_freexprdel"
+        },
+        {
+          "item": "myAcc_promo_freexprdel"
+        },
+        {
+          "item": "checkout_promo_freexprdel"
+        },
+        {
+          "item": "fb_promo_freexprdel"
+        },
+        {
+          "item": "form_HP_promo_sweepstake"
+        },
+        {
+          "item": "form_PDP_promo_sweepstake"
+        },
+        {
+          "item": "form_PLP_promo_sweepstake"
+        },
+        {
+          "item": "popup_HP_promo_sweepstake"
+        },
+        {
+          "item": "popup_PDP_promo_sweepstake"
+        },
+        {
+          "item": "checkout_promo_sweepstake"
+        },
+        {
+          "item": "myAcc_promo_sweepstake"
+        },
+        {
+          "item": "fb_promo_sweepstake"
+        },
+        {
+          "item": "popup_PLP_promo_sweepstake"
+        },
+        {
+          "item": "form_HP_brand"
+        },
+        {
+          "item": "form_PDP_brand"
+        },
+        {
+          "item": "form_Content_brand"
+        },
+        {
+          "item": "form_PLP_brand"
+        },
+        {
+          "item": "popup_HP_brand"
+        },
+        {
+          "item": "popup_PDP_brand"
+        },
+        {
+          "item": "popup_PLP_brand"
+        },
+        {
+          "item": "myAcc_brand"
+        },
+        {
+          "item": "checkout_brand"
+        },
+        {
+          "item": "fb_brand"
+        },
+        {
+          "item": "form_HP_blackfriday"
+        },
+        {
+          "item": "form_PDP_blackfriday"
+        },
+        {
+          "item": "form_PLP_blackfriday"
+        },
+        {
+          "item": "form_LP_blackfriday"
+        },
+        {
+          "item": "form_Content_blackfriday"
+        },
+        {
+          "item": "popup_HP_blackfriday"
+        },
+        {
+          "item": "popup_PDP_blackfriday"
+        },
+        {
+          "item": "popup_PLP_blackfriday"
+        },
+        {
+          "item": "myAcc_blackfriday"
+        },
+        {
+          "item": "checkout_blackfriday"
+        },
+        {
+          "item": "fb_blackfriday"
+        },
+        {
+          "item": "form_HP_partnerdiscounts"
+        },
+        {
+          "item": "form_PDP_partnerdiscounts"
+        },
+        {
+          "item": "form_PLP_partnerdiscounts"
+        },
+        {
+          "item": "form_LP_partnerdiscounts"
+        },
+        {
+          "item": "form_Content_partnerdiscounts"
+        },
+        {
+          "item": "popup_HP_partnerdiscounts"
+        },
+        {
+          "item": "popup_PDP_partnerdiscounts"
+        },
+        {
+          "item": "popup_PLP_partnerdiscounts"
+        },
+        {
+          "item": "myAcc_partnerdiscounts"
+        },
+        {
+          "item": "form_HP_promo_10%disc"
+        },
+        {
+          "item": "form_PDP_promo_10%disc"
+        },
+        {
+          "item": "form_PLP_promo_10%disc"
+        },
+        {
+          "item": "popup_HP_promo_10%disc"
+        },
+        {
+          "item": "popup_PDP_promo_10%disc"
+        },
+        {
+          "item": "popup_PLP_promo_10%disc"
+        },
+        {
+          "item": "myAcc_promo_10%disc"
+        },
+        {
+          "item": "checkout_promo_10%disc"
+        },
+        {
+          "item": "fb_promo_10%disc"
+        },
+        {
+          "item": "form_HP_promo_free_install"
+        },
+        {
+          "item": "form_PDP_promo_free_install"
+        },
+        {
+          "item": "form_PLP_promo_free_install"
+        },
+        {
+          "item": "popup_HP_promo_free_install"
+        },
+        {
+          "item": "popup_PDP_promo_free_install"
+        },
+        {
+          "item": "popup_PLP_promo_free_install"
+        },
+        {
+          "item": "myAcc_promo_free_install"
+        },
+        {
+          "item": "checkout_promo_free_install"
+        },
+        {
+          "item": "fb_promo_free_install"
+        },
+        {
+          "item": "form_HP_promo_freexprdel"
+        },
+        {
+          "item": "form_PDP_promo_freexprdel"
+        },
+        {
+          "item": "form_PLP_promo_freexprdel"
+        },
+        {
+          "item": "checkout_partnerdiscounts"
+        },
+        {
+          "item": "fb_partnerdiscounts"
+        },
+        {
+          "item": "form_HP_promo_5%disc"
+        },
+        {
+          "item": "form_PDP_promo_5%disc"
+        },
+        {
+          "item": "form_PLP_promo_5%disc"
+        },
+        {
+          "item": "form_LP_promo_5%disc"
+        },
+        {
+          "item": "popup_HP_promo_5%disc"
+        },
+        {
+          "item": "popup_PDP_promo_5%disc"
+        },
+        {
+          "item": "popup_PLP_promo_5%disc"
+        },
+        {
+          "item": "myAcc_promo_5%disc"
+        },
+        {
+          "item": "checkout_promo_5%disc"
+        },
+        {
+          "item": "fb_promo_5%disc"
+        },
+        {
+          "item": "form_HP_brand_5%disc"
+        },
+        {
+          "item": "form_PDP_brand_5%disc"
+        },
+        {
+          "item": "form_LP_brand_5%disc"
+        },
+        {
+          "item": "popup_HP_brand_5%disc"
+        },
+        {
+          "item": "form_PLP_brand_5%disc"
+        },
+        {
+          "item": "popup_PDP_brand_5%disc"
+        },
+        {
+          "item": "popup_PLP_brand_5%disc"
+        },
+        {
+          "item": "myAcc_brand_5%disc"
+        },
+        {
+          "item": "checkout_brand_5%disc"
+        },
+        {
+          "item": "fb_brand_5%disc"
+        }
+      ]
+    },
+    "children": [
+      "flex-layout.row#newsletterForm"
+    ]
+  },
+  "flex-layout.row#newsletterForm": {
+    "children": [
+      "image#newsletter-side-image",
+      "newletter-form"
+    ],
+    "props": {
+      "blockClass": "containerForm"
+    }
+  },
+  // "sticky-layout#desktop": {
+  //   "props": {
+  //     "blockClass": [
+  //       "sticky-header",
+  //       "oldSearchBar"
+  //     ]
+  //   },
+  //   "children": [
+  //     "flex-layout.row#desktop"
+  //   ]
+  // },
+  "sticky-layout#desktop-newSearchBar": {
+    "props": {
+      "blockClass": [
+        "sticky-header",
+        "newSearchBar"
+      ]
+    },
+    "children": [
+      "flex-layout.row#desktop-newSearchBar"
+    ]
+  },
+  // "flex-layout.row#desktop": {
+  //   "props": {
+  //     "horizontalAlign": "center",
+  //     "verticalAlign": "center",
+  //     "preventHorizontalStretch": true,
+  //     "preventVerticalStretch": true,
+  //     "fullWidth": true,
+  //     "blockClass": [
+  //       "headerContent",
+  //       "newSearchBar"
+  //     ]
+  //   },
+  //   "children": [
+  //     "flex-layout.col#logo-desktop",
+  //     "flex-layout.col#spacer",
+  //     "disclosure-layout#search",
+  //     // "minicart.v2",
+  //     "link#account"
+  //   ]
+  // },
+  "flex-layout.row#desktop-newSearchBar": {
+    "props": {
+      "horizontalAlign": "center",
+      "verticalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": true,
+      "blockClass": [
+        "headerContent",
+        "newSearchBar"
+      ]
+    },
+    "children": [
+      "flex-layout.col#logo-desktop",
+      "flex-layout.col#spacer-newsearch",
+      "minicart.v2",
+      "link#account-newSearchBar"
+    ]
+  },
+  "flex-layout.col#spacer-newsearch": {
+    "props": {
+      "blockClass": "colMenuSearchBar"
+    },
+    "children": [
+      "flex-layout.row#searchBar-newSearchBar",
+      "flex-layout.row#spacer-newSearchBar"
+    ]
+  },
+  "link#account": {
+    "props": {
+      "href": "/account",
+      "blockClass": "loginIcon"
+    },
+    "children": [
+      "image#iconAccount"
+    ]
+  },
+  "link#account-newSearchBar": {
+    "props": {
+      "href": "/account",
+      "blockClass": [
+        "loginIcon",
+        "newSearchBar"
+      ]
+    },
+    "children": [
+      "image#iconAccount"
+    ]
+  },
+  "image#iconAccount": {
+    "props": {
+      "src": "assets/account-icon.svg",
+      "width": "24px",
+      "height": "24px"
+    }
+  },
+  "flex-layout.col#search-bar": {
+    "props": {
+      "verticalAlign": "middle",
+      "blockClass": "sb"
+    },
+    "children": [
+      "search-bar#header"
+    ]
+  },
+  "search-bar#header": {
+    "props": {
+      "blockClass": "searchHeader",
+      "displayMode": "search-and-clear-buttons",
+      "placeholder": "Ricerca"
+    }
+  },
+  "flex-layout.row#spacer-newSearchBar": {
+    "props": {
+      "width": "grow",
+      "verticalAlign": "middle",
+      "horizontalAlign": "center"
+    },
+    "children": [
+      "vtex.menu@2.x:menu#ws"
+    ]
+  },
+  // "flex-layout.col#spacer": {
+  //   "props": {
+  //     "width": "grow",
+  //     "verticalAlign": "middle",
+  //     "horizontalAlign": "center"
+  //   },
+  //   "children": [
+  //     "vtex.menu@2.x:menu#ws"
+  //   ]
+  // },
+  "flex-layout.col#logo-desktop": {
+    "props": {
+      "verticalAlign": "middle",
+      "blockClass": "logo"
+    },
+    "children": [
+      "link#logo"
+    ]
+  },
+  "link#logo": {
+    "props": {
+      "href": "/"
+    },
+    "children": [
+      "image#logo"
+    ]
+  },
+  "image#logo": {
+    "props": {
+      "height": "100%",
+      "src": "assets/logo.svg",
+      "blockClass": "logoImage"
+    }
+  },
+  "header-layout.mobile": {
+    "title": "Header Mobile",
+    "children": [
+      // "sticky-layout#mobile",
+      "wia-canonical-fix",
+      "experimental__visibility-layout#popup-home-mobile",
+      "sticky-layout#mobile-newSearchBar",
+      "flex-layout.row#searchBar-newSearchBar",
+      "slider-layout#banner-carousel",
+      "newsletter-popup#header_new"
+    ]
+  },
+  "experimental__visibility-layout#popup-home-mobile": {
+    "title": "Toggle layout Mobile - Stripe Banner (Homepage)",
+    "props": {
+      "visible": false
+    },
+    "children": ["popup-custom#home"]
+  },
+  // "sticky-layout#mobile": {
+  //   "props": {
+  //     "blockClass": "oldSearchBar"
+  //   },
+  //   "children": [
+  //     "flex-layout.row#mobile"
+  //   ]
+  // },
+  "sticky-layout#mobile-newSearchBar": {
+    "props": {
+      "blockClass": "newSearchBar"
+    },
+    "children": [
+      "flex-layout.row#mobile-newSearchBar"
+    ]
+  },
+  // "flex-layout.row#mobile": {
+  //   "children": [
+  //     "drawer",
+  //     "link#logo",
+  //     "flex-layout.col#space",
+  //     "disclosure-layout#search",
+  //     // "minicart.v2",
+  //     "link#account"
+  //   ],
+  //   "props": {
+  //     "blockClass": "main-header-mobile",
+  //     "preventHorizontalStretch": true,
+  //     "preserveLayoutOnMobile": true,
+  //     "fullWidth": true
+  //   }
+  // },
+  "flex-layout.row#mobile-newSearchBar": {
+    "children": [
+      "drawer",
+      "link#logo",
+      "flex-layout.col#space",
+      "minicart.v2",
+      "link#account"
+    ],
+    "props": {
+      "blockClass": "main-header-mobile",
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    }
+  },
+  "drawer": {
+    "children": [
+      "vtex.menu@2.x:menu#mobile",
+      "flex-layout.row#loginMobile"
+    ],
+    "props": {
+      "renderingStrategy": "eager"
+    }
+  },
+  "flex-layout.row#loginMobile": {
+    "props": {
+      "fullWidth": true
+    },
+    "children": []
+  },
+  "vtex.menu@2.x:menu#mobile": {
+    "props": {
+      "orientation": "vertical",
+      "blockClass": "mobileMenu"
+    },
+    "children": [
+      "menu-item#prodottiMobile",
+      "menu-item#w-collectionMobile-new",
+      "menu-item#w-collectionMobile",
+      "promotion-menu",
+      "menu-item#wellbeingMobile",
+      "menu-item#supportoMobile"
+    ]
+  },
+  "promotion-menu": {
+    "props": {
+      "triggerLink": "/offerta-del-mese",
+      "triggerText": "Promozioni",
+      "items": []
+    }
+  },
+  "vtex.menu@2.x:menu#ws": {
+    "children": [
+      "menu-item#prodotti",
+      "menu-item#w-collection-new",
+      "menu-item#w-collection",
+      "menu-item#promozioni",
+      "menu-item#wellbeing",
+      "menu-item#supporto"
+    ]
+  },
+  // "disclosure-layout#search": {
+  //   "props": {
+  //     "blockClass": "header"
+  //   },
+  //   "children": [
+  //     "disclosure-trigger#image",
+  //     "disclosure-content#search-bar"
+  //   ]
+  // },
+  // "disclosure-trigger#image": {
+  //   "children": [
+  //     "image#search"
+  //   ]
+  // },
+  // "image#search": {
+  //   "props": {
+  //     "blockClass": "search-icon",
+  //     "width": "24px",
+  //     "height": "24px",
+  //     "src": "assets/search.svg"
+  //   }
+  // },
+  // "disclosure-content#search-bar": {
+  //   "children": [
+  //     "flex-layout.row#searchBar"
+  //   ]
+  // },
+  // "flex-layout.row#searchBar": {
+  //   "props": {
+  //     "fullWidth": true
+  //   },
+  //   "children": [
+  //     "flex-layout.col#search"
+  //   ]
+  // },
+  "flex-layout.row#searchBar-newSearchBar": {
+    "props": {
+      // "blockClass": ["", ""]
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.col#search-newSearchBar"
+    ]
+  },
+  "flex-layout.col#space": {
+    "props": {
+      "width": "grow"
+    }
+  },
+  "flex-layout.col#search-newSearchBar": {
+    "props": {
+      "width": "grow",
+      "blockClass": "newSearchBar"
+    },
+    "children": [
+      "search-bar#headerBlock"
+    ]
+  },
+  // "flex-layout.col#search": {
+  //   "props": {
+  //     "width": "grow",
+  //     "blockClass": "oldSearchBar"
+  //   },
+  //   "children": [
+  //     "search-bar"
+  //   ]
+  // },
+  "search-bar#new": {
+    "blocks": [
+      "autocomplete-result-list"
+    ],
+    "props": {
+      "blockClass": [
+        "newSearchBar",
+        "searchContainer"
+      ]
+    }
+  },
+  "link#Accedi": {
+    "props": {
+      "href": "/account#"
+    },
+    "children": [
+      "rich-text#login"
+    ]
+  },
+  "rich-text#login": {
+    "props": {
+      "text": "Login / My Account",
+      "blockClass": [
+        "mobileMenu",
+        "buttonCard",
+        "margin"
+      ]
+    }
+  },
+  "search-bar#headerBlock": {
+    "blocks": [
+      "autocomplete-result-list.v2"
+    ],
+    "props": {
+      "openAutocompleteOnFocus": true,
+      "blockClass": "headerSearch"
+    }
+  },
+  "autocomplete-result-list.v2": {
+    "blocks": [
+      "product-summary.shelf#headerSearch"
+    ],
+    "props": {
+      "maxSuggestedProducts": 8,
+      "maxSuggestedTerms": 3,
+      "maxTopSearches": 5,
+      "maxHistory": 3,
+      "productLayout": "VERTICAL"
+      // "hideTitles": true
+    }
+  },
+  "product-summary.shelf#headerSearch": {
+    "children": [
+      "condition-layout.product#inStockLabel-SearchResult-PreOrderLabel",
+      "product-summary-image#headerSearchShelf",
+      "vtex.store-components:product-name#headerSearchSummary",
+      "condition-layout.product#showPricePDPSelling-SearchResult"
+    ],
+    "props": {
+      "blockClass": "shelfHeaderSearch"
+    }
+  },
+  "condition-layout.product#inStockLabel-SearchResult-PreOrderLabel": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "productClusters",
+          "arguments": {
+            "id": "419"
+          }
+        },
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "DISPONIBILITÀ",
+            "value": "Prodotti disponibili"
+          }
+        },
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "sellable",
+            "value": "true"
+          }
+        },
+        {
+          "subject": "isProductAvailable"
+        }
+      ],
+      "matchType": "all",
+      "Then": "rich-text#preOrder-SearchResult-SearchResult-preOrder",
+      "Else": "condition-layout.product#inStockLabel-SearchResult"
+    }
+  },
+  "rich-text#preOrder-SearchResult-SearchResult-preOrder": {
+    "props": {
+      "text": "Preordine",
+      "blockClass": ["specProps", "SearchResult", "preOrder"]
+    }
+  },
+  "condition-layout.product#inStockLabel-SearchResult": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "sellable",
+            "value": "true"
+          }
+        }
+      ],
+      "Then": "condition-layout.product#inStockLabelSecond-SearchResult",
+      "Else": "rich-text#outOfStock-SearchResult"
+    }
+  },
+  "condition-layout.product#inStockLabelSecond-SearchResult": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "DISPONIBILITÀ",
+            "value": "Prodotti disponibili"
+          }
+        },
+        {
+          "subject": "isProductAvailable"
+        }
+      ],
+      "matchType": "all",
+      "Then": "flex-layout.col#stock-SearchResult",
+      "Else": "rich-text#outOfStock-SearchResult"
+    }
+  },
+  "rich-text#outOfStock-SearchResult": {
+    "props": {
+      "text": "Non disponibile",
+      "blockClass": ["specProps", "SearchResult"]
+    }
+  },
+  "flex-layout.col#stock-SearchResult": {
+    "children": ["print-specification#stock-SearchResult"],
+    "props": {
+      "blockClass": ["specProps", "inStockProp", "SearchResult"]
+    }
+  },
+  "print-specification#stock-SearchResult": {
+    "props": {
+      "specificationsToCheck": [
+        {
+          "name": "sellable"
+        }
+      ],
+      "blockClass": ["SearchResult"],
+      "aggregateLabel": "Disponibile"
+
+    }
+  },
+  "condition-layout.product#showPricePDPSelling-SearchResult": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "showPrice",
+            "value": "true"
+          }
+        }
+      ],
+      "Then": "flex-layout.row#price-selling-pdp-SearchResult"
+    }
+  },
+  "flex-layout.row#price-selling-pdp-SearchResult": {
+    "children": [
+      "flex-layout.col#product-selling-price-SearchResult"
+    ],
+    "props": {
+      "blockClass": ["discountedPrice", "SearchResult"],
+      "colSizing": "auto",
+      "fullWidth": true,
+      "preserveLayoutOnMobile": true,
+      "horizontalAlign": "left"
+    }
+  },
+  "flex-layout.col#product-selling-price-SearchResult": {
+    "children": [
+      "product-selling-price#pdp-SearchResult"
+    ]
+  },
+  "product-selling-price#pdp-SearchResult": {
+    "props": {
+      "blockClass":["summary2", "SearchResult"],
+      "markers": [
+        "Tax"
+      ],
+      "message": "{sellingPriceValue}"
+    }
+  },
+  "product-summary-image#headerSearchShelf": {
+    "props": {
+      "showBadge": false,
+      "aspectRatio": "1:1",
+      "maxHeight": 100,
+      "blockClass": "headerSearchShelfImage"
+    }
+  },
+  "vtex.store-components:product-name#headerSearchSummary": {
+    "props": {
+      "tag": "div",
+      "displayMode": "linkToProductPage",
+      "blockClass": [
+        "headerSearchSummaryName",
+        "summaryName"
+      ]
+    }
+  }
+}

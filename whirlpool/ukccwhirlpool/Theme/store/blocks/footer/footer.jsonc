@@ -1,0 +1,281 @@
+{
+  "footer": {
+    "blocks": [
+      "footer-layout.desktop",
+      "footer-layout.mobile"
+    ],
+    "props": {
+      "blockClass": "provaprova"
+    }
+  },
+  "footer-layout.desktop": {
+    "children": [
+      "flex-layout.row#footer-1-desktop",
+      "flex-layout.row#footer-2-desktop",
+      "flex-layout.row#footer-3-desktop",
+      "flex-layout.row#footer-4-desktop"
+    ],
+    "props": {
+      "blockClass": "footerSection"
+    }
+  },
+  "footer-layout.mobile": {
+    "children": [
+      "flex-layout.row#news-letters-mobile",
+      "flex-layout.row#logo-and-phone-row-mobile",
+      "flex-layout.row#footer-custom",
+      "flex-layout.row#payments-images",
+      "flex-layout.row#footer-copyright-mobile"
+    ],
+    "props": {
+      "blockClass": "footerSection"
+    }
+  },
+  /*--- DESKTOP ---*/
+  //Newsletter row
+  "flex-layout.row#footer-1-desktop": {
+    "title": "[ROW/DESKTOP] - Newsletter Row",
+    "children": [
+      "newsletter-popup#footer"
+    ],
+    "props": {
+      "blockClass": [
+        "news-letters",
+        "news-letters-footer"
+      ],
+      "paddingTop": 3,
+      "paddingBottom": 3,
+      "colSizing": "100%",
+      "horizontalAlign": "CENTER"
+    }
+  },
+  "newsletter-popup#footer": {
+    "title": "[NEWSLETTER] - Newsletter Popup",
+    "props": {
+      "button": true,
+      "blockClass": "news-letters",
+      "textButton": "Subscribe to the Newsletter"
+    },
+    "children": [
+      "newsletter-form"
+    ]
+  },
+  "newsletter-form": {
+    "title": "[NEWSLETTER] - Newsletter Form",
+    "props": {
+      "title": "Newsletter",
+      "textButton": "Subscribe to the Newsletter",
+      "privacyCheckboxLabel": "I consent to the processing of my personal data to allow Whirlpool UK Appliances Ltd to send me newsletters/marketing communications (in electronic and non-electronic form, including via telephone, postal services, e-mail, SMS, push notifications or banners on third party sites including on Meta and Google platforms) regarding products and services of Whirlpool UK Appliances Ltd even bought or registered by me, as well as to conduct market research."
+    }
+  },
+  //Logo Row
+  "flex-layout.row#footer-2-desktop": {
+    "title": "[ROW/DESKTOP] - Brand Logo Row",
+    "children": [
+      "logo#footer"
+    ],
+    "props": {
+      "blockClass": "footerRow-2",
+      "paddingTop": 6,
+      "paddingBottom": 3,
+      "marginTop": 0,
+      "marginBottom": 0
+    }
+  },
+  "logo#footer": {
+    "title": "[LOGO] - Brand Logo",
+    "props": {
+      "title": "Logo",
+      "href": "/",
+      "url": "assets/icons/logo-footer-whr.svg",
+      "blockClass": "logoFooter"
+    }
+  },
+  //Menu row
+  "flex-layout.row#footer-3-desktop": {
+    "title": "[ROW/DESKTOP] - Menu Row",
+    "children": [
+      "footer-custom#desktop"
+    ],
+    "props": {
+      "blockClass": "footerRow-3",
+      "paddingTop": 6,
+      "paddingBottom": 3
+    }
+  },
+  "footer-custom#desktop": {
+    "title": "[MENU] - Custom footer menu",
+    "children": [
+      "image#payment-methods"
+    ]
+  },
+  "image#payment-methods": {
+    "title": "[IMAGE] - Payment methods",
+    "props": {
+      "blockClass": "imagePayment",
+      "horizontalAlign": "center",
+      "src": "assets/icons/paymentMethods_withoutAE.svg"
+    }
+  },
+  //Infos row
+  "flex-layout.row#footer-4-desktop": {
+    "title": "[ROW/DESKTOP] - Copyright Row",
+    "children": [
+      "rich-text#copyright",
+      "rich-text#site"
+    ],
+    "props": {
+      "blockClass": "footerRow"
+    }
+  },
+  "rich-text#copyright": {
+    "title": "[TEXT] - Copyright text",
+    "props": {
+      "blockClass": "footerNormal",
+      "textPosition": "LEFT",
+      "text": "© 2021 Whirlpool is a registered trademark of Whirlpool, USA"
+    }
+  },
+  "rich-text#site": {
+    "title": "[TEXT] - Website text",
+    "props": {
+      "blockClass": "footerNormal",
+      "textPosition": "RIGHT",
+      "text": "WHIRLPOOL.COM"
+    }
+  },
+  /*---------------------------------*/
+  /*--- MOBILE ---*/
+  //Newsletter row
+  "flex-layout.row#news-letters-mobile": {
+    "title": "[ROW/MOBILE] - Newsletter Row",
+    "children": [
+      "newsletter-popup#footermobile"
+    ],
+    "props": {
+      "fullWidth": false,
+      "paddingBottom": 6,
+      "blockClass": [
+        "fxCol",
+        "news-letters",
+        "news-letters-footer"
+      ]
+    }
+  },
+  "newsletter-popup#footermobile": {
+    "title": "[NEWSLETTER] - Newsletter Popup",
+    "props": {
+      "textDescription": "Je veux me tenir au courant des promotions et des nouveaux produits",
+      "button": true,
+      "blockClass": "fxCol",
+      "textButton": "Subscribe to the Newsletter"
+    },
+    "children": [
+      "newsletter-form#mobile"
+    ]
+  },
+  "newsletter-form#mobile": {
+    "title": "[NEWSLETTER] - Newsletter Form",
+    "props": {
+      "title": "Newsletter",
+      "textButton": "Subscribe to the Newsletter",
+      "privacyCheckboxLabel": "I consent to the processing of my personal data to allow Whirlpool UK Appliances Ltd to send me newsletters/marketing communications (in electronic and non-electronic form, including via telephone, postal services, e-mail, SMS, push notifications or banners on third party sites including on Meta and Google platforms) regarding products and services of Whirlpool UK Appliances Ltd even bought or registered by me, as well as to conduct market research."
+    }
+  },
+  //Logo row
+  "flex-layout.row#logo-and-phone-row-mobile": {
+    "title": "[ROW/MOBILE] - Brand Logo Row",
+    "children": [
+      "flex-layout.row#logo-row-mobile"
+    ],
+    "props": {
+      "blockClass": [
+        "footerRowMobile",
+        "fxCenter",
+        "fxColumn",
+        "footerRowMobilePadding"
+      ],
+      "colSizing": "auto",
+      "preserveLayoutOnMobile": true
+    }
+  },
+  "flex-layout.row#logo-row-mobile": {
+    "title": "[ROW/MOBILE] - Brand Logo Row",
+    "children": [
+      "logo#footer-mobile"
+    ],
+    "props": {
+      "blockClass": [
+        "footerRowMobile",
+        "fxCenter",
+        "logo-row-mobile"
+      ],
+      "width": "100%"
+    }
+  },
+  "logo#footer-mobile": {
+    "title": "[IMAGE] - Brand Logo Image",
+    "props": {
+      "title": "Logo",
+      "href": "/",
+      "url": "assets/icons/logo-footer-whr.svg",
+      "blockClass": "logoFooterMobile"
+    }
+  },
+  //Menu row
+  "flex-layout.row#footer-custom": {
+    "title": "[ROW/MOBILE] - Custom footer menu Row",
+    "children": [
+      "footer-custom"
+    ],
+    "props": {
+      "blockClass": [
+        "customFooterRowMobile"
+      ]
+    }
+  },
+  //Payments row
+  "flex-layout.row#payments-images": {
+    "title": "[ROW/MOBILE] - Payment methods images Row",
+    "children": [
+      "image#payment-methods"
+    ],
+    "props": {
+      "blockClass": [
+        "paymentsImagesRow"
+      ]
+    }
+  },
+  //Copyright row
+  "flex-layout.row#footer-copyright-mobile": {
+    "title": "[ROW/MOBILE] - Copyright Row",
+    "children": [
+      "rich-text#copyright-mobile",
+      "rich-text#site-mobile"
+    ],
+    "props": {
+      "blockClass": [
+        "footerRowMobile",
+        "fxCol",
+        "footerRowMobileWhirlpool"
+      ]
+    }
+  },
+  "rich-text#copyright-mobile": {
+    "title": "[TEXT] - Copyright text",
+    "props": {
+      "blockClass": "footerNormal",
+      "textPosition": "LEFT",
+      "text": "© 2021 Whirlpool is a registered trademark of Whirlpool, USA"
+    }
+  },
+  "rich-text#site-mobile": {
+    "title": "[TEXT] - Website text",
+    "props": {
+      "blockClass": "footerNormal",
+      "textPosition": "LEFT",
+      "text": "WHIRLPOOL.COM"
+    }
+  }
+  /*-------------------------------------*/
+}

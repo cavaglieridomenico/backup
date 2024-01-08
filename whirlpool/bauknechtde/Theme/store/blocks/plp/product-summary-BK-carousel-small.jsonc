@@ -1,0 +1,129 @@
+{
+  "product-summary.shelf.product-comparison#bauknechtPLP-carousel-small": {
+    "children": [
+      
+      "add-to-list-btn#BKPLP-carousel-small",
+      "flex-layout.row#promotionPLPBK",
+      "flex-layout.row#productImage-carousel-small-PLPBK",
+      "condition-layout.product#blackFridayPopupPLP-Grid",
+      "flex-layout.row#productTitle-carousel-small-PLPBK",
+      "flex-layout.row#productRating-carousel-small-PLPBK",
+      "flex-layout.row#productEnergyLabelAndStock-carousel-small-PLPBK",
+      "flex-layout.row#productPrice-carousel-small-PLPBK"
+    ],
+    "props": {
+      "blockClass": "bauknechtPLPCard-carousel"
+    }
+  },
+  "add-to-list-btn#BKPLP-carousel-small": {
+    "props": {
+      "blockClass": ["wishListBKPLP", "wishListBKPLP-carousel-small"]
+    }
+  },
+  "flex-layout.row#productImage-carousel-small-PLPBK": {
+    "children": ["product-summary-image#bkPLPCard"],
+    "props": {
+      "blockClass": "productImageMobilePLPBK"
+    }
+  },
+  "flex-layout.row#productTitle-carousel-small-PLPBK": {
+    "children": ["vtex.store-components:product-name#bkPLP"],
+    "props": {
+      "blockClass": "productTitleMobilePLPBK-carousel"
+    }
+  },
+  "flex-layout.row#productRating-carousel-small-PLPBK": {
+    "children": ["flex-layout.col#productRating-carousel-small-PLPBK"],
+    "props": {
+      "blockClass": "productRatingMobilePLPBKRow"
+    }
+  },
+  "flex-layout.col#productRating-carousel-small-PLPBK": {
+    "children": ["product-rating-inline.bazaarvoice"],
+    "props": {
+      "blockClass": "productRatingMobilePLPBKCol"
+    }
+  },
+  "flex-layout.row#productEnergyLabelAndStock-carousel-small-PLPBK": {
+    "children": [
+      "flex-layout.col#productEnergyLabel-carousel-small-PLPBK",
+      "flex-layout.col#productStock-carousel-small-PLPBK"
+    ],
+    "props": {
+      "blockClass": "productEnergyLabelAndStockMobilePLPBKRow",
+      "preserveLayoutOnMobile": true
+    }
+  },
+  "flex-layout.col#productEnergyLabel-carousel-small-PLPBK": {
+    "children": [
+      "condition-layout.product#energy-label-available-mini-carousel"
+    ],
+    "props": {
+      "blockClass": ["productEnergyLabelMobilePLPBKCol", "EnergyLabelCol"],
+      "width": "50%"
+    }
+  },
+  "condition-layout.product#energy-label-available-mini-carousel": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "EnergyLogo_image"
+          }
+        }
+      ],
+      "Then": "condition-layout.product#etichetta-image-mini-carousel"
+    }
+  },
+  "condition-layout.product#etichetta-image-mini-carousel": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "energy-label"
+          }
+        }
+      ],
+      "Then": "flex-layout.row#old-label-mini-carousel",
+      "Else": "flex-layout.row#new-label-mini-carousel" //"image-from-specification#EtichettaEnergeticaNew"
+    }
+  },
+  "flex-layout.row#old-label-mini-carousel": {
+    "props": {
+      "blockClass": ["oldEnergyLabelRow", "oldEnergyLabelRowMini"]
+    },
+    "children": [
+      "image-from-specification#EtichettaEnergetica",
+      "link.product#oldEnergyLabelLink"
+    ]
+  },
+  "flex-layout.row#new-label-mini-carousel": {
+    "props": {
+      "blockClass": ["newEnergyLabelRow", "newEnergyLabelRowMini"]
+      // "colSizing": "auto"
+    },
+    "children": [
+      "image-from-specification#EtichettaEnergeticaNew",
+      "link.product#newEnergyLabelLink"
+    ]
+  },
+  "flex-layout.col#productStock-carousel-small-PLPBK": {
+    "children": ["condition-layout.product#isProductSellableBK"],
+    "props": {
+      "blockClass": "productStockMobilePLPBKCol",
+      "width": "50%"
+    }
+  },
+  "flex-layout.row#productPrice-carousel-small-PLPBK": {
+    "children": [
+      "flex-layout.col#savingsPriceCol",
+      "flex-layout.col#sellingPriceCol"
+    ],
+    "props": {
+      "blockClass": ["productPriceMobilePLPBK"],
+      "colSizing": "auto"
+    }
+  }
+}

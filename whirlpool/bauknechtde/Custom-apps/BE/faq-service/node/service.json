@@ -1,0 +1,70 @@
+{
+  "memory": 256,
+  "ttl": 120,
+  "timeout": 10,
+  "minReplicas": 2,
+  "maxReplicas": 50,
+  "workers": 1,
+  "routes": {
+    "createFirstAndSecondLevelFaqMid": {
+      "path": "/_v/faq/category",
+      "public": true
+    },
+    "getCategoryFaqs": {
+      "path": "/_v/faq/categories",
+      "public": true
+    },
+    "getQuestionGroupByCategoryId": {
+      "path": "/_v/faq/categories/:id/questiongroups",
+      "public": true
+    },
+    "createFaqGroup": {
+      "path": "/_v/faq/categorygroup",
+      "public": true
+    },
+    "deleteFaqGroupMid": {
+      "path": "/_v/faq/categories/groups/delete",
+      "public": true
+    },
+    "deleteFaqCategoryMid": {
+      "path": "/_v/faq/categories/delete",
+      "public": true
+    },
+    "updateFaqCategoryMid": {
+      "path": "/_v/faq/categories/update",
+      "public": true
+    },
+    "updateFaqGroupMid": {
+      "path": "/_v/faq/categories/groups/update",
+      "public": true
+    },
+    "createFaqMid": {
+      "path": "/_v/faq/newfaq",
+      "public": true
+    },
+    "updateFaqMid": {
+      "path": "/_v/faq/update",
+      "public": true
+    },
+    "deleteFaqMid": {
+      "path": "/_v/faq/delete",
+      "public": true
+    },
+    "getFaqMid": {
+      "path": "/_v/faqs",
+      "public": true
+    },
+    "getGroupsDataMid": {
+      "path": "/_v/faq/:id/group-detail-and-faqs",
+      "public": true
+    },
+    "createCategoryMid": {
+      "path": "/_v/faq/new-category",
+      "public": true
+    },
+    "getFaqByUrlMid": {
+      "path": "/_v/faq/:url/single-faq",
+      "public": true
+    }
+  }
+}

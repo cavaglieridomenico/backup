@@ -1,0 +1,530 @@
+{
+  "name": "sfmc-integration",
+  "vendor": "bauknechtde",
+  "version": "1.0.17",
+  "title": "SFMC connector",
+  "description": "SFMC connector",
+  "categories": [],
+  "dependencies": {},
+  "builders": {
+    "node": "6.x",
+    "docs": "0.x"
+  },
+  "scripts": {
+    "prereleasy": "bash lint.sh"
+  },
+  "credentialType": "absolute",
+  "policies": [
+    {
+      "name": "colossus-fire-event"
+    },
+    {
+      "name": "colossus-write-logs"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.vtexcommercestable.com.br",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.myvtex.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "portal.vtexcommercestable.com.br",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "mcw785xyskn2jrl9kbr-hjtx1w88.auth.marketingcloudapis.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "mcw785xyskn2jrl9kbr-hjtx1w88.rest.marketingcloudapis.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "7329181.recs.igodigital.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "7331012.recs.igodigital.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "7330071.recs.igodigital.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "7330072.recs.igodigital.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "7329669.recs.igodigital.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "518000665.recs.igodigital.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "ADMIN_DS"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "api.vtex.com",
+        "path": "/dataentities/*"
+      }
+    },
+    {
+      "name": "OMSViewer"
+    },
+    {
+      "name": "read_prices"
+    },
+    {
+      "name": "LogisticsViewer"
+    }
+  ],
+  "settingsSchema": {
+    "title": "Salesforce Marketing Cloud",
+    "type": "object",
+    "properties": {
+      "vtex": {
+        "title": "Vtex Settings",
+        "type": "object",
+        "properties": {
+          "additionalServices": {
+            "title": "Marketplace - Additional services",
+            "type": "object",
+            "properties": {
+              "generalInfo": {
+                "title": "General info",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "serviceIds": {
+                      "title": "Service ids (comma separated)",
+                      "type": "string"
+                    },
+                    "serviceName": {
+                      "title": "Service name",
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "infoPerSalesChannel": {
+                "title": "Specific info per trade policy",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "salesChannelId": {
+                      "title": "Sales channel id",
+                      "type": "string"
+                    },
+                    "serviceIds": {
+                      "title": "List of service ids (comma separated) per sales channel",
+                      "type": "string"
+                    },
+                    "installation": {
+                      "title": "Id of the service \"Installation\"",
+                      "type": "string"
+                    },
+                    "fiveYearsWarranty": {
+                      "title": "Id of the service \"5 years warranty\"",
+                      "type": "string"
+                    },
+                    "legalWarranty": {
+                      "title": "Id of the service \"Legal warranty\"",
+                      "type": "string"
+                    },
+                    "extendedWarranty": {
+                      "title": "Id of the service \"Carefree plus\"",
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "premiumProducts": {
+            "title": "Marketplace - Premium products",
+            "type": "object",
+            "properties": {
+              "specification": {
+                "title": "Specification name and value (pattern: name:value)",
+                "type": "string"
+              },
+              "sourceCampaign": {
+                "title": "Source campaign",
+                "type": "string"
+              },
+              "couponPrefix": {
+                "title": "Coupon prefix",
+                "type": "string"
+              }
+            }
+          },
+          "translations": {
+            "title": "Marketplace - Translations",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "title": "Key",
+                  "type": "string"
+                },
+                "value": {
+                  "title": "Value",
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "defaultCountry": {
+            "title": "Marketplace - Default country",
+            "type": "string"
+          },
+          "defaultLocale2C": {
+            "title": "Marketplace - Default locale 2 chars (example: FR)",
+            "type": "string"
+          },
+          "defaultLocale5C": {
+            "title": "Marketplace - Default locale 5 chars (example: fr-FR)",
+            "type": "string"
+          },
+          "phoneMaxLength": {
+            "title": "Marketplace - Phone number - Max length",
+            "type": "number",
+            "default": 14
+          },
+          "mpOrderBlackList": {
+            "title": "Marketplace - Black list of order prefixes (semicolon separated)",
+            "type": "string"
+          },
+          "mpHasReturn": {
+            "title": "Marketplace - Return flow",
+            "type": "boolean"
+          },
+          "retRefIntegrityCheck": {
+            "title": "Marketplace - Return / Refund flow - Integrity check",
+            "type": "boolean"
+          },
+          "checkoutAsGuest": {
+            "title": "Marketplace - Checkout as Guest",
+            "type": "boolean"
+          },
+          "checkZipCodes": {
+            "title": "Marketplace - Check ZIP codes for installation",
+            "type": "boolean"
+          },
+          "paymentPerTransactionId": {
+            "title": "List of payment methods (comma separated) requiring the transaction id within the order id",
+            "type": "string"
+          },
+          "mpAppKey": {
+            "title": "Marketplace - App-key",
+            "type": "string"
+          },
+          "mpAppToken": {
+            "title": "Marketplace - App-token",
+            "type": "string"
+          },
+          "mpAuthCookie": {
+            "title": "Marketplace - Authentication cookie",
+            "type": "string"
+          },
+          "allowedInBoundCredentials": {
+            "title": "Marketplace - Allowed inbound credentials (pattern: key1:token1;...;keyN:tokenN)",
+            "type": "string"
+          },
+          "isCCProject": {
+            "title": "Marketplace - CC Project",
+            "type": "boolean"
+          },
+          "sellerAccount": {
+            "title": "Seller account",
+            "type": "object",
+            "properties": {
+              "name": {
+                "title": "Name",
+                "type": "string"
+              },
+              "apiKey": {
+                "title": "Api key",
+                "type": "string"
+              },
+              "apiToken": {
+                "title": "Api token",
+                "type": "string"
+              }
+            }
+          },
+          "dngSettings": {
+            "title": "D&G Settings",
+            "type": "object",
+            "properties": {
+              "hasDnG": {
+                "title": "D&G integration",
+                "type": "boolean"
+              },
+              "mdName": {
+                "title": "Master data entity (e.g. DG)",
+                "type": "string"
+              },
+              "redirectUrl": {
+                "title": "Redirect url",
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "o2p": {
+        "title": "O2P Settings",
+        "type": "object",
+        "properties": {
+          "hostname": {
+            "title": "Vtex - Hostname",
+            "type": "string"
+          },
+          "tradePolicyId": {
+            "title": "Vtex - Trade policy id",
+            "type": "string"
+          },
+          "clientId": {
+            "title": "SFMC - Client id",
+            "type": "string"
+          },
+          "clientSecret": {
+            "title": "SFMC - Client secret",
+            "type": "string"
+          },
+          "mid": {
+            "title": "SFMC - Product Recommendations - MID",
+            "type": "string"
+          },
+          "pathParam": {
+            "title": "SFMC - Product Recommendations - Path param",
+            "type": "string"
+          },
+          "orderDetailsKey": {
+            "title": "SFMC - Order Confirmation - Order details key",
+            "type": "string"
+          },
+          "confirmationEmailKey": {
+            "title": "SFMC - Order Confirmation - Email key",
+            "type": "string"
+          },
+          "cancellationEmailKey": {
+            "title": "SFMC - Order Cancellation - Email key",
+            "type": "string"
+          },
+          "returnEmailKey": {
+            "title": "SFMC - Order Return - Email key",
+            "type": "string"
+          },
+          "refundEmailKey": {
+            "title": "SFMC - Order Refund - Email key",
+            "type": "string"
+          }
+        }
+      },
+      "epp": {
+        "title": "EPP Settings",
+        "type": "object",
+        "properties": {
+          "hostname": {
+            "title": "Vtex - Hostname",
+            "type": "string"
+          },
+          "tradePolicyId": {
+            "title": "Vtex - Trade policy id",
+            "type": "string"
+          },
+          "clientId": {
+            "title": "SFMC - Client id",
+            "type": "string"
+          },
+          "clientSecret": {
+            "title": "SFMC - Client secret",
+            "type": "string"
+          },
+          "mid": {
+            "title": "SFMC - Product Recommendations - MID",
+            "type": "string"
+          },
+          "pathParam": {
+            "title": "SFMC - Product Recommendations - Path param",
+            "type": "string"
+          },
+          "orderDetailsKey": {
+            "title": "SFMC - Order Confirmation - Order details key",
+            "type": "string"
+          },
+          "confirmationEmailKey": {
+            "title": "SFMC - Order Confirmation - Email key",
+            "type": "string"
+          },
+          "cancellationEmailKey": {
+            "title": "SFMC - Order Cancellation - Email key",
+            "type": "string"
+          },
+          "returnEmailKey": {
+            "title": "SFMC - Order Return - Email key",
+            "type": "string"
+          },
+          "refundEmailKey": {
+            "title": "SFMC - Order Refund - Email key",
+            "type": "string"
+          }
+        }
+      },
+      "ff": {
+        "title": "FF Settings",
+        "type": "object",
+        "properties": {
+          "hostname": {
+            "title": "Vtex - Hostname",
+            "type": "string"
+          },
+          "tradePolicyId": {
+            "title": "Vtex - Trade policy id",
+            "type": "string"
+          },
+          "clientId": {
+            "title": "SFMC - Client id",
+            "type": "string"
+          },
+          "clientSecret": {
+            "title": "SFMC - Client secret",
+            "type": "string"
+          },
+          "mid": {
+            "title": "SFMC - Product Recommendations - MID",
+            "type": "string"
+          },
+          "pathParam": {
+            "title": "SFMC - Product Recommendations - Path param",
+            "type": "string"
+          },
+          "orderDetailsKey": {
+            "title": "SFMC - Order Confirmation - Order details key",
+            "type": "string"
+          },
+          "confirmationEmailKey": {
+            "title": "SFMC - Order Confirmation - Email key",
+            "type": "string"
+          },
+          "cancellationEmailKey": {
+            "title": "SFMC - Order Cancellation - Email key",
+            "type": "string"
+          },
+          "returnEmailKey": {
+            "title": "SFMC - Order Return - Email key",
+            "type": "string"
+          },
+          "refundEmailKey": {
+            "title": "SFMC - Order Refund - Email key",
+            "type": "string"
+          },
+          "friendInvitationKey": {
+            "title": "SFMC - Friend Invitation - Invitation email key",
+            "type": "string"
+          },
+          "friendConfirmationKey": {
+            "title": "SFMC - Friend Invitation - Welcome email key",
+            "type": "string"
+          }
+        }
+      },
+      "vip": {
+        "title": "VIP Settings",
+        "type": "object",
+        "properties": {
+          "hostname": {
+            "title": "Vtex - Hostname",
+            "type": "string"
+          },
+          "tradePolicyId": {
+            "title": "Vtex - Trade policy id",
+            "type": "string"
+          },
+          "clientId": {
+            "title": "SFMC - Client id",
+            "type": "string"
+          },
+          "clientSecret": {
+            "title": "SFMC - Client secret",
+            "type": "string"
+          },
+          "mid": {
+            "title": "SFMC - Product Recommendations - MID",
+            "type": "string"
+          },
+          "pathParam": {
+            "title": "SFMC - Product Recommendations - Path param",
+            "type": "string"
+          },
+          "orderDetailsKey": {
+            "title": "SFMC - Order Confirmation - Order details key",
+            "type": "string"
+          },
+          "confirmationEmailKey": {
+            "title": "SFMC - Order Confirmation - Email key",
+            "type": "string"
+          },
+          "cancellationEmailKey": {
+            "title": "SFMC - Order Cancellation - Email key",
+            "type": "string"
+          },
+          "returnEmailKey": {
+            "title": "SFMC - Order Return - Email key",
+            "type": "string"
+          },
+          "refundEmailKey": {
+            "title": "SFMC - Order Refund - Email key",
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

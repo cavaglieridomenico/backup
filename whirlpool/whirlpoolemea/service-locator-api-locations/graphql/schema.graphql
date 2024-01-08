@@ -1,0 +1,6 @@
+type Query{
+    getSLCities(brand: String!, country: String!, locale: String!, country_id: String!, province: String!, region: String!):SLResponse @cacheControl(scope: PUBLIC, maxAge: LONG)
+    getSLRegions(brand: String!, country: String!, locale: String!, country_id: String!):SLResponse @cacheControl(scope: PUBLIC, maxAge: LONG)
+    getSLProvinces(brand: String!, country: String!, locale: String!, country_id: String!, region: String!):SLResponse @cacheControl(scope: PUBLIC, maxAge: LONG)
+    getSLServices(brand:String!, country:String!, locale:String!, country_id:String!,province:String!,region:String!,city:String!):SLServiceResponse @cacheControl(scope: PUBLIC, maxAge: LONG)
+}

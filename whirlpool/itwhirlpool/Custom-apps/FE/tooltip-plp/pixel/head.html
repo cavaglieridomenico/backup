@@ -1,0 +1,74 @@
+<!-- funzioni speciali -->
+<script>
+  function findClass(path) {
+    let classes = []
+    for (i = 0; i < path.length - 3; i++) {
+      classes.push(...path[i].classList.value.split(' '))
+    }
+    return classes.includes('vtex-search-result-3-x-accordionFilterContainer--funzioni-speciali')
+  }
+  window.onload = function (e) {
+    if(!window?.__RUNTIME__?.page?.includes('store.search')){
+      return
+    }
+    let a = document.createElement('a')
+    a.setAttribute('href', '/funzioni-speciali')
+    a.setAttribute('target', 'blanck')
+    a.innerText = 'Scopri'
+    a.classList.add('filterLink')
+    if (window.innerWidth <= 1024) { // drawer
+
+      document.addEventListener('click', function (e) {
+        if (findClass(e.path)) {
+          setTimeout(function () {
+            if (!document.querySelector('.filterMobilePosition')) {
+              let container = document.querySelector('.vtex-search-result-3-x-accordionFilterOpen--funzioni-speciali-')
+              a.classList.add('filterMobilePosition')
+              container.appendChild(a)
+            }
+          }, 500)
+        }
+      });
+    } else {
+      var tt = setInterval(function () { funtionalTooltip() }, 2000);
+      var counter = 1;
+      function funtionalTooltip() {
+        let nodeList = document.querySelectorAll('.vtex-search-result-3-x-filter__container--funzioni-speciali-')
+        if (nodeList.length > 0 || counter == 10) {
+          let filterContainer = nodeList[0]
+          filterContainer.appendChild(a)
+          clearInterval(tt);
+        } else {
+          counter++;
+        }
+      }
+    }
+
+  }
+
+</script>
+<style>
+  .filterLink,
+  .filterLink:visited,
+  .filterLink:active,
+  .filterLink:target,
+  .filterLink:focus {
+    background-color: white;
+    text-decoration: underline;
+    display: block;
+    text-align: left;
+    cursor: pointer;
+    font-family: "myriadLight";
+    font-weight: 400;
+    font-size: 1rem;
+    color: #505050;
+  }
+
+  .filterMobilePosition {
+    position: absolute;
+    top: 38%;
+    right: 50%;
+    transform: translateX(50%);
+    font-size: 1.2rem !important;
+  }
+</style>

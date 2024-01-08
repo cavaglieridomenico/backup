@@ -1,0 +1,72 @@
+/* .iconSize {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+}
+:global(.vtex-wish-list-1-x-fill) {
+  background: url(assets/wishlist-icon.svg);
+}
+.wishlistIcon {
+  padding: 3px;
+}
+.wishlistIconContainer {
+  width: 5rem;
+  margin: 1px;
+}
+:global(.vtex-wish-list-1-x-outline) {
+  background: url(assets/whishlist-icon-outline.svg);
+}
+.wishlistIconContainer :global(.vtex-button) {
+  pointer-events: none;
+  width: 4rem;
+  padding: 1px 2px;
+}
+.wishlistIconContainer :global(.vtex-button__label) {
+  padding: 0;
+}
+.wishlistIconContainer :global(.vtex-button):hover {background-color: #ffffff}
+.wishlistIconContainer :global(.vtex-button):first-child {
+  padding: 0;
+} */
+.wishlistIconContainer {
+  justify-content: center;
+  display: flex;
+}
+.wishlistIconContainer :global(.vtex-button) {
+  width: auto;
+  margin: 0;
+}
+.wishlistIconContainer :global(.vtex-button):hover,
+.wishlistIconContainer :global(.vtex-button):focus {
+  background-color: unset !important;
+  background-repeat: no-repeat !important;
+}
+.wishlistIconContainer :global(.vtex-button):hover .outline,
+.wishlistIconContainer :global(.vtex-button):focus .outline {
+  background: url("assets/heart_fill.svg") !important;
+  background-repeat: no-repeat !important;
+}
+.wishlistIconContainer :global(.vtex-button__label) {
+  padding-left: unset;
+  padding-right: 0.5rem;
+}
+.wishlistIconContainer::after {
+  content: "Ulubione";
+  display: flex;
+  margin: auto 0;
+  font-family: "myriadLight";
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+}
+.outline {
+  background: url("assets/heart.svg") !important;
+  background-repeat: no-repeat !important;
+}
+.fill {
+  background: url("assets/heart_fill.svg") !important;
+  background-repeat: no-repeat !important;
+}
+.iconSize {
+  width: 28px;
+}

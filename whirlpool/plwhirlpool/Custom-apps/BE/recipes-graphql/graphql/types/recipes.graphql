@@ -1,0 +1,44 @@
+type RecipePage {
+    facets : [Facet]
+    facetsId: [FacetId]
+    recipes: [Recipe]
+    page: pageInfo
+}
+
+type Recipe {
+    id: String
+    category : String
+    cookTime : String
+    description : String
+    imageDesktop : String
+    imageMobile: String
+    imageCard: String
+    ingredients : [String]
+    level : String
+    name: String
+    preparationTime: String
+    chefplusTime: String
+    supremeChefTime: String
+    mainIngredients: [String]
+    images: [String]
+    steps: [String]
+    type: String
+    idType: String
+    relatedRecipes: [String]
+}
+
+type pageInfo {
+    totalRowCount : Int
+    pageSize : Int 
+    pageNumber : Int
+}
+
+type Facet {
+    name : String
+    values : [String]
+}
+
+type FacetId {
+    name : String
+    id : String
+}

@@ -1,0 +1,293 @@
+{
+  /* ---------------------- FOOTER ---------------------------- */
+  "footer": {
+    "blocks": ["footer-layout.desktop", "footer-layout.mobile"]
+  },
+  /* ---------------------- DESKTOP ---------------------------- */
+  "footer-layout.desktop": {
+    "props": {
+      "blockClass": "footer-container-desktop"
+    },
+    "children": ["flex-layout.row#footer-row"]
+  },
+  /* ---------------------- FLEX LAYOUT ---------------------------- */
+  "flex-layout.row#footer-row": {
+    "children": ["vtex.menu@2.x:menu#footer-menu", "flex-layout.col#follow-us"],
+    "props": {
+      "preventHorizontalStretch": true,
+      "blockClass": "footerRowDesktop"
+    }
+  },
+  "flex-layout.col#follow-us": {
+    "props": {
+      "blockClass": "follow-us-container"
+    },
+    "children": ["flex-layout.row#follow-us-row"]
+  },
+  /* ---------------------- MENU ITEM LABELS ---------------------------- */
+  "vtex.menu@2.x:menu#footer-menu": {
+    "props": {
+      "blockClass": "footerMenu"
+    },
+    "children": [
+      //"menu-item#store-locator",
+      //"menu-item#dolt-together",
+      /*  "menu-item#faq-footer", */
+      //"menu-item#support",
+      //"menu-item#legal-issues",
+      //"menu-item#spare-parts"
+      "link#footerMenu_01-item_01",
+      "link#footerMenu_01-item_02",
+      "link#footerMenu_01-item_03",
+      "link#footerMenu_01-item_04",
+      "link#footerMenu_01-item_05",
+      "toggle-display#preferences-cookies"
+    ]
+  },
+  "toggle-display#preferences-cookies": {
+    "props": {
+      "text": "Centre de préférences"
+    }
+  },
+  /* ---------------------- FOLLOW US ROW ---------------------------- */
+  "flex-layout.row#follow-us-row": {
+    "props": {
+      // "preventHorizontalStretch": true,
+      "blockClass": "follow-us-row"
+    },
+    "children": ["rich-text#follow-us-text", "social-networks"]
+  },
+  /* ---------------------- FOLLOW US ---------------------------- */
+  "rich-text#follow-us-text": {
+    "props": {
+      "text": "Suivez-nous",
+      "blockClass": "followUsText"
+    }
+  },
+  /* ---------------------- SOCIAL NETWORKS ---------------------------- */
+  "social-networks": {
+    "props": {
+      "blockClass": "social-icons",
+      "socialNetworks": [
+        {
+          "name": "Facebook",
+          "url": "https://www.facebook.com/IndesitFrance/",
+          "target": "_blank"
+        },
+        {
+          "name": "Instagram",
+          "url": "https://www.instagram.com/indesit_fr/",
+          "target": "_blank"
+        },
+        {
+          "name": "Youtube",
+          "url": "https://www.youtube.com/channel/UCjgIGtiZmEPAbUqf-EhwGpQ",
+          "target": "_blank"
+        }
+      ]
+    }
+  },
+
+  /* ---------------------- MOBILE ---------------------------- */ /* BREAK POINT DA 1025 PX */
+  "footer-layout.mobile": {
+    "props": {
+      "blockClass": "footer-container-mobile"
+    },
+    "children": ["flex-layout.row#footer-row-mobile"]
+  },
+  /* ---------------------- FLEX LAYOUT ---------------------------- */
+  "flex-layout.row#footer-row-mobile": {
+    "children": [
+      "flex-layout.col#links-mobile",
+      "flex-layout.col#follow-us-mobile"
+    ],
+    "props": {
+      "preventHorizontalStretch": true,
+      "blockClass": "footerRowMobile"
+    }
+  },
+  "flex-layout.col#links-mobile": {
+    "props": {
+      "blockClass": "links-footer"
+    },
+    "children": ["flex-layout.row#links-row-mobile"]
+  },
+  "flex-layout.col#follow-us-mobile": {
+    "props": {
+      "blockClass": "follow-us-footer"
+    },
+    "children": ["flex-layout.row#follow-us-row-mobile"]
+  },
+  /* ---------------------- LINKS ROW ---------------------------- */
+  "flex-layout.row#links-row-mobile": {
+    "props": {
+      "preventHorizontalStretch": true,
+      "blockClass": "links"
+    },
+    "children": ["flex-layout.col#links-left", "flex-layout.col#links-right"]
+  },
+  "flex-layout.col#links-left": {
+    "props": {
+      "blockClass": "links-left"
+    },
+    "children": [
+      "link#store-locator-mobile-label",
+      "link#legal-issues",
+      "link#footerMenu_01-item_05",
+      "toggle-display#preferences-cookies"
+      //"link#spare-parts"
+    ]
+  },
+  "flex-layout.col#links-right": {
+    "props": {
+      "blockClass": "links-right"
+    },
+    "children": [
+      /* "link#faq-mobile", */
+      "link#doittogether",
+      "link#support-mobile"
+    ]
+  },
+  /* ---------------------- LINKS LEFT ---------------------------- */
+  "link#store-locator-mobile-label": {
+    "props": {
+      "label": "Trouver un revendeur",
+      "href": "/trouver-un-revendeur",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "menu_footer_click",
+      "analyticsType": "",
+      "isPrevent": false,
+      "clickArea": "footer",
+      "blockClass": ["footer-item"]
+    }
+    //"children": ["rich-text#sl-text"]
+  },
+  // "rich-text#sl-text": {
+  //   "props": {
+  //     "blockClass": "links-text",
+  //     "text": "Trouver un revendeur"
+  //   }
+  // },
+  "link#support-mobile": {
+    "props": {
+      "label": "Service",
+      "href": "/service",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "menu_footer_click",
+      "analyticsType": "",
+      "isPrevent": false,
+      "clickArea": "footer",
+      "blockClass": ["footer-item"]
+    }
+    //"children": ["rich-text#sp-text"]
+  },
+  // "rich-text#sp-text": {
+  //   "props": {
+  //     "blockClass": "links-text",
+  //     "text": "Service"
+  //   }
+  // },
+  /* ---------------------- LINKS RIGHT ---------------------------- */
+  /*  "link#faq-mobile": {
+    "props": {
+      "href": "/faq"
+    },
+    "children": [
+      "rich-text#faq-text"
+    ]
+  },
+  "rich-text#faq-text": {
+    "props": {
+      "blockClass":"links-text",
+      "text": "FAQ"
+    }
+  }, */
+  "link#legal-issues": {
+    "props": {
+      "label": "Mention Légales",
+      "href": "/mentions-legales",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "menu_footer_click",
+      "analyticsType": "",
+      "isPrevent": false,
+      "clickArea": "footer",
+      "blockClass": ["footer-item"]
+    }
+    //"children": ["rich-text#li-text"]
+  },
+  // "rich-text#li-text": {
+  //   "props": {
+  //     "blockClass": "links-text",
+  //     "text": "Mention Légales"
+  //   }
+  // },
+  "link#doittogether": {
+    "props": {
+      "label": "#DoItTogether",
+      "href": "/do-it-together",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "menu_footer_click",
+      "analyticsType": "",
+      "isPrevent": false,
+      "clickArea": "footer",
+      "blockClass": ["footer-item"]
+    }
+    //"children": ["rich-text#dit-text"]
+  },
+  // "rich-text#dit-text": {
+  //   "props": {
+  //     "blockClass": "links-text",
+  //     "text": "#DoItTogether"
+  //   }
+  // },
+  "link#spare-parts": {
+    "props": {
+      "href": "https://pieces-detachees.indesit.fr/"
+    },
+    "children": ["rich-text#spare-parts-text"]
+  },
+  "rich-text#spare-parts-text": {
+    "props": {
+      "blockClass": "links-text",
+      "text": "Pièces détachées"
+    }
+  },
+  /* ---------------------- FOLLOW US ROW ---------------------------- */
+  "flex-layout.row#follow-us-row-mobile": {
+    "props": {
+      "preventHorizontalStretch": true,
+      "blockClass": "followUsRowMobile"
+    },
+    "children": ["rich-text#follow-us-text-mobile", "social-networks#mobile"]
+  },
+  /* ---------------------- FOLLOW US ---------------------------- */
+  "rich-text#follow-us-text-mobile": {
+    "props": {
+      "blockClass": "followUsTextMobile",
+      "text": "Suivez-nous"
+    }
+  },
+  /* ---------------------- SOCIAL NETWORKS MOBILE ---------------------------- */
+  "social-networks#mobile": {
+    "props": {
+      "blockClass": "social-icons-mobile",
+      "socialNetworks": [
+        {
+          "name": "Facebook",
+          "url": "https://www.facebook.com/IndesitFrance/",
+          "target": "_blank"
+        },
+        {
+          "name": "Instagram",
+          "url": "https://www.instagram.com/indesit_fr/",
+          "target": "_blank"
+        },
+        {
+          "name": "Youtube",
+          "url": "https://www.youtube.com/channel/UCjgIGtiZmEPAbUqf-EhwGpQ",
+          "target": "_blank"
+        }
+      ]
+    }
+  }
+}

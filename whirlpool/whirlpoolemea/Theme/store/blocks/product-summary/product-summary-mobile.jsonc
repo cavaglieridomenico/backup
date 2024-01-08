@@ -1,0 +1,405 @@
+{
+  "product-summary.shelf.product-comparison#searchMobile": {
+    "children": [
+      "flex-layout.row#collection-badges",
+      // "flex-layout.row#promotionCashbackNew-178-PLP",
+      "flex-layout.row#row-promo-collection-badges-plp",
+      "flex-layout.row#row-collection-badges-plp",
+      "flex-layout.row#imageAndPriceMobile",
+      "vtex.store-components:product-name#summary",
+      "flex-layout.col#commercialCodeMobile",
+      "flex-layout.col#WPROkeyMobile"
+    ]
+  },
+  "flex-layout.row#imageAndPriceMobile": {
+    "props": {
+      "blockClass": "imageAndPriceMobile"
+    },
+    "children": [
+      "flex-layout.col#imageMobile",
+      "flex-layout.col#plpPriceMobile"
+    ]
+  },
+  "flex-layout.col#imageMobile": {
+    "props": {
+      "blockClass": "imageMobile"
+    },
+    "children": [
+      "product-summary-image#shelfMobile"
+    ]
+  },
+  "product-summary-image#shelfMobile": {
+    "props": {
+      "showBadge": false,
+      "aspectRatio": "1:1",
+      "width": {
+        "mobile": 150,
+        "desktop": 266
+      },
+      "height": {
+        "mobile": 150,
+        "desktop": 266
+      },
+      "maxHeight": {
+        "mobile": 150,
+        "desktop": 266
+      },
+      "blockClass": "productImageMobile"
+    }
+  },
+  "flex-layout.col#plpPriceMobile": {
+    "children": [
+      "condition-layout.product#pricePLPMobile",
+      // "flex-layout.col#priceAndPostillaMobile",
+      "condition-layout.product#isAccessorioEtichetteMobile"
+    ],
+    "props": {
+      "blockClass": [
+        "plpPriceColMobile"
+      ]
+    }
+  },
+  "condition-layout.product#pricePLPMobile": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "sellable",
+            "value": "true"
+          }
+        }
+      ],
+      "Then": "flex-layout.col#priceAndPostillaMobile"
+    }
+  },
+  "flex-layout.col#priceAndPostillaMobile": {
+    "children": [
+      "product-summary-price#mobile",
+      "rich-text#pricePostillaMobile"
+    ],
+    "props": {
+      "blockClass": ""
+    }
+  },
+  "product-summary-price#mobile": {
+    "props": {
+      "showListPrice": true,
+      "blockClass": "priceUnavailableProdMobile"
+    }
+  },
+  "rich-text#pricePostillaMobile": {
+    "props": {
+      "text": " **Kwota uwzględnia podatek VAT oraz rabaty",
+      "blockClass": "pricePostillaMobile"
+    }
+  },
+  "flex-layout.col#commercialCodeMobile": {
+    "children": [
+      "flex-layout.row#commercialCodeMobile"
+    ],
+    "props": {
+      "blockClass": [
+        "commercialCodeColMobile"
+      ]
+    }
+  },
+  "flex-layout.row#commercialCodeMobile": {
+    "children": [
+      "flex-layout.col#commercialCode",
+      "product-rating-inline.bazaarvoice"
+    ],
+    "props": {
+      "blockClass": [
+        "commercialCodeRow",
+        "commercialCodeRowMobile"
+      ],
+      "preserveLayoutOnMobile": true
+    }
+  },
+  "flex-layout.col#WPROkeyMobile": {
+    "children": [
+      "flex-layout.row#WPROKeyMobile"
+    ],
+    "props": {
+      "paddingLeft": 5,
+      "blockClass": "WPROKeyColMobile"
+    }
+  },
+  "flex-layout.row#WPROKeyMobile": {
+    "children": [
+      "flex-layout.col#WPROkeyMobilecontent"
+    ]
+  },
+  "flex-layout.col#WPROkeyMobilecontent": {
+    "children": [
+      "condition-layout.product#inStockLabel",
+      "product-specification-group#WPROkeyMobile"
+    ],
+    "props": {
+      "blockClass": "WPROkeyColMobilecontent"
+    }
+  },
+  "product-specification-group#WPROkeyMobile": {
+    "children": [
+      // "condition-layout.product#inStockLabelMobile",
+      "product-specification#WPROKeyMobile"
+    ],
+    "props": {
+      "filter": {
+        "specificationGroups": [
+          "SalesFeature"
+        ],
+        "type": "show"
+      }
+    }
+  },
+  "condition-layout.product#inStockLabelMobile": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "sellable",
+            "value": "true"
+          }
+        }
+      ],
+      "Then": "condition-layout.product#inStockLabelSecondMobile",
+      "Else": "rich-text#outOfStockMobile"
+    }
+  },
+  "condition-layout.product#inStockLabelSecondMobile": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "Do kupienia online",
+            "value": "Sklep whirlpool.pl"
+          }
+        }
+      ],
+      "Then": "rich-text#inStockMobile",
+      "Else": "rich-text#outOfStockMobile"
+    }
+  },
+  "rich-text#outOfStockMobile": {
+    "props": {
+      "text": "Produkt tymczasowo niedostępny",
+      "blockClass": [
+        "notInStockPropMobile"
+      ]
+    }
+  },
+  "rich-text#inStockMobile": {
+    "props": {
+      "text": "En stock",
+      "blockClass": [
+        "inStockPropMobile"
+      ]
+    }
+  },
+  "product-specification#WPROKeyMobile": {
+    "children": [
+      "product-specification-values#WPROKeyMobile"
+    ]
+  },
+  "product-specification-values#WPROKeyMobile": {
+    "children": [
+      "product-specification-text#WPROKeyvalueMobile"
+    ]
+  },
+  "product-specification-text#WPROKeyvalueMobile": {
+    "props": {
+      "message": "{specificationValue}",
+      "blockClass": [
+        "wProKeyValueMobile"
+      ]
+    }
+  },
+  "condition-layout.product#isAccessorioEtichetteMobile": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "2"
+          }
+        },
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "13"
+          }
+        },
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "11"
+          }
+        },
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "10"
+          }
+        },
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "14"
+          }
+        },
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "9"
+          }
+        },
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "12"
+          }
+        },
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "15"
+          }
+        },
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "39"
+          }
+        },
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "34"
+          }
+        },
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "37"
+          }
+        },
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "35"
+          }
+        },
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "36"
+          }
+        },
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "33"
+          }
+        },
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "32"
+          }
+        },
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "42"
+          }
+        },
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "41"
+          }
+        },
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "40"
+          }
+        },
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "29"
+          }
+        },
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "31"
+          }
+        },
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "30"
+          }
+        },
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "38"
+          }
+        }
+      ],
+      "matchType": "any",
+      "Then": "flex-layout.row#etichettePlaceHolderMobile",
+      "Else": "flex-layout.row#etichetteMobile"
+    }
+  },
+  "flex-layout.row#etichettePlaceHolderMobile": {
+    "props": {
+      "blockClass": [
+        "etichetteRowMobile"
+      ]
+    }
+  },
+  "flex-layout.row#etichetteMobile": {
+    "props": {
+      "blockClass": [
+        "etichetteRowMobile"
+      ]
+    },
+    "children": [
+      "flex-layout.col#energyMobile",
+      // "flex-layout.col#indexRepairabilityMobile",
+      "flex-layout.col#garantieLogoMobile"
+    ]
+  },
+  // "flex-layout.col#indexRepairabilityMobile": {
+  //   "children": ["image-from-specification#indexRepairability"],
+  //   "props": {
+  //     "blockClass": ["colIndexRepairabilityMobile"]
+  //   }
+  // },
+  "flex-layout.col#energyMobile": {
+    "children": [
+      "condition-layout.product#etichetta-image"
+    ],
+    "props": {
+      "blockClass": [
+        "colIndexRepairabilityMobile"
+      ]
+    }
+  },
+  "flex-layout.col#garantieLogoMobile": {
+    "children": [
+      "condition-layout.product#showGarantie"
+    ],
+    "props": {
+      "blockClass": "garantieLogoRowMobile"
+    }
+  }
+}

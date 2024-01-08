@@ -1,0 +1,171 @@
+/* .attribute, */
+.container {
+  /* width: 4.6rem; */
+  width: auto;
+}
+.itwhirlpool-slider-layout-0-x-slide .container {
+  display: none;
+}
+.value {
+  color: #505050;
+  padding: 0;
+  font-family: "myriadRegular";
+  line-height: 1.5;
+}
+.valueNotAvailable {
+  color: #505050;
+  padding: 0;
+  font-family: "myriadLight";
+  line-height: 1.5;
+}
+:global(.vtex-flex-layout-0-x-flexColChild--summary-right) .valueNotAvailable {
+  color: #505050;
+  padding: 0;
+  font-family: "myriadLight";
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+
+:global(.vtex-slider-layout-0-x-sliderLayoutContainer--shelf) :global(.vtex-flex-layout-0-x-flexColChild--summary-right) .valueNotAvailable {
+  color: #505050;
+  padding: 0;
+  font-family: "myriadLight";
+  line-height: 1.5;
+  font-size: 0.875rem;
+  margin-right: 1.5rem;
+}
+.attribute {
+  text-align: right;
+  font-family: "myriadRegular";
+}
+:global(.vtex-flex-layout-0-x-flexColChild--prezzoCol) .value {
+  color: #505050;
+  padding: 0;
+  font-size: 1.85rem;
+  font-family: "myriadRegular";
+  line-height: 1.5;
+}
+/* :global(.vtex-flex-layout-0-x-flexColChild--prezzoCol) .value::after {
+  content: "*";
+  color: #505050;
+  text-align: right;
+  float: right;
+} */
+:global(.vtex-flex-layout-0-x-flexColChild--specProps) .value {
+  font-size: 0.875rem;
+  font-family: "myriadLight";
+  white-space: nowrap;
+}
+:global(.vtex-flex-layout-0-x-flexColChild--specProps) .attribute {
+  background: #f9f9f9;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+  margin-right: 0.5rem;
+  width: fit-content;
+}
+
+:global(.vtex-flex-layout-0-x-flexRowContent--row-tertiary) :global(.vtex-flex-layout-0-x-flexColChild--specProps) .attribute {
+  background: transparent;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+  margin-right: 0.5rem;
+  width: fit-content;
+}
+
+:global(.vtex-slider-layout-0-x-sliderLayoutContainer--shelf) :global(.vtex-flex-layout-0-x-flexRowContent--row-tertiary) :global(.vtex-flex-layout-0-x-flexColChild--specProps) .attribute {
+  background: transparent;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+  width: max-content;
+  margin-right: 12rem;
+}
+:global(.vtex-flex-layout-0-x-flexRowContent--dimensioni) .attribute {
+  text-align: left;
+}
+:global(.vtex-flex-layout-0-x-flexColChild--specProps) .container {
+  width: auto;
+  margin-bottom: 0.5rem;
+}
+
+:global(.vtex-flex-layout-0-x-flexColChild--inStockProp) .value {
+  position: relative;
+  margin-left: 0.8rem;
+}
+:global(.vtex-flex-layout-0-x-flexColChild--inStockProp) .value::before {
+  content: "";
+  position: absolute;
+  left: -0.8rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: #6dd400;
+}
+
+:global(.vtex-flex-layout-0-x-flexRowContent--row-tertiary) :global(.vtex-flex-layout-0-x-flexColChild--inStockProp) .value::after  {
+  content: ": consegna in 4-6 giorni lavorativi";
+  }
+
+:global(.vtex-flex-layout-0-x-flexColChild--inStockProp) .valueNotAvailable {
+  position: relative;
+  margin-left: 0.8rem;
+}
+:global(.vtex-flex-layout-0-x-flexColChild--inStockProp)
+  .valueNotAvailable::before {
+  content: "";
+  position: absolute;
+  left: -0.8rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: red;
+}
+:global(.vtex-flex-layout-0-x-flexRowContent--mobilePriceOOS) .value {
+  font-family: "myriadSemibold";
+  font-size: 1.5rem;
+}
+
+/* Media Queries */
+@media only screen and (min-width: 1026px) { 
+  :global(.vtex-flex-layout-0-x-flexColChild--inStockProp) .value {
+  position: relative;
+  margin-left: 0.8rem;
+  display: none;
+}
+ :global(.vtex-flex-layout-0-x-flexRow--row-tertiary) :global(.vtex-flex-layout-0-x-flexColChild--inStockProp) .value {
+  position: relative;
+  margin-left: 0.8rem;
+  display: block !important;
+  /* display: none; */
+}
+
+}
+@media only screen and (min-width: 1026px) and (max-width: 1300px) {
+ :global(.vtex-flex-layout-0-x-flexRowContent--row-tertiary) :global(.vtex-flex-layout-0-x-flexColChild--inStockProp) .value::after  {
+  content: " consegna in 4-6 giorni lavorativi";
+  display: block;
+  }
+  
+:global(.vtex-flex-layout-0-x-flexRowContent--row-tertiary) :global(.vtex-flex-layout-0-x-flexColChild--inStockProp) .value::before {
+  content: "";
+  position: absolute;
+  left: 6.2rem;
+  top: 25%;
+  transform: translateY(-50%);
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: #6dd400;
+}
+:global(.vtex-slider-layout-0-x-sliderLayoutContainer--shelf) :global(.vtex-flex-layout-0-x-flexRowContent--row-tertiary) :global(.vtex-flex-layout-0-x-flexColChild--specProps) .attribute {
+  background: transparent;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+  width: max-content;
+  margin-right: 7rem;
+}
+}
+

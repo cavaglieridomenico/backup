@@ -1,0 +1,208 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- My account gdpr-->
+<script type="text/javascript">
+  ; (function () {
+    var pushState = history.pushState;
+    var replaceState = history.replaceState;
+
+    history.pushState = function () {
+      pushState.apply(history, arguments);
+      window.dispatchEvent(new Event('pushstate'));
+      window.dispatchEvent(new Event('locationchange'));
+    };
+
+    history.replaceState = function () {
+      replaceState.apply(history, arguments);
+      window.dispatchEvent(new Event('replacestate'));
+      window.dispatchEvent(new Event('locationchange'));
+    };
+
+    window.addEventListener('popstate', function () {
+      window.dispatchEvent(new Event('locationchange'))
+    });
+  })();
+  const replaceFsp = () => {
+    let freeServicesQuery = 'tr.vtex-my-orders-app-3-x-bundleItem'
+    let freeServicesPriceQuery = 'td.pl1.pt3.tl.v-top.v-mid'
+    waitForEl(freeServicesQuery, () => {
+      let freeServices = $('tr.vtex-my-orders-app-3-x-bundleItem')
+      let freeServicesPrice = $('td.pl1.pt3.tl.v-top.v-mid')
+      freeServices.each(function(element) {
+        if($(this).find(freeServicesPrice)) {
+          let foundFsp = $(this).find(freeServicesPrice)
+          if (foundFsp.text() == "0,00 €") {
+            foundFsp.text("Inclus")
+          }
+        }
+      })
+    })
+  }
+
+  const addDefaultServices = () => {
+    let productRowQuery = '.vtex-my-orders-app-3-x-productRow'
+    let rendered = false
+    waitForEl(productRowQuery, () => {
+      let productRow = $(productRowQuery)
+      let hasLivraison = false
+      let hasGarantie = false
+      let livraisonText = "Livraison à domicile"
+      let garantieText = "Garantie 2 ans"
+      let LivraisonRowHtml = '<tr class="vtex-my-orders-app-3-x-bundleItem myo-bundle-item bt bw1 b--muted-5"><td class="tl v-top pv3 v-mid overflow-hidden"><div class="ml3 fl overflow-hidden w-80-ns"><p class="fw7 f6 mb0">Livraison à domicile</p></div></td><td class="pv3 tl v-top dn dtc-ns"></td><td></td><td class="pl1 pt3 tl v-top v-mid">Inclus</td></tr>'
+      let GarantieRowHtml = '<tr class="vtex-my-orders-app-3-x-bundleItem myo-bundle-item bt bw1 b--muted-5"><td class="tl v-top pv3 v-mid overflow-hidden"><div class="ml3 fl overflow-hidden w-80-ns"><p class="fw7 f6 mb0">Garantie 2 ans</p></div></td><td class="pv3 tl v-top dn dtc-ns"></td><td></td><td class="pl1 pt3 tl v-top v-mid">Inclus</td></tr>'
+      productRow.each(function(element) {
+        if($(this).hasClass("rdy") == false) {
+          $(this).after(LivraisonRowHtml)
+          $(this).after(GarantieRowHtml)
+          $(this).addClass("rdy")
+        }
+      })
+    } )
+  }
+  // replace free services price with "inclus" instead of "0.00€"
+
+  const modifyEditButton = () => {
+    let editButtonQuery = '.vtex-button__label.flex.items-center.justify-center.h-100.ph5'
+    waitForEl(editButtonQuery, () => {
+      let editButton = $('.vtex-button__label.flex.items-center.justify-center.h-100.ph5')
+      editButton.each(function(element) {
+        // Only change Modifier buttons
+        if($(this).text() == "Modifier") {
+          $(this).addClass('bg-action-primary')
+          $(this).removeClass('c-action-primary')
+          $(this).addClass('bg-action-primary c-on-action-primary br2')
+          }
+      })
+  })
+}
+  const modifyOrderDetailButton = () => {
+    let orderDetailButtonQuery = '.vtex-my-orders-app-3-x-detailsBtn'
+    waitForEl(orderDetailButtonQuery, () => {
+      let orderDetailButton = $(orderDetailButtonQuery)
+        // Only change details buttons
+        if(orderDetailButton.text() == "Afficher les détails de la commande") {
+          orderDetailButton.removeClass('bg-action-secondary c-on-action-secondary')
+          orderDetailButton.addClass('bg-action-primary c-on-action-primary ')
+          orderDetailButton.css( "background-color", "#edb112" )
+          }
+  })
+}
+const setEditButtonInterval = () => {
+  setInterval(() => {
+modifyEditButton()
+  }, 1000)
+}
+
+const modifyBundleItems = () => {
+  let bundleItemNames = ".vtex-my-orders-app-3-x-bundleItem > td > div > p";
+  waitForEl(bundleItemNames, () => {
+    let elements = $(bundleItemNames);
+    elements.each(function (index, element) {
+      let el = element;
+      let text = $(this).text();
+      $(this).text(removeBundlePrefix(text));
+    });
+  });
+};
+
+const removeBundlePrefix = (bundleName) => {
+  return bundleName
+    .replace("O2P_", "")
+    .replace("EPP_", "")
+    .replace("VIP_", "")
+    .replace("FF_", "");
+};
+const modifyConsent = () => {
+  if (
+    window.location.href.indexOf("account") > 0 &&
+    window.location.hash &&
+    window.location.hash == "#/profile"
+  ) {
+    waitForEl(".vtex-my-account-1-x-newsletterContainerMessage", function () {
+      $(".vtex-my-account-1-x-newsletterContainerTitle")
+        .text("")
+        .append(
+          '<span style="text-decoration:underline; font-weight: bolder;">Centre de préférences marketing.</span><br> <span>Vous pouvez décider si vous souhaitez continuer à recevoir des communications marketing de Whirlpool France SAS. Définissez vos préférences ci-dessous, elles seront enregistrées automatiquement.</span>'
+        );
+      $(".vtex-my-account-1-x-newsletterContainerMessage").text(
+        "J'ai lu et compris le contenu de la "
+      );
+      var optin =
+        '<span><a class=\'vtex-rich-text-0-x-link vtex-rich-text-0-x-link--spaziature-impaginazione vtex-rich-text-0-x-link--paragraph-text-page\' href=" /pages/politique-de-protection-des-donnees-a-caractere-personnel" target="_blank">Politique de protection des données à caractère personnel</a> et :</span>';
+      $(optin).appendTo($(".vtex-my-account-1-x-newsletterContainerMessage"));
+      $("label[for='newsletterOptIn']").html(
+        `je consens au traitement de mes données personnelles pour permettre à Whirlpool France S.A.S. de m'envoyer des bulletins d'information/communications marketing (sous forme électronique et non électronique, y compris par téléphone, courrier traditionnel, e-mail, SMS, MMS, notifications push sur des sites tiers, y compris sur les plateformes Facebook et Google) concernant les produits et services de Whirlpool France S.A.S. même achetés ou enregistrés par vous.`
+      );
+    });
+
+    waitForEl("#newsletterOptIn", function () {
+      const checkbox = document.getElementById("newsletterOptIn");
+
+      checkbox.addEventListener("change", (event) => {
+        event.stopPropagation();
+        event.stopImmediatePropagation();
+        window.dataLayer = window.dataLayer || [];
+        if (event.currentTarget.checked) {
+          window.dataLayer.push({
+            event: "optin_granted",
+          });
+          //GA4FUNREQ61
+          const ga4Data = {
+            eventName: 'vtex:ga4-optin'
+          }
+	        window.postMessage(ga4Data, window.origin)
+        }
+      });
+    });
+  }
+};
+
+  window.addEventListener('locationchange', function () {
+    modifyConsent();
+    replaceFsp();
+    modifyOrderDetailButton();
+    modifyBundleItems();
+    setEditButtonInterval();
+    addDefaultServices();
+  })
+  $(document).on('focus', '.vtex-address-form__state input', function () {
+    $('.vtex-address-form__state input').attr('maxLength', 2)
+  })
+  window.addEventListener('DOMContentLoaded', function () {
+    modifyConsent();
+    replaceFsp();
+    modifyOrderDetailButton();
+    modifyBundleItems();
+    setEditButtonInterval();
+    addDefaultServices();
+  });
+  window.addEventListener('hashchange', () => {
+  waitForEl(".vtex-my-account-1-x-newsletterContainerMessage", function () {
+      $(".vtex-my-account-1-x-newsletterContainerTitle")
+        .text("")
+        .append(
+          '<span style="text-decoration:underline; font-weight: bolder;">Centre de préférences marketing.</span><br> <span>Vous pouvez décider si vous souhaitez continuer à recevoir des communications marketing de Whirlpool France SAS. Définissez vos préférences ci-dessous, elles seront enregistrées automatiquement.</span>'
+        );
+      $(".vtex-my-account-1-x-newsletterContainerMessage").text(
+        "J'ai lu et compris le contenu de la "
+      );
+      var optin =
+        '<span><a class=\'vtex-rich-text-0-x-link vtex-rich-text-0-x-link--spaziature-impaginazione vtex-rich-text-0-x-link--paragraph-text-page\' href=" /pages/politique-de-protection-des-donnees-a-caractere-personnel" target="_blank">Politique de protection des données à caractère personnel</a> et :</span>';
+      $(optin).appendTo($(".vtex-my-account-1-x-newsletterContainerMessage"));
+      $("label[for='newsletterOptIn']").html(
+        `je consens au traitement de mes données personnelles pour permettre à Whirlpool France S.A.S. de m'envoyer des bulletins d'information/communications marketing (sous forme électronique et non électronique, y compris par téléphone, courrier traditionnel, e-mail, SMS, MMS, notifications push sur des sites tiers, y compris sur les plateformes Facebook et Google) concernant les produits et services de Whirlpool France S.A.S. même achetés ou enregistrés par vous.`
+      );
+    });
+}, false);
+
+var waitForEl = function (selector, callback) {
+  if (jQuery(selector).is(":visible") || jQuery(selector).length > 0) {
+    callback();
+  } else {
+    setTimeout(function () {
+      waitForEl(selector, callback);
+    }, 100);
+  }
+};
+
+</script>

@@ -1,0 +1,211 @@
+.styledLinkContent {
+    width: 250px;
+    line-height: 0px;
+}
+
+.styledLinkContent--first-level-category {
+    width: auto;
+}
+
+.styledLinkContent--main-menu-category {
+    width: auto;
+}
+
+.styledLinkContent:hover {
+    color: #3AB5BE;
+}
+
+.styledLinkContainer:hover {
+    padding-bottom: 35px;
+    border-bottom: 4px solid #3AB5BE;
+}
+
+.styledLinkContainer:focus {
+    border-bottom: 4px solid #3AB5BE;
+}
+
+.styledLinkContainer--main-menu-category {
+    border-bottom: 0px;
+}
+
+
+/* This is the dropdown icon modification css */
+
+:global(.vtex-dropdown__arrow) {
+    width: 40px;
+    background-color: #3AB5BE;
+    color: white;
+    padding-left: 10px;
+}
+
+:global(.vtex-dropdown__button) {
+    padding: 0 0 0 10px;
+}
+
+.menuItem {
+    display: flex;
+    height: 40px;
+    margin-bottom: 5px;
+}
+
+.submenuWrapper {
+    position: absolute;
+    top: 154px;
+    background-color: #fff;
+    width: 100%;
+    height: 320px;
+    align-items: baseline;
+    padding-left: 165px;
+    border-bottom: 2px solid #d5d5d5;
+    z-index: 9999;
+}
+
+.submenuWrapper .styledLinkContainer:hover {
+    padding-bottom: 0;
+}
+
+.submenuWrapper :global(.vtex-menu-2-x-submenuWrapper--isOpen) {
+    position: absolute;
+    left: 299px;
+    top: 0px;
+    background-color: #fff;
+    height: auto;
+    margin-left: 155px;
+    border: none;
+    padding-left: 0;
+}
+
+.submenuWrapper .menuItem::after {
+    content: ">";
+    font-size: 19px;
+    transform: rotate(90deg);
+    transition: 0.2s;
+    color: #3AB5BE;
+    margin-left: -41px;
+}
+
+.submenuWrapper .menuItem:hover::after {
+    transform: rotate(-0deg);
+    margin-top: 5px;
+    margin-left: -35px;
+}
+
+.submenuWrapper .submenuWrapper--isOpen .menuItem::after {
+    display: none;
+}
+
+.submenuWrapper .styledLinkContainer {
+    border-bottom: 1px solid #d5d5d5;
+}
+
+.submenuWrapper .styledLinkContainer:hover {
+    border-bottom: 1px solid #d5d5d5;
+}
+
+.styledLinkContainer {
+    display: flex;
+}
+
+.menuContainer {
+    padding-top: 10px;
+}
+
+.menuContainer .styledLinkContainer::after {
+    display: none;
+}
+
+.menuItem--main-menu-category {
+    align-items: flex-end;
+}
+
+.menuItem:hover .styledLinkContainer::after {
+    transform: rotate(0deg);
+    margin: 0 4px 1px 0;
+}
+
+.submenu .styledLinkContainer::after {
+    display: none;
+}
+
+.submenuContainer {
+    position: absolute;
+    top: 1px;
+    border: none;
+    width: 100%;
+    left: 0;
+}
+
+.submenuContainer .styledLinkContainer {
+    margin-bottom: 8px;
+}
+
+:global(.vtex-toast-container) {
+    top: 0 !important;
+    left: 40% !important;
+    max-height: 60px;
+}
+
+:global(.vtex-toast) {
+    background: #3AB5BE;
+    color: white;
+}
+
+.menuItem--top-menu {
+    width: 100px !important;
+}
+
+.styledLink--top-menu {
+    display: flex;
+    padding-top: 12px;
+}
+
+.styledLinkContent--top-menu {
+    width: 100% !important;
+}
+
+@media only screen and (max-width: 1024px) {
+    .styledLinkContainer,
+    .styledLink,
+    .styledLinkContent {
+        width: 100%;
+    }
+    .menuItem:hover .styledLinkContainer::after {
+        margin-top: 10px;
+        transform: none;
+    }
+    .menuItem--mobileMenuItem {
+        width: 100%;
+    }
+    .styledLink--mobileMenuItem {
+        padding-top: 10px;
+    }
+    .menuContainer {
+        flex-direction: column;
+    }
+    .submenuWrapper {
+        padding-left: 0;
+        top: -28px;
+        display: block!important;
+        left: 0;
+        border-top: 1px solid #d5d5d5;
+        border-bottom: 2px solid #d5d5d5;
+    }
+    .submenuWrapper .submenuWrapper {
+        display: none!important;
+    }
+    .styledLinkContainer {
+        margin: 0;
+        padding: 0 20px;
+    }
+    .menuItem::after {
+        margin-top: -5px;
+        transform: rotate(0deg) !important;
+    }
+    .styledLinkContent {
+        line-height: 19px;
+    }
+    .submenuWrapper .menuItem:hover::after {
+        margin-top: -5px;
+        margin-left: -41px;
+    }
+}

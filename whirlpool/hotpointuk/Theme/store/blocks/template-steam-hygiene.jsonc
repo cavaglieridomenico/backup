@@ -1,0 +1,269 @@
+{
+  "store.custom#template-steam-hygiene": {
+    "blocks": [
+      "responsive-layout.desktop#steam",
+      "responsive-layout.mobile#steam",
+      // PART BEFORE FOOTER
+      "experimental__visibility-layout#support-box-title",
+      "experimental__visibility-layout#support-box",
+      "flex-layout.row#newsletter-row"
+    ]
+  },
+  "responsive-layout.desktop#steam": {
+    "title":"[LAYOUT] - Desktop",
+    "children": [
+      "flex-layout.row#bread-steam",
+      "experimental__visibility-layout#bannerWithPostilla",
+      "experimental__visibility-layout#bannerTesto903",
+      "experimental__visibility-layout#gridHome5Offers",
+      "list-context.product-list#suggestions-bestSellers-steam",
+      "experimental__visibility-layout#gridHomeTechnology",
+      "experimental__visibility-layout#videoSteam",
+      "experimental__visibility-layout#titleBannerPrePlp",
+      "experimental__visibility-layout#titleBannerPrePlpReverse",
+      "experimental__visibility-layout#titleBannerPrePlp2",
+      "__fold__.experimentalLazyAssets",
+      "experimental__visibility-layout#bannerTestoFullRange"
+    ]
+  },
+  "responsive-layout.mobile#steam": {
+    "title":"[LAYOUT] - Mobile",
+    "children": [
+      "flex-layout.row#bread-steam",
+      "experimental__visibility-layout#bannerWithPostilla",
+      "experimental__visibility-layout#bannerTesto903",
+      "experimental__visibility-layout#gridHome5Offers",
+      "list-context.product-list#suggestions-bestSellers-steam-tablet",
+      "experimental__visibility-layout#gridHomeTechnology",
+      "experimental__visibility-layout#videoSteam",
+      "experimental__visibility-layout#titleBannerPrePlp",
+      "experimental__visibility-layout#titleBannerPrePlpReverse",
+      "experimental__visibility-layout#titleBannerPrePlp2",
+      "__fold__.experimentalLazyAssets",
+      "experimental__visibility-layout#bannerTestoFullRange"
+    ]
+  },
+  "flex-layout.row#bread-steam": {
+    "title":"[ROW] - Breadcrumb",
+    "children": [
+      "link#home",
+      "image#arrowBread",
+      "link#2level",
+      "experimental__visibility-layout#arrowBread",
+      "experimental__visibility-layout#3level-steam"
+    ],
+    "props": {
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true,
+      "blockClass": "breadCustom"
+    }
+  },
+  "experimental__visibility-layout#3level-steam": {
+    "title":"[EXPERIMENTAL-VISIBILITY] - 3 Level",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "link#3level-steam"
+    ]
+  },
+  "link#3level-steam": {
+    "title":"[LINK] - 3 Level",
+    "props": {
+      "href": "/",
+      "label": "3level",
+      "blockClass": [
+        "breadLink",
+        "breadBold"
+      ]
+    }
+  },
+  "list-context.product-list#suggestions-bestSellers-steam": {
+    "title":"[PRODUCT-LIST] - Suggestion Best Seller",
+    "blocks": [
+      //"product-summary.shelf"
+      "product-summary.shelf#bestSeller"
+    ],
+    "children": [
+      "slider-layout#steamHygiene"
+    ],
+    "props": {
+      "collection": "140"
+    }
+  },
+  "slider-layout#steamHygiene": {
+    "title":"[SLIDER] - Steam Hygiene",
+    "props": {
+      "itemsPerPage": {
+        "desktop": 6,
+        "tablet": 2,
+        "phone": 1
+      },
+      "showNavigationArrows": "never",
+      "infinite": true,
+      "fullWidth": false,
+      "blockClass": "shelf-steam"
+    }
+  },
+  "list-context.product-list#suggestions-bestSellers-steam-tablet": {
+    "title":"[PRODUCT-LIST] - Suggestion Best Seller Tablet",
+    "blocks": [
+      "product-summary.shelf#bestSeller"
+      //"product-summary.shelf"
+    ],
+    "children": [
+      "slider-layout#steamHygiene-tablet"
+    ],
+    "props": {
+      "collection": "140"
+    }
+  },
+  "slider-layout#steamHygiene-tablet": {
+    "title":"[SLIDER] - Steam Hygiene Tablet",
+    "props": {
+      "itemsPerPage": {
+        "tablet": 2,
+        "phone": 1
+      },
+      "showNavigationArrows": "never",
+      "infinite": true,
+      "fullWidth": false,
+      "blockClass": "shelf"
+    }
+  },
+  "experimental__visibility-layout#videoSteam": {
+    "title":"[EXPERIMENTAL-VISIBILITY] - Video",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "flex-layout.row#videoSteam"
+    ]
+  },
+  "flex-layout.row#videoSteam": {
+    "title":"[ROW] - Video",
+    "props": {
+      "blockClass": [
+        "videoSteam"
+      ],
+      "fullWidth": "true"
+    },
+    "children": [
+      "video#steam-hygiene"
+    ]
+  },
+  "video#steam-hygiene": {
+    "title":"[VIDEO] - Steam Hygiene",
+    "props": {
+      "width": "90%",
+      "loop": false,
+      "autoPlay": false,
+      "muted": false,
+      "src": "https://www.youtube.com/watch?v=CRCzSYN6JNg&t=1s",
+      "blockClass": "videoSteam"
+    }
+  },
+  "experimental__visibility-layout#bannerTestoFullRange": {
+    "title":"[EXPERIMENTAL-VISIBILITY] - Banner Text full range",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "flex-layout.row#bannerTestoFullRange"
+    ]
+  },
+  "flex-layout.row#bannerTestoFullRange": {
+    "title":"[ROW] - Banner Text full range",
+    "props": {
+      "blockClass": [
+        "bannerTesto",
+        "rowDirection"
+      ],
+      "fullWidth": "true"
+    },
+    "children": [
+      "flex-layout.col#leftPartFullRange",
+      "flex-layout.col#rightPartFullRange"
+    ]
+  },
+  "flex-layout.col#leftPartFullRange": {
+    "title":"[COL] - Left part full range",
+    "props": {
+      "blockClass": "firstColFull",
+      "width": "30%"
+    },
+    "children": [
+      "rich-text#BannTitleWCollection4Porte",
+      "rich-text#BannDescWCollection4Porte",
+      "experimental__visibility-layout#ButtonBannerTitleBannerSteam"
+    ]
+  },
+  "flex-layout.col#rightPartFullRange": {
+    "title":"[COL] - Right part full range",
+    "props": {
+      "blockClass": "secondColFull",
+      "width": "70%"
+    },
+    "children": [
+      "experimental__visibility-layout#ImageFullRange"
+    ]
+  },
+  "experimental__visibility-layout#ImageFullRange": {
+    "title":"[EXPERIMENTAL-VISIBILITY] - Image full range",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "image#imageFullRange"
+    ]
+  },
+  "image#imageFullRange": {
+    "title":"[IMAGE] - Image Full range",
+    "props": {
+      "src": "assets/fullRangeImg.jpg",
+      "maxHeight": "",
+      "maxWidth": "",
+      "blockClass": "storePrint"
+    }
+  },
+  "link#ButtonFullRange": {
+    "title":"[LINK] - Button Full Range",
+    "props": {
+      "label": "TESTO BOTTONE",
+      "href": "#",
+      "displayMode": "button",
+      "blockClass": [
+        "postillaButton",
+        "buttonFullRange"
+      ]
+    }
+  },
+  "experimental__visibility-layout#ButtonBannerTitleBannerSteam": {
+    "title":"[EXPERIMENTAL-VISIBILITY] - Button Banner Title",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "flex-layout.col#ButtonBannerTitleBannerSteam"
+    ]
+  },
+  "flex-layout.col#ButtonBannerTitleBannerSteam": {
+    "title":"[COL] - Button Banner Title",
+    "props": {},
+    "children": [
+      "link#ButtonBannFullRange"
+    ]
+  },
+  "link#ButtonBannFullRange": {
+    "title":"[LINK] - Button Banner full range",
+    "props": {
+      "label": "VIEW FULL RANGE",
+      "href": "#",
+      "displayMode": "button",
+      "blockClass": [
+        "prePlpButton",
+        "longueButton"
+      ]
+    }
+  }
+}

@@ -1,0 +1,577 @@
+{
+  "store.custom#legal-issues-privacy-policy": {
+    "blocks": [
+      // "analytics#legal-issues",
+      "responsive-layout.desktop#legal-issues-privacy-policy",
+      "responsive-layout.mobile#legal-issues-privacy-policy"
+    ]
+  },
+  "responsive-layout.desktop#legal-issues-privacy-policy": {
+    "children": ["flex-layout.row#privacy-policy-maxi-container"]
+  },
+  "flex-layout.row#privacy-policy-maxi-container": {
+    "children": ["flex-layout.col#privacy-policy-col-maxi-container"],
+    "props": {
+      "blockClass": "privacy-policy-maxi-container-style"
+    }
+  },
+  "flex-layout.col#privacy-policy-col-maxi-container": {
+    "children": [
+      "breadcrumb-custom#privacy",
+      "flex-layout.row#privacy-policy-title-container",
+      "flex-layout.row#privacy-policy-content-container",
+      "flex-layout.row#privacy-policy-mid-content-container",
+      "flex-layout.row#privacy-policy-macro-categories-container"
+    ],
+    "props": {
+      "blockClass": "privacy-policy-col-maxi-container-style"
+    }
+  },
+  "breadcrumb-custom#privacy": {
+    "props": {
+      /* "blockClass": "containerBreadcrumbs", */
+      "firstPage": "Home",
+      "previousPage": "Warunki",
+      "previousPath": "/warunki",
+      "currentPage": "Informacja o Ochronie Prywatności"
+    }
+  },
+  "flex-layout.row#privacy-policy-title-container": {
+    "children": ["rich-text#privacy-policy-title-text"],
+    "props": {
+      "blockClass": "privacy-policy-title-container-style"
+    }
+  },
+  "rich-text#privacy-policy-title-text": {
+    "props": {
+      "text": "Informacja o Ochronie Prywatności",
+      "blockClass": "privacy-policy-title-text-style"
+    }
+  },
+  "flex-layout.row#privacy-policy-content-container": {
+    "children": ["rich-text#privacy-policy-content-text"],
+    "props": {
+      "blockClass": "privacy-policy-content-container-style"
+    }
+  },
+  "rich-text#privacy-policy-content-text": {
+    "props": {
+      "text": "Cieszymy się, że okazali Państwo zainteresowanie naszą firmą i produktami. Grupa Whirlpool (zgodnie z definicją poniżej) poważnie podchodzi do Państwa praw do ochrony danych osobowych. Dokładamy wszelkich starań, aby poprawić jakość obsługi klienta zgodnie ze wszystkimi obowiązującymi przepisami prawa i regulacjami dotyczącymi ochrony danych. Poniżej znajduje się nasza Informacja o Ochronie Prywatności, która wyjaśnia sposób przetwarzania danych osobowych. <br><br> * * * * * <br>\n\n Jesteśmy Whirlpool Polska Appliances Sp. z o.o., spółką prawa Polskie, z siedzibą w z siedzibą w ul 1 Sierpnia 6A, 02-134 Warszawa będącą częścią Whirlpool Group (**„Whirlpool”**, **„my”**). Jako administrator danych, mamy na celu dostarczenie użytkownikom naszych stron internetowych, naszych aplikacji i/lub naszych urządzeń domowych, które łączą się z Internetem (odpowiednio **„Strona Internetowa\", „Aplikacja\" i „Urządzenia Podłączone\"**) oraz wszelkim innym osobom, które z nami współpracują (**„Użytkownicy\"** lub **„Użytkownik\"**) informacji dotyczące metod wykorzystywanych do gromadzenia i przetwarzania danych osobowych, zgodnie z unijnym Ogólnym Rozporządzeniem o Ochronie Danych nr. 679/2016 (**„Rozporządzenie\"**) oraz wszelkimi innymi obowiązującymi przepisami prawa i regulacjami krajowymi. \n\n „Whirlpool Group\" oznacza Whirlpool Corporation, spółkę na prawie stanu Delaware, z globalną siedzibą pod adresem 2000 M-63, Benton Harbor, MI 49022, wraz z jej spółkami zależnymi.",
+      "blockClass": "privacy-policy-content-text-style"
+    }
+  },
+  "flex-layout.row#privacy-policy-mid-content-container": {
+    "children": [
+      "flex-layout.col#privacy-policy-title-mid-content-container"
+      /*  "flex-layout.col#privacy-policy-content-mid-content-container" */
+    ],
+    "props": {
+      "blockClass": "privacy-policy-mid-content-container-style"
+    }
+  },
+  //QUI SI DEVONO INSERIRE LE ROW CON LA DOPPIA COL
+  "flex-layout.col#privacy-policy-title-mid-content-container": {
+    "children": [
+      "flex-layout.row#privacy-policy-information-container",
+      "flex-layout.row#privacy-policy-how-we-use-container",
+      "flex-layout.row#privacy-policy-ground-container",
+      "flex-layout.row#privacy-policy-how-long-container",
+      "flex-layout.row#privacy-policy-protect-container",
+      "flex-layout.row#privacy-policy-we-share-container",
+      "flex-layout.row#privacy-policy-transfers-container",
+      "flex-layout.row#privacy-policy-rights-container",
+      "flex-layout.row#privacy-policy-contact-container"
+    ],
+    "props": {
+      "blockClass": "privacy-policy-title-mid-content-container-style"
+    }
+  },
+  //PRIMA ROW CON DOPPIA COLONNA, TITOLO A SINISTRA E CONTENUTO A DESTRA
+  "flex-layout.row#privacy-policy-information-container": {
+    "children": [
+      "flex-layout.col#privacy-policy-information-title",
+      "flex-layout.col#privacy-policy-information-content"
+    ],
+    "props": {
+      "blockClass": "privacy-policy-information-container-style"
+    }
+  },
+  "flex-layout.col#privacy-policy-information-title": {
+    "children": ["rich-text#privacy-policy-information-title-text"],
+    "props": {
+      "width": "20%",
+      "blockClass": "privacy-policy-information-title-style"
+    }
+  },
+  "flex-layout.col#privacy-policy-information-content": {
+    "children": ["rich-text#privacy-policy-information-content-text"],
+    "props": {
+      "width": "80%",
+      "blockClass": "privacy-policy-information-content-style"
+    }
+  },
+  "rich-text#privacy-policy-information-title-text": {
+    "props": {
+      "text": "**INFORMACJE, \nKTÓRE ZBIERAMY**",
+      "blockClass": "privacy-policy-information-title-text-style"
+    }
+  },
+  "rich-text#privacy-policy-information-content-text": {
+    "props": {
+      "text": "Zbieramy (1) dane osobowe udostępnione nam przez Państwa, (2) dane zbierane przez nas przy zawieraniu z Państwem umów sprzedaży i o świadczenie usług, (3) dane zbierane przez nasze call center, (4) dane dotyczące Państwa aktywności na Stronie Internetowej, w Aplikacji lub poprzez Urządzenia Podłączone oraz (5) informacje przekazane nam lub zebrane z innych źródeł. \n\n **Nie zbieramy** szczególnych kategorii danych osobowych dotyczących Państwa (np. danych dotyczących zdrowia lub danych sądowych). \n\n Więcej informacji uzyskają Państwo pod następującym: <a class='vtex-rich-text-0-x-link--privacy-policy' href=\"#linkiem\">linkiem</a>.",
+      "blockClass": "privacy-policy-information-content-text-style"
+    }
+  },
+  //SECONDA ROW CON DOPPIA COLONNA, TITOLO A SINISTRA E CONTENUTO A DESTRA
+  "flex-layout.row#privacy-policy-how-we-use-container": {
+    "children": [
+      "flex-layout.col#privacy-policy-how-we-use-title",
+      "flex-layout.col#privacy-policy-how-we-use-content"
+    ],
+    "props": {
+      "blockClass": "privacy-policy-how-we-use-container-style"
+    }
+  },
+  "flex-layout.col#privacy-policy-how-we-use-title": {
+    "children": ["rich-text#privacy-policy-how-we-use-title-text"],
+    "props": {
+      "width": "20%",
+      "blockClass": "privacy-policy-how-we-use-title-style"
+    }
+  },
+  "flex-layout.col#privacy-policy-how-we-use-content": {
+    "children": ["rich-text#privacy-policy-how-we-use-content-text"],
+    "props": {
+      "width": "80%",
+      "blockClass": "privacy-policy-how-we-use-content-style"
+    }
+  },
+  "rich-text#privacy-policy-how-we-use-title-text": {
+    "props": {
+      "text": "**W JAKI SPOSÓB \nWYKORZYSTUJEMY \nPAŃSTWA DANE**",
+      "blockClass": "privacy-policy-how-we-use-title-text-style"
+    }
+  },
+  "rich-text#privacy-policy-how-we-use-content-text": {
+    "props": {
+      "text": "Wykorzystujemy Państwa dane w celu świadczenia zamówionych usług, w tym między innymi, skontaktowania się z Państwem w przypadku problemów z bezpieczeństwem związanych ze sprzętem gospodarstwa domowego, aby umożliwić Państwu przeglądanie Strony Internetowej, używanie Aplikacji i/lub Urządzeń Podłączonych, odpowiadania na pytania i interakcję z naszymi usługami, łącznie z tymi oferowanymi za pośrednictwem call center. \n\n Tylko za Państwa zgodą możemy przetwarzać dane osobowe również w celu przesyłania Państwu spersonalizowanej komunikacji marketingowej, w tym ofert i rabatów pochodzących od nas i od naszych zaufanych partnerów, jak również nagrywać rozmowy telefoniczne wykonywane przez Państwa do naszego call center. \n\n Więcej informacji uzyskają Państwo pod następującym: <a class='vtex-rich-text-0-x-link--privacy-policy' href=\"#how-we-use\">linkiem</a>.",
+      "blockClass": "privacy-policy-how-we-use-content-text-style"
+    }
+  },
+  //TERZA ROW CON DOPPIA COLONNA, TITOLO A SINISTRA E CONTENUTO A DESTRA
+  "flex-layout.row#privacy-policy-ground-container": {
+    "children": [
+      "flex-layout.col#privacy-policy-ground-title",
+      "flex-layout.col#privacy-policy-ground-content"
+    ],
+    "props": {
+      "blockClass": "privacy-policy-ground-container-style"
+    }
+  },
+  "flex-layout.col#privacy-policy-ground-title": {
+    "children": ["rich-text#privacy-policy-ground-title-text"],
+    "props": {
+      "width": "20%",
+      "blockClass": "privacy-policy-ground-title-style"
+    }
+  },
+  "flex-layout.col#privacy-policy-ground-content": {
+    "children": ["rich-text#privacy-policy-ground-content-text"],
+    "props": {
+      "width": "80%",
+      "blockClass": "privacy-policy-ground-content-style"
+    }
+  },
+  "rich-text#privacy-policy-ground-title-text": {
+    "props": {
+      "text": "**NA JAKIEJ PODSTAWIE\n WYKORZYSTUJEMY\n PAŃSTWA DANE**",
+      "blockClass": "privacy-policy-ground-title-text-style"
+    }
+  },
+  "rich-text#privacy-policy-ground-content-text": {
+    "props": {
+      "text": "Wykorzystujemy Państwa dane wyłącznie w przypadku istnienia uzasadnionej podstawy prawnej przetwarzania danych osobowych, takiej jak: \n <ul> <li class='vtex-rich-text-0-x-ulStyle'>umożliwienie Państwu korzystania ze Strony Internetowej, Aplikacji i/lub Urządzeń Podłączonych oraz odpowiednich usług, jak również w celu spełnienia wszelkich Państwa próśb; </li> \n <li class='vtex-rich-text-0-x-ulStyle'>spełnianie zobowiązań prawnych lub ochrony uzasadnionych interesów Whirlpool;</li> \n <li class='vtex-rich-text-0-x-ulStyle'>Państwa zgoda.</li> </ul> \n Więcej informacji uzyskają Państwo pod następującym: <a class='vtex-rich-text-0-x-link--privacy-policy' href=\"#ground\">linkiem</a>.",
+      "blockClass": "privacy-policy-ground-content-text-style"
+    }
+  },
+  //QUARTA ROW CON DOPPIA COLONNA, TITOLO A SINISTRA E CONTENUTO A DESTRA
+  "flex-layout.row#privacy-policy-how-long-container": {
+    "children": [
+      "flex-layout.col#privacy-policy-how-long-title",
+      "flex-layout.col#privacy-policy-how-long-content"
+    ],
+    "props": {
+      "blockClass": "privacy-policy-how-long-container-style"
+    }
+  },
+  "flex-layout.col#privacy-policy-how-long-title": {
+    "children": ["rich-text#privacy-policy-how-long-title-text"],
+    "props": {
+      "width": "20%",
+      "blockClass": "privacy-policy-how-long-title-style"
+    }
+  },
+  "flex-layout.col#privacy-policy-how-long-content": {
+    "children": ["rich-text#privacy-policy-how-long-content-text"],
+    "props": {
+      "width": "80%",
+      "blockClass": "privacy-policy-how-long-content-style"
+    }
+  },
+  "rich-text#privacy-policy-how-long-title-text": {
+    "props": {
+      "text": "**JAK DŁUGO \nPRZECHOWUJEMY \nPAŃSTWA DANE**",
+      "blockClass": "privacy-policy-how-long-title-text-style"
+    }
+  },
+  "rich-text#privacy-policy-how-long-content-text": {
+    "props": {
+      "text": "Wykorzystujemy Państwa dane osobowe przez okres ściśle niezbędny do osiągnięcia zamierzonych celów. \n\n Więcej informacji uzyskają Państwo pod następującym: <a class='vtex-rich-text-0-x-link--privacy-policy' href=\"#how-long\">linkiem</a>.",
+      "blockClass": "privacy-policy-how-long-content-text-style"
+    }
+  },
+  //QUINTA ROW CON DOPPIA COLONNA, TITOLO A SINISTRA E CONTENUTO A DESTRA
+  "flex-layout.row#privacy-policy-protect-container": {
+    "children": [
+      "flex-layout.col#privacy-policy-protect-title",
+      "flex-layout.col#privacy-policy-protect-content"
+    ],
+    "props": {
+      "blockClass": "privacy-policy-protect-container-style"
+    }
+  },
+  "flex-layout.col#privacy-policy-protect-title": {
+    "children": ["rich-text#privacy-policy-protect-title-text"],
+    "props": {
+      "width": "20%",
+      "blockClass": "privacy-policy-protect-title-style"
+    }
+  },
+  "flex-layout.col#privacy-policy-protect-content": {
+    "children": ["rich-text#privacy-policy-protect-content-text"],
+    "props": {
+      "width": "80%",
+      "blockClass": "privacy-policy-protect-content-style"
+    }
+  },
+  "rich-text#privacy-policy-protect-title-text": {
+    "props": {
+      "text": "**CO ROBIMY, ABY \nCHRONIĆ PAŃSTWA\n DANE OSOBOWE**",
+      "blockClass": "privacy-policy-protect-title-text-style"
+    }
+  },
+  "rich-text#privacy-policy-protect-content-text": {
+    "props": {
+      "text": "Bezpieczeństwo Państwa danych osobowych jest dla nas priorytetem. W tym celu wdrożyliśmy odpowiednie środki administracyjne, techniczne i fizyczne, mające na celu zabezpieczenie Państwa danych osobowych przed utratą, kradzieżą i nieuprawnionym użyciem, ujawnieniem czy modyfikacją. \n\n Więcej informacji uzyskają Państwo pod następującym: <a class='vtex-rich-text-0-x-link--privacy-policy' href=\"#protect\">linkiem</a>.",
+      "blockClass": "privacy-policy-protect-content-text-style"
+    }
+  },
+  //SESTA ROW CON DOPPIA COLONNA, TITOLO A SINISTRA E CONTENUTO A DESTRA
+  "flex-layout.row#privacy-policy-we-share-container": {
+    "children": [
+      "flex-layout.col#privacy-policy-we-share-title",
+      "flex-layout.col#privacy-policy-we-share-content"
+    ],
+    "props": {
+      "blockClass": "privacy-policy-we-share-container-style"
+    }
+  },
+  "flex-layout.col#privacy-policy-we-share-title": {
+    "children": ["rich-text#privacy-policy-we-share-title-text"],
+    "props": {
+      "width": "20%",
+      "blockClass": "privacy-policy-we-share-title-style"
+    }
+  },
+  "flex-layout.col#privacy-policy-we-share-content": {
+    "children": ["rich-text#privacy-policy-we-share-content-text"],
+    "props": {
+      "width": "80%",
+      "blockClass": "privacy-policy-we-share-content-style"
+    }
+  },
+  "rich-text#privacy-policy-we-share-title-text": {
+    "props": {
+      "text": "**KOMU UDOSTĘPNIAMY\n PAŃSTWA DANE \nOSOBOWE**",
+      "blockClass": "privacy-policy-we-share-title-text-style"
+    }
+  },
+  "rich-text#privacy-policy-we-share-content-text": {
+    "props": {
+      "text": "Możemy udostępnić Państwa dane (1) usługodawcom, (2) spółkom z Grupy Whirlpool (3) organom władzy publicznej, kiedy zezwala na to obowiązujące prawo. \n\n Za Państwa zgodą możemy również udostępniać Państwa dane osobowe naszym zaufanym partnerom dla ich celów marketingowych. \n\n Więcej informacji uzyskają Państwo pod następującym: <a class='vtex-rich-text-0-x-link--privacy-policy' href=\"#we-share\">linkiem</a>.",
+      "blockClass": "privacy-policy-we-share-content-text-style"
+    }
+  },
+  //SETTIMA ROW CON DOPPIA COLONNA, TITOLO A SINISTRA E CONTENUTO A DESTRA
+  "flex-layout.row#privacy-policy-transfers-container": {
+    "children": [
+      "flex-layout.col#privacy-policy-transfers-title",
+      "flex-layout.col#privacy-policy-transfers-content"
+    ],
+    "props": {
+      "blockClass": "privacy-policy-transfers-container-style"
+    }
+  },
+  "flex-layout.col#privacy-policy-transfers-title": {
+    "children": ["rich-text#privacy-policy-transfers-title-text"],
+    "props": {
+      "width": "20%",
+      "blockClass": "privacy-policy-transfers-title-style"
+    }
+  },
+  "flex-layout.col#privacy-policy-transfers-content": {
+    "children": ["rich-text#privacy-policy-transfers-content-text"],
+    "props": {
+      "width": "80%",
+      "blockClass": "privacy-policy-transfers-content-style"
+    }
+  },
+  "rich-text#privacy-policy-transfers-title-text": {
+    "props": {
+      "text": "**TRANSFER PAŃSTWA\n DANYCH POZA EOG**",
+      "blockClass": "privacy-policy-transfers-title-text-style"
+    }
+  },
+  "rich-text#privacy-policy-transfers-content-text": {
+    "props": {
+      "text": "Państwa dane mogą być przekazywane podmiotom spoza Europejskiego Obszaru Gospodarczego (EOG). W każdym przypadku upewniamy się, że zostały wdrożone właściwe i odpowiednie zabezpieczenia zgodne z Rozporządzeniem. \n\n Więcej informacji uzyskają Państwo pod następującym: <a class='vtex-rich-text-0-x-link--privacy-policy' href=\"#transfers\">linkiem</a>.",
+      "blockClass": "privacy-policy-transfers-content-text-style"
+    }
+  },
+  //OTTAVA ROW CON DOPPIA COLONNA, TITOLO A SINISTRA E CONTENUTO A DESTRA
+  "flex-layout.row#privacy-policy-rights-container": {
+    "children": [
+      "flex-layout.col#privacy-policy-rights-title",
+      "flex-layout.col#privacy-policy-rights-content"
+    ],
+    "props": {
+      "blockClass": "privacy-policy-rights-container-style"
+    }
+  },
+  "flex-layout.col#privacy-policy-rights-title": {
+    "children": ["rich-text#privacy-policy-rights-title-text"],
+    "props": {
+      "width": "20%",
+      "blockClass": "privacy-policy-rights-title-style"
+    }
+  },
+  "flex-layout.col#privacy-policy-rights-content": {
+    "children": ["rich-text#privacy-policy-rights-content-text"],
+    "props": {
+      "width": "80%",
+      "blockClass": "privacy-policy-rights-content-style"
+    }
+  },
+  "rich-text#privacy-policy-rights-title-text": {
+    "props": {
+      "text": "**PAŃSTWA PRAWA**",
+      "blockClass": "privacy-policy-rights-title-text-style"
+    }
+  },
+  "rich-text#privacy-policy-rights-content-text": {
+    "props": {
+      "text": "Mają Państwo między innymi prawo do dostępu, aktualizacji, poprawiania i usuwania swoich danych osobowych. \n\n Więcej informacji uzyskają Państwo pod następującym: <a class='vtex-rich-text-0-x-link--privacy-policy' href=\"#rights\">linkiem</a>.",
+      "blockClass": "privacy-policy-rights-content-text-style"
+    }
+  },
+  //NONA ROW CON DOPPIA COLONNA, TITOLO A SINISTRA E CONTENUTO A DESTRA
+  "flex-layout.row#privacy-policy-contact-container": {
+    "children": [
+      "flex-layout.col#privacy-policy-contact-title",
+      "flex-layout.col#privacy-policy-contact-content"
+    ],
+    "props": {
+      "blockClass": "privacy-policy-contact-container-style"
+    }
+  },
+  "flex-layout.col#privacy-policy-contact-title": {
+    "children": ["rich-text#privacy-policy-contact-title-text"],
+    "props": {
+      "width": "20%",
+      "blockClass": "privacy-policy-contact-title-style"
+    }
+  },
+  "flex-layout.col#privacy-policy-contact-content": {
+    "children": ["rich-text#privacy-policy-contact-content-text"],
+    "props": {
+      "width": "80%",
+      "blockClass": "privacy-policy-contact-content-style"
+    }
+  },
+  "rich-text#privacy-policy-contact-title-text": {
+    "props": {
+      "text": "**SKONTAKTUJ SIĘ\n Z NAMI**",
+      "blockClass": "privacy-policy-contact-title-text-style"
+    }
+  },
+  "rich-text#privacy-policy-contact-content-text": {
+    "props": {
+      "text": "Mogą się Państwo skontaktować z nami pisząc na adres: Whirlpool Polska Appliances Sp. z o.o.  z siedzibą w ul 1 Sierpnia 6A, 02-134 Warszawa. \n\n Mogą Państwo skontaktować się z naszym inspektorem ochrony danych używając formularza skontaktuj się z nami lub wysyłając e-mail na adres: data_protection_emea@whirlpool.com lub pocztą na powyższy adres z dopiskiem „do wiadomości Inspektora Ochrony Danych”.",
+      "blockClass": "privacy-policy-contact-content-text-style"
+    }
+  },
+  //MACRO CATEGORIE ROW E COLONNA PRINCIPALE
+  "flex-layout.row#privacy-policy-macro-categories-container": {
+    "children": [
+      "flex-layout.col#privacy-policy-macro-categories-container-col"
+    ],
+    "props": {
+      "blockClass": "privacy-policy-data-processed-container-style"
+    }
+  },
+  "flex-layout.col#privacy-policy-macro-categories-container-col": {
+    "children": [
+      "flex-layout.row#privacy-policy-data-processed",
+      "flex-layout.row#privacy-policy-purposes",
+      "flex-layout.row#privacy-policy-legal-basis",
+      "flex-layout.row#privacy-policy-retention",
+      "flex-layout.row#privacy-policy-procedures",
+      "flex-layout.row#privacy-policy-communication",
+      "flex-layout.row#privacy-policy-eea",
+      "flex-layout.row#privacy-policy-minors",
+      "flex-layout.row#privacy-policy-subjects",
+      "flex-layout.row#privacy-policy-amendments"
+    ],
+    "props": {
+      "blockClass": "privacy-policy-macro-categories-container-col-style"
+    }
+  },
+  //MACRO CATEGORIE DATA-PROCESSED
+  "flex-layout.row#privacy-policy-data-processed": {
+    "children": ["rich-text#privacy-policy-data-processed-text"],
+    "props": {
+      "blockClass": "privacy-policy-data-processed-style"
+    }
+  },
+  "rich-text#privacy-policy-data-processed-text": {
+    "props": {
+      "text": "<span class='vtex-rich-text-0-x-midTitleStyle'><span>1</span>.RODZAJ PRZETWARZANYCH DANYCH OSOBOWYCH</span> \n\n <br> Whirlpool będzie przetwarzał następujące kategorie danych:<ol class='vtex-rich-text-0-x-olAlphaStyle'> <li> **Dane dotyczące Państwa** </li> \n Whirlpool przetwarza dane osobowe dotyczące Państwa zebrane lub dostarczone za pośrednictwem wielu źródeł, w tym między innymi: \n <br> <ol class='vtex-rich-text-0-x-olRomanStyle'> <li>dane osobowe przekazane bezpośrednio przez Państwa w momencie zakładania konta i/lub rejestracji zakupionego produktu i/lub po złożeniu wniosku o informację, pomoc i zakup produktów Whirlpool w sklepie internetowym, takich jak imię, nazwisko, adres zamieszkania, adres e-mail, numer telefonu.</li> <br> <li>dane osobowe podane przez Państwa bezpośrednio lub wywnioskowane podczas rozmów telefonicznych, które wykonali Państwo do naszych call center dla konsumentów i które mogą być nagrywane tylko za Państwa zgodą, w tym daty/godziny rozmów, informacje kontaktowe osoby dzwoniącej oraz informacje dotyczące zamówienia klienta;</li> <br> <li>dane osobowe zawarte w zdjęciach, audio i/lub wideo, które użytkownik przekazuje lub zezwala na ich rejestrowanie przez Aplikację lub Urządzenia Podłączone;</li> <br> <li>dane osobowe dostarczone przez produkty lub usługi innych stron, które łączą Państwo za pośrednictwem Aplikacji lub Urządzeń Podłączonych.</li></ol> \n Takie dane są przetwarzane tylko w zakresie niezbędnym do realizacji celów określonych w niniejszej Informacji o Ochronie Prywatności. Whirlpool jest zobowiązany do zachowania anonimowości danych osobowych oraz ich usunięcia w przypadku, gdy nie ma potrzeby przetwarzania danych osobowych, w formie umożliwiającej identyfikację do celów przetwarzania. \n <br> <li> **Dane dotyczące umowy** </li> <br>Whirlpool przetwarza dane osobowe Użytkowników kupujących produkty i usługi od Whirlpool, w tym imię i nazwisko, adres, kraj, dane kontaktowe takie jak numer telefonu i adres e-mail. Ponadto Whirlpool gromadzi dane o zakupionych przez Państwa urządzeniach i zamówionych usługach, w tym wnioski o świadczenie usług gwarancyjnych.<br><br> <li>**Dane dotyczące korzystania i przeglądania** </li> <br> Strona Internetowa, Aplikacja i/lub Urządzenia Podłączone zbierają dane osobowe Użytkowników ze względów technicznych i funkcjonalnych. Takie dane nie są zbierane w celu identyfikacji Użytkownika, ale może to oznaczać, że identyfikacja wymaga porównania danych z innymi danymi posiadanymi przez osoby trzecie.</ol> \n\n <br> Taka kategoria danych obejmuje: (i) adres IP i nazwę domeny komputera użytkownika, (ii) identyfikator, model i numer seryjny Urządzeń Podłączonych; (iii) adres IP routera domowego użytkownika po podłączeniu Urządzenia Podłączonego do naszej sieci; (iv) rodzaj używanej przeglądarki i systemu operacyjnego; (v) fizyczną lokalizację urządzenia lub Urządzenia Podłączonego (określoną np. przy użyciu sygnału satelitarnego, wieży telefonii komórkowej i WiFi); oraz (vi) inne informacje dotyczące sesji online użytkownika, takie jak adresy URI (Uniform Resource Identifier) adres ​​żądanych zasobów, czas żądania, metodę stosowaną do przesłania żądania do serwera, wielkość pliku otrzymanego jako odpowiedź, kod numeryczny związany ze statusem odpowiedzi z serwera i inne parametry związane z systemem operacyjnym używanym przez urządzenie Użytkownika. Po podłączeniu Urządzenia Podłączonego do naszej sieci, możemy automatycznie okresowo zbierać informacje z Urządzenia Podłączonego, w tym status (np. czy urządzenie jest wyłączone lub włączone, oraz szczegóły dotyczące cyklu lub funkcji, którą wykonuje), instrukcje wprowadzone na Urządzeniu Podłączonym, kody błędów lub usterek oraz aspekty jego otoczenia, które mogą mieć wpływ na sposób jego działania (takie jak napięcie wejściowe, siła sygnału i temperatura powietrza). Możemy śledzić i gromadzić dane dotyczące użytkowania Aplikacji, takie jak data i godzina dostępu Aplikacji do naszych serwerów, informacje, które zostały pobrane na Aplikację oraz instrukcje, które są przesyłane do Urządzenia Podłączonego. \n\n Dane ze Strony Internetowej są wykorzystywane wyłącznie do zbierania anonimowych informacji statystycznych na temat korzystania ze Strony Internetowej oraz do kontrolowania jej prawidłowego działania oraz są przechowywane zgodnie z naszymi wymogami przechowywania danych. \n\n <br> Dane takie mogą być także wykorzystane do ustalenia odpowiedzialności w przypadku możliwych przestępstw komputerowych przeciwko Stronie Internetowej, Aplikacji i/lub Urządzeniom Podłączonym. \n\n <br> Jeśli nie chcą Państwo, aby Whirlpool zbierał jakiekolwiek dane z Państwa Urządzeń Podłączonych, należy wyłączyć (odłączyć) Urządzenie Podłączone od routera bezprzewodowego i wyłączyć przycisk połączenia bezprzewodowego na urządzeniu. Wyłączenie (odłączenie) Urządzenia Podłączonego wyłączy również korzystanie z Urządzenia Podłączonego i Aplikacji, nawet jeśli powiązane z nim konto pozostaje aktywne. Jeśli dezaktywują Państwo tylko swoje konto, ale nie wyłączą (odłączą) Urządzenia Podłączonego, dane, które nie zawierają danych osobowych i nie są z nimi powiązane oraz nie umożliwiają identyfikacji użytkownika, będą nadal przesyłane do Whirlpool. \n \n <br> Możemy również zbierać dane osobowe na naszej Stronie Internetowej za pomocą różnych kategorii plików cookie, w stosownych przypadkach po udzieleniu aktywnej zgody. Aby uzyskać więcej informacji o plikach cookie odwiedź naszą [Cookie Notice.](oswiadczenie-o-wykorzystaniu-plikow-cookie)",
+      "blockClass": "privacy-policy-data-processed-text-style",
+      "htmlId": "information"
+    }
+  },
+  //MACRO CATEGORIE purposes
+  "flex-layout.row#privacy-policy-purposes": {
+    "children": ["rich-text#privacy-policy-purposes-text"],
+    "props": {
+      "blockClass": "privacy-policy-purposes-style"
+    }
+  },
+  "rich-text#privacy-policy-purposes-text": {
+    "props": {
+      "text": "<span  class='vtex-rich-text-0-x-midTitleStyle'><span>2</span>. CELE PRZETWARZANIA </span>\n\n <br> Będziemy przetwarzać Państwa dane osobowe, które zebraliśmy lub które zostały nam dostarczone, w następujących celach: \n <ol class='vtex-rich-text-0-x-olAlphaStyle'> <li>umożliwienia Państwu rejestracji na Stronie Internetowej lub w Aplikacji poprzez otwarcie konta osobistego, zarejestrowania produktu na Stronie Internetowej i zakupu produktu na Stronie Internetowej;</li> <br><li>dostarczanie Państwu usług dotyczących Urządzeń Podłączonych, w tym powiadomień w celu uzyskania pomocy i konserwacji oraz komunikacji funkcjonalnej przy korzystaniu z Państwa konta użytkownika lub Państwa Urządzenia Podłączonego, w tym związanych z obsługą klienta i gwarancją;</li> <br><li>dokonania zakupu produktu online i świadczenia dodatkowych usług (usługi posprzedażowe, przedłużona gwarancja, zapobieganie oszustwom, zarządzanie zwrotami, kontakt w przypadku problemów z bezpieczeństwem związanych z Państwa sprzętem gospodarstwa domowego);</li> <br><li> wykonania dostawy do domu naszych produktów i dostarczenia Państwu wszelkich zamówionych usług;</li> <br><li>zorganizowania naprawy Państwa produktu;</li> <br><li>zarządzania zapytaniami o informacje wysłanymi przez Państwa, w tym rozpatrywania skarg i wiadomości otrzymywanych za pośrednictwem naszej usługi interaktywnego czatu;</li> <br><li>przystąpienia do promocji i konkursów;</li> <br><li>przestrzegania przepisów, regulacji oraz egzekwowania naszych praw przed sądami;</li> <br><li>przesyłania Państwu drogą elektroniczną spersonalizowanej komunikacji marketingowej związanej z naszymi produktami i usługami (w tym wiadomości e-mail, SMS, MMS, powiadomienia w serwisach społecznościowych, aplikacjach mobilnych). Marketing  mailowy jest oparty na zgodzie. Jednakże, w zależności od kraju, w którym znajdują się Państwo, niektóre mailowe działania marketingowe mogą opierać się na uzasadnionym interesie Whirlpool (soft opt-in);</li> <br><li>kontaktowanie się z Państwem telefonicznie (nieautomatycznie) lub za pośrednictwem poczty w celach marketingowych. Przetwarzanie to może opierać się na Państwa zgodzie użytkownika lub na uzasadnionym interesie Whirlpool (w takim przypadku mają Państwo prawo do rezygnacji).</li> <br><li>przesyłania Państwu informacji dotyczących obsługi klienta dotyczących zarejestrowanych przez Państwa produktów lub którymi wykazali Państwo zainteresowanie oraz w celu przeprowadzenia badań satysfakcji klienta;</li> <br><li>za Państwa zgodą, udostępniania Państwa danych osobowych dla celów spersonalizowanej komunikacji marketingowej naszym wybranym zaufanym partnerom określonym w punkcie 6 poniżej; oraz</li> <br><li>prowadzenia działań przydatnych przy przenoszeniu działalności biznesowej i oddziałów, przejęć, fuzji, podziałów lub innych przekształceń oraz w celu realizacji takich transakcji;</li> <br><li>dla celów szkoleń wewnętrznych, dokumentacji i kontroli / zapewnienia jakości możemy odsłuchiwać nagrane rozmowy telefoniczne wykonywane do naszego call center dla konsumentów.</li> <br> </ol>",
+      "blockClass": "privacy-policy-purposes-text-style",
+      "htmlId": "how-we-use"
+    }
+  },
+  //MACRO CATEGORIE legal-basis
+  "flex-layout.row#privacy-policy-legal-basis": {
+    "children": ["rich-text#privacy-policy-legal-basis-text"],
+    "props": {
+      "blockClass": "privacy-policy-legal-basis-style"
+    }
+  },
+  "rich-text#privacy-policy-legal-basis-text": {
+    "props": {
+      "text": "<span  class='vtex-rich-text-0-x-midTitleStyle'><span>3</span>. PODSTAWA PRAWNA PZETWARZANIA </span>  \n\n <br> <ol class='vtex-rich-text-0-x-olAlphaStyle'> <li>Udostępnienie danych osobowych do celów określonych w punkcie 2 ust. a), b), c), d), e), f) i g) jest niezbędne do celu, w jakim dane zostały nam przekazane lub udostępnione, co obejmuje między innymi rejestrację na Stronie Internetowej, zakup produktów online i korzystanie z dodatkowych usług specjalnych, a także udział w promocjach i konkursach z nagrodami. Podstawą prawną takiego przetwarzania danych osobowych jest realizacja umowy, której jesteście Państwo stroną lub realizacja złożonego przez Państwa żądania. </li> <br>  <li>Udostępnianie danych osobowych do celów określonych w punkcie 2 ust. h) jest obowiązkowe w celu zapewnienia zgodności z obowiązującym prawem. Podstawą prawną dla takiego przetwarzania danych osobowych jest wypełnienie obowiązku prawnego.</li> <br> <li>Udostępnianie danych osobowych do celów określonych w punkcie 2 ust. i), l) i n) jest opcjonalne. O ile prawo obowiązujące w kraju, w którym się Państwo znajdują nie stanowi inaczej, bez Państwa zgody Whirlpool, firmy wchodzące w skład Grupy Whirlpool i/lub zaufani partnerzy nie będą mogli wysyłać Państwu spersonalizowanych komunikatów marketingowych za pośrednictwem zautomatyzowanych środków ani nagrywać rozmów, które wykonali Państwo do naszego call center dla konsumentów. W każdym przypadku, po wycofaniu zgody Użytkownika, nie będziemy przetwarzać danych osobowych, w przypadku których opieramy się na Twojej zgodzie.</li> <br> <li>Udostępnianie danych osobowych w celach określonych w punkcie 2 ust. j) k) oraz m) jest niezbędne do realizacji uzasadnionych interesów Whirlpool oraz Grupy Whirlpool, które będą odpowiednio zrównoważone z Państwa interesami. Zgodnie z obowiązującymi przepisami o ochronie danych możemy również używać Państwa elektronicznych danych kontaktowych (adres e-mail), które zebraliśmy w związku ze sprzedażą produktu lub usługi, w celu przesłania Użytkownikowi komunikatu marketingowego dotyczącego podobnych produktów lub usług. W takim przypadku mogą Państwo sprzeciwić się takiemu użyciu elektronicznych danych kontaktowych, wciskając link „wypisz się” znajdujący się na końcu wiadomości e-mail / SMS za każdym razem, gdy wysyłany jest spersonalizowany komunikat marketingowy; lub zgodnie z punktem 9 niniejszej Informacji o Ochronie Prywatności. O ile prawo obowiązujące w kraju, w którym się Państwo znajdują nie stanowi inaczej, nasz uzasadniony interes jest podstawą prawną, na której opieramy się przy przetwarzaniu Państwa danych osobowych w opisanych w niniejszym ustępie celach.</li> <br> </ol>",
+      "blockClass": "privacy-policy-legal-basis-text-style",
+      "htmlId": "ground"
+    }
+  },
+  //MACRO CATEGORIE retention
+  "flex-layout.row#privacy-policy-retention": {
+    "children": ["rich-text#privacy-policy-retention-text"],
+    "props": {
+      "blockClass": "privacy-policy-retention-style"
+    }
+  },
+  "rich-text#privacy-policy-retention-text": {
+    "props": {
+      "text": "<span  class='vtex-rich-text-0-x-midTitleStyle'><span>4</span>. RETENCJA DANYCH </span> \n\n <br>Whirlpool będzie przetwarzał dane osobowe tak długo, jak jest to konieczne do realizacji zamierzonych celów zgodnie z punktem 2 powyżej. W każdym przypadku obowiązują następujące okresy przechowywania danych:\n <br><ol class='vtex-rich-text-0-x-olAlphaStyle'> <li>dane zbierane do celów wskazanych w punkcie 2 ust. a), b), c), d), e), f) oraz g) będą przechowywane przez okres niezbędny do odpowiedzi na zapytania osób, których dane dotyczą, zgodnie z obowiązującymi przepisami;</li> <br> <li>dane zbierane do celów wskazanych w punkcie 2 ust. h) będą przechowane przez okres przewidziany przez obowiązujące przepisy prawa (np. do celów podatkowych);</li> <br> <li>dane zbierane do celów wskazanych w punkcie 2 ust. i) i l) będą przechowywane przez maksymalny okres przechowywania wskazany w obowiązujących przepisach prawa; oraz</li> <br> <li>dane zebrane do celów wskazanych w punkcie 2 ust. j), k) oraz m) będą przechowywane przez okres ściśle niezbędny do realizacji uzasadnionych interesów Whirlpool;</li> <br> <li>dane zbierane do celów wskazanych w punkcie 2 ust. n) będą przechowywane przez maksymalny okres przechowywania wskazany w obowiązujących przepisach prawa.</li> <br> </ol> \n Proszę zauważyć, że okresy przechowywania danych mogą się różnić w zależności od obowiązujących przepisów krajowych.",
+      "blockClass": "privacy-policy-retention-text-style",
+      "htmlId": "how-long"
+    }
+  },
+  //MACRO CATEGORIE procedures
+  "flex-layout.row#privacy-policy-procedures": {
+    "children": ["rich-text#privacy-policy-procedures-text"],
+    "props": {
+      "blockClass": "privacy-policy-procedures-style"
+    }
+  },
+  "rich-text#privacy-policy-procedures-text": {
+    "props": {
+      "text": "<span  class='vtex-rich-text-0-x-midTitleStyle'><span>5</span>. PROCEDURY PRZETWARZANIA DANYCH</span> \n\n <br> Państwa dane osobowe są przetwarzane przy pomocy technologii informatycznych i / lub środków papierowych i są one chronione przez urządzenia zabezpieczające odpowiednie do zapewnienia poufności i bezpieczeństwa danych osobowych. W szczególności Whirlpool stosuje odpowiednie środki administracyjne, techniczne, osobowe i fizyczne, mające na celu ochronę przechowywanych danych osobowych przed ich utratą, kradzieżą, nieuprawnionym użyciem, ujawnieniem lub zmianą. \n\n ",
+      "blockClass": "privacy-policy-procedures-text-style",
+      "htmlId": "protect"
+    }
+  },
+  //MACRO CATEGORIE communication
+  "flex-layout.row#privacy-policy-communication": {
+    "children": ["rich-text#privacy-policy-communication-text"],
+    "props": {
+      "blockClass": "privacy-policy-communication-style"
+    }
+  },
+  "rich-text#privacy-policy-communication-text": {
+    "props": {
+      "text": "<span  class='vtex-rich-text-0-x-midTitleStyle'><span>6</span>. UDOSTĘPNIANIE DANYCH </span> \n\n <br> Będziemy udostępniać Państwa dane osobowe naszym zaufanym partnerom, takim jak nasi dostawcy przedłużonej gwarancji, którzy zamierzają używać Państwa danych osobowych do celów marketingu bezpośredniego tylko wtedy, gdy Państwa wyraźnie o tym poinformujemy, a Państwo wyrażą na to zgodę. \n\n <br> Możemy udostępniać Państwa dane osobowe: \n <br>  <ol class='vtex-rich-text-0-x-olAlphaStyle'><li>spółkom z Grupy Whirlpool zlokalizowanym na obszarze EOG oraz poza EOG, działającym jako niezależni administratorzy danych; </li> <br><li>naszym starannie wybranym dostawcom zewnętrznym, zlokalizowanym na obszarze EOG oraz poza EOG, takim jak operatorzy call center, dostawcy usług oceny treści, spedytorzy, dostawcy usług lub przydzieleni do pomocy technicy oraz inni dostawcy działający w naszym imieniu jako odpowiednio wyznaczone podmioty przetwarzające dane osobowe do celów wskazanych w niniejszej Informacji o Ochronie Prywatności; innym osobom trzecim – w ramach transakcji korporacyjnych, takich jak fuzja lub sprzedaż aktywów;</li> <br><li>nasz dostawca rozszerzonej gwarancji, Domestic & General („D&G”) [Domestic & General Insurance PLC]. D&G będzie działać jako współadministrator (wraz z Whirlpool) w celu promowania i sprzedaży przedłużonych gwarancji, a także obsługi żądań naprawy na podstawie takich przedłużonych gwarancji. W szczególności D&G będzie przetwarzać dane osobowe w następujących celach: (i) rejestracja i zarządzanie Państwa kontem / profilem, a także gwarancjami producentów; (ii) promocja, sprzedaż i administrowanie umowami serwisowymi i produktami / usługami; (iii) w niektórych krajach obsługiwanie przychodzących telefonów obsługi klienta i odpowiadanie na nie oraz aktualizowanie takich danych o informacje od takich konsumentów; (iv) pobieranie i otrzymywanie danych osobowych od konsumentów w celu sprzedaży umów o świadczenie usług oraz aktualizowanie takich dane o informacje od konsumentów; (v) rozpatrywanie i odpowiadanie na przychodzące skargi konsumentów (w tym wszelkie postępowania sądowe); (vi) zarządzanie rezerwacjami i świadczeniem usług naprawczych oraz dostarczanie konsumentom produktów zamiennych oraz poprawianie i aktualizowanie takich danych o informacje od konsumentów w związku z takimi usługami naprawczymi i/lub dostarczaniem produktów zastępczych i/lub aktualizowanie takich danych osobowych; (vii) przeprowadzanie badania jakości świadczonych produktów i usług. </li> <br><li>podmioty trzecie świadczące usługi w zakresie płatności elektronicznych, w celu zarządzania płatnościami związanymi z zamówieniami. Dla jasności, Whirlpool nie przetwarza żadnych danych bankowych / finansowych (w tym informacji o kartach kredytowych) Użytkowników, z wyjątkiem tych, które są ściśle niezbędne dla celów punktu 2 ust. c) (np. w celu zapewnienia konsumentom rozszerzonej gwarancji). W związku z takim przetwarzaniem, podmioty trzecie świadczące usługi e-płatności będą przetwarzać Państwa dane osobowe jako autonomiczni administratorzy danych, zgodnie z Rozporządzeniem (i wszelkimi innymi obowiązującymi lokalnymi przepisami i regulacjami) oraz ich własną polityką prywatności. Whirlpool nie ponosi odpowiedzialności za jakiekolwiek szkody (w tym wynikające z naruszenia Rozporządzenia i innych obowiązujących przepisów o ochronie danych) wynikające z przetwarzania danych bankowych / finansowych Użytkowników (w tym informacji o kartach kredytowych) przez wspomniany podmiot trzeci świadczący usługi e-płatności.</li> <br><li>w celu dystrybucji, naprawy i konserwacji naszych produktów udostępniamy naszym partnerom adresy Użytkowników i dane kontaktowe tylko wtedy, gdy jest to absolutnie konieczne;</li> <br> <li>możemy być również zobowiązani do ujawnienia danych osobowych w odpowiedzi na zgodne z prawem żądania organów rządowych, w tym żądania od krajowych agencji bezpieczeństwa lub organów ścigania.</li> </ol> <br>Takie osoby trzecie będą przetwarzać Państwa dane osobowe w naszym imieniu w roli odpowiednio wyznaczonych podmiotów przetwarzających (z wyjątkiem tego, co zostało wyszczególnione w lit. d)) dla celów opisanych w niniejszym zawiadomieniu zgodnie z naszymi wymogami dotyczącymi prywatności i bezpieczeństwa danych i nie mogą wykorzystywać otrzymanych od nas danych osobowych do żadnych innych celów.<br> \n\n ",
+      "blockClass": "privacy-policy-communication-text-style",
+      "htmlId": "we-share"
+    }
+  },
+  //MACRO CATEGORIE eea
+  "flex-layout.row#privacy-policy-eea": {
+    "children": ["rich-text#privacy-policy-eea-text"],
+    "props": {
+      "blockClass": "privacy-policy-eea-style"
+    }
+  },
+  "rich-text#privacy-policy-eea-text": {
+    "props": {
+      "text": "<span  class='vtex-rich-text-0-x-midTitleStyle'><span>7</span>. TRANSFER DANYCH POZA EOG </span> \n\n <br> Każde przekazanie Państwa danych osobowych poza EOG (zarówno w ramach grupy Whirlpool, jak i poza nią) odbywa się przy zastosowaniu następujących odpowiednich zabezpieczeń zgodnie z Rozporządzeniem: <ol class='vtex-rich-text-0-x-olAlphaStyle'><li>po wydaniu przez Komisję Europejską decyzji stwierdzającej odpowiedni poziom ochrony; lub gdy</li> <br> <li>odpowiednie środki zostały zapewnione przez lub dla spółki grupy Whirlpool, która eksportuje dane osobowe Użytkownika, w tym między innymi standardowe klauzule ochrony danych. Bez uszczerbku dla powyższego, przekazywanie danych w oparciu o standardowe klauzule o ochronie danych osobowych odbywa się za pomocą dodatkowych środków organizacyjnych i technicznych, mających na celu zapewnienie odpowiedniego poziomu ochrony danych osobowych.</li></ol><br> \n\n ",
+      "blockClass": "privacy-policy-eea-text-style",
+      "htmlId": "transfers"
+    }
+  },
+  //MACRO CATEGORIE minors
+  "flex-layout.row#privacy-policy-minors": {
+    "children": ["rich-text#privacy-policy-minors-text"],
+    "props": {
+      "blockClass": "privacy-policy-minors-style"
+    }
+  },
+  "rich-text#privacy-policy-minors-text": {
+    "props": {
+      "text": "<span  class='vtex-rich-text-0-x-midTitleStyle'><span>8</span>. NIELETNI PONIŻEJ 18 ROKU ŻYCIA </span> \n\n <br>Strona Internetowa, Aplikacja oraz Urządzenia Podłączone nie są skierowane do osób w wieku poniżej 18. roku życia, a Whirlpool świadomie nie gromadzi danych osobowych osób poniżej 18. roku życia.<br> \n\n ",
+      "blockClass": "privacy-policy-minors-text-style",
+      "htmlId": "rights"
+    }
+  },
+  //MACRO CATEGORIE subjects
+  "flex-layout.row#privacy-policy-subjects": {
+    "children": ["rich-text#privacy-policy-subjects-text"],
+    "props": {
+      "blockClass": "privacy-policy-subjects-style"
+    }
+  },
+  "rich-text#privacy-policy-subjects-text": {
+    "props": {
+      "text": "<span  class='vtex-rich-text-0-x-midTitleStyle'><span>9</span>. PRAWA OSÓB, KTÓRYCH DANE DOTYCZĄ </span> \n\n <br> Mogą Państwo w dowolnym momencie i bez opłat wykonywać następujące prawa: \n\n <br><ol class='vtex-rich-text-0-x-olAlphaStyle'> <li>prawo do uzyskania informacji na temat celów i metod przetwarzania danych osobowych;</li><br> <li>prawo dostępu do Państwa danych osobowych (powszechnie zwane \"prośbą o dostęp do danych podmiotu, którego dane dotyczą\"). Umożliwia to otrzymywanie kopii Państwa danych osobowych, które posiadamy;</li><br><li>prawo do żądania aktualizacji lub sprostowania Państwa danych osobowych, które posiadamy. Umożliwia to skorygowanie wszelkich niekompletnych lub niedokładnych danych, które posiadamy chociaż może zajść potrzeba zweryfikowania dokładności nowych danych, które nam przekazano;</li><br><li>prawo do żądania usunięcia danych. Dzięki temu mogą Państwo poprosić nas o usunięcie Państwa danych osobowych, jeśli nie ma powodu, dla którego nadal mielibyśmy je przetwarzać. Mogą Państwo również poprosić nas o usunięcie danych osobowych w przypadku, gdy z powodzeniem skorzystali Państwo z prawa do wniesienia sprzeciwu wobec przetwarzania lub gdy jesteśmy zobowiązani do usunięcia Państwa danych osobowych zgodnie z prawem krajowym. Należy jednak pamiętać, że nie zawsze możemy być w stanie spełnić Państwa prośbę o usunięcie z konkretnych przyczyn prawnych, które zostaną Państwu przedstawione w stosownych przypadkach, w chwili złożenia Państwa wniosku;</li><br><li>prawo do ograniczenia przetwarzania danych osobowych. Dzięki temu mogą Państwo nas poprosić o zawieszenie przetwarzania Państwa danych osobowych w następujących scenariuszach: (a) jeśli chcą Państwo, abyśmy ustalili dokładność danych; (b) gdy nasze wykorzystanie danych jest niezgodne z prawem, ale nie chcą Państwo, abyśmy je usunęli; (c) gdy potrzebujecie Państwo, abyśmy przechowywali dane, nawet jeśli nie będziemy ich już potrzebować, ponieważ są potrzebne do ustalenia, wykonania lub obrony roszczeń prawnych; lub (d) nie wyrazili Państwo sprzeciwu wobec naszego wykorzystania danych, ale istnieje konieczność sprawdzenia, czy mamy nadrzędne uzasadnione podstawy, aby z nich skorzystać; </li><br><li>prawo do wyrażenia sprzeciwu wobec przetwarzania danych osobowych w całości lub w części, gdy podstawą przetwarzania jest nasz uzasadniony interes (lub interes strony trzeciej) gdy Państwa konkretna sytuacja, co powoduje, że chcą Państwo sprzeciwić się przetwarzaniu danych na tej podstawie, ponieważ odczuwają Państwo jej wpływ na Państwa podstawowe prawa i wolności. W niektórych przypadkach możemy wykazać, że mamy uzasadnione podstawy do przetwarzania informacji, które są nadrzędne w stosunku do Państwa praw i wolności; </li><br><li>w przypadku, gdy podstawą przetwarzania danych jest Państwa zgoda, prawo do odwołania zgody na przetwarzanie danych osobowych w dowolnym momencie i bezpłatnie, również poprzez naciśnięcie opcji wypisania się na dole naszej komunikacji marketingowej;</li><br><li>prawo do przenoszenia Państwa danych osobowych do Państwa lub do innego dostawcy. Przekażemy Państwu lub wybranej przez Państwa osobie trzeciej dane osobowe w uporządkowanym, powszechnie używanym formacie do odczytu maszynowego;</li><br><li>prawo do kontaktu z nami poprzez wysłanie wiadomości e-mail na adres data_protection_emea@whirlpool.com lub skorzystanie z formularza kontaktowego; oraz</li><br><li>prawo do złożenia skargi przed właściwym krajowym organem ochrony danych lub organem sądowym. </li><br> </ol> <br> Jeśli życzą sobie Państwo skorzystać z wyżej wymienionych praw lub zgłosić jakiekolwiek pytania dotyczące danych osobowych, które o Państwu posiadamy, prosimy o wysłanie nam wiadomość e-mail na adres data_protection_emea@whirlpool.com lub napisanie do nas na adres: Whirlpool Polska Appliances Sp. z o.o. z siedzibą w ul 1 Sierpnia 6A, 02-134 Warszawa ., z dopiskiem „do wiadomości Inspektora Ochrony Danych”. Tam, gdzie to możliwe, mogą Państwo również skorzystać z naszego formularza kontaktowego. \n <br> W przypadku nierozwiązanych problemów dotyczących prywatności lub wykorzystania danych, które nie zostały przez nas rozwiązane w zadowalający sposób, mają Państwo prawo skontaktować się z właściwym krajowym organem ochrony danych lub organem sądowym, jak opisano powyżej w sekcji 9 dotyczącej praw osób, których dane dotyczą. Użytkownik może również skontaktować się z naszym amerykańskim niezależnym dostawcą usług rozwiązywania sporów (bezpłatnie) pod adresem https://feedback-form.truste.com/watchdog/request. <br> \n\n ",
+      "blockClass": "privacy-policy-subjects-text-style"
+    }
+  },
+  //MACRO CATEGORIE amendments
+  "flex-layout.row#privacy-policy-amendments": {
+    "children": ["rich-text#privacy-policy-amendments-text"],
+    "props": {
+      "blockClass": "privacy-policy-amendments-style"
+    }
+  },
+  "rich-text#privacy-policy-amendments-text": {
+    "props": {
+      "text": "<span  class='vtex-rich-text-0-x-midTitleStyle'><span>10</span>. AKTUALIZACJE I ZMIANY </span> \n\n <br> Regularnie weryfikujemy niniejszą Informację o Ochronie Prywatności. Możemy aktualizować jej treść, aby odzwierciedlić zmiany w naszej praktyce ochrony prywatności. Jeśli wprowadzimy istotne zmiany, poinformujemy Cię o tym poprzez aktualizację niniejszej Informacji o Ochronie Prywatności przed jej wejściem w życie. Zachęcamy do okresowego przeglądania naszej Informacji o Ochronie Prywatności w celu uzyskania najnowszych informacji na temat naszych praktyk ochrony prywatności. Niniejsza Informacja o Ochronie Prywatności była ostatnio aktualizowana 02/02/2021. \n",
+      "blockClass": "privacy-policy-amendments-text-style"
+    }
+  }
+}

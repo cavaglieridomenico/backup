@@ -1,0 +1,53 @@
+{
+  "store.custom#sostituzione-prodotto": {
+    "blocks": [
+      "breadcrumb#SostituzioneProdottoDanneggiato",
+      "flex-layout.row#SostituzioneProdottoText3",
+      "flex-layout.row#halfSpace",
+      "flex-layout.row#sostituzione-prodotto-form",
+      "analytics"
+    ]
+  },
+  "flex-layout.row#sostituzione-prodotto-form": {
+    "props": {
+      "blockClass": "CustomFormRow"
+    },
+    "children": ["custom-form#return-prod"]
+  },
+  "custom-form#return-prod": {
+    "props": {
+      "IsReturn": true,
+      "isProduct": true,
+      "url": "/v1/api/order/refund"
+    }
+  },
+  "breadcrumb#SostituzioneProdottoDanneggiato": {
+    "props": {
+      "categories": [
+        "/supporto/",
+        "supporto/sostituzione prodotto danneggiato/",
+        "sostituzione prodotto danneggiato/Sostituzione prodotto"
+      ],
+      "showOnMobile": false
+    }
+  },
+
+  "flex-layout.row#SostituzioneProdottoText3": {
+    "props": {
+      "blockClass": "container"
+    },
+    "children": ["flex-layout.col#SostituzioneProdottoText1"]
+  },
+
+  "flex-layout.col#SostituzioneProdottoText1": {
+    "children": ["rich-text#SostituzioneProdottoText3"]
+  },
+  "rich-text#SostituzioneProdottoText3": {
+    "props": {
+      "text": "## Modulo online per richiesta sostituzione prodotto danneggiato - Elettrodomestici \n\n\n Se ci sono stati dei danneggiamenti al prodotto, causati dal trasporto, restituiscilo e ti sarà riconsegnato nuovo. Il prodotto sarà sostituito con un altro prodotto pari-modello. Penseremo noi ad organizzare la sostituzione e la riconsegna. \nPer maggiori informazioni sulle Condizioni di Acquisto online [clicca qui](/pagine/condizioni-di-utilizzo).",
+      "textAlignment": "left",
+      "textPosition": "LEFT",
+      "blockClass": "formText"
+    }
+  }
+}

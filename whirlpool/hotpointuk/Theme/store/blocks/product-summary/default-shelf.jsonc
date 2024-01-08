@@ -1,0 +1,280 @@
+{
+  "product-summary.shelf": {
+    "children": [
+      
+      "vtex.product-highlights@2.x:product-highlights#promotion",
+      // "promo-countdown#pdp-carousels",
+      "product-summary-image#shelf",
+      "flex-layout.row#commercialCode",
+      // "product-summary-name",
+      "vtex.store-components:product-name#summary",
+      "product-summary-space",
+      // "flex-layout.row#summary-price",
+      "flex-layout.row#selling-price-savings-no-comparison",
+      "flex-layout.row#leadTime",
+      "condition-layout.product#isAvailableButtonPlp",
+      // "modal-trigger#wtb",
+      "where-to-buy.button",
+      "flex-layout.row#ratingProductCard",
+      "flex-layout.row#energyLabelAndDataSheet"
+    ]
+  },
+  "promo-countdown#pdp-carousels": {
+    "title": "Promo Countdown in PDP's carousels",
+    "props": {
+      "blockClass": ["promoCountdownHpCarousel", "promoCountdownPdpCarousels"]
+    }
+  },
+  "flex-layout.row#ratingProductCard": {
+    "children": [
+      "flex-layout.row#youreko",
+      "flex-layout.row#awardedLogos"
+    ],
+    "props": {
+      "blockClass": "ratingProductCard",
+      "colSizing": "auto"
+    }
+  },
+  "flex-layout.row#ratingProductCardCarousel": {
+    "children": [
+      "flex-layout.row#awardedLogos"
+    ],
+    "props": {
+      "blockClass": "ratingProductCard",
+      "colSizing": "auto"
+    }
+  },
+  "flex-layout.row#ratingProductCardDesk": {
+    "children": [
+      "flex-layout.row#awardedLogos"
+    ],
+    "props": {
+      "blockClass": "ratingProductCard",
+      "colSizing": "auto"
+    }
+  },
+  "flex-layout.row#ratingProductCardMobile": {
+    "children": ["flex-layout.row#reevoo", "flex-layout.row#youreko"],
+    "props": {
+      "blockClass": "ratingProductCard",
+      "colSizing": "auto"
+    }
+  },
+  "flex-layout.col#badgeProductCardMobile": {
+    "children": ["flex-layout.row#reevoo", "flex-layout.row#youreko"],
+    "props": {
+      "blockClass": "badgeProductCardMobile",
+      "colSizing": "auto"
+    }
+  },
+  "flex-layout.row#commercialCodeHome": {
+    "children": ["product-specification-group#modelSummary"],
+    "props": {
+      "blockClass": "commercialCodeRowHome"
+    }
+  },
+  "flex-layout.col#badgeProductCardMobile": {
+    "children": ["flex-layout.row#reevoo", "flex-layout.row#youreko"],
+    "props": {
+      "blockClass": "badgeProductCardMobile",
+      "colSizing": "auto"
+    }
+  },
+  "flex-layout.col#badgeProductCardMobileCarousel": {
+    "children": ["flex-layout.row#reevoo"],
+    "props": {
+      "blockClass": "badgeProductCardMobileReevo",
+      "colSizing": "auto"
+    }
+  },
+  "flex-layout.row#priceAndDiscount": {
+    "children": [
+      "flex-layout.col#priceSummary",
+      "flex-layout.col#priceSavings"
+    ],
+    "props": {
+      "blockClass": "homePrice"
+    }
+  },
+  "flex-layout.col#priceSummary": {
+    "children": ["product-list-price#summary"],
+    "props": {
+      "blockClass": "priceSummary",
+      "width": "25%"
+    }
+  },
+  "flex-layout.col#priceSavings": {
+    "children": ["product-price-savings#savings"],
+    "props": {
+      "blockClass": "priceSavings"
+    }
+  },
+  "product-price-savings#savings": {
+    "props": {
+      "markers": ["highlight"],
+      "blockClass": "savings",
+      "message": "You save: {savingsValue}"
+    }
+  },
+  "stack-layout#head": {
+    "children": [
+      "product-summary-image#shelf",
+      "vtex.product-highlights@2.x:product-highlights#promotion"
+    ]
+  },
+  "vtex.product-highlights@2.x:product-highlights#promotion": {
+    "props": {
+      "type": "promotion",
+      "blockClass": "promotionHigh"
+    },
+    "children": ["product-highlight-text#promotion"]
+  },
+  "product-highlight-text#promotion": {
+    "props": {
+      "message": "{highlightName}"
+    }
+  },
+  "product-summary.shelf#headerSearch": {
+    "children": [
+      "product-summary-image#headerSearchShelf",
+      "flex-layout.col#nameAndAvailabilityAndPrice"
+    ],
+    "props": {
+      "blockClass": "shelfHeaderSearch"
+    }
+  },
+  "flex-layout.col#nameAndAvailabilityAndPrice": {
+    "title": "[Col] - Name + Availability + Price in Searchbar",
+    "props": {
+      "blockClass": "shelfHeaderSearch",
+      "verticalAlign": "middle",
+      "preventVerticalStretch": true,
+      "rowGap": 2
+    },
+    "children": ["vtex.store-components:product-name#headerSearchSummary", "flex-layout.row#stockAndPrice-SearchResult"]
+  },
+  "flex-layout.row#stockAndPrice-SearchResult": {
+    "children": [
+      "flex-layout.col#stockCol-SearchResult",
+      "flex-layout.col#priceCol-SearchResult"
+    ],
+    "props": {
+      "blockClass": ["SearchResult"],
+      "preserveLayoutOnMobile": true,
+      "preventHorizontalStretch": true,
+      "colGap": 3,
+      "colSizing": "auto",
+      "horizontalAlign": "left"
+    }
+  },
+  "flex-layout.col#stockCol-SearchResult": {
+    "children": [
+      "lead-time"
+    ],
+    "props": {
+      "blockClass": ["SearchResult--leadTime"]
+    }
+  },
+  "flex-layout.col#priceCol-SearchResult": {
+    "children": [
+      "condition-layout.product#showPricePDPSelling-SearchResult"
+    ],
+    "props": {
+      "blockClass": ["SearchResult--price"]
+    }
+  },
+  "condition-layout.product#inStockLabel-SearchResult": {
+    "title": "[Condition Layout] - In stock label",
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "sellable",
+            "value": "true"
+          }
+        }
+      ],
+      "Then": "flex-layout.col#stock-SearchResult",
+      "Else": "rich-text#outOfStock-SearchResult"
+    }
+  },
+  "rich-text#outOfStock-SearchResult": {
+    "props": {
+      "text": "Out of stock",
+      "blockClass": ["specProp", "specificationAttribute", "outOfStock", "SearchResult"]
+    }
+  },
+  "flex-layout.col#stock-SearchResult": {
+    "children": ["rich-text#inStock-SearchResult"],
+    "props": {
+      "blockClass": ["specProps", "inStockProp", "SearchResult", "SearchResult"]
+    }
+  },
+  "rich-text#inStock-SearchResult": {
+    "props": {
+      "text": "![Info](https://hotpointuk.vtexassets.com/_v/public/assets/v1/published/hotpointuk.lead-time@0.1.1/public/react/5f42a9fa87b99a2f5f6f006fc43ff913.svg) In stock",
+      "blockClass": ["specProp", "specificationAttribute", "inStock", "SearchResult"]
+    }
+  },
+  "condition-layout.product#showPricePDPSelling-SearchResult": {
+    "title": "[PRODUCT-CONDITION] - Show price PDP Selling ",
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "showPrice",
+            "value": "true"
+          }
+        }
+      ],
+      "Then": "flex-layout.row#price-selling-pdp-SearchResult"
+    }
+  },
+  "flex-layout.row#price-selling-pdp-SearchResult": {
+    "children": [
+      "flex-layout.col#product-selling-price-SearchResult"
+    ],
+    "props": {
+      "blockClass": ["discountedPrice", "SearchResult"],
+      "colSizing": "auto",
+      "fullWidth": true,
+      "preserveLayoutOnMobile": true,
+      "horizontalAlign": "left"
+    }
+  },
+  "flex-layout.col#product-selling-price-SearchResult": {
+    "props": {
+      "blockClass": ["PriceRow", "SearchResult"]
+    },
+    "children": [
+      "product-selling-price#pdp-SearchResult"
+    ]
+  },
+  "product-selling-price#pdp-SearchResult": {
+    "props": {
+      "blockClass": ["summary2", "SearchResult"],
+      "markers": [
+        "Tax"
+      ],
+      "message": "{sellingPriceValue}"
+    }
+  },
+  "product-summary-image#headerSearchShelf": {
+    "props": {
+      "showBadge": false,
+      "aspectRatio": "1:1",
+      "maxHeight": 100,
+      "blockClass": "headerSearchShelfImage"
+    }
+  },
+  "vtex.store-components:product-name#headerSearchSummary": {
+    "props": {
+      "tag": "div",
+      "displayMode": "linkToProductPage",
+      "blockClass": ["headerSearchSummaryName", "summaryName"]
+    }
+  },
+  "share-button#pdpDesktop": {}
+}

@@ -1,0 +1,768 @@
+{
+  "vtex.menu@2.x:menu#produits": {
+    "props": {
+      "orientation": "vertical"
+    },
+    "children": [
+      "menu-item#produits",
+      // "menu-item#lavage",
+      // "menu-item#cuisson",
+      // "menu-item#froid",
+      // "menu-item#lave-vaisselle",
+      // "menu-item#climatisation",
+      // "menu-item#accessories-wpro"
+      "link#lavaggio",
+      "link#cottura",
+      "link#refrigerazione",
+      "link#lavastoviglie",
+      "link#climatizzazione",
+      "link#accessori-wpro"
+    ]
+  },
+  "menu-item#produits": {
+    "props": {
+      "id": "menu-item-produits",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "noFollow": false,
+        "tagTitle": "PRODOTTI",
+        "text": "PRODOTTI"
+      },
+      "blockClass": ["footerBold", "footerBoldNotClickable"]
+    }
+  },
+  "menu-item#lavage": {
+    "props": {
+      "id": "menu-item-lavage",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/#",
+        "noFollow": false,
+        "tagTitle": "Lavaggio e asciugatura",
+        "text": "Lavaggio e asciugatura"
+      },
+      "blockClass": "footerNormal"
+    }
+  },
+  "menu-item#cuisson": {
+    "props": {
+      "id": "menu-item-cuisson",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/#",
+        "noFollow": false,
+        "tagTitle": "Cottura",
+        "text": "Cottura"
+      },
+      "blockClass": "footerNormal"
+    }
+  },
+  "menu-item#froid": {
+    "props": {
+      "id": "menu-item-froid",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/#",
+        "noFollow": false,
+        "tagTitle": "Refrigerazione",
+        "text": "Refrigerazione"
+      },
+      "blockClass": "footerNormal"
+    }
+  },
+  "menu-item#lave-vaisselle": {
+    "props": {
+      "id": "menu-item-lave-vaisselle",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/#",
+        "noFollow": false,
+        "tagTitle": "Lavastoviglie",
+        "text": "Lavastoviglie"
+      },
+      "blockClass": "footerNormal"
+    }
+  },
+  "menu-item#climatisation": {
+    "props": {
+      "id": "menu-item-climatisation",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/#",
+        "noFollow": false,
+        "tagTitle": "Climatizzazione",
+        "text": "Climatizzazione"
+      },
+      "blockClass": "footerNormal"
+    }
+  },
+  "menu-item#accessories-wpro": {
+    "props": {
+      "id": "menu-item-accessories-wpro",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/#",
+        "noFollow": false,
+        "tagTitle": "Accessori WPRO",
+        "text": "Accessori WPRO"
+      },
+      "blockClass": "footerNormal"
+    }
+  },
+  "vtex.menu@2.x:menu#notre-entreprise": {
+    "props": {
+      "orientation": "vertical",
+      "blockClass": ["footerMenu"]
+    },
+    "children": [
+      "flex-layout.col#our-company",
+      "flex-layout.col#payment-methods"
+    ]
+  },
+  "flex-layout.col#our-company": {
+    "props": {
+      "blockClass": "footerMenuCompany"
+    },
+    "children": [
+      "menu-item#notre-entreprise",
+      // "menu-item#contactez-nous",
+      // "menu-item#our-integrity-manual",
+      // "menu-item#organisational-model"
+      "link#contatti",
+      "link#manuale-integrita",
+      "link#modello-organizzativo"
+    ]
+  },
+  "link#contatti": {
+    "title": "link contatti",
+    "props": {
+      "label": "Contatti",
+      "href": "/support/#contatti",
+      "target": "_self",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "menu_footer_click",
+      "analyticsType": "",
+      "isPrevent": false,
+      "clickArea": "footer",
+      "blockClass": ["footerNormal"]
+    }
+  },
+  "link#manuale-integrita": {
+    "title": "link manuale integrità",
+    "props": {
+      "label": "Il nostro manuale sull’integrità",
+      "href": "https://www.whirlpoolcorp.com/ethics/",
+      "target": "_blank",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "menu_footer_click",
+      "analyticsType": "",
+      "isPrevent": false,
+      "clickArea": "footer",
+      "blockClass": ["footerNormal"]
+    }
+  },
+  "link#modello-organizzativo": {
+    "title": "link modello organizzativo",
+    "props": {
+      "label": "Modello organizzativo",
+      "href": "https://itccwhirlpool.myvtex.com/api/dataentities/AT/documents/bea9b139-2ebe-11ed-835d-0aacdb44bb83/file/attachments/_MOG_2020_WHIRLPOOL_Italia.pdf",
+      "target": "_blank",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "menu_footer_click",
+      "analyticsType": "",
+      "isPrevent": false,
+      "clickArea": "footer",
+      "blockClass": ["footerNormal"]
+    }
+  },
+  "flex-layout.col#payment-methods": {
+    "props": {
+      "blockClass": "paymentMethods"
+    },
+    "children": [
+      "image#payment-methods",
+      "flex-layout.row#payments-methods-others"
+    ]
+  },
+  "menu-item#notre-entreprise": {
+    "props": {
+      "id": "menu-item-notre-entreprise",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "noFollow": false,
+        "tagTitle": "LA NOSTRA AZIENDA",
+        "text": "LA NOSTRA AZIENDA"
+      },
+      "blockClass": ["footerBold", "footerBoldNotClickable"]
+    }
+  },
+  "link#whirlpool-europe": {
+    "props": {
+      "label": "Whirlpool Europe",
+      "href": "https://www.whirlpool.eu/",
+      "blockClass": "footerNormal",
+      "target": "_blank",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "outbound"
+    }
+  },
+  "link#manuel-dintegrite": {
+    "props": {
+      "label": "Manuel d'intégrité",
+      "href": "https://www.whirlpoolcorp.com/ethics/",
+      "blockClass": "footerNormal",
+      "target": "_blank",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "outbound"
+    }
+  },
+  "link#carriere": {
+    "props": {
+      "label": "Carriére",
+      "href": "https://www.whirlpoolcareers.com/work-with-emea/",
+      "blockClass": "footerNormal",
+      "target": "_blank",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "outbound"
+    }
+  },
+  "menu-item#contactez-nous": {
+    "props": {
+      "id": "menu-item-contactez-nous",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/support/#contatti",
+        "noFollow": false,
+        "tagTitle": "Contatti",
+        "text": "Contatti"
+      },
+      "blockClass": "footerNormal"
+    }
+  },
+  "menu-item#our-integrity-manual": {
+    "props": {
+      "id": "menu-item-our-integrity-manual",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/#",
+        "noFollow": false,
+        "tagTitle": "Il nostro manuale sull’integrità",
+        "text": "Il nostro manuale sull’integrità"
+      },
+      "blockClass": "footerNormal"
+    }
+  },
+  "menu-item#organisational-model": {
+    "props": {
+      "id": "menu-item-organisational-model",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/#",
+        "noFollow": false,
+        "tagTitle": "Modello organizzativo",
+        "text": "Modello organizzativo"
+      },
+      "blockClass": "footerNormal"
+    }
+  },
+  "vtex.menu@2.x:menu#policy-and-terms": {
+    "props": {
+      "orientation": "vertical"
+    },
+    "children": [
+      "menu-item#policy-and-terms",
+      // "menu-item#politique-dusage-des-cookies",
+      // "menu-item#politique-de-donnees-personnelles",
+      // "menu-item#conditions-de-livraison",
+      // "menu-item#conditions-generales-de-vente",
+      // "menu-item#droit-de-retractation",
+      // "menu-item#toutes-les-reponses-a-vos-questions-new",
+      // "menu-item#online-dispute-resolution",
+      // "menu-item#legal-guarantee-reminder",
+      "link#cookie-policy",
+      "link#informativa-privacy",
+      //"link#condizioni-garanzia-legale",
+      "link#termini-condizioni",
+      "link#consegna",
+      "link#diritto-recesso",
+      "link#sostituzione-prodotto-danneggiato",
+      "link#risoluzione-online",
+      "link#promemoria-garanzia-legale",
+      "itcc-cookie-table.title#footer"
+    ]
+  },
+  "itcc-cookie-table.title#footer": {
+    "props": {
+      "hasUnderline": true
+    }
+  },
+  "menu-item#policy-and-terms": {
+    "props": {
+      "id": "menu-item-policy-and-terms",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "noFollow": false,
+        "tagTitle": "LE NOSTRE POLICY",
+        "text": "LE NOSTRE POLICY"
+      },
+      "blockClass": ["footerBold", "footerBoldNotClickable"]
+    }
+  },
+  "menu-item#mentions-légales": {
+    "props": {
+      "id": "menu-item-mentions-légales",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/#",
+        "noFollow": false,
+        "tagTitle": "Condizioni di garanzia legale",
+        "text": "Condizioni di garanzia legale"
+      },
+      "blockClass": "footerNormal"
+    }
+  },
+  "menu-item#politique-dusage-des-cookies": {
+    "props": {
+      "id": "menu-item-politique-dusage-des-cookies",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/#",
+        "noFollow": false,
+        "tagTitle": "Cookie policy ",
+        "text": "Cookie policy "
+      },
+      "blockClass": "footerNormal"
+    }
+  },
+  "menu-item#politique-de-donnees-personnelles": {
+    "props": {
+      "id": "menu-item-politique-de-donnees-personnelles",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/#",
+        "noFollow": false,
+        "tagTitle": "Informativa della privacy",
+        "text": "Informativa della privacy"
+      },
+      "blockClass": "footerNormal"
+    }
+  },
+  "menu-item#conditions-de-livraison": {
+    "props": {
+      "id": "menu-item-conditions-de-livraison",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/#",
+        "noFollow": false,
+        "tagTitle": "Termini e condizioni ",
+        "text": "Termini e condizioni "
+      },
+      "blockClass": "footerNormal"
+    }
+  },
+  "menu-item#conditions-generales-de-vente": {
+    "props": {
+      "id": "menu-item-conditions-generales-de-vente",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/#",
+        "noFollow": false,
+        "tagTitle": "Consegna",
+        "text": "Consegna"
+      },
+      "blockClass": "footerNormal"
+    }
+  },
+  "link#installation": {
+    "props": {
+      "id": "menu-item-conditions",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "href": "/pages/information#installation",
+      "label": "Installation",
+      "scrollTo": "installation",
+      "blockClass": "footerNormal"
+    }
+  },
+  "link#rappel-sur-la-garantie-legale": {
+    "props": {
+      "id": "menu-item-conditions",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "href": "/pages/information#Rappel-sur-la-garantie-legale",
+      "label": "Rappel sur la garantie légale",
+      "scrollTo": "Rappel-sur-la-garantie-legale",
+      "blockClass": "footerNormal"
+    }
+  },
+  "menu-item#droit-de-retractation": {
+    "props": {
+      "id": "menu-item-droit-de-retractation",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/support/#dirittoDiRecesso",
+        "noFollow": false,
+        "tagTitle": "Diritto di Recesso",
+        "text": "Diritto di Recesso"
+      },
+      "blockClass": "footerNormal"
+    }
+  },
+  "link#mediation": {
+    "props": {
+      "label": "Médiation",
+      "href": "https://www.cmap.fr/",
+      "blockClass": "footerNormal",
+      "target": "_blank",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "outbound"
+    }
+  },
+
+  "menu-item#toutes-les-reponses-a-vos-questions-new": {
+    "props": {
+      "id": "menu-item-toutes-les-reponses-a-vos-questions",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/support/#sostituzioneProdottoDanneggiato",
+        "noFollow": false,
+        "tagTitle": "Sostituzione prodotto danneggiato",
+        "text": "Sostituzione prodotto danneggiato"
+      },
+      "blockClass": "footerNormal"
+    }
+  },
+  "menu-item#online-dispute-resolution": {
+    "props": {
+      "id": "menu-item-online-dispute-resolution",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Risoluzione online delle controversie",
+        "text": "Risoluzione online delle controversie"
+      },
+      "blockClass": "footerNormal"
+    }
+  },
+  "menu-item#legal-guarantee-reminder": {
+    "props": {
+      "id": "menu-item-legal-guarantee-reminder",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Promemoria sulla garanzia legale",
+        "text": "Promemoria sulla garanzia legale"
+      },
+      "blockClass": "footerNormal"
+    }
+  },
+  "menu-item#news": {
+    "props": {
+      "id": "menu-item-news",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Новости",
+        "text": "Новости"
+      },
+      "blockClass": ["footerNormal", "hideMenuItem"]
+    }
+  },
+  "menu-item#useful-tips": {
+    "props": {
+      "id": "menu-item-useful-tips",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Полезные советы",
+        "text": "Полезные советы  "
+      },
+      "blockClass": ["footerNormal", "hideMenuItem"]
+    }
+  },
+  "link#condizioni-garanzia-legale": {
+    "title": "link Condizioni di garanzia legale",
+    "props": {
+      "label": "Condizioni di garanzia legale",
+      "href": "/pages/condizioni-di-garanzia",
+      "target": "_self",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "menu_footer_click",
+      "analyticsType": "",
+      "isPrevent": false,
+      "clickArea": "footer",
+      "blockClass": ["footerNormal"]
+    }
+  },
+  "link#cookie-policy": {
+    "title": "link Cookie policy",
+    "props": {
+      "label": "Cookie policy",
+      "href": "/pagine/informativa-sui-cookie",
+      "target": "_self",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "menu_footer_click",
+      "analyticsType": "",
+      "isPrevent": false,
+      "clickArea": "footer",
+      "blockClass": ["footerNormal"]
+    }
+  },
+  "link#informativa-privacy": {
+    "title": "link Informativa della privacy",
+    "props": {
+      "label": "Informativa della privacy",
+      "href": "/pagine/informativa-sulla-privacy",
+      "target": "_self",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "menu_footer_click",
+      "analyticsType": "",
+      "isPrevent": false,
+      "clickArea": "footer",
+      "blockClass": ["footerNormal"]
+    }
+  },
+  "link#termini-condizioni": {
+    "title": "link Termini e condizioni",
+    "props": {
+      "label": "Termini e condizioni",
+      "href": "/pages/termini-e-condizioni",
+      "target": "_self",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "menu_footer_click",
+      "analyticsType": "",
+      "isPrevent": false,
+      "clickArea": "footer",
+      "blockClass": ["footerNormal"]
+    }
+  },
+  "link#consegna": {
+    "title": "link Consegna",
+    "props": {
+      "label": "Consegna",
+      "href": "/support",
+      "target": "_self",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "menu_footer_click",
+      "analyticsType": "",
+      "isPrevent": false,
+      "clickArea": "footer",
+      "blockClass": ["footerNormal"]
+    }
+  },
+  "link#diritto-recesso": {
+    "title": "link Diritto di Recesso",
+    "props": {
+      "label": "Diritto di Recesso",
+      "href": "/support/#dirittoDiRecesso",
+      "target": "_self",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "menu_footer_click",
+      "analyticsType": "",
+      "isPrevent": false,
+      "clickArea": "footer",
+      "blockClass": ["footerNormal"]
+    }
+  },
+  "link#sostituzione-prodotto-danneggiato": {
+    "title": "link Sostituzione prodotto danneggiato",
+    "props": {
+      "label": "Sostituzione prodotto danneggiato",
+      "href": "/support/#sostituzioneProdottoDanneggiato",
+      "target": "_self",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "menu_footer_click",
+      "analyticsType": "",
+      "isPrevent": false,
+      "clickArea": "footer",
+      "blockClass": ["footerNormal"]
+    }
+  },
+  "link#risoluzione-online": {
+    "title": "link Risoluzione online delle controversie",
+    "props": {
+      "label": "Risoluzione online delle controversie",
+      "href": "https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home2.show&lng=IT",
+      "target": "_blank",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "menu_footer_click",
+      "analyticsType": "",
+      "isPrevent": false,
+      "clickArea": "footer",
+      "blockClass": ["footerNormal"]
+    }
+  },
+  "link#promemoria-garanzia-legale": {
+    "title": "link Promemoria sulla garanzia legale",
+    "props": {
+      "label": "Promemoria sulla garanzia legale",
+      "href": "https://itccwhirlpool.myvtex.com/api/dataentities/AT/documents/bea9b139-2ebe-11ed-835d-0aacdb44bb83/file/attachments/condizioni_garanzie_legali_2022_clean_Errata%20CORRIGE.pdf",
+      "target": "_blank",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "menu_footer_click",
+      "analyticsType": "",
+      "isPrevent": false,
+      "clickArea": "footer",
+      "blockClass": ["footerNormal"]
+    }
+  },
+  "link#lavaggio": {
+    "title": "link Lavaggio e asciugatura",
+    "props": {
+      "label": "Lavaggio e asciugatura",
+      "href": "/prodotti/lavaggio-e-asciugatura",
+      "target": "_self",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "menu_footer_click",
+      "analyticsType": "",
+      "isPrevent": false,
+      "clickArea": "footer",
+      "blockClass": ["footerNormal"]
+    }
+  },
+  "link#cottura": {
+    "title": "link Cottura",
+    "props": {
+      "label": "Cottura",
+      "href": "/prodotti/cottura",
+      "target": "_self",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "menu_footer_click",
+      "analyticsType": "",
+      "isPrevent": false,
+      "clickArea": "footer",
+      "blockClass": ["footerNormal"]
+    }
+  },
+  "link#refrigerazione": {
+    "title": "link Refrigerazione",
+    "props": {
+      "label": "Refrigerazione",
+      "href": "/prodotti/refrigerazione",
+      "target": "_self",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "menu_footer_click",
+      "analyticsType": "",
+      "isPrevent": false,
+      "clickArea": "footer",
+      "blockClass": ["footerNormal"]
+    }
+  },
+  "link#lavastoviglie": {
+    "title": "link Lavastoviglie",
+    "props": {
+      "label": "Lavastoviglie",
+      "href": "/prodotti/lavastoviglie",
+      "target": "_self",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "menu_footer_click",
+      "analyticsType": "",
+      "isPrevent": false,
+      "clickArea": "footer",
+      "blockClass": ["footerNormal"]
+    }
+  },
+  "link#climatizzazione": {
+    "title": "link Climatizzazione",
+    "props": {
+      "label": "Climatizzazione",
+      "href": "/prodotti/climatizzazione",
+      "target": "_self",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "menu_footer_click",
+      "analyticsType": "",
+      "isPrevent": false,
+      "clickArea": "footer",
+      "blockClass": ["footerNormal"]
+    }
+  },
+  "link#accessori-wpro": {
+    "title": "link Accessori WPRO",
+    "props": {
+      "label": "Accessori WPRO",
+      "href": "/accessori",
+      "target": "_self",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "menu_footer_click",
+      "analyticsType": "",
+      "isPrevent": false,
+      "clickArea": "footer",
+      "blockClass": ["footerNormal"]
+    }
+  }
+}

@@ -1,0 +1,232 @@
+{
+  "store.search": {
+    "blocks": [
+      "countdown.secondlevelswitcher",
+      "search-result-layout"
+    ],
+    "props": {
+        "context": {
+            "skusFilter": "FIRST_AVAILABLE",
+            "simulationBehavior": "skip",
+            "__unstableProductOriginVtex": true,
+            "maxItemsPerPage": 20
+        }
+     }
+  },
+  "store.search#subcategory": {
+    
+    "blocks": [ "countdown.customMeta","countdown.breadcrumbs", "experimental__visibility-layout#PlpTitle","countdown.secondlevelswitcher", "experimental__visibility-layout#Cleaning", "search-result-layout"],
+    "props": {
+        "context": {
+            "skusFilter": "FIRST_AVAILABLE",
+            "simulationBehavior": "skip",
+            "__unstableProductOriginVtex": true,
+            "maxItemsPerPage": 20
+        }  
+     }
+  },
+  "rich-text#headerCustomPageClAirCondition": {
+    "props": {
+      "text": "",
+      "blockClass": "headerCustomPage"
+    }
+  },
+  "store.search#brand": {
+    "blocks": [
+       "countdown.customMeta",
+      "experimental__visibility-layout#PlpTitle",
+      "search-result-layout"
+    ],
+    "props": {
+        "context": {
+            "skusFilter": "FIRST_AVAILABLE",
+            "simulationBehavior": "skip",
+            "__unstableProductOriginVtex": true,
+            "maxItemsPerPage": 20
+        }
+     }
+  },
+  "store.search#department": {
+    "blocks": [
+       "countdown.customMeta",
+      "experimental__visibility-layout#PlpTitle",
+      "experimental__visibility-layout#Cleaning",
+      "search-result-layout"
+    ],
+    "props": {
+        "context": {
+            "skusFilter": "FIRST_AVAILABLE",
+            "simulationBehavior": "skip",
+            "__unstableProductOriginVtex": true,
+            "maxItemsPerPage": 20
+        }
+     }
+  },
+  "store.search#category": {
+    "blocks": [
+       "countdown.customMeta",
+      "experimental__visibility-layout#PlpTitle",
+      "experimental__visibility-layout#Cleaning",
+      "countdown.secondlevelswitcher",
+      "search-result-layout"
+    ],
+    "props": {
+        "context": {
+            "skusFilter": "FIRST_AVAILABLE",
+            "simulationBehavior": "skip",
+            "__unstableProductOriginVtex": true,
+            "maxItemsPerPage": 20
+        }
+     }
+  },
+  "search-result-layout": {
+    "blocks": [
+      "search-result-layout.desktop",
+      "search-not-found-layout"
+    ]
+  },
+  "search-result-layout.desktop": {
+    "children": [
+      "flex-layout.row#searchinfo",
+      "filter-navigator.v3",
+      "search-fetch-previous",
+      "search-content",
+      "search-fetch-more",
+      "search-not-found-layout"  
+    ],
+    "props": {
+      "showFacetQuantity": true,
+      "defaultGalleryLayout": "grid",
+      "mobileLayout": {
+        "mode1": "small",
+        "mode2": "normal"
+      },
+      "hiddenFacets": {
+        "specificationFilters": {
+          "hiddenFilters": [
+            {
+              "name": "winnerCode"
+            },
+            {
+              "name": "hazardous"
+            },
+            {
+              "name": "error"
+            },
+            {
+              "name": "Brand"
+            },
+            {
+              "name": "looserCode"
+            },
+            {
+              "name": "warning"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "experimental__visibility-layout#PlpTitle": {
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "flex-layout.row#PlpTitle","flex-layout.row#PlpText"
+    ]
+  },
+   "flex-layout.row#searchinfo": {
+    "children": ["flex-layout.col#productCount", "flex-layout.col#orderby"],
+    "props": {
+      "blockClass": "filtersRow"
+    }
+  },
+  "flex-layout.col#productCount": {
+    "children": ["search-products-count-per-page"],
+    "props": {
+      "blockClass": "productCountCol"
+    }
+  },
+  "flex-layout.col#orderby": {
+    "children": ["order-by.v2"],
+    "props": {
+      "blockClass": "orderByCol"
+    }
+  },
+  "flex-layout.row#PlpTitle": {
+    "children": [
+      "rich-text#search-title"
+    ],
+    "props": {
+      "blockClass": "rowTable"
+    }
+  },
+  "rich-text#search-title": {
+    "props": {
+      "text": "# HERE PUT THE TITLE&DESCRIPTION YOU WANT FROM SITE EDITOR",
+      "blockClass": "SearchTitleCategory"
+    }
+  },
+  "flex-layout.row#PlpText": {
+    "children": [
+      "experimental__visibility-layout#PlpDesc"
+    ]
+  },
+  "experimental__visibility-layout#PlpDesc": {
+    "props": {
+      "visible": false
+    },
+    "children": [
+      "flex-layout.col#read-more"
+    ]
+  },
+  "flex-layout.col#read-more": {
+    "children": ["countdown.readMoreCustom"]
+  },
+  "countdown.readMoreCustom": {
+    "children": ["rich-text#search-text"]
+  },
+  "rich-text#search-text": {
+    "props": {
+      "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "blockClass": ["read-more-text"]
+    }
+  },
+  "search-content": {
+    "blocks": [
+      "gallery",
+      "not-found"
+    ]
+  },
+  "experimental__visibility-layout#Cleaning": {
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "countdown.cleaningAndCare"
+    ]
+  },
+  "gallery": {
+    "props": {
+      "layouts": [
+        {
+          "name": "grid",
+          "component": "GridSummary",
+          "itemsPerRow": {
+            "(min-width:1300px)": 3,
+            "desktop": 3,
+            "tablet": 3,
+            "phone": 2
+          }
+        },
+        {
+          "name": "list",
+          "component": "ListSummary",
+          "itemsPerRow": 1
+        }
+      ],
+      "ListSummary": "product-summary.shelf#plp",
+      "GridSummary": "product-summary.shelf#plp"
+    }
+  }
+}

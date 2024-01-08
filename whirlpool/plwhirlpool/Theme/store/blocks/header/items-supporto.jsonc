@@ -1,0 +1,462 @@
+{
+  "flex-layout.row#supporto": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "menuSupporto"
+    },
+    "children": [
+      "flex-layout.col#first",
+      "flex-layout.col#second",
+      "flex-layout.col#third",
+      "flex-layout.col#fourth"
+    ]
+  },
+  "flex-layout.col#first": {
+    "props": {
+      "blockClass": "paddingSuppFirst"
+    },
+    "children": ["flex-layout.row#supportosub", "flex-layout.row#supportoTec"]
+  },
+  "flex-layout.row#supportosub": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "firstRowSupporto"
+    },
+    "children": ["flex-layout.col#svgSup", "flex-layout.col#richSup"]
+  },
+  "flex-layout.col#svgSup": {
+    "props": {
+      "width": "24px",
+      "blockClass": "SupportoItem"
+    },
+    "children": ["image#iconSup"]
+  },
+  "image#iconSup": {
+    "props": {
+      "blockClass": "menuSupporto",
+      "src": "assets/supporto/benefitplus.svg"
+    }
+  },
+  "flex-layout.col#richSup": {
+    "children": ["rich-text#richSup"]
+  },
+  "rich-text#richSup": {
+    "props": {
+      "blockClass": "colonnaMenuSupporto",
+      "textAlignment": "LEFT",
+      "text": "**[Pomoc](/services)**\nEntretenir & réparer votre électroménager",
+      "href": "/support"
+    }
+  },
+  "flex-layout.row#supportoTec": {
+    "props": {
+      "fullWidth": true
+    },
+    "children": ["flex-layout.col#svgTec", "flex-layout.col#richTec"]
+  },
+  "flex-layout.col#svgTec": {
+    "props": {
+      "width": "24px",
+      "blockClass": "SupportoItem"
+    },
+    "children": ["image#iconTec"]
+  },
+  "image#iconTec": {
+    "props": {
+      "blockClass": "menuSupporto",
+      "src": "assets/supporto/benefitplus.svg"
+    }
+  },
+  "flex-layout.col#richTec": {
+    "children": ["rich-text#richTec"]
+  },
+  "rich-text#richTec": {
+    "props": {
+      "blockClass": "colonnaMenuSupporto",
+      "textAlignment": "LEFT",
+      "text": "**[Naprawy serwisowe](/support/service-locator)** \nLocaliser une station technique proche de chez vous",
+      "href": "/services/assistance-technique-agreee"
+    }
+  },
+  "flex-layout.col#second": {
+    "props": {
+      "blockClass": "paddingSupp"
+    },
+    "children": [
+      "flex-layout.row#supportoPiani",
+      "flex-layout.row#supportoIntervento"
+    ]
+  },
+  "flex-layout.row#supportoPiani": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "firstRowSupporto"
+    },
+    "children": ["flex-layout.col#svgPiani", "flex-layout.col#richPiani"]
+  },
+  "flex-layout.col#svgPiani": {
+    "props": {
+      "width": "24px",
+      "blockClass": "SupportoItem"
+    },
+    "children": ["image#iconPiani"]
+  },
+  "image#iconPiani": {
+    "props": {
+      "blockClass": "menuSupporto",
+      "src": "assets/supporto/benefitplus.svg"
+    }
+  },
+  "flex-layout.col#richPiani": {
+    "children": ["rich-text#richPiani"]
+  },
+  "rich-text#richPiani": {
+    "props": {
+      "blockClass": "colonnaMenuSupporto",
+      "textAlignment": "LEFT",
+      "text": "**[Gwarancja](/services/page-garantie)**\nProtection complémentaire, esprit tranquille"
+    }
+  },
+  "flex-layout.row#supportoIntervento": {
+    "props": {
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.col#svgIntervento",
+      "flex-layout.col#richIntervento"
+    ]
+  },
+  "flex-layout.col#svgIntervento": {
+    "props": {
+      "width": "24px",
+      "blockClass": "SupportoItem"
+    },
+    "children": ["image#iconIntervento"]
+  },
+  "image#iconIntervento": {
+    "props": {
+      "blockClass": "menuSupporto",
+      "src": "assets/supporto/benefitplus.svg"
+    }
+  },
+  "flex-layout.col#richIntervento": {
+    "children": ["rich-text#richIntervento"]
+  },
+  "rich-text#richIntervento": {
+    "props": {
+      "blockClass": "colonnaMenuSupporto",
+      "textAlignment": "LEFT",
+      "text": "**[Znajdź serwis](demander-une-intervention)** \nOrganiser une intervention"
+    }
+  },
+  "flex-layout.col#third": {
+    "props": {
+      "blockClass": "paddingSuppThird"
+    },
+    "children": [
+      "flex-layout.row#supportoProdotto",
+      "flex-layout.row#supportoIstruzione"
+    ]
+  },
+  "flex-layout.row#supportoProdotto": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "firstRowSupporto"
+    },
+    "children": ["flex-layout.col#svgProdotto", "flex-layout.col#richProdotto"]
+  },
+  "flex-layout.col#svgProdotto": {
+    "props": {
+      "width": "24px",
+      "blockClass": "SupportoItem"
+    },
+    "children": ["image#iconProdotto"]
+  },
+  "image#iconProdotto": {
+    "props": {
+      "blockClass": "menuSupporto",
+      "src": "assets/supporto/benefitplus.svg"
+    }
+  },
+  "flex-layout.col#richProdotto": {
+    "children": ["analytics-wrapper#richProdotto"]
+  },
+  "analytics-wrapper#richProdotto": {
+    "props": {
+      "propsAnalytics": {
+        "analyticsProperties": "provide",
+        "nameEvent": "productRegistration",
+        "name": "",
+        "nameView": "",
+        "data": [],
+        "isView": false
+      }
+    },
+    "children": ["rich-text#richProdotto"]
+  },
+  "rich-text#richProdotto": {
+    "props": {
+      "blockClass": "colonnaMenuSupporto",
+      "textAlignment": "LEFT",
+      "text": "<a href=\"\" class=\"dont-remove-me\"></a><span class=\"vtex-rich-text-0-x-heading vtex-rich-text-0-x-heading--colonnaMenuSupporto t-heading-3 vtex-rich-text-0-x-strong vtex-rich-text-0-x-strong--colonnaMenuSupporto vtex-rich-text-0-x-strong\"><a class=\"vtex-rich-text-0-x-link vtex-rich-text-0-x-link--colonnaMenuSupporto\" href=\"https://www.whirlpool-piecesdetachees.fr/\" target=\"_blank\">Zarejestruj swój produkt</a></span><p class=\"lh-copy vtex-rich-text-0-x-paragraph vtex-rich-text-0-x-paragraph--colonnaMenuSupporto\">Découvrez notre large gamme de pièces détachées d’origine</p>"
+    }
+  },
+  "flex-layout.row#supportoIstruzione": {
+    "props": {
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.col#svgIstruzione",
+      "flex-layout.col#richIstruzione"
+    ]
+  },
+  "flex-layout.col#svgIstruzione": {
+    "props": {
+      "width": "24px",
+      "blockClass": "SupportoItem"
+    },
+    "children": ["image#iconIstruzione"]
+  },
+  "image#iconIstruzione": {
+    "props": {
+      "blockClass": "menuSupporto",
+      "src": "assets/supporto/benefitplus.svg"
+    }
+  },
+  "flex-layout.col#richIstruzione": {
+    "children": ["rich-text#richIstruzione"]
+  },
+  "rich-text#richIstruzione": {
+    "props": {
+      "blockClass": "colonnaMenuSupporto",
+      "textAlignment": "LEFT",
+      "text": "**[Instrukcje obsługi](/services/telecharger-un-mode-d-emploi)** \nTélécharger un mode d'emploi"
+    }
+  },
+  "flex-layout.col#fourth": {
+    "props": {
+      "blockClass": "paddingSuppLast"
+    },
+    "children": [
+      "flex-layout.row#supportoContactUs",
+      "flex-layout.row#supportoEnregistrez"
+      // "flex-layout.row#supportoChiamaci",
+      // "flex-layout.row#supportoScrivici"
+    ]
+  },
+  "flex-layout.row#supportoChiamaci": {
+    "props": {
+      "fullWidth": true
+    },
+    "children": ["flex-layout.col#svgChiamaci", "flex-layout.col#richChiamaci"]
+  },
+  "flex-layout.col#svgChiamaci": {
+    "props": {
+      "width": "24px",
+      "blockClass": "SupportoItem"
+    },
+    "children": ["image#iconChiamaci"]
+  },
+  "image#iconChiamaci": {
+    "props": {
+      "blockClass": "menuSupporto",
+      "src": "assets/supporto/benefitplus.svg"
+    }
+  },
+  "flex-layout.col#richChiamaci": {
+    "children": ["rich-text#richChiamaci-1", "rich-text#richChiamaci-4"]
+  },
+  "rich-text#richChiamaci-1": {
+    "props": {
+      "blockClass": "colonnaMenuSupportoLast",
+      "textAlignment": "LEFT",
+      "text": "[Pomoc boutique en ligne](tel:0969376140)"
+    }
+  },
+  "rich-text#richChiamaci-3": {
+    "props": {
+      "blockClass": "menuSupportoLast",
+      "textAlignment": "LEFT",
+      "text": "09.69.39.1234"
+    }
+  },
+  "rich-text#richChiamaci-4": {
+    "props": {
+      "blockClass": "menuSupportoLast",
+      "textAlignment": "LEFT",
+      "text": "09.69.37.6140"
+    }
+  },
+  "rich-text#richChiamaci-5": {
+    "props": {
+      "blockClass": "colonnaMenuSupportoLast",
+      "textAlignment": "LEFT",
+      "text": "[Zadzwoń do nas](tel:0969391234)"
+    }
+  },
+  "flex-layout.row#supportoChat": {
+    "props": {
+      "fullWidth": true
+    },
+    "children": ["flex-layout.col#svgChat", "flex-layout.col#richChat"]
+  },
+  "flex-layout.col#svgChat": {
+    "props": {
+      "width": "24px",
+      "blockClass": "SupportoItem"
+    },
+    "children": ["image#iconChat"]
+  },
+  "image#iconChat": {
+    "props": {
+      "blockClass": "menuSupporto",
+      "src": "assets/supporto/benefitplus.svg"
+    }
+  },
+  "flex-layout.col#richChat": {
+    "props": {
+      "blockClass": "live-chat-text"
+    },
+    "children": ["link#richChat"]
+  },
+  "link#richChat": {
+    "props": {
+      "href": "/supporto#chat",
+      "label": "Live Chat",
+      "blockClass": ["colonnaMenuSupportoLast", "chatGenesys"]
+    }
+  },
+  "flex-layout.row#supportoScrivici": {
+    "props": {
+      "fullWidth": true
+    },
+    "children": ["flex-layout.col#svgScrivici", "flex-layout.col#richScrivici"]
+  },
+  "flex-layout.col#svgScrivici": {
+    "props": {
+      "width": "24px",
+      "blockClass": "SupportoItem"
+    },
+    "children": ["image#iconScrivici"]
+  },
+  "image#iconScrivici": {
+    "props": {
+      "blockClass": "menuSupporto",
+      "src": "assets/supporto/benefitplus.svg"
+    }
+  },
+  "flex-layout.col#richScrivici": {
+    "props": {
+      "blockClass": "scrivici-text"
+    },
+    "children": ["rich-text#richChiamaci-5", "rich-text#richChiamaci-3"]
+  },
+
+  "link#scrivici": {
+    "props": {
+      "blockClass": "colonnaMenuSupportoLast",
+      "href": "/pomoc/skontaktuj-sie-z-nami",
+      "label": "Service Consommateurs"
+    }
+  },
+  "flex-layout.row#supportoContactUs": {
+    "props": {
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.col#svgContactUs",
+      "flex-layout.col#richContactUs"
+    ]
+  },
+  "flex-layout.row#supportoEnregistrez": {
+    "props": {
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.col#svgEnregistrez",
+      "flex-layout.col#richEnregistrez"
+    ]
+  },
+  "flex-layout.col#svgContactUs": {
+    "props": {
+      "width": "24px",
+      "blockClass": "SupportoItem"
+    },
+    "children": ["image#iconEnregistrez"]
+  },
+  "flex-layout.col#svgEnregistrez": {
+    "props": {
+      "width": "24px",
+      "blockClass": "SupportoItem"
+    },
+    "children": ["image#iconEnregistrez"]
+  },
+  "image#iconEnregistrez": {
+    "props": {
+      "blockClass": "menuSupporto",
+      "src": "assets/supporto/benefitplus.svg"
+    }
+  },
+  "flex-layout.col#richContactUs": {
+    "props": {
+      "blockClass": "scrivici-text"
+    },
+    "children": ["link#richContactUsTitle"]
+  },
+  "flex-layout.col#richEnregistrez": {
+    "props": {
+      "blockClass": "scrivici-text"
+    },
+    "children": ["link#richEnregistrezTitle"]
+  },
+  "link#richContactUsTitle": {
+    "props": {
+      "href": "tel:222441000",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "contacts_click",
+      "analyticsType": "telephone",
+      "isPrevent": false,
+      "blockClass": "colonnaMenuSupportoLast"
+    },
+    "children": ["rich-text#richContactUsTitle"]
+  },
+  "rich-text#richContactUsTitle": {
+    "props": {
+      "blockClass": "colonnaMenuSupportoLast",
+      "textAlignment": "LEFT",
+      "text": "**Zadzwoń do nas**\n[22 244 1000](tel:222441000)"
+    }
+  },
+  "link#richEnregistrezTitle": {
+    "props": {
+      "href": "/pomoc/skontaktuj-sie-z-nami",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "contacts_click",
+      "analyticsType": "email",
+      "isPrevent": false
+    },
+    "children": ["rich-text#richEnregistrezTitle"]
+  },
+  "rich-text#richEnregistrezTitle": {
+    "props": {
+      "blockClass": "colonnaMenuSupportoLast",
+      "textAlignment": "LEFT",
+      "text": "<span class='vtex-rich-text-0-x-heading vtex-rich-text-0-x-heading--colonnaMenuSupporto t-heading-3 vtex-rich-text-0-x-strong vtex-rich-text-0-x-strong--colonnaMenuSupporto vtex-rich-text-0-x-strong'><a class='vtex-rich-text-0-x-link vtex-rich-text-0-x-link--colonnaMenuSupporto' href='/pomoc/skontaktuj-sie-z-nami' target='_blank'>Napisz do nas</a></span>"
+    }
+  }
+  // "rich-text#richEnregistrezSubtitle": {
+  //   "props": {
+  //     "blockClass": "menuSupportoLast",
+  //     "textAlignment": "LEFT",
+  //     "text": "Découvrez notre large gamme de pièces détachées d’origine"
+  //   }
+  // },
+  // "link#Enregistrez": {
+  //   "props": {
+  //     "blockClass": "colonnaMenuSupportoLast",
+  //     "href": "https://whirlpool.register-appliance.com/RegistroPorMarca?country=FR&language=fr",
+  //     "label": "Service Consommateurs",
+  //     "target": "_blank"
+  //   }
+  // }
+}

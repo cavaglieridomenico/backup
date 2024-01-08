@@ -1,0 +1,76 @@
+{
+  "store.custom#models": {
+    "blocks": [
+      "flex-layout.row#findModel",
+      "flex-layout.row#category",
+      "flex-layout.row#modelsCategory"
+    ]
+  },
+  "flex-layout.row#findModel": {
+    "children": [
+      "flex-layout.col#findModelWrapper"
+    ],
+    "props": {
+      "blockClass": "findModelWrapper"
+    }
+  },
+  "flex-layout.col#findModelWrapper": {
+    "children": [
+      "rich-text#findModelTitle",
+      "flex-layout.row#findModelTop",
+      "flex-layout.row#barcodeOpen"
+    ]
+  },
+  "rich-text#findModelTitle" : {
+    "props": {
+      "text": "Test",
+      "textAlignment": "center",
+      "blockClass": "findModelTitle"
+  }
+  },
+  "flex-layout.row#findModelTop": {
+    "children": [
+      "countdown.autoComplete"
+    ]
+  },
+  "flex-layout.row#barcodeOpen": {
+    "props": {
+      "blockClass": "barcodeOpen"
+    },
+    "children": [
+      "modal-trigger#barcodeOpen"
+    ]
+  },
+  "modal-trigger#barcodeOpen": {
+    "props": {
+      "blockClass": "barcodeModalOpen"
+    },
+    "children": [
+      "countdown.barcodetitle",
+      "modal-layout#barcode"
+    ]
+  },
+  "flex-layout.row#category": {
+    "children": [
+      "countdown.categories"
+    ]
+  },
+
+  "flex-layout.row#modelsCategory": {
+    "children": [
+      "flex-layout.col#modelsCategoryWrapper"
+    ]
+  },
+  "flex-layout.col#modelsCategoryWrapper": {
+    "children": [
+      "flex-layout.row#laundry",
+      "flex-layout.row#dishwashing",
+      "flex-layout.row#cooling",
+      "flex-layout.row#cooking",
+      "flex-layout.row#smallAppliance"
+    ],
+    "props": {
+      "blockClass": "modelsWrapper"
+    }
+  }
+}

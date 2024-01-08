@@ -1,0 +1,973 @@
+{
+  "header": {
+    "blocks": [
+      "header-layout.desktop",
+      "header-layout.mobile"
+    ]
+  },
+  "header.full": {
+    "blocks": [
+      "header-layout.desktop",
+      "header-layout.mobile"
+    ]
+  },
+  "header-layout.desktop": {
+    "children": [
+      "stripe-custom#beta",
+      "flex-layout.row#headertab-desc",
+      "flex-layout.row#desktop",
+      "countdown"
+    ]
+  },
+  "stripe-custom#beta":{
+    "title":"Stripe Banner",
+    "children": ["rich-text#beta"]
+  },
+  "rich-text#beta":{
+    "title": "Testo dello Stripe",
+    "props": {
+      "blockClass": "stripe-link",
+      "text": "TESTO DI PROVA DELLO STRIPE - POP UP CUSTOM IN HOMEPAGE [help](https://developers.vtex.com/vtex-developer-docs/docs/welcome)",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER"
+    }
+  },
+  "flex-layout.row#headertab1": {
+    "children": [
+      "flex-layout.col#headertab"
+    ],
+    "props": {
+      "blockClass":"headertabMobile"
+    }
+  },
+  "flex-layout.col#headertab":{
+    "props": {
+      "blockClass": "headertabMain"
+    },
+    "children": [
+      "flex-layout.row#stripe",
+      "flex-layout.row#headertabSecond",
+      "flex-layout.row#fixedRow"
+    ]
+  },
+
+  "flex-layout.row#headertab-desc": {
+    "props": {
+      "blockClass": "headertabMain"
+    },
+    "children": [
+      "countdown.phone"
+    ]
+  },
+  "rich-text#merk": {
+    "props": {
+      "text": "Merk",
+      "blockClass": "Merk"
+    }
+  },
+  "flex-layout.row#headertabSecondDesc": {
+    "props": {
+      "blockClass": "headertabSecond",
+      "colSizing": "auto",
+      "fullWidth":true
+    },
+    "children": [
+      "flex-layout.row#wrapperPhoneNumber"
+    ]
+  },
+  "flex-layout.row#headertabSecond": {
+    "props": {
+      "blockClass": "headertabSecond",
+      "colSizing": "auto"
+    },
+    "children": [
+      "countdown.menumobile",
+      "flex-layout.row#wrapperPhoneNumber",
+      "flex-layout.row#mobileCart"
+    ]
+  },
+  "menu-item#sign-in": {
+    "props": {
+      "id": "menu-item-sign-in",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "blockClass": "top-menu",
+      "itemProps": {
+        "type": "internal",
+        "href": "/login?returnUrl=%2Faccount&",
+        "noFollow": false
+      },
+      "iconProps": {
+        "id": "inf-login",
+        "size": 20,
+        "viewBox": "0 0 20 20"
+      }
+    }
+  },
+  "flex-layout.row#wrapperPhoneNumber": {
+    "props": {
+      "blockClass": "wrapperPhoneNumber",
+      "colSizing": "auto"
+    },
+    "children": [
+      "countdown.phone"
+    ]
+  },
+  "rich-text#phoneNumber": {
+    "props": {
+      "text": "+32 2 263.32.27",
+      "blockClass": "phoneNumber"
+    }
+  },
+  "flex-layout.row#desktop": {
+    "props": {
+      "horizontalAlign": "center",
+      "verticalAlign": "end",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": true,
+      "colSizing": "auto",
+      "blockClass": "headerMenuRow"
+    },
+    "children": [
+      "flex-layout.col#logo-desktop",
+      "flex-layout.row#menu-nav",
+      /*"modal-trigger#barcode",*/
+      "flex-layout.row#search-and-cart"
+    ]
+  },
+    
+  "flex-layout.row#search-and-cart": {
+    "props": {
+      "verticalAlign": "middle",
+      "fullWidth": true,
+      "colSizing": "auto",
+      "horizontalAlign":"center",
+      "blockClass": "searchAndCart"
+    },
+    "children": [
+      "countdown.autoComplete#short",
+      "minicart.v2"
+    ]
+  },
+  "flex-layout.col#logo-desktop": {
+    "props": {
+      "verticalAlign": "middle"
+    },
+    "children": [
+      "logo"
+    ]
+  },
+  "logo": {
+    "props": {
+      "title": "Logo",
+      "href": "/",
+      "url": "assets/logo.png",
+      "width": "100",
+      "height": "40"
+    }
+  },
+  "header-layout.mobile": {
+    "children": [
+      "flex-layout.row#headertab1",
+      "flex-layout.row#headertabMobile"
+    ],
+    "props": {
+      "blockClass": "mobileHeader"
+    }
+  },
+  "flex-layout.row#headertabMobile": {
+    "children": [],
+    "props": {
+      "blockClass":"headertabMobile"
+    }
+  },
+"flex-layout.row#stripe":{
+  "props":{
+    "blockClass":""
+  },
+  "children":[
+    "stripe-custom#beta"
+  ]
+},
+  "flex-layout.row#fixedRow":{
+    "children":[
+      /*"modal-trigger#barcode",*/
+      "countdown.autoComplete#short"
+        ],
+    "props": {
+      "blockClass": "fixedRow"
+    }
+  },
+  "flex-layout.row#mobileCart": {
+    "children": [
+      "minicart.v2"
+    ],
+    "props": {
+      "blockClass": "mobileCart"
+    }
+  },
+  "countdown.menumobile": {
+    "children": [
+      "flex-layout.row#menu-nav"
+    ]
+  },
+  "flex-layout.row#mobileMenu": {
+    "children": [
+      "overlay-trigger#wassenMobile",
+      "overlay-trigger#vaatwasenMobile",
+      "overlay-trigger#koelenMobile",
+      "overlay-trigger#kokenMobile",
+      "overlay-trigger#kleineMobile",
+      "flex-layout.row#Cleaning",
+      "rich-text#Promo"
+    ],
+    "props": {
+      "blockClass": "mobileMenu"
+    }
+  },
+  "flex-layout.row#Cleaning": {
+    "children": [
+      "rich-text#Cleaning"
+    ],
+    "props": {
+      "blockClass": "empty"
+    }
+  },
+  "rich-text#Cleaning": {
+    "props": {
+      "text": "Cleaning and Care",
+      "blockClass": "Cleaning"
+    }
+  },
+  "rich-text#Promo": {
+    "props": {
+      "text": "Promotions",
+      "blockClass": "Promotions"
+    }
+  },
+  "link#promotions": {
+    "props": {
+      "displayMode": "button",
+      "label": "Promotions",
+      "blockClass": "promotionsButton",
+      "href": "/promotions"
+    }
+  },
+  "rich-text#wassen": {
+    "props": {
+      "text": "Wash",
+      "blockClass": "header"
+    }
+  },
+  "rich-text#vaatwasen": {
+    "props": {
+      "text": "Dishwashing",
+      "blockClass": "header"
+    }
+  },
+  "rich-text#koelen": {
+    "props": {
+      "text": "Cooling",
+      "blockClass": "header"
+    }
+  },
+  "rich-text#koken": {
+    "props": {
+      "text": "Cook",
+      "blockClass": "header"
+    }
+  },
+  "rich-text#kleine": {
+    "props": {
+      "text": "Small household appliances",
+      "blockClass": "header"
+    }
+  },
+  "rich-text#reiniging": {
+    "props": {
+      "text": "Reiniging en verzorging",
+      "blockClass": "header"
+    }
+  },
+  "vtex.menu@2.x:menu#wasdroog": {
+    "props": {
+      "orientation": "vertical",
+      "placement": "right"
+    },
+    "children": [
+      "menu-item#wasdroog"
+    ]
+  },
+  "menu-item#wasdroog": {
+    "props": {
+      "placement": "right",
+      "type": "category",
+      "categoryId": "15",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "noFollow": false,
+        "tagTitle": "Shop"
+      }
+    },
+    "blocks": [
+      "vtex.menu@2.x:submenu#wasdroog"
+    ]
+  },
+  "vtex.menu@2.x:submenu#wasdroog": {
+    "props": {
+      "orientation": "horizontal",
+      "placement": "right"
+    },
+    "children": [
+      "vtex.menu@2.x:menu#wasdroog1"
+    ]
+  },
+  "vtex.menu@2.x:menu#wasdroog1": {
+    "props": {
+      "orientation": "vertical",
+      "placement": "right"
+    } /* ,
+    "children": [
+      "menu-item#wasdroogelektra","menu-item#wasdroogoverige"
+    ] */
+  },
+  "menu-item#wasdroogelektra": {
+    "props": {
+      "type": "category",
+      "categoryId": "66",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "noFollow": false,
+        "tagTitle": "Shop"
+      }
+    }
+  },
+  "menu-item#wasdroogoverige": {
+    "props": {
+      "type": "category",
+      "blockClass": "dropdownRowMenu",
+      "categoryId": "45",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "noFollow": false,
+        "tagTitle": "Shop"
+      }
+    }
+  },
+  "vtex.menu@2.x:menu#droger": {
+    "props": {
+      "orientation": "vertical",
+      "placement": "right"
+    },
+    "children": [
+      "menu-item#droger"
+    ]
+  },
+  "menu-item#droger": {
+    "props": {
+      "placement": "right",
+      "blockClass": "dropdownRowMenu",
+      "type": "category",
+      "categoryId": "16",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "noFollow": false,
+        "tagTitle": "Shop"
+      }
+    },
+    "blocks": [
+      "vtex.menu@2.x:submenu#droger"
+    ]
+  },
+  "vtex.menu@2.x:submenu#droger": {
+    "props": {
+      "orientation": "horizontal",
+      "placement": "right"
+    },
+    "children": [
+      "vtex.menu@2.x:menu#droger1"
+    ]
+  },
+  "vtex.menu@2.x:menu#droger1": {
+    "props": {
+      "orientation": "vertical",
+      "placement": "right"
+    }
+  },
+  /* Start of barcode */
+  "modal-trigger#barcode": {
+    "props": {
+      "blockClass": "barcodeModal"
+    },
+    "children": [
+      "image#barcode",
+      "modal-layout#barcode"
+    ]
+  },
+  "image#barcode": {
+    "props": {
+      "src": "assets/barcode.svg",
+      "blockClass": "barcodeImage"
+    }
+  },
+  "modal-layout#barcode": {
+    "props": {
+      "blockClass": "barcodeModal"
+    },
+    "children": [
+      "modal-header",
+      "countdown.barcode"
+    ]
+  },
+  "modal-header": {
+    "props": {
+      "showCloseButton": true
+    }
+  },
+  /* End of barcode */
+  /* Start of searchbar */
+  "rich-text#search": {
+    "props": {
+      "text": "Search",
+      "blockClass": "header"
+    }
+  },
+  "overlay-layout#search": {
+    "props": {
+      "placement": "bottom"
+    },
+    "children": [
+      "flex-layout.row#search"
+    ]
+  },
+  "flex-layout.row#search": {
+    "props": {
+      "blockClass": "dropdownRowSearch"
+    },
+    "children": [
+      "search-bar#drop"
+    ]
+  },
+  "search-bar#drop": {
+    "props": {
+      "blockClass": "searchDrop",
+      "hasIconLeft": true
+    }
+  },
+  /* End of searchbar */
+  /* Header mobile menu start */
+  /* Mobile menu wassen start */
+  "overlay-trigger#wassenMobile": {
+    "props": {
+      "blockClass": "firstLineMobile"
+    },
+    "children": [
+      "rich-text#wassen",
+      "overlay-layout#wassenMobile"
+    ]
+  },
+  "overlay-layout#wassenMobile": {
+    "props": {
+      "placement": "bottom"
+    },
+    "children": [
+      "vtex.menu@2.x:submenu#laundry"
+    ]
+  },
+  "flex-layout.row#wassenMobile": {
+    "props": {
+      "blockClass": "dropdownRowMobile"
+    },
+    "children": [
+      "flex-layout.col#wassenMobile"
+    ]
+  },
+  "flex-layout.col#wassenMobile": {
+    "props": {
+      "blockClass": "dropdowncolMobile",
+      "rowGap": 0
+    },
+    "children": [
+      "menu-item#wasmachineMobile",
+      "menu-item#wasdroogMobile",
+      "menu-item#drogerMobile"
+    ]
+  },
+  "menu-item#wasmachineMobile": {
+    "props": {
+      "blockClass": "mobileMenuItem",
+      "placement": "right",
+      "type": "category",
+      "categoryId": "8",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "noFollow": false,
+        "tagTitle": "Shop"
+      }
+    }
+  },
+  "menu-item#wasdroogMobile": {
+    "props": {
+      "blockClass": "mobileMenuItem",
+      "placement": "right",
+      "type": "category",
+      "categoryId": "9",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "noFollow": false,
+        "tagTitle": "Shop"
+      }
+    }
+  },
+  "menu-item#drogerMobile": {
+    "props": {
+      "blockClass": "mobileMenuItem",
+      "placement": "right",
+      "type": "category",
+      "categoryId": "10",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "noFollow": false,
+        "tagTitle": "Shop"
+      }
+    }
+  },
+  /* Mobile Menu wassen end */
+  /* Mobile Menu vaatwasen start */
+  "overlay-trigger#vaatwasenMobile": {
+    "props": {
+      "blockClass": "firstLineMobile"
+    },
+    "children": [
+      "rich-text#vaatwasen",
+      "overlay-layout#vaatwasenMobile"
+    ]
+  },
+  "overlay-layout#vaatwasenMobile": {
+    "props": {
+      "placement": "bottom"
+    },
+    "children": [
+      "vtex.menu@2.x:submenu#dishwashing"
+    ]
+  },
+  "flex-layout.row#vaatwasenMobile": {
+    "props": {
+      "blockClass": "dropdownRowMobile"
+    },
+    "children": [
+      "flex-layout.col#vaatwasenMobile"
+    ]
+  },
+  "flex-layout.col#vaatwasenMobile": {
+    "props": {
+      "blockClass": "dropdowncolMobile",
+      "rowGap": 0
+    },
+    "children": [
+      "menu-item#vaatwassersMobile"
+    ]
+  },
+  "menu-item#vaatwassersMobile": {
+    "props": {
+      "blockClass": "mobileMenuItem",
+      "placement": "right",
+      "type": "category",
+      "categoryId": "12",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "noFollow": false,
+        "tagTitle": "Shop"
+      }
+    }
+  },
+  /* Mobile Menu vaatwasen end */
+  /* Mobile Menu Cooling start */
+  "overlay-trigger#koelenMobile": {
+    "props": {
+      "blockClass": "firstLineMobile"
+    },
+    "children": [
+      "rich-text#koelen",
+      "overlay-layout#koelenMobile"
+    ]
+  },
+  "overlay-layout#koelenMobile": {
+    "props": {
+      "placement": "bottom"
+    },
+    "children": [
+      "flex-layout.row#koelenMobile"
+    ]
+  },
+  "flex-layout.row#koelenMobile": {
+    "props": {
+      "blockClass": "dropdownRowMobile"
+    },
+    "children": [
+      "vtex.menu@2.x:submenu#refrigeration"
+    ]
+  },
+  "flex-layout.col#koelenMobile": {
+    "props": {
+      "blockClass": "dropdowncolMobile",
+      "rowGap": 0
+    },
+    "children": [
+      "menu-item#koelMobile",
+      "menu-item#vriezersMobile",
+      "menu-item#koelkastenMobile"
+    ]
+  },
+  "menu-item#koelMobile": {
+    "props": {
+      "blockClass": "mobileMenuItem",
+      "placement": "right",
+      "type": "category",
+      "categoryId": "15",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "noFollow": false,
+        "tagTitle": "Shop"
+      }
+    }
+  },
+  "menu-item#vriezersMobile": {
+    "props": {
+      "blockClass": "mobileMenuItem",
+      "placement": "right",
+      "type": "category",
+      "categoryId": "14",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "noFollow": false,
+        "tagTitle": "Shop"
+      }
+    }
+  },
+  "menu-item#koelkastenMobile": {
+    "props": {
+      "blockClass": "mobileMenuItem",
+      "placement": "right",
+      "type": "category",
+      "categoryId": "13",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "noFollow": false,
+        "tagTitle": "Shop"
+      }
+    }
+  },
+  /* Mobile Menu Cooling end */
+  /* Mobile Menu Cook start */
+  "overlay-trigger#kokenMobile": {
+    "props": {
+      "blockClass": "secondLineMobile"
+    },
+    "children": [
+      "rich-text#koken",
+      "overlay-layout#kokenMobile"
+    ]
+  },
+  "overlay-layout#kokenMobile": {
+    "props": {
+      "placement": "bottom"
+    },
+    "children": [
+      "flex-layout.row#kokenMobile"
+    ]
+  },
+  "flex-layout.row#kokenMobile": {
+    "props": {
+      "blockClass": "dropdownRowMobile"
+    },
+    "children": [
+      "vtex.menu@2.x:submenu#cooking"
+    ]
+  },
+  "flex-layout.col#kokenMobile": {
+    "props": {
+      "blockClass": "dropdowncolMobile",
+      "rowGap": 0
+    },
+    "children": [
+      "menu-item#fornuzienMobile",
+      "menu-item#kookplatenMobile",
+      "menu-item#afzuigMobile",
+      "menu-item#magnetronsMobile",
+      "menu-item#ovensMobile"
+    ]
+  },
+  "menu-item#fornuzienMobile": {
+    "props": {
+      "blockClass": "mobileMenuItem",
+      "placement": "right",
+      "type": "category",
+      "categoryId": "17",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "noFollow": false,
+        "tagTitle": "Shop"
+      }
+    }
+  },
+  "menu-item#kookplatenMobile": {
+    "props": {
+      "blockClass": "mobileMenuItem",
+      "placement": "right",
+      "type": "category",
+      "categoryId": "18",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "noFollow": false,
+        "tagTitle": "Shop"
+      }
+    }
+  },
+  "menu-item#afzuigMobile": {
+    "props": {
+      "blockClass": "mobileMenuItem",
+      "placement": "right",
+      "type": "category",
+      "categoryId": "19",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "noFollow": false,
+        "tagTitle": "Shop"
+      }
+    }
+  },
+  "menu-item#magnetronsMobile": {
+    "props": {
+      "blockClass": "mobileMenuItem",
+      "placement": "right",
+      "type": "category",
+      "categoryId": "20",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "noFollow": false,
+        "tagTitle": "Shop"
+      }
+    }
+  },
+  "menu-item#ovensMobile": {
+    "props": {
+      "blockClass": "mobileMenuItem",
+      "placement": "right",
+      "type": "category",
+      "categoryId": "21",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "noFollow": false,
+        "tagTitle": "Shop"
+      }
+    }
+  },
+  /* Mobile Menu Cook end */
+  /* Mobile Menu Kleine start */
+  "overlay-trigger#kleineMobile": {
+    "props": {
+      "blockClass": "secondLineMobile"
+    },
+    "children": [
+      "rich-text#kleineMobile",
+      "overlay-layout#kleineMobile"
+    ]
+  },
+  "rich-text#kleineMobile": {
+    "props": {
+      "text": "Kitchen",
+      "blockClass": "header"
+    }
+  },
+  "overlay-layout#kleineMobile": {
+    "props": {
+      "placement": "bottom"
+    },
+    "children": [
+      "vtex.menu@2.x:submenu#small-appliances"
+    ]
+  },
+  "flex-layout.row#kleineMobile": {
+    "props": {
+      "blockClass": "dropdownRowMobile"
+    },
+    "children": [
+      "vtex.menu@2.x:submenu#cooking"
+    ]
+  },
+  "flex-layout.col#kleineMobile": {
+    "props": {
+      "blockClass": "dropdowncolMobile",
+      "rowGap": 0
+    },
+    "children": [
+      "menu-item#koffieMobile"
+    ]
+  },
+  "menu-item#koffieMobile": {
+    "props": {
+      "blockClass": "mobileMenuItem",
+      "placement": "right",
+      "type": "category",
+      "categoryId": "23",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "noFollow": false,
+        "tagTitle": "Shop"
+      }
+    }
+  },
+  /* Mobile Menu Kleine end */
+  /* Mobile Menu Cleaning&Care start */
+  "overlay-trigger#reinigingMobile": {
+    "props": {
+      "blockClass": "secondLineMobile"
+    },
+    "children": [
+      "rich-text#reiniging",
+      "overlay-layout#reinigingMobile"
+    ]
+  },
+  "overlay-layout#reinigingMobile": {
+    "props": {
+      "placement": "bottom"
+    },
+    "children": [
+      "flex-layout.row#reinigingMobile"
+    ]
+  },
+  "flex-layout.row#reinigingMobile": {
+    "props": {
+      "blockClass": "dropdownRowMobile"
+    },
+    "children": [
+      "flex-layout.col#reinigingMobile"
+    ]
+  },
+  "flex-layout.col#reinigingMobile": {
+    "props": {
+      "blockClass": "dropdowncolMobile",
+      "rowGap": 0
+    },
+    "children": [
+      "menu-item#reinigingkokenMobile",
+      "menu-item#reiningkoelenMobile",
+      "menu-item#reiningwassenMobile",
+      "menu-item#reiningkleineMobile",
+      "menu-item#reininghomeMobile",
+      "menu-item#reiningairconditionMobile"
+    ]
+  },
+  "menu-item#reinigingkokenMobile": {
+    "props": {
+      "blockClass": "mobileMenuItem",
+      "placement": "right",
+      "type": "category",
+      "categoryId": "22",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "noFollow": false,
+        "tagTitle": "Shop"
+      }
+    }
+  },
+  "menu-item#reiningkoelenMobile": {
+    "props": {
+      "blockClass": "mobileMenuItem",
+      "placement": "right",
+      "type": "category",
+      "categoryId": "16",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "noFollow": false,
+        "tagTitle": "Shop"
+      }
+    }
+  },
+  "menu-item#reiningwassenMobile": {
+    "props": {
+      "blockClass": "mobileMenuItem",
+      "placement": "right",
+      "type": "category",
+      "categoryId": "11",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "noFollow": false,
+        "tagTitle": "Shop"
+      }
+    }
+  },
+  "menu-item#reiningkleineMobile": {
+    "props": {
+      "blockClass": "mobileMenuItem",
+      "placement": "right",
+      "type": "category",
+      "categoryId": "25",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "noFollow": false,
+        "tagTitle": "Shop"
+      }
+    }
+  },
+  "menu-item#reininghomeMobile": {
+    "props": {
+      "blockClass": "mobileMenuItem",
+      "placement": "right",
+      "type": "category",
+      "categoryId": "26",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "noFollow": false,
+        "tagTitle": "Shop"
+      }
+    }
+  },
+  "menu-item#reiningairconditionMobile": {
+    "props": {
+      "blockClass": "mobileMenuItem",
+      "placement": "right",
+      "type": "category",
+      "categoryId": "27",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "noFollow": false,
+        "tagTitle": "Shop"
+      }
+    }
+  },
+  "countdown.autoComplete#short":{
+    "props":{
+      "autoCompleteLabel": "Search",
+      "short": true
+    }
+  }
+  /* Mobile Menu Cleaning&Care end */
+  /* Header mobile menu end */
+}

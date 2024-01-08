@@ -1,0 +1,321 @@
+{
+  // "product-summary.shelf#product-card-mobile": {
+  //   "title": "[PRODUCT CARD] - Mobile Product Card",
+  //   "children": [
+  //     "flex-layout.row#promotionsBadge",
+  //     "flex-layout.row#productBrand",
+  //     "flex-layout.row#productImageAndPrice",
+  //     "flex-layout.row#productName",
+  //     "flex-layout.row#commercialAndLeadtime",
+  //     "flex-layout.row#revooAndYoureko",
+  //     "experimental__visibility-layout#keyFeatures",
+  //     "flex-layout.row#roundelsLogos"
+  //   ],
+  //   "props": {
+  //     "blockClass": "productCardUkcc"
+  //   }
+  // },
+  // PROMOTIONS BADGE
+  "flex-layout.row#promotionsBadge": {
+    "title": "[ROW] - Product Promo Badge",
+    "children": [
+      "vtex.product-highlights@2.x:product-highlights#productCardPromo"
+    ],
+    "props": {
+      "blockClass": "promotionsBadgeRow"
+    }
+  },
+  "vtex.product-highlights@2.x:product-highlights#productCardPromo": {
+    "props": {
+      "type": "promotion"
+    },
+    "children": ["product-highlight-text#productCardPromo"]
+  },
+  "product-highlight-text#productCardPromo": {
+    "props": {
+      "message": "{highlightName}",
+      "blockClass": ["PromotionBadgeNew"]
+    }
+  },
+  // BRAND BADGE
+  "flex-layout.row#productBrand": {
+    "title": "[ROW] - Product Brand Badge",
+    "children": ["condition-layout.product#productBrand"],
+    "props": {
+      "blockClass": "productBrandRow"
+    }
+  },
+  // IMAGE and PRICE
+  "flex-layout.row#productImageAndPrice": {
+    "title": "[ROW] - Product Image and price",
+    "children": [
+      "flex-layout.col#productImage",
+      "flex-layout.col#productPriceAndEnergy"
+    ],
+    "props": {
+      "blockClass": [
+        "productImageAndPriceRow",
+        "productImageAndPriceRowMobile"
+      ],
+      "colSizing": "equal",
+      "preserveLayoutOnMobile": true
+    }
+  },
+  // PRODUCT IMAGE COL
+  "flex-layout.col#productImage": {
+    "title": "[COL] - Product Image",
+    "children": ["product-summary-image#shelfPLp"],
+    "props": {
+      "blockClass": "productImageCol"
+    }
+  },
+  "product-summary-image#shelfPLp": {
+    "props": {
+      "showBadge": false,
+      "aspectRatio": "1:1",
+      "maxHeight": 140,
+      "width": {
+        "desktop": 266,
+        "mobile": 150
+      },
+      "height": {
+        "desktop": 266,
+        "mobile": 150
+      }
+    }
+  },
+  // PRODUCT PRICE COL
+  "flex-layout.col#productPriceAndEnergy": {
+    "title": "[COL] - Product Price and Energy label",
+    "children": [
+      "flex-layout.col#price-compare",
+      "flex-layout.col#energyAndPds"
+    ],
+    "props": {
+      "blockClass": "productPriceAndEnergyCol"
+    }
+  },
+  //Price
+  "flex-layout.col#price-compare": {
+    "title": "[COL] - Product Price",
+    "children": ["product-price-custom"],
+    "props": {
+      "blockClass": "priceSection"
+    }
+  },
+  //Energy label
+  "flex-layout.col#energyAndPds": {
+    "title": "[COL] - Energy label and PDS",
+    "children": ["condition-layout.product#hasNewEnergyLabelSpec"],
+    "props": {
+      "blockClass": "energyAndReparability"
+    }
+  },
+  //PRODUCT NAME
+  "flex-layout.row#productName": {
+    "title": "[ROW] - CProduct Name",
+    "children": ["product-summary-name#plp"],
+    "props": {
+      "blockClass": "productName"
+    }
+  },
+  "product-summary-name#plp": {
+    "props": {
+      "tag": "div"
+    }
+  },
+  //COMMERCIAL CODE AND LEADTIME
+  "flex-layout.row#commercialAndLeadtime": {
+    "title": "[ROW] - Commercial code and LeadTime",
+    "children": ["flex-layout.col#commercialCode", "flex-layout.col#leadTime"],
+    "props": {
+      "blockClass": "commercialAndLeadtimeRow",
+      "colSizing": "auto",
+      "preserveLayoutOnMobile": true
+    }
+  },
+  //COMMERCIAL CODE
+  "flex-layout.col#commercialCode": {
+    "title": "[COL] - Commercial code",
+    "children": ["flex-layout.row#commercialCode"],
+    "props": {
+      "blockClass": "commercialCodeCol"
+    }
+  },
+  "flex-layout.row#commercialCode": {
+    "children": ["product-specification-group#modelSummary"],
+    "props": {
+      "blockClass": "commercialCode"
+    }
+  },
+  "product-specification-group#modelSummary": {
+    "children": ["product-specification#modelSummary"],
+    "props": {
+      "filter": {
+        "specificationGroups": ["CommercialCode"],
+        "type": "show"
+      }
+    }
+  },
+  "product-specification#modelSummary": {
+    "children": ["product-specification-values#modelSummary"]
+  },
+  "product-specification-values#modelSummary": {
+    "children": ["product-specification-text#modelSummary"]
+  },
+  "product-specification-text#modelSummary": {
+    "props": {
+      "blockClass": "codiceProdotto",
+      "message": "{specificationValue}"
+    }
+  },
+  //LEADTIME
+  "flex-layout.col#leadTime": {
+    "title": "[COL] - Lead Time",
+    "children": ["flex-layout.row#lead-time"],
+    "props": {
+      "blockClass": "leadTimeCol"
+    }
+  },
+  "flex-layout.row#lead-time": {
+    "children": ["lead-time"],
+    "props": {
+      "blockClass": "leadTimeRow"
+    }
+  },
+  //REVOO AND YOUREKO
+  "flex-layout.row#revooAndYoureko": {
+    "title": "[ROW] - Revoo and Youreko Row",
+    "children": ["flex-layout.col#revoo", "flex-layout.col#youreko"],
+    "props": {
+      "blockClass": "revooAndYourekoRow",
+      "colSizing": "equal",
+      "preserveLayoutOnMobile": true
+    }
+  },
+  //REVOO
+  "flex-layout.col#revoo": {
+    "title": "[COL] - Revoo col",
+    "children": ["flex-layout.row#revoo"],
+    "props": {
+      "blockClass": "revooCol"
+    }
+  },
+  "flex-layout.row#revoo": {
+    "title": "[ROW] - Revoo row",
+    "children": ["rating-product-stars"],
+    "props": {
+      "blockClass": "revooRow"
+    }
+  },
+  //YOUREKO
+  "flex-layout.col#youreko": {
+    "title": "[COL] - Youreko col",
+    "children": ["flex-layout.row#youreko"],
+    "props": {
+      "blockClass": "yourekoCol"
+    }
+  },
+  "flex-layout.row#youreko": {
+    "title": "[ROW] - Youreko row",
+    "children": ["flex-layout.row#yourekoBadge"], //TO BE REPLACED WITH YOUREKO INTEGRATION
+    "props": {
+      "blockClass": "yourekoRow"
+    }
+  },
+  "flex-layout.row#yourekoBadge": {
+    "title": "[ROW] - Youreko badge row",
+    "children": ["youreko-badge"], //TO BE REPLACED WITH YOUREKO INTEGRATION
+    "props": {
+      "blockClass": "YourekoBadge"
+    }
+  },
+  /*--------- TO BE REPLACED WITH youreko INTEGRATION -------- */
+  "rich-text#yourekoPlaceholder": {
+    "props": {
+      "text": "Youreko",
+      "blockClass": "yourekoPlaceholder"
+    }
+  },
+  /*-----------------------------------------------------------*/
+  //KEY FEATURES
+  "experimental__visibility-layout#keyFeatures": {
+    "title": "[VISIBILITY] Key Features",
+    "children": ["flex-layout.row#keyFeatures"]
+  },
+  "flex-layout.row#keyFeatures": {
+    "title": "[ROW] - Key Features row",
+    "children": [
+      "print-specification#KF1",
+      "print-specification#KF2",
+      "print-specification#KF3",
+      "print-specification#KF4"
+    ],
+    "props": {
+      "blockClass": "keyFeaturesRow",
+      "preserveLayoutOnMobile": true,
+      "colSizing": "auto"
+    }
+  },
+  "print-specification#KF1": {
+    "props": {
+      "specificationsToCheck": [
+        {
+          "name": "Bullet_1"
+        }
+      ],
+      "blockClass": "keyFeature"
+    }
+  },
+  "print-specification#KF2": {
+    "props": {
+      "specificationsToCheck": [
+        {
+          "name": "Bullet_2"
+        }
+      ],
+      "blockClass": "keyFeature"
+    }
+  },
+  "print-specification#KF3": {
+    "props": {
+      "specificationsToCheck": [
+        {
+          "name": "Bullet_3"
+        }
+      ],
+      "blockClass": "keyFeature"
+    }
+  },
+  "print-specification#KF4": {
+    "props": {
+      "specificationsToCheck": [
+        {
+          "name": "Bullet_4"
+        }
+      ],
+      "blockClass": "keyFeature"
+    }
+  },
+  // ROUNDELS LOGOS
+  "flex-layout.row#roundelsLogos": {
+    "title": "[ROW] - Roundels row",
+    "children": [
+      "product-logos"
+      // "image#roundelsPlaceholder",
+      // "image#roundelsPlaceholder",
+      // "image#roundelsPlaceholder"
+    ],
+    "props": {
+      "blockClass": "roundelsLogosRow",
+      "preserveLayoutOnMobile": true,
+      "colSizing": "auto"
+    }
+  },
+  "image#roundelsPlaceholder": {
+    "props": {
+      "src": "assets/logos/roundels-ph.png",
+      "blockClass": "roundelsPlaceholder"
+    }
+  }
+}

@@ -1,0 +1,461 @@
+{
+  "store.custom#main-support": {
+    "blocks": ["flex-layout.row#main-support-container-row"]
+  },
+
+  "flex-layout.row#main-support-container-row": {
+    "title": "[ROW] - TOP - Main Container Row",
+    "children": ["flex-layout.col#main-support-container-col"],
+    "props": {
+      "blockClass": "mainSupportContainerRow"
+    }
+  },
+  /* MAXI CONTAINER OF ALL ELEMENT IN THE PAGE */
+  "flex-layout.col#main-support-container-col": {
+    "title": "[COL] - TOP - Main Container Column",
+    "children": [
+      "breadcrumb-custom#support",
+      "flex-layout.row#firstBoxRow",
+      "flex-layout.row#categorySupportImmagesRow",
+      "flex-layout.row#otherCategorysButtonRow",
+      "flex-layout.row#piani-di-protezione",
+      "flex-layout.row#registra-prodotto"
+    ]
+  },
+  /* BREADCRUMB SUPPORT */
+  "breadcrumb-custom#support": {
+    "title": "[BREADCRUMB] - TOP - Row First Box",
+    "props": {
+      "firstPage": "Home",
+      "currentPage": "/kundencenter"
+    }
+  },
+  // FIRST BOX
+  "flex-layout.row#firstBoxRow": {
+    "title": "[ROW] - TOP - Row First Box",
+    "children": ["flex-layout.col#titleDescCol", "flex-layout.col#linksCol"]
+  },
+
+  "flex-layout.col#titleDescCol": {
+    "title": "[COL] - TOP - Title Description Col",
+    "children": ["rich-text#firstBoxTitle", "rich-text#firstBoxDesc"],
+    "props": {
+      "verticalAlign": "middle",
+      "marginRight": 9
+    }
+  },
+  "rich-text#firstBoxTitle": {
+    "title": "[TEXT] - TOP - Title ",
+    "props": {
+      "blockClass": "firstBoxtitleDescText",
+      "text": "# Come possiamo aiutarti oggi?"
+    }
+  },
+  "rich-text#firstBoxDesc": {
+    "title": "[TEXT] - TOP - Description ",
+    "props": {
+      "blockClass": "firstBoxDescText",
+      "text": "Benvenuto nel Servizio Clienti Indesit! Da noi potrai trovare tutte le risposte alle tue domande, in modo da poter gestire, mantenere e riparare i tuoi elettrodomestici e farli funzionare come nuovi."
+    }
+  },
+  "flex-layout.col#linksCol": {
+    "title": "[COL] - TOP - Links Col",
+    "children": [
+      "flex-layout.row#box1",
+      "flex-layout.row#box2Row",
+      "flex-layout.row#box3Row",
+      "flex-layout.row#box4Row",
+      "flex-layout.row#box4Row"
+    ]
+  },
+  /*--------------BOX 1---------------*/
+  "flex-layout.row#box1": {
+    "title": "[ROW] - TOP - Row Piani Di Protezione Row ",
+    "children": ["flex-layout.col#colBox1", "link#box1"],
+    "props": { "blockClass": "anchorRow" }
+  },
+  "flex-layout.col#colBox1": {
+    "title": "[COL] - TOP - Col Title and Description ",
+    "children": ["rich-text#titleBox1", "rich-text#descBox1"],
+    "props": { "blockClass": "colTitleDescLinkBox", "width": "70%" }
+  },
+  "rich-text#titleBox1": {
+    "title": "[TEXT] - TOP - Title ",
+    "props": { "text": "## Piani di Protezione", "blockClass": "linkBoxTitle" }
+  },
+  "rich-text#descBox1": {
+    "title": "[TEXT] - TOP - Description ",
+    "props": {
+      "text": "Scopri i nostri piani di protezione per ricevere una copertura completa.",
+      "blockClass": "linkBoxDesc"
+    }
+  },
+  "link#box1": {
+    "title": "[LINK] - TOP - Link Piani di Protezione",
+    "props": {
+      "label": "Per saperne di piu",
+      "href": "#halfBanner",
+      "displayMode": "anchor",
+      "blockClass": ["firstBoxAnchor"],
+      "isPrevent": false
+    }
+    /*--------------BOX 2---------------*/
+  },
+  "flex-layout.row#box2Row": {
+    "title": "[ROW] - TOP - Row Box 2",
+    "children": ["flex-layout.col#colTitleDescbox2", "link#box2Link"],
+    "props": { "blockClass": "anchorRow" }
+  },
+  "flex-layout.col#colTitleDescbox2": {
+    "title": "[COL] - TOP - Col Title and Description ",
+    "children": ["rich-text#titleBox2", "rich-text#descBox2"],
+    "props": { "blockClass": "colTitleDescLinkBox", "width": "70%" }
+  },
+  "rich-text#titleBox2": {
+    "title": "[TEXT] - TOP - Title ",
+    "props": {
+      "text": "## Prenota un intervento",
+      "blockClass": "linkBoxTitle"
+    }
+  },
+  "rich-text#descBox2": {
+    "title": "[TEXT] - TOP - Description ",
+    "props": {
+      "text": "Prenota, modifica o cancella il tuo appuntamento con i nostri esperti Indesit.",
+      "blockClass": "linkBoxDesc"
+    }
+  },
+  "link#box2Link": {
+    "title": "[LINK] - TOP - Link Box 2",
+    "props": {
+      "label": "Prenota ora",
+      "href": "#halfBanner2",
+      "displayMode": "anchor",
+      "blockClass": ["firstBoxAnchor"],
+      "isPrevent": false
+    }
+  },
+  /*--------------BOX 3---------------*/
+  "flex-layout.row#box3Row": {
+    "title": "[ROW] - TOP - Row Box 3",
+    "children": ["flex-layout.col#colTitleDescbox3", "link#box3Link"],
+    "props": { "blockClass": "anchorRow" }
+  },
+  "flex-layout.col#colTitleDescbox3": {
+    "title": "[COL] - TOP - Col Title and Description ",
+    "children": ["rich-text#titleBox3", "rich-text#descBox3"],
+    "props": { "blockClass": "colTitleDescLinkBox", "width": "70%" }
+  },
+  "rich-text#titleBox3": {
+    "title": "[TEXT] - TOP - Title ",
+    "props": {
+      "text": "## Manuali",
+      "blockClass": "linkBoxTitle"
+    }
+  },
+  "rich-text#descBox3": {
+    "title": "[TEXT] - TOP - Description ",
+    "props": {
+      "text": "Prenota, modifica o cancella il tuo appuntamento con i nostri esperti Indesit.",
+      "blockClass": "linkBoxDesc"
+    }
+  },
+  "link#box3Link": {
+    "title": "[LINK] - TOP - Link Box 3",
+    "props": {
+      "label": "Vai ai manuali",
+      "href": "#halfBanner3",
+      "displayMode": "anchor",
+      "blockClass": ["firstBoxAnchor"],
+      "isPrevent": false
+    }
+  },
+  /*--------------BOX 4---------------*/
+  "flex-layout.row#box4Row": {
+    "title": "[ROW] - TOP - Row Box 4",
+    "children": ["flex-layout.col#colTitleDescbox4", "link#box4Link"],
+    "props": { "blockClass": "anchorRow" }
+  },
+  "flex-layout.col#colTitleDescbox4": {
+    "title": "[COL] - TOP - Col Title and Description ",
+    "children": ["rich-text#titleBox4", "rich-text#descBox4"],
+    "props": { "blockClass": "colTitleDescLinkBox", "width": "70%" }
+  },
+  "rich-text#titleBox4": {
+    "title": "[TEXT] - TOP - Title ",
+    "props": {
+      "text": "## Registra il tuo prodotto",
+      "blockClass": "linkBoxTitle"
+    }
+  },
+  "rich-text#descBox4": {
+    "title": "[TEXT] - TOP - Description ",
+    "props": {
+      "text": "Registra il tuo prodotto gratuitamente per scoprire ulteriori garanzie e supporto.",
+      "blockClass": "linkBoxDesc"
+    }
+  },
+  "link#box4Link": {
+    "title": "[LINK] - TOP - Link Box 4",
+    "props": {
+      "label": "Registrati ora",
+      "href": "#halfBanner4",
+      "displayMode": "anchor",
+      "blockClass": ["firstBoxAnchor"],
+      "isPrevent": false
+    }
+  },
+  /*--------------BOX 5---------------*/
+  "flex-layout.row#box5Row": {
+    "title": "[ROW] - TOP - Row Box 5",
+    "children": ["flex-layout.col#colTitleDescbox5", "link#box5Link"],
+    "props": { "blockClass": "anchorRow" }
+  },
+  "flex-layout.col#colTitleDescbox5": {
+    "title": "[COL] - TOP - Col Title and Description ",
+    "children": ["rich-text#titleBox5", "rich-text#descBox5"],
+    "props": { "blockClass": "colTitleDescLinkBox", "width": "70%" }
+  },
+  "rich-text#titleBox5": {
+    "title": "[TEXT] - TOP - Title ",
+    "props": {
+      "text": "## Risoluzione dei problemi",
+      "blockClass": "linkBoxTitle"
+    }
+  },
+  "rich-text#descBox5": {
+    "title": "[TEXT] - TOP - Description ",
+    "props": {
+      "text": "Scopri come risolvere rapidamente il problema dei tuoi apparecchi.",
+      "blockClass": "linkBoxDesc"
+    }
+  },
+  "link#box5Link": {
+    "title": "[LINK] - TOP - Link Box 5",
+    "props": {
+      "label": "Per saperne di più",
+      "href": "#halfBanner5",
+      "displayMode": "anchor",
+      "blockClass": ["firstBoxAnchor"],
+      "isPrevent": false
+    }
+  },
+  /*--------------------CATEGORY SUPPORT IMAGES-----------------*/
+  "flex-layout.row#categorySupportImmagesRow": {
+    "title": "[ROW] - MID - Category Support Immages Row",
+    "children": ["flex-layout.col#categorySupportImmagesCol"],
+    "props": { "marginBottom": 9 }
+  },
+  "flex-layout.col#categorySupportImmagesCol": {
+    "title": "[COL] - MID - Category Support Immages Column",
+    "children": [
+      "rich-text#categorySupportImagesTitle",
+      "rich-text#categorySupportImagesSubTitle",
+      "flex-layout.row#menuImagesHome"
+    ]
+  },
+  "rich-text#categorySupportImagesTitle": {
+    "title": "[TEXT] - MID - Category Support Immages Title",
+    "props": {
+      "text": "# Hai bisogno di un supporto rapido?",
+      "textPosition": "CENTER"
+    }
+  },
+  "rich-text#categorySupportImagesSubTitle": {
+    "title": "[TEXT] - MID - Category Support Immages Sub Title",
+    "props": {
+      "text": "### Seleziona la categoria dell'apparecchio per risparmiare tempo e fatica con la nostra soluzione di risoluzione dei problemi!",
+      "textPosition": "CENTER"
+    }
+  },
+
+  /*-------------------------------------*/
+
+  /*--------------------OTHER CATEGORYS BUTTON-----------------*/
+
+  "flex-layout.row#otherCategorysButtonRow": {
+    "title": "[ROW] - MID - Other Categorys Button Row",
+    "children": ["link#otherCategorysButton"],
+    "props": { "horizontalAlign": "center", "blockClass": "classeDiTest" }
+  },
+  "link#otherCategorysButton": {
+    "props": {
+      "label": "ALTRE CATEGORIE",
+      "href": "#",
+      "displayMode": "button",
+      "blockClass": [
+        "postillaButton",
+        "marginBottomClassico",
+        "otherCategoryButton"
+      ]
+    }
+  },
+
+  /*-------------------------------------*/
+
+  /*---------------- BOOK AN APPOINTMENT ROW------------------*/
+
+  "flex-layout.row#appointmentBookRow": {
+    "title": "[ROW] - MID - Appointment Book Row",
+    "children": ["flex-layout.col#appointmentBookCol"]
+  },
+  "flex-layout.col#appointmentBookCol": {},
+
+  /*------------------------------------*/
+
+  //PIANI DI PROTEZIONE
+  "flex-layout.row#piani-di-protezione": {
+    "children": ["flex-layout.col#colPiani-di-protezione"]
+  },
+  "flex-layout.col#colPiani-di-protezione": {
+    "children": [
+      "rich-text#anchor-piani-di-protezione",
+      "flex-layout.row#halfBanner-piani-di-protezione"
+    ]
+  },
+
+  "rich-text#anchor-piani-di-protezione": {
+    "title": "[ANCHOR] - MID - Anchor Piani di Protezione",
+    "props": {
+      "htmlId": "halfBanner1",
+      "text": ""
+    }
+  },
+
+  "flex-layout.row#halfBanner-piani-di-protezione": {
+    "title": "[ROW] - MID - Row Half Banner Piani di Protezione",
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": [
+        "columnPostillaBannerAntonio",
+        "bgColorAntonioHero",
+        "bannerSupporto"
+      ]
+    },
+    "children": [
+      "flex-layout.col#mainSupportRightPartHalfBanner",
+      "flex-layout.col#mainSupportLeftPartHalfBanner"
+    ]
+  },
+  "flex-layout.col#mainSupportRightPartHalfBanner": {
+    "title": "[COL] - MID - Column Right Part Half Banner Piani Di Protezione",
+    "props": {
+      "width": "50%",
+      "blockClass": "columnPostillaImage"
+    },
+    "children": ["image#halfBannerImagePianiDiProtezione"]
+  },
+  "image#halfBannerImagePianiDiProtezione": {
+    "title": "[IMAGE] - MID - Image Half Banner Image Piani Di Protezione",
+    "props": {
+      "src": "assets/ph-square.jpg",
+      "blockClass": "imagePostillaBanner"
+    }
+  },
+  "flex-layout.col#mainSupportLeftPartHalfBanner": {
+    "title": "[COL] - MID - Column Left Part Half Banner Piani Di Protezione",
+    "props": {
+      "width": "50%",
+      "preventVerticalStretch": true,
+      "blockClass": ["columnPostillaPromo", "columnPostillaBottom"]
+    },
+    "children": [
+      "rich-text#main-supportHalfBannerTitle",
+      "rich-text#main-supportHalfBannDesc",
+      "experimental__visibility-layout#main-supportHalfBannerButton",
+      "experimental__visibility-layout#main-supportHalfBannerButton2",
+      "rich-text#main-supportHalfBannerPostilla"
+    ]
+  },
+  "rich-text#main-supportHalfBannerTitle": {
+    "title": "[TEXT] - TOP - Main Support Half Banner Title",
+    "props": {
+      "text": "# Frigorifero combinato 4 porte",
+      "blockClass": "titleHBannerPostillaPromo"
+    }
+  },
+  "rich-text#main-supportHalfBannDesc": {
+    "title": "[TEXT] - TOP - Main Support Half Banner Title Description",
+    "props": {
+      "text": "33% di spazio extra per frutta e verdura *",
+      "blockClass": ["descBannerPostillaPromo"]
+    }
+  },
+  "experimental__visibility-layout#main-supportHalfBannerButton": {
+    "title": "[EXPERIMENTAL-VISIBILITY] - TOP - Main Support Half Banner First button",
+    "props": {
+      "visible": true
+    },
+    "children": ["link#main-supportHalfBannerButton"]
+  },
+  "experimental__visibility-layout#main-supportHalfBannerButton2": {
+    "title": "[EXPERIMENTAL-VISIBILITY] - TOP - Main Support Half Banner Second button",
+    "props": {
+      "visible": true
+    },
+    "children": ["link#main-supportHalfBannerButton2"]
+  },
+  "link#main-supportHalfBannerButton": {
+    "title": "[LINK] - TOP - Slide button",
+    "props": {
+      "label": "CLICCA QUI",
+      "href": "#",
+      "displayMode": "button",
+      "blockClass": ["postillaButton", "homeSliderButton"],
+      "isPrevent": false
+    }
+  },
+  "link#main-supportHalfBannerButton2": {
+    "title": "[LINK] - TOP - Slide button",
+    "props": {
+      "label": "CLICCA QUI",
+      "href": "#",
+      "displayMode": "button",
+      "blockClass": ["postillaButton", "homeSliderButton"],
+      "isPrevent": false
+    }
+  },
+  "rich-text#main-supportHalfBannerPostilla": {
+    "props": {
+      "text": "*postilla text",
+      "blockClass": "BannerHomePostilla"
+    }
+  },
+
+  //REGISTRA PRODOTTO
+  "flex-layout.row#registra-prodotto": {
+    "title": "[ROW] - MID - Row Registra Prodotto",
+    "children": ["flex-layout.col#colRegistraProdotto"]
+  },
+  "flex-layout.col#colRegistraProdotto": {
+    "title": "[COL] - MID - Column Registra Prodotto",
+    "children": [
+      "rich-text#anchorRegistraProdotto",
+      "flex-layout.row#halfBannerRowRegistraProdotto"
+    ]
+  },
+  "rich-text#anchorRegistraProdotto": {
+    "title": "[ANCHOR] - MID - Anchor Registra Prodotto",
+    "props": {
+      "htmlId": "halfBanner2",
+      "text": ""
+    }
+  },
+  "flex-layout.row#halfBannerRowRegistraProdotto": {
+    "title": "[ROW] - MID - Row Half Banner Registra Prodotto",
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": [
+        "columnPostillaBannerAntonio",
+        "bgColorAntonioHero",
+        "bannerSupporto"
+      ]
+    },
+    "children": [
+      "flex-layout.col#mainSupportLeftPartHalfBanner",
+      "flex-layout.col#mainSupportRightPartHalfBanner"
+    ]
+  }
+
+  //----------------------------------------------------------------// */
+}

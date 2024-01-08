@@ -1,0 +1,59 @@
+{
+  "product-summary.shelf#caroselliLanding": {
+    "children": [
+      "flex-layout.row#inStock-PLP",
+      "stack-layout#head",
+      "vtex.store-components:product-name#summary",
+      "responsive-layout.desktop#priceRowcategory",
+      "responsive-layout.tablet#priceRowcategory",
+      "responsive-layout.phone#priceRowcategory",
+      "add-to-cart-custom#plp",
+      "flex-layout.row#etichettaAndScheda2"
+    ]
+  },
+  "responsive-layout.desktop#priceRowcategory": {
+    "children": [
+      "product-summary-space",
+      "product-list-price#summary",
+      "flex-layout.row#selling-price-savings"
+    ]
+  },
+  "responsive-layout.tablet#priceRowcategory": {
+    "children": [
+      "product-summary-space",
+      "product-list-price#summary",
+      "flex-layout.row#selling-price-savings"
+    ]
+  },
+  "responsive-layout.phone#priceRowcategory": {
+    "children": ["flex-layout.row#pricesLandingPageRowPre"]
+  },
+  "vtex.store-components:product-name#summary": {
+    "props": {
+      "tag": "div",
+      "displayMode": "linkToProductPage",
+      "blockClass": "summaryName"
+    }
+  },
+  "flex-layout.col#button-youreko-pdp-desk-container": {
+    "props": {
+      "blockClass": "button-youreko-container"
+    },
+    "children": ["button-youreko"]
+  },
+  "flex-layout.row#pricesLandingPageRowPre": {
+    "props": {
+      "blockClass": "pricesLandingPageRowPre"
+    },
+    "children": ["flex-layout.row#pricesLandingPageRow"]
+  },
+  "flex-layout.row#pricesLandingPageRow": {
+    "props": {
+      "blockClass": "pricesLandingPageRow"
+    },
+    "children": [
+      "flex-layout.row#summary-price-Home-Carousel",
+      "flex-layout.row#selling-price-savings"
+    ]
+  }
+}

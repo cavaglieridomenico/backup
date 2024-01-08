@@ -1,0 +1,25 @@
+{
+  "memory": 1024,
+  "ttl": 60,
+  "timeout": 120,
+  "minReplicas": 2,
+  "maxReplicas": 100,
+  "routes": {
+    "getShippingPriceSupplementaryFeed": {
+      "path": "/_v/private/gmc-supplementary-feed/delivery-info.xml",
+      "public": true
+    },
+    "ping": {
+      "path": "/_v/private/gmc-supplementary-feed/ping",
+      "public": true
+    }
+  },
+  "events": {
+    "onAppInstalled": {
+      "sender": "apps",
+      "keys": [
+        "setup"
+      ]
+    }
+  }
+}

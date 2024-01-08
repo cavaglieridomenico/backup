@@ -1,0 +1,53 @@
+# Migration Scripts
+
+This project is used to migrate the catalog from one account to another
+
+
+## Getting Started
+
+These instructions will give you a copy of the project up and running on
+your local machine for development and testing purposes. See deployment
+for notes on deploying the project on a live system.
+
+### Prerequisites
+
+Requirements for the software and other tools to build, test and push 
+- [NodeJs](https://www.example.com)
+
+## Project Setup
+
+in order to use this project, go to the upper folder and run
+
+```
+npm install
+```
+
+Then, you'll need to open the file common/HeaderComposer and add the API credentials in order of the 2 accounts you'll want to migrate from and to. 
+
+## Project Structure
+
+This project is composed in 1 file per entity that we need to migrate. 
+Currently, it supports the following entities: 
+
+- Brands
+- Caregories
+- Spec Groups
+- Specifications 
+
+<b>NOTE: </b> The product and SKUs can be imported and exported via file, so for now this scripts will not consider that part of the migration
+
+## Usage
+
+From the Scripts folder, run 
+
+```
+node <migrationScript>.js <accountFrom> <accountTo>
+```
+
+Example
+
+```
+node migrateBrands reply replyqa3
+```
+
+Before doing this operation, please remember to empty the catalog from the account you want to transfer the catalog to!

@@ -1,0 +1,40 @@
+{
+  "name": "pdp-structured-data",
+  "private": true,
+  "license": "UNLICENSED",
+  "scripts": {
+    "lint": "eslint --ext js,jsx,ts,tsx .",
+    "format": "prettier --write \"**/*.{ts,js,json}\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,js,tsx,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,graphql,gql}": [
+      "prettier --write"
+    ]
+  },
+  "devDependencies": {
+    "@vtex/prettier-config": "0.1.4",
+    "eslint": "7.12.1",
+    "eslint-config-vtex": "12.3.2",
+    "eslint-config-vtex-react": "^6.2.1",
+    "husky": "4.2.3",
+    "lint-staged": "10.1.1",
+    "prettier": "2.0.2",
+    "typescript": "3.8.3",
+    "vtex.render-runtime": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.132.3/public/@types/vtex.render-runtime"
+  },
+  "dependencies": {
+    "react-helmet": "^6.1.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-intl": "^5.23.0"
+  }
+}

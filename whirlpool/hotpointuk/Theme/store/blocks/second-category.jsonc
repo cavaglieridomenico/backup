@@ -1,0 +1,199 @@
+{
+  "store.custom#second-category": {
+    "blocks": [
+      "search-result-layout.customQuery#second-category",
+      // PART BEFORE FOOTER
+      "experimental__visibility-layout#support-box-title",
+      "experimental__visibility-layout#support-box",
+      "flex-layout.row#newsletter-row"
+    ],
+    "props": {
+      "context": {
+        "skusFilter": "ALL",
+        "simulationBehavior": "default",
+        "maxItemsPerPage": 20,
+        "__unstableProductOriginVtex": true
+      }
+    }
+  },
+  "search-result-layout.customQuery#second-category": {
+    "blocks": [
+      "search-result-layout.desktop#second-category",
+      "search-result-layout.mobile#second-category"
+    ],
+    "props": {
+      "querySchema": {
+        "orderByField": "OrderByReleaseDateDESC",
+        "hideUnavailableItems": true,
+        "maxItemsPerPage": 20
+      }
+    }
+  },
+  "search-result-layout.desktop#second-category": {
+    "children": [
+      "flex-layout.row#bread-pre-plp",
+      "experimental__visibility-layout#bannerWithPostillaSecondCategory",
+      "flex-layout.row#searchtitle",
+      "flex-layout.row#result-second-category",
+      "flex-layout.row#category",
+      "rich-text#seo-test-1",
+      "rich-text#seo-test-2",
+      "experimental__visibility-layout#videoSteamSecondCategory",
+      "experimental__visibility-layout#titleBannerPrePlpSecondCategory",
+      "experimental__visibility-layout#titleBannerPrePlpReverseSecondCategory",
+      "experimental__visibility-layout#titleBannerPrePlp2SecondCategory"
+    ],
+    "props": {
+      "showFacetQuantity": true,
+      "pagination": "show-more",
+      "preventRouteChange": true,
+      "defaultGalleryLayout": "grid"
+    }
+  },
+  "flex-layout.row#result-second-category": {
+    "children": [
+      "flex-layout.col#filter-second-category",
+      "flex-layout.col#content-second-category"
+    ],
+    "props": {
+      "preventHorizontalStretch": true,
+      "fullWidth": true,
+      "blockClass": "paddingSearch"
+    }
+  },
+  "flex-layout.col#filter-second-category": {
+    "children": [
+      "flex-layout.row#refineText",
+      "flex-layout.col#spare-search",
+      "filter-navigator.v3"
+    ],
+    "props": {
+      "blockClass": [
+        "filterCol",
+        "filterColSecondCol"
+      ]
+    }
+  },
+  "flex-layout.col#content-second-category": {
+    "children": [
+      "rich-text#title-page-second-category",
+      "flex-layout.row#searchinfo",
+      "flex-layout.row#fetchprevious",
+      "__fold__.experimentalLazyAssets", //nel caso spacchi la plp in prod da rimuovere
+      "flex-layout.row#products-spare",
+      "flex-layout.row#fetchmore",
+      "flex-layout.row#space",
+      "experimental__visibility-layout#CarouselPlpPage",
+      "experimental__visibility-layout#SEOTextPLP"
+    ],
+    "props": {
+      "width": "grow",
+      "preventVerticalStretch": true,
+      "blockClass": "secondCategoryResults"
+    }
+  },
+  "rich-text#title-page-second-category": {
+    "props": {
+      "text": "# PAGE TITLE H1",
+      "blockClass": "h1SpareAndAccessories"
+    }
+  },
+  "rich-text#seo-test-1": {
+    "props": {
+      "text": "# Example description H1",
+      "blockClass": "h1SpareAndAccessories"
+    }
+  },
+  "rich-text#seo-test-2": {
+    "props": {
+      "text": "# Example description",
+      "blockClass": "h1SpareAndAccessories"
+    }
+  },
+  "search-result-layout.mobile#second-category": {
+    "children": [
+      "flex-layout.row#bread-pre-plp",
+      "experimental__visibility-layout#bannerWithPostillaSecondCategory",
+      "rich-text#title-page-second-category",
+      "flex-layout.row#searchtitle",
+      "flex-layout.row#spare-search-mob",
+      "flex-layout.row#searchinfomobile",
+      "flex-layout.row#productCountMobile",
+      "flex-layout.row#contentmobile",
+      "flex-layout.row#fetchmore",
+      "flex-layout.row#space",
+      "flex-layout.row#category",
+      "product-comparison-drawer",
+      "experimental__visibility-layout#videoSteamSecondCategory",
+      "experimental__visibility-layout#titleBannerPrePlpSecondCategory",
+      "experimental__visibility-layout#titleBannerPrePlpReverseSecondCategory",
+      "experimental__visibility-layout#titleBannerPrePlp2SecondCategory"
+    ],
+    "props": {
+      "showFacetQuantity": true,
+      "pagination": "show-more",
+      "preventRouteChange": true,
+      "defaultGalleryLayout": "grid"
+    }
+  },
+  "flex-layout.row#spare-search-mob": {
+    "children": [
+      "flex-layout.col#spare-search"
+    ],
+    "props": {
+      "blockClass": "spareSearchMobile"
+    }
+  },
+  "experimental__visibility-layout#bannerWithPostillaSecondCategory": {
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "flex-layout.row#bannerWithPostilla"
+    ]
+  },
+  "flex-layout.row#bannerTestoSecondCategory": {
+    "props": {
+      "blockClass": [
+        "bannerTesto"
+      ]
+    },
+    "children": [
+      "experimental__visibility-layout#ImageBannerTesto",
+      "experimental__visibility-layout#titleBannerTesto",
+      "experimental__visibility-layout#DescBannerTesto"
+    ]
+  },
+  "experimental__visibility-layout#videoSteamSecondCategory": {
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "flex-layout.row#videoSteam"
+    ]
+  },
+  "experimental__visibility-layout#titleBannerPrePlpSecondCategory": {
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "flex-layout.row#titleBannerPrePlp"
+    ]
+  },
+  "experimental__visibility-layout#titleBannerPrePlpReverseSecondCategory": {
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "flex-layout.row#titleBannerPrePlpReverse"
+    ]
+  },
+  "experimental__visibility-layout#titleBannerPrePlp2SecondCategory": {
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "flex-layout.row#titleBannerPrePlp"
+    ]
+  }
+}

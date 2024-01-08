@@ -1,0 +1,234 @@
+{
+  "store.custom#legal-issues": {
+    "props": {
+      "blockClass": "store-custom-legal-issues-style"
+    },
+    "blocks": ["flex-layout.row#legal-issues-maxi-container"]
+  },
+
+  "flex-layout.row#legal-issues-maxi-container": {
+    "props": {
+      "blockClass": "legal-issues-maxi-container-style"
+    },
+    "children": ["flex-layout.col#legal-issues-maxi-container-col"]
+  },
+  "flex-layout.col#legal-issues-maxi-container-col": {
+    "props": {
+      "blockClass": "legal-issues-maxi-container-col-style"
+    },
+    "children": [
+      "flex-layout.row#breadcrumb-legal-issues-container",
+      "flex-layout.row#legal-issues-title-container",
+      "flex-layout.row#legal-issues-buttons-container"
+    ]
+  },
+  "flex-layout.row#breadcrumb-legal-issues-container": {
+    "props": {
+      "blockClass": "breadcrumb-legal-issues-container-style"
+    },
+    "children": ["breadcrumb#legalIssues"]
+  },
+  "breadcrumb#legalIssues": {
+    "props": {
+      "categories": ["/Home/", "Home/legal issues"],
+      "showOnMobile": false,
+      "blockClass": "breadcrumb-legal-issues-style"
+    }
+  },
+  "flex-layout.row#legal-issues-title-container": {
+    "props": {
+      "blockClass": "legal-issues-title-container-style"
+    },
+    "children": ["rich-text#legal-issues-title"]
+  },
+  "rich-text#legal-issues-title": {
+    "props": {
+      "text": "Legal issues",
+      "blockClass": "legal-issues-title-style"
+    }
+  },
+  "flex-layout.row#legal-issues-buttons-container": {
+    "props": {
+      "blockClass": "legal-issues-buttons-container-style"
+    },
+    "children": [
+      "flex-layout.col#legal-issues-buttons-terms-site",
+      "flex-layout.col#legal-issues-buttons-privacy-share",
+      "flex-layout.col#legal-issues-buttons-cookies"
+    ]
+  },
+  //BUTTONS TERMS SITE******************************************************
+  "flex-layout.col#legal-issues-buttons-terms-site": {
+    "props": {
+      "blockClass": "legal-issues-buttons-terms-site-container-style"
+    },
+    "children": ["link#legal-issues-terms-link", "link#legal-issues-share-link"]
+  },
+  "link#legal-issues-terms-link": {
+    "props": {
+      "href": "/legal-issues/terms-of-website-use"
+    },
+    "children": ["flex-layout.row#legal-issues-terms-button"]
+  },
+  "link#legal-issues-site-link": {
+    "props": {
+      "href": "/legal-issues/sitemap"
+    },
+    "children": ["flex-layout.row#legal-issues-site-button"]
+  },
+  "flex-layout.row#legal-issues-terms-button": {
+    "props": {
+      "blockClass": "legal-issues-terms-button-style"
+    },
+    "children": [
+      "flex-layout.col#text-terms-container",
+      "flex-layout.col#button-arrow"
+    ]
+  },
+  "flex-layout.col#text-terms-container": {
+    "props": {
+      "blockClass": "text-terms-container-style"
+    },
+    "children": ["rich-text#text-terms"]
+  },
+  "flex-layout.row#button-arrow-row": {
+    "props": {
+      "blockClass": "button-arrow-style"
+    }
+  },
+  "flex-layout.col#button-arrow": {
+    "props": {
+      "blockClass": "button-arrow-container-style"
+    },
+    "children": ["flex-layout.row#button-arrow-row"]
+  },
+  "rich-text#text-terms": {
+    "props": {
+      "blockClass": "text-terms-style",
+      "text": "Terms of website use"
+    }
+  },
+  "flex-layout.row#legal-issues-site-button": {
+    "props": {
+      "blockClass": "legal-issues-site-button-style"
+    },
+    "children": [
+      "flex-layout.col#text-site-container",
+      "flex-layout.col#button-arrow"
+    ]
+  },
+  "flex-layout.col#text-site-container": {
+    "props": {
+      "blockClass": "text-site-container-style"
+    },
+    "children": ["rich-text#text-site"]
+  },
+  "rich-text#text-site": {
+    "props": {
+      "blockClass": "text-site-style",
+      "text": "Sitemap"
+    }
+  },
+  //BUTTONS PRIVACY SHARE******************************************************
+  "flex-layout.col#legal-issues-buttons-privacy-share": {
+    "props": {
+      "blockClass": "legal-issues-buttons-privacy-share-container-style"
+    },
+    "children": ["link#legal-issues-privacy-link", "cookies-title#footer"]
+  },
+  "cookies-title#footer": {
+    "props": {
+      "isPlp": true,
+      "customLabel": "Manage my preferences",
+      "blockClass": ["cookies-preferencies", "footerNormal"]
+    }
+  },
+  "link#legal-issues-privacy-link": {
+    "props": {
+      "href": "/legal-issues/privacy-policy"
+    },
+    "children": ["flex-layout.row#legal-issues-privacy-button"]
+  },
+  "link#legal-issues-share-link": {
+    "props": {
+      "href": "/legal-issues/share-your-content"
+    },
+    "children": ["flex-layout.row#legal-issues-share-button"]
+  },
+  "flex-layout.row#legal-issues-privacy-button": {
+    "props": {
+      "blockClass": "legal-issues-privacy-button-style"
+    },
+    "children": [
+      "flex-layout.col#text-privacy-container",
+      "flex-layout.col#button-arrow"
+    ]
+  },
+  "flex-layout.col#text-privacy-container": {
+    "props": {
+      "blockClass": "text-privacy-container-style"
+    },
+    "children": ["rich-text#text-privacy"]
+  },
+  "rich-text#text-privacy": {
+    "props": {
+      "blockClass": "text-privacy-style",
+      "text": "Privacy policy"
+    }
+  },
+  "flex-layout.row#legal-issues-share-button": {
+    "props": {
+      "blockClass": "legal-issues-share-button-style"
+    },
+    "children": [
+      "flex-layout.col#text-share-container",
+      "flex-layout.col#button-arrow"
+    ]
+  },
+  "flex-layout.col#text-share-container": {
+    "props": {
+      "blockClass": "text-share-container-style"
+    },
+    "children": ["rich-text#text-share"]
+  },
+  "rich-text#text-share": {
+    "props": {
+      "blockClass": "text-share-style",
+      "text": "Share your content"
+    }
+  },
+  //BUTTONS COOKIES******************************************************
+  "flex-layout.col#legal-issues-buttons-cookies": {
+    "props": {
+      "blockClass": "legal-issues-buttons-cookies-container-style"
+    },
+    "children": ["link#legal-issues-cookies-link"]
+  },
+  "link#legal-issues-cookies-link": {
+    "props": {
+      "href": "/legal-issues/cookies-disclaimer"
+    },
+    "children": ["flex-layout.row#legal-issues-cookies-button"]
+  },
+  "flex-layout.row#legal-issues-cookies-button": {
+    "props": {
+      "blockClass": "legal-issues-cookies-button-style"
+    },
+    "children": [
+      "flex-layout.col#text-cookies-container",
+      "flex-layout.col#button-arrow"
+    ]
+  },
+  "flex-layout.col#text-cookies-container": {
+    "props": {
+      "blockClass": "text-cookies-container-style"
+    },
+    "children": ["rich-text#text-cookies"]
+  },
+  "rich-text#text-cookies": {
+    "props": {
+      "blockClass": "text-cookies-style",
+      "text": "Cookies disclaimer"
+    }
+  }
+}

@@ -1,0 +1,608 @@
+{
+  "store.custom#gate-page-hub": {
+    "blocks": [
+      "responsive-layout.phone#gate-page-hub",
+      "responsive-layout.desktop#gate-page-hub",
+      "responsive-layout.tablet#gate-page-hub",
+      "newsletter-popup#footer"
+    ]
+  },
+  "rich-text#gate-page-hub": {
+    "props": {
+      "text": "### Gate page hub",
+      "textPosition": "CENTER",
+      "blockClass": "textGatePageHub"
+    }
+  },
+  "responsive-layout.desktop#gate-page-hub": {
+    "children": [
+      "rich-text#gate-page-hub",
+      "toggle-layout#bannerWithPostillaGatePageHub",
+      "flex-layout.row#halfSpace",
+      "toggle-layout#bannerWithPostillaGatePageHub2",
+      "flex-layout.row#halfSpace",
+      "toggle-layout#bannerWithPostillaGatePageHub3",
+      "flex-layout.row#halfSpace",
+      "toggle-layout#bannerWithPostillaGatePageHub4",
+      "flex-layout.row#halfSpace",
+      "toggle-layout#bannerWithPostillaGatePageHubDesktop",
+      "flex-layout.row#halfSpace",
+      "toggle-layout#bannerWithPostillaGatePageHubDesktop-banner2",
+      "flex-layout.row#halfSpace",
+      "toggle-layout#bannerWithPostillaGatePageHubDesktop-banner3",
+      "flex-layout.row#halfSpace",
+      "toggle-layout#bannerWithPostillaGatePageHubDesktop-banner4",
+      "flex-layout.row#halfSpace",
+      "toggle-layout#bannerWithPostillaGatePageHubDesktop-banner5",
+      "flex-layout.row#halfSpace",
+      "toggle-layout#bannerWithPostillaGatePageHubDesktop-banner6",
+      "flex-layout.row#halfSpace",
+      "experimental__visibility-layout#textSEOGatePageHub"
+    ]
+  },
+  "responsive-layout.tablet#gate-page-hub": {
+    "children": [
+      "rich-text#gate-page-hub",
+      "toggle-layout#bannerWithPostillaGatePageHub",
+      "flex-layout.row#halfSpace",
+      "toggle-layout#bannerWithPostillaGatePageHub2",
+      "flex-layout.row#halfSpace",
+      "toggle-layout#bannerWithPostillaGatePageHub3",
+      "flex-layout.row#halfSpace",
+      "toggle-layout#bannerWithPostillaGatePageHub4",
+      "flex-layout.row#halfSpace",
+      "toggle-layout#bannerWithPostillaGatePageHubDesktop",
+      "flex-layout.row#halfSpace",
+      "toggle-layout#bannerWithPostillaGatePageHubDesktop-banner2",
+      "flex-layout.row#halfSpace",
+      "toggle-layout#bannerWithPostillaGatePageHubDesktop-banner3",
+      "flex-layout.row#halfSpace",
+      "toggle-layout#bannerWithPostillaGatePageHubDesktop-banner4",
+      "flex-layout.row#halfSpace",
+      "toggle-layout#bannerWithPostillaGatePageHubDesktop-banner5",
+      "flex-layout.row#halfSpace",
+      "toggle-layout#bannerWithPostillaGatePageHubDesktop-banner6",
+      "flex-layout.row#halfSpace",
+      "experimental__visibility-layout#textSEOGatePageHub"
+    ]
+  },
+  "responsive-layout.phone#gate-page-hub": {
+    "children": [
+      "rich-text#gate-page-hub",
+      "toggle-layout#sliderInfoCardMobile",
+      "flex-layout.row#halfSpace",
+      "experimental__visibility-layout#bannerGatePageHub-phone",
+      "flex-layout.row#halfSpace",
+      "custom-image-list#gatepagehub",
+      "flex-layout.row#halfSpace",
+      "experimental__visibility-layout#textSEOGatePageHub"
+    ]
+  },
+  "toggle-layout#sliderInfoCardMobile": {
+    "children": [
+      "slider-layout#infoCardMobile"
+    ]
+  },
+  "slider-layout#infoCardMobile": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "showNavigationArrows": "mobileonly"
+    },
+    "children": [
+      "toggle-layout#bannerWithPostillaGatePageHub",
+      "toggle-layout#bannerWithPostillaGatePageHub2",
+      "toggle-layout#bannerWithPostillaGatePageHub3",
+      "toggle-layout#bannerWithPostillaGatePageHub4"
+    ]
+  },
+  "experimental__visibility-layout#bannerGatePageHub-phone": {
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "slider-layout#bannerGatePageHub-phone"
+    ]
+  },
+  "slider-layout#bannerGatePageHub-phone": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 3,
+        "tablet": 3,
+        "phone": 1
+      },
+      "infinite": false,
+      "showNavigationArrows": "never",
+      "showPaginationDots": "mobileOnly",
+      "autoplay": {
+        "timeout": 5000,
+        "stopOnHover": false
+      },
+      "blockClass": [
+        "GatePageHubPhone"
+      ]
+    },
+    "children": [
+      "experimental__visibility-layout#infoCardMobile1",
+      "experimental__visibility-layout#infoCardMobile2",
+      "experimental__visibility-layout#infoCardMobile3"
+    ]
+  },
+  "experimental__visibility-layout#infoCardMobile1": {
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "info-card#bannerMobile"
+    ]
+  },
+  "experimental__visibility-layout#infoCardMobile2": {
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "info-card#bannerMobile"
+    ]
+  },
+  "experimental__visibility-layout#infoCardMobile3": {
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "info-card#bannerMobile"
+    ]
+  },
+  "info-card#bannerMobile": {
+    "props": {
+      "id": "info-card-example",
+      "isFullModeStyle": true,
+      "textPosition": "center",
+      "imageUrl": "//images.samsung.com/is/image/samsung/assets/it/p6_gro1/p6_initial_home/Bespoke_spotlight_main_KV_promoJET_mo.webp?imwidth=360",
+      "headline": "Clearance Sale",
+      "subhead": "Le nostre migliori proposte su un'ampia collezione di prodotti",
+      "callToActionText": "DISCOVER",
+      "callToActionUrl": "/sale/d",
+      "linkTarget": "/",
+      "blockClass": "mobileGatePageHubInfoCard",
+      "textAlignment": "center"
+    }
+  },
+  //Primo banner desktop
+  "toggle-layout#bannerWithPostillaGatePageHub": {
+    "children": [
+      "flex-layout.row#bannerWithPostillaGatePageHub"
+    ]
+  },
+  "flex-layout.row#bannerWithPostillaGatePageHub": {
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": [
+        "columnPostillaBannerGatePageHub",
+        "bgColorAntonioHero"
+      ]
+    },
+    "children": [
+      "flex-layout.col#leftPartPostillaGatePageHub",
+      "flex-layout.col#rightPartPostillaGatePageHub"
+    ]
+  },
+  "flex-layout.col#leftPartPostillaGatePageHub": {
+    "props": {
+      "width": "50%",
+      "preventVerticalStretch": true,
+      "blockClass": [
+        "columnPostilla",
+        "columnPostillaBottom"
+      ]
+    },
+    "children": [
+      "rich-text#BanntitleParagGatePageHub",
+      "rich-text#BannTitleGatePageHub",
+      "rich-text#BannDescGatePageHub",
+      "experimental__visibility-layout#ButtonBannerWithPostillaGatePageHub"
+    ]
+  },
+  "flex-layout.col#rightPartPostillaGatePageHub": {
+    "props": {
+      "width": "50%",
+      "blockClass": "columnPostillaImage"
+    },
+    "children": [
+      "image#bannerPostillaGatePageHub"
+    ]
+  },
+  "rich-text#BanntitleParagGatePageHub": {
+    "props": {
+      "text": "W COLLECTION",
+      "blockClass": "titlePBannerPostilla"
+    }
+  },
+  "rich-text#BannTitleGatePageHub": {
+    "props": {
+      "text": "# Frigorifero combinato 4 porte",
+      "blockClass": "titleHBannerPostilla"
+    }
+  },
+  "rich-text#BannDescGatePageHub": {
+    "props": {
+      "text": "33% di spazio extra per frutta e verdura *",
+      "blockClass": "descBannerPostilla"
+    }
+  },
+  "experimental__visibility-layout#ButtonBannerWithPostillaGatePageHub": {
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "analytics-wrapper#bannerWithPostillaGatePageHub"
+    ]
+  },
+  "analytics-wrapper#bannerWithPostillaGatePageHub": {
+    "props": {
+      "propsAnalytics": {
+        "analyticsProperties": "provide",
+        "nameEvent": "redeemAPromo",
+        "name": "promo",
+        "data": [
+          {}
+        ]
+      }
+    },
+    "children": [
+      "link#ButtonBannGatePageHub"
+    ]
+  },
+  "link#ButtonBannGatePageHub": {
+    "props": {
+      "label": "SCOPRI DI PIÚ",
+      "href": "#",
+      "displayMode": "button",
+      "blockClass": "postillaButton",
+      "isPrevent": false
+    }
+  },
+  "image#bannerPostillaGatePageHub": {
+    "props": {
+      "src": "assets/postillaBanner/frigoBannerPostilla.jpg",
+      "blockClass": [
+        "imagePostillaBannerGatePageHub"
+      ]
+    }
+  },
+  //Secondo banner desktop
+  "toggle-layout#bannerWithPostillaGatePageHub2": {
+    "children": [
+      "flex-layout.row#bannerWithPostillaGatePageHub2"
+    ]
+  },
+  "flex-layout.row#bannerWithPostillaGatePageHub2": {
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": [
+        "columnPostillaBannerGatePageHubReverse",
+        "bgColorAntonioHero"
+      ]
+    },
+    "children": [
+      "flex-layout.col#leftPartPostillaGatePageHub2",
+      "flex-layout.col#rightPartPostillaGatePageHub2"
+    ]
+  },
+  "flex-layout.col#leftPartPostillaGatePageHub2": {
+    "props": {
+      "width": "50%",
+      "preventVerticalStretch": true,
+      "blockClass": [
+        "columnPostilla",
+        "columnPostillaBottom"
+      ]
+    },
+    "children": [
+      "rich-text#BanntitleParagGatePageHub2",
+      "rich-text#BannTitleGatePageHub2",
+      "rich-text#BannDescGatePageHub2",
+      "experimental__visibility-layout#ButtonBannerWithPostillaGatePageHub2"
+    ]
+  },
+  "flex-layout.col#rightPartPostillaGatePageHub2": {
+    "props": {
+      "width": "50%",
+      "blockClass": "columnPostillaImage"
+    },
+    "children": [
+      "image#bannerPostillaGatePageHub2"
+    ]
+  },
+  "rich-text#BanntitleParagGatePageHub2": {
+    "props": {
+      "text": "W COLLECTION",
+      "blockClass": "titlePBannerPostilla"
+    }
+  },
+  "rich-text#BannTitleGatePageHub2": {
+    "props": {
+      "text": "# Frigorifero combinato 4 porte",
+      "blockClass": "titleHBannerPostilla"
+    }
+  },
+  "rich-text#BannDescGatePageHub2": {
+    "props": {
+      "text": "33% di spazio extra per frutta e verdura *",
+      "blockClass": "descBannerPostilla"
+    }
+  },
+  "experimental__visibility-layout#ButtonBannerWithPostillaGatePageHub2": {
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "analytics-wrapper#bannerWithPostillaGatePageHub2"
+    ]
+  },
+  "analytics-wrapper#bannerWithPostillaGatePageHub2": {
+    "props": {
+      "propsAnalytics": {
+        "analyticsProperties": "provide",
+        "nameEvent": "redeemAPromo",
+        "name": "promo",
+        "data": [
+          {}
+        ]
+      }
+    },
+    "children": [
+      "link#ButtonBannGatePageHub2"
+    ]
+  },
+  "link#ButtonBannGatePageHub2": {
+    "props": {
+      "label": "SCOPRI DI PIÚ",
+      "href": "#",
+      "displayMode": "button",
+      "blockClass": "postillaButton",
+      "isPrevent": false
+    }
+  },
+  "image#bannerPostillaGatePageHub2": {
+    "props": {
+      "src": "assets/postillaBanner/frigoBannerPostilla.jpg",
+      "blockClass": [
+        "imagePostillaBannerGatePageHub"
+      ]
+    }
+  },
+  //Terzo banner 
+  "toggle-layout#bannerWithPostillaGatePageHub3": {
+    "children": [
+      "flex-layout.row#bannerWithPostillaGatePageHub"
+    ]
+  },
+  //Quarto banner
+  "toggle-layout#bannerWithPostillaGatePageHub4": {
+    "children": [
+      "flex-layout.row#bannerWithPostillaGatePageHub2"
+    ]
+  },
+  //Image list mobile
+  "custom-image-list#gatepagehub": {
+    "props": {
+      "interfaceType": "list",
+      "height": 350,
+      "images": [
+        {
+          "image": "https://assets.wpsandwatch.com/storage/images/_aliases/original_compressed/0/7/7/1/12071770-1-ita-IT/Gallery1_D.webp",
+          "link": {
+            "url": "/"
+          },
+          "title": "Prima promo",
+          "description": "Prima promo in pagina",
+          "experimentalPreventLayoutShift": true,
+          "width": "100%",
+          "promotionId": "1",
+          "promotionName": "Promo_uno",
+          "promotionPosition": "Promo_uno"
+        },
+        {
+          "image": "https://assets.wpsandwatch.com/storage/images/_aliases/original_compressed/4/8/9/1/12071984-1-ita-IT/Gallery2_D.webp",
+          "link": {
+            "url": "/"
+          },
+          "title": "Seconda promo",
+          "description": "Seconda promo in pagina",
+          "experimentalPreventLayoutShift": true,
+          "width": "100%",
+          "promotionId": "2",
+          "promotionName": "Promo_due",
+          "promotionPosition": "Promo_due"
+        },
+        {
+          "image": "https://assets.wpsandwatch.com/storage/images/_aliases/original_compressed/0/0/9/3/12073900-1-ita-IT/Gallery3_D.webp",
+          "link": {
+            "url": "/"
+          },
+          "title": "Terza promo",
+          "description": "Terza promo in pagina",
+          "experimentalPreventLayoutShift": true,
+          "width": "100%",
+          "promotionId": "3",
+          "promotionName": "Promo_tre",
+          "promotionPosition": "Promo_tre"
+        },
+        {
+          "image": "https://assets.wpsandwatch.com/storage/images/_aliases/original_compressed/4/0/9/3/12073904-1-ita-IT/Gallery4_D.webp",
+          "link": {
+            "url": "/"
+          },
+          "title": "Quarta promo",
+          "description": "Quarta promo in pagina",
+          "experimentalPreventLayoutShift": true,
+          "width": "100%",
+          "promotionId": "4",
+          "promotionName": "Promo_quattro",
+          "promotionPosition": "Promo_quattro"
+        }
+      ],
+      "blockClass": [
+        "lista_promo"
+      ]
+    }
+  },
+  //Banner 1 desktop slider
+  "toggle-layout#bannerWithPostillaGatePageHubDesktop": {
+    "title": "Banner 1 - Toggle",
+    "children": [
+      "flex-layout.row#bannerWithPostillaGatePageHubDesktop"
+    ]
+  },
+  "flex-layout.row#bannerWithPostillaGatePageHubDesktop": {
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": [
+        "columnPostillaBannerGatePageHubTerzoBanner",
+        "bgColorAntonioHero"
+      ]
+    },
+    "children": [
+      "flex-layout.col#leftPartPostillaGatePageHubDesktop",
+      "flex-layout.row#rightPartPostillaGatePageHubDesktop"
+    ]
+  },
+  "flex-layout.col#leftPartPostillaGatePageHubDesktop": {
+    "props": {
+      "width": "100%",
+      "preventHorizontalStretch": true,
+      "blockClass": [
+        "columnPostilla",
+        "columnPostillaBottomGatePageHub"
+      ]
+    },
+    "children": [
+      "rich-text#BanntitleParagGatePageHubDesktop",
+      "rich-text#BannTitleGatePageHubDesktop",
+      "rich-text#BannDescGatePageHubDesktop",
+      "experimental__visibility-layout#ButtonBannerWithPostillaGatePageHubDesktop",
+      "experimental__visibility-layout#Button2BannerWithPostillaGatePageHubDesktop"
+    ]
+  },
+  "flex-layout.row#rightPartPostillaGatePageHubDesktop": {
+    "props": {
+      "width": "100%",
+      "blockClass": "columnPostillaImage"
+    },
+    "children": [
+      "image#bannerPostillaGatePageHubDesktop"
+    ]
+  },
+  "rich-text#BanntitleParagGatePageHubDesktop": {
+    "props": {
+      "text": "W COLLECTION",
+      "blockClass": "titlePBannerPostilla"
+    }
+  },
+  "rich-text#BannTitleGatePageHubDesktop": {
+    "props": {
+      "text": "# Frigorifero combinato 4 porte",
+      "blockClass": "titleHBannerPostilla"
+    }
+  },
+  "rich-text#BannDescGatePageHubDesktop": {
+    "props": {
+      "text": "33% di spazio extra per frutta e verdura *",
+      "blockClass": "descBannerPostilla"
+    }
+  },
+  "experimental__visibility-layout#ButtonBannerWithPostillaGatePageHubDesktop": {
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "link#ButtonBannGatePageHubDesktop"
+    ]
+  },
+  "link#ButtonBannGatePageHubDesktop": {
+    "props": {
+      "label": "TESTO BOTTONE",
+      "href": "#",
+      "displayMode": "button",
+      "blockClass": "postillaButtonGatePageHub"
+    }
+  },
+  "experimental__visibility-layout#Button2BannerWithPostillaGatePageHubDesktop": {
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "link#Button2BannGatePageHubDesktop"
+    ]
+  },
+  "link#Button2BannGatePageHubDesktop": {
+    "props": {
+      "label": "TESTO BOTTONE 2",
+      "href": "#",
+      "displayMode": "button",
+      "blockClass": "postillaButton2GatePageHub"
+    }
+  },
+  "image#bannerPostillaGatePageHubDesktop": {
+    "props": {
+      "src": "assets/postillaBanner/frigoBannerPostilla.jpg",
+      "blockClass": [
+        "imagePostillaBannerGatePageHub"
+      ]
+    }
+  },
+  //Banner 2 desktop slider
+  "toggle-layout#bannerWithPostillaGatePageHubDesktop-banner2": {
+    "title": "Banner 2 - Toggle",
+    "children": [
+      "flex-layout.row#bannerWithPostillaGatePageHubDesktop"
+    ]
+  },
+  //Banner 3 desktop slider
+  "toggle-layout#bannerWithPostillaGatePageHubDesktop-banner3": {
+    "title": "Banner 3 - Toggle",
+    "children": [
+      "flex-layout.row#bannerWithPostillaGatePageHubDesktop"
+    ]
+  },
+  //Banner 4 desktop slider
+  "toggle-layout#bannerWithPostillaGatePageHubDesktop-banner4": {
+    "title": "Banner 4 - Toggle",
+    "children": [
+      "flex-layout.row#bannerWithPostillaGatePageHubDesktop"
+    ]
+  },
+  //Banner 5 desktop slider
+  "toggle-layout#bannerWithPostillaGatePageHubDesktop-banner5": {
+    "title": "Banner 5 - Toggle",
+    "children": [
+      "flex-layout.row#bannerWithPostillaGatePageHubDesktop"
+    ]
+  },
+  //Banner 6 desktop slider
+  "toggle-layout#bannerWithPostillaGatePageHubDesktop-banner6": {
+    "title": "Banner 6 - Toggle",
+    "children": [
+      "flex-layout.row#bannerWithPostillaGatePageHubDesktop"
+    ]
+  },
+  //SEO
+  "experimental__visibility-layout#textSEOGatePageHub": {
+    "children": [
+      "rich-text#GatePageHubSEO"
+    ],
+    "props": {
+      "blockClass": "paddingSearch"
+    }
+  },
+  "rich-text#GatePageHubSEO": {
+    "props": {
+      "text": "### Forni Whirlpool \n Il forno da incasso costituisce un elemento imprescindibile per uno spazio moderno dedicato alla cucina, e Whirlpool propone una linea ricca di modelli e soluzioni pensati per venire incontro a ogni necessità: Forni a vapore e tradizionali completi di tutte le più avanzate funzioni di cottura, studiati per garantirti le performance di cui hai bisogno per qualsiasi ricetta.\n Con la nostra gamma di forni a vapore puoi preparare piatti deliziosi: scopri la combinazione di cottura tradizionale e a vapore, cucina piatti sani e deliziosi, preservando tutte le proprietà organolettiche degli ingredienti. Dai dolci e le torte agli arrosti di carne, dai piatti di pesce fino al pane fatto in casa; le numerose funzioni ti permettono di scegliere sempre il programma di cottura più adatto a ogni ricetta. \n Lasciati stupire dalla tecnologia 6° Senso dei forni multifunzione di Whirlpool: le ricette pre-programmate regolano autonomamente il riscaldamento e la durata del ciclo, mentre la lampada alogena interna è studiata per assicurarti la migliore illuminazione riducendo allo stesso tempo il consumo energetico. Immancabili le funzioni di pre-riscaldamento e la tecnologia autopulente pirolitica, pensate per farti risparmiare tempo: la prima consente di raggiungere velocemente la temperatura desiderata, mentre la seconda ti viene incontro nella pulizia dello spazio interno, aiutandoti a rimuovere anche i residui e lo sporco più ostinato. \n La massima praticità incontra il design accattivante e moderno: i forni a incasso di Whirlpool si integrano facilmente in ogni ambiente, completando il [piano cottura per la cucina](https://www.whirlpool.it/prodotti/cottura/piani-cottura)  e sposandosi alla perfezione con le linee dell’arredo contemporaneo. I colori vanno dall’elegante nero al brillante acciaio, con una gamma di proposte e combinazioni che ti permette di trovare con facilità quello più adatto ai tuoi gusti estetici. Scopri i forni Whirlpool sul catalogo online: scegli il meglio per la tua casa.",
+      "blockClass": "seoTexGatePageHub"
+    }
+  }
+}

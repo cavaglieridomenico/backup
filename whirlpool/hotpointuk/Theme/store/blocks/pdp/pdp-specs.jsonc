@@ -1,0 +1,724 @@
+{
+  "flex-layout.row#tabPdp": {
+    "props": {
+      "blockClass": "containerRowTab"
+    },
+    "children": ["flex-layout.col#tabPdpContent"]
+  },
+  "flex-layout.col#tabPdpContent": {
+    "props": {
+      "blockClass": "contentTabPdp"
+    },
+    "children": [
+      "vtex.menu@2.x:menu#pdpTab",
+      "experimental__visibility-layout#Caratt-principali",
+      "experimental__visibility-layout#bannerClassicoImmSin80Tab",
+      "experimental__visibility-layout#editorialBanner",
+      //BEFORE BUY TAB/CONTENT
+      "condition-layout.product#washingMachinesBeforeBuy",
+      "condition-layout.product#washerDryerBeforeBuy",
+      //END BEFORE BUY TAB/CONTENT
+      "rich-text#main-features-anchor",
+      "rich-text#main-features",
+      "product-specifications-with-images",
+      "rich-text#technical-data-anchor",
+      "rich-text#technical-data",
+      "product-specifications-with-rules#caratt-tec",
+      "rich-text#documents-anchor",
+      "rich-text#documents",
+      "flex-layout.row#documentiTabContainer",
+      "rich-text#reviews-anchor",
+      "rich-text#reviews",
+      "rich-text#reviews-legal-informative",
+      "reviews-container"
+    ]
+  },
+  "reviews-container": {
+    "children": ["rating-product-extended"]
+  },
+  "rich-text#reviews-legal-informative": {
+    "title": "[FEEFO REVIEWS] - Brief legal information",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Our company collects reviews via the service provider Feefo. Feefo uses fraud and authenticity measures to verify reviews. All the reviews come from verified purchasers. The purchasers' verification is done through sales feeds uploads submitted by Feefo's partners. Information on the authenticity of customer reviews on Feefo and more in general how Feefo works can be found [here](https://www.feefo.com/en/business/about/how-feefo-works).",
+      "blockClass": "reviewsLegalInformative"
+    }
+  },
+  //BEFORE BUY TAB/CONTENT
+  "condition-layout.product#washMBeforeBuy": {
+    "props": {
+      "conditions": [{ "subject": "categoryId", "arguments": { "id": "19" } }],
+      "matchType": "any",
+      "Then": "menu-item#infoPreliminari"
+    }
+  },
+  "condition-layout.product#washDBeforeBuy": {
+    "props": {
+      "conditions": [{ "subject": "categoryId", "arguments": { "id": "21" } }],
+      "matchType": "any",
+      "Then": "menu-item#infoPreliminari"
+    }
+  },
+  "condition-layout.product#washerDryerBeforeBuy": {
+    "props": {
+      "conditions": [{ "subject": "categoryId", "arguments": { "id": "21" } }],
+      "matchType": "any",
+      "Then": "flex-layout.col#beforeBuyWasherD"
+    }
+  },
+  "flex-layout.col#beforeBuyWasherD": {
+    "children": [
+      "rich-text#before-buy-anchor",
+      "rich-text#before-buyWasherD",
+      "video#beforeBuyWasherD",
+      "rich-text#before-buyWasherD2",
+      "rich-text#before-buy-subtitleWasherD",
+      "responsive-layout.desktop#beforeBuyWasherD",
+      "responsive-layout.tablet#beforeBuyWasherD",
+      "responsive-layout.phone#beforeBuyWasherD",
+      "rich-text#before-buy-titleWasherD2",
+      "rich-text#before-buy-subtitleWasherD2",
+      "responsive-layout.desktop#beforeBuyWasherD2",
+      "responsive-layout.tablet#beforeBuyWasherD2",
+      "responsive-layout.phone#beforeBuyWasherD2"
+    ]
+  },
+  "condition-layout.product#washingMachinesBeforeBuy": {
+    "props": {
+      "conditions": [{ "subject": "categoryId", "arguments": { "id": "19" } }],
+      "matchType": "any",
+      "Then": "flex-layout.col#beforeBuyWashingM"
+    }
+  },
+  "flex-layout.col#beforeBuyWashingM": {
+    "children": [
+      "rich-text#before-buy-anchor",
+      "rich-text#before-buyWashingM",
+      "video#beforeBuyWashingM",
+      "rich-text#before-buyWashingM2",
+      "rich-text#before-buy-subtitleWashingM",
+      "responsive-layout.desktop#beforeBuyWashingM1",
+      "responsive-layout.tablet#beforeBuyWashingM1",
+      "responsive-layout.phone#beforeBuyWashingM1",
+      "rich-text#before-buyWashingM1",
+      "responsive-layout.desktop#beforeBuyWashingM2",
+      "responsive-layout.tablet#beforeBuyWashingM2",
+      "responsive-layout.phone#beforeBuyWashingM2",
+      "rich-text#beforeBuyWashingM3",
+      "responsive-layout.desktop#beforeBuyWashingM3",
+      "responsive-layout.tablet#beforeBuyWashingM3",
+      "responsive-layout.phone#beforeBuyWashingM3"
+    ]
+  },
+  "rich-text#before-buyWashingM1": {
+    "title": "[TITLE WASHING MACHINE] - Before you buy",
+    "props": {
+      "text": "WASHING AT LOW TEMPERATURES DOESN'T CLEAN YOUR CLOTHES",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": ["textBeforeBuy", "titleTab"]
+    }
+  },
+  "rich-text#before-buy-subtitleWasherD2": {
+    "title": "[SUBTITLE2 WASHER DRYER] - Before you buy",
+    "props": {
+      "text": "A washer dryer has a dual drum capacity, with a higher wash capacity, and a lower dry capacity - this is because laundry is much heavier when it's wet.",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": ["textBeforeBuy", "subTitleTab"]
+    }
+  },
+  "responsive-layout.desktop#beforeBuyWasherD": {
+    "children": ["image#desktopBeforeBuyWasherD"]
+  },
+  "responsive-layout.phone#beforeBuyWasherD": {
+    "children": ["image#phoneBeforeBuyWasherD"]
+  },
+  "responsive-layout.tablet#beforeBuyWasherD": {
+    "children": ["image#desktopBeforeBuyWasherD"]
+  },
+  "image#desktopBeforeBuyWasherD": {
+    "title": "[IMAGE-INFO-DESKTOP WASHER DRYER] - Image before you buy",
+    "props": {
+      "src": "assets/about_desktop.jpg",
+      "blockClass": "imageBeforeBuyWasherD"
+    }
+  },
+  "image#phoneBeforeBuyWasherD": {
+    "title": "[IMAGE-INFO-MOBILE WASHER DRYER ] - Image before you buy",
+    "props": {
+      "src": "assets/about_mobile.jpg",
+      "blockClass": "imageBeforeBuyWasherD"
+    }
+  },
+  "rich-text#beforeBuyWashingM3": {
+    "title": "[TITLE WASHING MACHINE] - Before you buy",
+    "props": {
+      "text": "HOW TO CHOOSE THE BEST DRUM SIZE TO SUIT YOUR HOME?",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": ["textBeforeBuy", "titleTab"]
+    }
+  },
+  "responsive-layout.desktop#beforeBuyWasherD2": {
+    "children": ["image#desktopBeforeBuyWasherD2"]
+  },
+  "responsive-layout.phone#beforeBuyWasherD2": {
+    "children": ["image#phoneBeforeBuyWasherD2"]
+  },
+  "responsive-layout.tablet#beforeBuyWasherD2": {
+    "children": ["image#desktopBeforeBuyWasherD2"]
+  },
+  "image#desktopBeforeBuyWasherD2": {
+    "title": "[IMAGE-INFO-DESKTOP 2 WASHER DRYER] - Image before you buy",
+    "props": {
+      "src": "assets/washerDryer2_desktop.jpg",
+      "blockClass": "imageBeforeBuyWasherD2"
+    }
+  },
+  "image#phoneBeforeBuyWasherD2": {
+    "title": "[IMAGE-INFO-MOBILE 2 WASHER DRYER] - Image before you buy",
+    "props": {
+      "src": "assets/washerDryer2_mobile.jpg",
+      "blockClass": "imageBeforeBuyWasherD2"
+    }
+  },
+  "rich-text#before-buyWasherD": {
+    "title": "[TAB-TITLE-WHASER DRYER] - Before you buy",
+    "props": {
+      "text": "THINGS TO KNOW BEFORE PURCHASING A WASHER DRYER",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": ["textBeforeBuy", "titleTab"]
+    }
+  },
+  "rich-text#before-buyWashingM": {
+    "title": "[TAB-TITLE-WHASHING MACHINE] - Before you buy",
+    "props": {
+      "text": "THINGS TO KNOW BEFORE PURCHASING A WASHING MACHINE",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": ["textBeforeBuy", "titleTab"]
+    }
+  },
+  "rich-text#before-buy-anchor": {
+    "props": {
+      "htmlId": "before-buy",
+      "blockClass": "anchorPdp"
+    }
+  },
+  "rich-text#before-buyWasherD2": {
+    "title": "[TITLE 2 WHASER DRYER] - Before you buy",
+    "props": {
+      "text": "WHAT IS A WASHER DRYER?",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": ["textBeforeBuy", "titleTab"]
+    }
+  },
+  "rich-text#before-buyWashingM2": {
+    "title": "[TITLE WASHING MACHINE 2] - Before you buy",
+    "props": {
+      "text": "ECO CYCLES EXPLAINED",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": ["textBeforeBuy", "titleTab"]
+    }
+  },
+  "rich-text#before-buy-subtitleWasherD": {
+    "title": "[SUBTITLE WASHER DRYER] - Before you buy",
+    "props": {
+      "text": "A washer dryer is a space saving appliance, enabling you to wash and dry your laundry in one machine. Perfect if you're limited on space in your kitchen.",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": ["textBeforeBuy", "subTitleTab"]
+    }
+  },
+  "rich-text#before-buy-titleWasherD2": {
+    "title": "[TITLE WASHER DRYER 2] - Before you buy",
+    "props": {
+      "text": "WHY DOES LAUNDRY COME OUT WET AFTER DRYING?",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": ["textBeforeBuy", "titleTab"]
+    }
+  },
+  "rich-text#before-buy-subtitleWashingM": {
+    "title": "[SUBTITLE WASHING MACHINE] - Before you buy",
+    "props": {
+      "text": "There’s lots of common misconceptions about eco cycles. Why do they take so long and are they really cleaning my laundry being the most common! We explain below why having a little patience when it comes to washing your clothes can help save you energy and water.",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": ["textBeforeBuy", "subTitleTab"]
+    }
+  },
+  "responsive-layout.desktop#beforeBuyWashingM1": {
+    "children": ["image#desktopBeforeBuyWashingM1"]
+  },
+  "responsive-layout.phone#beforeBuyWashingM1": {
+    "children": ["image#phoneBeforeBuyWashingM1"]
+  },
+  "responsive-layout.tablet#beforeBuyWashingM1": {
+    "children": ["image#desktopBeforeBuyWashingM1"]
+  },
+  "image#desktopBeforeBuyWashingM1": {
+    "title": "[IMAGE-DESKTOP WASHING MACHINE] - Image before you buy",
+    "props": {
+      "src": "assets/washingM1_desktop.jpg",
+      "blockClass": "imageBeforeBuy"
+    }
+  },
+  "image#phoneBeforeBuyWashingM1": {
+    "title": "[IMAGE-MOBILE WASHING MACHINE] - Image before you buy",
+    "props": {
+      "src": "assets/washingM1_mobile.jpg",
+      "blockClass": "imageBeforeBuy"
+    }
+  },
+  "responsive-layout.desktop#beforeBuyWashingM2": {
+    "children": ["image#desktopBeforeBuyWashingM2"]
+  },
+  "responsive-layout.phone#beforeBuyWashingM2": {
+    "children": ["image#phoneBeforeBuyWashingM2"]
+  },
+  "responsive-layout.tablet#beforeBuyWashingM2": {
+    "children": ["image#desktopBeforeBuyWashingM2"]
+  },
+  "image#desktopBeforeBuyWashingM2": {
+    "title": "[IMAGE2-DESKTOP WASHING MACHINE] - Image before you buy",
+    "props": {
+      "src": "assets/washingM2_desktop.jpg",
+      "blockClass": "imageBeforeBuy"
+    }
+  },
+  "image#phoneBeforeBuyWashingM2": {
+    "title": "[IMAGE2-MOBILE WASHING MACHINE] - Image before you buy",
+    "props": {
+      "src": "assets/washingM2_mobile.jpg",
+      "blockClass": "imageBeforeBuy"
+    }
+  },
+  "responsive-layout.desktop#beforeBuyWashingM3": {
+    "children": ["image#desktopBeforeBuyWashingM3"]
+  },
+  "responsive-layout.phone#beforeBuyWashingM3": {
+    "children": ["image#phoneBeforeBuyWashingM3"]
+  },
+  "responsive-layout.tablet#beforeBuyWashingM3": {
+    "children": ["image#desktopBeforeBuyWashingM3"]
+  },
+  "image#desktopBeforeBuyWashingM3": {
+    "title": "[IMAGE3-DESKTOP WASHING MACHINE] - Image before you buy",
+    "props": {
+      "src": "assets/washingM3_desktop.jpg",
+      "blockClass": "imageBeforeBuyM3"
+    }
+  },
+  "image#phoneBeforeBuyWashingM3": {
+    "title": "[IMAGE3-MOBILE WASHING MACHINE] - Image before you buy",
+    "props": {
+      "src": "assets/washingM3_mobile.jpg",
+      "blockClass": "imageBeforeBuyM3"
+    }
+  },
+  "menu-item#infoPreliminari": {
+    "title": "[TAB] - Before you buy",
+    "props": {
+      "id": "menu-tab-pdp",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#before-buy",
+        "noFollow": false,
+        "tagTitle": "Before you buy",
+        "text": "Before you buy"
+      },
+      "blockClass": ["pdpTab", "hidden"]
+    }
+  },
+  // END BEFORE BUY TAB/CONTENT
+  "vtex.menu@2.x:menu#pdpTab": {
+    "props": {
+      "blockClass": ["pdpTab"]
+    },
+    "children": [
+      "analytics-wrapper#caratteristichePrincipali",
+      "analytics-wrapper#dettagliTecnici",
+      "analytics-wrapper#documenti",
+      "analytics-wrapper#recensioni"
+      // "menu-item#caratteristichePrincipali",
+      // "menu-item#dettagliTecnici",
+      // "menu-item#documenti",
+      // "menu-item#recensioni"
+    ]
+  },
+  "analytics-wrapper#caratteristichePrincipali": {
+    "props": {
+      "propsAnalytics": {
+        "analyticsProperties": "provide",
+        "nameEvent": "extra_info_interaction",
+        "name": "extraInfoInteraction",
+        "nameView": "",
+        "data": [
+          {
+            "title": "type",
+            "value": "detail tab main-features"
+          }
+        ],
+        "isView": false
+      }
+    },
+    "children": ["menu-item#caratteristichePrincipali"]
+  },
+  "menu-item#caratteristichePrincipali": {
+    "props": {
+      "id": "menu-tab-pdp",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#main-features",
+        "noFollow": false,
+        "tagTitle": "Features",
+        "text": "Features"
+      },
+      "blockClass": ["pdpTab", "features"]
+    }
+  },
+  "analytics-wrapper#dettagliTecnici": {
+    "props": {
+      "propsAnalytics": {
+        "analyticsProperties": "provide",
+        "nameEvent": "extra_info_interaction",
+        "name": "extraInfoInteraction",
+        "nameView": "",
+        "data": [
+          {
+            "title": "type",
+            "value": "detail tab technical-data"
+          }
+        ],
+        "isView": false
+      }
+    },
+    "children": ["menu-item#dettagliTecnici"]
+  },
+  "menu-item#dettagliTecnici": {
+    "props": {
+      "id": "menu-tab-pdp",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#technical-data",
+        "noFollow": false,
+        "tagTitle": "Technical Data",
+        "text": "Technical Data"
+      },
+      "blockClass": ["pdpTab"]
+    }
+  },
+  "analytics-wrapper#documenti": {
+    "props": {
+      "propsAnalytics": {
+        "analyticsProperties": "provide",
+        "nameEvent": "extra_info_interaction",
+        "name": "extraInfoInteraction",
+        "nameView": "",
+        "data": [
+          {
+            "title": "type",
+            "value": "detail tab documents"
+          }
+        ],
+        "isView": false
+      }
+    },
+    "children": ["menu-item#documenti"]
+  },
+  "menu-item#documenti": {
+    "props": {
+      "id": "menu-tab-pdp",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#documents",
+        "noFollow": false,
+        "tagTitle": "Documents",
+        "text": "Documents"
+      },
+      "blockClass": ["pdpTab"]
+    }
+  },
+  "analytics-wrapper#recensioni": {
+    "props": {
+      "propsAnalytics": {
+        "analyticsProperties": "provide",
+        "nameEvent": "extra_info_interaction",
+        "name": "extraInfoInteraction",
+        "nameView": "",
+        "data": [
+          {
+            "title": "type",
+            "value": "detail tab reviews"
+          }
+        ],
+        "isView": false
+      }
+    },
+    "children": ["menu-item#recensioni"]
+  },
+  "menu-item#recensioni": {
+    "props": {
+      "id": "menu-tab-pdp",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#reviews",
+        "noFollow": false,
+        "tagTitle": "Reviews",
+        "text": "Reviews"
+      },
+      "blockClass": ["pdpTab"]
+    }
+  },
+  "rich-text#main-features-anchor": {
+    "props": {
+      "htmlId": "main-features",
+      "blockClass": "anchorPdp"
+    }
+  },
+  "rich-text#main-features": {
+    "props": {
+      "text": "Features",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": ["titleTab", "features"]
+    }
+  },
+  "rich-text#technical-data-anchor": {
+    "props": {
+      "htmlId": "technical-data",
+      "blockClass": "anchorPdp"
+    }
+  },
+  "rich-text#technical-data": {
+    "props": {
+      "text": "Technical Data",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": "titleTab"
+    }
+  },
+  // "rich-text#tecnologia": {
+  //   "props": {
+  //     "htmlId": "features",
+  //     "text": "## Tecnologia ed innovazioni all'avanguardia",
+  //     "textAlignment": "CENTER",
+  //     "textPosition": "CENTER",
+  //     "blockClass": ["titleTab", "noMarginBottom"]
+  //   }
+  // },
+  "rich-text#documents-anchor": {
+    "props": {
+      "htmlId": "documents",
+      "blockClass": "anchorPdp"
+    }
+  },
+  "rich-text#documents": {
+    "props": {
+      "text": "Documents",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": "titleTab"
+    }
+  },
+  "rich-text#reviews-anchor": {
+    "props": {
+      "htmlId": "reviews",
+      "blockClass": "anchorPdp"
+    }
+  },
+  "rich-text#reviews": {
+    "props": {
+      "htmlId": "reviews",
+      "text": "Reviews",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": "titleTab"
+    }
+  },
+  "experimental__visibility-layout#Caratt-principali": {
+    "props": {
+      "visible": false
+    },
+    "children": ["rich-text#main-features"]
+  },
+  //Primo editorial banner
+  //assets/imagebannertabpdp.PNG
+  "experimental__visibility-layout#bannerClassicoImmSin80Tab": {
+    "props": {
+      "visible": false
+    },
+    "children": ["flex-layout.row#bannerClassicoImmSin80"]
+  },
+  "flex-layout.row#bannerClassicoImmSin80": {
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": [
+        "bannerPostilla",
+        "marginAutoContent",
+        "width80",
+        "classico",
+        "tab"
+      ]
+    },
+    "children": [
+      "flex-layout.col#leftPartClassicoTab",
+      "flex-layout.col#rightPartClassicoCaratt"
+    ]
+  },
+  "flex-layout.col#leftPartClassicoTab": {
+    "props": {
+      "width": "50%",
+      "blockClass": "columnPostillaImage"
+    },
+    "children": ["image#leftPartClassicoTab"]
+  },
+  "image#leftPartClassicoTab": {
+    "props": {
+      "src": "assets/imagebannertabpdp.png",
+      "blockClass": ["imagePostillaBanner", "cover", "minHeight"]
+    }
+  },
+  "flex-layout.col#rightPartClassicoCaratt": {
+    "props": {
+      "width": "50%",
+      "preventVerticalStretch": true,
+      "blockClass": ["columnPostilla", "editorialIfocard"]
+    },
+    "children": [
+      "experimental__visibility-layout#logoBannerTopCaratt",
+      "experimental__visibility-layout#TitleBannerTopCaratt",
+      "experimental__visibility-layout#BannDescTopCaratt",
+      "experimental__visibility-layout#ButtonBannerClassicoCaratt",
+      "experimental__visibility-layout#bannerClassicoPostillaCaratt"
+    ]
+  },
+  "experimental__visibility-layout#logoBannerTopCaratt": {
+    "props": {
+      "visible": false
+    },
+    "children": ["image#LogoBannerTop"]
+  },
+  "experimental__visibility-layout#TitleBannerTopCaratt": {
+    "props": {
+      "visible": true
+    },
+    "children": ["rich-text#BannTitleTopCaratt"]
+  },
+  "experimental__visibility-layout#BannDescTopCaratt": {
+    "props": {
+      "visible": true
+    },
+    "children": ["rich-text#BannDescTopCaratt"]
+  },
+  "experimental__visibility-layout#ButtonBannerClassicoCaratt": {
+    "props": {
+      "visible": false
+    },
+    "children": ["link#ButtonBannerClassico"]
+  },
+  "experimental__visibility-layout#bannerClassicoPostillaCaratt": {
+    "props": {
+      "visible": false
+    },
+    "children": ["rich-text#bannerClassicoPostilla"]
+  },
+  "rich-text#BannTitleTopCaratt": {
+    "props": {
+      "text": "# Irresistibile alla vista,<br>Impercettibile all'udito",
+      "blockClass": "titleHBannerPostilla"
+    }
+  },
+  "rich-text#BannDescTopCaratt": {
+    "props": {
+      "text": "Sappiamo che l'ultima cosa che vuoi è disturbare la tranquillità della tua casa con rumori indesiderati. Da questo momento vivi ogni momento della tua giornata in pace e tranquillità.",
+      "blockClass": "descBannerPostilla"
+    }
+  },
+  //Secondo editorial banner
+  "experimental__visibility-layout#editorialBanner": {
+    "props": {
+      "visible": false
+    },
+    "children": ["flex-layout.row#cardPersonalizedProductCaratt"]
+  },
+  "flex-layout.row#cardPersonalizedProductCaratt": {
+    "props": {
+      "blockClass": ["promoBannerProduct", "maxWidth58"]
+    },
+    "children": [
+      "flex-layout.col#textProductCaratt",
+      "flex-layout.col#imageCardProduct"
+    ]
+  },
+  "flex-layout.col#textProductCaratt": {
+    "props": {
+      "blockClass": "promoBannerProduct"
+    },
+    "children": [
+      "experimental__visibility-layout#rangeProductCaratt",
+      "experimental__visibility-layout#titleProductCaratt",
+      "experimental__visibility-layout#subtitleProductCaratt",
+      "experimental__visibility-layout#postillaProductCaratt"
+    ]
+  },
+  "experimental__visibility-layout#rangeProductCaratt": {
+    "props": {
+      "visible": true
+    },
+    "children": ["rich-text#rangeProduct"]
+  },
+  "experimental__visibility-layout#titleProductCaratt": {
+    "props": {
+      "visible": true
+    },
+    "children": ["rich-text#titleProduct"]
+  },
+  "experimental__visibility-layout#subtitleProductCaratt": {
+    "props": {
+      "visible": true
+    },
+    "children": ["rich-text#subtitleProduct"]
+  },
+  "experimental__visibility-layout#postillaProductCaratt": {
+    "props": {
+      "visible": true
+    },
+    "children": ["rich-text#postillaProduct"]
+  },
+  "flex-layout.row#documentiTabContainer": {
+    "props": {
+      "blockClass": "containerDocumenti"
+      // "preventHorizontalStretch": true
+    },
+    "children": [
+      "condition-layout.product#etichetta-enegetica-new",
+      "condition-layout.product#schedaProdottoTab",
+      "condition-layout.product#safetyEnvironment",
+      "condition-layout.product#schedaTecnicaTab",
+      "condition-layout.product#referenceGuide",
+      "condition-layout.product#utilizzoManutenzioneTab",
+      "condition-layout.product#extended-technical-drawing",
+      // "condition-layout.product#installation",
+      // "condition-layout.product#cookbook",
+      "condition-layout.product#program",
+      "condition-layout.product#instruction"
+    ]
+  }
+}

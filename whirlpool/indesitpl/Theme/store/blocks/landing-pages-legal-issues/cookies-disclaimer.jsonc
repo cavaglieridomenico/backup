@@ -1,0 +1,691 @@
+{
+  "store.custom#legal-issues-cookies-disclaimer": {
+    "blocks": [
+      // "analytics#legal-issues",
+      "responsive-layout.desktop#legal-issues-cookies-disclaimer",
+      "responsive-layout.mobile#legal-issues-cookies-disclaimer-mobile"
+    ]
+  },
+  "responsive-layout.desktop#legal-issues-cookies-disclaimer": {
+    "children": ["flex-layout.row#cookies-disclaimer-maxi-container"]
+  },
+  "flex-layout.row#cookies-disclaimer-maxi-container": {
+    "children": ["flex-layout.col#cookies-disclaimer-col-maxi-container"],
+    "props": {
+      "blockClass": "cookies-disclaimer-row-maxi-container-style"
+    }
+  },
+  "flex-layout.col#cookies-disclaimer-col-maxi-container": {
+    "children": [
+      "breadcrumb-custom#cookies",
+      "flex-layout.row#cookies-disclaimer-title-container",
+      "flex-layout.row#cookies-disclaimer-content-container",
+      "flex-layout.row#cookies-disclaimer-tab-container",
+      "flex-layout.row#cookies-disclaimer-disclosure-container",
+      "flex-layout.row#cookies-disclaimer-last-content-container"
+    ]
+  },
+  "breadcrumb-custom#cookies": {
+    "props": {
+      /* "blockClass": "containerBreadcrumbs", */
+      "firstPage": "Home",
+      "previousPage": "Warunki",
+      "previousPath": "/warunki",
+      "currentPage": "Oświadczenie o wykorzystaniu plików cookie"
+    }
+  },
+  "flex-layout.row#cookies-disclaimer-title-container": {
+    "children": ["rich-text#cookies-disclaimer-title"]
+  },
+  "rich-text#cookies-disclaimer-title": {
+    "props": {
+      "text": "Oświadczenie o wykorzystaniu plików cookie",
+      "blockClass": "cookies-disclaimer-title-style"
+    }
+  },
+  "flex-layout.row#cookies-disclaimer-content-container": {
+    "children": ["rich-text#cookies-disclaimer-content"]
+  },
+  "rich-text#cookies-disclaimer-content": {
+    "props": {
+      "text": "Nasza strona internetowa korzysta z plików cookie i innych technologii śledzenia, aby uzyskać najlepsze doświadczenia na naszej stronie. Więcej informacji o plikach cookie i sposobach ich używania znajdziesz poniżej. Aby uzyskać więcej informacji o przetwarzaniu danych osobowych przez WHIRLPOOL POLSKA Appliances Sp. z o.o, przeczytaj nasze informacje dotyczące ochrony [prywatności](informacja-o-ochronie-prywatnosci). \n\n <br> **Pliki cookie** – pliki cookie to małe pliki tekstowe, które można przechowywać na twoim komputerze, aby pomóc nam zidentyfikować komputer podczas następnego odwiedzania lub włączyć niektóre funkcje w naszych witrynach internetowych. Pliki cookie są klasyfikowane wg następujących kategorii:",
+      "blockClass": "cookies-disclaimer-content-style"
+    }
+  },
+  "flex-layout.row#cookies-disclaimer-tab-container": {
+    "props": {
+      "blockClass": "cookies-disclaimer-tab-container-style"
+    },
+    "children": ["tab-layout#cookies-disclaimer"]
+  },
+  //TAB LAYOUT VTEX************************************************
+  "tab-layout#cookies-disclaimer": {
+    "children": [
+      "tab-list#cookies-disclaimer",
+      "tab-content#cookies-disclaimer"
+    ],
+    "props": {
+      "blockClass": "cookies-disclaimer-tab-layout-style",
+      "defaultActiveTabId": "functional-cookies"
+    }
+  },
+  "tab-list#cookies-disclaimer": {
+    "children": [
+      /*"tab-list.item#targeting-cookies",*/
+      "tab-list.item#functional-cookies",
+      "tab-list.item#first-party-cookies",
+      "tab-list.item#strictly-necessary-cookies"
+    ],
+    "props": {
+      "blockClass": "cookies-disclaimer-tab-list-style"
+    }
+  },
+  /*"tab-list.item#targeting-cookies": {
+    "props": {
+      "tabId": "targeting-cookies",
+      "label": "Cookies pour une publicité ciblée",
+      "defaultActiveTab": true,
+      "blockClass": "targeting-cookies-tab-list-item-style"
+    }
+  },*/
+  "tab-list.item#functional-cookies": {
+    "props": {
+      "tabId": "functional-cookies",
+      "label": "Funkcjonalne pliki cookie",
+      "blockClass": "functional-cookies-tab-list-item-style"
+    }
+  },
+  "tab-list.item#first-party-cookies": {
+    "props": {
+      "tabId": "first-party-cookies",
+      "label": "Pliki cookie do analizy wewnętrznej",
+      "blockClass": "first-party-cookies-tab-list-item-style"
+    }
+  },
+  "tab-list.item#strictly-necessary-cookies": {
+    "props": {
+      "tabId": "strictly-necessary-cookies",
+      "label": "Ściśle niezbędne pliki cookie",
+      "blockClass": "strictly-necessary-cookies-tab-list-item-style"
+    }
+  },
+  "tab-content#cookies-disclaimer": {
+    "children": [
+      /*"tab-content.item#targeting-cookies",*/
+      "tab-content.item#functional-cookies",
+      "tab-content.item#first-party-cookies",
+      "tab-content.item#strictly-necessary-cookies"
+    ],
+    "props": {
+      "blockClass": "cookies-disclaimer-tab-content-style"
+    }
+  },
+  //TARGETING COOKIES TAB START***********************************************
+  /*"tab-content.item#targeting-cookies": {
+    "children": ["flex-layout.row#targeting-cookies-tab-maxi-content"],
+    "props": {
+      "tabId": "targeting-cookies"
+    }
+  },
+  "flex-layout.row#targeting-cookies-tab-maxi-content": {
+    "props": {
+      "blockClass": "targeting-cookies-tab-maxi-content-style"
+    },
+    "children": ["flex-layout.col#targeting-cookies-tab-col-maxi-content"]
+  },
+  "flex-layout.col#targeting-cookies-tab-col-maxi-content": {
+    "props": {
+      "blockClass": "targeting-cookies-tab-col-maxi-content-style"
+    },
+    "children": [
+      "flex-layout.row#targeting-cookies-row-text",
+      "flex-layout.row#targeting-cookies-subcolumn"
+    ]
+  },
+  "flex-layout.row#targeting-cookies-row-text": {
+    "props": {
+      "blockClass": "targeting-cookies-row-text-style"
+    },
+    "children": ["rich-text#targeting-cookies-text"]
+  },
+  "rich-text#targeting-cookies-text": {
+    "props": {
+      "text": "**COOKIES POUR UNE PUBLICITÉ CIBLÉE** \n <br> Ces cookies peuvent être mis en place au sein de notre site Web par nos partenaires publicitaires. Ils peuvent être utilisés par ces sociétés pour établir un profil de vos intérêts et vous proposer des publicités pertinentes sur d'autres sites Web. Ils ne stockent pas directement des données personnelles, mais sont basés sur l'identification unique de votre navigateur et de votre appareil Internet. Si vous n'autorisez pas ces cookies, votre publicité sera moins ciblée.",
+      "blockClass": "targeting-cookies-text-style"
+    }
+  },
+  "flex-layout.row#targeting-cookies-subcolumn": {
+    "props": {
+      "blockClass": "targeting-cookies-subcolumn-style"
+    },
+    "children": [
+      "flex-layout.col#targeting-name",
+      "flex-layout.col#targeting-host",
+      "flex-layout.col#targeting-duration"
+    ]
+  },
+  "flex-layout.col#targeting-name": {
+    "props": {
+      "blockClass": "targeting-name-style"
+    },
+    "children": ["rich-text#targeting-name-text"]
+  },
+  "flex-layout.col#targeting-host": {
+    "props": {
+      "blockClass": "targeting-host-style"
+    },
+    "children": ["rich-text#targeting-host-text"]
+  },
+  "flex-layout.col#targeting-duration": {
+    "props": {
+      "blockClass": "targeting-duration-style"
+    },
+    "children": ["rich-text#targeting-duration-text"]
+  },
+  "rich-text#targeting-name-text": {
+    "props": {
+      "text": "**Nom** \n\n VISITOR_INFO1_LIVE \n\n _gat_gtag_",
+      "blockClass": "targeting-name-text-style"
+    }
+  },
+  "rich-text#targeting-host-text": {
+    "props": {
+      "text": "**Serveur** \n\n youtube.com \n\n indesit.fr",
+      "blockClass": "targeting-host-text-style"
+    }
+  },
+  "rich-text#targeting-duration-text": {
+    "props": {
+      "text": "**Durée** \n\n 180 journées \n\n 1 journée",
+      "blockClass": "targeting-duration-text-style"
+    }
+  },*/
+  //TARGETING COOKIES TAB END***********************************************
+  //FUNCTIONAL COOKIES TAB START***********************************************
+  "tab-content.item#functional-cookies": {
+    "children": ["flex-layout.row#functional-cookies-tab-maxi-content"],
+    "props": {
+      "tabId": "functional-cookies"
+    }
+  },
+  "flex-layout.row#functional-cookies-tab-maxi-content": {
+    "props": {
+      "blockClass": "functional-cookies-tab-maxi-content-style"
+    },
+    "children": ["flex-layout.col#functional-cookies-tab-col-maxi-content"]
+  },
+  "flex-layout.col#functional-cookies-tab-col-maxi-content": {
+    "props": {
+      "blockClass": "functional-cookies-tab-col-maxi-content-style"
+    },
+    "children": [
+      "flex-layout.row#functional-cookies-text",
+      "flex-layout.row#functional-cookies-subcolumn"
+    ]
+  },
+  "flex-layout.row#functional-cookies-text": {
+    "props": {
+      "blockClass": "functional-cookies-text-style"
+    },
+    "children": ["rich-text#functional-cookies-text"]
+  },
+  "rich-text#functional-cookies-text": {
+    "props": {
+      "text": "**FUNKCJONALNE PLIKI COOKIE** \n <br> Te pliki cookie umożliwiają stronie internetowej zapewnienie większej funkcjonalności i personalizacji. Mogą być one ustawione przez nas lub przez zewnętrznych dostawców, których usługi zostały dodane do naszych stron internetowych. Jeśli użytkownik nie zezwoli na stosowanie tych plików cookie, niektóre lub wszystkie te usługi mogą nie działać prawidłowo.",
+      "blockClass": "functional-cookies-text-style"
+    }
+  },
+  "flex-layout.row#functional-cookies-subcolumn": {
+    "props": {
+      "blockClass": "functional-cookies-text-style"
+    },
+    "children": [
+      "flex-layout.col#functional-name",
+      "flex-layout.col#functional-host",
+      "flex-layout.col#functional-duration"
+    ]
+  },
+  "flex-layout.col#functional-name": {
+    "props": {
+      "blockClass": "functional-name-style"
+    },
+    "children": ["rich-text#functional-name-text"]
+  },
+  "flex-layout.col#functional-host": {
+    "props": {
+      "blockClass": "functional-host-style"
+    },
+    "children": ["rich-text#functional-host-text"]
+  },
+  "flex-layout.col#functional-duration": {
+    "props": {
+      "blockClass": "functional-duration-style"
+    },
+    "children": ["rich-text#functional-duration-text"]
+  },
+  "rich-text#functional-name-text": {
+    "props": {
+      "text": "**Nazwa** \n\n _hjIncludedInPageviewSample \n\n _TA_TRACKING",
+      "blockClass": "functional-name-text-style"
+    }
+  },
+  "rich-text#functional-host-text": {
+    "props": {
+      "text": "**Host** \n\n  script.hotjar.com \n\n whirlpool-cdn.thron.com",
+      "blockClass": "functional-host-text-style"
+    }
+  },
+  "rich-text#functional-duration-text": {
+    "props": {
+      "text": "**Czas trwania** \n\n 1 dzień \n\n 1825 dni",
+      "blockClass": "functional-duration-text-style"
+    }
+  },
+  //FUNCTIONAL COOKIES TAB END***********************************************
+  //FIRST PARTY COOKIES TAB START***********************************************
+  "tab-content.item#first-party-cookies": {
+    "children": ["flex-layout.row#first-party-cookies-tab-maxi-content"],
+    "props": {
+      "tabId": "first-party-cookies"
+    }
+  },
+  "flex-layout.row#first-party-cookies-tab-maxi-content": {
+    "props": {
+      "blockClass": "first-party-cookies-tab-maxi-content-style"
+    },
+    "children": ["flex-layout.col#first-party-cookies-tab-col-maxi-content"]
+  },
+  "flex-layout.col#first-party-cookies-tab-col-maxi-content": {
+    "props": {
+      "blockClass": "first-party-cookies-tab-col-maxi-content-style"
+    },
+    "children": [
+      "flex-layout.row#first-party-cookies-text",
+      "flex-layout.row#first-party-cookies-subcolumn"
+    ]
+  },
+  "flex-layout.row#first-party-cookies-text": {
+    "props": {
+      "blockClass": "first-party-cookies-text-style"
+    },
+    "children": ["rich-text#first-party-cookies-text"]
+  },
+  "rich-text#first-party-cookies-text": {
+    "props": {
+      "text": "**PLIKI COOKIE DO ANALIZY WEWNĘTRZNEJ** \n <br> Te pliki cookie umożliwiają nam zliczanie wizyt i źródeł ruchu, dzięki czemu możemy mierzyć i poprawiać wydajność naszej witryny. Pomagają one ustalić, które strony są najbardziej i najmniej popularne i zobaczyć, jak odwiedzający poruszają się po stronie. Wszystkie informacje zbierane przez te pliki cookie są agregowane i tym samym anonimowe. Jeśli użytkownik nie zezwoli na stosowanie tych plików cookie, nie będziemy wiedzieć, kiedy odwiedził naszą stronę internetową.",
+      "blockClass": "first-party-cookies-text-style"
+    }
+  },
+  "flex-layout.row#first-party-cookies-subcolumn": {
+    "props": {
+      "blockClass": "first-party-cookies-text-style"
+    },
+    "children": [
+      "flex-layout.col#first-party-name",
+      "flex-layout.col#first-party-host",
+      "flex-layout.col#first-party-duration"
+    ]
+  },
+  "flex-layout.col#first-party-name": {
+    "props": {
+      "blockClass": "first-party-name-style"
+    },
+    "children": ["rich-text#first-party-name-text"]
+  },
+  "flex-layout.col#first-party-host": {
+    "props": {
+      "blockClass": "first-party-host-style"
+    },
+    "children": ["rich-text#first-party-host-text"]
+  },
+  "flex-layout.col#first-party-duration": {
+    "props": {
+      "blockClass": "first-party-duration-style"
+    },
+    "children": ["rich-text#first-party-duration-text"]
+  },
+  "rich-text#first-party-name-text": {
+    "props": {
+      "text": "**Nazwa** \n\n __utma \n\n __utmb \n\n __utmc \n\n __utmt \n\n __utmt_Site_Account \n\n __utmz \n\n _ga \n\n _gat_UA- \n\n _gid \n\n _hjAbsoluteSessionInProgress \n\n _hjFirstSeen \n\n _hjid \n\n _hjIncludedInPageviewSample \n\n _hjIncludedInSessionSample \n\n _hjTLDTest \n\n _hjIncludedInSessionSample",
+      "blockClass": "first-party-name-text-style"
+    }
+  },
+  "rich-text#first-party-host-text": {
+    "props": {
+      "text": "**Host** \n\n indesit.pl \n\n indesit.pl \n\n indesit.pl \n\n indesit.pl \n\n indesit.pl \n\n indesit.pl \n\n indesit.pl \n\n indesit.pl \n\n indesit.pl \n\n indesit.pl \n\n indesit.pl \n\n indesit.pl \n\n www.indesit.pl \n\n www.indesit.pl \n\n indesit.pl \n\n script.hotjar.com",
+      "blockClass": "first-party-host-text-style"
+    }
+  },
+  "rich-text#first-party-duration-text": {
+    "props": {
+      "text": "**Czas trwania** \n\n 730 dni \n\n 1 dzień \n\n sesja \n\n 1 dzień \n\n 1 dzień \n\n 183 dni \n\n 730 dni \n\n 1 dzień \n\n 1 dni \n\n 1 dzień \n\n 1 dzień \n\n 365 dni \n\n 1 dzień \n\n 1 dzień \n\n sesja \n\n 1 dzień",
+      "blockClass": "first-party-duration-text-style"
+    }
+  },
+  //FIRST PARTY COOKIES TAB END***********************************************
+  //STRICTLY NECESSARY COOKIES TAB START***********************************************
+  "tab-content.item#strictly-necessary-cookies": {
+    "children": ["flex-layout.row#strictly-necessary-cookies-tab-maxi-content"],
+    "props": {
+      "tabId": "strictly-necessary-cookies"
+    }
+  },
+  "flex-layout.row#strictly-necessary-cookies-tab-maxi-content": {
+    "props": {
+      "blockClass": "strictly-necessary-cookies-tab-maxi-content-style"
+    },
+    "children": [
+      "flex-layout.col#strictly-necessary-cookies-tab-col-maxi-content"
+    ]
+  },
+  "flex-layout.col#strictly-necessary-cookies-tab-col-maxi-content": {
+    "props": {
+      "blockClass": "strictly-necessary-cookies-tab-col-maxi-content-style"
+    },
+    "children": [
+      "flex-layout.row#strictly-necessary-cookies-text",
+      "flex-layout.row#strictly-necessary-cookies-subcolumn"
+    ]
+  },
+  "flex-layout.row#strictly-necessary-cookies-text": {
+    "props": {
+      "blockClass": "strictly-necessary-cookies-text-style"
+    },
+    "children": ["rich-text#strictly-necessary-cookies-text"]
+  },
+  "rich-text#strictly-necessary-cookies-text": {
+    "props": {
+      "text": "**ŚCIŚLE NIEZBĘDNE PLIKI COOKIE** \n <br> Te pliki cookie są niezbędne dla funkcjonowania strony internetowej i nie mogą być wyłączone w naszych systemach. Są one zazwyczaj ustawiane tylko w odpowiedzi na działania podejmowane przez użytkownika, które sprowadzają się do zapytania o usługi, takie jak ustawienie preferencji prywatności, logowanie lub wypełnianie formularzy. Można ustawić przeglądarkę tak, aby blokowała lub ostrzegała o tych plikach cookie, ale niektóre części witryny nie będą wtedy działały. Te pliki cookie nie przechowują żadnych danych osobowych.",
+      "blockClass": "strictly-necessary-cookies-text-style"
+    }
+  },
+  "flex-layout.row#strictly-necessary-cookies-subcolumn": {
+    "props": {
+      "blockClass": "strictly-necessary-cookies-text-style"
+    },
+    "children": [
+      "flex-layout.col#strictly-necessary-name",
+      "flex-layout.col#strictly-necessary-host",
+      "flex-layout.col#strictly-necessary-duration"
+    ]
+  },
+  "flex-layout.col#strictly-necessary-name": {
+    "props": {
+      "blockClass": "strictly-necessary-name-style"
+    },
+    "children": ["rich-text#strictly-necessary-name-text"]
+  },
+  "flex-layout.col#strictly-necessary-host": {
+    "props": {
+      "blockClass": "strictly-necessary-host-style"
+    },
+    "children": ["rich-text#strictly-necessary-host-text"]
+  },
+  "flex-layout.col#strictly-necessary-duration": {
+    "props": {
+      "blockClass": "strictly-necessary-duration-style"
+    },
+    "children": ["rich-text#strictly-necessary-duration-text"]
+  },
+  "rich-text#strictly-necessary-name-text": {
+    "props": {
+      "text": "**Nazwa** \n\n _dc_gtm_UA-xxxxxxxx \n\n eupubconsent \n\n eZSESSID \n\n JSESSIONID \n\n OptanonAlertBoxClosed \n\n OptanonConsent \n\n __cfduid \n\n JSESSIONID \n\n JSESSIONID \n\n __cfduid",
+      "blockClass": "strictly-necessary-name-text-style"
+    }
+  },
+  "rich-text#strictly-necessary-host-text": {
+    "props": {
+      "text": "**Host** \n\n indesit.pl \n\n www.indesit.pl \n\n www.indesit.pl \n\n www.indesit.pl \n\n www.indesit.pl \n\n www.indesit.pl \n\n cookielaw.org \n\n formservice.hotpoint.eu \n\n nr-data.net \n\n onetrust.com",
+      "blockClass": "strictly-necessary-host-text-style"
+    }
+  },
+  "rich-text#strictly-necessary-duration-text": {
+    "props": {
+      "text": "**Czas trwania** \n\n 1 dzień \n\n 365 dni \n\n 8 dni \n\n sesja \n\n 365 dni \n\n 365 dni \n\n 30 dni \n\n sesja \n\n sesja \n\n 1 dzień",
+      "blockClass": "strictly-necessary-duration-text-style"
+    }
+  },
+  //STRICTLY NECESSARY COOKIES TAB END***********************************************
+  "flex-layout.row#cookies-disclaimer-last-content-container": {
+    "props": {
+      "blockClass": "cookies-disclaimer-last-content-container-style"
+    },
+    "children": ["rich-text#cookies-disclaimer-last-content-text"]
+  },
+  "rich-text#cookies-disclaimer-last-content-text": {
+    "props": {
+      "blockClass": "cookies-disclaimer-last-content-text-style",
+      "text": "Większość przeglądarek internetowych jest wstępnie skonfigurowanych do automatycznego akceptowania plików cookie. Można jednak zmienić ustawienia, aby zablokować wysyłanie plików cookie do urządzenia lub umożliwić odbieranie tylko niektórych kategorii. Pamiętaj, że jeśli nawigacja lub funkcjonalne pliki cookie są wyłączone lub usuwane, nie wszystkie funkcje witryny mogą działać zgodnie z przeznaczeniem. Aby zarządzać i wyłączyć obsługę plików cookie, postępuj zgodnie z instrukcjami przedstawionymi w poniższym wykresie. \n <br> <ul> <li class='vtex-rich-text-0-x-ulStyle'>[Internet Explorer](https://support.microsoft.com/pl-pl/windows/usuwanie-plik%C3%B3w-cookie-i-zarz%C4%85dzanie-nimi-168dab11-0753-043d-7c16-ede5947fc64d) </li> \n <li class='vtex-rich-text-0-x-ulStyle'>[Safari](https://support.apple.com/pl-pl/HT201265) </li> \n <li class='vtex-rich-text-0-x-ulStyle'>[Chrome](https://support.google.com/chrome/answer/95647?hl=pl-PL&hlrm=fr&hlrm=pl) </li> \n <li class='vtex-rich-text-0-x-ulStyle'>[Firefox](https://support.mozilla.org/pl/kb/elementy-sledzace-zewnetrznych-witryn) </li> </ul> \n <p class=\"lh-copy vtex-rich-text-0-x-paragraph vtex-rich-text-0-x-paragraph--cookies-disclaimer-last-content-text-style\">**Sygnały nawigacyjne sieci Web** – sygnalizatory sieciowe są niewielkimi elektronicznymi plikami graficznymi, które mogą być osadzone na stronie internetowej lub zawarte w wiadomości e-mail i są zazwyczaj niewidoczne dla ludzkiego oka. Jeśli używasz, nawigatory internetowe (takie jak \"przezroczyste GIF-y\" lub \"piksele śledzące\") mogą nam powiedzieć takie rzeczy, jak: ile osób odwiedza nasze strony internetowe, czy są one jednorazowe, czy też powtarzające się odwiedziny, które strony oglądają i jak długo, jak skutecznie działają niektóre kampanie reklamowe i inne podobne dane o korzystaniu z witryn internetowych. W przypadku używania poczty e-mail, sygnalizatory sieciowe mogą nam poinformować o czasie otwarcia poczty e-mail, o ile i ile razy jej przekazano oraz o kliknięciach łączących użytkowników z wiadomości e-mail. Opierając się na tych informacjach, możemy dostosować treść, produkty, usługi i promocje, aby zapewnić lepsze spełnienie twoich zainteresowań, a także uświadomić cię o produktach, usługach i / lub ofertach specjalnych dotyczących produktów, którymi możesz być zainteresowany. </p> \n\n <br> **Pliki dziennika** – to pliki, które rejestrują aktywność w sieci i zbierają nieosobowe statystyki dotyczące odwiedzin lub korzystania z naszych witryn. Pliki dziennika mogą pomóc w przechwytywaniu między innymi: (i) adresu IP, czyli unikalnego zestawu liczb przypisanego do twojego dostawcy usług internetowych (ISP) (należy pamiętać, że w zależności od dostawcy usług internetowych numer przypisany do twojego komputera może być inny za każdym razem, gdy łączysz się z Internetem); (ii) typu używanej przeglądarki i systemu operacyjnego; oraz (iii) innych informacji dotyczących twojej sesji online, takich jak adres URL, z którego pochodzisz, aby uzyskać dostęp do naszej witryny internetowej oraz datę i godzinę odwiedzin naszej witryny. Oprócz korzystania z tych informacji, aby lepiej zrozumieć, jak wykorzystywane są nasze witryny, możemy wykorzystywać informacje przechwycone za pomocą plików dziennika, takich jak adres IP (wraz z informacjami osobistymi) w celu rozwiązywania problemów technicznych, utrzymania bezpieczeństwa i bezpieczeństwa w internecie oraz, zabronienia lub ograniczenia dostępu do naszych usług online przez niektórych użytkowników. \n\n <br> Zastrzegamy sobie prawo do zmiany lub uaktualnienia niniejszego Ostrzeżenia o Prywatności i Cookie w dowolnym momencie, a wszelkie zmiany, które możemy wprowadzić w przyszłości, zostaną opublikowane na tej stronie. Często sprawdzaj, aby zobaczyć aktualizacje lub zmiany w niniejszym Ostrzeżeniu o prywatności i cookie. Na górze tej strony znajdziesz datę ostatniej aktualizacji. \n\n <br> Kliknij tutaj, aby edytować swoje preferencje. <br>"
+    }
+  },
+  "flex-layout.row#cookies-disclaimer-disclosure-container": {
+    "props": {
+      "blockClass": "cookies-disclaimer-disclosure-container-style"
+    },
+    "children": ["flex-layout.col#cookies-disclaimer-disclosure-container-col"]
+  },
+  "flex-layout.col#cookies-disclaimer-disclosure-container-col": {
+    "props": {
+      "blockClass": "cookies-disclaimer-disclosure-container-col-style"
+    },
+    "children": ["disclosure-layout-group#cookies-disclaimer"]
+  },
+  //DISCLOSURE GROUP
+  "disclosure-layout-group#cookies-disclaimer": {
+    "children": [
+      /*"disclosure-layout#cookies-disclaimer-targeting",*/
+      "disclosure-layout#cookies-disclaimer-functional",
+      "disclosure-layout#cookies-disclaimer-first-party",
+      "disclosure-layout#cookies-disclaimer-strictly-necessary"
+    ],
+    "props": {
+      "blockClass": "disclosure-layout-group"
+    }
+  },
+  //DISCLOSURE LAYOUT
+  /*"disclosure-layout#cookies-disclaimer-targeting": {
+    "children": [
+      "disclosure-trigger#cookies-disclaimer-targeting",
+      "disclosure-content#cookies-disclaimer-targeting"
+    ],
+    "props": {
+      "blockClass": "disclosure-layout-targeting"
+    }
+  },*/
+  "disclosure-layout#cookies-disclaimer-functional": {
+    "children": [
+      "disclosure-trigger#cookies-disclaimer-functional",
+      "disclosure-content#cookies-disclaimer-functional"
+    ],
+    "props": {
+      "blockClass": "disclosure-layout-functional"
+    }
+  },
+  "disclosure-layout#cookies-disclaimer-first-party": {
+    "children": [
+      "disclosure-trigger#cookies-disclaimer-first-party",
+      "disclosure-content#cookies-disclaimer-first-party"
+    ],
+    "props": {
+      "blockClass": "disclosure-layout-first-party"
+    }
+  },
+  "disclosure-layout#cookies-disclaimer-strictly-necessary": {
+    "children": [
+      "disclosure-trigger#cookies-disclaimer-strictly-necessary",
+      "disclosure-content#cookies-disclaimer-strictly-necessary"
+    ],
+    "props": {
+      "blockClass": "disclosure-layout-strictly-necessary"
+    }
+  },
+  //trigger
+  //TARGETING
+  /*"disclosure-trigger#cookies-disclaimer-targeting": {
+    "children": ["flex-layout.row#cookies-disclaimer-targeting-row"],
+    "props": {
+      "blockClass": "disclosure-trigger-targeting"
+    }
+  },
+  "flex-layout.row#cookies-disclaimer-targeting-row": {
+    "props": {
+      "blockClass": "cookies-disclaimer-targeting-row-style"
+    },
+    "children": [
+      "flex-layout.col#cookies-disclaimer-targeting-col-title",
+      "flex-layout.col#cookies-disclaimer-targeting-col-arrow"
+    ]
+  },
+  "flex-layout.col#cookies-disclaimer-targeting-col-title": {
+    "props": {
+      "blockClass": "cookies-disclaimer-targeting-col-style"
+    },
+    "children": ["rich-text#cookies-disclaimer-targeting"]
+  },
+  "flex-layout.col#cookies-disclaimer-targeting-col-arrow": {
+    "props": {
+      "blockClass": "cookies-disclaimer-targeting-col-style"
+    },
+    "children": ["image#arrow-disclosure-mobile"]
+  },*/
+  "image#arrow-disclosure-mobile": {
+    "props": {
+      "src": "assets/arrow-accordion.svg",
+      "blockClass": "arrow-disclosure-mobile-style"
+    }
+  },
+  //FUNCTIONAL
+  "disclosure-trigger#cookies-disclaimer-functional": {
+    "children": ["flex-layout.row#cookies-disclaimer-functional-row"],
+    "props": {
+      "blockClass": "disclosure-trigger-functional"
+    }
+  },
+  "flex-layout.row#cookies-disclaimer-functional-row": {
+    "props": {
+      "blockClass": "cookies-disclaimer-functional-row-style"
+    },
+    "children": [
+      "flex-layout.col#cookies-disclaimer-functional-col-title",
+      "flex-layout.col#cookies-disclaimer-functional-col-arrow"
+    ]
+  },
+  "flex-layout.col#cookies-disclaimer-functional-col-title": {
+    "props": {
+      "blockClass": "cookies-disclaimer-functional-col-style"
+    },
+    "children": ["rich-text#cookies-disclaimer-functional"]
+  },
+  "flex-layout.col#cookies-disclaimer-functional-col-arrow": {
+    "props": {
+      "blockClass": "cookies-disclaimer-functional-col-style"
+    },
+    "children": ["image#arrow-disclosure-mobile"]
+  },
+  //FIRST PARTY
+  "disclosure-trigger#cookies-disclaimer-first-party": {
+    "children": ["flex-layout.row#cookies-disclaimer-first-party-row"],
+    "props": {
+      "blockClass": "disclosure-trigger-first-party"
+    }
+  },
+  "flex-layout.row#cookies-disclaimer-first-party-row": {
+    "props": {
+      "blockClass": "cookies-disclaimer-first-party-row-style"
+    },
+    "children": [
+      "flex-layout.col#cookies-disclaimer-first-party-col-title",
+      "flex-layout.col#cookies-disclaimer-first-party-col-arrow"
+    ]
+  },
+  "flex-layout.col#cookies-disclaimer-first-party-col-title": {
+    "props": {
+      "blockClass": "cookies-disclaimer-first-party-col-style"
+    },
+    "children": ["rich-text#cookies-disclaimer-first-party"]
+  },
+  "flex-layout.col#cookies-disclaimer-first-party-col-arrow": {
+    "props": {
+      "blockClass": "cookies-disclaimer-first-party-col-style"
+    },
+    "children": ["image#arrow-disclosure-mobile"]
+  },
+  //STRICTLY NECESSARY
+  "disclosure-trigger#cookies-disclaimer-strictly-necessary": {
+    "children": ["flex-layout.row#cookies-disclaimer-strictly-necessary-row"],
+    "props": {
+      "blockClass": "disclosure-trigger-strictly-necessary"
+    }
+  },
+  "flex-layout.row#cookies-disclaimer-strictly-necessary-row": {
+    "props": {
+      "blockClass": "cookies-disclaimer-strictly-necessary-row-style"
+    },
+    "children": [
+      "flex-layout.col#cookies-disclaimer-strictly-necessary-col-title",
+      "flex-layout.col#cookies-disclaimer-strictly-necessary-col-arrow"
+    ]
+  },
+  "flex-layout.col#cookies-disclaimer-strictly-necessary-col-title": {
+    "props": {
+      "blockClass": "cookies-disclaimer-strictly-necessary-col-style"
+    },
+    "children": ["rich-text#cookies-disclaimer-strictly-necessary"]
+  },
+  "flex-layout.col#cookies-disclaimer-strictly-necessary-col-arrow": {
+    "props": {
+      "blockClass": "cookies-disclaimer-strictly-necessary-col-style"
+    },
+    "children": ["image#arrow-disclosure-mobile"]
+  },
+  //content
+  /*"disclosure-content#cookies-disclaimer-targeting": {
+    "children": ["flex-layout.row#targeting-cookies-tab-maxi-content"],
+    "props": {
+      "blockClass": "disclosure-content-targeting"
+    }
+  },*/
+  "disclosure-content#cookies-disclaimer-functional": {
+    "children": ["flex-layout.row#functional-cookies-tab-maxi-content"],
+    "props": {
+      "blockClass": "disclosure-content-functional"
+    }
+  },
+  "disclosure-content#cookies-disclaimer-first-party": {
+    "children": ["flex-layout.row#first-party-cookies-tab-maxi-content"],
+    "props": {
+      "blockClass": "disclosure-content-first-party"
+    }
+  },
+  "disclosure-content#cookies-disclaimer-strictly-necessary": {
+    "children": ["flex-layout.row#strictly-necessary-cookies-tab-maxi-content"],
+    "props": {
+      "blockClass": "disclosure-content-strictly-necessary"
+    }
+  },
+  //rich text trigger
+  /*"rich-text#cookies-disclaimer-targeting": {
+    "props": {
+      "blockClass": "cookies-disclaimer-targeting-style",
+      "text": "Cookies pour une publicité ciblée"
+    }
+  },*/
+  "rich-text#cookies-disclaimer-functional": {
+    "props": {
+      "blockClass": "cookies-disclaimer-functional-style",
+      "text": "Funkcjonalne pliki cookie"
+    }
+  },
+  "rich-text#cookies-disclaimer-first-party": {
+    "props": {
+      "blockClass": "cookies-disclaimer-first-party-style",
+      "text": "Pliki cookie do analizy wewnętrznej"
+    }
+  },
+  "rich-text#cookies-disclaimer-strictly-necessary": {
+    "props": {
+      "blockClass": "cookies-disclaimer-strictly-necessary-style",
+      "text": "Ściśle niezbędne pliki cookie"
+    }
+  }
+}

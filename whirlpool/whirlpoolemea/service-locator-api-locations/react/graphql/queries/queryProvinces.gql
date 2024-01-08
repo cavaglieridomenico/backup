@@ -1,0 +1,13 @@
+query getSLProvinces($brand: String!, $country: String!, $locale: String!, $country_id: String!, $region: String!) {
+    getSLProvinces(brand: $brand, country: $country, locale: $locale, country_id: $country_id, region: $region) @context(provider:"whirlpoolemea.service-locator-api-locations") { 
+        locations{
+            count
+            results{
+                id
+                label
+                slug
+                parent_label
+            }
+        }
+    }
+}

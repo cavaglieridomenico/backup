@@ -1,0 +1,129 @@
+query productReviews(
+  $sort: String!
+  $filter: Int
+  $offset: Int
+  $pageId: String
+  $quantity: Int
+) {
+  productReviews(
+    sort: $sort
+    offset: $offset
+    pageId: $pageId
+    filter: $filter
+    quantity: $quantity
+  ) @context(provider: "bauknechtde.custom-bazaarvoice-whirlpool") {
+    Limit
+    Offset
+    TotalResults
+    Results {
+      Id
+      Rating
+      TotalCommentCount
+      IsRatingsOnly
+      TotalFeedbackCount
+      IsRecommended
+      IsSyndicated
+      SecondaryRatingsOrder
+      UserNickname
+      UserLocation
+      SubmissionTime
+      Title
+      ReviewText
+      ProductId
+      TotalNegativeFeedbackCount
+      TotalPositiveFeedbackCount
+      ContextDataValues {
+        Age {
+          Value
+          Id
+          ValueLabel
+          DimensionLabel
+        }
+        Gender {
+          Value
+          Id
+          ValueLabel
+          DimensionLabel
+        }
+      }
+      SecondaryRatings {
+        Value
+        Id
+        ValueRange
+        ValueLabel
+        MinLabel
+        Label
+        DisplayType
+        MaxLabel
+      }
+      TagDimensions {
+        Pros {
+          Values
+          Id
+          Label
+        }
+        Cons {
+          Values
+          Id
+          Label
+        }
+      }
+      Photos {
+        Sizes {
+          normal {
+            Url
+          }
+          thumbnail {
+            Url
+          }
+        }
+      }
+      ClientResponses {
+        Department
+        Response
+        ResponseType
+        ResponseSource
+        Name
+        Date
+      }
+      BadgesOrder
+      SyndicationSource {
+        ClientId
+        ContentLink
+        LogoImageUrl
+        Name
+      }
+    }
+    Includes {
+      AllProducts {
+        ProductId
+        Name
+      }
+      Products {
+        ReviewStatistics {
+          IncentivizedReviewCount
+          TotalReviewCount
+          AverageOverallRating
+          RatingDistribution {
+            RatingValue
+            Count
+          }
+          AverageLocalRating
+          LocalRatingDistribution {
+            RatingValue
+            Count
+          }
+          SecondaryRatingsAverages {
+            AverageRating
+            Id
+            ValueRange
+            MinLabel
+            Label
+            DisplayType
+            MaxLabel
+          }
+        }
+      }
+    }
+  }
+}

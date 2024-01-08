@@ -1,0 +1,181 @@
+{
+  "store.custom#profiling-thank-you-page": {
+    "blocks": [
+      "crm-profiling"
+    ]
+  },
+  "crm-profiling": {
+    "children": [
+      "flex-layout.row#profiling-title",
+      "flex-layout.row#profiling-content"
+    ]
+  },
+  // CRM PROFILING TITLTE
+  "flex-layout.row#profiling-title": {
+    "title": "[ROW] - Profiling Title",
+    "children": [
+      "rich-text#profiling-content-title"
+    ],
+    "props": {
+      "fullWidth": true,
+      "horizontalAlign": "center",
+      "blockClass": [
+        "profilingTitle"
+      ]
+    }
+  },
+  "rich-text#profiling-content-title": {
+    "title": "[RICH TEXT] - Profiling Title",
+    "props": {
+      "text": "# Thanks, you have opted into profiling\n\nYour decision to share your preferences and interests with us allows us to tailor our content and services to better meet your needs.",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": [
+        "profilingTitle"
+      ]
+    }
+  },
+  // CRM PROFILING CONTENT
+  "flex-layout.row#profiling-content": {
+    "title": "[ROW] - Profiling Content",
+    "children": [
+      "flex-layout.col#profiling-content"
+    ],
+    "props": {
+      "blockClass": "profilingContent"
+    }
+  },
+  "flex-layout.col#profiling-content": {
+    "title": "[COL] - Profiling Content",
+    "children": [
+      "flex-layout.row#profiling-content-first-part",
+      "flex-layout.row#profiling-content-second-part"
+    ],
+    "props": {
+      "rowGap": 6,
+      "blockClass": "profilingContent"
+    }
+  },
+  // FIRST PART
+  "flex-layout.row#profiling-content-first-part": {
+    "title": "[ROW] - Profiling Content First Part",
+    "children": [
+      "rich-text#profiling-content-first-part",
+      "image#profiling-content-first-part"
+    ],
+    "props": {
+      "blockClass": [
+        "profilingContentPart",
+        "profilingContentFirstPart"
+      ]
+    }
+  },
+  "rich-text#profiling-content-first-part": {
+    "title": "[RICH TEXT] - Profiling Content First Part",
+    "props": {
+      "text": "Your partecipation in profiling is essential to our continued success in providing a personalised and enjoable experience on our website. We understand that your time is valuable, and we are grateful for the trust you have placed in us.\n\nOnce again, thank you for opting into profiling on our website. We look forward to continuing to provide you with high-quality content and services that meet your unique needs and interests.",
+      "blockClass": [
+        "profilingContentPart",
+        "profilingContentFirstPart"
+      ]
+    }
+  },
+  "image#profiling-content-first-part": {
+    "title": "[IMAGE] - Profiling Content First Part",
+    "props": {
+      "src": "arquivos/sm.jpg",
+      "blockClass": [
+        "profilingContentPart",
+        "profilingContentFirstPart"
+      ]
+    }
+  },
+  // SECOND PART
+  "flex-layout.row#profiling-content-second-part": {
+    "title": "[ROW] - Profiling Content Second Part",
+    "children": [
+      "flex-layout.col#profiling-content-second-part"
+    ],
+    "props": {
+      "blockClass": [
+        "profilingContentPart",
+        "profilingContentSecondPart"
+      ]
+    }
+  },
+  "flex-layout.col#profiling-content-second-part": {
+    "title": "[COL] - Profiling Content Second Part",
+    "children": [
+      "rich-text#profiling-content-second-part-title",
+      "rich-text#profiling-content-second-part-subtitle",
+      "flex-layout.row#profiling-content-second-part-categories"
+    ],
+    "props": {
+      "blockClass": [
+        "profilingContentPart",
+        "profilingContentSecondPart"
+      ]
+    }
+  },
+  "rich-text#profiling-content-second-part-title": {
+    "title": "[RICH TEXT] - Profiling Content Second Part Title",
+    "props": {
+      "text": "### Where to next? Need help finding a product?",
+      "blockClass": [
+        "profilingContentSecondPartTitle"
+      ]
+    }
+  },
+  "rich-text#profiling-content-second-part-subtitle": {
+    "title": "[RICH TEXT] - Profiling Content Second Part Subtitle",
+    "props": {
+      "text": "##### Popular Categories",
+      "blockClass": [
+        "profilingContentSecondPartSubtitle"
+      ]
+    }
+  },
+  "flex-layout.row#profiling-content-second-part-categories": {
+    "title": "[ROW] - Profiling Content Second Part Categories",
+    "children": [
+      "flex-layout.col#profiling-content-second-part-categories-left",
+      "flex-layout.col#profiling-content-second-part-categories-right"
+    ],
+    "props": {
+      // "colGap": 4,
+      "blockClass": "profilingContentSecondPartCategories"
+    }
+  },
+  "flex-layout.col#profiling-content-second-part-categories-left": {
+    "title": "[COL] - Profiling Content Second Part Categories",
+    "children": [
+      "link#category-washing-machines",
+      "link#category-fridge-freezers",
+      "link#category-ovens",
+      "link#category-dishwashers"
+    ],
+    "props": {
+      "paddingRight": 4,
+      "blockClass": [
+        "profilingContentSecondPartCategories",
+        "profilingContentSecondPartCategoriesLeft"
+      ]
+    }
+  },
+  "flex-layout.col#profiling-content-second-part-categories-right": {
+    "title": "[COL] - Profiling Content Second Part Categories",
+    "children": [
+      "link#category-cookers",
+      "link#category-tumble-dryers",
+      "link#category-hobs",
+      "link#category-freezers"
+    ],
+    "props": {
+      "paddingLeft": 4,
+      "blockClass": [
+        "profilingContentSecondPartCategories",
+        "profilingContentSecondPartCategoriesRight"
+      ]
+    }
+  }
+}

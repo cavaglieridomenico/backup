@@ -1,0 +1,612 @@
+{
+  "store.home": {
+    "blocks": [
+      "toggle-layout#HPFirstRow",
+      "flex-layout.row#halfSpace",
+      "responsive-layout.desktop#desktopBanner",
+      "mdamenu",
+      "flex-layout.row#halfSpace",
+      "responsive-layout.mobile#mobileBanner",
+      "responsive-layout.desktop#productSlidersHP",
+      "responsive-layout.mobile#productSlidersHP"
+    ]
+  },
+  "mdamenu#asd": {
+    "title": "[CUSTOM] Category Menu"
+  },
+  "responsive-layout.desktop#desktopBanner": {
+    "title": "[DESKTOP] Home Carousel 1",
+    "children": [
+      "toggle-layout#bannerSliderHome"
+    ]
+  },
+  "toggle-layout#bannerSliderHome": {
+    "title": "[TOGGLE] Home Carousel 1",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "analytics-wrapper-frcc#slider-top"
+    ]
+  },
+  "analytics-wrapper-frcc#slider-top": {
+    "title": "Analtics Wrapper Slider Top",
+    "props": {
+      "isHpSlider": true,
+      "propsAnalytics": {
+        "analyticsProperties": "provide",
+        "nameEvent": "slider_click",
+        "name": "sliderClick",
+        "data": [
+          {}
+        ]
+      },
+      "redeemPropsItem": [
+        {
+          "action": "Event Description",
+          "label": "Event Label",
+          "buttonHref": ""
+        },
+        {
+          "action": "Event Description",
+          "label": "Event Label",
+          "buttonHref": "accessoires"
+        },
+        {
+          "action": "Event Description",
+          "label": "Event Label",
+          "buttonHref": "produits/cuisson/fours"
+        },
+        {
+          "action": "Event Description",
+          "label": "Event Label",
+          "buttonHref": "produits/lavage/lave-linge"
+        }
+      ]
+    },
+    "children": [
+      // "slider-layout#bannerHome"
+      "list-context.info-card-list#homeBannersTop"
+    ]
+  },
+  "list-context.info-card-list#homeBannersTop": {
+    "title": "Info Cards List - Slider Banner Home",
+    "props": {
+      "infoCards": [
+        {
+          "id": "hero-banner-main-1",
+          "isFullModeStyle": false,
+          "textPosition": "left",
+          "imageUrl": "https://frccwhirlpool.vtexassets.com/assets/vtex.file-manager-graphql/images/d92a7578-d244-444d-bcce-f48ca48280d3___d18a452b9ee7d860b070b687d3d38279.jpg",
+          "headline": "# Les Soldes sont arrivées",
+          "subhead": "Profitez de -15% de réduction sur tous nos produits* avec le code **SOLDES15** à ajouter à votre panier ! \n\n *hors catégorie froid",
+          "textMode": "rich-text",
+          "callToActionMode": "none",
+          "blockClass": "heroBannerHomeTop",
+          "textAlignment": "left"
+        },
+        {
+          "id": "hero-banner-main-2",
+          "isFullModeStyle": false,
+          "textPosition": "left",
+          "imageUrl": "https://frccwhirlpool.vtexassets.com/assets/vtex.file-manager-graphql/images/ab6401ee-1dd9-471e-a608-e21ab28daa2d___a07ea4e1ba7b583f970101392e2b39d2.jpg",
+          "imageActionUrl": "accessoires",
+          "headline": "# Accessoires WPRO",
+          "subhead": "Prenez soin de vos appareils électroménagers avec tous nos accessoires WPRO !",
+          "textMode": "rich-text",
+          "callToActionText": "Acheter",
+          "callToActionUrl": "accessoires",
+          "blockClass": "heroBannerHomeTop",
+          "textAlignment": "left"
+        },
+        {
+          "id": "hero-banner-main-3",
+          "isFullModeStyle": false,
+          "textPosition": "left",
+          "imageUrl": "https://frccwhirlpool.vtexassets.com/assets/vtex.file-manager-graphql/images/450dff15-0c90-4171-9042-61d9fb04d750___3cb56c95fd952148f36bdb3307d6266d.jpg",
+          "imageActionUrl": "produits/cuisson/fours",
+          "headline": "# Nos offres sur les fours",
+          "subhead": "Profitez de nos prix attractifs sur toute **notre gamme de fours** !",
+          "textMode": "rich-text",
+          "callToActionText": "Acheter",
+          "callToActionUrl": "produits/cuisson/fours",
+          "blockClass": "heroBannerHomeTop",
+          "textAlignment": "left"
+        },
+        {
+          "id": "hero-banner-main-4",
+          "isFullModeStyle": false,
+          "textPosition": "left",
+          "imageUrl": "https://frccwhirlpool.vtexassets.com/assets/vtex.file-manager-graphql/images/770fb81a-fa38-4ddd-b40e-cacb5eb75118___1c6a120d92656025639b9d9a771fa5f2.jpg",
+          "imageActionUrl": "produits/lavage/lave-linge",
+          "headline": "# Nos offres sur les laves-linge",
+          "subhead": "Profitez de nos prix attractifs sur toute **notre gamme de laves-linge** !",
+          "textMode": "rich-text",
+          "callToActionText": "Acheter",
+          "callToActionUrl": "produits/lavage/lave-linge",
+          "blockClass": "heroBannerHomeTop",
+          "textAlignment": "left"
+        }
+      ]
+    },
+    "children": [
+      "slider-layout#bannerHome"
+    ]
+  },
+  "slider-layout#bannerHome": {
+    "title": "[SLIDER] Home Carousel 1",
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "autoplay": {
+        "timeout": 3000,
+        "stopOnHover": false
+      },
+      "infinite": true,
+      "showPaginationDots": "mobileOnly",
+      "showNavigationArrows": "desktopOnly",
+      "blockClass": "imageCarousel"
+    }
+    // "children": [
+    //   "flex-layout.row#bannerWithPostillaHome1",
+    //   "flex-layout.row#bannerWithPostillaHome2",
+    //   "flex-layout.row#bannerWithPostillaHome3",
+    //   "flex-layout.row#bannerWithPostillaHome4"
+    // ]
+  },
+  "flex-layout.row#bannerWithPostillaHome1": {
+    "title": "[ROW] Banner 1",
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": [
+        "columnPostillaBannerAntonio",
+        "bgColorAntonioHero"
+      ]
+    },
+    "children": [
+      "flex-layout.col#leftPartPostilla",
+      "flex-layout.col#rightPartPostilla"
+    ]
+  },
+  "flex-layout.row#bannerWithPostillaHome2": {
+    "title": "[ROW] Banner 2",
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": [
+        "columnPostillaBannerAntonio",
+        "bgColorAntonioHero"
+      ]
+    },
+    "children": [
+      "flex-layout.col#leftPartPostilla",
+      "flex-layout.col#rightPartPostilla"
+    ]
+  },
+  "flex-layout.row#bannerWithPostillaHome3": {
+    "title": "[ROW] Banner 3",
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": [
+        "columnPostillaBannerAntonio",
+        "bgColorAntonioHero"
+      ]
+    },
+    "children": [
+      "flex-layout.col#leftPartPostilla",
+      "flex-layout.col#rightPartPostilla"
+    ]
+  },
+  "flex-layout.row#bannerWithPostillaHome4": {
+    "title": "[ROW] Banner 4",
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": [
+        "columnPostillaBannerAntonio",
+        "bgColorAntonioHero"
+      ]
+    },
+    "children": [
+      "flex-layout.col#leftPartPostilla",
+      "flex-layout.col#rightPartPostilla"
+    ]
+  },
+  "responsive-layout.mobile#mobileBanner": {
+    "title": "[MOBILE] Home Carousel 3",
+    "children": [
+      "toggle-layout#bannerArrowDots"
+    ]
+  },
+  "toggle-layout#bannerArrowDots": {
+    "title": "[TOGGLE] Home Carousel 3",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      // "list-context.image-list#bannerArrowsDots",
+      "analytics-wrapper-frcc#slider-top-mobile",
+      "flex-layout.row#halfSpace"
+    ]
+  },
+  "analytics-wrapper-frcc#slider-top-mobile": {
+    "title": "Analtics Wrapper Slider Top",
+    "props": {
+      "isHpSlider": true,
+      "propsAnalytics": {
+        "analyticsProperties": "provide",
+        "nameEvent": "slider_click",
+        "name": "sliderClick",
+        "data": [
+          {}
+        ]
+      },
+      "redeemPropsItem": [
+        {
+          "action": "Event Description",
+          "label": "Event Label",
+          "buttonHref": ""
+        }
+      ]
+    },
+    "children": [
+      "list-context.image-list#bannerArrowsDots"
+    ]
+  },
+  "list-context.image-list#bannerArrowsDots": {
+    "title": "[LIST] Home Carousel 3",
+    "children": [
+      "slider-layout#bannerArrowsDots"
+    ],
+    "props": {
+      "images": [
+        {
+          "image": "https://frccwhirlpool.vtexassets.com/assets/vtex.file-manager-graphql/images/d740b8f2-8e7f-45a9-a146-4ab0411fdced___650c0baa4bdde82ced8f5b916c657bc4.jpg"
+        }
+        // {
+        //   "image": "https://assets.wpsandwatch.com/storage/images/_aliases/original_compressed/4/8/9/1/12071984-1-ita-IT/Gallery2_D.jpg",
+        //   "description": "something something"
+        // },
+        // {
+        //   "image": "https://assets.wpsandwatch.com/storage/images/_aliases/original_compressed/0/0/9/3/12073900-1-ita-IT/Gallery3_D.jpg",
+        //   "description": "something something"
+        // }
+      ]
+    }
+  },
+  "slider-layout#bannerArrowsDots": {
+    "title": "[SLIDER] Home Banner 3",
+    "props": {
+      "blockClass": "sliderWBannerArrowsDots",
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "autoplay": {
+        "timeout": 3000,
+        "stopOnHover": false
+      },
+      "infinite": true,
+      "fullWidtht": false,
+      "showPaginationDots": "desktopOnly",
+      "showNavigationArrows": "mobileOnly"
+    }
+  },
+  "toggle-layout#HPFirstRow": {
+    "title": "[TOGGLE] Home Carousel 1",
+    "children": [
+      "flex-layout.row#HPFirstRow"
+    ]
+  },
+  "flex-layout.row#HPFirstRow": {
+    "title": "[ROW] Home Banner 1",
+    "children": [
+      "flex-layout.col#ImageSlider",
+      "flex-layout.col#ProductOfDay"
+    ],
+    "props": {
+      "blockClass": "HPFirstRow"
+    }
+  },
+  "toggle-layout#ImageSlider": {
+    "title": "[TOGGLE] Home Banner 1",
+    "children": [
+      "flex-layout.col#ImageSlider"
+    ]
+  },
+  "toggle-layout#ProductOfDay": {
+    "title": "[TOGGLE] Product of Day",
+    "children": [
+      "flex-layout.col#ProductOfDay"
+    ]
+  },
+  "flex-layout.col#ImageSlider": {
+    "title": "[COL] Home Banner 1",
+    "children": [
+      "list-context.image-list#image-slider-hp"
+    ],
+    "props": {
+      "blockClass": "ImageSliderCol",
+      "width": "69%"
+    }
+  },
+  "list-context.image-list#image-slider-hp": {
+    "title": "[LIST] Home Carousel 1",
+    "children": [
+      "slider-layout#carousel-images"
+    ],
+    "props": {
+      "preload": true,
+      "blockClass": "productsCarousel",
+      "images": [
+        {
+          "image": "assets/bannerHp/lavatriceBanner.png",
+          "description": "something something",
+          "mobileImage": ""
+        }
+      ]
+    }
+  },
+  "slider-layout#carousel-images": {
+    "title": "[SLIDER] Carousel Images Home Desktop",
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "fullWidth": false,
+      "showNavigationArrows": "desktopOnly",
+      "showPaginationDots": "always",
+      "blockClass": [
+        "carousel",
+        "carouselHp",
+        "mainCarouselHP"
+      ]
+    }
+  },
+  "flex-layout.col#ProductOfDay": {
+    "title": "[COL] Product of Day",
+    "children": [
+      "list-context.product-list#shelf1Block"
+    ],
+    "props": {
+      "blockClass": "ProductOfDayCol",
+      "width": "29%"
+    }
+  },
+  "list-context.product-list#shelf1Block": {
+    "title": "[LIST] Shelf",
+    "blocks": [
+      "product-summary.shelf#hpslider"
+    ],
+    "children": [
+      "rich-text#titoloMobile1shelf",
+      "slider-layout#shelf1Block"
+    ],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC",
+      "collection": "137"
+    }
+  },
+  "rich-text#titoloMobile1shelf": {
+    "title": "[TEXT] Product of Day",
+    "props": {
+      "text": "Produit du jour",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": [
+        "titoloMobile1shelf"
+      ]
+    }
+  },
+  "slider-layout#shelf1Block": {
+    "title": "[SLIDER] Shelf",
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 2,
+        "phone": 2
+      },
+      "infinite": false,
+      "showPaginationDots": "desktopOnly",
+      "showNavigationArrows": "desktopOnly",
+      "fullWidth": false,
+      "blockClass": [
+        "shelf",
+        "productDayShelf"
+      ]
+    }
+  },
+  //---------------------//
+  "info-card#home": {
+    "props": {
+      "id": "info-card-wcollection",
+      "isFullModeStyle": true,
+      "textPosition": "center",
+      "textAlignment": "center",
+      "imageUrl": "assets/bannerHp/image4.png",
+      "headline": "W-COLLECTION",
+      "subhead": "Оцените возможности  «умного» приготовления пищи с технологией 6th SENSE**",
+      "callToActionMode": "none"
+    }
+  },
+  /*----------- HP Product Sliders ----------*/
+  "responsive-layout.desktop#productSlidersHP": {
+    "title": "[DESKTOP] Home Product Sliders",
+    "children": [
+      "toggle-layout#HPFirstProductSlider",
+      "toggle-layout#HPSecondProductSlider"
+    ]
+  },
+  "toggle-layout#HPFirstProductSlider": {
+    "title": "[TOGGLE] Home Product Slider 1",
+    "children": [
+      "flex-layout.row#HPFirstProductSlider"
+    ]
+  },
+  "toggle-layout#HPSecondProductSlider": {
+    "title": "[TOGGLE] Home Product Slider 2",
+    "children": [
+      "flex-layout.row#HPFirstProductSlider"
+    ]
+  },
+  "flex-layout.row#HPFirstProductSlider": {
+    "title": "[ROW] Home Product Slider",
+    "children": [
+      "flex-layout.col#ProductSliderBanner",
+      "flex-layout.col#ProductSliderProducts"
+    ],
+    "props": {
+      "blockClass": "HPFirstProductSlider"
+    }
+  },
+  "flex-layout.col#ProductSliderBanner": {
+    "title": "[COL] Product Slider Banner",
+    "children": [
+      "info-card#wCollectionHome"
+    ],
+    "props": {
+      "blockClass": "ProductSliderBanner",
+      "width": "19%"
+    }
+  },
+  "info-card#wCollectionHome": {
+    "title": "[INFO] wCollectionHome 1",
+    "props": {
+      "id": "info-card-wcollection",
+      "isFullModeStyle": true,
+      "textPosition": "center",
+      "textAlignment": "center",
+      "imageUrl": "assets/bannerHp/image4.png",
+      "mobileImageUrl": "assets/bannerHp/image4.png",
+      "headline": "",
+      "subhead": "",
+      "callToActionMode": "none",
+      "blockClass": "wcollectionCardhp"
+    }
+  },
+  "info-card#wCollectionHome2": {
+    "title": "[INFO] wCollectionHome 2",
+    "props": {
+      "id": "info-card-wcollection",
+      "isFullModeStyle": true,
+      "textPosition": "center",
+      "textAlignment": "center",
+      "imageUrl": "assets/bannerHp/image4.png",
+      "mobileImageUrl": "assets/bannerHp/image4.png",
+      "headline": "",
+      "subhead": "",
+      "callToActionMode": "none",
+      "blockClass": "wcollectionCardhp"
+    }
+  },
+  "flex-layout.col#ProductSliderProducts": {
+    "title": "[COL] Product Slider",
+    "children": [
+      "flex-layout.row#titleShowAll",
+      "list-context.product-list#shelfBlockProductCollection1"
+    ],
+    "props": {
+      "blockClass": "ProductSliderProducts",
+      "width": "79%"
+    }
+  },
+  "flex-layout.row#titleShowAll": {
+    "title": "[ROW] Product Sliders",
+    "children": [
+      "rich-text#firstCaruselhp",
+      "link#firstCaruselhpAll"
+    ],
+    "props": {
+      "blockClass": "newProducts--row"
+    }
+  },
+  "rich-text#firstCaruselhp": {
+    "props": {
+      "text": "### Nouveaux articles",
+      "blockClass": "titleNew"
+    }
+  },
+  "link#firstCaruselhpAll": {
+    "props": {
+      "label": "voir tout",
+      "href": "/catalog/novinki",
+      "blockClass": "linkSeeAll"
+    }
+  },
+  "list-context.product-list#shelfBlockProductCollection1": {
+    "blocks": [
+      "product-summary.shelf"
+    ],
+    "children": [
+      "slider-layout#bottomHp"
+    ],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC",
+      "collection": "137"
+    }
+  },
+  "slider-layout#bottomHp": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 4,
+        "tablet": 2,
+        "phone": 1
+      },
+      "infinite": true,
+      "fullWidth": false,
+      // "showNavigationArrows": "desktopOnly",
+      "blockClass": "shelfBottom",
+      "showPaginationDots": "never"
+    }
+  },
+  "responsive-layout.mobile#productSlidersHP": {
+    "title": "[MOBILE] wCollectionHome 1",
+    "children": [
+      "toggle-layout#HPFirstProductSliderMobile",
+      "toggle-layout#HPSecondProductSliderMobile",
+      "toggle-layout#HPThirdBannerSliderMobile"
+    ]
+  },
+  "toggle-layout#HPFirstProductSliderMobile": {
+    "title": "[TOGGLE] wCollectionHome 1",
+    "children": [
+      "flex-layout.row#ProductSliderProducts"
+    ]
+  },
+  "toggle-layout#HPSecondProductSliderMobile": {
+    "title": "[TOGGLE] wCollectionHome 2",
+    "children": [
+      "flex-layout.row#ProductSliderProducts"
+    ]
+  },
+  "flex-layout.row#ProductSliderProducts": {
+    "title": "[ROW] Product Slider",
+    "children": [
+      "flex-layout.col#ProductSliderProducts"
+    ],
+    "props": {
+      "blockClass": "ProductSliderProductsRow"
+    }
+  },
+  "toggle-layout#HPThirdBannerSliderMobile": {
+    "title": "[TOGGLE] wCollectionHome 3",
+    "children": [
+      "flex-layout.row#HPThirdBannerSliderMobile"
+    ]
+  },
+  "flex-layout.row#HPThirdBannerSliderMobile": {
+    "title": "[ROW] wCollectionHome 3",
+    "children": [
+      "info-card#wCollectionHome",
+      "info-card#wCollectionHome2"
+    ],
+    "props": {
+      "blockClass": "ProductSliderProductsRow"
+    }
+  }
+}

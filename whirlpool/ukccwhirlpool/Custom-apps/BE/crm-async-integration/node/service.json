@@ -1,0 +1,53 @@
+{
+  "memory": 256,
+  "ttl": 10,
+  "timeout": 60,
+  "minReplicas": 2,
+  "maxReplicas": 4,
+  "workers": 1,
+  "events":{
+    "fetchDataFromCRM":{
+      "keys": ["fetch-user-data-from-crm"]
+    },
+    "recoverPlan":{
+      "keys": ["crm-recover-plan"]
+    },
+    "newsletterSubscription":{
+      "keys": ["crm-newsletter-subscription"]
+    },
+    "newOrder": {
+      "sender": "vtex.orders-broadcast",
+      "topics": ["order-created"]
+    }
+  },
+  "routes": {
+    "ping": {
+      "path": "/app/crm-async-integration/ping",
+      "public": true
+    },
+    "notificationHandler":{
+      "path": "/app/crm-async-integration/notify",
+      "public": true
+    },
+    "setCrmBpId":{
+      "path": "/app/crm-async-integration/vtex/crmbpid",
+      "public": true
+    },
+    "getUserDataFromVtex":{
+      "path": "/app/crm-async-integration/vtex/user",
+      "public": true
+    },
+    "getUserDataFromCRM":{
+      "path": "/app/crm-async-integration/crm/user",
+      "public": true
+    },
+    "eppExportHandler":{
+      "path": "/app/crm-async-integration/epp",
+      "public": true
+    },
+    "guestUserRegistration":{
+      "path": "/app/crm-async-integration/crm/guest/:orderId",
+      "public": true
+    }
+  }
+}

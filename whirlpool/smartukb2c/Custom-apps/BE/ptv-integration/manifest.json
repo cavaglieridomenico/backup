@@ -1,0 +1,74 @@
+{
+  "name": "ptv-integration",
+  "vendor": "smartukb2c",
+  "version": "0.0.8",
+  "title": "PTV Integration",
+  "description": "PTV-Integration",
+  "mustUpdateAt": "2018-01-04",
+  "categories": [],
+  "dependencies": {},
+  "builders": {
+    "node": "6.x",
+    "docs": "0.x"
+  },
+  "scripts": {
+    "prereleasy": "bash lint.sh"
+  },
+  "credentialType": "absolute",
+  "policies": [
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "httpstat.us",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "emeaservicesq.cert.whirlpool.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "emeaservices.cert.whirlpool.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "colossus-fire-event"
+    },
+    {
+      "name": "colossus-write-logs"
+    }
+  ],
+  "settingsSchema": {
+    "title": "PTV Integrations",
+    "type": "object",
+    "properties": {
+      "productionMode": {
+        "title": "Production Mode",
+        "type": "boolean"
+      },
+      "ptvUrlTest": {
+        "title": "PTV URL Test",
+        "type": "string"
+      },
+      "ptvUrlProd": {
+        "title": "PTV URL Production",
+        "type": "string"
+      },
+      "ptvUsername": {
+        "title": "PTV Username",
+        "type": "string"
+      },
+      "ptvPassword": {
+        "title": "PTV Password",
+        "type": "string"
+      }
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

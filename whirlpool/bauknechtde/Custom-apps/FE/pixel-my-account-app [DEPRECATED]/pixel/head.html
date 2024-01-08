@@ -1,0 +1,148 @@
+<!-- My account gdpr-->
+<script type="text/javascript">
+  (function () {
+    var pushState = history.pushState;
+    var replaceState = history.replaceState;
+
+    history.pushState = function () {
+      pushState.apply(history, arguments);
+      window.dispatchEvent(new Event("pushstate"));
+      window.dispatchEvent(new Event("locationchange"));
+    };
+
+    history.replaceState = function () {
+      replaceState.apply(history, arguments);
+      window.dispatchEvent(new Event("replacestate"));
+      window.dispatchEvent(new Event("locationchange"));
+    };
+
+    window.addEventListener("popstate", function () {
+      window.dispatchEvent(new Event("locationchange"));
+    });
+
+    window.addEventListener("resize", function () {
+      window.dispatchEvent(new Event("locationchange"));
+    });
+
+    window.addEventListener("load", function () {
+      window.dispatchEvent(new Event("locationchange"));
+    });
+  })();
+
+  window.addEventListener("locationchange", function () {
+    /*  if (window.location.href.includes("product-comparison")) {
+      waitForEl(".vtex-product-comparison-0-x-title", () => {
+        /*  const elements = document.getElementsByTagName("span");
+        [...elements].forEach(
+          (span) =>
+            span.innerHTML.includes("Bullet") && span.style.display = "none"
+        );
+        console.log("ELEMENTS------", elements);
+        debugger;
+        for (const elem of document.getElementsByTagName("span")) {
+          if (elem.innerHTML.includes("Bullet")) {
+            elem.style.display = "none";
+          }
+        }
+      });
+    } */
+    if (window.location.href.indexOf("account") > 0) {
+      setInterval(() => {
+        waitForEl(".vtex-styleguide-9-x-scrollBar", function () {
+          document.getElementsByClassName(
+            "vtex-styleguide-9-x-scrollBar"
+          )[0].children[0].style.padding = 0;
+          if (window.innerWidth <= 368) {
+            document.getElementsByClassName(
+              "vtex-modal__close-icon"
+            )[0].style.margin = 0;
+          }
+        });
+      }, 500);
+    }
+    if (
+      (window.location.href.indexOf("account") > 0 &&
+        window.location.hash &&
+        window.location.hash == "#/profile") ||
+      window.location.href.includes("?success=true")
+    ) {
+      waitForEl(".vtex-my-account-1-x-newsletterContainerMessage", function () {
+        document.querySelector(
+          ".vtex-my-account-1-x-newsletterContainerMessage"
+        ).textContent = "Ich verstehe und bestätige den Inhalt der ";
+        let optin = document.createElement("div");
+        optin.innerHTML =
+          '<a class=\'vtex-rich-text-0-x-link vtex-rich-text-0-x-link--spaziature-impaginazione vtex-rich-text-0-x-link--paragraph-text-page\' href="/pagine/informativa-sulla-privacy" target="_blank">Datenschutzerklärung</a> und:' +
+          "<br />" +
+          "<p>Ich stimme zu, personalisierte Werbemitteilungen in Bezug auf Bauknecht und andere Marken der Whirlpool Corporation zu erhalten.</p>";
+        document
+          .querySelector(".vtex-my-account-1-x-newsletterContainerMessage")
+          .appendChild(optin);
+        document.querySelector("label[for='newsletterOptIn']").textContent =
+          "Ich stimme zu";
+      });
+
+      waitForEl("#newsletterOptIn", function () {
+        const checkbox = document.getElementById("newsletterOptIn");
+
+        checkbox.addEventListener("change", (event) => {
+          event.stopPropagation();
+          event.stopImmediatePropagation();
+          let dataLayer = window.dataLayer || [];
+          if (event.currentTarget.checked) {
+            dataLayer.push({
+              event: "optin",
+            });
+          }
+        });
+      });
+    }
+  });
+
+  window.addEventListener("load", function () {
+    const buttonProduct = document.getElementsByClassName(
+      "vtex-product-comparison-0-x-compareProductButtonWrapper"
+    );
+    waitForEl(
+      ".vtex-product-comparison-0-x-compareProductButtonWrapper",
+      function () {
+        buttonProduct[0].children[0].addEventListener("click", function () {
+          window.location = "/produktvergleich";
+        });
+      }
+    );
+  });
+
+  function setEventiListener(element, type, callback) {
+    let listOfElements = document.querySelectorAll(element);
+    if (listOfElements && listOfElements.length > 0) {
+      listOfElements.forEach((e) => {
+        e.addEventListener(type, callback);
+      });
+      return;
+    } else {
+      setTimeout(() => setEventiListener(element, type, callback), 250);
+    }
+  }
+
+  setEventiListener(".vtex-address-form__state input", "focus", (event) => {
+    document
+      .querySelector(".vtex-address-form__state input")
+      .attr("maxLength", 2);
+  });
+
+  var waitForEl = function (selector, callback) {
+    let element = document.querySelector(selector);
+    if (
+      element &&
+      (window.getComputedStyle(element).visibility == "visible" ||
+        document.querySelector(selector).length > 0)
+    ) {
+      callback();
+    } else {
+      setTimeout(function () {
+        waitForEl(selector, callback);
+      }, 100);
+    }
+  };
+</script>

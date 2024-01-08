@@ -1,0 +1,286 @@
+.section--deliveryInfo .productList,
+.section--deliveryInfo .packageHeader--delivery {
+  display: none;
+}
+.section--deliveryInfo--deliveryInfo .productList--deliveryInfo {
+  display: none; /* not working anymore, dunno why..*/
+}
+.section--deliveryInfo {
+  border: none;
+}
+.section--deliveryInfo .package--delivery {
+  margin: 0;
+}
+.packageHeaderColumn {
+  font-family: "myriadLight";
+  margin: 0;
+  color: #505050;
+}
+.section--deliveryPackages .packageHeaderColumn {
+  display: none;
+}
+.confirmationIconWrapper {
+  color: #fdc100;
+}
+.productList {
+  width: 100%;
+}
+.productWrapper {
+  margin-bottom: 1rem;
+}
+.productName {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #505050;
+  width: 50%;
+}
+.productInfoColumn {
+  flex-direction: row;
+}
+.productPrice {
+  font-size: 1.5rem;
+  font-weight: 300;
+  font-family: "myriadSemibold";
+  color: #505050;
+  align-items: center;
+  align-content: center;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 1rem;
+}
+.productQuantity {
+  font-size: 1.25rem;
+  color: #505050;
+  align-items: center;
+  align-content: center;
+  display: flex;
+}
+.totalListWrapper {
+  justify-content: flex-start;
+}
+.totalListItem {
+  padding-top: 1rem;
+  padding-bottom: 0;
+  font-family: "myriadLight";
+  color: #505050;
+}
+.ivaTYP {
+  font-size: 0.625rem;
+}
+.attachmentHeader {
+  position: relative;
+}
+.attachmentHeader::before {
+  content: url(assets/check2.svg);
+  position: absolute;
+  max-width: 0.3rem;
+  color: #fdc100;
+  border: none;
+  left: 0;
+}
+.sectionTitle {
+  margin-left: 9.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #353535;
+  font-family: "myriadLight";
+  position: relative;
+}
+.sectionTitle .price {
+  position: absolute;
+  text-transform: capitalize;
+  right: 0;
+  font-weight: 300;
+  font-family: "myriadSemibold";
+  color: #fdc100;
+}
+.freePrice {
+  color: #fdc100;
+  font-size: 1rem;
+}
+.listContainer {
+  display: flex;
+  width: calc( 100% - 9.5rem);
+  padding: 0.5rem 0;
+  margin-left: 9.5rem;
+  flex-direction: column;
+}
+.attachmentTitle {
+  color: #353535;
+  font-family: "myriadLight";
+  margin-left: 0.8rem;
+}
+.attachmentWrapper {
+  margin-top: 0;
+  width: 100%;
+  background-color: white;
+}
+.garanziaContainer {
+  margin-left: 9.5rem;
+  padding: 0.5rem 0;
+}
+.attachmentToggleWrapper {
+  display: block;
+}
+.attachmentToggleLabel {
+  text-transform: capitalize;
+  right: 0;
+  font-weight: 300;
+  font-family: "myriadSemibold";
+  color: #fdc100;
+}
+.totalList {
+  width: 100%;
+  margin-top: 10px;
+}
+.addressContainer {
+  line-height: 2;
+}
+.totalListItem:last-child {
+  border-top: 1px solid #e3e4e6;
+  margin-top: 12px;
+}
+.orderOptionsWrapper {
+  display: none;
+}
+.orderNumber {
+  font-size: 1.875rem;
+  font-family: myriadLight;
+  font-weight: 600;
+  text-transform: none;
+  text-align: center;
+  letter-spacing: 0;
+  color: #505050;
+}
+.orderDatetime {
+  padding-left: 0.5rem;
+}
+.orderNumber--title {
+  text-align: left;
+}
+.productImageWrapper {
+  max-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1.5rem;
+}
+.productInformationSheet {
+  color: black;
+  line-height: 1;
+  font-size: 1rem;
+}
+.theoreticalPrice {
+  margin-right: 1.5rem;
+  font-size: 0.8rem;
+  text-decoration: line-through;
+}
+
+.energyLabelSrc {
+  width: 3rem;
+  margin-right: 5px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 668px) {
+  .orderNumber {
+    padding: 0 10px;
+  }
+  :global(.vtex-flex-layout-0-x-flexCol--quantity) {
+    display: none;
+  }
+  .productInfoColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+  }
+  .productImageWrapper {
+    max-height: 70px;
+    padding: 10px;
+    width: 3.813rem;
+    margin-left: 0;
+    height: 3.813rem;
+    max-width: 100%;
+    justify-content: space-evenly;
+    border-radius: 3px;
+    border: solid 1px #f7f7f7;
+  }
+  .productImageColumn {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    display: none;
+  }
+  .productImageWrapper {
+    margin-right: 0.5rem;
+  }
+  .productWrapper {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2rem;
+    position: relative;
+    padding: 0 0.5rem;
+  }
+  .productQuantity {
+    width: 100%;
+    font-family: "myriadLight";
+  }
+  .orderNumber {
+    font-size: 1.5rem;
+  }
+  .productName {
+    width: 70%;
+    font-size: 1rem;
+    line-height: normal;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: flex-start;
+    white-space: break-spaces;
+    padding-right: .8rem;
+  }
+  .productQuantity {
+    margin: 0;
+    font-size: 1rem;
+  }
+  .productInfoColumn {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .sectionTitle {
+    margin-top: 30px;
+  }
+
+  .sectionTitle,
+  .attachmentWrapper,
+  .garanziaContainer {
+    margin-left: 0;
+    font-size: 0.875rem;
+  }
+  .garanziaContainer :global(.vtex-button) {
+    text-align: left;
+  }
+  .garanziaContainer :global(.vtex-button__label) {
+    padding: 0 0.5rem;
+  }
+  .productInfoColumn {
+    font-size: 1rem;
+  }
+  .listContainer {
+    padding: 0;
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+  }
+  .totalListItemValue {
+    color: #727273;
+    padding: 0;
+  }
+  .productPrice {
+    width: 20%;
+    margin: 0;
+    font-size: 1rem;
+  }
+}

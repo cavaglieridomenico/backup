@@ -1,0 +1,429 @@
+{
+  "product-summary.shelf": {
+    "children": [
+      // "flex-layout.row#collection-badges",
+      "flex-layout.row#promotionCashback",
+      "flex-layout.row#promotionCashbackNew",
+      // "flex-layout.row#promotionCashbackNew-178-PLP",
+      "flex-layout.row#promotionArielGratis",
+      "flex-layout.row#row-promo-collection-badges-plp",
+      "flex-layout.row#row-collection-badges-plp",
+      "product-summary-image#shelf", //temp
+      // "stack-layout#head",
+      "vtex.store-components:product-name#summary",
+      // "flex-layout.row#priceAndPostilla",
+      "flex-layout.row#priceAndWPROKey",
+      // "flex-layout.row#plpPrice",
+      "add-to-cart-custom#plp",
+      "add-to-list-btn"
+    ]
+  },
+  "flex-layout.row#defaultShelfPrice": {
+    "children": [
+      "flex-layout.col#fillerCol",
+      "flex-layout.col#defaultShelfPrice"
+    ],
+    "props": {
+      "blockClass": "priceAndSpecsRowDefault"
+    }
+  },
+  "flex-layout.col#defaultShelfPrice": {
+    "children": ["condition-layout.product#showPriceUnavailableProd"],
+    "props": {
+      "blockClass": "priceCol"
+    }
+  },
+  "flex-layout.col#fillerCol": {
+    "props": {}
+  },
+  "vtex.store-components:product-name#summary": {
+    "props": {
+      "tag": "div",
+      "displayMode": "linkToProductPage",
+      "blockClass": "summaryName"
+    }
+  },
+  "product-summary.shelf#relatedAccessories": {
+    "children": [
+      // "flex-layout.row#collection-badges",
+      "flex-layout.row#promotionCashback",
+      "flex-layout.row#promotionCashbackNew",
+      // "flex-layout.row#promotionCashbackNew-178-PLP",
+      "flex-layout.row#promotionArielGratis",
+      "flex-layout.row#row-promo-collection-badges-plp",
+      "flex-layout.row#row-collection-badges-plp",
+      "product-summary-image#shelf", //temp
+      // "stack-layout#head",
+      "flex-layout.row#commercialCode",
+      "vtex.store-components:product-name#summary",
+      "flex-layout.row#priceAndWPROKey",
+      "flex-layout.row#dimensioni",
+      "flex-layout.row#specifiche",
+      // "add-to-cart-button",
+      "add-to-list-btn"
+    ]
+  },
+  "stack-layout#head": {
+    "children": ["product-summary-image#shelf"]
+  },
+  "flex-layout.row#promo-coupon": {
+    "children": ["vtex.product-highlights@2.x:product-highlights"],
+    "props": {
+      "blockClass": "high"
+    }
+  },
+  "vtex.product-highlights@2.x:product-highlights#promotion": {
+    "title": "product highlights - promotion",
+    "props": {
+      "type": "promotion",
+      "blockClass": "promotionHigh"
+    },
+    "children": ["product-highlight-text#promotion"]
+  },
+  "product-highlight-text#promotion": {
+    "props": {
+      "message": "{highlightName}",
+      "blockClass": ["PromotionBadgeYellow"]
+    }
+  },
+  "product-highlight-text#promotionBadgeText": {
+    "props": {
+      "message": "{highlightName}",
+      "blockClass": ["PromotionBadgeYellow"]
+    }
+  },
+  "vtex.product-highlights@2.x:product-highlights#promotionsPDP": {
+    "title": "product highlights - promotionsPDP",
+    "props": {
+      "type": "promotion"
+    },
+    "children": ["product-highlight-text#promotionBadgeTextPDP"]
+  },
+  "product-highlight-text#promotionBadgeTextPDP": {
+    "props": {
+      "message": "{highlightName}",
+      "blockClass": ["PromotionBadgeYellowPDP"]
+    }
+  },
+  "vtex.product-highlights@2.x:product-highlights#promotionCashBack30ODR": {
+    "title": "product highlights - promotionCashBack30ODR",
+    "props": {
+      "type": "collection",
+      "filter": {
+        "type": "show",
+        "highlightNames": ["Cashback ODR -30€ (14/10-13/11)"]
+      },
+      "blockClass": "promotionHighYellow"
+    },
+    "children": ["product-highlight-text#promotionCashBack30"]
+  },
+  "product-highlight-text#promotionCashBack25": {
+    "props": {
+      "message": "{highlightName}"
+    }
+  },
+  "product-highlight-text#promotionPromoNew": {
+    "props": {
+      "message": "NOWOŚĆ"
+    }
+  },
+  "product-highlight-text#promotionPromoTv": {
+    "props": {
+      "message": "PRODUKT Z REKLAMY"
+    }
+  },
+  "product-highlight-text#promotionPromoSpecialDiscount": {
+    "props": {
+      "message": "{highlightName}"
+    }
+  },
+  "product-highlight-text#promotionPromoPrice": {
+    "props": {
+      "message": "PROMOCJA"
+    }
+  },
+  "vtex.product-highlights@2.x:product-highlights#promotionPrice": {
+    "title": "product highlights - promotionPrice",
+    "props": {
+      "type": "collection",
+      "filter": {
+        "type": "show",
+        "highlightNames": ["PROMOCJA"]
+      },
+      "blockClass": "PromotionBadgeOrange"
+    },
+    "children": ["product-highlight-text#promotionPromoPrice"]
+  },
+  "vtex.product-highlights@2.x:product-highlights#promotionSpecialDiscount": {
+    "title": "product highlights - promotionSpecialDiscount",
+    "props": {
+      "type": "collection",
+      "filter": {
+        "type": "show",
+        "highlightNames": [
+          "W KOSZYKU*",
+          "-20% W KOSZYKU*",
+          "-40% W KOSZYKU*",
+          "-60% W KOSZYKU*",
+          "-50% W KOSZYKU*",
+          "-75% W KOSZYKU*"
+        ]
+      },
+      "blockClass": "PromotionBadgeOrange"
+    },
+    "children": ["product-highlight-text#promotionPromoSpecialDiscount"]
+  },
+  "vtex.product-highlights@2.x:product-highlights#promotionTv": {
+    "title": "product highlights - promotionTv",
+    "props": {
+      "type": "collection",
+      "filter": {
+        "type": "show",
+        "highlightNames": ["PRODUKT Z REKLAMY"]
+      },
+      "blockClass": "PromotionBadgeOrange"
+    },
+    "children": ["product-highlight-text#promotionPromoTv"]
+  },
+  "vtex.product-highlights@2.x:product-highlights#promotionNew": {
+    "title": "product highlights - promotionNew",
+    "props": {
+      "type": "collection",
+      "filter": {
+        "type": "show",
+        "highlightNames": ["NOWOŚĆ"]
+      },
+      "blockClass": "PromotionBadgeOrange"
+    },
+    "children": ["product-highlight-text#promotionPromoNew"]
+  },
+  "vtex.product-highlights@2.x:product-highlights#promotionCashBack25": {
+    "title": "product highlights - promotionCashBack25",
+    "props": {
+      "type": "collection",
+      "filter": {
+        "type": "show",
+        "highlightNames": [
+          "ZŁ ZWROTU*",
+          "25% ZŁ ZWROTU*",
+          "50% ZŁ ZWROTU*",
+          "75% ZŁ ZWROTU*",
+          "40% ZŁ ZWROTU*",
+          "20% ZŁ ZWROTU*"
+        ]
+      },
+      "blockClass": "PromotionBadgeOrange"
+    },
+    "children": ["product-highlight-text#promotionCashBack25"]
+  },
+  "vtex.product-highlights@2.x:product-highlights#promotionCashBackNew": {
+    "title": "product highlights - promotionCashBackNew",
+    "props": {
+      "type": "collection",
+      "filter": {
+        "type": "show",
+        "highlightNames": ["Do 650 zł zwrotu"]
+      },
+      "blockClass": "PromotionBadgeOrange"
+    },
+    "children": ["product-highlight-text#promotionCashBack25"]
+  },
+  "vtex.product-highlights@2.x:product-highlights#promotionArielGratis": {
+    "title": "product highlights - promotionArielGratis",
+    "props": {
+      "type": "collection",
+      "filter": {
+        "type": "show",
+        "highlightNames": ["Zapas ARIEL GRATIS"]
+      },
+      "blockClass": "PromotionBadgeOrange"
+    },
+    "children": ["product-highlight-text#promotionCashBack25"]
+  },
+  "vtex.product-highlights@2.x:product-highlights#promotionCashBack50ODR": {
+    "title": "product highlights - promotionCashBack50ODR",
+    "props": {
+      "type": "collection",
+      "filter": {
+        "type": "show",
+        "highlightNames": ["Cashback ODR -50€ (14/10-13/11)"]
+      },
+      "blockClass": "promotionHighYellow"
+    },
+    "children": ["product-highlight-text#promotionCashBack50"]
+  },
+  "vtex.product-highlights@2.x:product-highlights#promotionCashBack50": {
+    "title": "product highlights - promotionCashBack50",
+    "props": {
+      "type": "collection",
+      "filter": {
+        "type": "show",
+        "highlightNames": ["Cashback -50€ (6/10-17/11)"]
+      },
+      "blockClass": "promotionHighYellow"
+    },
+    "children": ["product-highlight-text#promotionCashBack50"]
+  },
+  "vtex.product-highlights@2.x:product-highlights#promotionCashBack80": {
+    "title": "product highlights - promotionCashBack80",
+    "props": {
+      "type": "collection",
+      "filter": {
+        "type": "show",
+        "highlightNames": ["Cashback -80€ (18/10-21/11)"]
+      },
+      "blockClass": "promotionHighYellow"
+    },
+    "children": ["product-highlight-text#promotionCashBack80"]
+  },
+  "vtex.product-highlights@2.x:product-highlights#promotionCashBack100": {
+    "title": "product highlights - promotionCashBack100",
+    "props": {
+      "type": "collection",
+      "filter": {
+        "type": "show",
+        "highlightNames": ["Cashback -100€ (6/10-17/11)"]
+      },
+      "blockClass": "promotionHighYellow"
+    },
+    "children": ["product-highlight-text#promotionCashBack100"]
+  },
+  "vtex.product-highlights@2.x:product-highlights#promotionCashBack150": {
+    "title": "product highlights - promotionCashBack150",
+    "props": {
+      "type": "collection",
+      "filter": {
+        "type": "show",
+        "highlightNames": ["Cashback -150€ (6/10-17/11)"]
+      },
+      "blockClass": "promotionHighYellow"
+    },
+    "children": ["product-highlight-text#promotionCashBack150"]
+  },
+  "vtex.product-highlights@2.x:product-highlights#promotionCashBack200": {
+    "title": "product highlights - promotionCashBack200",
+    "props": {
+      "type": "collection",
+      "filter": {
+        "type": "show",
+        "highlightNames": ["Cashback -200€ (6/10-17/11)"]
+      },
+      "blockClass": "promotionHighYellow"
+    },
+    "children": ["product-highlight-text#promotionCashBack200"]
+  },
+  "vtex.product-highlights@2.x:product-highlights#promotionCashBack50new": {
+    "title": "product highlights - promotionCashBack50new",
+    "props": {
+      "type": "collection",
+      "filter": {
+        "type": "show",
+        "highlightNames": ["Cashback -50€ (18/10-21/11)"]
+      },
+      "blockClass": "promotionHighYellow"
+    },
+    "children": ["product-highlight-text#promotionCashBack50"]
+  },
+  "vtex.product-highlights@2.x:product-highlights#promotionCashBack100new": {
+    "title": "product highlights - promotionCashBack100new",
+    "props": {
+      "type": "collection",
+      "filter": {
+        "type": "show",
+        "highlightNames": ["Cashback -100€ (18/10-21/11)"]
+      },
+      "blockClass": "promotionHighYellow"
+    },
+    "children": ["product-highlight-text#promotionCashBack100"]
+  },
+  "vtex.product-highlights@2.x:product-highlights#black-friday": {
+    "title": "product highlights - black-friday",
+    "props": {
+      "type": "collection",
+      "filter": {
+        "type": "show",
+        "highlightNames": ["Black Friday 2021"]
+      },
+      "blockClass": "promotionHighBlackFriday"
+    },
+    "children": ["product-highlight-text#black-friday"]
+  },
+  "product-highlight-text#black-friday": {
+    "props": {
+      "message": "Black Friday",
+      "blockClass": ["PromotionBadgeBlackPDP"]
+    }
+  },
+  "product-highlight-text#promotionCashBack200": {
+    "props": {
+      "message": "- 200€ remboursés"
+    }
+  },
+  "product-highlight-text#promotionCashBack150": {
+    "props": {
+      "message": "- 150€ remboursés"
+    }
+  },
+  "product-highlight-text#promotionCashBack100": {
+    "props": {
+      "message": "- 100€ remboursés"
+    }
+  },
+  "product-highlight-text#promotionCashBack50": {
+    "props": {
+      "message": "{highlightName}"
+    }
+  },
+  "product-highlight-text#promotionCashBack80": {
+    "props": {
+      "message": "- 80€ remboursés"
+    }
+  },
+  "product-highlight-text#promotionCashBack30": {
+    "props": {
+      "message": "- 30€ remboursés"
+    }
+  },
+  "vtex.product-highlights@2.x:product-highlights#Announcements": {
+    "title": "product highlights - Announcements",
+    "props": {
+      "type": "collection",
+      "filter": {
+        "type": "show",
+        "highlightNames": ["Collection Nouveautés"]
+      },
+      "blockClass": "promotionHigh"
+    },
+    "children": ["product-highlight-text#Announcements"]
+  },
+  "product-highlight-text#Announcements": {
+    "props": {
+      "message": "Nouveauté",
+      "blockClass": ["greyText"]
+    }
+  },
+  "flex-layout.row#row-promo-collection-badges-plp": {
+    "children": ["flex-layout.col#col-promo-collection-badges-plp"],
+    "props": {
+      "blockClass": "promoBadgeOrange"
+    }
+  },
+  "flex-layout.col#col-promo-collection-badges-plp": {
+    "children": ["vtex.product-highlights@2.x:product-highlights"],
+    "props": {
+      "blockClass": "promoBadgeOrangePlp"
+    }
+  },
+  "flex-layout.row#row-collection-badges-plp": {
+    "children": ["flex-layout.col#col-collection-badges-plp"],
+    "props": {
+      "blockClass": "promoBadgeOrange"
+    }
+  },
+  "flex-layout.col#col-collection-badges-plp": {
+    "children": ["vtex.product-highlights@2.x:product-highlights#coll"],
+    "props": {
+      "blockClass": "promoBadgeOrangePlp"
+    }
+  }
+}

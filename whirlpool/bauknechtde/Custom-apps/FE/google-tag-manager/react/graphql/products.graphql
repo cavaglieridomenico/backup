@@ -1,0 +1,6 @@
+query products($identifier: ProductUniqueIdentifier) {
+  product(identifier: $identifier) @context(provider: "vtex.search-graphql") {
+    productName
+    productReference
+  }
+}

@@ -1,0 +1,211 @@
+{
+  "condition-layout.product#productBrand": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "brandId",
+          "arguments": {
+            "id": "2000000"
+          }
+        }
+      ],
+      "Then": "vtex.store-components:product-brand#WhirlpoolBrand",
+      "Else": "condition-layout.product#productBrandIndesit"
+    }
+  },
+  "vtex.store-components:product-brand#WhirlpoolBrand": {
+    "props": {
+      "displayMode": "text",
+      "blockClass": ["brandBadge", "WhirlpoolBrand"]
+    }
+  },
+  "condition-layout.product#productBrandIndesit": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "brandId",
+          "arguments": {
+            "id": "2000001"
+          }
+        }
+      ],
+      "Then": "vtex.store-components:product-brand#IndesitBrand",
+      "Else": "condition-layout.product#productBrandHotpoint"
+    }
+  },
+  "vtex.store-components:product-brand#IndesitBrand": {
+    "props": {
+      "displayMode": "text",
+      "blockClass": ["brandBadge", "IndesitBrand"]
+    }
+  },
+  "condition-layout.product#productBrandHotpoint": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "brandId",
+          "arguments": {
+            "id": "2000002"
+          }
+        }
+      ],
+      "Then": "vtex.store-components:product-brand#HotpointBrand",
+      "Else": "condition-layout.product#productBrandKitchenAid"
+    }
+  },
+  "vtex.store-components:product-brand#HotpointBrand": {
+    "props": {
+      "displayMode": "text",
+      "blockClass": ["brandBadge", "HotpointBrand"]
+    }
+  },
+  "condition-layout.product#productBrandKitchenAid": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "brandId",
+          "arguments": {
+            "id": "2000003"
+          }
+        }
+      ],
+      "Then": "vtex.store-components:product-brand#KitchenAidBrand",
+      "Else": "condition-layout.product#productBrandWpro"
+    }
+  },
+  "vtex.store-components:product-brand#KitchenAidBrand": {
+    "props": {
+      "displayMode": "text",
+      "blockClass": ["brandBadge", "KitchenAidBrand"]
+    }
+  },
+  "condition-layout.product#productBrandWpro": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "brandId",
+          "arguments": {
+            "id": "2000004"
+          }
+        }
+      ],
+      "Then": "vtex.store-components:product-brand#WproBrand"
+    }
+  },
+  "vtex.store-components:product-brand#WproBrand": {
+    "props": {
+      "displayMode": "text",
+      "blockClass": ["brandBadge", "WproBrand"]
+    }
+  },
+  "condition-layout.product#isAccessorioEtichette2": {
+    "props": {
+      "conditions": [
+        { "subject": "categoryId", "arguments": { "id": "3" } },
+        { "subject": "categoryId", "arguments": { "id": "14" } },
+        { "subject": "categoryId", "arguments": { "id": "12" } },
+        { "subject": "categoryId", "arguments": { "id": "10" } },
+        { "subject": "categoryId", "arguments": { "id": "16" } },
+        { "subject": "categoryId", "arguments": { "id": "11" } },
+        { "subject": "categoryId", "arguments": { "id": "13" } },
+        { "subject": "categoryId", "arguments": { "id": "15" } },
+        { "subject": "categoryId", "arguments": { "id": "39" } },
+        { "subject": "categoryId", "arguments": { "id": "35" } },
+        { "subject": "categoryId", "arguments": { "id": "37" } },
+        { "subject": "categoryId", "arguments": { "id": "38" } },
+        { "subject": "categoryId", "arguments": { "id": "36" } },
+        { "subject": "categoryId", "arguments": { "id": "33" } },
+        { "subject": "categoryId", "arguments": { "id": "34" } },
+        { "subject": "categoryId", "arguments": { "id": "42" } },
+        { "subject": "categoryId", "arguments": { "id": "43" } },
+        { "subject": "categoryId", "arguments": { "id": "41" } },
+        { "subject": "categoryId", "arguments": { "id": "29" } },
+        { "subject": "categoryId", "arguments": { "id": "31" } },
+        { "subject": "categoryId", "arguments": { "id": "32" } },
+        { "subject": "categoryId", "arguments": { "id": "40" } }
+      ],
+      "matchType": "any",
+      "Then": null,
+      "Else": "flex-layout.col#indexRepairability"
+    }
+  },
+  "condition-layout.product#isAccessorioEtichette": {
+    "props": {
+      "conditions": [
+        { "subject": "categoryId", "arguments": { "id": "3" } },
+        { "subject": "categoryId", "arguments": { "id": "14" } },
+        { "subject": "categoryId", "arguments": { "id": "12" } },
+        { "subject": "categoryId", "arguments": { "id": "10" } },
+        { "subject": "categoryId", "arguments": { "id": "16" } },
+        { "subject": "categoryId", "arguments": { "id": "11" } },
+        { "subject": "categoryId", "arguments": { "id": "13" } },
+        { "subject": "categoryId", "arguments": { "id": "15" } },
+        { "subject": "categoryId", "arguments": { "id": "39" } },
+        { "subject": "categoryId", "arguments": { "id": "35" } },
+        { "subject": "categoryId", "arguments": { "id": "37" } },
+        { "subject": "categoryId", "arguments": { "id": "38" } },
+        { "subject": "categoryId", "arguments": { "id": "36" } },
+        { "subject": "categoryId", "arguments": { "id": "33" } },
+        { "subject": "categoryId", "arguments": { "id": "34" } },
+        { "subject": "categoryId", "arguments": { "id": "42" } },
+        { "subject": "categoryId", "arguments": { "id": "43" } },
+        { "subject": "categoryId", "arguments": { "id": "41" } },
+        { "subject": "categoryId", "arguments": { "id": "29" } },
+        { "subject": "categoryId", "arguments": { "id": "31" } },
+        { "subject": "categoryId", "arguments": { "id": "32" } },
+        { "subject": "categoryId", "arguments": { "id": "40" } }
+      ],
+      "matchType": "any",
+      "Then": null,
+      "Else": "flex-layout.row#etichette"
+    }
+  },
+  "condition-layout.product#etichetta-image": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "energy-label"
+          }
+        }
+      ],
+      "Then": "flex-layout.row#old-label", //"flex-layout.row#new-label"
+      "Else": "flex-layout.row#new-label" //"image-from-specification#EtichettaEnergeticaNew"
+    }
+  },
+  "condition-layout.product#isAccessorioComparisonButton": {
+    "props": {
+      "conditions": [
+        { "subject": "categoryId", "arguments": { "id": "2" } },
+        { "subject": "categoryId", "arguments": { "id": "14" } },
+        { "subject": "categoryId", "arguments": { "id": "12" } },
+        { "subject": "categoryId", "arguments": { "id": "11" } },
+        { "subject": "categoryId", "arguments": { "id": "15" } },
+        { "subject": "categoryId", "arguments": { "id": "10" } },
+        { "subject": "categoryId", "arguments": { "id": "13" } },
+        { "subject": "categoryId", "arguments": { "id": "16" } },
+        { "subject": "categoryId", "arguments": { "id": "54" } },
+        { "subject": "categoryId", "arguments": { "id": "49" } },
+        { "subject": "categoryId", "arguments": { "id": "52" } },
+        { "subject": "categoryId", "arguments": { "id": "50" } },
+        { "subject": "categoryId", "arguments": { "id": "51" } },
+        { "subject": "categoryId", "arguments": { "id": "48" } },
+        { "subject": "categoryId", "arguments": { "id": "47" } },
+        { "subject": "categoryId", "arguments": { "id": "57" } },
+        { "subject": "categoryId", "arguments": { "id": "56" } },
+        { "subject": "categoryId", "arguments": { "id": "55" } },
+        { "subject": "categoryId", "arguments": { "id": "44" } },
+        { "subject": "categoryId", "arguments": { "id": "46" } },
+        { "subject": "categoryId", "arguments": { "id": "45" } },
+        { "subject": "categoryId", "arguments": { "id": "53" } },
+        {
+          "subject": "specificationProperties",
+          "arguments": { "name": "isDiscontinued", "value": "true" }
+        }
+      ],
+      "matchType": "any",
+      "Else": "product-comparison-block.selector#search"
+    }
+  }
+}

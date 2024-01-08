@@ -1,0 +1,230 @@
+.customdate__table {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  justify-content: space-between;
+}
+.customdate__table_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 10px;
+  border-radius: 4px;
+  background-color: #fff;
+  flex-basis: 29%;
+  margin-top: 10px;
+  border: 1px solid #cbcbcb;
+  cursor: pointer;
+}
+.customdate__table_item:hover, .customdate__table_item_active {
+  border: 1px solid #953D1B;
+  background-color: #f4f2f2;
+}
+.stairsPreText {
+  color: #999;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+.stairsInputWrapper {
+  display: flex;
+  align-items: center;
+  color: #999;
+  display: flex;
+  flex-direction: row;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1;
+  padding: 15px 0;
+  cursor: pointer;
+}
+.shippingMessageContainer {
+  align-items: center;
+  border: 1px solid #ffb100;
+  border-radius: 4px;
+  font-size: 12px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  line-height: 1.2;
+  display: flex;
+}
+.streetListWrapper {
+  position: relative;
+  z-index: 99;
+  background-color: white;
+  max-height: 200px;
+  overflow-y: scroll;
+  width: -webkit-fill-available;
+  padding-right: 1.875rem;
+}
+.singleStreet {
+  padding: 10px;
+  cursor: pointer;
+}
+.singleStreet:hover {
+  background-color: #953D1B !important;
+  color: #fff !important;
+}
+.shiptext {
+  font-weight: bold;
+  color: #953D1B !important;
+  font-size: 12px;
+}
+select {
+  height: 40px;
+  line-height: 40px;
+  max-height: initial;
+  display: inline-block;
+  padding: 0px 10px;
+  border-radius: 5px;
+  border: 1px solid #cbcbcb;
+  outline: initial;
+  font-family: "hotpointRegular", sans-serif;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  width: 100%;
+}
+.selectPreText {
+  margin: 10px 0;
+  color: #999;
+}
+
+.loadingImage{
+  
+}
+
+.loadingWrapper{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #f2f2f2a8;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loadingWrapper svg{
+  height: 60px;
+  animation: rotation 1s infinite linear;
+  opacity: .3;
+}
+.deliveryRadioWrapper{
+  display: flex;
+  align-items: flex-start;
+  cursor: pointer;
+  margin-bottom: 2px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #f2f2f2;
+}
+.deliveryRadioGroup{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.deliveryRadio{
+
+  position: relative;
+}
+.deliveryRadioInfo{
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  margin-top: -4px;
+}
+.deliveryRadioInfoEstimate{
+  font-size: 0.675rem;
+  margin-top: 5px;
+}
+.deliveryRadioInfoPrice{
+  position: absolute;
+  right: 32px;
+  top: 13px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border-left: 2px solid #f2f2f2;
+  padding-left: 30px;
+  width: 50px;
+}
+
+.deliveryText{
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #cbcbcb;
+  margin-top: 30px;
+}
+
+.deliveryText{
+
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+.shipAllTogheterText{
+  font-size: 0.775rem;
+}
+.shipAllTogheterToggle{
+  margin: 20px 0;
+}
+.dropDownArrow{
+  position:absolute;
+
+}
+.formInputWrapper{
+  position: relative;
+}
+.goToPaymentWrap{
+display: flex;
+width: 100%;
+justify-content: center;
+padding: 30px;
+}
+.invalidPostalCode{
+  color: #953d1b;
+  font-weight: bold;
+  font-size: 0.775rem;
+}
+.installationRemovedModalWrapper{
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 0;
+	left: 0;
+	background-color: #8b8b8b94;
+	z-index: 999;
+  }
+  .installationRemovedModalContent{
+	position: relative;
+	padding: 40px;
+	border-radius: 12px;
+	background-color: #fff;
+  }
+  .iconCloseInstallation{
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	cursor: pointer; 
+  }
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+@media only screen and (max-width: 768px) {
+  .customdate__table_item{
+      flex-basis: 27%;
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "store.custom#custom-login": {
+    "blocks": ["login-custom"],
+    "parent": {
+      "header": "header#login",
+      "footer": "footer#login"
+    }
+  },
+  "header#login": {
+    "blocks": ["header-layout.desktop#login", "header-layout.mobile#login"]
+  },
+  "header-layout.desktop#login": {
+    "children": ["flex-layout.row#header-login"]
+  },
+  "header-layout.mobile#login": {
+    "children": ["flex-layout.row#header-login"]
+  },
+  "flex-layout.row#header-login": {
+    "props": {
+      "blockClass": "headerDesktopLogin",
+      "fullWidth": "true"
+    },
+    "children": ["image#logo-header-login"]
+  },
+  "image#logo-header-login": {
+    "props": {
+      "src": "assets/whr-logo-epp.png",
+      "blockClass": "logo-header-login"
+    }
+  },
+  "footer#login": {
+    "blocks": ["footer-layout.desktop#login", "footer-layout.mobile#login"]
+  },
+  "footer-layout.desktop#login": {
+    "children": ["flex-layout.row#footer-4-desktop"]
+  },
+  "footer-layout.mobile#login": {
+    "children": ["flex-layout.row#footer-4-desktop"]
+  }
+}

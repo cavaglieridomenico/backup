@@ -1,0 +1,67 @@
+<link rel="preconnect" href="https://cdn.cookielaw.org">
+<!-- OneTrust Cookies Consent Notice start -->
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" data-document-language="true" type="text/javascript" charset="UTF-8" data-domain-script="3f0e3e48-d722-48f8-891c-d101a5dbc513"></script>
+<script type="text/javascript">
+
+    function OptanonWrapper() {
+        var first = true;
+
+        function injectAcceptButton() {
+            if (!document.cookie.split(';').find(row => row.startsWith('OneTrust-custom'))) {
+                var btnContainer = document.querySelector(".ot-sdk-column");
+                btnContainer.setAttribute("id", "ot-button-container");
+                btnContainer.style.height = "71px";
+                var acceptBtn = document.querySelector("#accept-recommended-btn-handler");
+                // First layer cookie buttons
+                var leftButton = document.querySelector("#onetrust-accept-btn-handler");
+                leftButton.setAttribute('style', 'font-size: 12px !important')
+                var rightButton = document.querySelector("#onetrust-pc-btn-handler");
+                rightButton.setAttribute('style', 'font-size: 12px !important')
+                // Create Refuse All button
+                var originalRefuse = document.querySelector("#refuse-recommended-btn-handler");
+                if(!originalRefuse) {
+                    var refuse = document.querySelector(".ot-pc-refuse-all-handler.button-theme");
+                    refuse.style.position = "absolute";
+                    refuse.style.top = "271px";
+                    refuse.style.left = "200px";
+                }
+                var acceptBtn = document.querySelector("#accept-recommended-btn-handler");
+                // Hide the old buttons
+                var oldRefuseBtnContainer = document.querySelector(".save-preference-btn-container");
+                oldRefuseBtnContainer.style.position = "unset";
+                //Hide the X close button
+                var closeBtn = document.querySelector(".pc-close-button");
+                closeBtn.style.backgroundImage = "unset";
+                closeBtn.style.background = "#0090d0";
+                closeBtn.style.borderRadius = "16px";
+                closeBtn.style.height = "25px";
+                closeBtn.style.width = "25px";
+                closeBtn.style.right = "15px";
+                //Create a new X close button
+                var iconClose = document.createElement("span");
+                iconClose.innerHTML = "×";
+                iconClose.style.color = "white";
+                iconClose.style.fontSize = "25px";
+                iconClose.style.lineHeight = "25px";
+                closeBtn.appendChild(iconClose);
+                //Justify banner text
+                var firstLayerText = document.querySelector("#onetrust-policy-text");
+                var secondLayerText = document.querySelector(".ot-category-desc");
+                var policyText = document.querySelector("#pc-policy-text");
+                firstLayerText.style.textAlign = "justify";
+                secondLayerText.style.textAlign = "justify";
+                policyText.style.textAlign = "justify";
+            
+                btnContainer.insertBefore(refuseBtn, acceptBtn)
+                document.cookie=`OneTrust-custom=True; expires=${new Date(new Date().getTime()+1000*60*60*24*365).toGMTString()}; path=/`;
+            } else {
+                ("do nothing");
+            }
+        }
+
+        
+                    
+        injectAcceptButton();
+    }
+</script>
+<!-- OneTrust Cookies Consent Notice end -->

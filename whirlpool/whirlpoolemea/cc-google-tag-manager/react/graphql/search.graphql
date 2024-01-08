@@ -1,0 +1,18 @@
+query getSearchProductInfos($slug: String!) {
+  productData(slug: $slug) {
+    categoryId
+    productName
+    productReference
+    productId
+    linkText
+    items {
+      sellers {
+        commertialOffer {
+          AvailableQuantity
+        }
+      }
+    }
+    category
+    macroCategory
+  }
+}

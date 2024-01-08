@@ -1,0 +1,242 @@
+{
+  "name": "api-wrapper",
+  "vendor": "hotpointuk",
+  "version": "0.2.1",
+  "title": "VTEX API wrapper",
+  "description": "Wrapper for frontend api calls",
+  "mustUpdateAt": "2018-01-04",
+  "categories": [],
+  "dependencies": {},
+  "builders": {
+    "node": "6.x",
+    "docs": "0.x",
+    "graphql": "1.x"
+  },
+  "scripts": {
+    "prereleasy": "bash lint.sh"
+  },
+  "credentialType": "absolute",
+  "policies": [
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "portal.vtexcommercestable.com.br",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.myvtex.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "OMSViewer"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "vtexid.vtex.com.br",
+        "path": "*"
+      }
+    },
+    {
+      "name": "ADMIN_DS"
+    },
+    {
+      "name": "ListOrders"
+    },
+    {
+      "name": "LogisticsAdmin"
+    },
+    {
+      "name": "read_prices"
+    },
+    {
+      "name": "GetPolicy"
+    },
+    {
+      "name": "ListPolicies"
+    },
+    {
+      "name": "GerenciarPromocoesETarifas"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "api.vtex.com",
+        "path": "/dataentities/*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "7329181.recs.igodigital.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "emeaservicesq.cert.whirlpool.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "emeaservices.cert.whirlpool.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "integration.hubspan.net",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "connect.hubspan.net",
+        "path": "*"
+      }
+    },
+    {
+      "name": "colossus-fire-event"
+    },
+    {
+      "name": "colossus-write-logs"
+    }
+  ],
+  "settingsSchema": {
+    "title": "Wrapper",
+    "type": "object",
+    "properties": {
+      "authcookie": {
+        "title": "Vtex - User auth cookie",
+        "type": "string"
+      },
+      "appKeyQA": {
+        "title": "VTEX - appKey for QA",
+        "type": "string"
+      },
+      "appTokenQA": {
+        "title": "VTEX - appToken for QA",
+        "type": "string"
+      },
+      "appKeyPROD": {
+        "title": "VTEX - appKey for PRODUCTION",
+        "type": "string"
+      },
+      "appTokenPROD": {
+        "title": "VTEX - appToken for PRODUCTION",
+        "type": "string"
+      },
+      "stockUpdate": {
+        "title": "Vtex - Stock update on order submission",
+        "type": "boolean",
+        "default": false
+      },
+      "inStockWarId": {
+        "title": "Vtex - Warehouse In Stock - Id",
+        "type": "string",
+        "default": "1"
+      },
+      "outOfStockWarId": {
+        "title": "Vtex - Warehouse Out Of Stock - Id",
+        "type": "string",
+        "default": "999"
+      },
+      "productionMode": {
+        "title": "Production Mode",
+        "type": "boolean"
+      },
+      "createConsumerUrl": {
+        "title": "CRM - create customer URL",
+        "type": "string"
+      },
+      "pfxPassword": {
+        "title": "CRM - certificate password",
+        "type": "string"
+      },
+      "ptvUrlTest": {
+        "title": "PTV - URL Test",
+        "type": "string"
+      },
+      "ptvUrlProd": {
+        "title": "PTV - URL Production",
+        "type": "string"
+      },
+      "ptvUsername": {
+        "title": "PTV - Username",
+        "type": "string"
+      },
+      "ptvPassword": {
+        "title": "PTV - Password",
+        "type": "string"
+      },
+      "tpUrlTest": {
+        "title": "Tradeplace - URL Test",
+        "type": "string"
+      },
+      "tpUrlProd": {
+        "title": "Tradeplace - URL Production",
+        "type": "string"
+      },
+      "tpUsername": {
+        "title": "Tradeplace - Username",
+        "type": "string"
+      },
+      "tpPassword": {
+        "title": "Tradeplace - Password",
+        "type": "string"
+      },
+      "additional_services_contents_categpries": {
+        "title": "Additional Services Categories",
+        "type": "string"
+      },
+      "logosMapping": {
+        "type": "object",
+        "title": "Product Logos Mapping",
+        "properties": {
+          "specificationName": {
+            "type": "string",
+            "title": "Logos Specification name"
+          },
+          "mapping": {
+            "type": "array",
+            "title": "Mapping",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "title": "Logo ID"
+                },
+                "url": {
+                  "type": "string",
+                  "title": "Logo URL",
+                  "format": "uri"
+                }
+              }
+            }
+          }
+        }
+      },
+      "retrievePromoParam": {
+        "type": "object",
+        "title": "Parameters for retrieve Promo ",
+        "properties": {
+          "UTC": {
+            "type": "string",
+            "title": "Timezone"
+          }
+        }
+      }
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

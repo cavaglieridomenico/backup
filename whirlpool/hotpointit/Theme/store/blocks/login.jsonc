@@ -1,0 +1,64 @@
+{
+  "store.login": {
+    "parent": {
+      "footer": "footer#login"
+    },
+    "blocks": [
+      "login-content#default",
+      "login-custom-flow#default"
+      //"analytics"
+    ]
+  },
+  "login-custom-flow#default": {
+    "props": {
+      "textButton": "Registrati",
+      "textNextStep": "Nel prossimo step ti verrà chiesto di verificare la tua mail",
+      "privacyPolicyText": [
+        {
+          "__editorItemTitle": "Ho compreso e prendo atto del contenuto dell'<a class='whirlpoolemea-login-custom-flow-1-x-link' href='https://hotpointit.myvtex.com/pagine/informativa-sulla-privacy'>informativa sulla privacy</a> e:"
+        }
+      ],
+      "checkboxes": [
+        {
+          "checkboxTitle": "Acconsento al trattamento dei miei dati personali per permettere a Whirlpool Italia Srl di inviarmi newsletter/comunicazioni di marketing (in forma elettronica e non, anche tramite telefono, posta tradizionale, e-mail, SMS, notifiche push su siti di terze parti tra cui sulle piattaforme Facebook e Google) riguardanti prodotti e servizi di Whirlpool Italia Srl, anche da me acquistati o registrati, nonché di svolgere ricerche di mercato. Con la registrazione potrò usufruire di uno sconto del 5% valido sul primo acquisto effettuato entro 12 mesi dalla registrazione. Sconto cumulabile con le altre offerte in essere."
+        }
+      ],
+      "textAlreadyRegistered": "Sei già un utente registrato",
+      "formNameLabel": "NOME *",
+      "formSurnameLabel": "COGNOME *",
+      "formMailLabel": "EMAIL *",
+      "formNamePlaceholder": "Inserisci il tuo nome",
+      "formSurnamePlaceholder": "Inserisci il tuo cognome",
+      "formMailPlaceholder": "Ad esempio: esempio@mail.com",
+      "goBackToLogin": "Torna alla login"
+    }
+  },
+  "login-content#default": {
+    "props": {
+      "isInitialScreenOptionOnly": false,
+      "defaultOption": 1,
+      "showPasswordVerificationIntoTooltip": true
+    }
+  },
+  "footer#login": {
+    "blocks": [
+      "footer-layout.desktop#login",
+      "footer-layout.mobile#login"
+    ]
+  },
+  "footer-layout.desktop#login": {
+    "children": [
+      "flex-layout.row#spaceFooter",
+      "flex-layout.row#footer-1-desktop"
+    ]
+  },
+  "footer-layout.mobile#login": {
+    "children": [
+      "image#payment-methods-mobile",
+      "flex-layout.row#accordionFooter",
+      "flex-layout.row#3-footer-mobile",
+      "rich-text#footer-mobile",
+      "social-networks#mobile"
+    ]
+  }
+}

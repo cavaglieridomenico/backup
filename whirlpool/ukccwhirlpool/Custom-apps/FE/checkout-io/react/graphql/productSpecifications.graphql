@@ -1,0 +1,7 @@
+query getProductSpecifications($productId: String, $specificationNames: [String]) {
+  specifications(productId: $productId, specificationNames: $specificationNames) {
+    Id
+    Name
+    Value
+  }
+}

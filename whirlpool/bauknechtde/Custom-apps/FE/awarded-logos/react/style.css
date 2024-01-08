@@ -1,0 +1,124 @@
+.awardedLogosContainer {
+  margin: 0 0.5rem;
+  display: flex;
+  align-items: flex-end;
+  /* max-width: 3.5rem;
+  height: 3.2rem; */
+  position: relative;
+}
+.awardedLogoImagesContainer {
+  margin-right: 1rem;
+}
+.awardedLogoImage {
+  object-fit: contain;
+  height: 47px;
+  max-width: 90px;
+}
+.awardedLogoImageZoomed {
+  transform: scale(1.5);
+  margin-left: 2rem;
+}
+.awardedLogoImage:hover {
+  transform: scale(2);
+  margin-left: 2rem;
+}
+.zoomInContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.zoomInContainer:hover {
+  cursor: url(https://bauknechtde.vtexassets.com/_v/public/assets/v1/published/bauknechtde.video-player-thron-pdp@0.0.31/public/react/91618bbaeb77d5f5b0173112a38a893e.svg)
+      8 8,
+    default;
+}
+.isHovered {
+  position: absolute;
+  z-index: 2;
+}
+.awardedLogoImages {
+  object-fit: contain;
+  height: 47px;
+  max-width: 90px;
+  /* display: block; */
+}
+.awardedLogoImages:hover {
+  transform: scale(2.5);
+  margin-left: 1rem;
+  margin-top: 1rem;
+  position: relative;
+  z-index: 3;
+}
+.awardedLogoImagesLast:hover {
+  transform: scale(2.5);
+  margin-left: -3rem;
+  margin-top: 1rem;
+  position: relative;
+  z-index: 3;
+}
+
+@media only screen and (max-width: 1024px) {
+  /*.awardedLogoImage:hover {
+     margin-left: -2rem; 
+  }*/
+  /*  .awardedLogoImages:hover {
+    margin-left: 1.5rem;
+    margin-top: 2rem;
+    z-index: 3;
+  } */
+  /* .awardedLogoImages:last-child:hover {
+    margin-top: 2rem;
+    margin-right: 3.5rem;
+    z-index: 3;
+  } */
+  .notZoomedImage {
+    transform: scale(1) !important;
+    object-fit: contain;
+    height: 47px !important;
+    max-width: 90px !important;
+    margin-left: 0rem !important;
+  }
+  .notZoomed {
+    transform: scale(1) !important;
+    object-fit: contain;
+    height: 47px;
+    max-width: 90px;
+    margin-left: -1rem !important ;
+    margin-top: 0 !important;
+  }
+  .notZoomed:first-child {
+    margin-top: 0 !important;
+  }
+
+  .notZoomed:last-child {
+    transform: scale(1) !important;
+    object-fit: contain;
+    height: 47px;
+    max-width: 90px;
+    margin-left: 0 !important ;
+  }
+  .zoomed {
+    margin-left: 1.5rem;
+    margin-top: 2rem;
+    z-index: 3;
+  }
+  .zoomedImage {
+    transform: scale(2);
+    margin-left: 2rem;
+  }
+  /*  .zoomedImage:hover {
+    transform: scale(2);
+    margin-left: 2rem;
+  } */
+  .zoomed:last-child {
+    /* margin-left: 1.5rem; */
+    margin-right: -1rem;
+    margin-top: 2rem;
+    z-index: 3;
+  }
+  .awardedLogoImage:hover {
+    transform: scale(2);
+    margin-left: 2rem;
+    z-index: 3;
+  }
+}

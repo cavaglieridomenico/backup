@@ -1,0 +1,90 @@
+{
+  "flex-layout.row#selling-price": {
+    "props": {
+      "colGap": 2,
+      "preserveLayoutOnMobile": true,
+      "preventHorizontalStretch": true,
+      "marginBottom": 4
+    },
+    "children": [
+      "product-selling-price"
+    ]
+  },
+
+  "flex-layout.row#list-price-savings": {
+    "props": {
+      "colGap": 2,
+      "preserveLayoutOnMobile": true,
+      "preventHorizontalStretch": true,
+      "marginBottom": 2,
+      "marginTop": 5
+    },
+    "children": [
+      "product-list-price"
+      // "product-price-savings"
+    ]
+  },
+  "flex-layout.row#selling-price-savings": {
+    "props": {
+      "preserveLayoutOnMobile": true,
+      "preventHorizontalStretch": false,
+      "blockClass": "priceSummaryCont",
+      "colSizing": "equal"
+    },
+    "children": [
+      "flex-layout.row#summary-price",
+      "flex-layout.col#price-selling",
+      "rich-text#pricePostillaMobile"
+    ]
+  },
+  "flex-layout.row#summary-price": {
+    "children": ["condition-layout.product#showPriceOrNot"],
+    "props": {
+      "fullWidth": false,
+      "preventHorizontalStretch": false,
+      "colGap": 5,
+      "colSizing": "auto",
+      "blockClass": "priceSummarySaving"
+    }
+  },
+  "flex-layout.row#price-selling": {
+    "props": {
+      "marginRight": 5,
+      "blockClass": "sellingPriceRow"
+    },
+    "children": [
+      "condition-layout.product#showPriceOrNotProduct-selling-price-PLP"
+    ]
+  },
+  "condition-layout.product#showPriceOrNotProduct-selling-price-PLP": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "showPrice",
+            "value": "true"
+          }
+        }
+      ],
+      "Then": "product-selling-price#summary"
+    }
+  },
+  "flex-layout.col#price-selling": {
+    "children": ["flex-layout.row#price-selling"]
+  },
+  "condition-layout.product#showPriceOrNot": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "showPrice",
+            "value": "true"
+          }
+        }
+      ],
+      "Then": "product-list-price#summary"
+    }
+  }
+}

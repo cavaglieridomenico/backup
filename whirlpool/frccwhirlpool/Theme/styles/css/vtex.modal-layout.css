@@ -1,0 +1,182 @@
+.paperNotFullScreen {
+  /* height: 80%; (tmp)*/
+  height: fit-content;
+  width: 90%;
+}
+.triggerContainer--modalPDP {
+  width: 100% !important;
+}
+.contentContainer--quickview-main {
+  padding: 2rem;
+}
+.headerContainer--accessoriesPopup {
+  border: none;
+}
+.contentContainer--relatedAccessories {
+  border-top: 1px solid #cacbcc;
+}
+@media screen and (min-width: 40em) {
+  .paper--quickview {
+    height: 260px;
+    width: 580px;
+  }
+
+  .actionsContainer--quickview {
+    padding: 0 2rem 2rem 2rem;
+  }
+}
+
+@media screen and (min-width: 50em) {
+  .paper--quickview {
+    height: 450px;
+    width: 900px;
+  }
+}
+
+@media screen and (min-width: 75em) {
+  .paper--quickview {
+    width: calc(100% - 4rem);
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 82em) {
+  .actionsContainer--quickview {
+    padding: 0 2.5rem 2.5rem 2.5rem;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .triggerContainer--quickview {
+    display: none;
+  }
+}
+
+.paper--quickview {
+  min-width: 320px;
+  max-width: 80%;
+  height: 55rem;
+}
+
+.headerContainer--quickview {
+  border: none;
+  position: absolute;
+  right: 0;
+}
+
+.actionsContainer--quickview {
+  height: 100%;
+  width: 100%;
+  transition: box-shadow 150ms ease-in-out, border-top 150ms ease-in-out;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: transparent;
+  box-shadow: -4px 0px 27px -12px transparent;
+}
+
+.actionsContentWrapper {
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #aaa;
+  padding-top: 1.5rem;
+}
+
+.contentContainer--quickviewContent {
+  padding: 2.5rem 0 2.5rem 2rem;
+  overflow-x: hidden;
+}
+
+.triggerContainer--quickview {
+  /* padding: 0 .75rem; */
+  width: 25px !important;
+  position: relative;
+  /* margin-left: 7rem;   */
+  /* position: absolute; */
+  /* bottom: -5px; */
+  /* right: 0; */
+}
+
+.triggerContainer {
+  outline: none;
+  opacity: 1 !important;
+  transition: none !important;
+  width: 100%;
+}
+
+.triggerContainer--repairScrapModalContainer {
+  height: 100%;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+}
+
+.triggerContainer--scrapModalContainer {
+  height: 100%;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+}
+
+.actionsContainer--quickview:not(.actionsContainerEndOfContent--quickview) {
+  border-top-color: rgb(238, 238, 238);
+  box-shadow: -4px 0px 27px -12px rgba(0, 0, 0, 0.64);
+}
+
+.actionsContainer--quickview:not(.actionsContainerEndOfContent--quickview)
+  .actionsContentWrapper {
+  border-top-color: transparent;
+}
+
+.closeButton {
+  padding-right: 1rem;
+}
+
+.paper--product-gifts {
+  padding: 1.5rem;
+}
+.paper--serviceModalContainer {
+  max-width: 550px;
+}
+
+@media only screen and (max-width: 600px) {
+  .paper--serviceModalContainer {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    max-width: 500px;
+    max-height: fit-content;
+  }
+}
+
+.headerContainer--serviceModalHeader {
+  align-self: center;
+  justify-self: center;
+  border: none;
+}
+
+.closeButton--serviceModalHeader {
+  position: absolute;
+  top: 5px;
+  right: 0px;
+}
+.triggerContainer--modalSubscription {
+  width: 40%;
+  box-sizing: border-box;
+}
+.paper--modalSubscriptionContainer {
+  width: 60%;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+}
+@media only screen and (max-width: 640px) {
+  .triggerContainer--modalSubscription {
+    width: 100%;
+  }
+  .paper--modalSubscriptionContainer {
+    width: 100%;
+    height: 100%;
+  }
+}

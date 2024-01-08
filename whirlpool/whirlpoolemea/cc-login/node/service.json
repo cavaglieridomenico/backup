@@ -1,0 +1,52 @@
+{
+  "memory": 256,
+  "ttl": 60,
+  "timeout": 40,
+  "minReplicas": 10,
+  "maxReplicas": 100,
+  "workers": 4,
+  "events": {
+    "newOrder": {
+      "sender": "vtex.orders-broadcast",
+      "topics": ["order-created"]
+    }
+  },
+  "routes": {
+    "login": {
+      "path": "/_v/api/account/login",
+      "public": true
+    },
+    "initSignUp": {
+      "path": "/_v/api/account/signup",
+      "public": true
+    },
+    "initResetPassword": {
+      "path": "/_v/api/account/resetpassword",
+      "public": true
+    },
+    "setAccountPassword": {
+      "path": "/_v/api/account/setpassword",
+      "public": true
+    },
+    "authorizeVIP": {
+      "path": "/_v/api/account/authorizeVIP",
+      "public": true
+    },
+    "isVIPAuthorized": {
+      "path": "/_v/api/account/isVIPAuthorized",
+      "public": true
+    },
+    "statistics": {
+      "path": "/_v/api/order/:orderId/statistics",
+      "public": true
+    },
+    "extractFailedRegistrations": {
+      "path": "/_v/api/login-logs/extract-failed-registrations",
+      "public": true
+    },
+    "extractCorrectRegistrations": {
+      "path": "/_v/api/login-logs/extract-correct-registrations",
+      "public": true
+    }
+  }
+}

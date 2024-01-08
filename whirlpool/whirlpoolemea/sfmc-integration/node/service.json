@@ -1,0 +1,64 @@
+{
+  "memory": 256,
+  "ttl": 10,
+  "timeout": 60,
+  "minReplicas": 2,
+  "maxReplicas": 4,
+  "workers": 1,
+  "events": {
+    "newOrder": {
+      "sender": "vtex.orders-broadcast",
+      "topics": ["payment-approved", "window-to-cancel", "handling"]
+    },
+    "newInvitation": {
+      "keys": ["ff-new-invitation"]
+    },
+    "invitationAccepted": {
+      "keys": ["ff-invitation-accepted"]
+    },
+    "dropPriceAlert":{
+      "keys": ["broadcaster.notification"]
+    },
+    "backInStock": {
+      "keys": ["back-in-stock"]
+    }
+  },
+  "routes": {
+    "createOrder":{
+      "path": "/app/sfmc/order/:orderId/confirm",
+      "public": true
+    },
+    "cancelOrder":{
+      "path": "/app/sfmc/order/:orderId/cancel",
+      "public": true
+    },
+    "getProduct":{
+      "path": "/app/sfmc/catalog",
+      "public": true
+    },
+    "refundOrder":{
+      "path": "/app/sfmc/order/refund",
+      "public": true
+    },
+    "returnOrder":{
+      "path": "/app/sfmc/order/return",
+      "public": true
+    },
+    "getProductRecommendations":{
+      "path": "/app/sfmc/recommendations",
+      "public": true
+    },
+    "categoryAdvice":{
+      "path": "/app/sfmc/categoryAdvise",
+      "public": true
+    },
+    "productsComparisonEmail":{
+      "path":"/app/sfmc/productsComparison",
+      "public": true
+    },
+    "dropPriceExpire":{
+      "path": "/app/sfmc/dropPriceExpire",
+      "public": true
+    }
+  }
+}

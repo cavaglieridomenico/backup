@@ -1,0 +1,1181 @@
+{
+  "store.custom#catalog": {
+    "blocks": ["flex-layout.row#department-container"]
+  },
+  "flex-layout.row#department-container": {
+    "children": ["flex-layout.col#department-container"],
+    "props": {
+      "blockClass": "departmentContainer"
+    }
+  },
+  "flex-layout.col#department-container": {
+    "children": [
+      // "breadcrumb-custom-ru",
+      "rich-text#department-title",
+      "flex-layout.row#department-categories-container",
+      "flex-layout.col#firstCarouselParentContainer",
+      "flex-layout.col#secondCarouselParentContainer",
+      "flex-layout.col#thirdCarouselParentContainer",
+      "flex-layout.col#fourthCarouselParentContainer",
+      "flex-layout.col#fifthCarouselParentContainer",
+      "flex-layout.col#sixthCarouselParentContainer"
+    ]
+  },
+  "rich-text#department-title": {
+    "props": {
+      "text": "# Catalogue",
+      "blockClass": "departmentTitle"
+    }
+  },
+  "flex-layout.row#department-categories-container": {
+    "children": [
+      "flex-layout.col#cooking-category-container",
+      "flex-layout.col#cooling-category-container",
+      "flex-layout.col#dishwashing-category-container",
+      "flex-layout.col#washing-machines-category-container",
+      "flex-layout.col#built-in-category-container",
+      "flex-layout.col#professional-appliances-category-container",
+      "flex-layout.col#kondicionery-category-container"
+    ],
+    "props": {
+      "blockClass": "categoriesContainer"
+    }
+  },
+  /*COOKING CATEGORY*/
+  "flex-layout.col#cooking-category-container": {
+    "children": [
+      "image#cooking-icon",
+      "flex-layout.col#cooking-category-texts"
+    ],
+    "props": {
+      "blockClass": "categoryContainer"
+    }
+  },
+  "image#cooking-icon": {
+    "props": {
+      "src": "assets/catalog/cooking-icon.svg",
+      "blockClass": "categoryIcon"
+    }
+  },
+  "flex-layout.col#cooking-category-texts": {
+    "children": [
+      "link#cooking-title",
+      "toggle-layout#cooking-subCategory-1",
+      "toggle-layout#cooking-subCategory-2",
+      "toggle-layout#cooking-subCategory-3",
+      "toggle-layout#cooking-subCategory-4",
+      "toggle-layout#cooking-subCategory-5",
+      "toggle-layout#cooking-subCategory-6"
+    ],
+    "props": {
+      "blockClass": "categoryTextsContainer"
+    }
+  },
+  "link#cooking-title": {
+    "props": {
+      "label": "Приготовление пищи",
+      "href": "/catalog/prigotovlenie-pischi",
+      "blockClass": "categoryTitle"
+    }
+  },
+  "toggle-layout#cooking-subCategory-1": {
+    "children": ["link#cooking-subCategory-1"]
+  },
+  "toggle-layout#cooking-subCategory-2": {
+    "children": ["link#cooking-subCategory-2"]
+  },
+  "toggle-layout#cooking-subCategory-3": {
+    "children": ["link#cooking-subCategory-3"]
+  },
+  "toggle-layout#cooking-subCategory-4": {
+    "children": ["link#cooking-subCategory-4"]
+  },
+  "toggle-layout#cooking-subCategory-5": {
+    "children": ["link#cooking-subCategory-5"]
+  },
+  "toggle-layout#cooking-subCategory-6": {
+    "children": ["link#cooking-subCategory-6"]
+  },
+  "link#cooking-subCategory-1": {
+    "props": {
+      "label": "Духовые шкафы",
+      "href": "/catalog/duhovye-shkafy",
+      "blockClass": "subCategoryTitle"
+    }
+  },
+  "link#cooking-subCategory-2": {
+    "props": {
+      "label": "Варочные панели",
+      "href": "/catalog/varochnye-paneli",
+      "blockClass": "subCategoryTitle"
+    }
+  },
+  "link#cooking-subCategory-3": {
+    "props": {
+      "label": "Кухонные плиты",
+      "href": "/catalog/kuhonnye-plity",
+      "blockClass": "subCategoryTitle"
+    }
+  },
+  "link#cooking-subCategory-4": {
+    "props": {
+      "label": "Вытяжки",
+      "href": "/catalog/kuhonnye-vytyazhki",
+      "blockClass": "subCategoryTitle"
+    }
+  },
+  "link#cooking-subCategory-5": {
+    "props": {
+      "label": "Микроволновые печи",
+      "href": "/catalog/mikrovolnovye-pechi",
+      "blockClass": "subCategoryTitle"
+    }
+  },
+  "link#cooking-subCategory-6": {
+    "props": {
+      "label": "Шкафы для подогрева посуды",
+      "href": "/catalog/shkafy-dlya-razogreva-posudy",
+      "blockClass": "subCategoryTitle"
+    }
+  },
+  /*COOLING CATEGORY*/
+  "flex-layout.col#cooling-category-container": {
+    "children": [
+      "image#cooling-icon",
+      "flex-layout.col#cooling-category-texts"
+    ],
+    "props": {
+      "blockClass": "categoryContainer"
+    }
+  },
+  "image#cooling-icon": {
+    "props": {
+      "src": "assets/catalog/cooling-icon.svg",
+      "blockClass": "categoryIcon"
+    }
+  },
+  "flex-layout.col#cooling-category-texts": {
+    "children": [
+      "link#cooling-title",
+      "toggle-layout#cooling-subCategory-1",
+      "toggle-layout#cooling-subCategory-2",
+      "toggle-layout#cooling-subCategory-3",
+      "toggle-layout#cooling-subCategory-4",
+      "toggle-layout#cooling-subCategory-5",
+      "toggle-layout#cooling-subCategory-6"
+    ],
+    "props": {
+      "blockClass": "categoryTextsContainer"
+    }
+  },
+  "link#cooling-title": {
+    "props": {
+      "label": "Охлаждение",
+      "href": "/catalog/hranenie-produktov",
+      "blockClass": "categoryTitle"
+    }
+  },
+  "toggle-layout#cooling-subCategory-1": {
+    "children": ["link#cooling-subCategory-1"]
+  },
+  "toggle-layout#cooling-subCategory-2": {
+    "children": ["link#cooling-subCategory-2"]
+  },
+  "toggle-layout#cooling-subCategory-3": {
+    "children": ["link#cooling-subCategory-3"]
+  },
+  "toggle-layout#cooling-subCategory-4": {
+    "children": ["link#cooling-subCategory-4"]
+  },
+  "toggle-layout#cooling-subCategory-5": {
+    "children": ["link#cooling-subCategory-5"]
+  },
+  "toggle-layout#cooling-subCategory-6": {
+    "children": ["link#cooling-subCategory-6"]
+  },
+  "link#cooling-subCategory-1": {
+    "props": {
+      "label": "Все холодильники",
+      "href": "/catalog/holodilniki",
+      "blockClass": "subCategoryTitle"
+    }
+  },
+  "link#cooling-subCategory-2": {
+    "props": {
+      "label": "Отдельностоящие холодильники",
+      "href": "/catalog/holodilniki/otdelnostoyashchie",
+      "blockClass": "subCategoryTitle"
+    }
+  },
+  "link#cooling-subCategory-3": {
+    "props": {
+      "label": "Встраиваемые холодильники",
+      "href": "/catalog/holodilniki/vstraivaemye",
+      "blockClass": "subCategoryTitle"
+    }
+  },
+  "link#cooling-subCategory-4": {
+    "props": {
+      "label": "Узкие холодильники",
+      "href": "/catalog/holodilniki/55-sm",
+      "blockClass": "subCategoryTitle"
+    }
+  },
+  "link#cooling-subCategory-5": {
+    "props": {
+      "label": "Холодильники No Frost",
+      "href": "/catalog/holodilniki/no-frost",
+      "blockClass": "subCategoryTitle"
+    }
+  },
+  "link#cooling-subCategory-6": {
+    "props": {
+      "label": "Морозильные камеры",
+      "href": "/catalog/morozilnye-kamery",
+      "blockClass": "subCategoryTitle"
+    }
+  },
+  /*DISHWASHING CATEGORY*/
+  "flex-layout.col#dishwashing-category-container": {
+    "children": [
+      "image#dishwashing-icon",
+      "flex-layout.col#dishwashing-category-texts"
+    ],
+    "props": {
+      "blockClass": "categoryContainer"
+    }
+  },
+  "image#dishwashing-icon": {
+    "props": {
+      "src": "assets/catalog/dishwasher-icon.svg",
+      "blockClass": "categoryIcon"
+    }
+  },
+  "flex-layout.col#dishwashing-category-texts": {
+    "children": [
+      "link#dishwashing-title",
+      "toggle-layout#dishwashing-subCategory-1",
+      "toggle-layout#dishwashing-subCategory-2",
+      "toggle-layout#dishwashing-subCategory-3",
+      "toggle-layout#dishwashing-subCategory-4"
+    ],
+    "props": {
+      "blockClass": "categoryTextsContainer"
+    }
+  },
+  "link#dishwashing-title": {
+    "props": {
+      "label": "Мытье посуды",
+      "href": "/catalog/posudomoechnye-mashiny",
+      "blockClass": "categoryTitle"
+    }
+  },
+  "toggle-layout#dishwashing-subCategory-1": {
+    "children": ["link#dishwashing-subCategory-1"]
+  },
+  "toggle-layout#dishwashing-subCategory-2": {
+    "children": ["link#dishwashing-subCategory-2"]
+  },
+  "toggle-layout#dishwashing-subCategory-3": {
+    "children": ["link#dishwashing-subCategory-3"]
+  },
+  "toggle-layout#dishwashing-subCategory-4": {
+    "children": ["link#dishwashing-subCategory-4"]
+  },
+  "link#dishwashing-subCategory-1": {
+    "props": {
+      "label": "Посудомоечные машины",
+      "href": "/catalog/posudomoechnye-mashiny",
+      "blockClass": "subCategoryTitle"
+    }
+  },
+  "link#dishwashing-subCategory-2": {
+    "props": {
+      "label": "Отдельностоящие посудомоечные машины",
+      "href": "/catalog/posudomoechnye-mashiny/otdelnostoyashchie",
+      "blockClass": "subCategoryTitle"
+    }
+  },
+  "link#dishwashing-subCategory-3": {
+    "props": {
+      "label": "Встраиваемые посудомоечные машины",
+      "href": "/catalog/posudomoechnye-mashiny/vstraivaemye",
+      "blockClass": "subCategoryTitle"
+    }
+  },
+  "link#dishwashing-subCategory-4": {
+    "props": {
+      "label": "Узкие посудомоечные машины",
+      "href": "/catalog/posudomoechnye-mashiny/uzkie-45-sm",
+      "blockClass": "subCategoryTitle"
+    }
+  },
+  /*WASHING MACHINES CATEGORY*/
+  "flex-layout.col#washing-machines-category-container": {
+    "children": [
+      "image#washing-machines-icon",
+      "flex-layout.col#washing-machines-category-texts"
+    ],
+    "props": {
+      "blockClass": "categoryContainer"
+    }
+  },
+  "image#washing-machines-icon": {
+    "props": {
+      "src": "assets/catalog/washing-machine-icon.svg",
+      "blockClass": "categoryIcon"
+    }
+  },
+  "flex-layout.col#washing-machines-category-texts": {
+    "children": [
+      "link#washing-machines-title",
+      "toggle-layout#washing-machines-subCategory-1",
+      "toggle-layout#washing-machines-subCategory-2",
+      "toggle-layout#washing-machines-subCategory-3",
+      "toggle-layout#washing-machines-subCategory-4"
+    ],
+    "props": {
+      "blockClass": "categoryTextsContainer"
+    }
+  },
+  "link#washing-machines-title": {
+    "props": {
+      "label": "Стирка и сушка белья",
+      "href": "/catalog/zabota-o-tkanyah",
+      "blockClass": "categoryTitle"
+    }
+  },
+  "toggle-layout#washing-machines-subCategory-1": {
+    "children": ["link#washing-machines-subCategory-1"]
+  },
+  "toggle-layout#washing-machines-subCategory-2": {
+    "children": ["link#washing-machines-subCategory-2"]
+  },
+  "toggle-layout#washing-machines-subCategory-3": {
+    "children": ["link#washing-machines-subCategory-3"]
+  },
+  "toggle-layout#washing-machines-subCategory-4": {
+    "children": ["link#washing-machines-subCategory-4"]
+  },
+  "link#washing-machines-subCategory-1": {
+    "props": {
+      "label": "Стиральные машины",
+      "href": "/catalog/stiralnye-mashiny",
+      "blockClass": "subCategoryTitle"
+    }
+  },
+  "link#washing-machines-subCategory-2": {
+    "props": {
+      "label": "Сушильные машины",
+      "href": "/catalog/sushilnye-mashiny",
+      "blockClass": "subCategoryTitle"
+    }
+  },
+  "link#washing-machines-subCategory-3": {
+    "props": {
+      "label": "Стиральные машины с сушкой",
+      "href": "/catalog/stiralnye-mashiny-s-sushkoj",
+      "blockClass": "subCategoryTitle"
+    }
+  },
+  "link#washing-machines-subCategory-4": {
+    "props": {
+      "label": "Встраиваемые стиральные машины",
+      "href": "/catalog/stiralnye-mashiny/vstraivaemye",
+      "blockClass": "subCategoryTitle"
+    }
+  },
+  /*BUILT-IN CATEGORY*/
+  "flex-layout.col#built-in-category-container": {
+    "children": [
+      "image#built-in-icon",
+      "flex-layout.col#built-in-category-texts"
+    ],
+    "props": {
+      "blockClass": "categoryContainer"
+    }
+  },
+  "image#built-in-icon": {
+    "props": {
+      "src": "assets/catalog/built-in-icon.svg",
+      "blockClass": "categoryIcon"
+    }
+  },
+  "flex-layout.col#built-in-category-texts": {
+    "children": [
+      "link#built-in-title",
+      "toggle-layout#built-in-subCategory-1",
+      "toggle-layout#built-in-subCategory-2",
+      "toggle-layout#built-in-subCategory-3",
+      "toggle-layout#built-in-subCategory-4",
+      "toggle-layout#built-in-subCategory-5"
+    ],
+    "props": {
+      "blockClass": "categoryTextsContainer"
+    }
+  },
+  "link#built-in-title": {
+    "props": {
+      "label": "Встраиваемая техника",
+      "href": "/catalog/vstraivaemaya-tehnika",
+      "blockClass": "categoryTitle"
+    }
+  },
+  "toggle-layout#built-in-subCategory-1": {
+    "children": ["link#built-in-subCategory-1"]
+  },
+  "toggle-layout#built-in-subCategory-2": {
+    "children": ["link#built-in-subCategory-2"]
+  },
+  "toggle-layout#built-in-subCategory-3": {
+    "children": ["link#built-in-subCategory-3"]
+  },
+  "toggle-layout#built-in-subCategory-4": {
+    "children": ["link#built-in-subCategory-4"]
+  },
+  "toggle-layout#built-in-subCategory-5": {
+    "children": ["link#built-in-subCategory-5"]
+  },
+  "toggle-layout#built-in-subCategory-6": {
+    "children": ["link#built-in-subCategory-6"]
+  },
+  "link#built-in-subCategory-1": {
+    "props": {
+      "label": "Встраиваемые холодильники",
+      "href": "/catalog/holodilniki/vstraivaemye",
+      "blockClass": "subCategoryTitle"
+    }
+  },
+  "link#built-in-subCategory-2": {
+    "props": {
+      "label": "Встраиваемые стиральные машины",
+      "href": "/catalog/stiralnye-mashiny/vstraivaemye",
+      "blockClass": "subCategoryTitle"
+    }
+  },
+  "link#built-in-subCategory-3": {
+    "props": {
+      "label": "Встраиваемые посудомоечные машины",
+      "href": "/catalog/posudomoechnye-mashiny/vstraivaemye",
+      "blockClass": "subCategoryTitle"
+    }
+  },
+  "link#built-in-subCategory-4": {
+    "props": {
+      "label": "Встраиваемые варочные панели",
+      "href": "/catalog/varochnye-paneli",
+      "blockClass": "subCategoryTitle"
+    }
+  },
+  "link#built-in-subCategory-5": {
+    "props": {
+      "label": "Встраиваемые духовые шкафы",
+      "href": "/catalog/duhovye-shkafy",
+      "blockClass": "subCategoryTitle"
+    }
+  },
+  "link#built-in-subCategory-6": {
+    "props": {
+      "label": "Встраиваемые кофемашины",
+      "href": "/catalog/kofemashiny",
+      "blockClass": "subCategoryTitle"
+    }
+  },
+  /*PROFESSIONAL APPLIANCES CATEGORY*/
+  "flex-layout.col#professional-appliances-category-container": {
+    "children": [
+      "image#professional-appliances-icon",
+      "flex-layout.col#professional-appliances-category-texts"
+    ],
+    "props": {
+      "blockClass": "categoryContainer"
+    }
+  },
+  "image#professional-appliances-icon": {
+    "props": {
+      "src": "assets/catalog/professional-appliances-icon.svg",
+      "blockClass": "categoryIcon"
+    }
+  },
+  "flex-layout.col#professional-appliances-category-texts": {
+    "children": [
+      "link#professional-appliances-title",
+      "toggle-layout#professional-appliances-subCategory-1",
+      "toggle-layout#professional-appliances-subCategory-2",
+      "toggle-layout#professional-appliances-subCategory-3"
+    ],
+    "props": {
+      "blockClass": "categoryTextsContainer"
+    }
+  },
+  "link#professional-appliances-title": {
+    "props": {
+      "label": "TECHNOLOGIE PROFESSIONNELLE",
+      "href": "/catalog/professionalnaya-tehnika",
+      "blockClass": "categoryTitle"
+    }
+  },
+  "toggle-layout#professional-appliances-subCategory-1": {
+    "children": ["link#professional-appliances-subCategory-1"]
+  },
+  "toggle-layout#professional-appliances-subCategory-2": {
+    "children": ["link#professional-appliances-subCategory-2"]
+  },
+  "toggle-layout#professional-appliances-subCategory-3": {
+    "children": ["link#professional-appliances-subCategory-3"]
+  },
+  "link#professional-appliances-subCategory-1": {
+    "props": {
+      "label": "Прачечное оборудование",
+      "href": "/catalog/professionalnaya-tehnika/prachechnoe-oborudovanie",
+      "blockClass": "subCategoryTitle"
+    }
+  },
+  "link#professional-appliances-subCategory-2": {
+    "props": {
+      "label": "Приготовление и термическая обработка пищи",
+      "href": "/catalog/professionalnaya-tehnika/prigotovlenie-i-termicheskaya-obrabotka-pishchi",
+      "blockClass": "subCategoryTitle"
+    }
+  },
+  "link#professional-appliances-subCategory-3": {
+    "props": {
+      "label": "Холодильное оборудование",
+      "href": "/catalog/professionalnaya-tehnika/holodilnoe-oborudovanie",
+      "blockClass": "subCategoryTitle"
+    }
+  },
+  /*KONDICIONERY CATEGORY*/
+  "flex-layout.col#kondicionery-category-container": {
+    "children": [
+      "image#kondicionery-icon",
+      "flex-layout.col#kondicionery-category-texts"
+    ],
+    "props": {
+      "blockClass": "categoryContainer"
+    }
+  },
+  "image#kondicionery-icon": {
+    "props": {
+      "src": "assets/catalog/kondicionery-icon.svg",
+      "blockClass": ["categoryIcon", "kondicioneryIcon"]
+    }
+  },
+  "flex-layout.col#kondicionery-category-texts": {
+    "children": ["link#kondicionery-title"],
+    "props": {
+      "blockClass": "categoryTextsContainer"
+    }
+  },
+  "link#kondicionery-title": {
+    "props": {
+      "label": "Кондиционеры",
+      "href": "/catalog/kondicionery",
+      "blockClass": "categoryTitle"
+    }
+  },
+  /* CATALOG SLIDERS */
+  "flex-layout.col#firstCarouselParentContainer": {
+    "props": {
+      "preventHorizontalStretch": false
+    },
+    "children": [
+      "flex-layout.row#firstCarouselTexts",
+      "flex-layout.row#catalogFilterLabelContainer",
+      "flex-layout.row#firstCarouselContainer"
+    ]
+  },
+  "flex-layout.row#firstCarouselContainer": {
+    "props": {
+      "blockClass": ["firstRowBannerCarusel1", "catalogCarouselContainer"],
+      "preventHorizontalStretch": false
+    },
+    "children": [
+      "flex-layout.col#firstCarouselImage",
+      "flex-layout.col#firstCarousel"
+    ]
+  },
+  //IMAGE
+  "flex-layout.col#firstCarouselImage": {
+    "children": ["info-card#firstCarouselImage"],
+    "props": {
+      "width": "24%",
+      "blockClass": "catalogCarouselImageContainer"
+    }
+  },
+  "info-card#firstCarouselImage": {
+    "props": {
+      "id": "info-card-wcollection",
+      "isFullModeStyle": true,
+      "textPosition": "center",
+      "textAlignment": "center",
+      "imageUrl": "assets/bannerHp/image4.png",
+      "mobileImageUrl": "assets/bannerHp/image4.png",
+      "headline": "W-COLLECTION",
+      "subhead": "Оцените возможности  «умного» приготовления пищи с технологией 6th SENSE**",
+      "callToActionMode": "none",
+      "blockClass": ["wcollectionCardhp", "catalogCarouselImage"]
+    }
+  },
+  //CAROUSEL
+  "flex-layout.col#firstCarousel": {
+    "children": ["list-context.product-list#shelfBlockProductFirstCarousel"],
+    "props": {
+      "width": "75%",
+      "blockClass": "carouselContainer"
+    }
+  },
+  //TEXTS
+  "flex-layout.row#firstCarouselTexts": {
+    "children": [
+      "flex-layout.col#firstCarouselTitle",
+      "flex-layout.col#firstCarouselShowAll"
+    ],
+    "props": {
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "blockClass": ["newProducts--row", "catalogCarouselTextsContainer"]
+    }
+  },
+  "flex-layout.col#firstCarouselTitle": {
+    "children": ["rich-text#firstCarouselTitle"],
+    "props": {
+      "blockClass": "newProducts-title"
+    }
+  },
+  "flex-layout.col#firstCarouselShowAll": {
+    "children": ["link#firstCarouselShowAll"],
+    "props": {
+      "blockClass": ["newProducts-seeAll-link", "catalog-seeAll-link"]
+    }
+  },
+  "rich-text#firstCarouselTitle": {
+    "props": {
+      "text": "### Акции",
+      "blockClass": "titleNew"
+    }
+  },
+  "link#firstCarouselShowAll": {
+    "props": {
+      "label": "voir tout",
+      "href": "/catalog/tovary-so-skidkoj",
+      "blockClass": "linkSeeAll"
+    }
+  },
+  //SLIDER
+  "list-context.product-list#shelfBlockProductFirstCarousel": {
+    "blocks": ["product-summary.shelf"],
+    "children": ["slider-layout#catalogSlider"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC",
+      "collection": "190"
+    }
+  },
+  //SECOND SLIDER
+  "flex-layout.col#secondCarouselParentContainer": {
+    "props": {
+      "preventHorizontalStretch": false
+    },
+    "children": [
+      "flex-layout.row#secondCarouselTexts",
+      "flex-layout.row#catalogFilterLabelContainer",
+      "flex-layout.row#secondCarouselContainer"
+    ]
+  },
+  "flex-layout.row#secondCarouselContainer": {
+    "props": {
+      "blockClass": ["firstRowBannerCarusel1", "catalogCarouselContainer"],
+      "preventHorizontalStretch": false
+    },
+    "children": [
+      "flex-layout.col#secondCarouselImage",
+      "flex-layout.col#secondCarousel"
+    ]
+  },
+  //IMAGE
+  "flex-layout.col#secondCarouselImage": {
+    "children": ["info-card#secondCarouselImage"],
+    "props": {
+      "width": "24%",
+      "blockClass": "catalogCarouselImageContainer"
+    }
+  },
+  "info-card#secondCarouselImage": {
+    "props": {
+      "id": "info-card-wcollection",
+      "isFullModeStyle": true,
+      "textPosition": "center",
+      "textAlignment": "center",
+      "imageUrl": "assets/bannerHp/image4.png",
+      "mobileImageUrl": "assets/bannerHp/image4.png",
+      "headline": "W-COLLECTION",
+      "subhead": "Оцените возможности  «умного» приготовления пищи с технологией 6th SENSE**",
+      "callToActionMode": "none",
+      "blockClass": ["wcollectionCardhp", "catalogCarouselImage"]
+    }
+  },
+  //CAROUSEL
+  "flex-layout.col#secondCarousel": {
+    "children": ["list-context.product-list#shelfBlockProductSecondCarousel"],
+    "props": {
+      "width": "75%",
+      "blockClass": "carouselContainer"
+    }
+  },
+  //TEXTS
+  "flex-layout.row#secondCarouselTexts": {
+    "children": [
+      "flex-layout.col#secondCarouselTitle",
+      "flex-layout.col#secondCarouselShowAll"
+    ],
+    "props": {
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "blockClass": ["newProducts--row", "catalogCarouselTextsContainer"]
+    }
+  },
+  "flex-layout.col#secondCarouselTitle": {
+    "children": ["rich-text#secondCarouselTitle"],
+    "props": {
+      "blockClass": "newProducts-title"
+    }
+  },
+  "flex-layout.col#secondCarouselShowAll": {
+    "children": ["link#secondCarouselShowAll"],
+    "props": {
+      "blockClass": ["newProducts-seeAll-link", "catalog-seeAll-link"]
+    }
+  },
+  "rich-text#secondCarouselTitle": {
+    "props": {
+      "text": "### Холодильники",
+      "blockClass": "titleNew"
+    }
+  },
+  "link#secondCarouselShowAll": {
+    "props": {
+      "label": "voir tout",
+      "href": "/catalog/holodilniki",
+      "blockClass": "linkSeeAll"
+    }
+  },
+  //SLIDER
+  "list-context.product-list#shelfBlockProductSecondCarousel": {
+    "blocks": ["product-summary.shelf"],
+    "children": ["slider-layout#catalogSlider"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC",
+      "collection": "190"
+    }
+  },
+  //THIRD SLIDER
+  "flex-layout.col#thirdCarouselParentContainer": {
+    "props": {
+      "preventHorizontalStretch": false
+    },
+    "children": [
+      "flex-layout.row#thirdCarouselTexts",
+      "flex-layout.row#catalogFilterLabelContainer",
+      "flex-layout.row#thirdCarouselContainer"
+    ]
+  },
+  "flex-layout.row#thirdCarouselContainer": {
+    "props": {
+      "blockClass": ["firstRowBannerCarusel1", "catalogCarouselContainer"],
+      "preventHorizontalStretch": false
+    },
+    "children": [
+      "flex-layout.col#thirdCarouselImage",
+      "flex-layout.col#thirdCarousel"
+    ]
+  },
+  //IMAGE
+  "flex-layout.col#thirdCarouselImage": {
+    "children": ["info-card#thirdCarouselImage"],
+    "props": {
+      "width": "24%",
+      "blockClass": "catalogCarouselImageContainer"
+    }
+  },
+  "info-card#thirdCarouselImage": {
+    "props": {
+      "id": "info-card-wcollection",
+      "isFullModeStyle": true,
+      "textPosition": "center",
+      "textAlignment": "center",
+      "imageUrl": "assets/bannerHp/image4.png",
+      "mobileImageUrl": "assets/bannerHp/image4.png",
+      "headline": "W-COLLECTION",
+      "subhead": "Оцените возможности  «умного» приготовления пищи с технологией 6th SENSE**",
+      "callToActionMode": "none",
+      "blockClass": ["wcollectionCardhp", "catalogCarouselImage"]
+    }
+  },
+  //CAROUSEL
+  "flex-layout.col#thirdCarousel": {
+    "children": ["list-context.product-list#shelfBlockProductThirdCarousel"],
+    "props": {
+      "width": "75%",
+      "blockClass": "carouselContainer"
+    }
+  },
+  //TEXTS
+  "flex-layout.row#thirdCarouselTexts": {
+    "children": [
+      "flex-layout.col#thirdCarouselTitle",
+      "flex-layout.col#thirdCarouselShowAll"
+    ],
+    "props": {
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "blockClass": ["newProducts--row", "catalogCarouselTextsContainer"]
+    }
+  },
+  "flex-layout.col#thirdCarouselTitle": {
+    "children": ["rich-text#thirdCarouselTitle"],
+    "props": {
+      "blockClass": "newProducts-title"
+    }
+  },
+  "flex-layout.col#thirdCarouselShowAll": {
+    "children": ["link#thirdCarouselShowAll"],
+    "props": {
+      "blockClass": ["newProducts-seeAll-link", "catalog-seeAll-link"]
+    }
+  },
+  "rich-text#thirdCarouselTitle": {
+    "props": {
+      "text": "### Стиральные машины",
+      "blockClass": "titleNew"
+    }
+  },
+  "link#thirdCarouselShowAll": {
+    "props": {
+      "label": "voir tout",
+      "href": "/catalog/stiralnye-mashiny",
+      "blockClass": "linkSeeAll"
+    }
+  },
+  //SLIDER
+  "list-context.product-list#shelfBlockProductThirdCarousel": {
+    "blocks": ["product-summary.shelf"],
+    "children": ["slider-layout#catalogSlider"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC",
+      "collection": "190"
+    }
+  },
+  //FOURTH SLIDER
+  "flex-layout.col#fourthCarouselParentContainer": {
+    "props": {
+      "preventHorizontalStretch": false
+    },
+    "children": [
+      "flex-layout.row#fourthCarouselTexts",
+      "flex-layout.row#catalogFilterLabelContainer",
+      "flex-layout.row#fourthCarouselContainer"
+    ]
+  },
+  "flex-layout.row#fourthCarouselContainer": {
+    "props": {
+      "blockClass": ["firstRowBannerCarusel1", "catalogCarouselContainer"],
+      "preventHorizontalStretch": false
+    },
+    "children": [
+      "flex-layout.col#fourthCarouselImage",
+      "flex-layout.col#fourthCarousel"
+    ]
+  },
+  //IMAGE
+  "flex-layout.col#fourthCarouselImage": {
+    "children": ["info-card#fourthCarouselImage"],
+    "props": {
+      "width": "24%",
+      "blockClass": "catalogCarouselImageContainer"
+    }
+  },
+  "info-card#fourthCarouselImage": {
+    "props": {
+      "id": "info-card-wcollection",
+      "isFullModeStyle": true,
+      "textPosition": "center",
+      "textAlignment": "center",
+      "imageUrl": "assets/bannerHp/image4.png",
+      "mobileImageUrl": "assets/bannerHp/image4.png",
+      "headline": "W-COLLECTION",
+      "subhead": "Оцените возможности  «умного» приготовления пищи с технологией 6th SENSE**",
+      "callToActionMode": "none",
+      "blockClass": ["wcollectionCardhp", "catalogCarouselImage"]
+    }
+  },
+  //CAROUSEL
+  "flex-layout.col#fourthCarousel": {
+    "children": ["list-context.product-list#shelfBlockProductFourthCarousel"],
+    "props": {
+      "width": "75%",
+      "blockClass": "carouselContainer"
+    }
+  },
+  //TEXTS
+  "flex-layout.row#fourthCarouselTexts": {
+    "children": [
+      "flex-layout.col#fourthCarouselTitle",
+      "flex-layout.col#fourthCarouselShowAll"
+    ],
+    "props": {
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "blockClass": ["newProducts--row", "catalogCarouselTextsContainer"]
+    }
+  },
+  "flex-layout.col#fourthCarouselTitle": {
+    "children": ["rich-text#fourthCarouselTitle"],
+    "props": {
+      "blockClass": "newProducts-title"
+    }
+  },
+  "flex-layout.col#fourthCarouselShowAll": {
+    "children": ["link#fourthCarouselShowAll"],
+    "props": {
+      "blockClass": ["newProducts-seeAll-link", "catalog-seeAll-link"]
+    }
+  },
+  "rich-text#fourthCarouselTitle": {
+    "props": {
+      "text": "### Духовые шкафы",
+      "blockClass": "titleNew"
+    }
+  },
+  "link#fourthCarouselShowAll": {
+    "props": {
+      "label": "voir tout",
+      "href": "/catalog/duhovye-shkafy",
+      "blockClass": "linkSeeAll"
+    }
+  },
+  //SLIDER
+  "list-context.product-list#shelfBlockProductFourthCarousel": {
+    "blocks": ["product-summary.shelf"],
+    "children": ["slider-layout#catalogSlider"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC",
+      "collection": "190"
+    }
+  },
+  //FIFTH SLIDER
+  "flex-layout.col#fifthCarouselParentContainer": {
+    "props": {
+      "preventHorizontalStretch": false
+    },
+    "children": [
+      "flex-layout.row#fifthCarouselTexts",
+      "flex-layout.row#catalogFilterLabelContainer",
+      "flex-layout.row#fifthCarouselContainer"
+    ]
+  },
+  "flex-layout.row#fifthCarouselContainer": {
+    "props": {
+      "blockClass": ["firstRowBannerCarusel1", "catalogCarouselContainer"],
+      "preventHorizontalStretch": false
+    },
+    "children": [
+      "flex-layout.col#fifthCarouselImage",
+      "flex-layout.col#fifthCarousel"
+    ]
+  },
+  //IMAGE
+  "flex-layout.col#fifthCarouselImage": {
+    "children": ["info-card#fifthCarouselImage"],
+    "props": {
+      "width": "24%",
+      "blockClass": "catalogCarouselImageContainer"
+    }
+  },
+  "info-card#fifthCarouselImage": {
+    "props": {
+      "id": "info-card-wcollection",
+      "isFullModeStyle": true,
+      "textPosition": "center",
+      "textAlignment": "center",
+      "imageUrl": "assets/bannerHp/image4.png",
+      "mobileImageUrl": "assets/bannerHp/image4.png",
+      "headline": "W-COLLECTION",
+      "subhead": "Оцените возможности  «умного» приготовления пищи с технологией 6th SENSE**",
+      "callToActionMode": "none",
+      "blockClass": ["wcollectionCardhp", "catalogCarouselImage"]
+    }
+  },
+  //CAROUSEL
+  "flex-layout.col#fifthCarousel": {
+    "children": ["list-context.product-list#shelfBlockProductFifthCarousel"],
+    "props": {
+      "width": "75%",
+      "blockClass": "carouselContainer"
+    }
+  },
+  //TEXTS
+  "flex-layout.row#fifthCarouselTexts": {
+    "children": [
+      "flex-layout.col#fifthCarouselTitle",
+      "flex-layout.col#fifthCarouselShowAll"
+    ],
+    "props": {
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "blockClass": ["newProducts--row", "catalogCarouselTextsContainer"]
+    }
+  },
+  "flex-layout.col#fifthCarouselTitle": {
+    "children": ["rich-text#fifthCarouselTitle"],
+    "props": {
+      "blockClass": "newProducts-title"
+    }
+  },
+  "flex-layout.col#fifthCarouselShowAll": {
+    "children": ["link#fifthCarouselShowAll"],
+    "props": {
+      "blockClass": ["newProducts-seeAll-link", "catalog-seeAll-link"]
+    }
+  },
+  "rich-text#fifthCarouselTitle": {
+    "props": {
+      "text": "### Посудомоечные машины",
+      "blockClass": "titleNew"
+    }
+  },
+  "link#fifthCarouselShowAll": {
+    "props": {
+      "label": "voir tout",
+      "href": "/catalog/posudomoechnye-mashiny",
+      "blockClass": "linkSeeAll"
+    }
+  },
+  //SLIDER
+  "list-context.product-list#shelfBlockProductFifthCarousel": {
+    "blocks": ["product-summary.shelf"],
+    "children": ["slider-layout#catalogSlider"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC",
+      "collection": "190"
+    }
+  },
+  //SIXTH SLIDER
+  "flex-layout.col#sixthCarouselParentContainer": {
+    "props": {
+      "preventHorizontalStretch": false
+    },
+    "children": [
+      "flex-layout.row#sixthCarouselTexts",
+      "flex-layout.row#catalogFilterLabelContainer",
+      "flex-layout.row#sixthCarouselContainer"
+    ]
+  },
+
+  "flex-layout.row#catalogFilterLabelContainer": {
+    "props": {
+      "blockClass": ["catalogFilterLabelContainer"],
+      "preventHorizontalStretch": false
+    },
+    "children": ["experimental__visibility-layout#catalog-filter-label"]
+  },
+
+  "flex-layout.row#sixthCarouselContainer": {
+    "props": {
+      "blockClass": ["firstRowBannerCarusel1", "catalogCarouselContainer"],
+      "preventHorizontalStretch": false
+    },
+    "children": [
+      "flex-layout.col#sixthCarouselImage",
+      "flex-layout.col#sixthCarousel"
+    ]
+  },
+  //IMAGE
+  "flex-layout.col#sixthCarouselImage": {
+    "children": ["info-card#sixthCarouselImage"],
+    "props": {
+      "width": "24%",
+      "blockClass": "catalogCarouselImageContainer"
+    }
+  },
+  "info-card#sixthCarouselImage": {
+    "props": {
+      "id": "info-card-wcollection",
+      "isFullModeStyle": true,
+      "textPosition": "center",
+      "textAlignment": "center",
+      "imageUrl": "assets/bannerHp/image4.png",
+      "mobileImageUrl": "assets/bannerHp/image4.png",
+      "headline": "W-COLLECTION",
+      "subhead": "Оцените возможности  «умного» приготовления пищи с технологией 6th SENSE**",
+      "callToActionMode": "none",
+      "blockClass": ["wcollectionCardhp", "catalogCarouselImage"]
+    }
+  },
+  //CAROUSEL
+  "flex-layout.col#sixthCarousel": {
+    "children": ["list-context.product-list#shelfBlockProductSixthCarousel"],
+    "props": {
+      "width": "75%",
+      "blockClass": "carouselContainer"
+    }
+  },
+  //TEXTS
+  "flex-layout.row#sixthCarouselTexts": {
+    "children": [
+      "flex-layout.col#sixthCarouselTitle",
+      "flex-layout.col#sixthCarouselShowAll"
+    ],
+    "props": {
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "blockClass": ["newProducts--row", "catalogCarouselTextsContainer"]
+    }
+  },
+  "flex-layout.col#sixthCarouselTitle": {
+    "children": ["rich-text#sixthCarouselTitle"],
+    "props": {
+      "blockClass": "newProducts-title"
+    }
+  },
+  "flex-layout.col#sixthCarouselShowAll": {
+    "children": ["link#sixthCarouselShowAll"],
+    "props": {
+      "blockClass": ["newProducts-seeAll-link", "catalog-seeAll-link"]
+    }
+  },
+  "rich-text#sixthCarouselTitle": {
+    "props": {
+      "text": "### Варочные панели",
+      "blockClass": "titleNew"
+    }
+  },
+  "link#sixthCarouselShowAll": {
+    "props": {
+      "label": "voir tout",
+      "href": "/catalog/varochnye-paneli",
+      "blockClass": "linkSeeAll"
+    }
+  },
+  //SLIDER
+  "list-context.product-list#shelfBlockProductSixthCarousel": {
+    "blocks": ["product-summary.shelf"],
+    "children": ["slider-layout#catalogSlider"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC",
+      "collection": "190"
+    }
+  },
+  "slider-layout#catalogSlider": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 4,
+        "tablet": 3,
+        "phone": 1
+      },
+      "infinite": true,
+      "fullWidth": false,
+      "blockClass": ["shelfBottom", "catalogSlider"],
+      "showPaginationDots": "never"
+    }
+  }
+}

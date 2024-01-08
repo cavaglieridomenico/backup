@@ -1,0 +1,44 @@
+{
+    "store.custom#remote-html-template": {
+        "children": [
+            "remote-html-embed#remote-html-template",
+            "toggle-layout#carouselRemoteHTMLTemplate",
+            "flex-layout.row#newsletter-row"
+        ]
+    },
+    "remote-html-embed#remote-html-template": {
+        "title": "[HTML-EMBED] - Url html embed",
+        "props": {
+            "sourceUrl": "https://contents.prod.wpsandwatch.com/src/d2c-fr/whirlpool/lave-linge-supreme-silence.html"
+        }
+    },
+    "toggle-layout#carouselRemoteHTMLTemplate": {
+        "title": "[TOGGLE LAYOUT] - Product Slider",
+        "props": {
+            "visible": true
+        },
+        "children": [
+            "list-context.product-list#carouselRemoteHTMLTemplate"
+        ]
+    },
+    "list-context.product-list#carouselRemoteHTMLTemplate": {
+        "title": "[PRODUCT SLIDER] - Product List",
+        "blocks": [
+            "product-summary.shelf#caroselliLanding"
+        ],
+        "children": [
+            "slider-layout#carouselCollectionHome"
+        ],
+        "props": {
+            "collection": "212",
+            "productList": {
+                "maxItems": 10,
+                "itemsPerPage": 5,
+                "minItemsPerPage": 1,
+                "scroll": "BY_PAGE",
+                "arrows": true,
+                "titleText": "Non sai da dove iniziare? Scopri i prodotti Whirlpool più venduti"
+            }
+        }
+    }
+}

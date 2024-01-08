@@ -1,0 +1,40 @@
+.popupDiv{
+  position: relative;
+  z-index: 0;
+  animation: 1s ease-out 0s 1 slideInFromTop;
+  background: linear-gradient(270deg, #222222 0%, #000000 100%);
+}
+
+.hide{
+  display: none;
+}
+
+.closeButton{
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  top: 50%;
+  right: 1%;
+  transform: translate(0, -50%);
+  cursor: pointer;
+  z-index: 999;
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 640px){
+  .closeButton{
+    width: 1rem;
+    height: 1rem;
+    right: 2%;
+  }
+}

@@ -1,0 +1,300 @@
+.container {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  margin: 2rem 30% 0 30%;
+  padding: 2rem 0;
+  border: 3px solid #f9f9f9;
+}
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+.description {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 2rem;
+  font-family: "myriadregular";
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+@media only screen and (max-width: 1100px) {
+  .container {
+    margin: 2rem 0 0 0;
+    border-left: unset;
+    border-right: unset;
+    border-bottom: unset;
+    background-color: #ffffff;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+  .description {
+    margin: 0 0 2rem;
+    text-align: center;
+  }
+  .container :global(.vtex-button) {
+    width: 60%;
+    margin: auto;
+  }
+}
+.containerForm {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+
+}
+.titleForm {
+  margin: auto;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "myriadSemibold";
+  letter-spacing: 0.2rem;
+  margin: 0.6rem;
+  font-size: 2rem;
+}
+.descriptionForm {
+  margin: auto;
+  text-align: center;
+  font-family: "myriadLight";
+  /* margin: 0.6rem; */
+  font-size: 1rem;
+}
+.fieldContainer {
+  margin: 1rem 0 1.5rem;
+  padding: 0;
+}
+.fieldContainer :global(.vtex-input-prefix__group) {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom:none;
+  border-radius: unset;
+
+}
+.submitContainer {
+  margin: 1rem 0 0;
+  padding: 0;
+}
+.informativa {
+  margin: 1rem 0 1.5rem;
+}
+.privacy {
+  text-align: left;
+  font-family: "myriadLight";
+  color: #505050;
+  font-size: 0.9rem;
+}
+.colorEdb112 {
+  color: #fdc100;
+  margin: 0 0.2rem 0 0;
+}
+.informativa :global(.vtex-checkbox__label) {
+  font-family: "myriadLight";
+  text-align: justify;
+  font-size: 0.8rem;
+}
+.submitContainer :global(.vtex-input-prefix__group) {
+  border: none;
+}
+.submitContainer :global(.vtex-styleguide-9-x-input) {
+  cursor: pointer;
+  background-color: #fdc100;
+  color: white;
+  font-family: "myriadSemibold";
+  text-transform: uppercase;
+  width: auto;
+  padding: 0.3rem 1.5rem;
+  margin: 0 auto;
+  border-radius: 0.25rem;
+}
+.submitContainer :global(.vtex-styleguide-9-x-input):hover {
+  background-color: rgba(237, 177, 18, 0.8);
+  border-color: #fdc100;
+}
+.containerForm :global(.vtex-input__label) {
+  font-family: "myriadSemibold";
+ /*display:none;*/
+}
+.successClass {
+  text-align: center;
+  font-family: "myriadSemibold";
+  font-size: 1rem;
+  background: #fdc100;
+  color: white;
+  border-radius: 0;
+  width: 100%;
+  padding: 0.6rem 1.5rem;
+}
+.errorClass {
+  text-align: center;
+  font-family: "myriadSemibold";
+  background: red;
+  color: white;
+  border-radius: unset;
+  width: 100%;
+  padding: 0.5rem;
+  margin: auto;
+}
+.loaderForm {
+  border: 16px solid #f9f9f9;
+  border-radius: 50%;
+  border-top: 16px solid #fdc100;
+  width: 80px;
+  height: 80px;
+  margin: auto;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+.containerFormLeft {
+  width: 50%;
+}
+.containerFormRight {
+ display: flex;
+ flex-direction: column;
+ width: 50%;
+ background: #f2f2f2;
+ padding-left: 1.5rem;
+ padding-right: 1.5rem;
+ padding-bottom: 0.5rem;
+}
+:global(.vtex-modal__modal) {
+  max-width: 46rem !important;
+  border-radius: 2rem;
+  overflow-x: hidden;
+  padding: unset !important;
+}
+
+:global(.vtex-styleguide-9-x-scrollBar){
+padding: 0rem !important;
+}
+
+.containerNoImage {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-bottom: 0.5rem;
+  background: #f2f2f2;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.invalidInput {
+  display: block;
+  color: red;
+  margin-top: 0px;
+  margin-left: 20px;
+  font-size: 0.8rem;
+}
+input {
+  border: 0.5px solid grey;
+  outline: none;
+}
+
+input:required {
+  border: 1px solid red;
+  outline: none;
+}
+
+input:required:focus {
+  border: 1px solid red;
+  outline: none!important;
+  outline-color: none!important;
+}
+
+.informativa
+:global(.vtex-checkbox__line-container) {
+  /* background-color: #ffffff !important; */
+  padding: 0.5rem;
+}
+
+
+/* Media Queries */
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+.informativa {
+  margin: 1rem 0 1.5rem;
+  font-size: 0.8rem;
+}
+.titleForm {
+  font-size: 2.1rem;
+}
+  
+}
+
+@media only screen and (max-width: 768px) {
+  .containerForm img {
+    display: none;
+  }
+  .informativa {
+  margin: 1rem 0 1.5rem;
+  font-size: 0.8rem;
+  }
+ .titleForm {
+  font-size: 2.1rem;
+  }
+ .containerFormRight {
+  width: 100%;
+  padding-bottom: 2rem;
+ }
+ .formButton button{
+  border: none !important;
+  min-width: 14rem !important;
+}
+
+:global(.vtex-modal__modal) {
+  background: #f2f2f2;
+}
+}
+@media only screen and (max-width: 1100px) {
+  .container {
+    margin: 2rem 0 0 0;
+    border-left: unset;
+    border-right: unset;
+    border-bottom: unset;
+    background-color: #ffffff;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+  .description {
+    margin: 0 0 2rem;
+    text-align: center;
+  }
+  .container :global(.vtex-button) {
+    width: 60%;
+    margin: auto;
+  }
+}
+/* @media (min-width: 320px) and (max-width: 640px) {
+  :global(.vtex-modal__modal) {
+  padding: 0!important;
+}
+
+} */
+

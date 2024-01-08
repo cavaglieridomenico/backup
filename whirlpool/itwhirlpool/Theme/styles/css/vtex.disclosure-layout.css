@@ -1,0 +1,207 @@
+.trigger--question {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  outline: none;
+}
+.trigger--question :global(.vtex-rich-text-0-x-paragraph) {
+  font-weight: bold;
+}
+.trigger--question:focus,
+.trigger--question:focus :global(.vtex-rich-text-0-x-paragraph) {
+  color: #fdc100;
+}
+.trigger :global(.vtex-store-icons-0-x-caretIcon) {
+  margin-right: 1rem;
+}
+.content--answer {
+  transition: opacity 250ms ease-in-out, height 250ms ease-in-out,
+    transform 250ms ease-in-out;
+  opacity: 0;
+  height: 0;
+  transform: translate3d(0, -10%, 0);
+}
+.content--answer[data-enter] {
+  opacity: 1;
+  height: fit-content;
+  transform: translate3d(0, 0, 0);
+}
+.content--answer[data-leave] {
+  height: 0;
+  overflow: hidden;
+}
+.trigger:focus {
+  outline: none !important;
+}
+.trigger {
+  border: none !important;
+  width: calc(24px + 3.125rem);
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: none !important;
+}
+.trigger :global(.vtex-rich-text-0-x-headingLevel2--titleTab) {
+  margin: 1.5 !important;
+  font-size: 1.75rem;
+}
+.content--pdpAccordionContent--visible {
+  position: unset !important;
+  height: auto !important;
+  top: unset;
+  /* transition: height 0.3s ease-out !important; */
+}
+/* .content--accordionContentGift--visible {
+  height: 40vh !important;
+}
+.content--accordionContentTopFeature--visible {
+  height: 542vh !important;
+}
+.content--accordionContentDettagliTtecnici--visible {
+  height: 257vh !important;
+} */
+/*  */
+.content--accordionContentGift--hidden {
+  transition: height 0.7s ease !important;
+  height: 0 !important;
+}
+.content {
+  position: absolute;
+  display: block !important;
+  overflow: hidden;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  padding-right: 3.125rem;
+  padding-left: 3.125rem;
+  background-color: white;
+  transition: height 0.7s ease;
+  height: 0;
+}
+
+.content--visible {
+  transition: height 0.7s ease;
+  height: 200px;
+}
+.content--disclosure_content--servizi_aggiuntivi {
+  position: relative;
+  top: unset;
+  padding: 0;
+}
+.trigger--pdpAccordionTrigger {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.trigger--pdpAccordionTrigger :global(.vtex-store-components-3-x-imageElement) {
+  /* margin-top: 3.75rem; */
+  height: 0.8rem;
+  text-transform: uppercase;
+}
+.trigger--topFeature :global(.vtex-rich-text-0-x-heading) {
+  text-align: left;
+  width: 13rem;
+}
+.content--visible {
+  transition: height 0.7s ease;
+  height: 20vh;
+}
+:global(.vtex-sticky-layout-0-x-container--sticky-header) .content--visible {
+  height: 200px;
+}
+/* ACCORDION PRODUCT DETAILS AND DESCRIPTION*/
+.content--ProdAccordionContent {
+  position: relative;
+}
+.trigger--ButtonTriggerAccordion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.content--ProdAccordionContent--visible {
+  height: fit-content;
+}
+.trigger--ButtonTriggerAccordion {
+  background-color: #f9f9f9;
+  padding: 1rem;
+}
+.trigger--ButtonTriggerAccordion--hidden,
+.trigger--pdpAccordionTrigger--hidden {
+  border-bottom: 1px solid #edb112 !important;
+}
+.trigger--ButtonTriggerAccordion--visible,
+.trigger--pdpAccordionTrigger--visible {
+  border-bottom: none !important;
+}
+.content--ProdAccordionContent {
+  padding: 0 1rem;
+}
+
+/* ACCORDION GIFTS*/
+.trigger--accordionGift {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-bottom: 1px solid #edb112 !important;
+}
+
+/* ACCORDION FEATURES*/
+.trigger--topFeature {
+  background-color: #f9f9f9;
+  padding: 1rem;
+}
+.trigger--pdpAccordionTrigger {
+  background-color: #f9f9f9;
+  padding: 1rem;
+}
+.content--relative{
+  position: relative;
+}
+.trigger--triggerFooter{
+  display: flex;
+  width: calc(100% - 2rem) !important;
+  padding: unset !important;
+  margin:  0.5rem 1rem !important;
+}
+.trigger--triggerFooter--hidden{
+  border-bottom: 1px solid black !important;
+}
+.trigger--elettrodomestici--visible, .trigger--accessori--visible{
+  border-bottom: 1px solid black !important;
+}
+.trigger--triggerFooter :global(.vtex-store-components-3-x-imageElement--PlusIcon),
+.trigger--triggerFooter :global(.vtex-store-components-3-x-imageElement--MinusIcon){
+  margin: auto;
+}
+.content--servizio-clienti--visible{
+  height: calc(33.6px * 11);
+}
+.content--leNostrePolicy--visible{
+  height: calc(33.6px * 16);
+}
+.content--laNostraAzienda--visible{
+  height: calc(33.6px * 3);
+}
+.content--collezioni--visible{
+  height: calc(33.6px * 3);
+}
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+  .trigger,
+  .trigger--hidden,
+  .trigger--visible {
+    padding: 0.5rem 1rem;
+    width: max-content;
+  }
+  .content {
+    padding: 0 1rem;
+  }
+  .trigger--pdpAccordionTrigger
+    :global(.vtex-store-components-3-x-imageElement) {
+    width: 1.8rem;
+    height: 0.8rem !important;
+  }
+}

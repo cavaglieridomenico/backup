@@ -1,0 +1,38 @@
+.trigger--mobileFooterMenuTrigger {
+  width: 100%;
+  background: #231f20;
+  border-top: solid 1px #423f40;
+  border-left: 0;
+  border-bottom: 0;
+  border-right: 0;
+  padding: 0 1.5rem;
+  position: relative;
+}
+.trigger--mobileFooterMenuTriggerFirst {
+  border-top: unset !important;
+}
+.trigger--mobileFooterMenuTriggerFirst:focus,
+.trigger--mobileFooterMenuTrigger:focus {
+  outline: none;
+}
+.trigger--mobileFooterMenuTrigger--hidden::after {
+  position: absolute;
+  content: "+";
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #979899;
+  cursor: pointer;
+}
+.trigger--mobileFooterMenuTrigger--visible::after {
+  position: absolute;
+  content: "-";
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #979899;
+  cursor: pointer;
+}
+.content--mobileFooterMenuContent {
+  background: #231f20;
+}

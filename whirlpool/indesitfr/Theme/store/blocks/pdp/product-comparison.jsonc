@@ -1,0 +1,95 @@
+{
+  "store.custom#product-comparison-list": {
+    "blocks": ["comparison-page"]
+  },
+  "comparison-page": {
+    "children": ["slider-layout-group#comparison-page"]
+  },
+
+  "slider-layout-group#comparison-page": {
+    "children": [
+      "product-comparison-block.product-summary-row",
+      "product-comparison-block.grouped-product-specifications"
+    ]
+  },
+  "product-comparison-block.product-summary-row": {
+    "props": {
+      "blockClass": "rowSliderPComparison",
+      "isShowDifferenceDefault": true
+    },
+    "blocks": ["list-context.comparison-product-summary-slider#comparison-page"]
+  },
+  "list-context.comparison-product-summary-slider#comparison-page": {
+    "blocks": ["product-summary.shelf.product-comparison#comparison-page"],
+    "children": ["slider-layout#comparison-page-product-summary"]
+  },
+  "product-summary.shelf.product-comparison#comparison-page": {
+    "children": [
+      "flex-layout.row",
+      "product-summary-image#comparison-page",
+      "product-summary-name",
+      "product-summary-space",
+      "product-list-price#comparison",
+      "flex-layout.row#selling-price-savings"
+    ],
+    "props": {
+      "blockClass": "comparison-page-summary"
+    }
+  },
+  "flex-layout.row": {
+    "children": ["product-comparison-block.close-button"],
+    "props": {
+      "blockClass": "close",
+      "horizontalAlign": "right"
+    }
+  },
+  "product-list-price#comparison": {
+    "props": {
+      "blockClass": "comparison"
+    }
+  },
+  "product-summary-image#comparison-page": {
+    "props": {
+      "width": 200,
+      "heightProp": 200,
+      "showBadge": false
+    }
+  },
+  "product-comparison-block.grouped-product-specifications": {
+    "props": {
+      "productSpecificationGroupsToHide": "Other,CategoryDataCluster_usage,EnergyLogo,Dimensioni_usage,Performance_usage,Caratteristiche_usage,Model,RatingGroupAttrLogo_image,CategoryDataCluster,RatingGroupAttrLogo,Endeca,Document,Programmi_usage,Dettagli del Prodotto,Modello,Documenti_Sintesi,Documenti,allSpecifications,Tecnologia e innovazione,Singleton,Specifica prodotto,ClasseEnergeticaUrl,ClasseEnergetica,SchedaProdotto,SchedaTecnica,UtilizzoManutenzione,Servizi Aggiuntivi,QrCode",
+      "productSpecificationsToHide": "Entrata acqua calda e fredda ?"
+    },
+    "blocks": ["list-context.comparison-row#comparison-page-row"]
+  },
+  "list-context.comparison-row#comparison-page-row": {
+    "children": ["slider-layout#comparison-no-arrows"]
+  },
+  "slider-layout#comparison-page-product-summary": {
+    "props": {
+      "blockClass": "comparison-page",
+      "itemsPerPage": {
+        "desktop": 4,
+        "tablet": 1,
+        "phone": 1
+      },
+      "showPaginationDots": "never",
+      "infinite": true,
+      "fullWidth": true
+    }
+  },
+  "slider-layout#comparison-no-arrows": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 4,
+        "tablet": 1,
+        "phone": 1
+      },
+      "showPaginationDots": "never",
+      "infinite": true,
+      "fullWidth": true,
+      "blockClass": "comparison-page",
+      "showNavigationArrows": "never"
+    }
+  }
+}

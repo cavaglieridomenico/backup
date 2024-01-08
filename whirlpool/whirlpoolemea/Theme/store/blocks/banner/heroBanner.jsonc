@@ -1,0 +1,97 @@
+{
+  "toggle-layout#heroBannerAnto": {
+    "props": {
+      "visible": true
+    },
+    "children": ["flex-layout.row#heroBannerAnto"]
+  },
+  "flex-layout.row#heroBannerAnto": {
+    "props": {
+      "preventHorizontalStretch": false,
+      "fullWidth": true,
+      "blockClass": ["columnPostillaBannerAntonio", "bgColorAntonioHero"]
+    },
+    "children": [
+      "flex-layout.col#leftPartheroBannerAnto",
+      "flex-layout.col#rightPartheroBannerAnto"
+    ]
+  },
+  "flex-layout.col#leftPartheroBannerAnto": {
+    "props": {
+      "width": "40%",
+      "preventVerticalStretch": true,
+      "blockClass": ["columnPostilla", "columnPostillaBottom"]
+    },
+    "children": [
+      "toggle-layout#logoBannerTop",
+      "toggle-layout#BanntitleParagheroBannerAnto",
+      "rich-text#BannTitleheroBannerAnto",
+      "rich-text#BannDescheroBannerAnto",
+      "rich-text#bannerClassicoPostilla"
+    ]
+  },
+  "toggle-layout#BanntitleParagheroBannerAnto": {
+    "props": {
+      "visible": true
+    },
+    "children": ["rich-text#BanntitleParagheroBannerAnto"]
+  },
+  "flex-layout.col#rightPartheroBannerAnto": {
+    "props": {
+      "width": "60%",
+      "blockClass": "columnPostillaImage"
+    },
+    "children": ["image#bannerPostilla"]
+  },
+  "rich-text#BanntitleParagheroBannerAnto": {
+    "props": {
+      "text": "W Collection",
+      "blockClass": ["titlePBannerPostilla", "underlineBannerHeroAnto"]
+    }
+  },
+  "rich-text#BannTitleheroBannerAnto": {
+    "props": {
+      "text": "# Frigorifero combinato 4 porte",
+      "blockClass": "titleHBannerPostilla"
+    }
+  },
+  "rich-text#BannDescheroBannerAnto": {
+    "props": {
+      "text": "33% di spazio extra per frutta e verdura *",
+      "blockClass": "descBannerPostilla"
+    }
+  },
+  "experimental__visibility-layout#heroBannerAnto3": {
+    "props": {
+      "visible": true
+    },
+    "children": ["flex-layout.row#heroBannerAnto3"]
+  },
+  "flex-layout.row#heroBannerAnto3": {
+    "props": {
+      "preventHorizontalStretch": false,
+      "fullWidth": true,
+      "blockClass": [
+        "columnPostillaBannerAntonio",
+        "bgColorAntonioHero",
+        "bgColorAntonioHero3"
+      ]
+    },
+    "children": [
+      "flex-layout.col#leftPartheroBannerAnto3",
+      "flex-layout.col#rightPartheroBannerAnto"
+    ]
+  },
+  "flex-layout.col#leftPartheroBannerAnto3": {
+    "props": {
+      "width": "40%",
+      "preventVerticalStretch": true,
+      "blockClass": ["columnPostilla", "columnPostillaBottom"]
+    },
+    "children": [
+      "rich-text#BannTitleheroBannerAnto",
+      "rich-text#BannDescheroBannerAnto",
+      "rich-text#bannerClassicoPostilla"
+    ]
+  }
+}

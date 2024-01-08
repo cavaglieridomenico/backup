@@ -1,0 +1,11 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+  $(document).on('change','.vtex-my-account-1-x-newsletterBoxContainer input#newsletterOptIn',function(){
+    if($(this)[0].checked){
+      window.dataLayer = window.dataLayer || []
+      window.dataLayer.push({
+        event:"optin_granted"
+      })
+    }
+  })
+</script>

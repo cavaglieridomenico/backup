@@ -1,0 +1,98 @@
+// items.push({
+//   uniqueId: items[i].uniqueId,
+//   id: items[i].id,
+//   productId: items[i].productId,
+//   ean: items[i].ean,
+//   lockId: items[i].lockId,
+//   itemAttachment: {
+//     content: items[i].itemAttachment.content,
+//     name: items[i].itemAttachment.name,
+//   },
+//   attachments: items[i].attachment,
+//   quantity: 1,
+//   seller: items[i].seller,
+//   name: items[i].name,
+//   refId: items[i].refId,
+//   price: items[i].price,
+//   listPrice: items[i].listPrice,
+//   manualPrice: items[i].manualPrice,
+//   priceTags: [
+//     {
+//       name: items[i].priceTags[0].name,
+//       value: items[i].priceTags[0].value / 2, //!!!!!!!!
+//       isPercentual: items[i].priceTags[0].isPercentual,
+//       identifier: items[i].priceTags[0].identifier,
+//       rawValue: items[i].priceTags[0].value / 2, //!!!!!!!!!
+//       rate: items[i].priceTags[0].rate,
+//       jurisCode: items[i].priceTags[0].jurisCode,
+//       jurisType: items[i].priceTags[0].jurisType,
+//       jurisName: items[i].priceTags[0].jurisName,
+//     },
+//   ],
+//   imageUrl: items[i].imageUrl,
+//   detailUrl: items[i].detailUrl,
+//   components: items[i].components,
+//   bundleItems: items[i].bundleItems,
+//   params: items[i].params,
+//   offerings: items[i].offerings,
+//   sellerSku: items[i].sellerSku,
+//   priceValidUntil: items[i].priceValidUntil,
+//   commission: items[i].commission,
+//   tax: items[i].tax,
+//   preSaleDate: items[i].preSaleDate,
+//   additionalInfo: {
+//     brandName: items[i].additionalInfo.brandName,
+//     brandId: items[i].additionalInfo.brandId,
+//     categoriesIds: items[i].additionalInfo.categoriesIds,
+//     categories: [
+//       {
+//         id: items[i].additionalInfo.categories[0].id,
+//         name: items[i].additionalInfo.categories[0].name,
+//       },
+//       {
+//         id: items[i].additionalInfo.categories[1].id,
+//         name: items[i].additionalInfo.categories[1].name,
+//       },
+//       {
+//         id: items[i].additionalInfo.categories[2].id,
+//         name: items[i].additionalInfo.categories[2].name,
+//       },
+//     ],
+//     productClusterId: items[i].additionalInfo.productClusterId,
+//     commercialConditionId: items[i].additionalInfo.commercialConditionId,
+//     dimension: {
+//       cubicweight: items[i].additionalInfo.dimension.cubicweight,
+//       height: items[i].additionalInfo.dimension.height,
+//       length: items[i].additionalInfo.dimension.length,
+//       weight: items[i].additionalInfo.dimension.weight,
+//       width: items[i].additionalInfo.dimension.width,
+//     },
+//     offeringInfo: items[i].additionalInfo.offeringInfo,
+//     offeringType: items[i].additionalInfo.offeringType,
+//     offeringTypeId: items[i].additionalInfo.offeringTypeId,
+//   },
+//   measurementUnit: items[i].measurementUnit,
+//   unitMultiplier: items[i].unitMultiplier,
+//   sellingPrice: items[i].sellingPrice,
+//   isGift: items[i].isGift,
+//   shippingPrice: items[i].shippingPrice,
+//   rewardValue: items[i].rewardValue,
+//   freightCommission: items[i].freightCommission,
+//   priceDefinition: {
+//     sellingPrices: [
+//       {
+//         value: 153400, //!!!!!!
+//         quantity: 1, //!!!!!! -> DEVE DIVENTARE 1
+//       },
+//     ],
+//     calculatedSellingPrice: 153400,
+//     total: items[i].priceDefinition.total / items[i].quantity,
+//   },
+//   taxCode: items[i].taxCode,
+//   parentItemIndex: items[i].parentItemIndex,
+//   parentAssemblyBinding: items[i].parentAssemblyBinding,
+//   callCenterOperator: items[i].callCenterOperator,
+//   serialNumbers: items[i].serialNumbers,
+//   assemblies: items[i].assemblies,
+//   costPrice: items[i].costPrice,
+// });

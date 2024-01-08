@@ -1,0 +1,1544 @@
+{
+  "header": {
+    "blocks": [
+      "header-layout.desktop",
+      "header-layout.mobile"
+    ]
+  },
+  "header.full": {
+    "blocks": [
+      "header-layout.desktop",
+      "header-layout.mobile"
+    ]
+  },
+  "header-layout.desktop": {
+    "title": "Header Desktop",
+    "children": [
+      // "flex-layout.row#fullHeaderCol",
+      "flex-layout.row#newsletter-automatic-popup",
+      "flex-layout.row#fullHeaderColABTest"
+    ]
+  },
+  "flex-layout.row#newsletter-automatic-popup": {
+    "title": "Row - Newsletter Automatic Popup",
+    "children": [
+      "newsletter-automatic-popup"
+    ],
+    "props": {
+      "blockClass": "rowNewsletterAutomaticPopup"
+    }
+  },
+  "flex-layout.row#stickyRow": {
+    "props": {
+      "blockClass": "fullHeaderRow",
+      "width": "100%",
+      "fullWidth": true
+    },
+    "children": [
+      "sticky-layout#desktop"
+    ]
+  },
+  "flex-layout.row#carousel-topRow": {
+    "props": {
+      "blockClass": "fullHeaderRow",
+      "width": "100%",
+      "fullWidth": true
+    },
+    "children": [
+      "slider-layout#banner-carousel-top"
+    ]
+  },
+  "sticky-layout#desktop": {
+    "props": {
+      "blockClass": "sticky-header"
+    },
+    "children": [
+      "stripe-custom#stripe",
+      "flex-layout.row#desktopTop",
+      "flex-layout.row#desktopBottom"
+    ]
+  },
+  "stripe-custom#stripe": {
+    "title": "Stripe Banner",
+    "props": {
+      "blockClass": ""
+    },
+    "children": [
+      "rich-text#stripe"
+    ]
+  },
+  "rich-text#stripe": {
+    "title": "Testo dello Stripe - Pop Up Banner",
+    "props": {
+      "blockClass": "stripe-link",
+      "text": "**We have recently updated our Privacy Notice. Please review the updated version [here](/privacy-policy).**",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER"
+    }
+  },
+  "flex-layout.row#desktopTop": {
+    "props": {
+      "horizontalAlign": "left",
+      "verticalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": true,
+      "blockClass": "headerContentTop"
+    },
+    "children": [
+      "flex-layout.col#leftPartHeaderTop",
+      "flex-layout.col#rightPartHeaderTop"
+    ]
+  },
+  "flex-layout.col#rightPartHeaderTop": {
+    "props": {
+      "blockClass": "leftPartHeaderTop"
+    },
+    "children": [
+      "link.product#headerPhone",
+      "analytics-wrapper#menu-item-Service-Support",
+      "conditional-login",
+      "minicart.v2"
+    ]
+  },
+  "link.product#headerPhone": {
+    "props": {
+      "blockClass": "headerPhone"
+    },
+    "children": [
+      "custom-phone-number-uk"
+    ]
+  },
+  "image#phoneIcon": {
+    "props": {
+      "src": "https://hotpointuk.vtexassets.com/assets/vtex.file-manager-graphql/images/de312258-696c-4738-9dc5-0e6a4e0255b3___d7b256ed6b49240426623e33b5ef9335.png",
+      "link": {
+        "url": "tel:03448224224"
+      },
+      "width": 25,
+      "height": 25,
+      "blockClass": "phoneIconLink"
+    }
+  },
+  "image#phoneIconMobile": {
+    "props": {
+      "src": "https://hotpointuk.vtexassets.com/assets/vtex.file-manager-graphql/images/147f8686-4dd5-4b56-9ba1-13ab27e8b1b7___c869c67d56e6d8e7a1372b0bf2f8f62a.png",
+      "link": {
+        "url": "tel:03448224224"
+      },
+      "width": 25,
+      "height": 25,
+      "blockClass": "phoneIconLink",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "contacts_click",
+      "isPrevent": false,
+      "analyticsType": "telephone"
+    }
+  },
+  "link#phoneNumberLink": {
+    "props": {
+      "href": "tel:03448224224",
+      "label": "03448 224 224",
+      "blockClass": "phoneNumberLink"
+    }
+  },
+  "link#support": {
+    "props": {
+      "href": "/service",
+      "target": "_self",
+      "label": "Service & Support",
+      "isPrevent": false,
+      "useVtexLinkComponent": false,
+      "blockClass": "supportLink"
+    }
+  },
+  "link#spare": {
+    "props": {
+      "href": "/spare-parts",
+      "target": "_blank",
+      "label": "Spare Parts",
+      "blockClass": [
+        "spareAccessoriesHeaderTextLink",
+        "spareAndAccLink"
+      ]
+    }
+  },
+  "link#accessories": {
+    "props": {
+      "href": "/accessories",
+      "target": "_blank",
+      "label": "Accessories",
+      "blockClass": [
+        "spareAccessoriesHeaderTextLink",
+        "spareAndAccLink"
+      ]
+    }
+  },
+  "link#blog": {
+    "props": {
+      "href": "/blog",
+      "target": "_blank",
+      "label": "Blog",
+      "blockClass": [
+        "spareAccessoriesHeaderTextLink",
+        "spareAndAccLink"
+      ]
+    }
+  },
+  "flex-layout.row#desktopBottom": {
+    "props": {
+      "horizontalAlign": "center",
+      "verticalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": true,
+      "blockClass": "headerContent"
+    },
+    "children": [
+      "flex-layout.col#spacer"
+    ] //, "link#account"
+  },
+  "link#account": {
+    "props": {
+      "href": "/account",
+      "blockClass": "loginIcon"
+    },
+    "children": [
+      "image#iconAccount"
+    ]
+  },
+  "image#iconAccount": {
+    "props": {
+      "src": "assets/account-icon.svg"
+    }
+  },
+  "flex-layout.col#search-bar": {
+    "props": {
+      "verticalAlign": "middle",
+      "blockClass": "sb"
+    },
+    "children": [
+      "search-bar#header"
+    ]
+  },
+  "search-bar#header": {
+    "props": {
+      "blockClass": "searchHeader",
+      "displayMode": "search-and-clear-buttons",
+      "placeholder": "Ricerca"
+    }
+  },
+  "flex-layout.col#spacer": {
+    "props": {
+      "width": "grow",
+      "verticalAlign": "middle",
+      "horizontalAlign": "center",
+      "blockClass": "menuItemRow"
+    },
+    "children": [
+      "menu-item#washing-machines",
+      "menu-item#tumble-dryers",
+      "menu-item#washer-dryers",
+      "menu-item#fridge-freezers",
+      "menu-item#fridges",
+      "menu-item#freezers",
+      "menu-item#dishwashers",
+      "menu-item#ovens",
+      "menu-item#hobs",
+      "menu-item#cookers",
+      "menu-item#microwaves",
+      "drawer#showMoreHeader"
+    ]
+  },
+  "menu-item#washing-machines": {
+    "props": {
+      "id": "menu-item-washing-machines",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/washing-machines",
+        "noFollow": true,
+        "text": "Washing Machines"
+      },
+      "blockClass": [
+        "menuItemNew",
+        "menuItemt1",
+        "abTest"
+      ]
+    }
+  },
+  "link#menuItemWashingmachines": {
+    "props": {
+      "blockClass": [
+        "menuItemNew",
+        "menuItemt1"
+      ],
+      "href": "/washingmachines-pre-plp",
+      "label": "Washing Machines"
+    }
+  },
+  "menu-item#tumble-dryers": {
+    "props": {
+      "id": "menu-item-tumble-dryers",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/tumble-dryers",
+        "noFollow": true,
+        "text": "Tumble Dryers"
+      },
+      "blockClass": [
+        "menuItemNew",
+        "menuItemt2",
+        "abTest"
+      ]
+    }
+  },
+  "link#menuItemTumbleDryers": {
+    "props": {
+      "blockClass": [
+        "menuItemNew",
+        "menuItemt2"
+      ],
+      "href": "/TumbleDryers-pre-plp",
+      "label": "Tumble Dryers"
+    }
+  },
+  "menu-item#washer-dryers": {
+    "props": {
+      "id": "menu-item-washer-dryers",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/washer-dryers",
+        "noFollow": true,
+        "text": "Washer Dryers"
+      },
+      "blockClass": [
+        "menuItemNew",
+        "menuItemt3",
+        "abTest"
+      ]
+    }
+  },
+  "link#menuItemWasherDryers": {
+    "props": {
+      "blockClass": [
+        "menuItemNew",
+        "menuItemt3"
+      ],
+      "href": "/WasherDryers-pre-plp",
+      "label": "Washer Dryers"
+    }
+  },
+  "menu-item#fridge-freezers": {
+    "props": {
+      "id": "menu-item-fridge-freezers",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/fridge-freezers",
+        "noFollow": true,
+        "text": "Fridge Freezers"
+      },
+      "blockClass": [
+        "menuItemNew",
+        "menuItemt4",
+        "abTest"
+      ]
+    }
+  },
+  "link#menuItemFridgeFreezers": {
+    "props": {
+      "blockClass": [
+        "menuItemNew",
+        "menuItemt4"
+      ],
+      "href": "/FridgeFreezers-pre-plp",
+      "label": "Fridge Freezers"
+    }
+  },
+  "menu-item#fridges": {
+    "props": {
+      "id": "menu-item-fridges",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/fridges",
+        "noFollow": true,
+        "text": "Fridges"
+      },
+      "blockClass": [
+        "menuItemNew",
+        "menuItemt5",
+        "abTest"
+      ]
+    }
+  },
+  "link#menuItemFridges": {
+    "props": {
+      "blockClass": [
+        "menuItemNew",
+        "menuItemt5"
+      ],
+      "href": "/Fridges-pre-plp",
+      "label": "Fridges"
+    }
+  },
+  "menu-item#freezers": {
+    "props": {
+      "id": "menu-item-freezers",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/freezers",
+        "noFollow": true,
+        "text": "Freezers"
+      },
+      "blockClass": [
+        "menuItemNew",
+        "menuItemt6",
+        "abTest"
+      ]
+    }
+  },
+  "link#menuItemFreezers": {
+    "props": {
+      "blockClass": [
+        "menuItemNew",
+        "menuItemt6"
+      ],
+      "href": "/Freezers-pre-plp",
+      "label": "Freezers"
+    }
+  },
+  "menu-item#dishwashers": {
+    "props": {
+      "id": "menu-item-dishwashers",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/dishwashers",
+        "noFollow": true,
+        "text": "Dishwashers"
+      },
+      "blockClass": [
+        "menuItemNew",
+        "menuItemt7",
+        "abTest"
+      ]
+    }
+  },
+  "link#menuItemDishwashers": {
+    "props": {
+      "blockClass": [
+        "menuItemNew",
+        "menuItemt7"
+      ],
+      "href": "/Dishwashers-pre-plp",
+      "label": "Dishwashers"
+    }
+  },
+  "menu-item#ovens": {
+    "props": {
+      "id": "menu-item-ovens",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/ovens",
+        "noFollow": true,
+        "text": "Ovens"
+      },
+      "blockClass": [
+        "menuItemNew",
+        "menuItemt8",
+        "abTest"
+      ]
+    }
+  },
+  "link#menuItemOvens": {
+    "props": {
+      "blockClass": [
+        "menuItemNew",
+        "menuItemt8"
+      ],
+      "href": "/Ovens-pre-plp",
+      "label": "Ovens"
+    }
+  },
+  "menu-item#hobs": {
+    "props": {
+      "id": "menu-item-hobs",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/hobs",
+        "noFollow": true,
+        "text": "Hobs"
+      },
+      "blockClass": [
+        "menuItemNew",
+        "menuItemt9",
+        "abTest"
+      ]
+    }
+  },
+  "link#menuItemHobs": {
+    "props": {
+      "blockClass": [
+        "menuItemNew",
+        "menuItemt9"
+      ],
+      "href": "/Hobs-pre-plp",
+      "label": "Hobs"
+    }
+  },
+  "menu-item#cookers": {
+    "props": {
+      "id": "menu-item-cookers",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/cookers",
+        "noFollow": true,
+        "text": "Cookers"
+      },
+      "blockClass": [
+        "menuItemNew",
+        "menuItemt9",
+        "abTest"
+      ]
+    }
+  },
+  "link#menuItemCookers": {
+    "props": {
+      "blockClass": [
+        "menuItemNew",
+        "menuItemt10"
+      ],
+      "href": "/Cookers-pre-plp",
+      "label": "Cookers"
+    }
+  },
+  "menu-item#microwaves": {
+    "props": {
+      "id": "menu-item-microwaves",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/microwaves",
+        "noFollow": true,
+        "text": "Microwaves"
+      },
+      "blockClass": [
+        "menuItemNew",
+        "menuItemt11",
+        "abTest"
+      ]
+    }
+  },
+  "link#menuItemMicrowaves": {
+    "props": {
+      "blockClass": [
+        "menuItemNew",
+        "menuItemt11"
+      ],
+      "href": "/Microwaves-pre-plp",
+      "label": "Microwaves"
+    }
+  },
+  "menu-item#hoods": {
+    "props": {
+      "id": "menu-item-microwaves",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/hoods",
+        "noFollow": true,
+        "text": "Hoods"
+      },
+      "blockClass": [
+        "menuItemNew",
+        "menuItemt12",
+        "abTest"
+      ]
+    }
+  },
+  "menu-item#compacts": {
+    "props": {
+      "id": "menu-item-compacts",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/appliances/cooking/compacts",
+        "noFollow": true,
+        "text": "Compacts"
+      },
+      "blockClass": [
+        "menuItemNew",
+        "menuItemt13",
+        "abTest"
+      ]
+    }
+  },
+  //drawer
+  "drawer#showMoreHeader": {
+    "props": {
+      "slideDirection": "rightToLeft",
+      "blockClass": "showMoreHeader"
+    },
+    "blocks": [
+      "drawer-trigger#moreTextHeader"
+    ],
+    "children": [
+      "menu-item#washing-machinesVert",
+      "menu-item#tumble-dryersVert",
+      "menu-item#washer-dryersVert",
+      "menu-item#fridge-freezersVert",
+      "menu-item#fridgesVert",
+      "menu-item#freezersVert",
+      "menu-item#dishwashersVert",
+      "menu-item#ovensVert",
+      "menu-item#hobsVert",
+      "menu-item#cookersVert",
+      "menu-item#microwavesVert",
+      "menu-item#hoodsVert",
+      "menu-item#compactsVert",
+      "menu-item#offersVert"
+    ]
+  },
+  "drawer-trigger#moreTextHeader": {
+    "children": [
+      "rich-text#showMoreHeader"
+    ]
+  },
+  "rich-text#showMoreHeader": {
+    "props": {
+      "text": "More",
+      "blockClass": [
+        "menuItemNew"
+      ]
+    }
+  },
+  "menu-item#washing-machinesVert": {
+    "props": {
+      "id": "menu-item-washing-machinesVert",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/washing-machines",
+        "noFollow": true,
+        "text": "Washing Machines"
+      },
+      "blockClass": [
+        "menuItemNewVert",
+        "menuItemVert1",
+        "abTest"
+      ]
+    }
+  },
+  "menu-item#tumble-dryersVert": {
+    "props": {
+      "id": "menu-item-tumble-dryersVert",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/tumble-dryers",
+        "noFollow": true,
+        "text": "Tumble Dryers"
+      },
+      "blockClass": [
+        "menuItemNewVert",
+        "menuItemVert2",
+        "abTest"
+      ]
+    }
+  },
+  "menu-item#washer-dryersVert": {
+    "props": {
+      "id": "menu-item-washer-dryersVert",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/washer-dryers",
+        "noFollow": true,
+        "text": "Washer Dryers"
+      },
+      "blockClass": [
+        "menuItemNewVert",
+        "menuItemVert3",
+        "abTest"
+      ]
+    }
+  },
+  "menu-item#fridge-freezersVert": {
+    "props": {
+      "id": "menu-item-fridge-freezersVert",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/fridge-freezers",
+        "noFollow": true,
+        "text": "Fridge Freezers"
+      },
+      "blockClass": [
+        "menuItemNewVert",
+        "menuItemVert4",
+        "abTest"
+      ]
+    }
+  },
+  "menu-item#fridgesVert": {
+    "props": {
+      "id": "menu-item-fridgesVert",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/fridges",
+        "noFollow": true,
+        "text": "Fridges"
+      },
+      "blockClass": [
+        "menuItemNewVert",
+        "menuItemVert5",
+        "abTest"
+      ]
+    }
+  },
+  "menu-item#freezersVert": {
+    "props": {
+      "id": "menu-item-freezersVert",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/freezers",
+        "noFollow": true,
+        "text": "Freezers"
+      },
+      "blockClass": [
+        "menuItemNewVert",
+        "menuItemVert6",
+        "abTest"
+      ]
+    }
+  },
+  "menu-item#dishwashersVert": {
+    "props": {
+      "id": "menu-item-dishwashersVert",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/dishwashers",
+        "noFollow": true,
+        "text": "Dishwashers"
+      },
+      "blockClass": [
+        "menuItemNewVert",
+        "menuItemVert7",
+        "abTest"
+      ]
+    }
+  },
+  "menu-item#ovensVert": {
+    "props": {
+      "id": "menu-item-ovensVert",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/ovens",
+        "noFollow": true,
+        "text": "Ovens"
+      },
+      "blockClass": [
+        "menuItemNewVert",
+        "menuItemVert8",
+        "abTest"
+      ]
+    }
+  },
+  "menu-item#hobsVert": {
+    "props": {
+      "id": "menu-item-hobsVert",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/hobs",
+        "noFollow": true,
+        "text": "Hobs"
+      },
+      "blockClass": [
+        "menuItemNewVert",
+        "menuItemVert9",
+        "abTest"
+      ]
+    }
+  },
+  "menu-item#cookersVert": {
+    "props": {
+      "id": "menu-item-cookersVert",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/cookers",
+        "noFollow": true,
+        "text": "Cookers"
+      },
+      "blockClass": [
+        "menuItemNewVert",
+        "menuItemVert10",
+        "abTest"
+      ]
+    }
+  },
+  "menu-item#microwavesVert": {
+    "props": {
+      "id": "menu-item-microwavesVert",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/microwaves",
+        "noFollow": true,
+        "text": "Microwaves"
+      },
+      "blockClass": [
+        "menuItemNewVert",
+        "menuItemVert11",
+        "abTest"
+      ]
+    }
+  },
+  "menu-item#hoodsVert": {
+    "props": {
+      "id": "menu-item-hoodsVert",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/hoods",
+        "noFollow": true,
+        "text": "Hoods"
+      },
+      "blockClass": [
+        "menuItemNewVert",
+        "menuItemVert12",
+        "abTest"
+      ]
+    }
+  },
+  "menu-item#compactsVert": {
+    "props": {
+      "id": "menu-item-compactsVert",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/appliances/cooking/compacts",
+        "noFollow": true,
+        "text": "Compacts"
+      },
+      "blockClass": [
+        "menuItemNewVert",
+        "menuItemVert13",
+        "abTest"
+      ]
+    }
+  },
+  "menu-item#offersVert": {
+    "props": {
+      "id": "menu-item-offersVert",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/no-frost-system-freezers",
+        "noFollow": true,
+        "text": "Offers"
+      },
+      "blockClass": [
+        "menuItemNewVert",
+        "menuItemVert13",
+        "abTest"
+      ]
+    }
+  },
+  "flex-layout.col#leftPartHeaderTop": {
+    "props": {
+      "blockClass": "leftPartHeaderTop"
+    },
+    "children": [
+      "flex-layout.col#logo",
+      "search-bar#headerBlock"
+    ]
+  },
+  "search-bar#headerBlock": {
+    "blocks": [
+      "autocomplete-result-list.v2"
+    ],
+    "props": {
+      "openAutocompleteOnFocus": true,
+      "blockClass": "headerSearch"
+    }
+  },
+  "search-bar#search404": {
+    "blocks": [
+      "autocomplete-result-list.v2"
+    ],
+    "props": {
+      "openAutocompleteOnFocus": true,
+      "blockClass": [
+        "headerSearch",
+        "search404"
+      ]
+    }
+  },
+  "flex-layout.col#logo": {
+    "props": {
+      "verticalAlign": "middle",
+      "blockClass": "logo"
+    },
+    "children": [
+      "link#logo"
+    ]
+  },
+  "link#logo": {
+    "props": {
+      "href": "/",
+      "blockClass": [
+        "logo-container"
+      ]
+    },
+    "children": [
+      "image#logo"
+    ]
+  },
+  "image#logo": {
+    "props": {
+      "height": "100%",
+      "src": "assets/hotpoint_logo.svg",
+      "blockClass": "logoImage"
+    }
+  },
+  "header-layout.mobile": {
+    "title": "Header Mobile",
+    "children": [
+      "flex-layout.row#newsletter-automatic-popup",
+      "flex-layout.row#fullHeaderColMobile"
+      //"flex-layout.row#fullHeaderColMobileABTest"
+    ]
+  },
+  "flex-layout.row#stickyRowMobile": {
+    "props": {
+      "blockClass": "fullHeaderRowMobile",
+      "width": "100%",
+      "fullWidth": "true"
+    },
+    "children": [
+      "sticky-layout#mobile"
+    ]
+  },
+  "flex-layout.row#searchBarRow": {
+    "props": {
+      "blockClass": "searchBarRow"
+    },
+    "children": [
+      "flex-layout.row#searchBar"
+    ]
+  },
+  "flex-layout.row#carousel-topRowMobile": {
+    "props": {
+      "blockClass": "fullHeaderRowMobile",
+      "width": "100%",
+      "fullWidth": "true"
+    },
+    "children": [
+      "slider-layout#banner-carousel-top"
+    ]
+  },
+  "sticky-layout#mobile": {
+    "children": [
+      "stripe-custom#stripe",
+      "flex-layout.row#mobile"
+    ]
+  },
+  "flex-layout.row#mobile": {
+    "children": [
+      "link#logo",
+      "flex-layout.col#space",
+      //"image#phoneIconMobile",
+      "custom-phone-number-uk",
+      "conditional-login",
+      "minicart.v2#mini-mobile",
+      "drawer"
+    ],
+    "props": {
+      "blockClass": "main-header-mobile",
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    }
+  },
+  "drawer": {
+    "props": {
+      "blockClass": "drawer-header-mobile",
+      "slideDirection": "rightToLeft",
+      "renderingStrategy": "eager"
+    },
+    "children": [
+      "dropdown",
+      "analytics-wrapper#menu-item-Accessories-Mobile",
+      "analytics-wrapper#menu-item-Spare-Parts-Mobile",
+      "analytics-wrapper#menu-item-Service-Support-Mobile",
+      "analytics-wrapper#menu-item-Blog-Mobile"
+    ]
+  },
+  "dropdown": {
+    "children": [
+      "analytics-wrapper#menu-item-washing-machines-Mobile",
+      "analytics-wrapper#menu-item-Washer-Dryers-Mobile",
+      "analytics-wrapper#menu-item-tumble-dryers-Mobile",
+      "analytics-wrapper#menu-item-Fridges-Mobile",
+      "analytics-wrapper#menu-item-Freezers-Mobile",
+      "analytics-wrapper#menu-item-Fridge-Freezers-Mobile",
+      "analytics-wrapper#menu-item-Ovens-Mobile",
+      "analytics-wrapper#menu-item-Cookers-Mobile",
+      "analytics-wrapper#menu-item-Hobs-Mobile",
+      "analytics-wrapper#menu-item-Hoods-Mobile",
+      "analytics-wrapper#menu-item-Microwaves-Mobile",
+      "analytics-wrapper#menu-item-Compacts-Mobile",
+      "analytics-wrapper#menu-item-Dishwashers-Mobile",
+      "analytics-wrapper#menu-item-Offers-Mobile",
+      /*
+      "link#menuItemWashingmachinesVertMobile",
+      "link#menuItemTumbleDryersVertMobile",
+      "link#menuItemWasherDryersVertMobile",
+      "link#menuItemFridgeFreezersVertMobile",
+      "link#menuItemFridgesVertMobile",
+      "link#menuItemFreezersVertMobile",
+      "link#menuItemDishwashersVertMobile",
+      "link#menuItemOvensVertMobile",
+      "link#menuItemHobsVertMobile",
+      "link#menuItemCookersVertMobile",
+      "link#menuItemMicrowavesVertMobile",
+      "link#menuItemHoodsVertMobile",
+      "link#menuItemCompactsVertMobile",
+      "link#menuItemOffersVertMobile",
+      */
+      //If you want to add more categories you must add them above this line
+      "link#menuItemEmptyVertMobile"
+      // "flex-layout.row#services-item-mobile"
+    ]
+  },
+  "flex-layout.row#search-mobile": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "searchMobile"
+    },
+    "children": [
+      "disclosure-layout#search-mobile"
+    ]
+  },
+  "disclosure-layout#search-mobile": {
+    "props": {
+      "blockClass": "header-search-mobile"
+    },
+    "children": [
+      "rich-text#SearchMobile",
+      "disclosure-trigger#image-mobile",
+      "disclosure-content#search-bar-mobile"
+    ]
+  },
+  "rich-text#SearchMobile": {
+    "props": {
+      "text": "Search",
+      "blockClass": "search-text-mobile"
+    }
+  },
+  "disclosure-trigger#image-mobile": {
+    "props": {
+      "blockClass": "search-icon-mobile"
+    },
+    "children": [
+      "image#search-mobile"
+    ]
+  },
+  "image#search-mobile": {
+    "props": {
+      "blockClass": "search-icon-mobile",
+      "width": "14px",
+      "src": "assets/search-mobile.svg"
+    }
+  },
+  "disclosure-content#search-bar-mobile": {
+    "props": {
+      "blockClass": "search-bar-mobile"
+    },
+    "children": [
+      "flex-layout.row#searchBar-mobile"
+    ]
+  },
+  "flex-layout.row#searchBar-mobile": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "search-row-mobile"
+    },
+    "children": [
+      "flex-layout.col#search-mobile"
+    ]
+  },
+  "flex-layout.col#search-mobile": {
+    "props": {
+      "width": "grow"
+    },
+    "children": [
+      "search-bar#header-mobile"
+    ]
+  },
+  "search-bar#header-mobile": {
+    "props": {
+      "blockClass": "searchHeaderMobile",
+      "displayMode": "search-and-clear-buttons",
+      "placeholder": "Search"
+    }
+  },
+  "link#menuItemWashingmachinesVertMobile": {
+    "props": {
+      "blockClass": [
+        "menuItemNewVertMobile"
+      ],
+      "href": "/washingmachines-pre-plp",
+      "label": "Washing Machines"
+    }
+  },
+  "link#menuItemTumbleDryersVertMobile": {
+    "props": {
+      "blockClass": [
+        "menuItemNewVertMobile"
+      ],
+      "href": "/TumbleDryers-pre-plp",
+      "label": "Tumble Dryers"
+    }
+  },
+  "link#menuItemWasherDryersVertMobile": {
+    "props": {
+      "blockClass": [
+        "menuItemNewVertMobile"
+      ],
+      "href": "/WasherDryers-pre-plp",
+      "label": "Washer Dryers"
+    }
+  },
+  "link#menuItemFridgeFreezersVertMobile": {
+    "props": {
+      "blockClass": [
+        "menuItemNewVertMobile"
+      ],
+      "href": "/FridgeFreezers-pre-plp",
+      "label": "Fridge Freezers"
+    }
+  },
+  "link#menuItemFridgesVertMobile": {
+    "props": {
+      "blockClass": [
+        "menuItemNewVertMobile"
+      ],
+      "href": "/Fridges-pre-plp",
+      "label": "Fridges"
+    }
+  },
+  "link#menuItemFreezersVertMobile": {
+    "props": {
+      "blockClass": [
+        "menuItemNewVertMobile"
+      ],
+      "href": "/Freezers-pre-plp",
+      "label": "Freezers"
+    }
+  },
+  "link#menuItemDishwashersVertMobile": {
+    "props": {
+      "blockClass": [
+        "menuItemNewVertMobile"
+      ],
+      "href": "/Dishwashers-pre-plp",
+      "label": "Dishwashers"
+    }
+  },
+  "link#menuItemOvensVertMobile": {
+    "props": {
+      "blockClass": [
+        "menuItemNewVertMobile"
+      ],
+      "href": "/Ovens-pre-plp",
+      "label": "Ovens"
+    }
+  },
+  "link#menuItemHobsVertMobile": {
+    "props": {
+      "blockClass": [
+        "menuItemNewVertMobile"
+      ],
+      "href": "/Hobs-pre-plp",
+      "label": "Hobs"
+    }
+  },
+  "link#menuItemCookersVertMobile": {
+    "props": {
+      "blockClass": [
+        "menuItemNewVertMobile"
+      ],
+      "href": "/Cookers-pre-plp",
+      "label": "Cookers"
+    }
+  },
+  "link#menuItemMicrowavesVertMobile": {
+    "props": {
+      "blockClass": [
+        "menuItemNewVertMobile"
+      ],
+      "href": "/Microwaves-pre-plp",
+      "label": "Microwaves"
+    }
+  },
+  "link#menuItemHoodsVertMobile": {
+    "props": {
+      "blockClass": [
+        "menuItemNewVertMobile"
+      ],
+      "href": "/Hoods-pre-plp",
+      "label": "Hoods"
+    }
+  },
+  "link#menuItemCompactsVertMobile": {
+    "props": {
+      "blockClass": [
+        "menuItemNewVertMobile"
+      ],
+      "href": "/Compacts-pre-plp",
+      "label": "Compacts"
+    }
+  },
+  "link#menuItemOffersVertMobile": {
+    "props": {
+      "blockClass": [
+        "menuItemNewVertMobile"
+      ],
+      "href": "/no-frost-system-freezers",
+      "label": "Offers"
+    }
+  },
+  // "link#menuItemPromotionsVertMobile": {
+  //   "props": {
+  //     "blockClass": ["menuItemNewVertMobile"],
+  //     "href": "",
+  //     "label": "Promotions"
+  //   }
+  // },
+  "link#menuItemEmptyVertMobile": {
+    "props": {
+      "blockClass": [
+        "emptyMenuItemNewVertMobile"
+      ],
+      "label": ""
+    }
+  },
+  "link#menuItemShopAppliances": {
+    "props": {
+      "blockClass": [
+        "menuItemMobileV2"
+      ],
+      "href": "",
+      "label": "SHOP APPLIANCES"
+    }
+  },
+  "link#menuItemAccessories": {
+    "props": {
+      "blockClass": [
+        "menuItemMobileV2"
+      ],
+      "href": "",
+      "label": "ACCESSORIES"
+    }
+  },
+  "link#menuItemBlog": {
+    "props": {
+      "blockClass": [
+        "menuItemMobileV2"
+      ],
+      "href": "/blog",
+      "label": "BLOG"
+    }
+  },
+  "link#menuItemShopSpareParts": {
+    "props": {
+      "blockClass": [
+        "menuItemMobileV2"
+      ],
+      "href": "",
+      "label": "SPARE PARTS"
+    }
+  },
+  "link#menuItemService": {
+    "props": {
+      "blockClass": [
+        "menuItemMobileV2"
+      ],
+      "href": "",
+      "label": "SERVICE & SUPPORT"
+    }
+  },
+  "flex-layout.row#services-item-mobile": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": [
+        "services-item-mobile-row"
+      ]
+    },
+    "children": [
+      "link#supportMobile"
+    ]
+  },
+  "link#supportMobile": {
+    "props": {
+      "href": "https://www.hotpointservice.co.uk/",
+      "target": "_blank"
+    },
+    "children": [
+      "rich-text#ServiceshMobile2"
+    ]
+  },
+  "rich-text#ServiceshMobile2": {
+    "props": {
+      "text": "Service & Support",
+      "blockClass": "services-text-mobile",
+      "textPosition": "CENTER"
+    }
+  },
+  "rich-text#ServiceshMobile": {
+    "props": {
+      "text": "Service & Support",
+      "blockClass": "services-text-mobile"
+    }
+  },
+  "image#plusIcon": {
+    "props": {
+      "blockClass": "plus-icon-mobile",
+      "width": "15px",
+      "src": "assets/plus-icon.svg"
+    }
+  },
+  "disclosure-content#services-items": {
+    "props": {
+      "blockClass": "services-items"
+    },
+    "children": [
+      "flex-layout.row#services-items"
+    ]
+  },
+  "flex-layout.row#services-items": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "search-row-mobile"
+    },
+    "children": [
+      "flex-layout.col#services-items"
+    ]
+  },
+  "flex-layout.col#services-items": {
+    "props": {
+      "width": "grow"
+    },
+    "children": [
+      "link#menuItemHelpMobile",
+      "link#menuItemBookRepairMobile",
+      "link#menuItemSparePartsMobile",
+      "link#menuItemContactMobile"
+    ]
+  },
+  "link#menuItemHelpMobile": {
+    "props": {
+      "blockClass": [
+        "menuItemServices"
+      ],
+      "href": "#",
+      "label": "Help & Advice"
+    }
+  },
+  "link#menuItemBookRepairMobile": {
+    "props": {
+      "blockClass": [
+        "menuItemServices"
+      ],
+      "href": "#",
+      "label": "Book a Repair"
+    }
+  },
+  "link#menuItemSparePartsMobile": {
+    "props": {
+      "blockClass": [
+        "menuItemServices"
+      ],
+      "href": "#",
+      "label": "Spare Parts"
+    }
+  },
+  "link#menuItemContactMobile": {
+    "props": {
+      "blockClass": [
+        "menuItemServices"
+      ],
+      "href": "#",
+      "label": "Contact Us"
+    }
+  },
+  //
+  "vtex.menu@2.x:menu#mobile": {
+    "props": {
+      "orientation": "vertical",
+      "blockClass": "mobileMenu"
+    },
+    "children": [
+      "menu-item#prodottiMobile",
+      "menu-item#supportoMobile"
+    ]
+  },
+  "vtex.menu@2.x:menu#ws": {
+    "children": [
+      "menu-item#prodotti",
+      "menu-item#supporto"
+    ]
+  },
+  "disclosure-layout#search": {
+    "props": {
+      "blockClass": "header"
+    },
+    "children": [
+      "disclosure-trigger#image",
+      "disclosure-content#search-bar"
+    ]
+  },
+  "disclosure-trigger#image": {
+    "props": {
+      "blockClass": "search-icon"
+    },
+    "children": [
+      "image#search"
+    ]
+  },
+  "image#search": {
+    "props": {
+      "blockClass": "search-icon",
+      "width": "24px",
+      "src": "assets/search.svg"
+    }
+  },
+  "disclosure-content#search-bar": {
+    "children": [
+      "flex-layout.row#searchBar"
+    ]
+  },
+  "flex-layout.row#searchBar": {
+    "props": {
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.col#search"
+    ]
+  },
+  "flex-layout.col#space": {
+    "props": {
+      "width": "grow"
+    }
+  },
+  "flex-layout.col#search": {
+    "props": {
+      "width": "grow"
+    },
+    "children": [
+      "search-bar#headerBlock"
+    ]
+  },
+  "link#Accedi": {
+    "props": {
+      "href": "/account#"
+    },
+    "children": [
+      "rich-text#login"
+    ]
+  },
+  "rich-text#login": {
+    "props": {
+      "text": "Login / My Account",
+      "blockClass": [
+        "mobileMenu",
+        "buttonCard",
+        "margin"
+      ]
+    }
+  },
+  "flex-layout.row#fullHeaderColMobile": {
+    "props": {
+      "blockClass": [
+        "fullHeaderColMobile",
+        "oldHeaderABTest"
+      ],
+      "width": "100%",
+      "fullWidth": "true"
+    },
+    "children": [
+      "flex-layout.row#stickyRowMobile",
+      "flex-layout.row#searchBarRow",
+      "flex-layout.row#carousel-topRowMobile"
+    ]
+  }
+}

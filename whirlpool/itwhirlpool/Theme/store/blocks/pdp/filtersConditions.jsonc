@@ -1,0 +1,838 @@
+{
+  //---------FILTER SPECIFICATION CONDITIONS-------------//
+  "flex-layout.row#specificationsRowMobile#plp": {
+    "props": {
+      "blockClass": ["specificationsRowMobile", "specificationsRowMobilePLP"]
+    },
+    "children": [
+      "condition-layout.product#lavatriciCondition",
+      "condition-layout.product#asciugatriciCondition",
+      "condition-layout.product#lavasciugaCondition",
+      "condition-layout.product#frigoriferiCondition",
+      "condition-layout.product#congelatoriCondition",
+      "condition-layout.product#forniCondition",
+      "condition-layout.product#microondeCondition",
+      "condition-layout.product#pianiCotturaCondition",
+      "condition-layout.product#cappeCondition",
+      "condition-layout.product#lavastoviglieCondition",
+      "condition-layout.product#ariaCondizionataCondition"
+    ]
+  },
+  "flex-layout.row#specificationsRowMobile": {
+    "props": {
+      "blockClass": "specificationsRowMobile"
+    },
+    "children": [
+      "condition-layout.product#lavatriciCondition",
+      "condition-layout.product#asciugatriciCondition",
+      "condition-layout.product#lavasciugaCondition",
+      "condition-layout.product#frigoriferiCondition",
+      "condition-layout.product#congelatoriCondition",
+      "condition-layout.product#forniCondition",
+      "condition-layout.product#microondeCondition",
+      "condition-layout.product#pianiCotturaCondition",
+      "condition-layout.product#cappeCondition",
+      "condition-layout.product#lavastoviglieCondition",
+      "condition-layout.product#ariaCondizionataCondition"
+    ]
+  },
+  "condition-layout.product#lavatriciCondition": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "16"
+          }
+        }
+      ],
+      "Then": "flex-layout.row#specsFilterPdpLavatrici"
+    }
+  },
+  "flex-layout.row#specsFilterPdpLavatrici": {
+    "children": [
+      "condition-layout.product#inStockLabel",
+      "flex-layout.col#capacity",
+      "flex-layout.col#speed",
+      "flex-layout.col#profondita"
+    ],
+    "props": {
+      "blockClass": "specPropsRow"
+    }
+  },
+  "condition-layout.product#inStockLabel": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "sellable",
+            "value": "true"
+          }
+        }
+      ],
+      "Then": "condition-layout.product#inStockLabelSecond",
+      "Else": "rich-text#outOfStock"
+    }
+  },
+  "condition-layout.product#inStockLabelSecond": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "DISPONIBILITÀ",
+            "value": "Prodotti disponibili"
+          }
+        }
+      ],
+      "Then": "flex-layout.col#stock",
+      "Else": "rich-text#outOfStock"
+    }
+  },
+  "rich-text#outOfStock": {
+    "props": {
+      "text": "Non disponibile",
+      "blockClass": ["specProps", "leadtimeText"]
+    }
+  },
+  "condition-layout.product#asciugatriciCondition": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "17"
+          }
+        }
+      ],
+      "Then": "flex-layout.row#specsFilterPdpAsciugatrici"
+    }
+  },
+  "flex-layout.row#specsFilterPdpAsciugatrici": {
+    "children": [
+      "condition-layout.product#inStockLabel",
+      "flex-layout.col#capacity",
+      "flex-layout.col#loudness",
+      "flex-layout.col#specialFunctions"
+    ],
+    "props": {
+      "blockClass": "specPropsRow"
+    }
+  },
+  "condition-layout.product#lavasciugaCondition": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "18"
+          }
+        }
+      ],
+      "Then": "flex-layout.row#specsFilterPdpLavasciuga"
+    }
+  },
+  "flex-layout.row#specsFilterPdpLavasciuga": {
+    "children": [
+      "condition-layout.product#inStockLabel",
+      "flex-layout.col#capacity2",
+      "flex-layout.col#speed",
+      "flex-layout.col#specialFunctions"
+    ],
+    "props": {
+      "blockClass": "specPropsRow"
+    }
+  },
+  "condition-layout.product#frigoriferiCondition": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "19"
+          }
+        }
+      ],
+      "Then": "flex-layout.row#specsFilterPdpFrigoriferi"
+    }
+  },
+  "flex-layout.row#specsFilterPdpFrigoriferi": {
+    "children": [
+      "condition-layout.product#inStockLabel",
+      "flex-layout.col#height",
+      "flex-layout.col#width",
+      "flex-layout.col#specialFunctions"
+    ],
+    "props": {
+      "blockClass": "specPropsRow"
+    }
+  },
+  "condition-layout.product#congelatoriCondition": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "20"
+          }
+        }
+      ],
+      "Then": "flex-layout.row#specsFilterPdpCongelatori"
+    }
+  },
+  "flex-layout.row#specsFilterPdpCongelatori": {
+    "children": [
+      "condition-layout.product#inStockLabel",
+      "flex-layout.col#height",
+      "flex-layout.col#capacity3",
+      "flex-layout.col#type"
+    ],
+    "props": {
+      "blockClass": "specPropsRow"
+    }
+  },
+  "condition-layout.product#forniCondition": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "21"
+          }
+        }
+      ],
+      "Then": "flex-layout.row#specsFilterPdpForni"
+    }
+  },
+  "flex-layout.row#specsFilterPdpForni": {
+    "children": [
+      "condition-layout.product#inStockLabel",
+      "flex-layout.col#capacity4",
+      "flex-layout.col#specialFunctions",
+      "flex-layout.col#technology"
+    ],
+    "props": {
+      "blockClass": "specPropsRow"
+    }
+  },
+  "condition-layout.product#microondeCondition": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "22"
+          }
+        }
+      ],
+      "Then": "flex-layout.row#specsFilterPdpMicroonde"
+    }
+  },
+  "flex-layout.row#specsFilterPdpMicroonde": {
+    "children": [
+      "condition-layout.product#inStockLabel",
+      "flex-layout.col#height",
+      "flex-layout.col#capacity5",
+      "flex-layout.col#cooking"
+    ],
+    "props": {
+      "blockClass": "specPropsRow"
+    }
+  },
+  "condition-layout.product#pianiCotturaCondition": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "23"
+          }
+        }
+      ],
+      "Then": "flex-layout.row#specsFilterPdpPianiCottura"
+    }
+  },
+  "flex-layout.row#specsFilterPdpPianiCottura": {
+    "children": [
+      "condition-layout.product#inStockLabel",
+      "flex-layout.col#width",
+      "flex-layout.col#cookingZones",
+      "flex-layout.col#specialFunctions"
+    ],
+    "props": {
+      "blockClass": "specPropsRow"
+    }
+  },
+  "condition-layout.product#cappeCondition": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "24"
+          }
+        }
+      ],
+      "Then": "flex-layout.row#specsFilterPdpCappe"
+    }
+  },
+  "flex-layout.row#specsFilterPdpCappe": {
+    "children": [
+      "condition-layout.product#inStockLabel",
+      "flex-layout.col#aspirazione",
+      "flex-layout.col#width",
+      "flex-layout.col#colour"
+    ],
+    "props": {
+      "blockClass": "specPropsRow"
+    }
+  },
+  "condition-layout.product#lavastoviglieCondition": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "26"
+          }
+        }
+      ],
+      "Then": "flex-layout.row#specsFilterPdpLavastoviglie"
+    }
+  },
+  "flex-layout.row#specsFilterPdpLavastoviglie": {
+    "children": [
+      "condition-layout.product#inStockLabel",
+      "flex-layout.col#coperti",
+      "flex-layout.col#dimensioni2",
+      "flex-layout.col#programmi"
+    ],
+    "props": {
+      "blockClass": "specPropsRow"
+    }
+  },
+  "condition-layout.product#ariaCondizionataCondition": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "27"
+          }
+        }
+      ],
+      "Then": "flex-layout.row#specsFilterPdpAriaCondizionata"
+    }
+  },
+  "flex-layout.row#specsFilterPdpAriaCondizionata": {
+    "children": [
+      "condition-layout.product#inStockLabel",
+      "flex-layout.col#potenza",
+      "flex-layout.col#configurazione",
+      "flex-layout.col#funzioni"
+    ],
+    "props": {
+      "blockClass": "specPropsRow"
+    }
+  },
+  "flex-layout.col#stock": {
+    "children": ["condition-layout.product#inStockLabel-Mobile-PreOrderLabel"],
+    "props": {
+      "blockClass": ["specProps", "inStockProp"]
+    }
+  },
+  "condition-layout.product#inStockLabel-Mobile-PreOrderLabel": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "productClusters",
+          "arguments": {
+            "id": "419"
+          }
+        },
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "DISPONIBILITÀ",
+            "value": "Prodotti disponibili"
+          }
+        },
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "sellable",
+            "value": "true"
+          }
+        },
+        {
+          "subject": "isProductAvailable"
+        }
+      ],
+      "matchType": "all",
+      "Then": "print-specification#preOrder-preOrderLabel",
+      "Else": "print-specification#stock"
+    }
+  },
+  "print-specification#preOrder-preOrderLabel": {
+    "props": {
+      "specificationsToCheck": [
+        {
+          "name": "sellable"
+        }
+      ],
+      "blockClass": ["preOrder"],
+      "aggregateLabel": "Preordine"
+
+    }
+  },
+  "print-specification#stock": {
+    "props": {
+      /*"specificationToPrint": [
+        {
+          "specGroup": "allSpecifications",
+          "specAttribute": "DISPONIBILITÀ"
+        }
+      ],
+      "aggregate": false,
+      "label": "",
+      "isLink": true*/
+
+      "specificationsToCheck": [
+        {
+          "name": "sellable"
+        },
+        {
+          "subject": "isProductAvailable"
+        }
+      ],
+      "blockClass": [],
+      "aggregateLabel": "Disponibile"
+
+    }
+  },
+  "flex-layout.col#capacity": {
+    "children": ["print-specification#capacity"],
+    "props": {
+      "blockClass": "specProps"
+    }
+  },
+  "print-specification#capacity": {
+    "props": {
+
+
+      "specificationsToCheck": [
+        {
+          "name": "CAPACITÀ:"
+        }
+      ],
+      "aggregateLabel": "",
+      "isLink": true
+    }
+  },
+  "flex-layout.col#capacity2": {
+    "children": ["print-specification#capacity2"],
+    "props": {
+      "blockClass": "specProps"
+    }
+  },
+  "print-specification#capacity2": {
+    "props": {
+      "specificationsToCheck": [
+        {
+          "name": "CAPACITÀ:"
+        }
+      ],
+      "aggregateLabel": "Capacità massima in kg in un ciclo di lavaggio",
+      "isLink": true,
+      "measureUnit": "kg"
+    }
+  },
+  "flex-layout.col#loader": {
+    "children": ["print-specification#loader"],
+    "props": {
+      "blockClass": "specProps"
+    }
+  },
+  "print-specification#loader": {
+    "props": {
+      "specificationsToCheck": [
+        {
+          "name": "TIPO DI CARICO:"
+        }
+      ],
+      "aggregateLabel": "",
+      "isLink": true
+    }
+  },
+  "flex-layout.col#speed": {
+    "children": ["print-specification#speed"],
+    "props": {
+      "blockClass": "specProps"
+    }
+  },
+  "print-specification#speed": {
+    "props": {
+      "specificationsToCheck": [
+        {
+          "name": "VELOCITÀ DI CENTRIFUGA:"
+        }
+      ],
+      "aggregateLabel": "",
+      "isLink": true
+    }
+  },
+  "flex-layout.col#profondita": {
+    "children": ["print-specification#profondita"],
+    "props": {
+      "blockClass": "specProps"
+    }
+  },
+  "print-specification#profondita": {
+    "props": {
+      "specificationsToCheck": [
+        {
+          "name": "Profondità (cm)"
+        }
+      ],
+      "aggregateLabel": "",
+      "measureUnit": "cm (di profondità)",
+      "isLink": true
+    }
+  },
+  "flex-layout.col#loudness": {
+    "children": ["print-specification#loudness"],
+    "props": {
+      "blockClass": "specProps"
+    }
+  },
+  "print-specification#loudness": {
+    "props": {
+      "specificationsToCheck": [
+        {
+          "name": "Silenziosità (dBA)"
+        }
+      ],
+      "aggregateLabel": "",
+      "measureUnit": "dBA (di rumorosità)",
+      "isLink": true
+    }
+  },
+  "flex-layout.col#specialFunctions": {
+    "children": ["print-specification#specialFunctions"],
+    "props": {
+      "blockClass": "specProps"
+    }
+  },
+  "print-specification#specialFunctions": {
+    "props": {
+      "specificationsToCheck": [
+        {
+          "name": "Funzioni Speciali:"
+        }
+      ],
+      "aggregateLabel": "",
+      "isLink": true
+    }
+  },
+  "flex-layout.col#height": {
+    "children": ["print-specification#height"],
+    "props": {
+      "blockClass": "specProps"
+    }
+  },
+  "print-specification#height": {
+    "props": {
+      "specificationsToCheck": [
+        {
+          "name": "ALTEZZA:"
+        }
+      ],
+      "aggregateLabel": "",
+      "measureUnit": "(di altezza)",
+      "isLink": true
+    }
+  },
+  "flex-layout.col#width": {
+    "children": ["print-specification#width"],
+    "props": {
+      "blockClass": "specProps"
+    }
+  },
+  "print-specification#width": {
+    "props": {
+      "specificationsToCheck": [
+        {
+          "name": "LARGHEZZA:"
+        }
+      ],
+      "aggregateLabel": "",
+      "measureUnit": "(di larghezza)",
+      "isLink": true
+    }
+  },
+  "flex-layout.col#capacity3": {
+    "children": ["print-specification#capacity3"],
+    "props": {
+      "blockClass": "specProps"
+    }
+  },
+  "print-specification#capacity3": {
+    "props": {
+      "specificationsToCheck": [
+        {
+          "name": "Capacità netta totale (l)"
+        }
+      ],
+      "aggregateLabel": "",
+      "measureUnit": "(capacità in litri)",
+      "isLink": true
+    }
+  },
+  "flex-layout.col#capacity4": {
+    "children": ["print-specification#capacity4"],
+    "props": {
+      "blockClass": "specProps"
+    }
+  },
+  "print-specification#capacity4": {
+    "props": {
+      "specificationsToCheck": [
+        {
+          "name": "Volume utilizzabile (l)"
+        }
+      ],
+      "aggregateLabel": "",
+      "measureUnit": "l (capacità in litri)",
+      "isLink": true
+    }
+  },
+  "flex-layout.col#capacity5": {
+    "children": ["print-specification#capacity5"],
+    "props": {
+      "blockClass": "specProps"
+    }
+  },
+  "print-specification#capacity5": {
+    "props": {
+      "specificationsToCheck": [
+        {
+          "name": "CAPACITÀ (l):"
+        }
+      ],
+      "aggregateLabel": "",
+      "measureUnit": "(capacità in litri)",
+      "isLink": true
+    }
+  },
+  "flex-layout.col#technology": {
+    "children": ["print-specification#technology"],
+    "props": {
+      "blockClass": "specProps"
+    }
+  },
+  "print-specification#technology": {
+    "props": {
+      "specificationsToCheck": [
+        {
+          "name": "TECNOLOGIA AUTOPULENTE:"
+        }
+      ],
+      "aggregateLabel": "",
+      "isLink": true
+    }
+  },
+  "flex-layout.col#type": {
+    "children": ["print-specification#type"],
+    "props": {
+      "blockClass": "specProps"
+    }
+  },
+  "print-specification#type": {
+    "props": {
+      "specificationsToCheck": [
+        {
+          "name": "TIPO DI CONGELATORE:"
+        }
+      ],
+      "aggregateLabel": "",
+      "isLink": true
+    }
+  },
+  "flex-layout.col#cooking": {
+    "children": ["print-specification#cooking"],
+    "props": {
+      "blockClass": "specProps"
+    }
+  },
+  "print-specification#cooking": {
+    "props": {
+      "specificationsToCheck": [
+        {
+          "name": "TECNOLOGIA DI COTTURA:"
+        }
+      ],
+      "aggregateLabel": "",
+      "isLink": true
+    }
+  },
+  "flex-layout.col#cookingZones": {
+    "children": ["print-specification#cookingZones"],
+    "props": {
+      "blockClass": "specProps"
+    }
+  },
+  "print-specification#cookingZones": {
+    "props": {
+      "specificationsToCheck": [
+        {
+          "name": "NUMERO DI ZONE COTTURA:"
+        }
+      ],
+      "aggregateLabel": "",
+      "measureUnit": "(zone cottura)",
+      "isLink": true
+    }
+  },
+  "flex-layout.col#aspirazione": {
+    "children": ["print-specification#aspirazione"],
+    "props": {
+      "blockClass": "specProps"
+    }
+  },
+  "print-specification#aspirazione": {
+    "props": {
+      "specificationsToCheck": [
+        {
+          "name": "CAPACITÀ MASSIMA DI ASPIRAZIONE:"
+        }
+      ],
+      "aggregateLabel": "",
+      "measureUnit": "(di capacità di aspirazione)",
+      "isLink": true
+    }
+  },
+  "flex-layout.col#colour": {
+    "children": ["print-specification#colour"],
+    "props": {
+      "blockClass": "specProps"
+    }
+  },
+  "print-specification#colour": {
+    "props": {
+      "specificationsToCheck": [
+        {
+          "name": "COLORE:"
+        }
+      ],
+      "aggregateLabel": "",
+      "isLink": true
+    }
+  },
+  "flex-layout.col#coperti": {
+    "children": ["print-specification#coperti"],
+    "props": {
+      "blockClass": "specProps"
+    }
+  },
+  "print-specification#coperti": {
+    "props": {
+      "specificationsToCheck": [
+        {
+          "name": "COPERTI:"
+        }
+      ],
+      "aggregateLabel": "",
+      "measureUnit": "(coperti)",
+      "isLink": true
+    }
+  },
+  "flex-layout.col#dimensioni2": {
+    "children": ["print-specification#dimensioni2"],
+    "props": {
+      "blockClass": "specProps"
+    }
+  },
+  "print-specification#dimensioni2": {
+    "props": {
+      "specificationsToCheck": [
+        {
+          "name": "DIMENSIONI ELETTRODOMESTICO:"
+        }
+      ],
+      "aggregateLabel": "",
+      "isLink": true
+    }
+  },
+  "flex-layout.col#programmi": {
+    "children": ["print-specification#programmi"],
+    "props": {
+      "blockClass": "specProps"
+    }
+  },
+  "print-specification#programmi": {
+    "props": {
+      "specificationsToCheck": [
+        {
+          "name": "Numero di programmi"
+        }
+      ],
+      "aggregateLabel": "",
+      "measureUnit": "(programmi)",
+      "isLink": true
+    }
+  },
+  "flex-layout.col#potenza": {
+    "children": ["print-specification#potenza"],
+    "props": {
+      "blockClass": "specProps"
+    }
+  },
+  "print-specification#potenza": {
+    "props": {
+      "specificationsToCheck": [
+        {
+          "name": "POTENZA IN BTU:"
+        }
+      ],
+      "aggregateLabel": "",
+      "measureUnit": "BTU (di potenza)",
+      "isLink": true
+    }
+  },
+  "flex-layout.col#configurazione": {
+    "children": ["print-specification#configurazione"],
+    "props": {
+      "blockClass": "specProps"
+    }
+  },
+  "print-specification#configurazione": {
+    "props": {
+      "specificationsToCheck": [
+        {
+          "name": "CONFIGURAZIONE:"
+        }
+      ],
+      "aggregateLabel": "",
+      "isLink": true
+    }
+  },
+  "flex-layout.col#funzioni": {
+    "children": ["print-specification#funzioni"],
+    "props": {
+      "blockClass": "specProps"
+    }
+  },
+  "print-specification#funzioni": {
+    "props": {
+      "specificationsToCheck": [
+        {
+          "name": "FUNZIONI:"
+        }
+      ],
+      "aggregateLabel": "",
+      "isLink": true
+    }
+  }
+  //-----------END CONDITIONS------------//
+}

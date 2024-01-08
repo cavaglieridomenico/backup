@@ -1,0 +1,101 @@
+.productHighlightWrapper--collection {
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  width: 200px;
+}
+.productHighlightText--coupon {
+  background-color: unset !important;
+  color: black !important;
+  position: relative !important;
+  font-size: 0.5rem !important;
+}
+.productHighlightWrapper{
+  border-radius: 5px;
+  border-style: solid;
+  font-size: 0.5rem !important;
+  width: fit-content;
+  padding: 0px 2px;
+  margin: 10px 0;
+  text-transform: uppercase;
+  font-family: "hotpointMedium";
+  font-weight: 400;
+  background: linear-gradient(to left,white 65%,#B24C24 28%);
+  color: white;
+  border-color: #B24C24;
+}
+.productHighlightText--coupon::before {
+  border-bottom: unset !important;
+}
+.productHighlightText--Product {
+  background: #b24c24;
+  border-radius: 20px;
+  padding: 0.85rem;
+  margin: 0.5rem auto;
+  font-family: "hotpointMedium";
+  width: auto !important;
+  color: #ffffff;
+}
+.productHighlightText {
+  background-color: #B24C24;
+  color: #fff;
+  position: absolute;
+  left: 0;
+  text-transform: uppercase;
+  font-family: "hotpointMedium";
+  border-radius: 0px !important;
+
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1.375rem;
+  padding: 0.3125rem 0.9375rem;
+  z-index: 2;
+  border-radius: 0;
+}
+.productHighlightText::before {
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  content: "";
+  transform: rotate(45deg);
+  border-left: 0.4rem solid transparent;
+  border-right: 0.4rem solid transparent;
+  border-bottom: 0.4rem solid #104c50;
+}
+.productHighlightText--promotionCarousel {
+  top: 20px;
+}
+@media only screen and (max-width: 668px) {
+  .productHighlightText {
+    z-index: 2;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .productHighlightText {
+    left: -10px;
+  }
+  .productHighlightText--coupon {
+    left: unset;
+    white-space: nowrap;
+    padding-left: 1rem;
+  }
+}
+@media only screen and (max-width: 1200px){
+  .productHighlightWrapper {
+    right: 0.5rem;
+    position: relative;
+    margin: 5px -0.5rem;
+    padding: 0;
+    white-space: nowrap;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .productHighlightWrapper {
+    margin: 1rem -0.5rem;
+    padding-left: 3px;
+  }
+  .productHighlightText {
+    width: auto !important;
+    top: 4px;
+  }
+}

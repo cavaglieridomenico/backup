@@ -1,0 +1,121 @@
+.minicartContainer--headerDesk {
+  padding-right: 2rem;
+}
+.cartIcon {
+  visibility: hidden;
+}
+/* .openIconContainer :global(.vtex-button) {
+  position: relative;
+  height: 1.25rem;
+  width: 1.25rem;
+  min-height: unset;
+} */
+.openIconContainer {
+  padding: 0;
+  height: 20px;
+  width: 20px;
+}
+:global(.vtex-store-icons-0-x-cartIcon--minicart-empty-state) {
+  visibility: hidden;
+}
+.minicartEmptyStateContainer
+  :global(.vtex-flex-layout-0-x-flexRowContent)
+  :global(.vtex-flex-layout-0-x-flexColChild):first-child {
+  position: relative;
+  padding: 0;
+}
+.minicartEmptyStateContainer
+  :global(.vtex-flex-layout-0-x-flexRowContent)
+  :global(.vtex-flex-layout-0-x-flexColChild):first-child::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  content: url(assets/cartIcon64.svg);
+  height: 64px;
+  width: 64px;
+  padding: 0 0 0.2rem;
+}
+/* .openIconContainer :global(.vtex-button)::before {
+  content: url(assets/cartIcon4.svg);
+} */
+.minicartIconContainer {
+  margin-top: -1rem;
+}
+/* .openIconContainer {
+  padding-left: 0;
+  padding-right: 0;
+}
+.openIconContainer :global(.vtex-button):hover {
+  background-color: transparent !important;
+} */
+
+.minicartCheckoutButton :global(.vtex-button) {
+  border: none;
+}
+.minicartCheckoutButton :global(.vtex-button):hover {
+  border: none;
+}
+.minicartCheckoutButton :global(.vtex-button)::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 20%;
+  opacity: 0;
+  background-color: #953D1B;
+  z-index: 1;
+  transition: all 0.5s ease-in-out;
+}
+.minicartCheckoutButton :global(.vtex-button):hover::before {
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  opacity: 1;
+  height: 100%;
+  border-radius: 5px;
+}
+.minicartCheckoutButton :global(.vtex-button__label) {
+  z-index: 10;
+  position: relative;
+}
+.minicartQuantityBadgeDefault {
+  top: -1rem;
+}
+/*------------NO MENU--------------*/
+.minicartWrapperContainer {
+  pointer-events: all;
+  /* width: calc(24px + 3.125rem); */
+}
+:global(.vtex-minicart-2-x-opened) {
+  z-index: 999999 !important;
+}
+
+/* Media Queries */
+@media screen and (min-width: 1040px) {
+  /* .openIconContainer {
+    padding-left: 0;
+  } */
+}
+
+@media screen and (max-width: 1024px) {
+  .openIconContainer {
+    padding: 0;
+    height: 25px;
+    width: 25px;
+    margin-right: 3rem;
+  }
+}
+@media screen and (max-width: 640px) {
+  .minicartWrapperContainer {
+    width: unset;
+  }
+  .openIconContainer {
+    padding: 0;
+    height: 25px;
+    width: 25px;
+    margin-right: 2.2rem;
+  }
+}

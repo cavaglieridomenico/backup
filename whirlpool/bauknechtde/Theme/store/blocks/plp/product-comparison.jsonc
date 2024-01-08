@@ -1,0 +1,286 @@
+{
+  "store.custom#product-comparison-list": {
+    "blocks": [
+      "responsive-layout.desktop#comparison-page",
+      "responsive-layout.mobile#comparison-page"
+      //"comparison-page"
+      //"analytics"
+    ]
+  },
+  "responsive-layout.desktop#comparison-page":{
+    "title": "[RESPONSIVE LAYOUT] - Comparison Page Desktop",
+    "children":["comparison-page"]
+  },
+  "comparison-page": {
+    "children": [
+      "slider-layout-group#comparison-page"
+    ],
+    "props": {
+      "blockClass": "comparisonPageBox"
+    }
+  },
+  "slider-layout-group#comparison-page": {
+    "children": [
+      // "comparison-form",
+      "product-comparison-block.product-summary-row",
+      "flex-layout.row#comparison-form",
+      "product-comparison-block.grouped-product-specifications"
+    ]
+  },
+  "flex-layout.row#comparison-form": {
+    "title": "[ROW] - Comparison Form",
+    "children": [
+      "flex-layout.col#comparison-form"
+    ],
+    "props": {
+      "fullWidth": true,
+      "horizontalAlign": "center",
+      "blockClass": "comparisonForm"
+    }
+  },
+  "flex-layout.col#comparison-form": {
+    "title": "[COL] - Comparison Form",
+    "children": [
+      "rich-text#comparison-form",
+      "modal-trigger#comparison-form"
+    ],
+    "props": {
+      "rowGap": 4,
+      "horizontalAlign": "center",
+      "blockClass": "comparisonForm"
+    }
+  },
+  "rich-text#comparison-form": {
+    "title": "[RICH TEXT] - Comparison Form",
+    "props": {
+      "text": "Vergleich per E-Mail erhalten",
+      "blockClass": "comparisonForm"
+    }
+  },
+  "modal-trigger#comparison-form": {
+    "title": "[MODAL TRIGGER] - Comparison Form",
+    "children": [
+      "rich-text#comparison-form-trigger",
+      "image#comparison-form-trigger-news",
+      "modal-layout#comparison-form"
+    ],
+    "props": {
+      "blockClass": "comparisonForm"
+    }
+  },
+  "rich-text#comparison-form-trigger": {
+    "title": "[RICH TEXT] - Comparison Form Trigger",
+    "props": {
+      "text": "Zum Formular",
+      "blockClass": "comparisonFormTrigger"
+    }
+  },
+  "image#comparison-form-trigger-news": {
+    "title": "[IMAGE] - Comparison Form Trigger",
+    "props": {
+      "src": "https://bauknechtdeqa.vtexassets.com/assets/vtex/assets-builder/bauknechtdeqa.whl-theme/5.0.4/icons/white_email___248e11c2e3c82b6c0cca79942f3ef465.svg",
+      "blockClass": [
+        "newsletterButtonLogo",
+        "comparisonFormTriggerNews"
+      ]
+    }
+  },
+  "modal-layout#comparison-form": {
+    "title": "[MODAL LAYOUT] - Comparison Form",
+    "children": [
+      "modal-header#comparison-form",
+      "modal-content#comparison-form"
+    ],
+    "props": {
+      "blockClass": "comparisonForm"
+    }
+  },
+  "modal-header#comparison-form": {
+    "title": "[MODAL HEADER] - Comparison Form",
+    "props": {
+      "blockClass": "comparisonForm"
+    }
+  },
+  "modal-content#comparison-form": {
+    "title": "[MODAL CONTENT] - Comparison Form",
+    "children": [
+      "comparison-form"
+    ],
+    "props": {
+      "blockClass": "comparisonForm"
+    }
+  },
+  "comparison-form": {
+    "props": {
+      "title": "Produktvergleich speichern",
+      "description": "Erhalten Sie den Produktvergleich per E-Mail",
+      "namePlaceholder": "Vorname (Pflichtfeld)",
+      "surnamePlaceholder": "Nachname (Pflichtfeld)",
+      "emailPlaceholder": "E-Mail (Pflichtfeld)",
+      "textsBeforeCheckboxes": [
+        {
+          "__editorItemTitle": "Ich verstehe und bestätige den Inhalt der [Datenschutzerklärung](/seiten/datenschutzerklaerung)"
+        }
+      ],
+      "checkboxes": [
+        {
+          "checkboxLabel": "(Optional) Ich willige in die Verarbeitung meiner personenbezogenen Daten ein, um Bauknecht Hausgeräte GmbH die Möglichkeit zu geben, mir Newsletter/Marketingmitteilungen (in elektronischer und nichtelektronischer Form), einschließlich per Telefon, Post, E-Mail, Messenger Diensten, Push-Benachrichtigungen oder Banner auf Websites Dritter, einschließlich auf Meta- und Google-Plattformen in Irland und den USA für Direktmarketing über Produkte und Dienstleistungen von Bauknecht Hausgeräte GmbH, die ich sogar gekauft oder registriert habe, zuzusenden, sowie um Marktforschung zu betreiben. Ihre Einwilligung in den Versand ist jederzeit widerruflich.",
+          "checkboxNewsletter": true
+        }
+      ],
+      "submitButtonText": "Absenden",
+      "productSpecificationGroupsToHide": "SalesFeature,Other,CategoryDataCluster_usage,EnergyLogo,Dimensioni_usage,Performance_usage,Caratteristiche_usage,Model,RatingGroupAttrLogo_image,CategoryDataCluster,RatingGroupAttrLogo,Endeca,Document,Programmi_usage,Dettagli del Prodotto,Modello,Documenti_Sintesi,Documenti,allSpecifications,Tecnologia e innovazione,Singleton,Specifica prodotto,ClasseEnergeticaUrl,ClasseEnergetica,SchedaProdotto,SchedaTecnica,UtilizzoManutenzione,Servizi Aggiuntivi,QrCode, CommercialCode"
+    }
+  },
+  "responsive-layout.mobile#comparison-page":{
+    "title": "[RESPONSIVE LAYOUT] - Comparison Page Mobile",
+    "children":["comparison-page#mobile"]
+  },
+  "comparison-page#mobile": {
+      "children": ["slider-layout-group#comparison-page-mobile"],
+      "props": {
+        "blockClass": "comparisonPageBox"
+      }
+    },
+  "slider-layout-group#comparison-page-mobile": {
+     "children": [
+    //"product-comparison-block.product-summary-row",
+    "sticky-layout#compareMobileSticky",
+    "flex-layout.row#comparison-form",
+    "product-comparison-block.grouped-product-specifications"
+    ]
+  },
+  "product-comparison-block.product-summary-row": {
+    "props": {
+      "blockClass": "rowSliderPComparison",
+      "isShowDifferenceDefault": true
+    },
+    "blocks": [
+      "list-context.comparison-product-summary-slider#comparison-page"
+    ]
+  },
+  "list-context.comparison-product-summary-slider#comparison-page": {
+    "blocks": [
+      "product-summary.shelf.product-comparison#bauknechtPLP-comparison-small"
+    ],
+    "children": [
+      "slider-layout#comparison-page-product-summary"
+    ]
+  },
+  "product-summary.shelf.product-comparison#comparison-page": {
+    "children": [
+      "flex-layout.row",
+      "product-summary-image#comparison-page",
+      "product-summary-name",
+      "product-summary-space",
+      "product-list-price#comparison",
+      "flex-layout.row#selling-price-savings",
+      "add-to-cart-custom#plp"
+      // "responsive-layout.desktop#addToCartPlp",
+      // "responsive-layout.tablet#addToCartPlp",
+      // "responsive-layout.phone#addToCartPlp"
+    ],
+    "props": {
+      "blockClass": "comparison-page-summary"
+    }
+  },
+  "flex-layout.row": {
+    "children": [
+      "product-comparison-block.close-button"
+    ],
+    "props": {
+      "blockClass": "close",
+      "horizontalAlign": "right"
+    }
+  },
+  "product-list-price#comparison": {
+    "props": {
+      "blockClass": "comparison"
+    }
+  },
+  "product-summary-image#comparison-page": {
+    "props": {
+      "width": 200,
+      "heightProp": 200,
+      "showBadge": false
+    }
+  },
+  "product-comparison-block.grouped-product-specifications": {
+    "props": {
+      "productSpecificationGroupsToHide": "SalesFeature,Other,CategoryDataCluster_usage,EnergyLogo,Dimensioni_usage,Performance_usage,Caratteristiche_usage,Model,RatingGroupAttrLogo_image,CategoryDataCluster,RatingGroupAttrLogo,Endeca,Document,Programmi_usage,Dettagli del Prodotto,Modello,Documenti_Sintesi,Documenti,allSpecifications,Tecnologia e innovazione,Singleton,Specifica prodotto,ClasseEnergeticaUrl,ClasseEnergetica,SchedaProdotto,SchedaTecnica,UtilizzoManutenzione,Servizi Aggiuntivi,QrCode, CommercialCode",
+      "productSpecificationsToHide": "Entrata acqua calda e fredda ?"
+    },
+    "blocks": [
+      "list-context.comparison-row#comparison-page-row"
+    ]
+  },
+  "list-context.comparison-row#comparison-page-row": {
+    "children": [
+      "slider-layout#comparison-no-arrows"
+    ]
+  },
+  "slider-layout#comparison-page-product-summary": {
+    "props": {
+      "blockClass": [
+        "comparison-page",
+        "fullWidthComparisonPage"
+      ],
+      "itemsPerPage": {
+        "desktop": 3,
+        "tablet": 1,
+        "phone": 1
+      },
+      "showPaginationDots": "never",
+      "infinite": true,
+      "fullWidth": true
+    }
+  },
+  "slider-layout#comparison-no-arrows": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 4,
+        "tablet": 1,
+        "phone": 1
+      },
+      "showPaginationDots": "never",
+      "infinite": true,
+      "fullWidth": true,
+      "blockClass": "comparison-page",
+      "showNavigationArrows": "never"
+    }
+  },
+  "sticky-layout#compareMobileSticky": {
+    "title": "[ROW] - [TOP] - Sticky Compare Mobile",
+    "props": {
+      "blockClass": "compareStickyMobile",
+      "position": "top"
+    },
+    "children": [
+      "list-context.comparison-product-summary-slider#comparison-page-sticky-mobile"
+    ]
+  },
+  "product-comparison-block.product-summary-row#mobile": {
+    "props": {
+      "blockClass": "rowSliderPComparison",
+      "isShowDifferenceDefault": false
+    },
+    "blocks": ["list-context.comparison-product-summary-slider#comparison-page-sticky-mobile"]
+  },
+  "list-context.comparison-product-summary-slider#comparison-page-sticky-mobile": {
+    "blocks": [
+      "product-summary.shelf.product-comparison#bauknechtPLP-comparison-stickyMobile"
+    ],
+    "children": ["slider-layout#comparison-page-product-summary-stickyMobile"]
+  },
+  "slider-layout#comparison-page-product-summary-stickyMobile": {
+    "props": {
+      "blockClass": "comparison-page-stickyMobile",
+      "itemsPerPage": {
+        "phone": 1
+      },
+      "showPaginationDots": "never",
+      "infinite": true,
+      "fullWidth": true
+    }
+  }
+}

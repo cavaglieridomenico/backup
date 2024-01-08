@@ -1,0 +1,33 @@
+{
+  "responsive-layout.mobile#achat": {
+    "children": ["flex-layout.row#achat-maxi-container-mobile"]
+  },
+  "flex-layout.row#achat-maxi-container-mobile": {
+    "props": {
+      "blockClass": "achat-maxi-container"
+    },
+    "children": ["flex-layout.col#achat-col-maxi-container-mobile"]
+  },
+  "flex-layout.col#achat-col-maxi-container-mobile": {
+    "props": {
+      "blockClass": "achat-col-maxi-container"
+    },
+    "children": [
+      "breadcrumb-custom#achat-mobile",
+      "flex-layout.row#achat-title-container",
+      "flex-layout.row#achat-content-container",
+      "flex-layout.row#achat-first-contact-data",
+      "flex-layout.row#achat-second-content-container",
+      "flex-layout.row#achat-second-contact-data",
+      "flex-layout.row#achat-third-content-container"
+    ]
+  },
+  //BREADCRUMBS
+  "breadcrumb-custom#achat-mobile": {
+    "props": {
+      /* "blockClass": "containerBreadcrumbs", */
+      "previousPage": "Warunki",
+      "previousPath": "/warunki"
+    }
+  }
+}

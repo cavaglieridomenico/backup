@@ -1,0 +1,86 @@
+{
+    "store.custom#remote-html-template": {
+        "children": [
+            "remote-html-embed#remote-html-template",
+            "responsive-layout.desktop#carouselRemoteHTMLTemplate",
+            "responsive-layout.mobile#carouselRemoteHTMLTemplate",
+            "newsletter-popup#footer"
+        ]
+    },
+    "remote-html-embed#remote-html-template": {
+        "title": "[HTML-EMBED] - Url html embed",
+        "props": {
+            "sourceUrl": "https://contents.prod.wpsandwatch.com/src/d2c-fr/whirlpool/lave-linge-supreme-silence.html"
+        }
+    },
+    "responsive-layout.desktop#carouselRemoteHTMLTemplate": {
+        "title": "[LAYOUT-DESKTOP] - Carousel",
+        "children": [
+            "experimental__visibility-layout#carouselRemoteHTMLTemplate"
+        ]
+    },
+    "experimental__visibility-layout#carouselRemoteHTMLTemplate": {
+        "title": "[EXPERIMENTAL-VISIBILITY] - Carousel",
+        "props": {
+            "visible": true
+        },
+        "children": [
+            "list-context.product-list#carouselRemoteHTMLTemplate"
+        ]
+    },
+    "list-context.product-list#carouselRemoteHTMLTemplate": {
+        "title": "[LIST-CONTEXT] - Product List",
+        "blocks": [
+            "product-summary.shelf#caroselliLanding"
+        ],
+        "children": [
+            "slider-layout-whl#carouselCollectionHome"
+        ],
+        "props": {
+            "collection": "421",
+            "productList": {
+                "maxItems": 10,
+                "itemsPerPage": 5,
+                "minItemsPerPage": 1,
+                "scroll": "BY_PAGE",
+                "arrows": true,
+                "titleText": "Non sai da dove iniziare? Scopri i prodotti Whirlpool più venduti"
+            }
+        }
+    },
+    "responsive-layout.mobile#carouselRemoteHTMLTemplate": {
+        "title": "[LAYOUT-MOBILE] - Carousel",
+        "children": [
+            "experimental__visibility-layout#carouselRemoteHTMLTemplateMobile"
+        ]
+    },
+    "experimental__visibility-layout#carouselRemoteHTMLTemplateMobile": {
+        "title": "[EXPERIMENTAL-VISIBILITY] - Carousel",
+        "props": {
+            "visible": true
+        },
+        "children": [
+            "list-context.product-list#carouselRemoteHTMLTemplateMobile"
+        ]
+    },
+    "list-context.product-list#carouselRemoteHTMLTemplateMobile": {
+        "title": "[LIST-CONTEXT] - Product List",
+        "blocks": [
+            "product-summary.shelf.product-comparison#searchNew"
+        ],
+        "children": [
+            "slider-layout-whl#carouselCollectionHomeMobile"
+        ],
+        "props": {
+            "collection": "421",
+            "productList": {
+                "maxItems": 10,
+                "itemsPerPage": 5,
+                "minItemsPerPage": 1,
+                "scroll": "BY_PAGE",
+                "arrows": true,
+                "titleText": "Non sai da dove iniziare? Scopri i prodotti Whirlpool più venduti"
+            }
+        }
+    }
+}

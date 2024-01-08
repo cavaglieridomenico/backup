@@ -1,0 +1,42 @@
+.container {
+  margin: 0;
+  padding: 0;
+}
+.attribute {
+  font-style: normal;
+  font-weight: 300;
+  line-height: 21px;
+  padding: 0.2rem 0.8rem!important;
+  color: #353535;
+  margin: 0;
+}
+.value {
+  font-family: 'myriadPro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 21px;
+  color: #353535;
+  position: relative;
+}
+.valueNotAvailable{
+  FONT-WEIGHT: 600;
+  FONT-SIZE: 0.85REM;
+  POSITION: RELATIVE;
+}
+.value::after {
+  background: #6dd400;
+}
+.valueNotAvailable::after {
+  background: red;
+}
+.dot::after {
+  content: "";
+  position: absolute;
+  left: -0.8rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+}

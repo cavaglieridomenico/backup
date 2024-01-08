@@ -1,0 +1,110 @@
+{
+  "vendor": "whirlpoolemea",
+  "name": "log-export",
+  "version": "2.0.4",
+  "title": "Log Export",
+  "description": "Log Export",
+  "builders": {
+    "admin": "0.x",
+    "react": "3.x",
+    "messages": "1.x",
+    "docs": "0.x",
+    "node": "6.x"
+  },
+  "dependencies": {
+    "vtex.styleguide": "9.x"
+  },
+  "registries": [
+    "smartcheckout"
+  ],
+  "policies": [
+    {
+      "name": "ADMIN_DS"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.vtexcommercestable.com.br",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "api.vtex.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "portal.vtexcommercestable.com.br",
+        "path": "*"
+      }
+    },
+    {
+      "name": "colossus-fire-event"
+    },
+    {
+      "name": "colossus-write-logs"
+    }
+  ],
+  "settingsSchema": {
+    "title": "Log Export",
+    "type": "object",
+    "properties": {
+      "key": {
+        "title": "VTEX - Api key (read app's documentation)",
+        "type": "string"
+      },
+      "token": {
+        "title": "VTEX - Api token (read app's documentation)",
+        "type": "string"
+      },
+      "dataEntity": {
+        "title": "VTEX - Log Data Entity sigle",
+        "type": "string",
+        "default": "LC"
+      },
+      "dataEntityFields": {
+        "title": "VTEX - Log Data Entity fields to be retrieved",
+        "type": "array",
+        "items": {
+          "title": "field",
+          "type": "string"
+        },
+        "default": [
+          "id",
+          "app",
+          "severity",
+          "message",
+          "timestamp"
+        ]
+      },
+      "sortField": {
+        "title": "VTEX - Log Data Entity sort field",
+        "type": "string",
+        "default": "timestamp"
+      },
+      "sortValue": {
+        "title": "VTEX - Log Data Entity sort value",
+        "type": "string",
+        "default": "DESC"
+      },
+      "dataEntitySize": {
+        "title": "VTEX - Log Data Entity first number of entries",
+        "type": "integer",
+        "default": 1000,
+        "minimum": 1
+      }
+    }
+  },
+  "billingOptions": {
+    "termsURL": "https://compliance.vtex.com/gdpr/policies/vtex-privacy-policy",
+    "support": {
+      "url": "https://support.vtex.com/hc/requests"
+    },
+    "free": true
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

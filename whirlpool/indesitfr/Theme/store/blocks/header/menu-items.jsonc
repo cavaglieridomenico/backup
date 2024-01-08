@@ -1,0 +1,688 @@
+{
+  "menu-item#laundry": {
+    "props": {
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "noFollow": false,
+        "tagTitle": "Laundry",
+        "text": "Lavage"
+      },
+      "blockClass": "label-header-item"
+    },
+    "blocks": ["vtex.menu@2.x:submenu#laundry"]
+  },
+  "menu-item#coocking": {
+    "props": {
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "noFollow": false,
+        "tagTitle": "Cooking",
+        "text": "Cuisson"
+      },
+      "blockClass": "label-header-item"
+    },
+    "blocks": ["vtex.menu@2.x:submenu#cooking"]
+  },
+  "menu-item#cooling": {
+    "props": {
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "noFollow": false,
+        "tagTitle": "Cooling",
+        "text": "Froid"
+      },
+      "blockClass": "label-header-item"
+    },
+    "blocks": ["vtex.menu@2.x:submenu#cooling"]
+  },
+  "menu-item#dishwashing": {
+    "props": {
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "noFollow": false,
+        "tagTitle": "Dishwashing",
+        "text": "Lave-vaisselle"
+      },
+      "blockClass": "label-header-item"
+    },
+    "blocks": ["vtex.menu@2.x:submenu#dishwashing"]
+  },
+  "menu-item#spareparts": {
+    "props": {
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "https://pieces-detachees.indesit.fr/",
+        "target": "_blank",
+        "noFollow": false,
+        "tagTitle": "Pièces détachées",
+        "text": "Pièces détachées"
+      },
+      "blockClass": "label-header-item"
+    }
+  },
+  /* "menu-item#faq1": {
+    "props": {
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/faq",
+        "noFollow": false,
+        "tagTitle": "FAQ",
+        "text": "FAQ"
+      },
+      "blockClass": "label-header-item"
+    }
+  }, */
+  "menu-item#supportheader": {
+    "props": {
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/service",
+        "noFollow": false,
+        "tagTitle": "Service",
+        "text": "Service"
+      },
+      "blockClass": "label-header-item"
+    }
+  },
+  /* ---------------------- SUBMENU LAUNDRY ---------------------------- */
+  "vtex.menu@2.x:submenu#laundry": {
+    "props": {
+      "width": "100%",
+      "blockClass": "menu"
+    },
+    "children": [
+      "flex-layout.row#menuCategoryLaundry",
+      "close-menu-mouse-out-laundry"
+    ]
+  },
+  /* ---------------------- FLEX LAYOUT ---------------------------- */
+  "flex-layout.row#menuCategoryLaundry": {
+    "props": {
+      "preventHorizontalStretch": true,
+      "fullWidth": true,
+      "blockClass": "subMenu"
+    },
+    "children": ["flex-layout.col#menu-laundry", "flex-layout.col#card-laundry"]
+  },
+  "close-menu-mouse-out-laundry": {},
+  "flex-layout.col#menu-laundry": {
+    "props": {
+      "blockClass": "menu-card",
+      "fullWidth": true
+    },
+    "children": ["vtex.menu@2.x:menu#menuCategoryLaundry"]
+  },
+  "flex-layout.col#card-laundry": {
+    "props": {
+      "blockClass": "imageCard"
+    },
+    "children": [
+      "flex-layout.row#image-card-laundry",
+      "flex-layout.row#description-card-laundry",
+      "flex-layout.row#discover-more-card-laundry"
+    ]
+  },
+  "flex-layout.row#image-card-laundry": {
+    "props": {},
+    "children": ["image#cardLaundry"]
+  },
+  "flex-layout.row#description-card-laundry": {
+    "props": {},
+    "children": ["rich-text#description-laundry"]
+  },
+  "flex-layout.row#discover-more-card-laundry": {
+    "props": {},
+    "children": ["link#discover-more-laundry"]
+  },
+  /* ---------------------- IMAGE LAUNDRY ---------------------------- */
+  "image#cardLaundry": {
+    "props": {
+      "blockClass": "image-card",
+      "src": "assets/Indesit-Home-Appliances_indesit 1.png"
+    }
+  },
+  /* ---------------------- DESCRIPTION LAUNDRY ---------------------------- */
+  "rich-text#description-laundry": {
+    "props": {
+      "blockClass": "description-card-style",
+      "text": "Des Appareils électroménagers tellement simples d'utilisation que toute la famille peut participer aux tâches ménagères"
+    }
+  },
+  /* ---------------------- DISCOVER MORE LAUNDRY ---------------------------- */
+  "link#discover-more-laundry": {
+    "props": {
+      "blockClass": "discover-more-link",
+      "label": "En savoir plus",
+      "href": "/do-it-together"
+    }
+  },
+  /* ---------------------- MENU LAUNDRY ---------------------------- */
+  "vtex.menu@2.x:menu#menuCategoryLaundry": {
+    "props": {
+      "blockClass": "menu-style",
+      "orientation": "vertical"
+    },
+    "children": [
+      "menu-item#laundryTitle",
+      "menu-item#washingMachines",
+      "menu-item#dryers",
+      "menu-item#washerDryers"
+    ]
+  },
+  "menu-item#laundryTitle": {
+    "props": {
+      "blockClass": "link-Menu-title",
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        /* "href": "", */
+        "noFollow": false,
+        "tagTitle": "Laundry",
+        "text": "Lavage"
+      }
+    }
+  },
+  "menu-item#dryers": {
+    "props": {
+      "id": "menu-item-shop-dryers",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/produits/lavage/seche-linge",
+        "noFollow": false,
+        "tagTitle": "Sèche-linge",
+        "text": "Sèche-linge"
+      },
+      "blockClass": "linkMenu"
+    }
+  },
+  "menu-item#washingMachines": {
+    "props": {
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/produits/lavage/lave-linge",
+        "noFollow": false,
+        "tagTitle": "Lave-linge",
+        "text": "Lave-linge"
+      },
+      "blockClass": "linkMenu"
+    }
+  },
+  "menu-item#washerDryers": {
+    "props": {
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/produits/lavage/lave-linge-sechant",
+        "noFollow": false,
+        "tagTitle": "Lave-linge séchant",
+        "text": "Lave-linge séchant"
+      },
+      "blockClass": "linkMenu"
+    }
+  },
+  /* ---------------------- SUBMENU COOKING ---------------------------- */
+  "vtex.menu@2.x:submenu#cooking": {
+    "props": {
+      "width": "100%",
+      "blockClass": "menu"
+    },
+    "children": [
+      "flex-layout.row#menuCategoryCooking",
+      "close-menu-mouse-out-cooking"
+    ]
+  },
+  /* ---------------------- FLEX LAYOUT ---------------------------- */
+  "flex-layout.row#menuCategoryCooking": {
+    "props": {
+      "preventHorizontalStretch": true,
+      "fullWidth": true,
+      "blockClass": "subMenu"
+    },
+    "children": ["flex-layout.col#menu-cooking", "flex-layout.col#card-cooking"]
+  },
+  "close-menu-mouse-out-cooking": {},
+  "flex-layout.col#menu-cooking": {
+    "props": {
+      "blockClass": "menu-card",
+      "fullWidth": true
+    },
+    "children": ["vtex.menu@2.x:menu#menuCategoryCooking"]
+  },
+  "flex-layout.col#card-cooking": {
+    "props": {
+      "blockClass": "imageCard"
+    },
+    "children": [
+      "flex-layout.row#image-card-cooking",
+      "flex-layout.row#description-card-cooking",
+      "flex-layout.row#discover-more-card-cooking"
+    ]
+  },
+  "flex-layout.row#image-card-cooking": {
+    "props": {},
+    "children": ["image#cardCooking"]
+  },
+  "flex-layout.row#description-card-cooking": {
+    "props": {},
+    "children": ["rich-text#description-cooking"]
+  },
+  "flex-layout.row#discover-more-card-cooking": {
+    "props": {},
+    "children": ["link#discover-more-cooking"]
+  },
+  /* ---------------------- IMAGE COOKING ---------------------------- */
+  "image#cardCooking": {
+    "props": {
+      "blockClass": "image-card",
+      "src": "assets/Indesit-Home-Appliances_indesit_2.png"
+    }
+  },
+  /* ---------------------- DESCRIPTION COOKING ---------------------------- */
+  "rich-text#description-cooking": {
+    "props": {
+      "blockClass": "description-card-style",
+      "text": "Des Appareils électroménagers tellement simples d'utilisation que toute la famille peut participer aux tâches ménagères"
+    }
+  },
+  /* ---------------------- DISCOVER MORE COOKING ---------------------------- */
+  "link#discover-more-cooking": {
+    "props": {
+      "blockClass": "discover-more-link",
+      "label": "En savoir plus",
+      "href": "/do-it-together"
+    }
+  },
+  /* ---------------------- MENU COOKING ---------------------------- */
+  "vtex.menu@2.x:menu#menuCategoryCooking": {
+    "props": {
+      "blockClass": "menu-style",
+      "orientation": "vertical"
+    },
+    "children": [
+      "menu-item#cookingTitle",
+      "menu-item#ovens",
+      "menu-item#microwaves",
+      "menu-item#hobs",
+      "menu-item#hoods",
+      "menu-item#cookers"
+      /* "menu-item#built-inCoffeeMachines" */
+    ]
+  },
+  "menu-item#cookingTitle": {
+    "props": {
+      "blockClass": "link-Menu-title",
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Cooking",
+        "text": "Cuisson"
+      }
+    }
+  },
+  "menu-item#ovens": {
+    "props": {
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/produits/cuisson/fours",
+        "noFollow": false,
+        "tagTitle": "Four",
+        "text": "Fours"
+      },
+      "blockClass": "linkMenu"
+    }
+  },
+  "menu-item#microwaves": {
+    "props": {
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/produits/cuisson/micro-ondes",
+        "noFollow": false,
+        "tagTitle": "Micro-ondes",
+        "text": "Micro-Ondes"
+      },
+      "blockClass": "linkMenu"
+    }
+  },
+  "menu-item#hobs": {
+    "props": {
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/produits/cuisson/plaques-de-cuisson", //"/cooking/hobs",
+        "noFollow": false,
+        "tagTitle": "Plaque",
+        "text": "Plaques de cuisson"
+      },
+      "blockClass": "linkMenu"
+    }
+  },
+  "menu-item#hoods": {
+    "props": {
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/produits/cuisson/hottes",
+        "noFollow": false,
+        "tagTitle": "Hotte",
+        "text": "Hottes"
+      },
+      "blockClass": "linkMenu"
+    }
+  },
+  "menu-item#cookers": {
+    "props": {
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/produits/cuisson/cuisinieres",
+        "noFollow": false,
+        "tagTitle": "Cuisinière",
+        "text": "Cuisinières"
+      },
+      "blockClass": "linkMenu"
+    }
+  },
+  "menu-item#built-inCoffeeMachines": {
+    "props": {
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/produits/cuisson/macchine-caffe-da-incasso",
+        "noFollow": false,
+        "tagTitle": "Built-In Coffee Machines",
+        "text": "Built-In Coffee Machines"
+      },
+      "blockClass": "linkMenu"
+    }
+  },
+  /* ---------------------- SUBMENU COOLING ---------------------------- */
+  "vtex.menu@2.x:submenu#cooling": {
+    "props": {
+      "width": "100%",
+      "blockClass": "menu"
+    },
+    "children": [
+      "flex-layout.row#menuCategoryCooling",
+      "close-menu-mouse-out-cooling"
+    ]
+  },
+  /* ---------------------- FLEX LAYOUT ---------------------------- */
+  "flex-layout.row#menuCategoryCooling": {
+    "props": {
+      "preventHorizontalStretch": true,
+      "fullWidth": true,
+      "blockClass": "subMenu"
+    },
+    "children": ["flex-layout.col#menu-cooling", "flex-layout.col#card-cooling"]
+  },
+  "close-menu-mouse-out-cooling": {},
+  "flex-layout.col#menu-cooling": {
+    "props": {
+      "blockClass": "menu-card",
+      "fullWidth": true
+    },
+    "children": ["vtex.menu@2.x:menu#menuCategoryCooling"]
+  },
+  "flex-layout.col#card-cooling": {
+    "props": {
+      "blockClass": "imageCard"
+    },
+    "children": [
+      "flex-layout.row#image-card-cooling",
+      "flex-layout.row#description-card-cooling",
+      "flex-layout.row#discover-more-card-cooling"
+    ]
+  },
+  "flex-layout.row#image-card-cooling": {
+    "props": {},
+    "children": ["image#cardCooling"]
+  },
+  "flex-layout.row#description-card-cooling": {
+    "props": {},
+    "children": ["rich-text#description-cooling"]
+  },
+  "flex-layout.row#discover-more-card-cooling": {
+    "props": {},
+    "children": ["link#discover-more-cooling"]
+  },
+  /* ---------------------- IMAGE COOLING ---------------------------- */
+  "image#cardCooling": {
+    "props": {
+      "blockClass": "image-card",
+      "src": "assets/Indesit-Home-Appliances_indesit_3.png"
+    }
+  },
+  /* ---------------------- DESCRIPTION COOLING ---------------------------- */
+  "rich-text#description-cooling": {
+    "props": {
+      "blockClass": "description-card-style",
+      "text": "Des Appareils électroménagers tellement simples d'utilisation que toute la famille peut participer aux tâches ménagères"
+    }
+  },
+  /* ---------------------- DISCOVER MORE COOKING ---------------------------- */
+  "link#discover-more-cooling": {
+    "props": {
+      "blockClass": "discover-more-link",
+      "label": "En savoir plus",
+      "href": "/do-it-together"
+    }
+  },
+  /* ---------------------- MENU COOLING ---------------------------- */
+  "vtex.menu@2.x:menu#menuCategoryCooling": {
+    "props": {
+      "blockClass": "menu-style",
+      "orientation": "vertical"
+    },
+    "children": [
+      "menu-item#coolingTitle",
+      "menu-item#fridges",
+      "menu-item#freezers"
+    ]
+  },
+  "menu-item#coolingTitle": {
+    "props": {
+      "blockClass": "link-Menu-title",
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Cooling",
+        "text": "Froid"
+      }
+    }
+  },
+  "menu-item#fridges": {
+    "props": {
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/produits/froid/refrigerateurs", //"/cooling/fridges",
+        "noFollow": false,
+        "tagTitle": "Réfrigérateur",
+        "text": "Réfrigérateurs"
+      },
+      "blockClass": "linkMenu"
+    }
+  },
+  "menu-item#freezers": {
+    "props": {
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/produits/froid/congelateurs", //"/cooling/freezers",
+        "noFollow": false,
+        "tagTitle": "Congélateur",
+        "text": "Congélateurs"
+      },
+      "blockClass": "linkMenu"
+    }
+  },
+  /* ---------------------- SUBMENU DISHWASHING ---------------------------- */
+  "vtex.menu@2.x:submenu#dishwashing": {
+    "props": {
+      "width": "100%",
+      "blockClass": ["menu", "isOpen"]
+    },
+    "children": [
+      "flex-layout.row#menuCategoryDishWashing",
+      "close-menu-mouse-out-dishwashing"
+    ]
+  },
+  /* ---------------------- FLEX LAYOUT ---------------------------- */
+  "flex-layout.row#menuCategoryDishWashing": {
+    "props": {
+      "preventHorizontalStretch": true,
+      "fullWidth": true,
+      "blockClass": "subMenu"
+    },
+    "children": [
+      "flex-layout.col#menu-dishwashing",
+      "flex-layout.col#card-dishwashing"
+    ]
+  },
+  "close-menu-mouse-out-dishwashing": {},
+  "flex-layout.col#menu-dishwashing": {
+    "props": {
+      "blockClass": "menu-card",
+      "fullWidth": true
+    },
+    "children": ["vtex.menu@2.x:menu#menuCategoryDishWashing"]
+  },
+  "flex-layout.col#card-dishwashing": {
+    "props": {
+      "blockClass": "imageCard"
+    },
+    "children": [
+      "flex-layout.row#image-card-dishwashing",
+      "flex-layout.row#description-card-dishwashing",
+      "flex-layout.row#discover-more-card-dishwashing"
+    ]
+  },
+  "flex-layout.row#image-card-dishwashing": {
+    "props": {},
+    "children": ["image#cardDishWashing"]
+  },
+  "flex-layout.row#description-card-dishwashing": {
+    "props": {},
+    "children": ["rich-text#description-dishWashing"]
+  },
+  "flex-layout.row#discover-more-card-dishwashing": {
+    "props": {},
+    "children": ["link#discover-more-dishwashing"]
+  },
+  /* ---------------------- IMAGE DISHWASHING ---------------------------- */
+  "image#cardDishWashing": {
+    "props": {
+      "blockClass": "image-card",
+      "src": "assets/Indesit-Home-Appliances_indesit_4.png"
+    }
+  },
+  /* ---------------------- DESCRIPTION DISHWASHING ---------------------------- */
+  "rich-text#description-dishWashing": {
+    "props": {
+      "blockClass": "description-card-style",
+      "text": "Des Appareils électroménagers tellement simples d'utilisation que toute la famille peut participer aux tâches ménagères"
+    }
+  },
+  /* ---------------------- DISCOVER MORE DISHWASHING ---------------------------- */
+  "link#discover-more-dishwashing": {
+    "props": {
+      "blockClass": "discover-more-link",
+      "label": "En savoir plus",
+      "href": "/do-it-together"
+    }
+  },
+  /* ---------------------- MENU DISHWASHING ---------------------------- */
+  "vtex.menu@2.x:menu#menuCategoryDishWashing": {
+    "props": {
+      "blockClass": "menu-style",
+      "orientation": "vertical"
+    },
+    "children": ["menu-item#dishWashingTitle", "menu-item#dishwasher"]
+  },
+  "menu-item#dishWashingTitle": {
+    "props": {
+      "blockClass": "link-Menu-title",
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Dishwashing",
+        "text": "Lave-vaisselle"
+      }
+    }
+  },
+  "menu-item#dishwasher": {
+    "props": {
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/produits/lave-vaisselle/lave-vaisselle",
+        "noFollow": false,
+        "tagTitle": "Lave-vaisselle",
+        "text": "Lave-vaisselle"
+      },
+      "blockClass": "linkMenu"
+    }
+  }
+}

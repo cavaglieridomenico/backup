@@ -1,0 +1,16 @@
+mutation updateCustomData(
+  $orderFormId: ID
+  $profileData: ProfileDataInput!
+  $appId: String
+  $customData: JSON
+  $InvoiceDatas: InvoiceDataInput
+  $clientPreferencesData: ClientPreferencesData!
+) {
+  setProfileData(orderFormId: $orderFormId, profileData: $profileData)
+  setCustomData(orderFormId: $orderFormId, appId: $appId, data: $customData)
+  setInvoiceData(orderFormId: $orderFormId, data: $InvoiceDatas)
+  setClientPreferencesData(
+    orderFormId: $orderFormId
+    clientPreferencesData: $clientPreferencesData
+  )
+}

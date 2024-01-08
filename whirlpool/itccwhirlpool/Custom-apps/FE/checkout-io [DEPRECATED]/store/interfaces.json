@@ -1,0 +1,261 @@
+{
+	"offerings": {
+		"component": "Offerings"
+	},
+	"store.checkout": {
+		"allowConditions": true,
+		"component": "*",
+		"preview": {
+			"type": "transparent",
+			"height": 600
+		}
+	},
+	"store.checkout.cart": {
+		"around": ["homeWrapper"],
+		"preview": {
+			"type": "box",
+			"height": 1400
+		}
+	},
+	"store.checkout.cart-add": {
+		"around": ["homeWrapper"],
+		"allowed": ["checkout-cart-add"]
+	},
+	"store.checkout.order-form": {},
+	"store.checkout.identification": {},
+	"checkout-container": {
+		"component": "Container",
+		"composition": "children"
+	},
+	"checkout-step-group": {
+		"component": "StepGroup",
+		"composition": "children"
+	},
+	"profile-step": {
+		"component": "ProfileStep",
+		"composition": "children",
+		"allowed": ["profile-form", "profile-summary"]
+	},
+	"profile-form": {
+		"component": "ProfileForm",
+		"composition": "children",
+		"allowed": ["profile-editable-form", "profile-summary"]
+	},
+	"profile-editable-form": {
+		"component": "ProfileEditableForm",
+		"composition": "children"
+	},
+	"email-field": {
+		"component": "ProfileEmailField",
+		"composition": "children"
+	},
+	"email-field-cc": {
+		"component": "ProfileEmailFieldCC",
+		"composition": "children"
+	},
+	"profile-editable-form.info-data": {
+		"component": "InfoData",
+		"composition": "children",
+		"allowed": [
+			"profile-editable-form",
+			"email-field",
+			"email-field-cc",
+			"profile-summary"
+		]
+	},
+	"profile-editable-form.checkboxes": {
+		"component": "Checkboxes",
+		"composition": "children"
+	},
+	"profile-editable-form.info-data.email-modal": {
+		"component": "EmailModal",
+		"composition": "children"
+	},
+	"profile-editable-form.invoice-datas": {
+		"component": "InvoiceDatas",
+		"composition": "children"
+	},
+	"profile-editable-form.invoice-datas.custom-datas": {
+		"component": "CustomDatas",
+		"composition": "children"
+	},
+	"profile-editable-form.invoice-datas.invoices": {
+		"component": "Invoices",
+		"composition": "children"
+	},
+	"profile-editable-form.invoice-datas.invoices-inputs": {
+		"component": "InvoicesInputs"
+	},
+	"profile-editable-form.invoice-datas.custom-datas.private-section": {
+		"component": "PrivateSection"
+	},
+	"profile-editable-form.invoice-datas.custom-datas.company-section": {
+		"component": "CompanySection"
+	},
+	"profile-summary": {
+		"component": "ProfileSummary",
+		"composition": "children"
+	},
+	"shipping-step": {
+		"component": "ShippingStep",
+		"composition": "children",
+		"allowed": ["shipping-form", "shipping-summary"]
+	},
+	"shipping-form": {
+		"component": "ShippingForm",
+		"composition": "children",
+		"allowed": "*"
+	},
+	"shipping-editable-form": {
+		"component": "ShippingEditableForm",
+		"composition": "children"
+	},
+	"shipping-editable-form.address-editable-form": {
+		"component": "AddressEditableForm",
+		"composition": "children"
+	},
+	"shipping-editable-form.address-editable-form.address-info": {
+		"component": "AddressInfo",
+		"composition": "children"
+	},
+	"shipping-editable-form.address-summary": {
+		"component": "AddressSummary",
+		"composition": "children"
+	},
+	"shipping-editable-form.delivery-editable-form": {
+		"component": "DeliveryEditableForm",
+		"composition": "children"
+	},
+	"shipping-summary": {
+		"component": "ShippingSummary",
+		"composition": "children"
+	},
+	"shipping-summary.address-summary": {
+		"component": "AddressSummary",
+		"composition": "children"
+	},
+	"shipping-summary.delivery-summary": {
+		"component": "DeliverySummary",
+		"composition": "children"
+	},
+	"address-step": {
+		"component": "AddressStep"
+	},
+	"delivery-step": {
+		"component": "DeliveryStep"
+	},
+	"payment-step": {
+		"component": "PaymentStep",
+		"composition": "children"
+	},
+	"payment-form": {
+		"component": "PaymentForm",
+		"composition": "children"
+	},
+	"payment-summary": {
+		"component": "PaymentSummary",
+		"composition": "children"
+	},
+	"payment-method": {
+		"component": "PaymentMethod",
+		"composition": "children",
+		"content": {
+			"$ref": "app:itccwhirlpool.checkout-container-custom#/definitions/PaymentMethods"
+		}
+	},
+	"product-list-title-with-stock": {
+		"component": "ProductTitleWithStock",
+		"composition": "children"
+	},
+	"payPal-content": {
+		"component": "PayPalContent"
+	},
+	"worldPay-content": {
+		"component": "WorldPayContent"
+	},
+	"checkout-identification": {
+		"component": "Identification",
+		"composition": "children"
+	},
+	"proceed-without-registration-button": {
+		"component": "ProceedWithoutRegistration"
+	},
+	"checkout-custom-summary": {
+		"component": "SummaryContainer",
+		"composition": "children"
+	},
+	"custom-summary": {
+		"component": "CheckoutSummary"
+	},
+	"custom-place-order": {
+		"component": "PlaceOrder"
+	},
+	"cart": {
+		"component": "ContainerCart",
+		"composition": "children",
+		"allowed": "*"
+	},
+	"cart.product-list-container": {
+		"component": "ProductListContainer",
+		"composition": "children",
+		"allowed": "*"
+	},
+	"product-list-custom": {
+		"component": "ProductList",
+		"composition": "children",
+		"allowed": "*"
+	},
+	"product-list-custom.image": {
+		"component": "ProductImage"
+	},
+	"product-list-custom.title": {
+		"component": "ProductTitle"
+	},
+	"product-list-custom-title-with-stock": {
+		"component": "ProductTitleWithStock"
+	},
+	"product-list-custom.energyAndSheet": {
+		"component": "ProductEnergyAndSheet"
+	},
+	"product-list-custom.quantity": {
+		"component": "ProductQuantity"
+	},
+	"product-list-custom.price": {
+		"component": "ProductPrice"
+	},
+	"product-list-custom.remove": {
+		"component": "ProductRemove"
+	},
+	"product-list-custom.offerings-container": {
+		"component": "CartOfferingsContainer",
+		"composition": "children",
+		"allowed": "*"
+	},
+	"product-list-custom.offerings": {
+		"component": "CartOfferings"
+	},
+	"product-list-custom.f-gas": {
+		"component": "Fgas",
+		"composition": "children"
+	},
+	"product-summary-custom": {
+		"component": "ProductSummary",
+		"composition": "children",
+		"allowed": "*"
+	},
+	"product-summary-custom.coupon": {
+		"component": "Coupon"
+	},
+	"product-summary-custom.subtotal": {
+		"component": "SubTotal"
+	},
+	"product-summary-custom.shipping": {
+		"component": "ShippingPrice"
+	},
+	"product-summary-custom.total": {
+		"component": "Total"
+	},
+	"product-summary-custom.go-to-checkout": {
+		"component": "GoToCheckout"
+	}
+}

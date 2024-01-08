@@ -1,0 +1,121 @@
+{
+  "toggle-layout#bannerWithPostilla": {
+    "props": {
+      "visible": true
+    },
+    "children": ["flex-layout.row#bannerWithPostilla"]
+  },
+  "flex-layout.row#bannerWithPostilla": {
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": ["columnPostillaBannerAntonio", "bgColorAntonioHero"]
+    },
+    "children": [
+      "flex-layout.col#leftPartPostilla",
+      "flex-layout.col#rightPartPostilla"
+    ]
+  },
+  "flex-layout.col#leftPartPostilla": {
+    "props": {
+      "width": "40%",
+      "preventVerticalStretch": true,
+      "blockClass": ["columnPostilla", "columnPostillaBottom"]
+    },
+    "children": [
+      "rich-text#BanntitleParag",
+      "rich-text#BannTitle",
+      "rich-text#BannDesc",
+      "toggle-layout#ButtonBannerWithPostilla",
+      "rich-text#BannPostilla"
+    ]
+  },
+  "flex-layout.col#rightPartPostilla": {
+    "props": {
+      "width": "60%",
+      "blockClass": "columnPostillaImage"
+    },
+    "children": ["image#bannerPostilla"]
+  },
+  "rich-text#BanntitleParag": {
+    "props": {
+      "text": "W COLLECTION",
+      "blockClass": "titlePBannerPostilla"
+    }
+  },
+  "rich-text#BannTitle": {
+    "title": "[BANNER] - Title",
+    "props": {
+      "text": "# Frigorifero combinato 4 porte",
+      "blockClass": ["titleHBannerPostilla"]
+    }
+  },
+  "rich-text#BannDesc": {
+    "title": "[BANNER] - Description",
+    "props": {
+      "text": "33% di spazio extra per frutta e verdura *",
+      "blockClass": "descBannerPostilla"
+    }
+  },
+  "toggle-layout#ButtonBannerWithPostilla": {
+    "title": "[TOGGLE LAYOUT] - Link",
+    "props": {
+      "visible": true
+    },
+    "children": ["link#ButtonBann"]
+  },
+  "link#ButtonBann": {
+    "title": "[BANNER] - Link",
+    "props": {
+      "label": "TESTO BOTTONE",
+      "href": "#",
+      "displayMode": "button",
+      "blockClass": "postillaButton"
+    }
+  },
+  "rich-text#BannPostilla": {
+    "title": "[BANNER] - Small label",
+    "props": {
+      "text": "*Considerando la capacità dello spazio convertibile impostato a 4 ° C.",
+      "blockClass": ["postillaBannerPostilla", "anchorPostilla"]
+    }
+  },
+  "image#bannerPostilla": {
+    "title": "[BANNER] - Image",
+    "props": {
+      "src": "assets/placeholders/image-placeholder-16-9.png",
+      "blockClass": "imagePostillaBanner"
+    }
+  },
+  //Banenr 2
+  "toggle-layout#bannerWithPostillaHome": {
+    "props": {
+      "visible": true
+    },
+    "children": ["flex-layout.row#bannerWithPostillaHome"]
+  },
+  "flex-layout.row#bannerWithPostillaHome": {
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": ["columnPostillaBannerAntonio", "bgColorAntonioHero"]
+    },
+    "children": [
+      "flex-layout.col#leftPartPostillaHome",
+      "flex-layout.col#rightPartPostilla"
+    ]
+  },
+  "flex-layout.col#leftPartPostillaHome": {
+    "props": {
+      "width": "40%",
+      "preventVerticalStretch": true,
+      "blockClass": ["columnPostilla", "columnPostillaBottom"]
+    },
+    "children": [
+      "image#LogoBannerTopCarousel",
+      "rich-text#BanntitleParag",
+      "rich-text#BannTitle",
+      "rich-text#BannDesc",
+      "toggle-layout#ButtonBannerWithPostilla",
+      "rich-text#BannPostilla"
+    ]
+  }
+}

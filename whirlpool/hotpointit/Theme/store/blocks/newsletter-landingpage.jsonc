@@ -1,0 +1,87 @@
+{
+  "store.custom#newsletter-landingpage": {
+    "blocks": [
+      "image#banner-newsletterLanding",
+      "flex-layout.row#newsLetterLanding"
+    ]
+  },
+  "flex-layout.row#newsLetterLanding": {
+    "children": [
+      "flex-layout.col#newsletterForm"
+    ],
+    "props": {
+      "blockClass": [
+        "fuoriSalone",
+        "newsletterLanding"
+      ]
+    }
+  },
+  "image#banner-newsletterLanding": {
+    "props": {
+      "src": "assets/newsletterPageBg.webp",
+      "width": "100%",
+      "height": "100%",
+      "blockClass": "fuoriSaloneImg"
+    }
+  },
+  "flex-layout.col#newsletterForm": {
+    "children": [
+      "experimental__visibility-layout#image-newsletter-form",
+      "newsletter-form"
+    ],
+    "props": {
+      "blockClass": "containerForm"
+    }
+  },
+  /* FORM IMAGE*/
+  "experimental__visibility-layout#image-newsletter-form": {
+    "title": "Visibility Layout - Image Newsletter Form",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "image#image-newsletter-form"
+    ]
+  },
+  "image#image-newsletter-form": {
+    "title": "Image - Newsletter Form",
+    "props": {
+      "src": "assets/newsletterFormImage.webp",
+      "blockClass": "imageNewsletterForm"
+    }
+  },
+  /* NEWSLETTER FORM */
+  "newsletter-form": {
+    "props": {
+      "title": "APPROFITTA DEI VANTAGGI",
+      "subtitles": [
+        {
+          "__editorItemTitle": "#### Iscriviti per ricevere offerte in anteprima, ricette, informazioni e consigli per l’utilizzo dei tuoi elettrodomestici."
+        }
+      ],
+      "checkboxes": [
+        {
+          "checkboxLabel": "Acconsento al trattamento dei miei dati personali per permettere a Whirlpool Italia Srl di inviarmi newsletter/comunicazioni di marketing (in forma elettronica e non, anche tramite telefono, posta tradizionale, e- mail, SMS, notifiche push su siti di terze parti tra cui sulle piattaforme Facebook e Google) riguardanti prodotti e servizi di Whirlpool italia Srl, anche da me acquistati o registrati, nonché di svolgere ricerche di mercato.",
+          "checkboxRequired": true,
+          "checkboxNewsletter": true,
+          "checkboxError": "Seleziona questa casella per continuare"
+        }
+      ],
+      "privacyPolicyTextArray": [
+        {
+          "__editorItemTitle": "Ho compreso e prendo atto del contenuto dell’[informativa sulla privacy]( https://www.hotpoint.it/pagine/informativa-sulla-privacy) e:"
+        }
+      ],
+      "errorRequiredField": "Questo campo è obbligatorio",
+      "errorInvalidMail": "Inserisci un'email valida",
+      "shouldLogInErrorMessage": "La tua email risulta già registrata nei nostri sistemi. Puoi modificare le tue preferenze all'interno della pagina del MyAccount, accedendo al sito con le tue credenziali. Grazie",
+      "successMessage": "Grazie per esserti iscritto alla nostra newsletter!",
+      "registeredErrorMessage": "Sei già registrato!",
+      "pixelEventName": "newsletterSubscription"
+    }
+  }
+}
+/*wsletterSubscription"
+    }
+  }
+}*/

@@ -1,0 +1,196 @@
+{
+  "store.product": {
+    "children": ["condition-layout.product#cond1"]
+  },
+
+  "condition-layout.product#cond1": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "categoryId",
+          "arguments": {
+            "id": "1"
+          }
+        }
+      ],
+      "Then": "flex-layout.row#custom-product-page",
+      "Else": "flex-layout.row#classic-product-page"
+    }
+  },
+  "flex-layout.row#classic-product-page": {
+    "children": ["flex-layout.col#classic-product-page"],
+    "props": {
+      "blockClass": "CLASSIC-PAGE"
+    }
+  },
+  "flex-layout.col#classic-product-page": {
+    "children": ["flex-layout.col#classic-product-page-items", "flex-layout.row#prodotti-shelf"]
+  },
+  "flex-layout.row#prodotti-shelf": {
+    "children": [
+       "shelf.relatedProducts#suggestions"
+    ]
+  },
+  "shelf.relatedProducts#suggestions": { 
+    "blocks": ["product-summary.shelf"],
+    "props": {
+      "recommendation": "suggestions", 
+      "productList": {
+        "maxItems": 10,
+        "itemsPerPage": 5,
+        "minItemsPerPage": 1, 
+        "scroll": "BY_PAGE",
+        "arrows": true,
+        "titleText": "We also recommend"
+      },
+      "blockClass": ["relatedProductsDiv"]
+    }
+  },
+  "flex-layout.col#classic-product-page-items":{
+    "children": ["breadcrumb","countdown.productheader","flex-layout.row#main"]
+  },
+  "flex-layout.row#custom-product-page": {
+    "children": ["custom-product-page"]
+  },
+  "rich-text#rich1": {
+    "props": {
+      "text": "TEST"
+    }
+  },
+  "flex-layout.row#main": {
+    "props": {
+      "marginTop": 6,
+      "blockClass": "productMainRow"
+    },
+    "children": [
+      "flex-layout.col#Mainleft",
+      "flex-layout.col#right"
+    ]
+  },
+  "flex-layout.col#Mainleft": {
+    "children": ["flex-layout.row#left", "flex-layout.row#leftDown"]
+  },
+  "flex-layout.row#left": {
+    "props": {
+      "blockClass": "productLeft"
+    },
+    "children": [
+      "modal-trigger#biggerView","flex-layout.col#left"
+    ]
+  },
+  "flex-layout.row#leftDown": {
+    "props": {
+      "blockClass": "leftDown"
+    },
+    "children": ["flex-layout.col#leftDown"]
+  },
+  "flex-layout.col#leftDown": {
+    "props": {
+      "blockClass": "leftDown"
+    },
+    "children": ["countdown.kititem", "countdown.findrightpart", "countdown.productcustomcheck", "flex-layout.row#barcodeOpen"]
+  },
+  "rich-text#descriptionLeft": {
+    "props": {
+      "blockClass": "descriptionLeft",
+      "text": "Vindt het juiste onderdeel voor jouw apparaat"
+    }
+  },
+  "flex-layout.row#searchWithButtonDown": {
+    "props": {
+      "blockClass": "searchWithButtonDown"
+    }
+  },
+  "search-bar#leftDown": {
+    "props": {
+      "blockClass": "leftDown"
+    }
+  },
+  "link#leftDown": {
+    "props": {
+      "blockClass": "leftDown",
+      "displayMode": "button",
+      "buttonProps": {
+        "variant": "secondary",
+        "size": "large"
+      },
+      "href": "/Lavatrici",
+      "label": "ZOEKEN"
+    }
+  },
+  "product-images": {
+    "props": {
+      "blockClass": "productImages"
+    }
+  },
+  "modal-trigger#biggerView": {
+    "children": [
+      "product-images",
+      "modal-layout#biggerView"
+    ]
+  },
+  "modal-layout#biggerView": {
+    "children": [
+      "product-images"
+    ],
+    "props":{
+      "blockClass": "modalProductPicture"
+    }
+  },
+  "flex-layout.col#left": {
+    "children": ["product-name","product-identifier.product","flex-layout.row#availabilityDelivery", "countdown.warningpdp"]
+  },
+  "flex-layout.row#availabilityDelivery": {
+    "props": {
+      "blockClass": "availabilityDelivery"
+    },
+    "children": 
+      ["product-availability-custom", "countdown.deliveryinfo"]
+  },
+  "flex-layout.col#right": { 
+    "props": {
+      "preventVerticalStretch": true,
+      "blockClass": "flexRowProductRight"
+    },
+    "children": [/* 
+      "product-price#productRight",  */
+      "product-selling-price#pdp",
+      "product-price-savings#pdp",
+      "product-price-savings",
+      "flex-layout.row#qty-sku", 
+      "add-to-cart-button-custom"
+    ]
+  }, 
+  "product-selling-price#pdp": {
+    "props": { 
+      "blockClass": "summary",
+      "message": "{sellingPriceWithTax}",
+      "showSavings": true 
+    }
+  },
+  "product-price-savings#pdp": {
+    "props": { 
+      "blockClass": "summary",
+      "message": "{newPriceValue}",
+      "showSavings": true 
+    }
+  },/* 
+  "product-price#productRight": {
+    "props": {
+      "showSavings": true 
+    } 
+  }, */
+  "flex-layout.row#qty-sku": {
+    "props": {
+      "blockClass": "rowQty"
+    },
+    "children": [
+      "product-quantity"
+    ]
+  },
+  "product-quantity": {
+    "props": {
+      "selectorType": "stepper"
+    }
+  }
+}

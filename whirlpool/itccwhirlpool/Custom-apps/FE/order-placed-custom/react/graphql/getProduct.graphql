@@ -1,0 +1,15 @@
+query getproduct($identifier: ProductUniqueIdentifier) {
+    product(identifier: $identifier){
+        specificationGroups{
+            name
+            specifications {
+                name
+                values
+            }
+        }
+        properties{
+          name
+          values
+      }
+    }
+}

@@ -1,0 +1,465 @@
+{
+  "flex-layout.row#pageDescriptionBlackFriday": {
+    "children": [
+      "rich-text#pageDescriptionBlackFriday"
+    ]
+  },
+  "rich-text#pageDescriptionBlackFriday": {
+    "title": "Rich Text - Page description",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": "pageDescriptionBlackFriday",
+      "text": "# Promo Hotpoint IT \n Offerte lampo valide solo online su un'ampia \n selezione di prodotti. \n Acquistando online, potrai ricevere comodamente a casa il tuo elettrodomestico al miglior prezzo."
+    }
+  },
+  "flex-layout.row#separator": {
+    "props": {
+      "blockClass": "separator"
+    }
+  },
+  "toggle-layout#timer-desktop-1": {
+    "title": "Toggle Layout - Timer Desktop 1",
+    "props": {
+      "renderChildren": false
+    },
+    "children": [
+      "flex-layout.row#separator",
+      "timer-component#timer-1"
+    ]
+  },
+  "timer-component#timer-1": {
+    "props": {
+      "showDateFormat": true,
+      "targetDate": "2021-11-30",
+      "ore": "00",
+      "minuti": "00",
+      "secondi": "00",
+      "Head": "flex-layout.row#ContainerScontiExtraBlackFriday3",
+      "Else": "flex-layout.row#ElseBlackFridayBlackFriday3"
+    },
+    "children": [
+      "toggle-layout#carouselPromo",
+      "flex-layout.row#scopriDiPiùBlackFriday3"
+    ],
+    "title": "Timer - 1"
+  },
+  /*Head (PART SHOWN WHEN PROMO IS ACTIVE)*/
+  "flex-layout.row#ContainerScontiExtraBlackFriday3": {
+    "title": "Part Shown With Timer Active",
+    "props": {},
+    "children": [
+      "flex-layout.col#head-sconti-extraBlackFriday3"
+    ]
+  },
+  "flex-layout.col#head-sconti-extraBlackFriday3": {
+    "children": [
+      "flex-layout.row#dataScontiExtraBlackFriday3",
+      "flex-layout.row#titleScontiExtraBlackFriday3",
+      "flex-layout.row#bannerWithPostillaPromo"
+    ]
+  },
+  "flex-layout.row#dataScontiExtraBlackFriday3": {
+    "children": [
+      "rich-text#dataScontiExtraBlackFriday3"
+    ]
+  },
+  "rich-text#dataScontiExtraBlackFriday3": {
+    "title": "Rich Text - Promo Date",
+    "props": {
+      "text": "Solo oggi - 29 novembre",
+      "blockClass": "durata"
+    }
+  },
+  "flex-layout.row#titleScontiExtraBlackFriday3": {
+    "props": {
+      "preventHorizontalStretch": true,
+      "blockClass": "marginButton1Rem"
+    },
+    "children": [
+      "rich-text#titleBlackFridayBlackFriday3",
+      "rich-text#titleScontiExtraBlackFriday3"
+    ]
+  },
+  "rich-text#titleBlackFridayBlackFriday3": {
+    "title": "Rich Text - Title 1",
+    "props": {
+      "text": "",
+      "blockClass": [
+        "title-blackFriday",
+        "marginRightDot3",
+        "noMarginTop"
+      ]
+    }
+  },
+  "rich-text#titleScontiExtraBlackFriday3": {
+    "title": "Rich Text - Promo Title",
+    "props": {
+      "text": "### RINNOVA LA TUA CASA CON HOTPOINT",
+      "blockClass": [
+        "title-section-blackFriday",
+        "noMarginTop"
+      ]
+    }
+  },
+  "flex-layout.row#bannerWithPostillaPromo": {
+    "title": "Row - Banner with Image",
+    "children": [
+      "toggle-layout#bannerWithPostillaPromo"
+    ]
+  },
+  "toggle-layout#bannerWithPostillaPromo": {
+    "title": "Toggle Layout - Banner With Image",
+    "children": [
+      "flex-layout.row#bannerWithImagePromo"
+    ]
+  },
+  "flex-layout.row#bannerWithImagePromo": {
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": [
+        "columnPostillaBannerPromo"
+      ]
+    },
+    "children": [
+      "flex-layout.col#leftPartPostillaPromo",
+      "flex-layout.col#rightPartPostillaPromo"
+    ]
+  },
+  "flex-layout.col#leftPartPostillaPromo": {
+    "title": "Left Part Banner",
+    "props": {
+      "width": "50%",
+      "blockClass": "columnPostillaImage"
+    },
+    "children": [
+      "image#bannerPostilla"
+    ]
+  },
+  "flex-layout.col#rightPartPostillaPromo": {
+    "title": "Right Part Banner",
+    "props": {
+      "width": "50%",
+      "preventVerticalStretch": true,
+      "blockClass": [
+        "columnPostilla",
+        "columnPostillaBottom"
+      ]
+    },
+    "children": [
+      "rich-text#BannTitle",
+      "rich-text#BannDesc",
+      "toggle-layout#ButtonBannerWithPostilla"
+    ]
+  },
+  /*Else (PART SHOWN WHEN PROMO IS GONE)*/
+  "flex-layout.row#ElseBlackFridayBlackFriday3": {
+    "title": "Part Shown With Timer Gone",
+    "props": {
+      "blockClass": "rowElseBlackFriday"
+    },
+    "children": [
+      "flex-layout.col#containerBlackFridayElseBlackFriday3"
+    ]
+  },
+  "flex-layout.col#containerBlackFridayElseBlackFriday3": {
+    "children": [
+      "flex-layout.row#titleScontiExtraElseBlackFriday3",
+      "image#bannerWIthImageTitle"
+    ]
+  },
+  "flex-layout.row#titleScontiExtraElseBlackFriday3": {
+    "props": {
+      "preventHorizontalStretch": true,
+      "blockClass": [
+        "marginButton1Rem",
+        "richTextBFelse"
+      ]
+    },
+    "children": [
+      "rich-text#titleBlackFridayElseBlackFriday3",
+      "rich-text#titleScontiExtraElseBlackFriday3"
+    ]
+  },
+  "rich-text#titleBlackFridayElseBlackFriday3": {
+    "props": {
+      "text": "Cyber Monday -",
+      "blockClass": [
+        "title-blackFriday",
+        "marginRightDot3",
+        "noMarginTop"
+      ]
+    },
+    "title": "Titolo Black Friday a scadenza"
+  },
+  "rich-text#titleScontiExtraElseBlackFriday3": {
+    "props": {
+      "text": "### Prezzo Shock! Solo per 24 ore",
+      "blockClass": [
+        "title-section-blackFriday2",
+        "noMarginTop"
+      ]
+    },
+    "title": "Titolo Black Friday in grassetto a scadenza"
+  },
+  /*Scopri di più*/
+  "flex-layout.row#scopriDiPiùBlackFriday3": {
+    "title": "Row - Scopri di più",
+    "props": {
+      "preventHorizontalStretch": true,
+      "blockClass": [
+        "displayFlexContentCenter",
+        "margin2rem"
+      ]
+    },
+    "children": [
+      "rich-text#scopriDiPiùTextBlackFriday3",
+      "rich-text#scopriDiPiùLinkBlackFriday3"
+    ]
+  },
+  "rich-text#scopriDiPiùTextBlackFriday3": {
+    "props": {
+      "text": "Le sorprese non finiscono qui",
+      "blockClass": "scopriDiPiuText"
+    }
+  },
+  "rich-text#scopriDiPiùLinkBlackFriday3": {
+    "props": {
+      "text": "[Scopri i prodotti]( https://www.whirlpool.it/promozioni/whirlpool-black-friday/cyber-monday)",
+      "blockClass": [
+        "scopriDiPiuLink",
+        "colorEdb112",
+        "buttonCard"
+      ]
+    }
+  },
+  /* Toggle Layout - Product Slider */
+  "toggle-layout#carouselPromo": {
+    "title": "Toggle Layout - Carousel Products",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "list-context.product-list#carouselPromo"
+    ]
+  },
+  "list-context.product-list#carouselPromo": {
+    "title": "Carousel Promo",
+    "blocks": [
+      "product-summary.shelf#caroselliLanding"
+    ],
+    "children": [
+      "slider-layout-whl#carouselPromo"
+    ],
+    "props": {
+      "collection": "199",
+      "productList": {
+        "maxItems": 10,
+        "itemsPerPage": 4,
+        "minItemsPerPage": 1,
+        "scroll": "BY_PAGE",
+        "arrows": true,
+        "titleText": "Non sai da dove iniziare? Scopri i prodotti Whirlpool più venduti"
+      }
+    }
+  },
+  "slider-layout-whl#carouselPromo": {
+    "title": "Slider Layout - Carousel Promo",
+    "props": {
+      "itemsPerPage": {
+        "desktop": 5,
+        "tablet": 2,
+        "phone": 1
+      },
+      "infinite": true,
+      "fullWidth": false,
+      "blockClass": "shelf",
+      "showNavigationArrows": "desktopOnly",
+      "showPaginationDots": "mobileOnly"
+    }
+  },
+  "toggle-layout#timer-desktop-2": {
+    "title": "Toggle Layout - Timer Desktop 2",
+    "props": {
+      "renderChildren": false
+    },
+    "children": [
+      "flex-layout.row#separator",
+      "timer-component#timer-2"
+    ]
+  },
+  "timer-component#timer-2": {
+    "props": {
+      "showDateFormat": true,
+      "targetDate": "2021-11-30",
+      "ore": "00",
+      "minuti": "00",
+      "secondi": "00",
+      "Head": "flex-layout.row#ContainerScontiExtraBlackFriday3",
+      "Else": "flex-layout.row#ElseBlackFridayBlackFriday3"
+    },
+    "children": [
+      "toggle-layout#carouselPromo",
+      "flex-layout.row#scopriDiPiùBlackFriday3"
+    ],
+    "title": "Timer - 2"
+  },
+  "toggle-layout#timer-desktop-3": {
+    "title": "Toggle Layout - Timer Desktop 3",
+    "props": {
+      "renderChildren": false
+    },
+    "children": [
+      "flex-layout.row#separator",
+      "timer-component#timer-3"
+    ]
+  },
+  "timer-component#timer-3": {
+    "props": {
+      "showDateFormat": true,
+      "targetDate": "2021-11-30",
+      "ore": "00",
+      "minuti": "00",
+      "secondi": "00",
+      "Head": "flex-layout.row#ContainerScontiExtraBlackFriday3",
+      "Else": "flex-layout.row#ElseBlackFridayBlackFriday3"
+    },
+    "children": [
+      "toggle-layout#carouselPromo",
+      "flex-layout.row#scopriDiPiùBlackFriday3"
+    ],
+    "title": "Timer - 3"
+  },
+  /*TIMER COMPONENTS - MOBILE*/
+  "toggle-layout#timer-mobile-1": {
+    "title": "Toggle Layout - Timer Mobile 1",
+    "props": {
+      "renderChildren": false
+    },
+    "children": [
+      "flex-layout.row#separator",
+      "timer-component#timer-1-mobile"
+    ]
+  },
+  "timer-component#timer-1-mobile": {
+    "props": {
+      "showDateFormat": true,
+      "targetDate": "2021-11-30",
+      "ore": "00",
+      "minuti": "00",
+      "secondi": "00",
+      "Head": "flex-layout.row#ContainerScontiExtraBlackFriday3",
+      "Else": "flex-layout.row#ElseBlackFridayBlackFriday3"
+    },
+    "children": [
+      "toggle-layout#carouselPromo",
+      "flex-layout.row#scopriDiPiùBlackFriday3"
+    ],
+    "title": "Timer Mobile - 1"
+  },
+  // "flex-layout.row#HeadBlackFridayMobileBlackFriday3": {
+  //   "title": "Mobile",
+  //   "props": {
+  //     "blockClass": "rowElseBlackFriday"
+  //   },
+  //   "children": [
+  //     "flex-layout.col#HeadBlackFridayMobileBlackFriday3"
+  //   ]
+  // },
+  // "flex-layout.col#HeadBlackFridayMobileBlackFriday3": {
+  //   "children": [
+  //     "flex-layout.row#titleScontiExtraHeadMobileBlackFriday3",
+  //     "info-card#headBlackFridayMobileBlackFriday3"
+  //   ]
+  // },
+  // "flex-layout.row#titleScontiExtraHeadMobileBlackFriday3": {
+  //   "props": {
+  //     "preventHorizontalStretch": true,
+  //     "blockClass": "marginButton1Rem"
+  //   },
+  //   "children": [
+  //     "rich-text#titleBlackFridayHeadMobileBlackFriday3"
+  //   ]
+  // },
+  // "rich-text#titleBlackFridayHeadMobileBlackFriday3": {
+  //   "props": {
+  //     "textAlignment": "CENTER",
+  //     "textPosition": "CENTER",
+  //     "text": "**RINNOVA LA TUA CASA CON WHIRLPOOL**",
+  //     "blockClass": [
+  //       "title-blackFriday",
+  //       "marginRightDot3",
+  //       "noMarginTop"
+  //     ]
+  //   },
+  //   "title": "Titolo Black Friday card - Mobile"
+  // },
+  // "info-card#headBlackFridayMobileBlackFriday3": {
+  //   "props": {
+  //     "id": "info-card-example",
+  //     "isFullModeStyle": true,
+  //     "textPosition": "left",
+  //     "imageUrl": "assets/Lavastoviglie.jpg",
+  //     "callToActionText": "SCOPRI DI PIU",
+  //     "callToActionUrl": "/",
+  //     "blockClass": [
+  //       "info-card-example",
+  //       "headBlackFriday"
+  //     ],
+  //     "textAlignment": "center"
+  //   },
+  //   "title": "Card mostrata a termine promozione"
+  // },
+  "toggle-layout#timer-mobile-2": {
+    "title": "Toggle Layout - Timer Mobile 2",
+    "props": {
+      "renderChildren": false
+    },
+    "children": [
+      "flex-layout.row#separator",
+      "timer-component#timer-2-mobile"
+    ]
+  },
+  "timer-component#timer-2-mobile": {
+    "props": {
+      "showDateFormat": true,
+      "targetDate": "2021-11-30",
+      "ore": "00",
+      "minuti": "00",
+      "secondi": "00",
+      "Head": "flex-layout.row#ContainerScontiExtraBlackFriday3",
+      "Else": "flex-layout.row#ElseBlackFridayBlackFriday3"
+    },
+    "children": [
+      "toggle-layout#carouselPromo",
+      "flex-layout.row#scopriDiPiùBlackFriday3"
+    ],
+    "title": "Timer Mobile - 2"
+  },
+  "toggle-layout#timer-mobile-3": {
+    "title": "Toggle Layout - Timer Mobile 3",
+    "props": {
+      "renderChildren": false
+    },
+    "children": [
+      "flex-layout.row#separator",
+      "timer-component#timer-3-mobile"
+    ]
+  },
+  "timer-component#timer-3-mobile": {
+    "props": {
+      "showDateFormat": true,
+      "targetDate": "2021-11-30",
+      "ore": "00",
+      "minuti": "00",
+      "secondi": "00",
+      "Head": "flex-layout.row#ContainerScontiExtraBlackFriday3",
+      "Else": "flex-layout.row#ElseBlackFridayBlackFriday3"
+    },
+    "children": [
+      "toggle-layout#carouselPromo",
+      "flex-layout.row#scopriDiPiùBlackFriday3"
+    ],
+    "title": "Timer Mobile - 3"
+  }
+}

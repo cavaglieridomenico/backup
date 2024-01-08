@@ -1,0 +1,109 @@
+{
+  "store.custom#recipes": {
+    "blocks": [
+      "breadcrumb#recipes",
+      "experimental__visibility-layout#bannerSliderHomeTop",
+      "flex-layout.row#space",
+      "recipes"
+
+      //"analytics"
+    ]
+  },
+  "breadcrumb#recipes": {
+    "props": {
+      "categories": ["/Rezepte/"],
+      "showOnMobile": false
+    }
+  },
+  "experimental__visibility-layout#bannerSliderHomeTop": {
+    "props": {
+      "visible": true
+    },
+    "children": ["list-context.info-card-list#homeBannersTopMain"]
+  },
+  "list-context.info-card-list#homeBannersTop": {
+    "children": ["slider-layout#bannerHomeTop"],
+    "props": {
+      "infoCards": [
+        {
+          "id": "hero-banner-main",
+          "isFullModeStyle": false,
+          "textPosition": "left",
+          "imageUrl": "assets/ph-square.jpg",
+          "headline": "Supreme Care",
+          "subhead": "La lavatrice più silenziosa",
+          "callToActionText": "SCOPRI di PIÙ",
+          "callToActionUrl": "/whirlpool-supreme-8415-8-kg-la-lavatrice-piu-silenziosa/p",
+          "blockClass": "heroBannerHomeTop",
+          "textAlignment": "left"
+        },
+        {
+          "id": "hero-banner-main",
+          "isFullModeStyle": false,
+          "textPosition": "left",
+          "imageUrl": "assets/ph-square.jpg",
+          "headline": "Supreme Care",
+          "subhead": "La lavatrice più silenziosa",
+          "callToActionText": "SCOPRI di PIÙ",
+          "callToActionUrl": "/whirlpool-supreme-8415-8-kg-la-lavatrice-piu-silenziosa/p",
+          "blockClass": "heroBannerHomeTop",
+          "textAlignment": "left"
+        }
+      ]
+    }
+  },
+  "list-context.info-card-list#homeBannersTopMain": {
+    "children": ["slider-layout#bannerHomeTopRecipes"],
+    "props": {
+      "infoCards": [
+        {
+          "id": "hero-banner-main",
+          "isFullModeStyle": false,
+          "textPosition": "left",
+          "imageUrl": "https://bauknechtde.vtexassets.com/assets/vtex.file-manager-graphql/images/0d9c005e-e9fe-4dbc-a172-46e417febed9___41cbe77aa6076ce89c90153077dc0079.jpg",
+          "headline": "FÜR ECHTE GESCHMACKSENTDECKER",
+          "subhead": "Benötigen Sie Hilfe bei der Entscheidung, was Sie kochen möchten? Wählen Sie aus unseren leckeren Vorschlägen das passende Rezept.",
+          "callToActionMode": "none",
+          "blockClass": "heroBannerHomeTopMain",
+          "textAlignment": "left"
+        }
+        /*   {
+          "id": "hero-banner-main",
+          "isFullModeStyle": false,
+          "textPosition": "left",
+          "imageUrl": "assets/ph-square.jpg",
+          "headline": "Supreme Care",
+          "subhead": "La lavatrice più silenziosa",
+          "callToActionText": "SCOPRI di PIÙ",
+          "callToActionUrl": "/whirlpool-supreme-8415-8-kg-la-lavatrice-piu-silenziosa/p",
+          "blockClass": "heroBannerHomeTop",
+          "textAlignment": "left"
+        } */
+      ]
+    }
+  },
+  "slider-layout#bannerHomeTop": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": false,
+      "showNavigationArrows": "never",
+      "blockClass": ["carouselHomeTop"]
+    }
+  },
+  "slider-layout#bannerHomeTopRecipes": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": false,
+      "showNavigationArrows": "never",
+      "blockClass": ["carouselHomeTop", "carouselRecipes"]
+    }
+  }
+}

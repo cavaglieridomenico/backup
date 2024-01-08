@@ -1,0 +1,1200 @@
+{
+  "store.custom#supporto": {
+    "children": [
+      // "sticky-layout#supportoCardsBottom",
+      "supporto-sticky-menu",
+      "flex-layout.row#bread-theme4",
+      "analytics-wrapper#heroBannerSupportoPage",
+      "rich-text#haiBisogno",
+      "flex-layout.row#space",
+      "slider-layout#supportoCards",
+      "flex-layout.row#halfSpace",
+      "flex-layout.row#percheWhirlpoolRow",
+      "flex-layout.row#halfSpace",
+      "info-card#Ricambioriginali2",
+      // "info-card#ConlatuaEstensione",
+      // "info-card#Restituisciprestazioni",
+      "info-card#Risultatiprofessionali",
+      "flex-layout.row#halfSpace",
+      "flex-layout.row#space",
+      "flex-layout.row#halfSpace",
+      "rich-text#Contattaci1",
+      "flex-layout.row#halfSpace",
+      "slider-layout#supportoCardsBottom",
+      "list-context.product-list#supportCarousel"
+      // "analytics"
+    ]
+  },
+
+  "breadcrumb#personalizedSupporto": {
+    "props": {
+      "categories": ["services"],
+      "showOnMobile": false
+    }
+  },
+  "list-context.product-list#supportCarousel": {
+    "blocks": ["product-summary.shelf"],
+    "children": ["slider-layout#support-carousel"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC",
+      "maxItems": 5
+    }
+  },
+  "slider-layout#support-carousel": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 5,
+        "tablet": 3,
+        "phone": 1
+      },
+      "collection": "1423",
+      "infinite": true,
+      "fullWidth": false,
+      "blockClass": "shelf"
+    }
+  },
+  "analytics-wrapper#heroBannerSupportoPage": {
+    "props": {
+      "propsAnalytics": {
+        "analyticsProperties": "provide",
+        "nameEvent": "productRegistration",
+        "name": "",
+        "nameView": "",
+        "data": [],
+        "isView": false
+      }
+    },
+    "children": ["info-card#heroBannerSupportoPage"]
+  },
+  "info-card#heroBannerSupportoPage": {
+    "props": {
+      "id": "hero-banner-supp",
+      "isFullModeStyle": false,
+      "textPosition": "left",
+      "imageUrl": "assets/placeholders/placeholder-wide.png",
+      "headline": "Il più veloce e affidabile servizio di assistenza per i tuoi elettrodomestici.",
+      "subhead": "Registra il tuo prodotto e ricevi aggiornamenti e suggerimenti per proteggere il tuo elettrodomestico.",
+      "callToActionText": "REGISTRA IL TUO PRODOTTO",
+      "callToActionUrl": "https://register-appliance.com/whirlpool/RegistroPorMarca?country=PL&language=pl",
+      "callToActionLinkTarget": "_blank",
+      "blockClass": ["heroBanner", "heroBannerSearch"],
+      "textAlignment": "left"
+    }
+  },
+  "rich-text#haiBisogno": {
+    "props": {
+      "textPosition": "CENTER",
+      "textAlignment": "CENTER",
+      "text": "Vous avez besoin d’aide? &nbsp;&nbsp; [Découvrez les solutions les plus recherchées>](/services/diagnostic-des-anomalies)",
+      "blockClass": "m-stripe__text",
+      "href": "/services/diagnostic-des-anomalies"
+    }
+  },
+
+  //slider supportCardsTop
+  "slider-layout#supportoCards": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 6,
+        "tablet": 3,
+        "phone": 1
+      },
+      "infinite": false,
+      "showNavigationArrows": "never",
+      "showPaginationDots": "mobileOnly",
+      "autoplay": {
+        "timeout": 5000,
+        "stopOnHover": false
+      },
+      "blockClass": ["carousel"]
+    },
+    "children": [
+      "flex-layout.row#SupportofirstCard",
+      "flex-layout.row#SupportosecondCard",
+      "flex-layout.row#SupportothirdCard"
+    ]
+  },
+  "flex-layout.row#SupportofirstCard": {
+    "props": {
+      "blockClass": ["supportoCard"]
+    },
+    "children": ["link#registrati"]
+  },
+  "flex-layout.row#registratiSvg": {
+    "props": {
+      "width": "30px"
+    },
+    "children": ["image#iconRegistrati"]
+  },
+  "image#iconRegistrati": {
+    "props": {
+      "blockClass": ["supportoCardIcon"],
+      "src": "assets/supporto/benefitplus.svg"
+    }
+  },
+  "flex-layout.row#registratiText1": {
+    "props": {
+      "blockClass": "colonnaSupportoCard"
+    },
+    "children": ["rich-text#registratiText1"]
+  },
+  "link#registrati": {
+    "children": [
+      "flex-layout.row#registratiSvg",
+      "flex-layout.row#registratiText1"
+    ],
+    "props": {
+      "href": "https://register-appliance.com/whirlpool/RegistroPorMarca?country=IT&language=it",
+      "target": "_blank"
+    }
+  },
+  "rich-text#registratiText1": {
+    "props": {
+      "blockClass": "colonnaSupportoCard",
+      "textAlignment": "CENTER",
+      "text": "### REGISTRATI ORA\n\n\n\n e ottieni il massimo dal tuo prodotto Whirlpool  "
+    }
+  },
+
+  "flex-layout.row#SupportosecondCard": {
+    "props": {
+      "blockClass": "supportoCard"
+    },
+    "children": ["link#pianiProtezione"]
+  },
+  "link#pianiProtezione": {
+    "children": [
+      "flex-layout.row#pianiProtezioneSvg",
+      "flex-layout.row#pianiProtezioneText"
+    ],
+    "props": {
+      "href": "/services/page-garantie"
+    }
+  },
+  "flex-layout.row#pianiProtezioneSvg": {
+    "props": {
+      "width": "30px"
+    },
+    "children": ["image#pianiProtezioneSvg"]
+  },
+  "image#pianiProtezioneSvg": {
+    "props": {
+      "blockClass": ["supportoCardIcon"],
+      "src": "assets/supporto/benefitplus.svg"
+    }
+  },
+  "flex-layout.row#pianiProtezioneText": {
+    "props": {
+      "blockClass": "colonnaSupportoCard"
+    },
+    "children": ["rich-text#pianiProtezioneText"]
+  },
+  "rich-text#pianiProtezioneText": {
+    "props": {
+      "blockClass": "colonnaSupportoCard",
+      "textAlignment": "CENTER",
+      "text": "### PIANI DI PROTEZIONE\n\n\n\n   Scopri il piani di protezione Whirlpool ed estendi la vita del tuo elettrodomestico.  "
+    }
+  },
+  "flex-layout.row#SupportothirdCard": {
+    "props": {
+      "blockClass": "supportoCard"
+    },
+    "children": ["link#problemi"]
+  },
+  "link#problemi": {
+    "children": [
+      "flex-layout.row#problemiSvg",
+      "flex-layout.row#problemiSvgText"
+    ],
+    "props": {
+      "href": "/services/diagnostic-des-anomalies"
+    }
+  },
+  "flex-layout.row#problemiSvg": {
+    "props": {
+      "width": "30px"
+    },
+    "children": ["image#problemiSvg"]
+  },
+  "image#problemiSvg": {
+    "props": {
+      "blockClass": ["supportoCardIcon"],
+      "src": "assets/supporto/benefitplus.svg"
+    }
+  },
+  "flex-layout.row#problemiSvgText": {
+    "props": {
+      "blockClass": "colonnaSupportoCard"
+    },
+    "children": ["rich-text#problemiSvgText"]
+  },
+  "rich-text#problemiSvgText": {
+    "props": {
+      "blockClass": "colonnaSupportoCard",
+      "textAlignment": "CENTER",
+      "text": "### PROBLEMI & SOLUZIONI\n\n\n\n Ti aiutiamo a risolvere il problema del tuo elettrodomestico.  "
+    }
+  },
+  "flex-layout.row#SupportofourthCard": {
+    "props": {
+      "blockClass": "supportoCard"
+    },
+    "children": ["link#manuali"]
+  },
+  "link#manuali": {
+    "children": ["flex-layout.row#manualiSvg", "flex-layout.row#manualiText"],
+    "props": {
+      "href": "/services/telecharger-un-mode-d-emploi"
+    }
+  },
+  "flex-layout.row#manualiSvg": {
+    "props": {
+      "width": "30px"
+    },
+    "children": ["image#manualiSvg"]
+  },
+  "image#manualiSvg": {
+    "props": {
+      "blockClass": ["supportoCardIcon"],
+      "src": "assets/supporto/benefitplus.svg"
+    }
+  },
+  "flex-layout.row#manualiText": {
+    "props": {
+      "blockClass": "colonnaSupportoCard"
+    },
+    "children": ["rich-text#manualiText"]
+  },
+  "rich-text#manualiText": {
+    "props": {
+      "blockClass": "colonnaSupportoCard",
+      "textAlignment": "CENTER",
+      "text": "### manuali\n\n\n\n Trova  e scarica il manuale per il tuo elettrodomestico  ",
+      "href": "/support"
+    }
+  },
+  "flex-layout.row#SupportofifthCard": {
+    "props": {
+      "blockClass": "supportoCard"
+    },
+    "children": ["link#intervento"]
+  },
+  "link#intervento": {
+    "children": [
+      "flex-layout.row#interventoSvg",
+      "flex-layout.row#interventoText"
+    ],
+    "props": {
+      "href": "/services/demander-une-intervention"
+    }
+  },
+  "flex-layout.row#interventoSvg": {
+    "props": {
+      "width": "30px"
+    },
+    "children": ["image#interventoSvg"]
+  },
+  "image#interventoSvg": {
+    "props": {
+      "blockClass": ["supportoCardIcon"],
+      "src": "assets/supporto/benefitplus.svg"
+    }
+  },
+  "flex-layout.row#interventoText": {
+    "props": {
+      "blockClass": "colonnaSupportoCard"
+    },
+    "children": ["rich-text#interventoText"]
+  },
+  "rich-text#interventoText": {
+    "props": {
+      "blockClass": "colonnaSupportoCard",
+      "textAlignment": "CENTER",
+      "text": "### RICHIEDI UN INTERVENTO\n\n\n\n cerca il tuo centro assistenza e prenota subito online.  "
+    }
+  },
+
+  "flex-layout.row#percheWhirlpoolRow": {
+    "props": {
+      "blockClass": "percheWhirlpoolRow"
+    },
+    "children": ["flex-layout.col#percheWhirlpoolRowCol"]
+  },
+
+  "flex-layout.col#percheWhirlpoolRowCol": {
+    "props": {
+      "blockClass": ["percheWhirlpoolRowCol", "maxWidth"],
+      "horizontalAlign": "center"
+    },
+    "children": [
+      "rich-text#percheWhirlpool",
+      "flex-layout.col#percheWhirlpoolCol",
+      "slider-layout#percheWhirlpoolCarousel"
+    ]
+  },
+
+  "flex-layout.col#percheWhirlpoolCol": {
+    "props": {
+      "blockClass": "percheWhirlpoolCol"
+    },
+    "children": [
+      "flex-layout.row#richTextSquare1",
+      "flex-layout.row#richTextSquare2"
+    ]
+  },
+
+  "rich-text#percheWhirlpool": {
+    "props": {
+      "blockClass": "colonnaSupportoCard",
+      "textAlignment": "CENTER",
+      "text": "## Perchè Whirlpool?"
+    }
+  },
+
+  "slider-layout#percheWhirlpoolCarousel": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 0,
+        "tablet": 3,
+        "phone": 1
+      },
+      "infinite": false,
+      "showNavigationArrows": "never",
+      "showPaginationDots": "mobileOnly",
+      "autoplay": {
+        "timeout": 5000,
+        "stopOnHover": false
+      },
+      "blockClass": ["carousel", "percheWhirlpoolCarousel", "hoverOpacity"]
+    },
+    "children": [
+      "link#richTextSquare1",
+      "link#richTextSquare2",
+      "link#richTextSquare3",
+      "link#richTextSquare4",
+      "link#richTextSquare5",
+      "link#richTextSquare6"
+    ]
+  },
+
+  "flex-layout.row#richTextSquare1": {
+    "props": {
+      "blockClass": "textSquareRow1"
+    },
+    "children": [
+      "link#richTextSquare1",
+      "link#richTextSquare2",
+      "link#richTextSquare3"
+    ]
+  },
+  "flex-layout.row#richTextSquare2": {
+    "props": {
+      "blockClass": "textSquareRow2"
+    },
+    "children": [
+      "link#richTextSquare4",
+      "link#richTextSquare5",
+      "link#richTextSquare6"
+    ]
+  },
+  "link#richTextSquare1": {
+    "props": {
+      "href": "/services/demander-une-intervention",
+      "blockClass": "linkSquare"
+    },
+    "children": ["rich-text#richTextSquare1"]
+  },
+  "link#richTextSquare2": {
+    "props": {
+      "href": "/services/demander-une-intervention",
+      "blockClass": ["linkSquare", "linkSquareMobile"]
+    },
+    "children": ["rich-text#richTextSquare2"]
+  },
+  "link#richTextSquare3": {
+    "props": {
+      "href": "/services/page-garantie",
+      "blockClass": ["linkSquare", "linkSquareMobile"]
+    },
+    "children": ["rich-text#richTextSquare3"]
+  },
+  "link#richTextSquare4": {
+    "props": {
+      "href": "/services/page-garantie",
+      "blockClass": "linkSquare"
+    },
+    "children": ["rich-text#richTextSquare4"]
+  },
+  "link#richTextSquare5": {
+    "props": {
+      "href": "/supporto/ricambi-originali",
+      "blockClass": "linkSquare"
+    },
+    "children": ["rich-text#richTextSquare5"]
+  },
+  "link#richTextSquare6": {
+    "props": {
+      "href": "/pomoc/skontaktuj-sie-z-nami",
+      "blockClass": "linkSquare"
+    },
+    "children": ["rich-text#richTextSquare6"]
+  },
+
+  "rich-text#richTextSquare1": {
+    "props": {
+      "blockClass": "squareTextP",
+      "textAlignment": "CENTER",
+      "text": "Puoi fissare direttamente un appuntamento online con un nostro tecnico autorizzato.",
+      "href": "/support"
+    }
+  },
+  "rich-text#richTextSquare2": {
+    "props": {
+      "blockClass": "squareTextP",
+      "textAlignment": "CENTER",
+      "text": "Formiamo tecnici specializzati per garantire riparazioni di qualità",
+      "href": "/support"
+    }
+  },
+  "rich-text#richTextSquare3": {
+    "props": {
+      "blockClass": "squareTextP",
+      "textAlignment": "CENTER",
+      "text": "Un nuovo elettrodomestico per te quando il vecchio non può essere più riparato (solo per i possessori di un piano di protezione)",
+      "href": "/support"
+    }
+  },
+  "rich-text#richTextSquare4": {
+    "props": {
+      "blockClass": "squareTextP",
+      "textAlignment": "CENTER",
+      "text": "Ti diamo l'opportunità di estendere la protezione sui tuoi elettrodomestici con i nostri piani di protezione.",
+      "href": "/support"
+    }
+  },
+  "rich-text#richTextSquare5": {
+    "props": {
+      "blockClass": "squareTextP",
+      "textAlignment": "CENTER",
+      "text": "Una gamma completa di ricambi originali Whirlpool.",
+      "href": "/support"
+    }
+  },
+  "rich-text#richTextSquare6": {
+    "props": {
+      "blockClass": "squareTextP",
+      "textAlignment": "CENTER",
+      "text": "I nostri operatori sono disponibili 7 giorni su 7 per fornirti consigli e soluzioni immediate",
+      "href": "/support"
+    }
+  },
+
+  "info-card#Ricambioriginali2": {
+    "props": {
+      "id": "half-banner-cooking",
+
+      "isFullModeStyle": false,
+      "headline": "Ricambi originali Whirlpool",
+      "imageUrl": "https://assets.wpsandwatch.com/storage/images/_aliases/original_compressed/3/3/0/0/11540033-3-ita-IT/Half%20Banner_Homepage_%20Spare%20parts_Support_WP_Desktop.jpg",
+      "subhead": "Per garantire il perfetto funzionamento e la durata del tuo elettrodomestico utilizza i ricambi originali Whirlpool.",
+      "textAlignment": "left",
+      "callToActionUrl": "/supporto/ricambi-originali",
+
+      "callToActionText": "SCOPRI di PIÙ",
+      "blockClass": [
+        "halfBanner",
+        "contain",
+        "smallBanner",
+        "smallBannerBlack",
+        "mobileInfoCardSupporto"
+      ]
+    }
+  },
+  "info-card#ConlatuaEstensione": {
+    "props": {
+      "id": "half-banner-cooking",
+      "headline": "Con la tua Estensione di Garanzia Elettrodomestici come nuovi in meno di 48 ore",
+
+      "isFullModeStyle": false,
+      "imageUrl": "https://assets.wpsandwatch.com/storage/images/_aliases/original_compressed/4/0/0/0/11540004-5-ita-IT/Half%20Banner_Homepage_%20Like%20new_Support_WP_Desktop.jpg",
+      "subhead": "Scegliendo l'estensione di garanzia, potrai prenotare online l'intervento di un tecnico autorizzato Whirlpool, scegliendo l'orario che ti è più comodo.",
+      "textAlignment": "left",
+      "callToActionText": "PRENOTA SUBITO",
+      "callToActionUrl": "/supporto/fissa-un-appuntamento/online-garanzia-estesa/",
+      "blockClass": [
+        "halfBannerReverse",
+        "contain",
+        "smallBanner",
+        "smallBannerBlack",
+        "mobileInfoCardSupporto"
+      ]
+    }
+  },
+  "info-card#Restituisciprestazioni": {
+    "props": {
+      "id": "half-banner-cooking",
+
+      "isFullModeStyle": false,
+      "headline": "Restituisci prestazioni ottimali al tuo elettrodomestico anche senza garanzia a soli 89.90€ (*)",
+      "imageUrl": "https://assets.wpsandwatch.com/storage/images/_aliases/original_compressed/3/1/7/7/11517713-7-ita-IT/Half%20Banner_Homepage_%20Great%20performances_Support_WP_Desktop.jpg",
+      "subhead": "Quando la tua garanzia è scaduta il Servizio Premium è una dose addizionale di sicurezza per il tuo elettrodomestico: fissa un appuntamento online e preparati a un nuovo inizio.",
+      "textAlignment": "left",
+      "callToActionUrl": "/supporto/fissa-un-appuntamento/online-garanzia-estesa/",
+
+      "callToActionText": "PRENOTA SUBITO",
+      "blockClass": [
+        "halfBanner",
+        "contain",
+        "smallBanner",
+        "smallBannerBlack",
+        "mobileInfoCardSupporto"
+      ]
+    }
+  },
+  "info-card#Risultatiprofessionali": {
+    "props": {
+      "id": "half-banner-cooking",
+      "headline": "Risultati professionali. Sempre.",
+
+      "isFullModeStyle": false,
+      "imageUrl": "https://assets.wpsandwatch.com/storage/images/_aliases/original_compressed/2/6/0/0/11540062-3-ita-IT/WP_Half%20Banner_WPro_D.jpg",
+      "subhead": "Whirlpool offre un'ampia gamma di prodotti e accessori specializzati per la cura e la manutenzione del tuo elettrodomestico",
+      "textAlignment": "left",
+      "callToActionText": "VIENI A SCOPRILA",
+      "callToActionUrl": "supporto/accessori-wpro",
+
+      "blockClass": [
+        "halfBannerReverse",
+        "contain",
+        "smallBanner",
+        "smallBannerBlack",
+        "mobileInfoCardSupporto"
+      ]
+    }
+  },
+
+  "info-card#Whirlpooleletta": {
+    "props": {
+      "id": "half-banner-cooking",
+      "headline": "Whirlpool eletta Top Service",
+      "callToActionMode": "none",
+
+      "isFullModeStyle": false,
+      "imageUrl": "https://assets.wpsandwatch.com/storage/images/_aliases/original_compressed/2/4/7/7/11517742-7-ita-IT/1200x1140.jpg",
+      "subhead": "Whirlpool è stata eletta Top Service in base al livello di soddisfazione dei clienti. A dirlo è un'analisi condotta dall'Istituto Tedesco Qualità e Finanza, ente indipendente specializzato nell'analisi e nella comparazione di prodotti e servizi. Il risultato dello studio, basato su un campione di 200.000 clienti, ha posizionato Whirlpool al vertice delle classifiche per quanto riguarda il servizio ai consumatori.",
+      "textAlignment": "left",
+      "blockClass": [
+        "halfBanner",
+        "contain",
+        "smallBanner",
+        "smallBannerBlack",
+        "mobileInfoCardSupporto"
+      ]
+    }
+  },
+  "rich-text#Contattaci1": {
+    "props": {
+      "blockClass": [
+        "colonnaSupportoCard",
+        "colonnaSupportoCardMobile",
+        "noMarginTopMobile"
+      ],
+      "textAlignment": "CENTER",
+      "text": "### Hai bisogno di aiuto? Contattaci \n\n\n\n Contattaci - 02.20.30 - Lun - Ven 8.00 - 19.00 -  Sab - Dom 9.00 - 13.00"
+    }
+  },
+  "sticky-layout#supportoCardsBottomsticky": {
+    "props": {
+      "position": "bottom",
+      "blockClass": "stickyCardBottomsticky"
+    },
+    "children": ["slider-layout#supportoCardsBottom"]
+  },
+
+  //slider supportCardsBottom
+  "slider-layout#supportoCardsBottomsticky": {
+    "props": {
+      "showOnMobile": false,
+      "itemsPerPage": {
+        "desktop": 6,
+        "tablet": 3,
+        "phone": 1
+      },
+      "infinite": false,
+      "showNavigationArrows": "never",
+      "showPaginationDots": "never",
+      "autoplay": {
+        "timeout": 5000,
+        "stopOnHover": false
+      },
+      "blockClass": ["carousel", "carouselStuck"]
+    },
+    "children": [
+      "flex-layout.row#firstCardBottom",
+      "flex-layout.row#StickyCard5",
+      "flex-layout.row#StickyCard2",
+      "flex-layout.row#StickyCard3",
+      "flex-layout.row#StickyCard4"
+    ]
+  },
+  "flex-layout.row#firstCardBottomsticky": {
+    "props": {
+      "blockClass": ["supportoCard"]
+    },
+    "children": ["link#firstCardBottom-1"]
+  },
+  "flex-layout.row#secondCardBottomsticky": {
+    "props": {
+      "blockClass": ["supportoCard"]
+    },
+    "children": ["link#secondCardBottom"]
+  },
+  "flex-layout.row#thirdCardBottomsticky": {
+    "props": {
+      "blockClass": ["supportoCard"]
+    },
+    "children": ["link#thirdCardBottom"]
+  },
+  "flex-layout.row#fourthCardBottomsticky": {
+    "props": {
+      "blockClass": ["supportoCard"]
+    },
+    "children": ["link#fourthCardBottom"]
+  },
+  "flex-layout.row#fifthCardBottomsticky": {
+    "props": {
+      "blockClass": ["supportoCard"]
+    },
+    "children": ["link#fifthCardBottom"]
+  },
+  "flex-layout.row#sixthCardBottomsticky": {
+    "props": {
+      "blockClass": ["supportoCard"]
+    },
+    "children": ["link#sixthCardBottom"]
+  },
+  "sticky-layout#supportoCardsBottom": {
+    "props": {
+      "position": "bottom",
+      "blockClass": "stickyCardBottom"
+    },
+    "children": ["slider-layout#supportoCardsBottomsticky"]
+  },
+  "slider-layout#supportoCardsBottom": {
+    "props": {
+      "showOnMobile": false,
+      "itemsPerPage": {
+        "desktop": 3,
+        "tablet": 3,
+        "phone": 1
+      },
+      "infinite": false,
+      "showNavigationArrows": "never",
+      "showPaginationDots": "mobileOnly",
+      "autoplay": {
+        "timeout": 5000,
+        "stopOnHover": false
+      },
+      "blockClass": ["carousel", "carouselSlider"]
+    },
+    "children": [
+      // "flex-layout.row#firstCardBottom",
+      //"flex-layout.row#secondCardBottom",
+      //"flex-layout.row#thirdCardBottom",
+      "flex-layout.row#StickyCard5",
+      "flex-layout.row#StickyCard2",
+      "flex-layout.row#StickyCard3"
+      // "flex-layout.row#StickyCard4"
+    ]
+  },
+  "flex-layout.row#StickyCard5": {
+    "props": {
+      "blockClass": ["supportoCard"]
+    },
+    "children": ["link#StickyCard5"]
+  },
+  "link#StickyCard5": {
+    "props": {
+      "href": "tel:09.69.37.6140",
+      "blockClass": "cardLinkBottom"
+    },
+    "children": ["flex-layout.col#StickyCard5"]
+  },
+
+  "flex-layout.col#StickyCard5": {
+    "props": {
+      "blockClass": ["supportoCard", "supportoCardBottom"]
+    },
+    "children": [
+      "flex-layout.row#numeroStickyCard5",
+      "flex-layout.row#numeroText1StickyCard5",
+      "flex-layout.row#numeroText2StickyCard5",
+      "rich-text#postillaStickyCard5"
+    ]
+  },
+  "rich-text#postillaStickyCard5": {
+    "props": {
+      "blockClass": "colonnaSupportoCardPostilla",
+      "text": "*Prix d’un appel local, non surtaxé"
+    }
+  },
+  "flex-layout.row#numeroStickyCard5": {
+    "props": {
+      "width": "30px"
+    },
+    "children": ["image#numeronico"]
+  },
+  "image#stickyCard5": {
+    "props": {
+      "blockClass": ["supportoCardIcon"],
+      "src": "assets/supporto/benefitplus.svg"
+    }
+  },
+  "flex-layout.row#numeroText1StickyCard5": {
+    "props": {
+      "blockClass": "colonnaSupportoCardBottom"
+    },
+    "children": ["rich-text#numero1StickyCard5-2"]
+  },
+  "rich-text#numero1StickyCard5-2": {
+    "props": {
+      "blockClass": "colonnaSupportoCard",
+      "textAlignment": "CENTER",
+      "text": "### Information Achat E-Shop? \n Du lundi au vendredi de 9h à 19h \n Samedi de 9h à 17h* \n Assistance boutique en ligne \n [09.69.37.6140](tel:09.69.37.6140)"
+    }
+  },
+
+  "flex-layout.row#numeroText2StickyCard5": {
+    "props": {
+      "blockClass": "colonnaSupportoCard"
+    },
+    "children": ["rich-text#numero2StickyCard5"]
+  },
+  "rich-text#numero2StickyCard5": {
+    "props": {
+      "blockClass": ["cardButton", "colonnaSupportoCard"],
+      "textAlignment": "CENTER",
+      "text": "APPELEZ-NOUS"
+    }
+  },
+  "flex-layout.row#firstCardBottom": {
+    "props": {
+      "blockClass": ["supportoCard"]
+    },
+    "children": ["link#firstCardBottom-1"]
+  },
+  "flex-layout.row#secondCardBottom": {
+    "props": {
+      "blockClass": ["supportoCard"]
+    },
+    "children": ["link#secondCardBottom"]
+  },
+  "flex-layout.row#thirdCardBottom": {
+    "props": {
+      "blockClass": ["supportoCard"]
+    },
+    "children": ["link#thirdCardBottom"]
+  },
+  "flex-layout.row#StickyCard2": {
+    "props": {
+      "blockClass": ["supportoCard"]
+    },
+    "children": ["link#fourthCardBottom"]
+  },
+  "flex-layout.row#StickyCard3": {
+    "props": {
+      "blockClass": ["supportoCard"]
+    },
+    "children": ["link#fifthCardBottom"]
+  },
+  "flex-layout.row#StickyCard4": {
+    "props": {
+      "blockClass": ["supportoCard"]
+    },
+    "children": ["link#sixthCardBottom"]
+  },
+  "flex-layout.row#supportoCardsBottom": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "supportoCardsBottom"
+    },
+    "children": [
+      "link#firstCardBottom-1",
+      "link#secondCardBottom",
+      "link#thirdCardBottom",
+      "link#fourthCardBottom",
+      "link#fifthCardBottom",
+      "link#sixthCardBottom"
+    ]
+  },
+
+  "link#firstCardBottom-1": {
+    "props": {
+      "href": "tel:09.69.39.1234",
+      "blockClass": "cardLinkBottom"
+    },
+    "children": ["flex-layout.col#firstCardBottom"]
+  },
+
+  "flex-layout.col#firstCardBottom": {
+    "props": {
+      "blockClass": ["supportoCard", "supportoCardBottom"]
+    },
+    "children": [
+      "flex-layout.row#numeronicoSvg",
+      "flex-layout.row#numeronicoText1",
+      "flex-layout.row#numeronicoText2",
+      "rich-text#postillaText3"
+    ]
+  },
+  "rich-text#postillaText3": {
+    "props": {
+      "blockClass": "colonnaSupportoCardPostilla",
+      "text": "*Prix d’un appel local, non surtaxé"
+    }
+  },
+  "flex-layout.row#numeronicoSvg": {
+    "props": {
+      "width": "30px"
+    },
+    "children": ["image#numeronico"]
+  },
+  "image#numeronico": {
+    "props": {
+      "blockClass": ["supportoCardIcon"],
+      "src": "assets/supporto/benefitplus.svg"
+    }
+  },
+  "flex-layout.row#numeronicoText1": {
+    "props": {
+      "blockClass": "colonnaSupportoCardBottom"
+    },
+    "children": ["rich-text#numeronicoText1-2"]
+  },
+  "rich-text#numeronicoText1-2": {
+    "props": {
+      "blockClass": "colonnaSupportoCard",
+      "textAlignment": "CENTER",
+      "text": "### Besoin d’assistance ? \n\n Du lundi au vendredi de 9h à 19h \n Samedi de 9h à 17h* \n Service consommateur \n [09.69.39.1234](tel:09.69.39.1234)"
+    }
+  },
+
+  "flex-layout.row#numeronicoText2": {
+    "props": {
+      "blockClass": "colonnaSupportoCard"
+    },
+    "children": ["rich-text#numeronicoText2"]
+  },
+  "rich-text#numeronicoText2": {
+    "props": {
+      "blockClass": ["cardButton", "colonnaSupportoCard"],
+      "textAlignment": "CENTER",
+      "text": "APPELEZ-NOUS"
+    }
+  },
+  //------------
+
+  "link#secondCardBottom": {
+    "props": {
+      "href": "https://api.whatsapp.com/message/MIKJ4WDQGB3LM1",
+      "blockClass": "cardLinkBottom",
+      "target": "_blank"
+    },
+    "children": ["flex-layout.col#secondCardBottom"]
+  },
+
+  "flex-layout.col#secondCardBottom": {
+    "props": {
+      "blockClass": ["supportoCard", "supportoCardBottom"]
+    },
+    "children": [
+      "flex-layout.row#WHATSAPPSvg",
+      "flex-layout.row#WHATSAPPText1",
+      "flex-layout.row#WHATSAPPText2",
+      "rich-text#postillaSecondCard"
+    ]
+  },
+  "rich-text#postillaSecondCard": {
+    "props": {
+      "blockClass": "colonnaSupportoCardPostilla",
+      "text": "*Service gratuit + prix appels"
+    }
+  },
+  "flex-layout.row#WHATSAPPSvg": {
+    "props": {
+      "width": "30px"
+    },
+    "children": ["image#WHATSAPP"]
+  },
+  "image#WHATSAPP": {
+    "props": {
+      "blockClass": ["supportoCardIcon"],
+      "src": "assets/supporto/benefitplus.svg"
+    }
+  },
+  "flex-layout.row#WHATSAPPText1": {
+    "props": {
+      "blockClass": "colonnaSupportoCardBottom"
+    },
+    "children": ["rich-text#WHATSAPPText1"]
+  },
+  "rich-text#WHATSAPPText1": {
+    "props": {
+      "blockClass": "colonnaSupportoCard",
+      "textAlignment": "CENTER",
+      "text": "### CONTATTACI CON WHATSAPP\n\n\n\n Il servizio sara' attivo il Lunedi - Martedi- Giovedi  dalle ore  9.00 alle ore 13.00 giorni festivi esclusi.   ",
+      "target": "_blank"
+    }
+  },
+  "flex-layout.row#WHATSAPPText2": {
+    "props": {
+      "blockClass": "colonnaSupportoCard"
+    },
+    "children": ["rich-text#WHATSAPPText2"]
+  },
+  "rich-text#WHATSAPPText2": {
+    "props": {
+      "blockClass": ["cardButton", "colonnaSupportoCard"],
+      "textAlignment": "CENTER",
+      "text": "CONTATTACI",
+      "href": "/support"
+    }
+  },
+  //------------
+
+  "link#thirdCardBottom": {
+    "props": {
+      "href": "/supporto#chat",
+      "blockClass": "cardLinkBottom"
+    },
+    "children": ["flex-layout.col#thirdCardBottom"]
+  },
+
+  "flex-layout.col#thirdCardBottom": {
+    "props": {
+      "blockClass": ["supportoCard", "supportoCardBottom"]
+    },
+    "children": [
+      "flex-layout.row#chatSvg",
+      "flex-layout.row#chatText1",
+      "flex-layout.row#chatText2"
+    ]
+  },
+  "flex-layout.row#chatSvg": {
+    "props": {
+      "width": "30px"
+    },
+    "children": ["image#chat"]
+  },
+  "image#chat": {
+    "props": {
+      "blockClass": ["supportoCardIcon"],
+      "src": "assets/supporto/benefitplus.svg"
+    }
+  },
+  "flex-layout.row#chatText1": {
+    "props": {
+      "blockClass": "colonnaSupportoCardBottom"
+    },
+    "children": ["rich-text#chatText1"]
+  },
+  "rich-text#chatText1": {
+    "props": {
+      "blockClass": "colonnaSupportoCard",
+      "textAlignment": "CENTER",
+      "text": "### Parla online con un nostro operatore\n\n\n\n   Il servizio sarà' attivo il Lunedi-Martedi-Giovedi dalle ore 13.00 alle ore 18.00, Mercoledì e Venerdì dalle ore  9.00 alle ore 18.00 giorni festivi esclusi. "
+    }
+  },
+  "flex-layout.row#chatText2": {
+    "props": {
+      "blockClass": "colonnaSupportoCard"
+    },
+    "children": ["rich-text#chatText2"]
+  },
+  "rich-text#chatText2": {
+    "props": {
+      "blockClass": ["cardButton", "colonnaSupportoCard"],
+      "textAlignment": "CENTER",
+      "text": "APRI CHAT",
+      "href": "/support"
+    }
+  },
+  ///-----
+
+  "link#fourthCardBottom": {
+    "props": {
+      "href": "/pomoc/skontaktuj-sie-z-nami",
+      "blockClass": "cardLinkBottom"
+    },
+    "children": ["flex-layout.col#fourthCardBottom"]
+  },
+
+  "flex-layout.col#fourthCardBottom": {
+    "props": {
+      "blockClass": ["supportoCard", "supportoCardBottom"]
+    },
+    "children": [
+      "flex-layout.row#clientiSvg",
+      "flex-layout.row#clientiText1",
+      "flex-layout.row#clientiText2"
+    ]
+  },
+  "flex-layout.row#clientiSvg": {
+    "props": {
+      "width": "30px"
+    },
+    "children": ["image#clienti"]
+  },
+  "image#clienti": {
+    "props": {
+      "blockClass": ["supportoCardIcon"],
+      "src": "assets/supporto/benefitplus.svg"
+    }
+  },
+  "flex-layout.row#clientiText1": {
+    "props": {
+      "blockClass": "colonnaSupportoCardBottom"
+    },
+    "children": ["rich-text#clientiText1"]
+  },
+  "rich-text#clientiText1": {
+    "props": {
+      "blockClass": "colonnaSupportoCard",
+      "textAlignment": "CENTER",
+      "text": "### SERVICE CONSOMMATEURS \n\n\n\n Trouvez un technicien agréé proche de chez vous "
+    }
+  },
+  "flex-layout.row#clientiText2": {
+    "props": {
+      "blockClass": "colonnaSupportoCard"
+    },
+    "children": ["rich-text#clientiText2"]
+  },
+  "rich-text#clientiText2": {
+    "props": {
+      "blockClass": ["cardButton", "colonnaSupportoCard"],
+      "textAlignment": "CENTER",
+      "text": "ENVOYEZ-NOUS UN E-MAIL",
+      "href": "services/assistance-technique-agreee"
+    }
+  },
+  //--------
+
+  "link#fifthCardBottom": {
+    "props": {
+      "href": "/services/assistance-technique-agreee",
+      "blockClass": "cardLinkBottom"
+    },
+    "children": ["flex-layout.col#fifthCardBottom"]
+  },
+
+  "flex-layout.col#fifthCardBottom": {
+    "props": {
+      "blockClass": ["supportoCard", "supportoCardBottom"]
+    },
+    "children": [
+      "flex-layout.row#assistenzaSvg",
+      "flex-layout.row#assistenzaText1",
+      "flex-layout.row#assistenzaText2"
+    ]
+  },
+  "flex-layout.row#assistenzaSvg": {
+    "props": {
+      "width": "30px"
+    },
+    "children": ["image#assistenza"]
+  },
+  "image#assistenza": {
+    "props": {
+      "blockClass": ["supportoCardIcon"],
+      "src": "assets/supporto/benefitplus.svg"
+    }
+  },
+  "flex-layout.row#assistenzaText1": {
+    "props": {
+      "blockClass": "colonnaSupportoCardBottom"
+    },
+    "children": ["rich-text#assistenzaText1"]
+  },
+  "rich-text#assistenzaText1": {
+    "props": {
+      "blockClass": "colonnaSupportoCard",
+      "textAlignment": "CENTER",
+      "text": "### Besoin d'une intervention ?\n\n\n\n   Trouvez un technicien agréé proche de chez vous  "
+    }
+  },
+  "flex-layout.row#assistenzaText2": {
+    "props": {
+      "blockClass": "colonnaSupportoCard"
+    },
+    "children": ["rich-text#assistenzaText2"]
+  },
+  "rich-text#assistenzaText2": {
+    "props": {
+      "blockClass": ["cardButton", "colonnaSupportoCard"],
+      "textAlignment": "CENTER",
+      "text": "LOCALISEZ VOTRE TECHNICIEN",
+      "href": "/services/assistance-technique-agreee"
+    }
+  },
+  ///------------
+
+  "link#sixthCardBottom": {
+    "props": {
+      "href": "/pomoc/skontaktuj-sie-z-nami",
+      "blockClass": "cardLinkBottom"
+    },
+    "children": ["flex-layout.col#sixthCardBottom"]
+  },
+
+  "flex-layout.col#sixthCardBottom": {
+    "props": {
+      "blockClass": ["supportoCard", "supportoCardBottom"]
+    },
+    "children": [
+      "flex-layout.row#appuntamentoSvg",
+      "flex-layout.row#appuntamentoText1",
+      "flex-layout.row#appuntamentoText2"
+    ]
+  },
+  "flex-layout.row#appuntamentoSvg": {
+    "props": {
+      "width": "30px"
+    },
+    "children": ["image#appuntamento"]
+  },
+  "image#appuntamento": {
+    "props": {
+      "blockClass": ["supportoCardIcon"],
+      "src": "assets/supporto/benefitplus.svg"
+    }
+  },
+  "flex-layout.row#appuntamentoText1": {
+    "props": {
+      "blockClass": "colonnaSupportoCardBottom"
+    },
+    "children": ["rich-text#appuntamentoText1"]
+  },
+  "rich-text#appuntamentoText1": {
+    "props": {
+      "blockClass": "colonnaSupportoCard",
+      "textAlignment": "CENTER",
+      "text": "### Organisez une intervention "
+    }
+  },
+  "flex-layout.row#appuntamentoText2": {
+    "props": {
+      "blockClass": "colonnaSupportoCard"
+    },
+    "children": ["rich-text#appuntamentoText2"]
+  },
+  "rich-text#appuntamentoText2": {
+    "props": {
+      "blockClass": ["cardButton", "colonnaSupportoCard"],
+      "textAlignment": "CENTER",
+      "text": "RÉSERVEZ MAINTENENT",
+      "href": "/support"
+    }
+  }
+}

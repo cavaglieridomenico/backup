@@ -1,0 +1,213 @@
+{
+	"vendor": "whirlpoolemea",
+	"name": "additional-services-pdp",
+	"version": "1.0.20",
+	"title": "Additional services PDP",
+	"description": "Additional services for a product",
+	"defaultLocale": "en-EN",
+	"builders": {
+		"messages": "1.x",
+		"store": "0.x",
+		"react": "3.x",
+		"graphql": "1.x",
+		"node": "6.x"
+	},
+	"dependencies": {
+		"vtex.search-resolver": "1.x",
+		"vtex.rewriter": "1.x",
+		"vtex.styleguide": "9.x",
+		"vtex.css-handles": "0.x",
+		"vtex.product-context": "0.x",
+		"vtex.device-detector": "0.x",
+		"vtex.format-currency": "0.x"
+	},
+	"billingOptions": {
+		"termsURL": "https://compliance.vtex.com/gdpr/policies/vtex-privacy-policy",
+		"support": {
+			"url": "https://support.vtex.com/hc/requests"
+		},
+		"free": true
+	},
+	"policies": [
+		{
+			"name": "outbound-access",
+			"attrs": {
+				"host": "portal.vtexcommercestable.com.br",
+				"path": "*"
+			}
+		},
+		{
+			"name": "outbound-access",
+			"attrs": {
+				"host": "emeaservicesq.cert.whirlpool.com",
+				"path": "*"
+			}
+		},
+		{
+			"name": "outbound-access",
+			"attrs": {
+				"host": "emeaservices.cert.whirlpool.com",
+				"path": "*"
+			}
+		},
+		{
+			"name": "outbound-access",
+			"attrs": {
+				"host": "{{account}}.myvtex.com",
+				"path": "*"
+			}
+		},
+		{
+			"name": "outbound-access",
+			"attrs": {
+				"host": "vtexid.vtex.com.br",
+				"path": "*"
+			}
+		},
+		{
+			"name": "outbound-access",
+			"attrs": {
+				"host": "www.googleapis.com",
+				"path": "*"
+			}
+		},
+		{
+			"name": "outbound-access",
+			"attrs": {
+				"host": "sheets.googleapis.com",
+				"path": "*"
+			}
+		},
+		{
+			"name": "ADMIN_DS"
+		},
+		{
+			"name": "OMSViewer"
+		},
+		{
+			"name": "LogisticsAdmin"
+		},
+		{
+			"name": "read_prices"
+		},
+		{
+			"name": "GetPolicy"
+		},
+		{
+			"name": "ListPolicies"
+		},
+		{
+			"name": "GerenciarPromocoesETarifas"
+		},
+		{
+			"name": "outbound-access",
+			"attrs": {
+				"host": "api.vtex.com",
+				"path": "/dataentities/*"
+			}
+		},
+		{
+			"name": "colossus-fire-event"
+		},
+		{
+			"name": "colossus-write-logs"
+		},
+		{
+			"name": "vtex.search-resolver:resolve-graphql"
+		},
+		{
+			"name": "vtex.rewriter:resolve-graphql"
+		},
+		{
+			"name": "vbase-read-write"
+		}
+	],
+	"settingsSchema": {
+		"title": "Wrapper",
+		"type": "object",
+		"properties": {
+			"authcookie": {
+				"title": "User auth cookie",
+				"type": "string"
+			},
+			"servicesPerSC": {
+				"title": "Additional services per sales channel",
+				"type": "array",
+				"items": {
+					"type": "object",
+					"properties": {
+						"scid": {
+							"title": "sales channel id",
+							"type": "string"
+						},
+						"services": {
+							"title": "Sevices ids",
+							"description": "Services available in the sales channel (comma separated)",
+							"type": "string"
+						},
+						"installationId": {
+							"title": "Id of the service \"Installation\"",
+							"type": "string"
+						}
+					}
+				}
+			},
+			"serviceInfo": {
+				"title": "Service info",
+				"type": "array",
+				"items": {
+					"type": "object",
+					"properties": {
+						"id": {
+							"title": "Ids (comma separated)",
+							"type": "string"
+						},
+						"name": {
+							"title": "Name",
+							"type": "string"
+						},
+						"description": {
+							"title": "Description",
+							"type": "string"
+						},
+						"position": {
+							"title": "Position",
+							"type": "integer",
+							"minimum": 0,
+							"default": 0
+						},
+						"listPrice": {
+							"title": "ListPrice",
+							"type": "number",
+							"minimum": 0,
+							"default": 0
+						}
+					}
+				}
+			},
+			"isCCProject": {
+				"title": "CC Project",
+				"type": "boolean"
+			},
+			"sellerAccount": {
+				"title": "Seller account",
+				"type": "object",
+				"properties": {
+					"name": {
+						"title": "Name",
+						"type": "string"
+					},
+					"apiKey": {
+						"title": "Api key",
+						"type": "string"
+					},
+					"apiToken": {
+						"title": "Api token",
+						"type": "string"
+					}
+				}
+			}
+		}
+	},
+	"$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

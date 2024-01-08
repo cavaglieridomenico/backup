@@ -1,0 +1,173 @@
+.formContainer {
+    min-height: 300px;
+    display: table;
+    max-width: 700px;
+    margin-top: 2rem;
+}
+
+.inputContainer :global(.vtex-styleguide-9-x-input) {
+    font-size: 13px;
+}
+
+@media screen and (max-width:680px) {
+    .formContainer {
+        padding: .5rem 1.5rem;
+    }
+}
+
+.confirmButton {
+    position: absolute;
+    top: -43px;
+    min-height: 40px;
+    border-radius: 0.25rem;
+    background-color: #fff;
+    font-weight: 500;
+    color: #b24c24;
+    vertical-align: middle;
+    width: 262px;
+    min-height: 2rem;
+    font-size: .875rem;
+    border: none;
+}
+
+.confirmButton:hover {
+    border: 1px solid #b24c24;
+    font-weight: 700;
+
+}
+
+.link {
+    text-decoration: none;
+    color: #b24c24;
+}
+
+.privacy {
+    text-align: left;
+    font-family: "hotpointRegular";
+    color: #505050;
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.colorEdb112 {
+    color: #b24c24;
+}
+
+.informativa :global(.vtex-checkbox__line-container) {
+    text-align: justify;
+}
+
+.informativa :global(.vtex-checkbox__label) {
+    font-family: "hotpointRegular";
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.infoContainer {
+    margin: .75rem 0
+}
+
+.back {
+    min-height: 40px;
+    cursor: pointer;
+    font-size: .875rem;
+    text-decoration: underline;
+    vertical-align: middle;
+    color: #B24C24;
+}
+
+.inputContainer,
+.buttonContainer {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.buttonContainer ::button {
+    font-size: .875rem;
+}
+
+.registered {
+    color: red;
+    margin-right: .5rem;
+}
+
+.loaderForm {
+    font-size: 10px;
+    margin: 50px auto;
+    text-indent: -9999em;
+    width: 5em;
+    height: 5em;
+    border-radius: 50%;
+    background: #B24C24;
+    background: -moz-linear-gradient(left,
+            #B24C24 10%,
+            rgba(237, 177, 18, 0) 42%);
+    background: -webkit-linear-gradient(left,
+            #B24C24 10%,
+            rgba(237, 177, 18, 0) 42%);
+    background: -o-linear-gradient(left, #B24C24 10%, rgba(237, 177, 18, 0) 42%);
+    background: -ms-linear-gradient(left, #B24C24 10%, rgba(237, 177, 18, 0) 42%);
+    background: linear-gradient(to right, #B24C24 10%, rgba(237, 177, 18, 0) 42%);
+    position: relative;
+    -webkit-animation: load3 1.4s infinite linear;
+    animation: load3 1.4s infinite linear;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+.loaderForm::before {
+    width: 50%;
+    height: 50%;
+    background: #B24C24;
+    border-radius: 100% 0 0 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+}
+
+.loaderForm::after {
+    background: #ffffff;
+    width: 75%;
+    height: 75%;
+    border-radius: 50%;
+    content: "";
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+@-webkit-keyframes load3 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes load3 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}

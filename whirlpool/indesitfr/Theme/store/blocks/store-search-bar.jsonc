@@ -1,0 +1,31 @@
+{
+  "search-bar": {
+    "blocks": ["autocomplete-result-list.v2"],
+    "props": {
+      "openAutocompleteOnFocus": true,
+      "placeholder": "Rechercher par produit, par gamme, par code",
+      "blockClass": "search-bar-container"
+    }
+  },
+  "autocomplete-result-list.v2": {
+    "blocks": ["product-summary.shelf#search-bar"],
+    "props": {
+      "productLayout": "HORIZONTAL",
+      "maxSuggestedProducts": 5,
+      "maxSuggestedTerms": 5,
+      "maxTopSearches": 5
+    }
+  },
+  "product-summary.shelf#search-bar": {
+    "children": ["product-summary-name", "search-suggestions"]
+  },
+  "search-result-layout.desktop": {
+    "children": ["flex-layout.row#result"],
+    "props": {
+      "preventRouteChange": true,
+      "mobileLayout": {
+        "mode1": "normal"
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "name": "one-trust",
+  "vendor": "frccwhirlpool",
+  "version": "0.0.9",
+  "title": "OneTrust",
+  "description": "One trust integration",
+  "builders": {
+    "store": "0.x",
+    "pixel": "0.x",
+    "docs": "0.x"
+  },
+  "dependencies": {
+    "vtex.pixel-interfaces": "1.x"
+  },
+  "settingsSchema": {
+    "title": "One Trust",
+    "type": "object",
+    "properties": {
+      "cdnId": {
+        "title": "CDN ID",
+        "description": "Enter the ID cdn ID from your One Trust consolle",
+        "type": "string"
+      },
+      "s": {
+        "title": "Service",
+        "description": "Enter the service URL for One Trust",
+        "type": "string"
+      },
+      "url": {
+        "title": "Url",
+        "description": "Enter the URL for One Trust",
+        "type": "string"
+      },
+      "EPPid": {
+        "title": "Script ID EPP",
+        "description": "EPP script ID",
+        "type": "string"
+      },
+      "FFid": {
+        "title": "Script ID FF",
+        "description": "FF script ID",
+        "type": "string"
+      },
+      "VIPid": {
+        "title": "Script ID VIP",
+        "description": "VIP script ID",
+        "type": "string"
+      }
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

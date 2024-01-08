@@ -1,0 +1,827 @@
+{
+  "store.custom#book-an-intervention": {
+    "blocks": [
+      "responsive-layout.desktop#book-an-intervention",
+      "responsive-layout.mobile#book-intervention-mobile"
+      // "analytics#support"
+    ]
+  },
+  "responsive-layout.desktop#book-an-intervention": {
+    "children": ["flex-layout.row#book-an-intervention-container-maxi-desktop"]
+  },
+  "flex-layout.row#book-an-intervention-container-maxi-desktop": {
+    "children": ["flex-layout.col#book-an-intervention-container-maxi-desktop"],
+    "props": {
+      "blockClass": "book-an-intervention-container-maxi-desktop"
+    }
+  },
+  /* MAXI CONTAINER OF ALL ELEMENT IN THE PAGE */
+  "flex-layout.col#book-an-intervention-container-maxi-desktop": {
+    "children": [
+      "breadcrumb-custom#book-an-intervention",
+      "flex-layout.row#banner-intervention-desktop",
+      "flex-layout.row#technical-support-warranty-desktop",
+      "flex-layout.row#technical-support-warranty-mini-card-desktop",
+      "flex-layout.row#amend-cancel-appointment-desktop",
+      "flex-layout.row#our-customer-card-desktop",
+      "flex-layout.row#specialized-engineers-card-desktop",
+      "flex-layout.row#troubleshooting-tech-support-desktop",
+      "flex-layout.row#other-category-desktop",
+      "flex-layout.row#advantages-tech-desktop",
+      "flex-layout.row#advantages-container-cards-desktop",
+      "flex-layout.row#contact-us-tech-support-desktop"
+    ],
+    "props": {
+      "blockClass": "book-an-intervention-container-maxi-desktop"
+    }
+  },
+  /* BREADCRUMB BOOK AN INTERVENTION */
+  "breadcrumb-custom#book-an-intervention": {
+    "props": {
+      /* "blockClass": "containerBreadcrumbs", */
+      "firstPage": "Home",
+      "previousPage": "Pomoc",
+      "previousPath": "/pomoc",
+      "currentPage": "Zarezerwuj wizyte"
+    }
+  },
+  /* BANNER INTERVENTION DESKTOP */
+  "flex-layout.row#banner-intervention-desktop": {
+    "children": [
+      "flex-layout.col#banner-intervention-image-desktop",
+      "flex-layout.col#banner-intervention-desc-desktop"
+    ],
+    "props": {
+      "blockClass": "container-banner-intervention-template-desktop"
+    }
+  },
+  "flex-layout.col#banner-intervention-image-desktop": {
+    "children": ["image#banner-intervention-template-desktop"],
+    "props": {
+      "width": "55%",
+      "blockClass": "banner-intervention-image-desktop"
+    }
+  },
+  "image#banner-intervention-template-desktop": {
+    "props": {
+      "blockClass": "banner-intervention-template-desktop",
+      "src": "assets/intervention-banner.png"
+    }
+  },
+  "flex-layout.col#banner-intervention-desc-desktop": {
+    "children": [
+      "rich-text#banner-intervention-template-title-desktop",
+      "rich-text#banner-intervention-template-paragraph-desktop"
+    ],
+    "props": {
+      "width": "45%",
+      "blockClass": "banner-intervention-desc-desktop"
+    }
+  },
+  "rich-text#banner-intervention-template-title-desktop": {
+    "props": {
+      "text": "Czy potrzebujesz zamówić wizytę technika?",
+      "blockClass": "banner-intervention-template-title-desktop"
+    }
+  },
+  "rich-text#banner-intervention-template-paragraph-desktop": {
+    "props": {
+      "text": "Skorzystaj z naszej usługi rezerwacji, aby szybko umówić interwencję z naszym autoryzowanym technikiem. Po prostu wybierz poniżej typ gwarancji i wykonaj proste czynności aby zaoszczędzić czas.",
+      "blockClass": "banner-intervention-template-paragraph-desktop"
+    }
+  },
+  /* WARRANTY SECTION DESKTOP */
+  "flex-layout.row#technical-support-warranty-desktop": {
+    "props": {
+      "blockClass": "tech-support-warranty-desktop"
+    },
+    "children": ["flex-layout.col#technical-support-warranty-desktop"]
+  },
+  "flex-layout.col#technical-support-warranty-desktop": {
+    "props": {
+      "blockClass": "contact-us"
+    },
+    "children": [
+      "flex-layout.row#technical-support-title-warranty-desktop",
+      "flex-layout.row#technical-support-desc-warranty-desktop"
+    ]
+  },
+  "flex-layout.row#technical-support-title-warranty-desktop": {
+    "props": {
+      "blockClass": "cu-title-container-desktop"
+    },
+    "children": ["flex-layout.col#technical-support-title-warranty-desktop"]
+  },
+  "flex-layout.col#technical-support-title-warranty-desktop": {
+    "props": {
+      "blockClass": "technical-support-title-warranty-desktop"
+    },
+    "children": [
+      "rich-text#text-none-ts-prenota-intervento",
+      "rich-text#technical-support-title-warranty-desktop"
+    ]
+  },
+  "rich-text#text-none-ts-prenota-intervento": {
+    "props": {
+      "text": "A",
+      "blockClass": "text-none-ts-prenota-intervento",
+      "htmlId": "zarezerwuj-wizyte"
+    }
+  },
+  "rich-text#technical-support-title-warranty-desktop": {
+    "props": {
+      "text": "Zarezerwuj wizytę technikę tutaj!",
+      "blockClass": "cu-title-desktop"
+    }
+  },
+  "flex-layout.row#technical-support-desc-warranty-desktop": {
+    "props": {
+      "blockClass": "cu-desc-container-desktop"
+    },
+    "children": ["rich-text#technical-support-desc-warranty-desktop"]
+  },
+  "rich-text#technical-support-desc-warranty-desktop": {
+    "props": {
+      "text": "Wybierz rodzaj gwarancji ,która aktualnie obejmuję twoje urządzenie.",
+      "blockClass": "cu-desc-desktop"
+    }
+  },
+  /* ------------------------------------ */
+  "flex-layout.row#technical-support-warranty-mini-card-desktop": {
+    "props": {
+      "blockClass": "technical-support-warranty-mini-card-desktop"
+    },
+    "children": [
+      "flex-layout.col#technical-support-warranty-legal-desktop",
+      "flex-layout.col#technical-support-warranty-legal-desktop-3",
+      "flex-layout.col#technical-support-warranty-legal-desktop-2"
+    ]
+  },
+  "flex-layout.col#technical-support-warranty-legal-desktop": {
+    "props": {
+      "blockClass": "technical-support-warranty-mini-card-desktop"
+    },
+    "children": [
+      "flex-layout.col#technical-support-warranty-container-desktop"
+      // "flex-layout.row#technical-support-warranty-legal-button-desc-desktop"
+    ]
+  },
+  "flex-layout.col#technical-support-warranty-container-desktop": {
+    "children": [
+      "rich-text#technical-support-warranty-legal-title-desktop",
+      "rich-text#technical-support-warranty-legal-desc-desktop",
+      //modal trigger same as support desktop
+      "modal-trigger#phone-support-main-page-desktop"
+    ]
+  },
+  "rich-text#technical-support-warranty-legal-title-desktop": {
+    "props": {
+      "text": "Gwarancja prawna",
+      "blockClass": "technical-support-warranty-mini-card-title-desktop"
+    }
+  },
+  "rich-text#technical-support-warranty-legal-desc-desktop": {
+    "props": {
+      "text": "Jeśli kupiłeś produkt mniej niż dwa lata temu, możesz umówić się na spotkanie za pośrednictwem naszego działu obsługi klienta.",
+      "blockClass": "technical-support-warranty-mini-card-desc-desktop"
+    }
+  },
+  // "flex-layout.row#technical-support-warranty-legal-button-desc-desktop": {
+  //   "children": [
+  //     "button-assistenza#technical-support-warranty-legal-button-desktop"
+  //   ],
+  //   "props": {
+  //     "blockClass": "button-container-three-cards"
+  //   }
+  // },
+  "rich-text#text-none-pp-intervention-repair-mobile": {
+    "props": {
+      "text": "A",
+      "blockClass": "text-none-protection-plans-piu-mesi",
+      "htmlId": "naprawa-w-toku"
+    }
+  },
+  "button-assistenza#technical-support-warranty-legal-button-desktop": {
+    "props": {
+      "src": "/pomoc/formularz-kontaktowy",
+      "isBlank": false,
+      "isPrimary": false,
+      "text": "09.69.39.1234",
+      "labelGa": "Book now"
+    }
+  },
+  /* ------------------------------------ */
+  /* "flex-layout.col#technical-support-warranty-extended-desktop": {
+    "props": {
+      "blockClass": "technical-support-warranty-mini-card-desktop"
+    },
+    "children": [
+      "flex-layout.col#technical-support-warranty-extended-container-desktop",
+      "flex-layout.row#technical-support-warranty-extended-button-cont-desktop"
+    ]
+  },
+  "flex-layout.col#technical-support-warranty-extended-container-desktop": {
+    "children": [
+      "rich-text#technical-support-warranty-extended-title-desktop",
+      "rich-text#technical-support-warranty-extended-desc-desktop"
+    ]
+  },
+  "rich-text#technical-support-warranty-extended-title-desktop": {
+    "props": {
+      "text": "Titolo da modificare...",
+      "blockClass": "technical-support-warranty-mini-card-title-desktop"
+    }
+  },
+  "rich-text#technical-support-warranty-extended-desc-desktop": {
+    "props": {
+      "text": "Descrizione da modificare...",
+      "blockClass": "technical-support-warranty-mini-card-desc-custom-desktop"
+    }
+  },
+  "flex-layout.row#technical-support-warranty-extended-button-cont-desktop": {
+    "children": [
+      "button-assistenza#technical-support-warranty-extended-button"
+    ],
+    "props": {
+      "blockClass": "button-container-three-cards"
+    }
+  },
+  "button-assistenza#technical-support-warranty-extended-button": {
+    "props": {
+      "src": "/pomoc/formularz-kontaktowy",
+      "isBlank": false,
+      "isPrimary": false,
+      "text": "Modificare...",
+      "labelGa": "Book now"
+    }
+  }, */
+
+  "flex-layout.col#technical-support-warranty-legal-desktop-3": {
+    "props": {
+      "blockClass": "technical-support-warranty-mini-card-desktop"
+    },
+    "children": [
+      "flex-layout.col#technical-support-warranty-container-desktop-3"
+      // "flex-layout.row#technical-support-warranty-legal-button-desc-desktop"
+    ]
+  },
+  "flex-layout.col#technical-support-warranty-container-desktop-3": {
+    "children": [
+      "rich-text#technical-support-warranty-legal-title-desktop-3",
+      "rich-text#technical-support-warranty-legal-desc-desktop-3",
+      //modal trigger same as support desktop
+      "modal-trigger#phone-support-main-page-desktop"
+    ]
+  },
+  "rich-text#technical-support-warranty-legal-title-desktop-3": {
+    "props": {
+      "text": "Rozszerzona Gwarancja",
+      "blockClass": "technical-support-warranty-mini-card-title-desktop"
+    }
+  },
+  "rich-text#technical-support-warranty-legal-desc-desktop-3": {
+    "props": {
+      "text": "Jeśli masz ważną przedłużoną umowę gwarancyjną, możesz skorzystać z naszego internetowego portalu rezerwacji.",
+      "blockClass": "technical-support-warranty-mini-card-desc-desktop"
+    }
+  },
+  /* ------------------------------------ */
+  /* "flex-layout.col#technical-support-warranty-expired-desktop": {
+    "props": {
+      "blockClass": "technical-support-warranty-mini-card-desktop"
+    },
+    "children": [
+      "flex-layout.col#technical-support-warranty-expired-container-desktop",
+      "flex-layout.row#technical-support-warranty-expired-button-cont-desktop"
+    ]
+  },
+  "flex-layout.col#technical-support-warranty-expired-container-desktop": {
+    "children": [
+      "rich-text#technical-support-warranty-expired-title-desktop",
+      "rich-text#technical-support-warranty-expired-desc-desktop"
+    ]
+  },
+  "rich-text#technical-support-warranty-expired-title-desktop": {
+    "props": {
+      "text": "Po gwarancji",
+      "blockClass": "technical-support-warranty-mini-card-title-desktop"
+    }
+  },
+  "rich-text#technical-support-warranty-expired-desc-desktop": {
+    "props": {
+      "text": "Jeśli Twoja gwarancja wygasła, nie martw się! Możemy zapewnić rozwiązanie dostosowane do Twoich potrzeb. Odkryj najlepszą ofertę, kup i zarezerwuj wizytę online.",
+      "blockClass": "technical-support-warranty-mini-card-desc-desktop"
+    }
+  },
+  "flex-layout.row#technical-support-warranty-expired-button-cont-desktop": {
+    "children": [
+      "button-assistenza#technical-support-warranty-expired-button-desktop"
+    ],
+    "props": {
+      "blockClass": "button-container-three-cards"
+    }
+  },
+  "button-assistenza#technical-support-warranty-expired-button-desktop": {
+    "props": {
+      "src": "/pomoc/po-gwarancji",
+      "isPrimary": false,
+      "isBlank": false,
+      "text": "Zarezerwuj teraz",
+      "labelGa": "Book now"
+    }
+  }, */
+  "flex-layout.col#technical-support-warranty-legal-desktop-2": {
+    "props": {
+      "blockClass": "technical-support-warranty-mini-card-desktop"
+    },
+    "children": [
+      "flex-layout.col#technical-support-warranty-container-desktop-2"
+      // "flex-layout.row#technical-support-warranty-legal-button-desc-desktop"
+    ]
+  },
+  "flex-layout.col#technical-support-warranty-container-desktop-2": {
+    "children": [
+      "rich-text#technical-support-warranty-legal-title-desktop-2",
+      "rich-text#technical-support-warranty-legal-desc-desktop-2",
+      //modal trigger same as support desktop
+      "modal-trigger#phone-support-main-page-desktop"
+    ]
+  },
+  "rich-text#technical-support-warranty-legal-title-desktop-2": {
+    "props": {
+      "text": "Po gwarancji",
+      "blockClass": "technical-support-warranty-mini-card-title-desktop"
+    }
+  },
+  "rich-text#technical-support-warranty-legal-desc-desktop-2": {
+    "props": {
+      "text": "Jeśli Twoja gwarancja wygasła, nie martw się! Możemy zapewnić rozwiązanie dostosowane do Twoich potrzeb. Odkryj najlepszą ofertę, kup i zarezerwuj wizytę online.",
+      "blockClass": "technical-support-warranty-mini-card-desc-desktop"
+    }
+  },
+  /* AMEND/CANCEL APPOINTMENT DESKTOP */
+  "flex-layout.row#amend-cancel-appointment-desktop": {
+    "props": {
+      "blockClass": "amend-cancel"
+    },
+    "children": ["flex-layout.col#amend-cancel-appointment-desktop"]
+  },
+  "flex-layout.col#amend-cancel-appointment-desktop": {
+    "props": {
+      "blockClass": "amend-cancel"
+    },
+    "children": [
+      "flex-layout.row#amend-cancel-appointment-title-desktop",
+      "flex-layout.row#amend-cancel-appointment-desc-desktop",
+      "modal-trigger#amend-cancel-appointment-button-desktop"
+    ]
+  },
+  "flex-layout.row#amend-cancel-appointment-title-desktop": {
+    "props": {
+      "blockClass": "amend-cancel-container-desktop"
+    },
+    "children": ["rich-text#amend-cancel-appointment-title-desktop"]
+  },
+  "rich-text#amend-cancel-appointment-title-desktop": {
+    "props": {
+      "text": "Masz istniejące zgłoszenie?",
+      "blockClass": "amend-cancel-title-desktop"
+    }
+  },
+  "flex-layout.row#amend-cancel-appointment-desc-desktop": {
+    "props": {
+      "blockClass": "amend-cancel-desc-container-desktop"
+    },
+    "children": ["rich-text#amend-cancel-appointment-desc-desktop"]
+  },
+  "rich-text#amend-cancel-appointment-desc-desktop": {
+    "props": {
+      "text": "Korzystając z numeru zgłoszenia otrzymanego e-mailem, możesz zmienić lub anulować wizytę interwencyjną.",
+      "blockClass": "amend-cancel-desc-desktop"
+    }
+  },
+  "modal-trigger#amend-cancel-appointment-button-desktop": {
+    "props": {
+      "blockClass": "baa-buttons-container-desktop"
+    },
+    "children": [
+      "flex-layout.row#amend-cancel-appointment-button-desktop-container",
+      "modal-layout#phone-support-main-page-desktop"
+    ]
+  },
+  "flex-layout.row#amend-cancel-appointment-button-desktop-container": {
+    "props": {
+      "blockClass": "amend-cancel-button-container-desktop"
+    },
+    "children": ["button-assistenza#amend-cancel-appointment-button-dekstop"]
+  },
+  "button-assistenza#amend-cancel-appointment-button-dekstop": {
+    "props": {
+      "isBlank": true,
+      "isPrimary": true,
+      // "src": "/pomoc/easy-service?soid=#/",
+      "text": "Zmień/Anuluj wizytę"
+    }
+  },
+  /* OUR CUSTOMER SERVICE CARD WITH TEXT ON THE RIGHT */
+  "flex-layout.row#our-customer-card-desktop": {
+    "props": {
+      "blockClass": "card-desktop"
+    },
+    "children": ["flex-layout.col#our-customer-card-desktop"]
+  },
+  "flex-layout.col#our-customer-card-desktop": {
+    "props": {
+      "blockClass": "card-desktop"
+    },
+    "children": ["flex-layout.row#our-customer-card-container-desktop"]
+  },
+  "flex-layout.row#our-customer-card-container-desktop": {
+    "props": {
+      "blockClass": "card-tr-container-desktop"
+    },
+    "children": [
+      "flex-layout.col#our-customer-card-image-desktop",
+      "flex-layout.col#our-customer-card-container-desc-desktop"
+    ]
+  },
+  /* ------------------------------------ */
+  "flex-layout.col#our-customer-card-image-desktop": {
+    "children": ["image#our-customer-card-image-desktop"],
+    "props": {
+      "blockClass": "card-tr-image-desktop"
+    }
+  },
+  "image#our-customer-card-image-desktop": {
+    "props": {
+      "blockClass": "card-image-desktop",
+      "src": "assets/Our-customer-service.png"
+    }
+  },
+  /* ------------------------------------ */
+  "flex-layout.col#our-customer-card-container-desc-desktop": {
+    "children": [
+      "rich-text#our-customer-card-title-desktop",
+      "rich-text#our-customer-card-desc-desktop",
+      "rich-text#foot-note"
+    ],
+    "props": {
+      "blockClass": "container-text-image-support-template-desktop"
+    }
+  },
+  "rich-text#our-customer-card-title-desktop": {
+    "props": {
+      "blockClass": "title-text-image-our-customer-template-desktop",
+      "text": "Nasza obsługa klienta"
+    }
+  },
+  "rich-text#our-customer-card-desc-desktop": {
+    "props": {
+      "blockClass": "description-text-image-our-customer-template-desktop",
+      "text": "Nasze Centrum Kontaktowe Indesit jest do Twojej dyspozycji w celu uzyskania porady w zakresie konserwacji Twojego produktu i szybkiej pomocy w przypadku awarii. Zadzwoń 22 244 1000, aby uzyskać więcej informacji lub umówić się na spotkanie z technikiem."
+    }
+  },
+  "rich-text#foot-note": {
+    "props": {
+      "blockClass": "footnote",
+      "text": ""
+    }
+  },
+  /* HIGHLY SPECIALIZED ENGINEERS CARD WITH TEXT ON THE RIGHT */
+  "flex-layout.row#specialized-engineers-card-desktop": {
+    "props": {
+      "blockClass": "card-desktop"
+    },
+    "children": ["flex-layout.col#specialized-engineers-card-desktop"]
+  },
+  "flex-layout.col#specialized-engineers-card-desktop": {
+    "props": {
+      "blockClass": "card-desktop"
+    },
+    "children": ["flex-layout.row#specialized-engineers-card-container-desktop"]
+  },
+  "flex-layout.row#specialized-engineers-card-container-desktop": {
+    "props": {
+      "blockClass": "card-tl-container-desktop"
+    },
+    "children": [
+      "flex-layout.col#specialized-engineers-card-container-desc-desktop",
+      "flex-layout.col#specialized-engineers-card-image-desktop"
+    ]
+  },
+  /* ------------------------------------ */
+  "flex-layout.col#specialized-engineers-card-image-desktop": {
+    "children": ["image#specialized-engineers-card-image-desktop"],
+    "props": {
+      "blockClass": "card-tl-image-desktop"
+    }
+  },
+  "image#specialized-engineers-card-image-desktop": {
+    "props": {
+      "blockClass": "card-image-desktop",
+      "src": "assets/Specialized-engineers.png"
+    }
+  },
+  /* ------------------------------------ */
+  "flex-layout.col#specialized-engineers-card-container-desc-desktop": {
+    "children": [
+      "rich-text#specialized-engineers-card-title-desktop",
+      "rich-text#specialized-engineers-card-desc-desktop"
+    ],
+    "props": {
+      "blockClass": "container-text-image-support-template-desktop"
+    }
+  },
+  "rich-text#specialized-engineers-card-title-desktop": {
+    "props": {
+      "blockClass": "title-text-image-specialized-engineers-template-desktop",
+      "text": "Bardzo dobrze wyszkoleni technicy"
+    }
+  },
+  "rich-text#specialized-engineers-card-desc-desktop": {
+    "props": {
+      "blockClass": "description-text-image-specialized-engineers-template-desktop",
+      "text": "Indesit posiada rozbudowaną sieć autoryzowanych punktów serwisowych na terenie całego kraju. Nasi wyspecjalizowani technicy są przeszkoleni przez nasz dział techniczny i są wyposażeni w najnowocześniejsze narzędzia do naprawy Twoich urządzeń w najszybszy, najbardziej niezawodny i najlepszy sposób. Jeśli masz problem z produktem, skontaktuj się z najbliższym centrum serwisowym za pośrednictwem naszej infolinii."
+    }
+  },
+  /* ADVANTAGES SECTION DESKTOP */
+  "flex-layout.row#advantages-tech-desktop": {
+    "props": {
+      "blockClass": "advantages-tech"
+    },
+    "children": ["flex-layout.col#advantages-tech-desktop"]
+  },
+  "flex-layout.col#advantages-tech-desktop": {
+    "props": {
+      "blockClass": "advantages-tech"
+    },
+    "children": ["flex-layout.row#advantages-tech-title-desktop"]
+  },
+  "flex-layout.row#advantages-tech-title-desktop": {
+    "props": {
+      "blockClass": "advantages-tech-container-desktop"
+    },
+    "children": ["rich-text#advantages-tech-title-desktop"]
+  },
+  "rich-text#advantages-tech-title-desktop": {
+    "props": {
+      "text": "Ciesz się wyjątkowymi korzyściami z Indesit!",
+      "blockClass": "advantages-tech-title-desktop"
+    }
+  },
+  /* ------------------------------------ */
+  "flex-layout.row#advantages-container-cards-desktop": {
+    "props": {
+      "blockClass": "adv-tech-container-card-desktop"
+    },
+    "children": ["flex-layout.col#advantages-container-cards-desktop"]
+  },
+  "flex-layout.col#advantages-container-cards-desktop": {
+    "props": {
+      "blockClass": ""
+    },
+    "children": [
+      //"flex-layout.row#advantages-cards-first-line-desktop",
+      //"flex-layout.row#advantages-cards-second-line-desktop",
+      "flex-layout.row#advantages-cards-third-line-desktop",
+      "flex-layout.row#advantages-cards-fourth-line-desktop",
+      "flex-layout.row#advantages-cards-fifth-line-desktop"
+    ]
+  },
+  /* ---------------- FIRST LINE -------------------- */
+  "flex-layout.row#advantages-cards-first-line-desktop": {
+    "props": {
+      "blockClass": "adv-tech-first-desktop"
+    },
+    "children": [
+      "flex-layout.col#adv-first-left-card-desktop",
+      "flex-layout.col#adv-first-right-card-desktop"
+    ]
+  },
+  "flex-layout.col#adv-first-left-card-desktop": {
+    "props": {
+      "blockClass": "adv-card-desktop"
+    },
+    "children": [
+      "image#arrow-adv-tech-desktop",
+      "rich-text#text-adv-tech-first-left-desktop"
+    ]
+  },
+  "rich-text#text-adv-tech-first-left-desktop": {
+    "props": {
+      "blockClass": "adv-card-text-desktop",
+      "text": "Elastyczne opcje płatności i naprawy w stałych cenach"
+    }
+  },
+  "flex-layout.col#adv-first-right-card-desktop": {
+    "props": {
+      "blockClass": "adv-card-desktop"
+    },
+    "children": [
+      "image#arrow-adv-tech-desktop",
+      "rich-text#text-adv-tech-first-right-desktop"
+    ]
+  },
+  "rich-text#text-adv-tech-first-right-desktop": {
+    "props": {
+      "blockClass": "adv-card-text-desktop",
+      "text": "Zasięg usług lokalnie oraz międzynarodowy"
+    }
+  },
+  /* ---------------- SECOND LINE -------------------- */
+  "flex-layout.row#advantages-cards-second-line-desktop": {
+    "props": {
+      "blockClass": "adv-tech-other-desktop"
+    },
+    "children": [
+      "flex-layout.col#adv-second-left-card-desktop",
+      "flex-layout.col#adv-second-right-card-desktop"
+    ]
+  },
+  "flex-layout.col#adv-second-left-card-desktop": {
+    "props": {
+      "blockClass": "adv-card-desktop"
+    },
+    "children": [
+      "image#arrow-adv-tech-desktop",
+      "rich-text#text-adv-tech-second-left-desktop"
+    ]
+  },
+  "rich-text#text-adv-tech-second-left-desktop": {
+    "props": {
+      "blockClass": "adv-card-text-desktop",
+      "text": "12 miesięcy gwrancji na naprawy"
+    }
+  },
+  "flex-layout.col#adv-second-right-card-desktop": {
+    "props": {
+      "blockClass": "adv-card-desktop"
+    },
+    "children": [
+      "image#arrow-adv-tech-desktop",
+      "rich-text#text-adv-tech-second-right-desktop"
+    ]
+  },
+  "rich-text#text-adv-tech-second-right-desktop": {
+    "props": {
+      "blockClass": "adv-card-text-desktop",
+      "text": "Bezpośrednia rezerwacja online wizyty naszego wyspecjalizowanego technika"
+    }
+  },
+  /* ---------------- THIRD LINE -------------------- */
+  "flex-layout.row#advantages-cards-third-line-desktop": {
+    "props": {
+      "blockClass": "adv-tech-other-desktop"
+    },
+    "children": [
+      "flex-layout.col#adv-third-left-card-desktop",
+      "flex-layout.col#adv-third-right-card-desktop"
+    ]
+  },
+  "flex-layout.col#adv-third-left-card-desktop": {
+    "props": {
+      "blockClass": "adv-card-desktop"
+    },
+    "children": [
+      "image#arrow-adv-tech-desktop",
+      "rich-text#text-adv-tech-third-left-desktop"
+    ]
+  },
+  "rich-text#text-adv-tech-third-left-desktop": {
+    "props": {
+      "blockClass": "adv-card-text-desktop",
+      "text": "Zapewniamy wyszkolonych techników Indesit do wykonania napraw na najwyższym poziomie jakości"
+    }
+  },
+  "flex-layout.col#adv-third-right-card-desktop": {
+    "props": {
+      "blockClass": "adv-card-desktop"
+    },
+    "children": [
+      "image#arrow-adv-tech-desktop",
+      "rich-text#text-adv-tech-third-right-desktop"
+    ]
+  },
+  "rich-text#text-adv-tech-third-right-desktop": {
+    "props": {
+      "blockClass": "adv-card-text-desktop",
+      "text": "Zaoferujemy Ci zupełnie nowe urządzenie, jeśli starego nie da się naprawić (tylko posiadacze planu)"
+    }
+  },
+  /* ---------------- FOURTH LINE -------------------- */
+  "flex-layout.row#advantages-cards-fourth-line-desktop": {
+    "props": {
+      "blockClass": "adv-tech-other-desktop"
+    },
+    "children": [
+      "flex-layout.col#adv-fourth-left-card-desktop",
+      "flex-layout.col#adv-fourth-right-card-desktop"
+    ]
+  },
+  "flex-layout.col#adv-fourth-left-card-desktop": {
+    "props": {
+      "blockClass": "adv-card-desktop"
+    },
+    "children": [
+      "image#arrow-adv-tech-desktop",
+      "rich-text#text-adv-tech-fourth-left-desktop"
+    ]
+  },
+  "rich-text#text-adv-tech-fourth-left-desktop": {
+    "props": {
+      "blockClass": "adv-card-text-desktop",
+      "text": "Oferujemy możliwość przedłużenia ochrony Twojego urządzenia dzięki naszemu planowi dodatkowej gwrancji"
+    }
+  },
+  "flex-layout.col#adv-fourth-right-card-desktop": {
+    "props": {
+      "blockClass": "adv-card-desktop"
+    },
+    "children": [
+      "image#arrow-adv-tech-desktop",
+      "rich-text#text-adv-tech-fourth-right-desktop"
+    ]
+  },
+  "rich-text#text-adv-tech-fourth-right-desktop": {
+    "props": {
+      "blockClass": "adv-card-text-desktop",
+      "text": "Pełna gama oryginalnych części zamiennych dla produktów"
+    }
+  },
+  /* ---------------- FIFTH LINE -------------------- */
+  "flex-layout.row#advantages-cards-fifth-line-desktop": {
+    "props": {
+      "blockClass": "adv-tech-other-desktop"
+    },
+    "children": [
+      "flex-layout.col#adv-fifth-left-card-desktop",
+      "flex-layout.col#adv-fifth-right-card-desktop"
+    ]
+  },
+  "flex-layout.col#adv-fifth-left-card-desktop": {
+    "props": {
+      "blockClass": "adv-card-desktop"
+    },
+    "children": [
+      "image#arrow-adv-tech-desktop",
+      "rich-text#text-adv-tech-fifth-left-desktop"
+    ]
+  },
+  "rich-text#text-adv-tech-fifth-left-desktop": {
+    "props": {
+      "blockClass": "adv-card-text-desktop",
+      "text": "Nasze centrum kontaktowejest dostępne 7 dni w tygodniu, aby zapewnić szybką poradę i natychmiastowe wsparcie"
+    }
+  },
+  "flex-layout.col#adv-fifth-right-card-desktop": {
+    "props": {
+      "blockClass": "adv-card-desktop"
+    },
+    "children": [
+      "image#arrow-adv-tech-desktop",
+      "rich-text#text-adv-fifth-right-card-desktop"
+    ]
+  },
+  "rich-text#text-adv-fifth-right-card-desktop": {
+    "props": {
+      "blockClass": "adv-card-text-desktop",
+      "text": "12 miesięcy gwrancji na naprawy"
+    }
+  },
+  /* ------------------------------------ */
+  "image#arrow-adv-tech-desktop": {
+    "props": {
+      "blockClass": "arrow-adv-tech-desktop",
+      "src": "assets/List-true-protection-plans.svg"
+    }
+  },
+  /* CONTACT US TECH SUPPORT */
+  "flex-layout.row#contact-us-tech-support-desktop": {
+    "props": {
+      "blockClass": "contact-us-tech-support-desktop"
+    },
+    "children": ["flex-layout.col#contact-us-tech-support-desktop"]
+  },
+  "flex-layout.col#contact-us-tech-support-desktop": {
+    "props": {
+      "blockClass": "contact-us-tech-support-desktop"
+    },
+    "children": [
+      "flex-layout.row#contact-us",
+      "flex-layout.row#cu-mini-card-desktop"
+    ]
+  },
+  /* IMAGES MENU TROUBLESHOOTING TECH SUPPORT */
+  "flex-layout.row#troubleshooting-tech-support-desktop": {
+    "props": {
+      "blockClass": "troubleshooting-tech-support-desktop"
+    },
+    "children": ["flex-layout.col#troubleshooting-tech-support-desktop"]
+  },
+  "flex-layout.col#troubleshooting-tech-support-desktop": {
+    "props": {
+      "blockClass": "troubleshooting-tech-support-desktop"
+    },
+    "children": ["flex-layout.row#images-menu-support"]
+  }
+}

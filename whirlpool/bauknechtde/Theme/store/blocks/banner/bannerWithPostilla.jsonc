@@ -1,0 +1,310 @@
+{
+  "experimental__visibility-layout#bannerWithPostilla": {
+    "props": {
+      "visible": true
+    },
+    "children": ["flex-layout.row#bannerWithPostilla"]
+  },
+  "flex-layout.row#bannerWithPostilla": {
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": ["columnPostillaBannerAntonio", "bgColorAntonioHero"]
+    },
+    "children": [
+      "flex-layout.col#leftPartPostilla",
+      "flex-layout.col#rightPartPostilla"
+    ]
+  },
+
+  "flex-layout.row#bannerWithPostillaPromoBanner": {
+    "title": "[ROW] - TOP - Slide",
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": ["columnPostillaBannerAntonio", "bgColorAntonioHero"]
+    },
+    "children": [
+      "flex-layout.col#leftPartPostillaPromoBanner",
+      "flex-layout.col#rightPartPostilla"
+    ]
+  },
+  "flex-layout.row#bannerWithPostillaPromoBannerMid": {
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": [
+        "columnPostillaBannerAntonio",
+        "bgColorAntonioHero",
+        "homeSliderMid"
+      ]
+    },
+    "children": [
+      "flex-layout.col#leftPartPostillaPromoBanner",
+      "flex-layout.col#rightPartPostilla"
+    ]
+  },
+
+  "flex-layout.row#bannerWithPostilla2": {
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": [
+        "columnPostillaBannerAntonio",
+        "bgColorAntonioHero",
+        "columnPostillaBanner"
+      ]
+    },
+    "children": [
+      "flex-layout.col#leftPartPostilla",
+      "flex-layout.col#rightPartPostilla"
+    ]
+  },
+  "flex-layout.col#leftPartPostilla": {
+    "props": {
+      "width": "40%",
+      "preventVerticalStretch": true,
+      "blockClass": ["columnPostilla", "columnPostillaBottom"]
+    },
+    "children": [
+      "rich-text#BanntitleParag",
+      "rich-text#BannTitle",
+      "rich-text#BannDesc",
+      "experimental__visibility-layout#ButtonBannerWithPostilla",
+      "rich-text#BannPostilla"
+    ]
+  },
+  "flex-layout.col#rightPartPostilla": {
+    "title": "[COL] - TOP - Slide Right Part",
+    "props": {
+      "width": "50%",
+      "blockClass": "columnPostillaImage"
+    },
+    "children": ["image#bannerPostilla"]
+  },
+  // For promotion slider in home page
+  "flex-layout.col#leftPartPostillaPromoBanner": {
+    "title": "[COL] - TOP - Slide Left Part",
+    "props": {
+      "width": "50%",
+      "preventVerticalStretch": true,
+      "blockClass": ["columnPostillaPromo", "columnPostillaBottom"]
+    },
+    "children": [
+      "rich-text#BannTitlePromo",
+      "rich-text#BannDescPromo",
+      "experimental__visibility-layout#ButtonBannerWithPostilla",
+      "experimental__visibility-layout#ButtonBannerWithPostilla2",
+      "rich-text#BannHomePostilla"
+    ]
+  },
+  "rich-text#BannHomePostilla": {
+    "props": {
+      "text": "*postilla text",
+      "blockClass": ["BannerHomePostilla", "BannerHomePostillaStatic"]
+    }
+  },
+  "rich-text#BanntitleParag": {
+    "props": {
+      "text": "W COLLECTION",
+      "blockClass": "titlePBannerPostilla"
+    }
+  },
+  "rich-text#BannTitle": {
+    "props": {
+      "text": "# Frigorifero combinato 4 porte",
+      "blockClass": "titleHBannerPostilla"
+    }
+  },
+  "rich-text#BannTitlePromo": {
+    "title": "[TEXT] - TOP - Slide Title",
+    "props": {
+      "text": "# Frigorifero combinato 4 porte",
+      "blockClass": "titleHBannerPostillaPromo"
+    }
+  },
+
+  "rich-text#BannDesc": {
+    "props": {
+      "text": "33% di spazio extra per frutta e verdura *",
+      "blockClass": ["descBannerPostilla", "descBannerPostillaCottura"]
+    }
+  },
+
+  "rich-text#BannDescPromo": {
+    "title": "[TEXT] - TOP - Slide Description",
+    "props": {
+      "text": "33% di spazio extra per frutta e verdura *",
+      "blockClass": ["descBannerPostillaPromo"]
+    }
+  },
+
+  "experimental__visibility-layout#ButtonBannerWithPostilla": {
+    "title": "[EXPERIMENTAL-VISIBILITY] - TOP - Slide First button",
+    "props": {
+      "visible": true
+    },
+    // "children": ["link#ButtonBann"]
+    "children": ["analytics-wrapper.promotion#LinkButtonBann"]
+  },
+  "experimental__visibility-layout#ButtonBannerWithPostilla2": {
+    "title": "[EXPERIMENTAL-VISIBILITY] - TOP - Slide Second button",
+    "props": {
+      "visible": true
+    },
+    // "children": ["link#ButtonBann"]
+    "children": ["analytics-wrapper.promotion#LinkButtonBann"]
+  },
+
+  "analytics-wrapper.promotion#LinkButtonBann": {
+    "title": "[ANALYTICS-WRAPPER] - TOP - Slide button",
+    "props": {
+      "isLeazy": false,
+      "isView": false,
+
+      "propsAnalytics": {
+        "id": "", // Id promozione
+        "name": "", // Nome promozione
+        "position": "", // posizione promozione
+        "creative": "" // creative promozione
+      }
+    },
+    "children": ["link#ButtonBann"]
+  },
+
+  "link#ButtonBann": {
+    "title": "[LINK] - TOP - Slide button",
+    "props": {
+      "label": "CLICCA QUI",
+      "href": "#",
+      "displayMode": "button",
+      "blockClass": ["postillaButton", "homeSliderButton"],
+      "isPrevent": false
+    }
+  },
+  "rich-text#BannPostilla": {
+    "props": {
+      "text": "*Considerando la capacità dello spazio convertibile impostato a 4 ° C.",
+      "blockClass": "postillaBannerPostilla"
+    }
+  },
+  "image#bannerPostilla": {
+    "props": {
+      "src": "assets/ph-square.jpg",
+      "blockClass": "imagePostillaBanner"
+    }
+  },
+  //Banenr 2
+  "experimental__visibility-layout#bannerWithPostillaHome": {
+    "props": {
+      "visible": true
+    },
+    "children": ["flex-layout.row#bannerWithPostillaHome"]
+  },
+  "flex-layout.row#bannerWithPostillaHome": {
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": ["columnPostillaBannerAntonio", "bgColorAntonioHero"]
+    },
+    "children": [
+      "flex-layout.col#leftPartPostillaHome",
+      "flex-layout.col#rightPartPostilla"
+    ]
+  },
+  "flex-layout.col#leftPartPostillaHome": {
+    "props": {
+      "width": "40%",
+      "preventVerticalStretch": true,
+      "blockClass": ["columnPostilla", "columnPostillaBottom"]
+    },
+    "children": [
+      "image#LogoBannerTopCarousel",
+      "rich-text#BanntitleParag",
+      "rich-text#BannTitle",
+      "rich-text#BannDesc",
+      "experimental__visibility-layout#ButtonBannerWithPostilla",
+      "rich-text#BannPostilla"
+    ]
+  },
+  //Banner multipli slider
+  "experimental__visibility-layout#bannerSlider1": {
+    "props": {
+      "visible": true
+    },
+    "children": ["flex-layout.row#bannerSlider"]
+  },
+  "experimental__visibility-layout#bannerSlider2": {
+    "props": {
+      "visible": true
+    },
+    "children": ["flex-layout.row#bannerSlider"]
+  },
+  "experimental__visibility-layout#bannerSlider3": {
+    "props": {
+      "visible": true
+    },
+    "children": ["flex-layout.row#bannerSlider"]
+  },
+  "flex-layout.row#bannerSlider": {
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": [
+        "columnPostillaBannerAntonio",
+        "bgColorAntonioHero",
+        "noMarginBottom"
+      ]
+    },
+    "children": [
+      "flex-layout.col#leftPartBannerSlider",
+      "flex-layout.col#rightPartBannerSlider"
+    ]
+  },
+  "flex-layout.col#leftPartBannerSlider": {
+    "props": {
+      "width": "40%",
+      "preventVerticalStretch": true,
+      "blockClass": ["columnPostilla", "columnPostillaBottom"]
+    },
+    "children": [
+      "experimental__visibility-layout#LogoBannerTopCarousel2",
+      "experimental__visibility-layout#BanntitleParag",
+      "experimental__visibility-layout#BannTitle",
+      "experimental__visibility-layout#BannDesc",
+      "experimental__visibility-layout#ButtonBannerWithPostilla",
+      "experimental__visibility-layout#BannPostilla"
+    ]
+  },
+  "experimental__visibility-layout#BanntitleParag": {
+    "props": {
+      "visible": true
+    },
+    "children": ["rich-text#BanntitleParag"]
+  },
+  "experimental__visibility-layout#BannTitle": {
+    "props": {
+      "visible": true
+    },
+    "children": ["rich-text#BannTitle"]
+  },
+  "experimental__visibility-layout#BannDesc": {
+    "props": {
+      "visible": true
+    },
+    "children": ["rich-text#BannDesc"]
+  },
+  "experimental__visibility-layout#BannPostilla": {
+    "props": {
+      "visible": true
+    },
+    "children": ["rich-text#BannPostilla"]
+  },
+  "flex-layout.col#rightPartBannerSlider": {
+    "props": {
+      "width": "60%",
+      "blockClass": "columnPostillaImage"
+    },
+    "children": ["image#BannerSlider"]
+  },
+  "image#BannerSlider": {
+    "props": {
+      "src": "assets/ph-square.jpg",
+      "blockClass": ["imagePostillaBanner", "cover"]
+    }
+  }
+}

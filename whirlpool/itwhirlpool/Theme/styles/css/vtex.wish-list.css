@@ -1,0 +1,84 @@
+.wishlistIconContainer {
+  justify-content: center;
+  display: flex;
+}
+:global(.vtex-flex-layout-0-x-flexCol--col-tertiary) .wishlistIconContainer {
+ justify-content: flex-start;
+ display: flex;
+ margin-left: 0.5rem;
+}
+.wishlistIconContainer :global(.vtex-button) {
+  width: auto;
+  margin: 0;
+}
+.wishlistIconContainer :global(.vtex-button):hover,
+.wishlistIconContainer :global(.vtex-button):focus {
+  background-color: unset !important;
+}
+.wishlistIconContainer :global(.vtex-buttonf):hover .outline,
+.wishlistIconContainer :global(.vtex-button):focus .outline {
+  background-image: url("/arquivos/heart_fill.svg") !important;
+  background-repeat: no-repeat !important;
+}
+.wishlistIconContainer :global(.vtex-button__label) {
+  padding-left: unset;
+  padding-right: 0.5rem;
+}
+
+.outline {
+  background-image: url("/arquivos/heart.svg") !important;
+  background-repeat: no-repeat !important;
+}
+.fill {
+  background-image: url("/arquivos/heart_fill.svg") !important;
+  background-repeat: no-repeat !important;
+}
+.iconSize {
+  width: 28px;
+}
+
+
+:global(.vtex-flex-layout-0-x-flexColChild--summary-left) .iconSize {
+  width: 20px;
+  height: 20px;
+}
+
+:global(.vtex-slider-layout-0-x-sliderLayoutContainer--shelf) :global(.vtex-flex-layout-0-x-flexColChild--summary-left) .iconSize {
+  width: 28px;
+  height: 28px;
+}
+
+
+
+@media only screen and (max-width: 640px) {
+  .wishlistIconContainer--wishListMobile {
+    justify-content: flex-end !important;
+  }
+  .iconSize {
+    width: 20px !important;
+    height: 17px !important;
+  }
+  .wishlistIconContainer :global(.vtex-button__label) {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  .wishlistIconContainer--wishListMobile :global(.vtex-button__label) {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    justify-content: flex-end;
+    margin-right: 3rem;
+  }
+  .wishlistIconContainer :global(.vtex-button) {
+    min-height: auto !important;
+  }
+  .wishlistIconContainer--wishListMobile :global(.vtex-button) {
+    min-height: auto !important;
+    width: 100%;
+  }
+
+}
+@media only screen and (max-width: 1200px) and (min-width: 600px) {
+  .wishlistIconContainer {
+    width: auto !important;
+  }
+}

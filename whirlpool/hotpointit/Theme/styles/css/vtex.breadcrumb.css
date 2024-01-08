@@ -1,0 +1,54 @@
+.container {
+  position: relative;
+  padding: 1rem 0 1rem 3.125rem;
+  max-width: 96rem;
+  margin: auto;
+  width: 100%;
+}
+.homeLink::before {
+  content: "Home";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 0.15rem 0.1rem 1.15rem;
+}
+.homeLink .homeIcon {
+  visibility: hidden;
+  height: 10px;
+}
+.link {
+  font-weight: 300;
+  font-size: 0.8rem;
+  line-height: 1.2;
+  text-decoration: none;
+  color: #505050;
+}
+.term {
+  text-decoration: none;
+}
+.link:hover,
+.link:focus {
+  color: #953D1B;
+}
+.link:focus {
+  border-color: #953D1B;
+}
+.container--breadPP {
+  margin-top: 0.5rem;
+}
+.arrow:last-child {
+  pointer-events: none;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 1040px) {
+  .container {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1040px) {
+  .container {
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,151 @@
+.socialNetworkImage--facebook,
+.socialNetworkImage--instagram,
+.socialNetworkImage--youtube,
+.socialNetworkImage--twitter,
+.socialNetworkImage--pinterest {
+  display: none;
+}
+.socialNetworkLink {
+  position: relative;
+  margin-right: 0.425em;
+  height: 2.25rem;
+  width: 2.25rem;
+}
+.socialNetworkLink--facebook::after {
+  position: absolute;
+  content: url(assets/logos/facebook.svg);
+  height: 100%;
+  width: 100%;
+}
+.socialNetworkLink--instagram::after {
+  position: absolute;
+  content: url(assets/logos/instagram.svg);
+  height: 100%;
+  width: 100%;
+}
+.socialNetworkLink--youtube::after {
+  position: absolute;
+  content: url(assets/logos/youtube.svg);
+  height: 100%;
+  width: 100%;
+}
+.socialNetworkLink--twitter::after {
+  position: absolute;
+  content: url(assets/logos/twitter-icon.svg);
+  height: 100%;
+  width: 100%;
+}
+.socialNetworkLink--pinterest::after {
+  position: absolute;
+  content: url(assets/logos/pinterest.svg);
+  height: 100%;
+  width: 100%;
+}
+.row--menu-row {
+  padding-right: 24px;
+}
+.row--menu-row .rowContainer {
+  align-items: flex-start;
+}
+.row--payment-methods {
+  padding-top: 16px;
+}
+.socialNetworkWrapper--footerMobile {
+  width: auto !important;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+}
+.footerLayout {
+  padding-top: 0;
+  background-color: unset;
+}
+.footerLayout :global(.vtex-flex-layout-0-x-flexRowContent) {
+  width: 100%;
+}
+.footerLayout :global(.vtex-flex-layout-0-x-flexCol) {
+  width: 100%;
+}
+.footerLayout :global(.vtex-menu-2-x-styledLinkContent) {
+  white-space: pre-wrap !important;
+  /* overflow: hidden;
+  text-overflow: ellipsis; */
+}
+.footerLayout :global(.vtex-menu-2-x-styledLinkContent--footerBold) {
+  /*white-space: pre-wrap !important;*/
+  white-space: nowrap !important;
+  overflow: visible;
+  color: #ffffff;
+}
+.socialNetworksContainer--socialNetworksBarbieri {
+  padding: 4rem 15rem;
+}
+.socialNetworkLink--socialNetworksBarbieri {
+  margin: 0 auto;
+  width: 3rem;
+  height: 3rem;
+}
+.footerLayout--footerMobile {
+  margin-top: 2rem;
+}
+
+.footerLayout :global(.vtex-flex-layout-0-x-flexRow--footerNewsletter) {
+  margin-top: 1.5625rem;
+  background: #ffffff !important;
+}
+.footerLayout :global(.vtex-flex-layout-0-x-flexRow--halfRowSpace) {
+    height: 3rem;
+    background: white !important;
+    margin-top: -1px;
+  }
+/* Media Queries */
+@media only screen and (max-width: 640px) {
+  .socialNetworksContainer--footerMobile {
+    justify-content: space-around;
+  }
+  .socialNetworkWrapper--footerMobile {
+    width: 60% !important;
+  }
+  /*
+  .footerLayout :global(.vtex-flex-layout-0-x-flexRowContent) {
+    width: 50%;
+  }*/
+  .footerLayout :global(.vtex-flex-layout-0-x-stretchChildrenWidth) {
+    flex: 0 0 100%;
+  }
+  .footerLayout :global(.vtex-flex-layout-0-x-flexCol) {
+    width: 100%;
+  }
+  /*.footerLayout :global(.vtex-rich-text-0-x-wrapper) {
+    width: 50%;
+    margin: 0 auto 2rem auto;
+  }*/
+  .socialNetworksContainer--socialNetworksBarbieri {
+    padding: 2rem;
+    flex-direction: column;
+  }
+  .socialNetworkLink--socialNetworksBarbieri {
+    margin: 1.5rem auto;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .footerLayout {
+    background-color: #000;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1100px) {
+  .footerLayout :global(.vtex-flex-layout-0-x-flexRow--footerNewsletter) {
+    margin-top: -1px;
+    background: #ffffff;
+  }
+  .footerLayout :global(.vtex-flex-layout-0-x-flexRow--halfRowSpace) {
+    height: 3rem;
+    background: white !important;
+    margin-top: -1px;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .footerLayout :global(.vtex-menu-2-x-styledLinkContent--footerBold) {
+    white-space: pre-wrap !important;
+  }
+}
+

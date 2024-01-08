@@ -1,0 +1,9 @@
+query getAdditionalServices ($s: ID!, $sc: ID){
+  additionalServices(skuId: $s, salesChannelId: $sc){
+    Id
+    ServiceTypeId
+    Name
+    Price
+    Description
+  }
+}

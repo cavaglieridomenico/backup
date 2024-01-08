@@ -1,0 +1,54 @@
+
+.trigger :global(.vtex-store-icons-0-x-caretIcon) {
+  margin-right: 1rem;
+}
+
+.trigger {
+  border: none !important;
+/*   width: calc(24px + 3.125rem); */
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: none !important;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+  .trigger,
+  .trigger--hidden,
+  .trigger--visible {
+    /* padding: 1rem 0rem 1rem 0; */
+    width: max-content;
+  }
+  .content {
+    padding: 0 1rem;
+  }
+}
+.content {
+  position: absolute;
+  display: block !important;
+  overflow: hidden;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  padding-right: 3.125rem;
+  padding-left: 3.125rem;
+  background-color: white;
+  transition: height 0.7s ease;
+  height: 0;
+}
+.trigger:focus {
+  border: none !important;
+}
+.content--visible {
+  transition: height 0.7s ease;
+  height: 200px;
+}
+.content--disclosure_content--servizi_aggiuntivi {
+  position: relative;
+  top: unset;
+  padding: 0;
+}
+

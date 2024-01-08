@@ -1,0 +1,144 @@
+/* MAIN CONTAINER */
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.container--bkDeBlackFriday2022 {
+  background-color: #1e1e1e;
+  padding: 2rem 0;
+  margin-top: -5rem;
+}
+/* TIMER CONTAINER */
+.container__timer {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: myriadBold;
+  margin: 2rem 0;
+}
+.container__timer--bkDeBlackFriday2022 {
+  margin: 0;
+}
+.container__loader {
+  display: block;
+  margin: auto;
+  background-color: #1e1e1e;
+}
+/* CONTAINER TIMER NUMBERS */
+.container__timer-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 1rem;
+}
+.container__timer-number--bkDeBlackFriday2022 {
+  border: 2px solid #007d69;
+  padding: 0.5rem;
+  padding-bottom: 0;
+  width: 6.5rem;
+  height: 6.5rem;
+}
+/* TIMER NUMBERS */
+.timer__span {
+  color: #ffffff;
+  font-weight: 300;
+  font-size: 2.5rem;
+}
+.timer__span--bkDeBlackFriday2022 {
+  font-size: 4.5rem;
+  font-weight: 400;
+  display: contents;
+}
+/* TIMER LABELS */
+.timer__span-label {
+  font-size: 1.5rem;
+  font-weight: normal;
+  padding-top: 0.5rem;
+}
+.timer__span-label--bkDeBlackFriday2022 {
+  color: #007d69;
+}
+/* TIMER DOTS */
+.timer__span-dots {
+  color: #ffffff;
+  font-weight: 300;
+  font-size: 2.5rem;
+  display: contents;
+}
+/* LOADER */
+.loader__width {
+  max-width: 1500px;
+}
+.loader__form--bkDeBlackFriday2022 {
+  background-color: #1e1e1e;
+  min-height: 460px;
+}
+
+.effect__opacity-on {
+  opacity: 1;
+  animation: putOpacity 5s; /* other keywords like "infinite alternate" can be useful here */
+}
+
+/* MEDIA QUERIES */
+@media only screen and (min-width: 1200px) {
+  .container__timer--bkDeBlackFriday2022 {
+    font-size: 5rem;
+  }
+}
+@media only screen and (max-width: 1100px) and (min-width: 600px) {
+  .loader__width {
+    max-width: 1000px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .container__timer--bkDeBlackFriday2022 {
+    flex-direction: column;
+  }
+  .container__timer-second {
+    margin-top: 1rem;
+  }
+  .loader__width {
+    max-width: 600px;
+  }
+  .font__size-mobile {
+    font-size: 1.3rem;
+  }
+}
+
+/* KEY FRAMES */
+@keyframes putOpacity {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.75;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+@keyframes putOpacityOff {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}

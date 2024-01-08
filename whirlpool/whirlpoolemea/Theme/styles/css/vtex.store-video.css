@@ -1,0 +1,62 @@
+.videoContainer--videoCottura {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 6rem;
+  height: 65vh;
+  padding-top: 1rem;
+}
+.videoElement--videoCottura,
+.videoElement--videoMaster {
+  height: 58vh;
+  width: 88vh;
+}
+.videoContainer--videoMaster {
+  display: flex;
+  justify-content: space-around;
+  height: 65vh;
+  margin: 1rem 0;
+}
+.videoContainer--recipe1 {
+  margin: 0 auto;
+  padding: 0 3rem 3rem 3rem;
+  border: none;
+}
+/* Media Queries */
+@media screen and (min-width: 421px) and (max-width: 700px) {
+  .videoElement--videoCottura,
+  .videoElement--videoMaster {
+    height: 29vh;
+    width: 51vh;
+  }
+  .videoContainer--videoCottura,
+  .videoElement--videoMaster {
+    height: 29vh;
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 420px) {
+  .videoElement--videoCottura,
+  .videoElement--videoMaster {
+    height: 25vh;
+    width: 100%;
+  }
+  .videoContainer--videoCottura {
+    display: flex;
+    align-items: center;
+    margin-top: 0rem;
+    height: fit-content !important;
+    margin-bottom: 2rem;
+  }
+  .videoElement--videoMaster {
+    display: flex;
+    align-items: center;
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  .videoContainer--videoMaster {
+    height: auto;
+  }
+}

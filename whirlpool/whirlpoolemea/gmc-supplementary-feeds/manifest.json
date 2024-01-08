@@ -1,0 +1,111 @@
+{
+  "name": "gmc-supplementary-feeds",
+  "vendor": "whirlpoolemea",
+  "version": "0.0.1",
+  "title": "Google Merchant Center - Supplementary feeds",
+  "description": "Useful app for creating supplementary feeds for Google Merchant Center",
+  "mustUpdateAt": "2018-01-04",
+  "categories": [],
+  "dependencies": {},
+  "builders": {
+    "node": "6.x",
+    "docs": "0.x"
+  },
+  "scripts": {
+    "prereleasy": "bash lint.sh"
+  },
+  "credentialType": "absolute",
+  "billingOptions": {
+    "termsURL": "https://compliance.vtex.com/gdpr/policies/vtex-privacy-policy",
+    "support": {
+      "url": "https://support.vtex.com/hc/requests"
+    },
+    "free": true
+  },
+  "policies": [
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "portal.vtexcommercestable.com.br",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.myvtex.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "colossus-fire-event"
+    },
+    {
+      "name": "colossus-write-logs"
+    },
+    {
+      "name": "read_prices"
+    },
+    {
+      "name": "ADMIN_DS"
+    },
+    {
+      "name": "LogisticsAdmin"
+    }
+  ],
+  "settingsSchema": {
+    "title": "Google Merchant Center - Supplementary Feeds Setup",
+    "type": "object",
+    "properties": {
+      "vtexSettings": {
+        "title": "Vtex settings:",
+        "type": "object",
+        "properties": {
+          "categoryIds": {
+            "title": "Category Ids of the products to be included in the feed (comma separated)",
+            "type": "string"
+          }
+        }
+      },
+      "feedsSettings": {
+        "title": "Supplementary feeds settings",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "feedName": {
+              "title": "Supplementary feed name",
+              "type": "string"
+            },
+            "salesPolicy": {
+              "title": "Sales policy id used to filter the products that will be included in the feed",
+              "type": "string"
+            },
+            "removeOutOfStock": {
+              "title": "Remove out of stock products from the feed?",
+              "type": "boolean",
+              "default": true
+            },
+            "xmlFeedTitle": {
+              "title": "Label to put in the title XML field",
+              "type": "string"
+            },
+            "xmlFeedLink": {
+              "title": "Label to put in the link XML field",
+              "type": "string"
+            },
+            "xmlFeedDescription": {
+              "title": "Label to put in the description XML field",
+              "type": "string"
+            },
+            "deliveryServiceName": {
+              "title": "Name of the delivery service",
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

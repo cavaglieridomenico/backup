@@ -1,0 +1,91 @@
+{
+  "store.custom#service-locator": {
+    "blocks": [
+      "modal-trigger#oow-popup",
+      // "analytics#service-locator",
+      "responsive-layout.desktop#service-locator-desk",
+      "responsive-layout.mobile#service-locator-mobile"
+    ]
+  },
+  "store.custom#service-locator_up": {
+    "blocks": [
+      "responsive-layout.desktop#service-locator-desk",
+      "responsive-layout.mobile#service-locator-mobile"
+    ]
+  },
+  "responsive-layout.desktop#service-locator-desk": {
+    "children": [
+      "breadcrumb-custom#service-locator",
+      "flex-layout.row#description-container-maxi-desktop",
+      "flex-layout.row#map-container-maxi-desktop",
+      "flex-layout.row#service-locator-link"
+    ]
+  },
+  /* BREADCRUMB */
+  "breadcrumb-custom#service-locator": {
+    "props": {
+      /* "blockClass": "containerBreadcrumbs", */
+      "firstPage": "Home",
+      "previousPage": "Assistenza",
+      "previousPath": "/assistenza",
+      "currentPage": "Service locator"
+    }
+  },
+  /* PAGE DESCRIPTION */
+  "flex-layout.row#description-container-maxi-desktop": {
+    "children": ["flex-layout.col#description-container-maxi-desktop"],
+    "props": {
+      "blockClass": "description-container-maxi-desktop"
+    }
+  },
+  "flex-layout.col#description-container-maxi-desktop": {
+    "children": [
+      "rich-text#description-title-desktop",
+      "rich-text#description-desc-desktop"
+    ],
+    "props": {
+      "blockClass": "description-container-maxi-desktop"
+    }
+  },
+  "rich-text#description-title-desktop": {
+    "props": {
+      "text": "Hai bisogno di un Tecnico Autorizzato INDESIT?",
+      "blockClass": "description-title-desktop"
+    }
+  },
+  "rich-text#description-desc-desktop": {
+    "props": {
+      "text": "Trova il Centro di Assistenza Autorizzato Indesit di tua pertinenza. \n Basta inserire il tuo indirizzo completo (via e città) negli appositi campi sottostanti e visualizza il \n tuo centro di riferimento. Scopri se i servizi che offre sono in linea con le tue esigenze.\n In alternativa, chiamaci allo 02 20 30 (o al nostro numero nella tua regione che puoi trovare qui\n sotto) e un nostro operatore richiederà per te l'intervento di un tecnico specializzato\n appartenente ad uno dei 250 Centri Autorizzati Indesit, più vicino a te.",
+      "blockClass": "description-desc-desktop"
+    }
+  },
+  /* SERVICE LOCATOR MAP CONTAINER */
+  "flex-layout.row#map-container-maxi-desktop": {
+    "children": ["flex-layout.col#map-container-maxi-desktop"],
+    "props": {
+      "blockClass": "map-container-maxi-desktop"
+    }
+  },
+  /* MAXI CONTAINER OF ALL ELEMENT IN THE PAGE */
+  "flex-layout.col#map-container-maxi-desktop": {
+    "children": ["embedded-service-locator"],
+    "props": {
+      "blockClass": "map-container-maxi-desktop"
+    }
+  },
+  "embedded-service-locator#desktop-embed": {},
+  // Servie locator LINK
+  "flex-layout.row#service-locator-link": {
+    "children": ["rich-text#service-locator-link"],
+    "props": {
+      "fullWidth": "true",
+      "horizontalAlign": "center"
+    }
+  },
+  "rich-text#service-locator-link": {
+    "props": {
+      "text": "[Italia](/assistenza/service-locator/italia)",
+      "blockClass": "serviceLocatorLink"
+    }
+  }
+}

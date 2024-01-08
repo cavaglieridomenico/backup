@@ -1,0 +1,469 @@
+<!-- My account gdpr-->
+<script type="text/javascript">
+  ; (function () {
+    var pushState = history.pushState;
+    var replaceState = history.replaceState;
+
+    history.pushState = function () {
+      pushState.apply(history, arguments);
+      window.dispatchEvent(new Event('pushstate'));
+      window.dispatchEvent(new Event('locationchangeaccount'));
+    };
+
+    history.replaceState = function () {
+      replaceState.apply(history, arguments);
+      window.dispatchEvent(new Event('replacestate'));
+      window.dispatchEvent(new Event('locationchangeaccount'));
+    };
+
+    window.addEventListener('popstate', function () {
+      window.dispatchEvent(new Event('locationchangeaccount'))
+    });
+
+    window.addEventListener('load', function () {
+      window.dispatchEvent(new Event('locationchangeaccount'))
+    });
+
+    window.addEventListener('resize', function () {
+      window.dispatchEvent(new Event('locationchangeaccount'))
+    });
+
+  })();
+
+  const showProfilingOptIn = decodeURIComponent("{{settings.showProfilingOptIn}}") === "true"
+  // GA
+  window.dataLayer = window.dataLayer || []
+  const hasGA4 = decodeURIComponent("{{settings.hasGA4}}") === "true"
+  const showOptinConfirmationButton = decodeURIComponent("{{settings.showNewsletterOptInConfirmationButton}}") === "true"
+
+  window.addEventListener('locationchangeaccount', function() {
+    if (window.location.href.indexOf('account') > 0 && window.location.hash && window.location.hash == '#/profile') {
+      waitForEl(".vtex-my-account-1-x-newsletterBoxContainer", async function(){
+        // HIDE OOTB NEWSLETTER BOX
+        const ootbNewsBoxContainer = document.getElementsByClassName("vtex-my-account-1-x-newsletterBoxContainer")[0]
+        ootbNewsBoxContainer.firstChild.style.display = "none"
+        try {
+          // GET USER INFO
+          let sessionEndpoint = decodeURIComponent("{{settings.sessionAPIEndpoint}}");
+          let session = await handleApi("GET",sessionEndpoint)
+          let userEmail = session?.namespaces?.profile?.email?.value
+          let userInfoEndpoint = decodeURIComponent("{{settings.getUserInfoAPIEndpoint}}");
+          let userInfo = await handleApi("GET", `${userInfoEndpoint}${userEmail}`)
+          // ADD NEWSLETTER OPTIN BOX IF NOT PRESENT
+          if(!document.querySelector("#newsOptIn"))
+            renderNewsletterOptInBox(ootbNewsBoxContainer,userInfo);
+          // ADD PROFILING OPTIN BOX IF NOT PRESENT
+          if(showProfilingOptIn && !document.querySelector("#profOptIn"))
+            renderProfilingOptInBox(ootbNewsBoxContainer,userInfo);
+        } catch (error) {
+          console.error(error)
+        }
+      })
+    }
+  })
+
+  function setEventiListener(element, type, callback) {
+    let listOfElements = document.querySelectorAll(element)
+    if (listOfElements && listOfElements.length > 0) {
+      listOfElements.forEach(e => {
+        e.addEventListener(type, callback)
+      })
+      return
+    } else {
+      setTimeout(() => setEventiListener(element, type, callback), 250)
+    }
+  }
+
+  setEventiListener('.vtex-address-form__state input', 'focus', (event) => {
+    document.querySelector('.vtex-address-form__state input').attr('maxLength', 2)
+  })
+
+  var waitForEl = function (selector, callback) {
+    let element = document.querySelector(selector)
+    if (element && (window.getComputedStyle(element).visibility == 'visible' || document.querySelector(selector).length > 0)) {
+      callback()
+    } else {
+      setTimeout(function () {
+        waitForEl(selector, callback)
+      }, 100)
+    }
+  }
+
+  const newsBoxCheckbox = document.createElement('input');
+  const newsConfirmButton = document.createElement('button')
+  const profBoxCheckbox = document.createElement('input');
+  // LOADER CHECKBOX
+  const newsLoaderContainer = document.createElement('div')
+  const newsOptInLoader = document.createElement('span')
+  newsLoaderContainer.appendChild(newsOptInLoader)
+  const profLoaderContainer = document.createElement('div')
+  const profOptInLoader = document.createElement('span')
+  profLoaderContainer.appendChild(profOptInLoader)
+  newsLoaderContainer.setAttribute("class","loaderContainer")
+  profLoaderContainer.setAttribute("class","loaderContainer")
+  newsOptInLoader.setAttribute("class","checkboxLoader")
+  profOptInLoader.setAttribute("class","checkboxLoader")
+  newsOptInLoader.style.display = "none"
+  profOptInLoader.style.display = "none"
+
+  // ADD CSS STYLE
+  let styleLink = document.createElement('link');
+  styleLink.type = "text/css"
+  styleLink.rel = "stylesheet"
+  let cssFileName = decodeURIComponent("{{settings.cssFileName}}")
+  styleLink.href = `/arquivos/${cssFileName}`
+  document.head.append(styleLink)
+
+  function renderNewsletterOptInBox(mainContainer,userInfo) {
+    const newsletterBox = document.createElement("div");
+    newsletterBox.setAttribute("id","newsOptIn");
+    mainContainer.appendChild(newsletterBox)
+    // NEWS BOX TITLE
+    const newsBoxTitle = document.createElement("div");
+    newsBoxTitle.innerHTML = decodeURIComponent("{{settings.newsletterContainerTitle}}")
+    newsBoxTitle.style.fontWeight = "bolder"
+    document.getElementById("newsOptIn").appendChild(newsBoxTitle)
+    // NEWS BOX MESSAGE
+    const newsBoxMessage = document.createElement("div");
+    newsBoxMessage.innerHTML = decodeURIComponent("{{settings.newsletterContainerMessage}}");
+    document.getElementById("newsOptIn").appendChild(newsBoxMessage);
+    // NEWS CHECKBOX
+    const newsBoxCheckboxContainer = document.createElement('div');
+    newsBoxCheckboxContainer.setAttribute("class","newsBoxCheckboxContainer")
+    newsBoxCheckbox.setAttribute("class","newsBoxCheckbox");
+    newsBoxCheckbox.type = 'checkbox';
+    newsBoxCheckbox.id = 'newsletterOptIn';
+    newsBoxCheckbox.name = 'newsletterOptIn';
+    newsBoxCheckbox.checked = userInfo[0]?.isNewsletterOptIn
+
+    if(!showOptinConfirmationButton)
+      addNewsOptInListener(userInfo, newsBoxCheckbox)
+
+    const newsBoxCheckboxLabel = document.createElement('label');
+    newsBoxCheckboxLabel.htmlFor = 'newsletterOptIn';
+    newsBoxCheckboxLabel.innerHTML = decodeURIComponent("{{settings.newsletterOptIn}}");
+    newsBoxCheckboxContainer.appendChild(newsBoxCheckbox);
+    newsBoxCheckboxContainer.appendChild(newsLoaderContainer);
+    newsBoxCheckboxContainer.appendChild(newsBoxCheckboxLabel);
+    document.getElementById("newsOptIn").appendChild(newsBoxCheckboxContainer)
+
+    if(showOptinConfirmationButton) {
+      newsConfirmButton.style.display = "none"
+      const confirmationButtonText = decodeURIComponent("{{settings.confirmationButtonText}}");
+      const newsConfirmButtonContainer = document.createElement('div');
+
+      newsConfirmButton.innerHTML = confirmationButtonText
+      newsConfirmButton.id = 'newsletterOptIn';
+      newsConfirmButton.name = 'newsletterOptIn';
+      newsConfirmButton.className = "bw1 ba fw5 v-mid relative pv3 ph4 mt2 lh-solid br2 min-h-regular t-action bg-action-primary b--action-primary c-on-action-primary hover-bg-action-primary hover-b--action-primary hover-c-on-action-primary pointer"
+
+      addNewsOptInListener(userInfo, newsConfirmButton)
+      addConfirmationButtonListener()
+      newsConfirmButtonContainer.appendChild(newsConfirmButton)
+      document.getElementById("newsOptIn").appendChild(newsConfirmButtonContainer)
+    }
+  }
+
+  function renderProfilingOptInBox(mainContainer,userInfo) {
+    const profilingBox = document.createElement("div");
+    profilingBox.setAttribute("id","profOptIn");
+    mainContainer.appendChild(profilingBox)
+    // PROFILING BOX TITLE
+    const profBoxTitle = document.createElement("div");
+    profBoxTitle.innerHTML = decodeURIComponent("{{settings.profilingContainerTitle}}")
+    document.getElementById("profOptIn").appendChild(profBoxTitle)
+    // PROFILING BOX MESSAGE
+    const profBoxMessage = document.createElement("div");
+    profBoxMessage.innerHTML = decodeURIComponent("{{settings.profilingContainerMessage}}");
+    document.getElementById("profOptIn").appendChild(profBoxMessage);
+    // PROFILING CHECKBOX
+    const profBoxCheckboxContainer = document.createElement('div');
+    profBoxCheckboxContainer.setAttribute("class","profBoxCheckboxContainer")
+    profBoxCheckbox.setAttribute("class","profBoxCheckbox");
+    profBoxCheckbox.type = 'checkbox';
+    profBoxCheckbox.id = 'profilingOptIn';
+    profBoxCheckbox.name = 'profilingOptIn';
+    profBoxCheckbox.checked = userInfo[0]?.isProfilingOptIn;
+    addProfOptInListener(userInfo);
+    const profBoxCheckboxLabel = document.createElement('label');
+    profBoxCheckboxLabel.htmlFor = 'profilingOptIn';
+    profBoxCheckboxLabel.innerHTML = decodeURIComponent("{{settings.profilingOptIn}}");
+    profBoxCheckboxContainer.appendChild(profBoxCheckbox);
+    profBoxCheckboxContainer.appendChild(profLoaderContainer);
+    profBoxCheckboxContainer.appendChild(profBoxCheckboxLabel);
+    document.getElementById("profOptIn").appendChild(profBoxCheckboxContainer)
+  }
+
+  function addNewsOptInListener(userInfo, eventTarget) {
+    eventTarget.addEventListener('click', async(event) => {
+      event.stopPropagation();
+      event.stopImmediatePropagation();
+      let addOptInEndpoint = decodeURIComponent("{{settings.addOptInAPIEndpoint}}");
+      // If newsletter optin already checked means that I have to deconsent both marketing and profiling consent
+      if(!newsBoxCheckbox.checked) {
+        try {
+          newsOptInLoader.style.display = "inline-block"
+          newsBoxCheckbox.style.display = "none"
+          let addOptIn = await handleApi("PATCH",`${addOptInEndpoint}${userInfo[0]?.email}`,{isNewsletterOptIn: false,isProfilingOptIn:false})
+          newsOptInLoader.style.display = "none"
+          newsBoxCheckbox.style.display = "block"
+          newsConfirmButton.style.display = "none"
+          newsBoxCheckbox.checked = false
+          profBoxCheckbox.checked = false
+        } catch (error) {
+          console.error(error)
+        }
+      } else {
+        try {
+          newsOptInLoader.style.display = "inline-block"
+          newsBoxCheckbox.style.display = "none"
+          removeProfilingOptinError();
+          let addOptIn = await handleApi("PATCH",`${addOptInEndpoint}${userInfo[0]?.email}`,{isNewsletterOptIn: true,isProfilingOptIn:false})
+          newsBoxCheckbox.checked = true
+          profBoxCheckbox.checked = false
+          newsOptInLoader.style.display = "none"
+          newsBoxCheckbox.style.display = "block"
+          newsConfirmButton.style.display = "none"
+          handleGAEvents();
+        } catch (error) {
+          console.error(error)
+        }
+      }
+    })
+  }
+
+  function addConfirmationButtonListener(){
+    newsBoxCheckbox.addEventListener('change', async (event) => {
+      event.stopPropagation();
+      event.stopImmediatePropagation();
+      newsConfirmButton.style.display = "block"
+    })
+  }
+
+  function addProfOptInListener(userInfo) {
+    profBoxCheckbox.addEventListener('click', async(event) => {
+      event.preventDefault()
+      event.stopPropagation();
+      event.stopImmediatePropagation();
+      // IF newsletterOptIn
+      if(newsBoxCheckbox.checked) {
+        removeProfilingOptinError();
+        profOptInLoader.style.display = "inline-block"
+        profBoxCheckbox.style.display = "none"
+        let addOptInEndpoint = decodeURIComponent("{{settings.addOptInAPIEndpoint}}");
+        // IF profilingOptIn consent to profiling
+        if(profBoxCheckbox.checked) {
+          try {
+            let addOptIn = await handleApi("PATCH",`${addOptInEndpoint}${userInfo[0]?.email}`,{isNewsletterOptIn: true,isProfilingOptIn:true})
+            profOptInLoader.style.display = "none"
+            profBoxCheckbox.style.display = "block"
+            profBoxCheckbox.checked = true
+            handleGAEvents();
+          } catch (error) {
+            console.error(error)
+          }
+        } else { // ELSE deconsent to profiling
+          try {
+            let addOptIn = await handleApi("PATCH",`${addOptInEndpoint}${userInfo[0]?.email}`,{isNewsletterOptIn: true,isProfilingOptIn:false})
+            profOptInLoader.style.display = "none"
+            profBoxCheckbox.style.display = "block"
+            profBoxCheckbox.checked = false
+          } catch (error) {
+            console.error(error)
+          }
+        }
+      } else {  // ELSE you cannot consent to profiling
+        showProfilingOptinError();
+        return;
+      }
+    })
+  }
+
+  function showProfilingOptinError() {
+    if(!document.querySelector(".profErrorOptIn")) {
+      const profErrorOptIn = document.createElement("p")
+      profErrorOptIn.setAttribute("class","profErrorOptIn");
+      profErrorOptIn.innerHTML = decodeURIComponent("{{settings.errorProfilingOptIn}}");
+      document.querySelector("#profOptIn")?.appendChild(profErrorOptIn)
+    }
+  }
+
+  function removeProfilingOptinError() {
+    if(document.querySelector(".profErrorOptIn")) {
+      const profErrorOptIn = document.querySelector(".profErrorOptIn")
+      document.querySelector("#profOptIn")?.removeChild(profErrorOptIn)
+    }
+  }
+
+  async function handleApi(method,url,body) {
+    const options = {
+      method,
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: body ? JSON.stringify(body) : null,
+    };
+    const raw = await fetch(url, options);
+    if (raw.ok) {
+      // Check if raw json
+      if (
+        raw?.headers?.get("content-type") &&
+        raw?.headers?.get("content-type")?.indexOf("application/json") !== -1
+      )
+        return await raw.json();
+      else return await raw.text();
+    } else throw new Error();
+  }
+
+  function handleGAEvents() {
+    if (hasGA4) {
+      //GA4FUNREQ61
+      window.postMessage({ eventName: 'vtex:ga4-optin' }, window.origin)
+    } else {
+      window.dataLayer.push({
+        event: "optin_granted"
+      })
+    }
+  }
+  // MODIFY ORDER SECTION FAREYE
+  if (decodeURIComponent("{{settings.activateFarEye}}") === "true") {
+    // Hide date in order summary
+    const observerOrderDate = new MutationObserver(() => {
+      const classToSearch = ".vtex-my-orders-app-3-x-orderProductShipping";
+      if (document.querySelector(classToSearch)) {
+        const elements = document.querySelectorAll(classToSearch);
+        elements.forEach(element => {
+          element.style.display = "none";
+        });
+        observerOrderDate.disconnect();
+      }
+    })
+    observerOrderDate.observe(document, {attributes: false, childList: true, characterData: false, subtree: true});
+
+    //Check order status on order page
+    // Add sentence if user reserved a date
+    function addSentence() {
+      const table = document.querySelector(".vtex-my-orders-app-3-x-productTable");
+      let newDiv = document.createElement("div");
+      newDiv.innerText = "Se hai riprogrammato la tua spedizione controlla la data nella mail di conferma.";
+      newDiv.style.marginTop = "1rem";
+      table.parentNode.insertBefore(newDiv, table);
+      loadContent(false);
+    }
+    // If the user didn't selected a date replace default date with a specific sentence
+    function replaceText() {
+      document.querySelector(".flex.flex-column.flex-row-l").innerText = "Sarai contattato dal servizio clienti per concordare una data di consegna.";
+      loadContent(false);
+    }
+    function loadContent(isLoading) {
+      const classToSearch = ".flex.flex-column.flex-row-l";
+      if (isLoading) {
+        // Creazione del div del loader
+        const loaderDiv = document.createElement('div');
+        loaderDiv.classList.add('loader');
+        // Stile CSS per il loader
+        const loaderStyle = document.createElement('style');
+        loaderStyle.textContent = `
+          .loader {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+          }
+
+          .loader::after {
+            content: '';
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 3px solid #ffffff;
+            border-top-color: #000000;
+            animation: spin 1s linear infinite;
+          }
+
+          @keyframes spin {
+            0% {
+              transform: rotate(0);
+            }
+            100% {
+              transform: rotate(360deg);
+            }
+          }
+        `;
+        document.head.appendChild(loaderStyle);
+        // document.querySelector(".flex.flex-column.flex-row-l").style.display = "none";
+        document.querySelector(classToSearch).style.display = "none";
+        document.querySelector(classToSearch).insertAdjacentElement("afterend", loaderDiv);
+      } else {
+        document.querySelector(".loader").remove();
+        document.querySelector(classToSearch).style.display = "block";
+      }
+    }
+    function showError() {
+      document.querySelector(".flex.flex-column.flex-row-l").innerText = "Si è verificato un errore. Stiamo lavorando ad una soluzione!";
+    }
+    //API Call to check if user has reservation and to update the order sentence accordingly
+    async function checkOrderReservation() {
+      const location = window.location.href;
+      const orderID = location.split('/').pop(); // takes last url segment
+      const url = `app/fareye/order_reservation/check/${orderID}`;
+      const options = {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+      const response = await fetch(url, options);
+      if (response.ok) {
+        const data = await response.json();
+
+        const isOrderPage = window.location.href.includes("/orders/") && !window.location.href.endsWith("/orders/");
+        if (isOrderPage && !data.hasReservation) {
+          replaceText();
+        }
+        else if (isOrderPage && data.hasReservation) {
+          addSentence();
+        }
+      } else {
+        loadContent(false);
+        showError();
+        throw new Error("An error occurred!");
+      }
+    }
+    // Check if page is the orders one
+    window.addEventListener("DOMContentLoaded", function() {
+      if (window.location.href.includes("/orders/") && !window.location.href.endsWith("/orders/")) {
+        const loadObserver = new MutationObserver(() => {
+          if (document.querySelector(".flex.flex-column.flex-row-l")) {
+            loadContent(true);
+            //Execute the API call
+            checkOrderReservation();
+            loadObserver.disconnect();
+          }
+        });
+        loadObserver.observe(document, {attributes: false, childList: true, characterData: false, subtree: true});
+      }
+      // Check if the page state changes and the user moves inside the orders page
+      window.addEventListener("popstate", function() {
+        // Check if the current URL matches the desired page
+        if (window.location.href.includes("/orders/") && !window.location.href.endsWith("/orders/")) {
+          const loadObserver = new MutationObserver(() => {
+            if (document.querySelector(".flex.flex-column.flex-row-l")) {
+              loadContent(true);
+              //Execute the API call
+              checkOrderReservation();
+              loadObserver.disconnect();
+            }
+          });
+          loadObserver.observe(document, {attributes: false, childList: true, characterData: false, subtree: true});
+        }
+      })
+    });
+
+
+  }
+</script>

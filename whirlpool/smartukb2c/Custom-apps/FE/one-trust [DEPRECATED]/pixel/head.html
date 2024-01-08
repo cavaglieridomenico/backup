@@ -1,0 +1,45 @@
+<script type="text/javascript">
+  var scriptElement = document.getElementById("ot");
+  var myUrl = window.location.hostname,
+    brand = myUrl.split(".")[1],
+    domainScript = "";
+  switch (brand) {
+
+    case "indesit":
+      domainScript = "{{settings.domain-script-indesit}}";
+      break;
+    case "hotpoint":
+      domainScript = "{{settings.domain-script-hotpoint}}";
+      break;
+    default:
+      domainScript = "{{settings.domain-script-hotpoint}}";
+  }
+  var scriptTag = document.createElement("script");
+  scriptTag.type = "text/javascript";
+  scriptTag.src = "https://{{settings.s}}/{{settings.url}}/{{settings.cdnId}}";
+  scriptTag.charset = "UTF-8";
+  scriptTag.setAttribute("data-document-language", "true");
+  scriptTag.setAttribute("data-domain-script", domainScript);
+  (document.getElementsByTagName("head")[0] || document.documentElement).appendChild(scriptTag);
+
+</script>
+
+<script type="text/javascript">
+    function OptanonWrapper() {
+      var first = true;
+      function injectAcceptButton() {
+          if (!document.cookie.split(';').find(row => row.startsWith('OneTrust-custom'))) {
+              var rejectBtn =document.querySelector('.ot-pc-refuse-all-handler');
+              var acceptButton = document.getElementById("accept-recommended-btn-handler")
+              acceptButton.before(rejectBtn)
+              if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+                var recommended =document.getElementById('accept-recommended-btn-handler');
+                document.querySelector('.ot-pc-refuse-all-handler').before(recommended)
+              }
+              document.cookie=`OneTrust-custom=True; expires=${new Date(new Date().getTime()+1000*60*60*24*365).toGMTString()}; path=/`;
+              }
+          }
+      injectAcceptButton();
+  }
+
+</script>

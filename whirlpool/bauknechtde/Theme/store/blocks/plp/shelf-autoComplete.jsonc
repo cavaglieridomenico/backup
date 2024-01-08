@@ -1,0 +1,92 @@
+{
+    "product-summary.shelf#headerSearch": {
+        "children": [
+            "product-summary-image#headerSearchShelf",
+            "vtex.store-components:product-name#headerSearchSummary",
+            "condition-layout.product#showPricePDPSelling-SearchResult"
+        ],
+        "props": {
+            "blockClass": "shelfHeaderSearch"
+        }
+    },
+    "condition-layout.product#showPricePDPSelling-SearchResult": {
+        "props": {
+            "conditions": [
+                {
+                    "subject": "specificationProperties",
+                    "arguments": {
+                        "name": "sellable",
+                        "value": "true"
+                    }
+                }
+            ],
+            "Then": "flex-layout.row#price-selling-pdp-SearchResult"
+        }
+    },
+    "flex-layout.row#price-selling-pdp-SearchResult": {
+        "children": [
+            "flex-layout.col#product-selling-price-SearchResult"
+        ],
+        "props": {
+            "blockClass": ["discountedPrice", "SearchResult"],
+            "colSizing": "auto",
+            "fullWidth": true,
+            "preserveLayoutOnMobile": true,
+            "horizontalAlign": "left"
+        }
+    },
+    "flex-layout.col#product-selling-price-SearchResult": {
+        "children": [
+            "condition-layout.product#show-product-selling-price-SearchResult"
+        ]
+    },
+    "condition-layout.product#show-product-selling-price-SearchResult": {
+        "props": {
+            "conditions": [
+                {
+                    "subject": "specificationProperties",
+                    "arguments": {
+                        "name": "sellable",
+                        "value": "true"
+                    }
+                },
+                {
+                    "subject": "specificationProperties",
+                    "arguments": {
+                        "name": "showPrice",
+                        "value": "true"
+                    }
+                }
+            ],
+            "Then": "product-selling-price#pdp-SearchResult"
+        }
+    },
+    "product-selling-price#pdp-SearchResult": {
+        "props": {
+            "blockClass": ["summary2", "SearchResult"],
+            "markers": [
+                "Tax"
+            ],
+            "message": "{sellingPriceValue}",
+            "alwaysShow": true
+        }
+    },
+    "product-summary-image#headerSearchShelf": {
+        "props": {
+            "showBadge": false,
+            "aspectRatio": "1:1",
+            "maxHeight": 100,
+            "blockClass": "headerSearchShelfImage"
+        }
+    },
+    "vtex.store-components:product-name#headerSearchSummary": {
+        "props": {
+            "tag": "div",
+            "displayMode": "linkToProductPage",
+            "blockClass": [
+                "headerSearchSummaryName",
+                "summaryName"
+            ]
+        }
+    }
+}

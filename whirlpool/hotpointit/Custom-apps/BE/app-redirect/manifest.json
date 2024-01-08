@@ -1,0 +1,42 @@
+{
+  "name": "app-redirect",
+  "vendor": "hotpointit",
+  "version": "0.0.1",
+  "title": "App Redirect",
+  "description": "Redirect URLs",
+  "mustUpdateAt": "2018-01-04",
+  "categories": [],
+  "dependencies": {},
+  "builders": {
+    "node": "6.x",
+    "docs": "0.x"
+  },
+  "scripts": {
+    "prereleasy": "bash lint.sh"
+  },
+  "credentialType": "absolute",
+  "policies": [
+    {
+      "name": "colossus-fire-event"
+    },
+    {
+      "name": "colossus-write-logs"
+    }
+  ],
+  "settingsSchema": {
+    "title": "Ads Txt Configuration",
+    "type": "object",
+    "properties": {
+      "textContent": {
+        "title": "Text content for the Yandex.html file",
+        "type": "string"
+      }
+    }
+  },
+  "settingsUiSchema": {
+    "textContent": {
+      "ui:widget": "textarea"
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

@@ -1,0 +1,219 @@
+{
+  "store.custom#template-home2": {
+    "blocks": [
+      "experimental__visibility-layout#videoHome",
+      "experimental__visibility-layout#bannerWithPostilla",
+      "experimental__visibility-layout#bannerSliderHome",
+      "experimental__visibility-layout#carouselCollectionHome1Title",
+      "list-context.product-list#carouselCollectionHome1",
+      "experimental__visibility-layout#carouselCollectionHome1Title",
+      "list-context.product-list#carouselCollectionHome2",
+      "experimental__visibility-layout#carouselCollectionHome1Title",
+      "list-context.product-list#carouselCollectionHome3",
+      "experimental__visibility-layout#bannerWithPostilla2",
+      //"analytics#home",
+      "experimental__visibility-layout#heroBannerHome",
+      "toggle-layout#chatWidget",
+      "__fold__.experimentalLazyAssets",
+      "toggle-layout#promozioniHalfBannerHome",
+      "experimental__visibility-layout#gridHome",
+      "experimental__visibility-layout#contattaciHome",
+      "experimental__visibility-layout#promoSlider",
+      "experimental__visibility-layout#bannerLastBanner",
+      "experimental__visibility-layout#supp",
+      "flex-layout.row#halfSpace",
+      "list-context.image-list#4porte",
+      "list-context.product-list#suggestions-w-home",
+      "newsletter-popup#footer"
+    ]
+  },
+  "toggle-layout#promozioniHalfBannerHome": {
+    "title": "Banner 1 promozioni - Toggle",
+    "children": ["analytics-wrapper#promozioni"]
+  },
+  "analytics-wrapper#promozioni": {
+    "title": "Seconda info-card (AnalyticsWrapper)",
+    "props": {
+      "isSlider": true,
+      "propsAnalytics": {
+        "analyticsProperties": "provide",
+        "nameEvent": "redeemAPromo",
+        "name": "Promo",
+        "data": [{}]
+      }
+    },
+    "children": ["experimental__visibility-layout#halfBannerHome"]
+  },
+  "slider-layout-whl#carouselCollectionHome": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 5,
+        "tablet": 2,
+        "phone": 1
+      },
+      "infinite": true,
+      "fullWidth": false,
+      "blockClass": "shelf"
+    }
+  },
+  "slider-layout-whl#carouselCollectionHomeOldProductCard": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 5,
+        "tablet": 2,
+        "phone": 1
+      },
+      "infinite": true,
+      "fullWidth": false,
+      "blockClass": ["shelf", "shelfOldProductCard"]
+    }
+  },
+  "slider-layout#carouselCollectionHome": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "fullWidth": false,
+      "blockClass": "shelf"
+    }
+  },
+
+  "slider-layout#tab": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 5,
+        "tablet": 3,
+        "phone": 1
+      },
+      "infinite": true,
+      "fullWidth": false,
+      "blockClass": "shelf"
+    }
+  },
+  "experimental__visibility-layout#carouselCollectionHome1Title": {
+    "props": {
+      "visible": true
+    },
+    "children": ["rich-text#carouselCollectionHome1Title"]
+  },
+  "rich-text#carouselCollectionHome1Title": {
+    "props": {
+      "text": "# titolo carosello 1",
+      "blockClass": "titleSearchPage"
+    }
+  },
+  "experimental__visibility-layout#carouselCollectionHome1": {
+    "props": {
+      "visible": true
+    },
+    "children": ["list-context.product-list#carouselCollectionHome1"]
+  },
+  "list-context.product-list#carouselCollectionHome1": {
+    "blocks": ["product-summary.shelf#caroselliLanding"],
+    "children": ["slider-layout-whl#carouselCollectionHome"],
+    "props": {
+      "collection": "150",
+      "productList": {
+        "maxItems": 10,
+        "itemsPerPage": 5,
+        "minItemsPerPage": 1,
+        "scroll": "BY_PAGE",
+        "arrows": true,
+        "titleText": "Non sai da dove iniziare? Scopri i prodotti Whirlpool più venduti"
+      }
+    }
+  },
+  "experimental__visibility-layout#carouselCollectionHomeNewProductard": {
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "list-context.product-list#carouselCollectionHomeNewProductCard"
+    ]
+  },
+  "list-context.product-list#carouselCollectionHomeNewProductCard": {
+    "blocks": ["product-summary.shelf.product-comparison#searchNewProductCard"],
+    "children": ["slider-layout#carouselCollectionHome"],
+    "props": {
+      "collection": "203",
+      "productList": {
+        "maxItems": 10,
+        "itemsPerPage": 5,
+        "minItemsPerPage": 1,
+        "scroll": "BY_PAGE",
+        "arrows": true,
+        "titleText": "Non sai da dove iniziare? Scopri i prodotti Whirlpool più venduti"
+      }
+    }
+  },
+
+  "experimental__visibility-layout#carouselCollectionHome2Title": {
+    "props": {
+      "visible": true
+    },
+    "children": ["rich-text#carouselCollectionHome2Title"]
+  },
+  "rich-text#carouselCollectionHome2Title": {
+    "props": {
+      "text": "# titolo carosello 2",
+      "blockClass": "titleSearchPage"
+    }
+  },
+  "experimental__visibility-layout#carouselCollectionHome2": {
+    "props": {
+      "visible": false
+    },
+    "children": ["list-context.product-list#carouselCollectionHome2"]
+  },
+  "list-context.product-list#carouselCollectionHome2": {
+    "blocks": ["product-summary.shelf"],
+    "children": ["slider-layout-whl#carouselCollectionHome"],
+    "props": {
+      "collection": "150",
+      "productList": {
+        "maxItems": 10,
+        "itemsPerPage": 3,
+        "minItemsPerPage": 1,
+        "scroll": "BY_PAGE",
+        "arrows": true,
+        "titleText": "Non sai da dove iniziare? Scopri i prodotti Whirlpool più venduti"
+      }
+    }
+  },
+  "experimental__visibility-layout#carouselCollectionHome3Title": {
+    "props": {
+      "visible": true
+    },
+    "children": ["rich-text#carouselCollectionHome3Title"]
+  },
+  "rich-text#carouselCollectionHome3Title": {
+    "props": {
+      "text": "# titolo carosello 3",
+      "blockClass": "titleSearchPage"
+    }
+  },
+  "experimental__visibility-layout#carouselCollectionHome3": {
+    "props": {
+      "visible": false
+    },
+    "children": ["list-context.product-list#carouselCollectionHome3"]
+  },
+  "list-context.product-list#carouselCollectionHome3": {
+    "blocks": ["product-summary.shelf"],
+    "children": ["slider-layout-whl#carouselCollectionHome"],
+    "props": {
+      "collection": "150",
+      "productList": {
+        "maxItems": 10,
+        "itemsPerPage": 3,
+        "minItemsPerPage": 1,
+        "scroll": "BY_PAGE",
+        "arrows": true,
+        "titleText": "Non sai da dove iniziare? Scopri i prodotti Whirlpool più venduti"
+      }
+    }
+  }
+}

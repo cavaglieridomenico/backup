@@ -1,0 +1,71 @@
+import React , {Suspense} from 'react'
+import { useChildBlock, ExtensionPoint } from 'vtex.render-runtime'
+import { useDevice } from 'vtex.device-detector'
+import { path, compose, equals, pathOr, isEmpty, isNil } from 'ramda'
+
+import OldSearchResult from './index'
+import { removeTreePath } from './utils/removeTreePath'
+
+const noProducts = compose(
+  isEmpty,
+  pathOr([], ['data', 'productSearch', 'products'])
+)
+
+const isFtOnly = compose(equals('ft'), path(['variables', 'map']))
+
+const noRedirect = compose(isNil, path(['data', 'productSearch', 'redirect']))
+
+const foundNothing = searchQuery => {
+  const { loading } = searchQuery || {}
+  return isFtOnly(searchQuery) && !loading && noProducts(searchQuery)
+}
+
+const SearchResultLayout = props => {
+  const { searchQuery } = props
+  const hasMobileBlock = !!useChildBlock({ id: 'search-result-layout.mobile' })
+  const hasCustomNotFound = !!useChildBlock({ id: 'search-not-found-layout' })
+  const { isMobile } = useDevice()
+
+  if (
+    foundNothing(searchQuery) &&
+    hasCustomNotFound &&
+    noRedirect(searchQuery)
+  ) {
+    return (
+      <ExtensionPoint id="search-not-found-layout" {...removeTreePath(props)} />
+    )
+  }
+
+  if (hasMobileBlock && isMobile) {
+    return (
+      <Suspense fallback={<></>}>
+      <ExtensionPoint
+        id="search-result-layout.mobile"
+        {...removeTreePath(props)}
+      />
+      </Suspense>
+    )
+  }
+
+  return (
+    <Suspense fallback={<></>}>
+    <ExtensionPoint
+      id="search-result-layout.desktop"
+      {...removeTreePath(props)}
+    />
+    </Suspense>
+  )
+}
+
+SearchResultLayout.getSchema = () => {
+  const { description, ...schema } = OldSearchResult.getSchema({
+    searchQuery: true,
+  })
+
+  return {
+    ...schema,
+    title: 'admin/editor.search-result-layout.title',
+  }
+}
+
+export default SearchResultLayout

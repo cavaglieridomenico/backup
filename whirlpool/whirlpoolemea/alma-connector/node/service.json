@@ -1,0 +1,18 @@
+{
+  "memory": 256,
+  "ttl": 60,
+  "timeout": 30,
+  "minReplicas": 2,
+  "maxReplicas": 50,
+  "workers": 4,
+  "routes": {
+    "getPayment": {
+      "path": "/v1/alma-connector/callback/:url",
+      "public": true
+    },
+    "vtexPing": {
+      "path": "v1/alma-connector/status",
+      "public": true
+    }
+  }
+}

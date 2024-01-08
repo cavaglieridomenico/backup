@@ -1,0 +1,603 @@
+/*---------------GENERAL FILTER -----------------*/
+.galleryItem {
+  max-width: 100% !important;
+  flex-basis: 100% !important;
+}
+
+:global(.vtex-checkbox__line-container) {
+  width: 100%;
+}
+
+/*:global(.vtex-my-account-1-x-addressCreate .vtex-checkbox__line-container) {
+  align-items: center;
+}*/
+.galleryItem {
+  position: relative;
+}
+
+.buttonShowMore {
+  margin: 2rem 0;
+}
+.filterItem--zurzeit-nicht-im-shop-verfugbar{
+  display: none !important;
+}
+.filterItem--nicht-verfugbar{
+  display: none !important;
+}
+.filterItem--nur-noch-wenige-verfugbar{
+  display: none !important;
+}
+.buttonShowMore :global(.vtex-button) {
+  font-family: "myriadLight";
+  color: #007d69;
+  font-size: 0.8125rem;
+  background-color: transparent;
+  border: 1px solid #007d69;
+  text-transform: uppercase;
+  border-radius: 0.25rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.buttonShowMore :global(.vtex-button):hover {
+  background-color: #007d69;
+  color: #fff;
+}
+
+.filterTitle {
+  color: #505050;
+  text-transform: uppercase;
+  font-family: "myriadBold";
+  font-weight: 400;
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+  line-height: 1.2;
+}
+
+.filterItem {
+  background-color: #f2f2f2;
+  display: flex;
+  cursor: pointer;
+  width: calc(50% - 0.3rem);
+  padding: 0;
+  text-align: center;
+  margin-bottom: 0.625rem;
+  -webkit-box-align: center;
+  justify-content: center;
+  border-radius: 3px;
+}
+
+.filterItem--selected {
+  background-color: #ffffff;
+  border: 1px solid #007d69;
+}
+
+.filterContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  -webkit-box-pack: justify;
+  padding-bottom: 0.5rem;
+}
+
+.filterItem :global(.vtex-checkbox__container) {
+  display: none;
+}
+
+.filterItem :global(.vtex-checkbox__label) {
+  color: #505050;
+  border-radius: 0.1875rem;
+
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.2;
+  margin: auto;
+  padding: 0.625rem 1rem;
+}
+
+.accordionFilter .filterAccordionItemBox:not(.accordionFilterItem) {
+  border: none;
+}
+
+.filterItem--selected :global(.vtex-checkbox__label) {
+  color: #007d69;
+}
+
+.filter__container--title {
+  display: none;
+}
+
+.filter__container {
+  border: none;
+}
+
+/* .filterIcon{
+    display: none;
+} */
+/*---------------MY FILTER (First block)-----------------*/
+.filter__container--selectedFilters .filterSelected {
+  padding: 0;
+  padding-top: 10px;
+}
+
+.filter__container--selectedFilters .filterTemplateOverflow::before {
+  content: "IHRE AUSWAHL:";
+  padding: 3px;
+  color: #505050;
+
+  font-weight: 400;
+  font-size: 1.188rem;
+  display: block;
+  width: 100%;
+  line-height: 35px;
+}
+
+.filter__container--selectedFilters .filterTemplateOverflow:empty {
+  display: none !important;
+}
+
+.filter__container--selectedFilters .filterTemplateOverflow {
+  background: #f2f2f2;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.filter__container--selectedFilters .filterSelected .filterTitle {
+  display: none;
+}
+
+.filter__container--selectedFilters .filterItem {
+  border-radius: 15.5px;
+  cursor: pointer;
+  text-align: center;
+  padding: 0.625rem 1.875rem;
+  margin: 0.62rem 0.62rem 0.62rem 0;
+  display: flex;
+  vertical-align: middle;
+  position: relative;
+  border: none;
+}
+
+.filter__container--selectedFilters .filterItem::before {
+  content: "+";
+  color: #505050;
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg) scale(1.2);
+}
+
+.filter__container--selectedFilters .filterItem--selected {
+  background-color: #ffffff;
+}
+
+.filter__container--selectedFilters :global(.vtex-checkbox__line-container) {
+  margin: auto auto;
+}
+
+.filter__container--selectedFilters
+  :global(.vtex-search-result-3-x-filterTemplateOverflow) {
+  display: flex;
+  flex-wrap: wrap;
+  /* flex-direction: column-reverse; */
+}
+
+.filter__container--selectedFilters
+  :global(.vtex-checkbox__line-container)
+  :global(.vtex-checkbox__container) {
+  display: none;
+}
+
+.filter__container--selectedFilters
+  :global(.vtex-checkbox__line-container)
+  :global(.vtex-checkbox__label) {
+  color: #505050;
+
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.2;
+  padding-right: 2rem;
+}
+
+.filter__container--selectedFilters .filterItem--selected {
+  padding: 0;
+  width: auto;
+}
+
+.galleryItem--galleryBundles
+  :global(.vtex-flex-layout-0-x-flexRow--bundlesProductsImagesRow),
+.galleryItem :global(.vtex-flex-layout-0-x-flexRow--bundlesProductsImagesRow) {
+  margin-bottom: 0;
+}
+
+/*----------------GRID TEMPLATE SEARCH------------------*/
+.galleryItem--grid {
+  flex-basis: 33.3333% !important;
+  max-width: 33.3333% !important;
+}
+.galleryItem--grid
+  :global(.vtex-product-summary-2-x-container--bauknechtPLPCard-mobile) {
+  padding: 1rem;
+}
+.galleryItem--grid
+  :global(.vtex-wish-list-1-x-wishlistIconContainer--wishListBKPLP) {
+  justify-content: flex-end;
+}
+.galleryItem--grid :global(.vtex-product-highlights-2-x-productHighlightText) {
+  left: -26px;
+  top: 10px;
+}
+.galleryItem--grid
+  :global(.vtex-flex-layout-0-x-flexRow--productTitleMobilePLPBK) {
+  min-height: 145px;
+}
+.galleryItem--grid
+  :global(.vtex-flex-layout-0-x-flexRow--productTitleMobilePLPBKSpare) {
+  min-height: auto;
+}
+
+
+.galleryItem--grid
+  :global(.vtex-flex-layout-0-x-flexRow--productRatingMobilePLPBKRow) {
+  min-height: 89px;
+  padding: 15px 0;
+}
+.galleryItem--grid
+  :global(.vtex-flex-layout-0-x-flexRow--productRatingMobilePLPBKRowSpare) {
+  min-height: auto;
+  padding: 15px 0;
+  border-top: 2px solid #007d69;
+
+}
+.galleryLayoutSwitcher {
+  flex-direction: row-reverse;
+}
+.galleryLayoutOptionButton {
+  flex-direction: column;
+  opacity: 0.5;
+}
+.galleryLayoutOptionButton--selected {
+  opacity: 1;
+}
+/*----------------------------------*/
+/*----------------------------------*/
+.orderByOptionsContainer {
+  z-index: 3;
+}
+
+.filterApplyButtonWrapper :global(.vtex-button) {
+  background-color: white;
+  border: none;
+}
+
+.filterApplyButtonWrapper :global(.vtex-button):hover {
+  border-color: rgba(237, 177, 18, 0.1);
+  background-color: rgba(237, 177, 18, 0.1);
+}
+
+.filterPopupTitle {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.2;
+  text-transform: capitalize;
+  color: #5a5a5a;
+  text-align: right;
+}
+
+.filterPopupArrowIcon {
+  color: #5a5a5a;
+}
+
+.orderByText {
+  margin-right: 0.9375rem;
+}
+
+.showingProducts--layout,
+.orderByText {
+  text-transform: uppercase;
+  font-family: "myriadBold";
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  color: #000000;
+}
+
+.showingProducts {
+  text-transform: uppercase;
+  font-family: "myriadBold";
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  color: #000000;
+}
+
+.orderByOptionItem {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.2;
+  color: #5a5a5a;
+  font-family: "myriadLight";
+}
+
+.orderByButton {
+  border: none;
+}
+
+.orderByOptionItem:hover,
+.orderByOptionItem--selected {
+  color: #ffffff;
+  background-color: #007d69;
+}
+
+.searchResultContainer {
+  padding: 0;
+  max-width: 95%;
+}
+
+.filterBreadcrumbsText {
+  text-transform: capitalize;
+  font-family: "myriadLight";
+}
+
+.accordionFilterContent {
+  text-transform: capitalize;
+}
+
+.galleryTitle--layout::before {
+  content: '"';
+}
+
+.galleryTitle--layout::after {
+  content: '"';
+}
+.filterBreadcrumbsItem {
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 1024px) {
+  .buttonShowMore {
+    margin-bottom: 0rem;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .filterBreadcrumbsItemName {
+    font-size: 1.3rem;
+  }
+
+  .accordionFilter
+    .filterAccordionItemBox:not(.accordionFilterItem)
+    :global(.vtex-checkbox__input) {
+    display: none;
+  }
+
+  .accordionFilter
+    .filterAccordionItemBox:not(.accordionFilterItem)
+    :global(.vtex-checkbox__label) {
+    z-index: 999;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  .accordionFilter .accordionFilterOpen {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    padding-left: 0;
+    margin-right: 1.5rem;
+  }
+
+  .accordionFilter .filterAccordionItemBox:not(.accordionFilterItem) {
+    width: 50%;
+    min-height: 4rem;
+    align-items: flex-start;
+  }
+
+  .accordionFilter
+    .filterAccordionItemBox:not(.accordionFilterItem)
+    :global(.vtex-checkbox__line-container) {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+
+  .accordionFilter
+    .filterAccordionItemBox:not(.accordionFilterItem)
+    :global(.vtex-checkbox__container) {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+
+  .accordionFilter
+    .filterAccordionItemBox:not(.accordionFilterItem)
+    :global(.vtex-checkbox__inner-container) {
+    background-color: #f2f2f2;
+    display: flex;
+    cursor: pointer;
+    padding: 0;
+    text-align: center;
+    -webkit-box-align: center;
+    justify-content: center;
+    border-radius: 3px;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .accordionFilter
+    .filterAccordionItemBox:not(.accordionFilterItem)
+    :global(.vtex-checkbox__box-wrapper) {
+    display: none;
+  }
+
+  .accordionFilterContainer {
+    padding: 0 1rem;
+  }
+
+  .filterButtonsBox {
+    border: none;
+    height: 4.25rem;
+    z-index: 999;
+  }
+
+  .filterClearButtonWrapper {
+    background: #f2f2f2;
+    height: 100%;
+  }
+
+  .filterClearButtonWrapper :global(.vtex-button) {
+    background: #f2f2f2;
+    height: 100%;
+  }
+
+  .filterClearButtonWrapper :global(.vtex-button__label) {
+    color: #505050;
+    text-transform: capitalize;
+    font-weight: 100;
+  }
+
+  .filterApplyButtonWrapper {
+    background: #007d69;
+    color: white;
+    border-radius: 0;
+    height: 100%;
+  }
+
+  .filterApplyButtonWrapper :global(.vtex-button) {
+    background: #007d69 !important;
+    color: white;
+    border-radius: 0;
+    height: 100%;
+  }
+
+  .sidebar {
+    width: 100%;
+    z-index: 100000;
+  }
+
+  .showingProducts {
+    line-height: 6.2;
+  }
+  .accordionFilterItemOptions {
+    padding-left: 7px;
+    margin-right: 1.8rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .filterBreadcrumbsItemName {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1026px) {
+  .gallery {
+    padding-left: 4em !important;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .orderByText {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .orderByDropdown {
+    padding: 0;
+  }
+
+  .filterPopupArrowIcon {
+    margin-left: 0.9375rem;
+  }
+
+  .orderByText {
+    margin-right: 1.875rem;
+  }
+
+  .gallery {
+    padding: 0;
+  }
+}
+
+@media only screen and (min-width: 669px) {
+  .filtersWrapperMobile {
+    justify-content: flex-start;
+    padding-left: 1.75rem;
+  }
+}
+
+@media only screen and (max-width: 668px) {
+  .filterPopupTitle {
+    text-align: unset;
+  }
+
+  .orderByDropdown {
+    padding: 0;
+    height: 100%;
+  }
+
+  .orderBy--layout {
+    height: 100%;
+  }
+
+  .orderByButton {
+    background-color: #f2f2f2;
+    border-radius: 0;
+    height: 100%;
+    justify-content: space-around;
+  }
+
+  .showingProducts--layout {
+    padding: 0;
+    border: 0;
+    margin-top: 2.8rem;
+    margin-bottom: 1.7rem;
+    letter-spacing: 1.5px;
+    font-family: "myriadBold";
+    font-weight: 600;
+    width: auto;
+    text-align: left;
+  }
+
+  .filterPopupTitle {
+    text-transform: uppercase;
+    font-family: "myriadLight";
+    color: #505050;
+    font-weight: 600;
+    letter-spacing: 1.75px;
+    padding: 0 1rem;
+  }
+
+  .filters--layout {
+    height: 100%;
+  }
+
+  .filters {
+    height: 100%;
+  }
+}
+
+@media only screen and (max-width: 639px) {
+  .orderByText {
+    margin-right: 0;
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .searchResultContainer {
+    max-width: 94rem;
+  }
+}

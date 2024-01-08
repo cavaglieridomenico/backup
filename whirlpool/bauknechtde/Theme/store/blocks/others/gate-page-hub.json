@@ -1,0 +1,340 @@
+{
+  "store.custom#gate-page-hub": {
+    "blocks": [
+      "responsive-layout.phone#gate-page-hub",
+      "responsive-layout.desktop#gate-page-hub",
+      "responsive-layout.tablet#gate-page-hub"
+    ]
+  },
+  "rich-text#gate-page-hub": {
+    "props": {
+      "text": "# Piccoli e grandi elettrodomestici in offerta da Hotpoint",
+      "textPosition": "CENTER",
+      "blockClass": "textGatePageHub"
+    }
+  },
+  "responsive-layout.desktop#gate-page-hub": {
+    "children": [
+      "rich-text#gate-page-hub",
+      "experimental__visibility-layout#bannerWithPostillaGatePageHub",
+      "flex-layout.row#halfSpace",
+      "experimental__visibility-layout#bannerWithPostillaGatePageHub2",
+      "flex-layout.row#halfSpace",
+      "experimental__visibility-layout#bannerWithPostillaGatePageHub3",
+      "flex-layout.row#halfSpace",
+      "experimental__visibility-layout#textSEOGatePageHub"
+    ]
+  },
+  "responsive-layout.tablet#gate-page-hub": {
+    "children": [
+      "rich-text#gate-page-hub",
+      "experimental__visibility-layout#bannerWithPostillaGatePageHub",
+      "flex-layout.row#halfSpace",
+      "experimental__visibility-layout#bannerWithPostillaGatePageHub2",
+      "flex-layout.row#halfSpace",
+      "experimental__visibility-layout#bannerWithPostillaGatePageHub3",
+      "flex-layout.row#halfSpace",
+      "experimental__visibility-layout#textSEOGatePageHub"
+    ]
+  },
+  "responsive-layout.phone#gate-page-hub": {
+    "children": [
+      "rich-text#gate-page-hub",
+      "experimental__visibility-layout#bannerGatePageHub",
+      "flex-layout.row#halfSpace",
+      "experimental__visibility-layout#bannerWithPostillaGatePageHub3",
+      "flex-layout.row#halfSpace",
+      "experimental__visibility-layout#textSEOGatePageHub"
+    ]
+  },
+  "experimental__visibility-layout#bannerGatePageHub": {
+    "props": {
+      "visible": true
+    },
+    "children": ["slider-layout#bannerGatePageHub"]
+  },
+  "slider-layout#bannerGatePageHub": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 3,
+        "tablet": 3,
+        "phone": 1
+      },
+      "infinite": false,
+      "showNavigationArrows": "desktopOnly",
+      "showPaginationDots": "always",
+      "autoplay": {
+        "timeout": 5000,
+        "stopOnHover": false
+      },
+      "blockClass": ["GatePageHub"]
+    },
+    "children": [
+      "experimental__visibility-layout#bannerWithPostillaGatePageHub",
+      "experimental__visibility-layout#bannerWithPostillaGatePageHub2"
+    ]
+  },
+  "experimental__visibility-layout#bannerWithPostillaGatePageHub": {
+    "props": {
+      "visible": true
+    },
+    "children": ["flex-layout.row#bannerWithPostillaGatePageHub"]
+  },
+  "flex-layout.row#bannerWithPostillaGatePageHub": {
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": [
+        "columnPostillaBannerGatePageHub",
+        "bgColorAntonioHero",
+        "bannerGatePageHubMobile"
+      ]
+    },
+    "children": [
+      "flex-layout.col#leftPartPostillaGatePageHub",
+      "flex-layout.col#rightPartPostillaGatePageHub"
+    ]
+  },
+  "flex-layout.col#leftPartPostillaGatePageHub": {
+    "props": {
+      "width": "50%",
+      "preventVerticalStretch": true,
+      "blockClass": ["columnPostilla", "columnPostillaBottom"]
+    },
+    "children": [
+      "rich-text#BanntitleParagGatePageHub",
+      "rich-text#BannTitleGatePageHub",
+      "rich-text#BannDescGatePageHub",
+      "experimental__visibility-layout#ButtonBannerWithPostillaGatePageHub"
+    ]
+  },
+  "flex-layout.col#rightPartPostillaGatePageHub": {
+    "props": {
+      "width": "50%",
+      "blockClass": "columnPostillaImage"
+    },
+    "children": ["image#bannerPostillaGatePageHub"]
+  },
+  "rich-text#BanntitleParagGatePageHub": {
+    "props": {
+      "text": "W COLLECTION",
+      "blockClass": "titlePBannerPostilla"
+    }
+  },
+  "rich-text#BannTitleGatePageHub": {
+    "props": {
+      "text": "# Frigorifero combinato 4 porte",
+      "blockClass": "titleHBannerPostilla"
+    }
+  },
+  "rich-text#BannDescGatePageHub": {
+    "props": {
+      "text": "33% di spazio extra per frutta e verdura *",
+      "blockClass": "descBannerPostilla"
+    }
+  },
+  "experimental__visibility-layout#ButtonBannerWithPostillaGatePageHub": {
+    "props": {
+      "visible": true
+    },
+    "children": ["link#ButtonBannGatePageHub"]
+  },
+  "link#ButtonBannGatePageHub": {
+    "props": {
+      "label": "TESTO BOTTONE",
+      "href": "#",
+      "displayMode": "button",
+      "blockClass": "postillaButton"
+    }
+  },
+  "image#bannerPostillaGatePageHub": {
+    "props": {
+      "src": "assets/ph-square.jpg",
+      "blockClass": ["imagePostillaBannerGatePageHub"]
+    }
+  },
+  "experimental__visibility-layout#bannerWithPostillaGatePageHub2": {
+    "props": {
+      "visible": true
+    },
+    "children": ["flex-layout.row#bannerWithPostillaGatePageHub2"]
+  },
+  "flex-layout.row#bannerWithPostillaGatePageHub2": {
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": [
+        "columnPostillaBannerGatePageHubReverse",
+        "bgColorAntonioHero",
+        "bannerGatePageHubMobile2"
+      ]
+    },
+    "children": [
+      "flex-layout.col#rightPartPostillaGatePageHub2",
+      "flex-layout.col#leftPartPostillaGatePageHub2"
+    ]
+  },
+  "flex-layout.col#leftPartPostillaGatePageHub2": {
+    "props": {
+      "width": "50%",
+      "preventVerticalStretch": true,
+      "blockClass": ["columnPostilla", "columnPostillaBottom"]
+    },
+    "children": [
+      "rich-text#BanntitleParagGatePageHub2",
+      "rich-text#BannTitleGatePageHub2",
+      "rich-text#BannDescGatePageHub2",
+      "experimental__visibility-layout#ButtonBannerWithPostillaGatePageHub2"
+    ]
+  },
+  "flex-layout.col#rightPartPostillaGatePageHub2": {
+    "props": {
+      "width": "50%",
+      "blockClass": "columnPostillaImage"
+    },
+    "children": ["image#bannerPostillaGatePageHub2"]
+  },
+  "rich-text#BanntitleParagGatePageHub2": {
+    "props": {
+      "text": "W COLLECTION",
+      "blockClass": "titlePBannerPostilla"
+    }
+  },
+  "rich-text#BannTitleGatePageHub2": {
+    "props": {
+      "text": "# Frigorifero combinato 4 porte",
+      "blockClass": "titleHBannerPostilla"
+    }
+  },
+  "rich-text#BannDescGatePageHub2": {
+    "props": {
+      "text": "33% di spazio extra per frutta e verdura *",
+      "blockClass": "descBannerPostilla"
+    }
+  },
+  "experimental__visibility-layout#ButtonBannerWithPostillaGatePageHub2": {
+    "props": {
+      "visible": true
+    },
+    "children": ["link#ButtonBannGatePageHub2"]
+  },
+  "link#ButtonBannGatePageHub2": {
+    "props": {
+      "label": "TESTO BOTTONE",
+      "href": "#",
+      "displayMode": "button",
+      "blockClass": "postillaButton"
+    }
+  },
+  "image#bannerPostillaGatePageHub2": {
+    "props": {
+      "src": "assets/ph-square.jpg",
+      "blockClass": ["imagePostillaBannerGatePageHub"]
+    }
+  },
+  "experimental__visibility-layout#bannerWithPostillaGatePageHub3": {
+    "props": {
+      "visible": true
+    },
+    "children": ["flex-layout.row#bannerWithPostillaGatePageHub3"]
+  },
+  "flex-layout.row#bannerWithPostillaGatePageHub3": {
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": [
+        "columnPostillaBannerGatePageHubTerzoBanner",
+        "bgColorAntonioHero"
+      ]
+    },
+    "children": [
+      "flex-layout.col#leftPartPostillaGatePageHub3",
+      "flex-layout.row#rightPartPostillaGatePageHub3"
+    ]
+  },
+  "flex-layout.col#leftPartPostillaGatePageHub3": {
+    "props": {
+      "width": "100%",
+      "preventHorizontalStretch": true,
+      "blockClass": ["columnPostilla", "columnPostillaBottomGatePageHub"]
+    },
+    "children": [
+      "rich-text#BanntitleParagGatePageHub3",
+      "rich-text#BannTitleGatePageHub3",
+      "rich-text#BannDescGatePageHub3",
+      "experimental__visibility-layout#ButtonBannerWithPostillaGatePageHub3"
+    ]
+  },
+  "flex-layout.row#rightPartPostillaGatePageHub3": {
+    "props": {
+      "width": "100%",
+      "blockClass": "columnPostillaImage"
+    },
+    "children": ["image#bannerPostillaGatePageHub3"]
+  },
+  "rich-text#BanntitleParagGatePageHub3": {
+    "props": {
+      "text": "W COLLECTION",
+      "blockClass": "titlePBannerPostilla"
+    }
+  },
+  "rich-text#BannTitleGatePageHub3": {
+    "props": {
+      "text": "# Frigorifero combinato 4 porte",
+      "blockClass": "titleHBannerPostilla"
+    }
+  },
+  "rich-text#BannDescGatePageHub3": {
+    "props": {
+      "text": "33% di spazio extra per frutta e verdura *",
+      "blockClass": "descBannerPostilla"
+    }
+  },
+  "experimental__visibility-layout#ButtonBannerWithPostillaGatePageHub3": {
+    "props": {
+      "visible": true
+    },
+    "children": ["link#ButtonBannGatePageHub3"]
+  },
+  "link#ButtonBannGatePageHub3": {
+    "props": {
+      "label": "TESTO BOTTONE",
+      "href": "#",
+      "displayMode": "button",
+      "blockClass": "postillaButtonGatePageHub"
+    }
+  },
+  "image#bannerPostillaGatePageHub3": {
+    "props": {
+      "src": "assets/ph-square.jpg",
+      "blockClass": ["imagePostillaBannerGatePageHub"]
+    }
+  },
+  "info-card#gate-page-hub3": {
+    "props": {
+      "htmlId": "GatePageHub3",
+      "id": "half-banner-cooking",
+      "isFullModeStyle": false,
+      "textPosition": "left",
+      "imageUrl": "assets/ph-vertical.jpg",
+      "headline": "Cottura",
+      "subhead": "W Collection è una suite completa di elettrodomestici che cambierà il tuo modo di vivere la casa: è un perfetto connubio tra il design all'avanguardia di Whirlpool e la tecnologia più avanzata, offrendo una migliore e più sensibile integrazione tra casa e vita.",
+      "callToActionText": "SCOPRI di PIÙ",
+      "callToActionUrl": "/w-collection/cottura",
+      "textAlignment": "left",
+      "blockClass": [
+        "halfBannerReverseGatePageHub",
+        "halfBannerReverseWGatePageHub"
+      ]
+    }
+  },
+  "experimental__visibility-layout#textSEOGatePageHub": {
+    "children": ["rich-text#GatePageHubSEO"],
+    "props": {
+      "blockClass": "paddingSearch"
+    }
+  },
+  "rich-text#GatePageHubSEO": {
+    "props": {
+      "text": "### Forni Whirlpool \n Il forno da incasso costituisce un elemento imprescindibile per uno spazio moderno dedicato alla cucina, e Whirlpool propone una linea ricca di modelli e soluzioni pensati per venire incontro a ogni necessità: Forni a vapore e tradizionali completi di tutte le più avanzate funzioni di cottura, studiati per garantirti le performance di cui hai bisogno per qualsiasi ricetta.\n Con la nostra gamma di forni a vapore puoi preparare piatti deliziosi: scopri la combinazione di cottura tradizionale e a vapore, cucina piatti sani e deliziosi, preservando tutte le proprietà organolettiche degli ingredienti. Dai dolci e le torte agli arrosti di carne, dai piatti di pesce fino al pane fatto in casa; le numerose funzioni ti permettono di scegliere sempre il programma di cottura più adatto a ogni ricetta. \n Lasciati stupire dalla tecnologia 6° Senso dei forni multifunzione di Whirlpool: le ricette pre-programmate regolano autonomamente il riscaldamento e la durata del ciclo, mentre la lampada alogena interna è studiata per assicurarti la migliore illuminazione riducendo allo stesso tempo il consumo energetico. Immancabili le funzioni di pre-riscaldamento e la tecnologia autopulente pirolitica, pensate per farti risparmiare tempo: la prima consente di raggiungere velocemente la temperatura desiderata, mentre la seconda ti viene incontro nella pulizia dello spazio interno, aiutandoti a rimuovere anche i residui e lo sporco più ostinato. \n La massima praticità incontra il design accattivante e moderno: i forni a incasso di Whirlpool si integrano facilmente in ogni ambiente, completando il [piano cottura per la cucina](https://www.whirlpool.it/prodotti/cottura/piani-cottura)  e sposandosi alla perfezione con le linee dell’arredo contemporaneo. I colori vanno dall’elegante nero al brillante acciaio, con una gamma di proposte e combinazioni che ti permette di trovare con facilità quello più adatto ai tuoi gusti estetici. Scopri i forni Whirlpool sul catalogo online: scegli il meglio per la tua casa.",
+      "blockClass": "seoTexGatePageHub"
+    }
+  }
+}

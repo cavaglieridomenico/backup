@@ -1,0 +1,790 @@
+{
+  "store.custom#informativa-sulla-privacy": {
+    "children": [
+      // "breadcrumb#informativa-sulla-privacy",
+      "flex-layout.row#bread-theme",
+      "rich-text#PrivacyTitle",
+      "rich-text#PrivacyLinks",
+      "rich-text#TipologieDatiTrattati",
+      "rich-text#FinalitaTrattamento",
+      "rich-text#FinalitaTrattamento2",
+      "flex-layout.row#FirstRowTableSection2.2",
+      "flex-layout.row#SecondRowTableSection2.2",
+      "flex-layout.row#ThirdRowTableSection2.2",
+      "flex-layout.row#FourthRowTableSection2.2",
+      "flex-layout.row#FifthRowTableSection2.2",
+      "flex-layout.row#SixthRowTableSection2.2",
+      "flex-layout.row#SeventhRowTableSection2.2",
+      "rich-text#FinalitaTrattamento2-2part",
+      "rich-text#BaseGiuridica",
+      "rich-text#ConservazioneDati",
+      "rich-text#ModalitaTrattamento",
+      "rich-text#ComunicazioneDati",
+      "rich-text#PrivacyShield",
+      "rich-text#DatiDeiMinori",
+      "rich-text#DatiDegliInteressati",
+      "rich-text#ModificheAggiornamenti",
+      "toggle-layout#chatWidget",
+      "flex-layout.row#newsletter-row"
+      //"analytics"
+    ]
+  },
+  "flex-layout.row#bread-theme": {
+    "children": [
+      "link#home",
+      "image#arrowBread",
+      "link#2level",
+      "toggle-layout#arrowBread",
+      "toggle-layout#3level"
+    ],
+    "props": {
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true,
+      "blockClass": "breadCustom"
+    }
+  },
+  "flex-layout.row#bread-theme4": {
+    "children": [
+      "link#home",
+      "image#arrowBread",
+      "link#2level",
+      "toggle-layout#arrowBread",
+      "toggle-layout#3level",
+      "toggle-layout#arrowBread2",
+      "toggle-layout#3level2"
+    ],
+    "props": {
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true,
+      "blockClass": "breadCustom"
+    }
+  },
+  "link#2level": {
+    "props": {
+      "href": "/",
+      "label": "2ndlevel",
+      "blockClass": "breadLink"
+    }
+  },
+  "link#3level": {
+    "props": {
+      "href": "/",
+      "label": "3level",
+      "blockClass": ["breadLink", "breadLinkBold"]
+    }
+  },
+  "toggle-layout#3level": {
+    "props": {
+      "visible": true
+    },
+    "children": ["link#3level"]
+  },
+  "toggle-layout#3level2": {
+    "props": {
+      "visible": true
+    },
+    "children": ["link#3level"]
+  },
+  "toggle-layout#arrowBread": {
+    "props": {
+      "visible": true
+    },
+    "children": ["image#arrowBread"]
+  },
+  "toggle-layout#arrowBread2": {
+    "props": {
+      "visible": true
+    },
+    "children": ["image#arrowBread"]
+  },
+  "rich-text#PrivacyTitle": {
+    "props": {
+      "text": "",
+      "textAlignment": "center",
+      "blockClass": ["spaziature-impaginazione", "titleRich"]
+    }
+  },
+  "rich-text#PrivacyLinks": {
+    "props": {
+      "text": "",
+      "textAlignment": "center",
+      "blockClass": [
+        "spaziature-impaginazione",
+        "ContRich",
+        "privacyInformationSubTitle"
+      ],
+      "textPosition": "CENTER"
+    }
+  },
+  "rich-text#TipologieDatiTrattati": {
+    "props": {
+      "htmlId": "TipologiaDatiTrattati",
+      "text": "",
+      "textAlignment": "center",
+      "blockClass": ["spaziature-impaginazione", "ContRich"],
+      "textPosition": "CENTER"
+    }
+  },
+  "rich-text#FinalitaTrattamento": {
+    "props": {
+      "htmlId": "FinalitaTrattamento",
+      "text": "",
+      "textAlignment": "center",
+      "blockClass": ["spaziature-impaginazione", "ContRich", "trattamento"],
+      "textPosition": "CENTER"
+    }
+  },
+  "rich-text#FinalitaTrattamento2": {
+    "title": "Finalità trattamento sezione 2",
+    "props": {
+      "htmlId": "FinalitaTrattamento2",
+      "text": "",
+      "textAlignment": "center",
+      "blockClass": ["spaziature-impaginazione", "ContRich", "trattamento", "twoCol"],
+      "textPosition": "CENTER"
+    }
+  },
+   // First Row - Second Table
+   "flex-layout.row#FirstRowTableSection2.2": {
+    "children": [
+      "flex-layout.col#FirstColFirstRowFirstTableSection2.2",
+      "flex-layout.col#SecondColFirstRowFirstTableSection2.2"
+    ],
+    "props": {
+      "preserveLayoutOnMobile": "true",
+      "blockClass": ["PaddingTable"]
+    }
+  },
+  //First Col - First Row
+  "flex-layout.col#FirstColFirstRowFirstTableSection2.2": {
+    "children": [
+      "rich-text#TitleFirstCol"
+    ],
+    "props": {
+      "blockClass": [
+        "spaziature-impaginazione",
+        "BorderTitleRow"
+      ],
+      "width": "50%"
+    }
+  },
+  "rich-text#TitleFirstCol": {
+    "props": {
+      "text": "Finalità e base giuridica",
+      "textAlignment": "center",
+      "blockClass": [
+        "spaziature-impaginazione",
+        "ContRich",
+        "FontSize",
+        "TitleRow"
+      ],
+      "textPosition": "CENTER"
+    }
+  },
+  //First Col - First Row
+  "flex-layout.col#SecondColFirstRowFirstTableSection2.2": {
+    "children": [
+      "rich-text#TitleSecondCol"
+    ],
+    "props": {
+      "blockClass": [
+        "spaziature-impaginazione",
+        "BorderTitleRow"
+      ],
+      "width": "50%"
+    }
+  },
+  "rich-text#TitleSecondCol": {
+    "props": {
+      "text": "Ruolo di Whirlpool e di D&G",
+      "textAlignment": "center",
+      "blockClass": [
+        "spaziature-impaginazione",
+        "ContRich",
+        "FontSize",
+        "TitleRow"
+      ],
+      "textPosition": "CENTER"
+    }
+  },
+  // Second Row - Second Table
+  "flex-layout.row#SecondRowTableSection2.2": {
+    "children": [
+      "flex-layout.col#FirstColSecondRowFirstTableSection2.2",
+      "flex-layout.col#SecondColSecondRowFirstTableSection2.2"
+    ],
+    "props": {
+      "preserveLayoutOnMobile": "true",
+      "blockClass": ["PaddingTable"]
+    }
+  },
+  //First Col - Second Row
+  "flex-layout.col#FirstColSecondRowFirstTableSection2.2": {
+    "children": [
+      "flex-layout.row#FirstRowSecondRowFirstTableSection2.2",
+      "flex-layout.row#SecondRowSecondRowFirstTableSection2.2"
+    ],
+    "props": {
+      "blockClass": [
+        "spaziature-impaginazione",
+        "BorderTable"
+      ],
+      "width": "50%"
+    }
+  },
+  //First Col - Second Row
+  "flex-layout.row#FirstRowSecondRowFirstTableSection2.2": {
+    "children": [
+      "rich-text#FirstRowSecondRowFirstTableSection2.2"
+    ],
+    "props": {
+      "blockClass": [
+        "spaziature-impaginazione"
+      ],
+      "width": "50%"
+    }
+  },
+  "rich-text#FirstRowSecondRowFirstTableSection2.2": {
+    "props": {
+      "text": "Registrazione dei prodotti Whirlpool acquistati (si veda quanto indicato alla sezione 2.1(b) sopra)",
+      "textAlignment": "center",
+      "blockClass": [
+        "spaziature-impaginazione",
+        "ContRich",
+        "FontSize"
+      ],
+      "textPosition": "CENTER"
+    }
+  },
+   //First Col - Second Row
+   "flex-layout.row#SecondRowSecondRowFirstTableSection2.2": {
+    "children": [
+      "rich-text#SecondRowSecondRowFirstTableSection2.2"
+    ],
+    "props": {
+      "blockClass": [
+        "spaziature-impaginazione"
+      ],
+      "width": "50%"
+    }
+  },
+  "rich-text#SecondRowSecondRowFirstTableSection2.2": {
+    "props": {
+      "text": "Supporto al cliente, anche al fine di riparare o sostituire il prodotto Whirlpool (si veda quanto indicato alla sezione 2.1(c) sopra)",
+      "textAlignment": "center",
+      "blockClass": [
+        "spaziature-impaginazione",
+        "ContRich",
+        "FontSize"
+      ],
+      "textPosition": "CENTER"
+    }
+  },
+  //First Col - Second Row
+  "flex-layout.row#FirstColSecondRowFirstTableSection2.2": {
+    "children": [
+      "rich-text#SecondRowFirstCol"
+    ],
+    "props": {
+      "blockClass": [
+        "spaziature-impaginazione"
+      ],
+      "width": "50%"
+    }
+  },
+  "rich-text#SecondRowFirstCol": {
+    "props": {
+      "text": "Finalità e base giuridica",
+      "textAlignment": "center",
+      "blockClass": [
+        "spaziature-impaginazione",
+        "ContRich",
+        "FontSize"
+      ],
+      "textPosition": "CENTER"
+    }
+  },
+  //First Col - First Row
+  "flex-layout.col#SecondColSecondRowFirstTableSection2.2": {
+    "children": [
+      "rich-text#SecondRowSecondCol"
+    ],
+    "props": {
+      "blockClass": [
+        "spaziature-impaginazione",
+        "BorderTable"
+      ],
+      "width": "50%"
+    }
+  },
+  "rich-text#SecondRowSecondCol": {
+    "props": {
+      "text": "Contitolari – le parti offrono un servizio congiunto, che si compone sia della registrazione che del servizio clienti, e che offre anche la possibilità di acquistare le cd estensioni di garanzia. Le parti operano quali contitolari, in quanto il servizio è il risultato di una decisione congiunta in merito ai fini (che sono legati alla possibilità di stabilire una relazione con i consumatori che acquistano un prodotto Whirlpool, offrire un supporto adeguato anche in caso di guasto del prodotto, offrire benefici quali estensioni di garanzia, risolvere problemi tecnici dei prodotti) e anche ai mezzi del trattamento (in quanto il Sito Registrazione viene gestito da parte di D&G e i call center vengono offerti da Whirlpool e D&G, a seconda del paese e del tipo di supporto richiesto dal consumatore). Tale interazione comporta che le parti operino congiuntamente",
+      "textAlignment": "center",
+      "blockClass": [
+        "spaziature-impaginazione",
+        "ContRich",
+        "FontSize"
+      ],
+      "textPosition": "CENTER"
+    }
+  },
+  //
+  // Third Row - Second Table
+  "flex-layout.row#ThirdRowTableSection2.2": {
+    "children": [
+      "flex-layout.col#FirstColThirdRowFirstTableSection2.2",
+      "flex-layout.col#SecondColThirdRowFirstTableSection2.2"
+    ],
+    "props": {
+      "preserveLayoutOnMobile": "true",
+      "blockClass": ["PaddingTable"]
+    }
+  },
+  //First Col - Second Row
+  "flex-layout.col#FirstColThirdRowFirstTableSection2.2": {
+    "children": [
+      "flex-layout.row#FirstRowThirdRowFirstTableSection2.2",
+      "flex-layout.row#SecondRowThirdRowFirstTableSection2.2"
+    ],
+    "props": {
+      "blockClass": [
+        "spaziature-impaginazione",
+        "BorderTable"
+      ],
+      "width": "50%"
+    }
+  },
+  //First Col - Second Row
+  "flex-layout.row#FirstRowThirdRowFirstTableSection2.2": {
+    "children": [
+      "rich-text#FirstRowThirdRowFirstTableSection2.2"
+    ],
+    "props": {
+      "blockClass": [
+        "spaziature-impaginazione"
+      ],
+      "width": "50%"
+    }
+  },
+  "rich-text#FirstRowThirdRowFirstTableSection2.2": {
+    "props": {
+      "text": "Promozione delle estensioni di garanzia, rivolte ad acquirenti di prodotti Whirlpool (si veda quanto indicato alla sezione 2.1(e) sopra), attivamente inviate da parte di Whirlpool e D&G",
+      "textAlignment": "center",
+      "blockClass": [
+        "spaziature-impaginazione",
+        "ContRich",
+        "FontSize"
+      ],
+      "textPosition": "CENTER"
+    }
+  },
+   //First Col - Second Row
+   "flex-layout.row#SecondRowThirdRowFirstTableSection2.2": {
+    "children": [
+      "rich-text#SecondRowThirdRowFirstTableSection2.2"
+    ],
+    "props": {
+      "blockClass": [
+        "spaziature-impaginazione"
+      ],
+      "width": "50%"
+    }
+  },
+  "rich-text#SecondRowThirdRowFirstTableSection2.2": {
+    "props": {
+      "text": "Promozione delle estensioni di garanzia, rivolte ad acquirenti di prodotti Whirlpool (si veda quanto indicato alla sezione 2.1(k) sopra), durante le chiamate rivolte al call center o durante la navigazione sul Sito.",
+      "textAlignment": "center",
+      "blockClass": [
+        "spaziature-impaginazione",
+        "ContRich",
+        "FontSize"
+      ],
+      "textPosition": "CENTER"
+    }
+  },
+  //First Col - Second Row
+  "flex-layout.row#FirstColThirdRowFirstTableSection2.2": {
+    "children": [
+      "rich-text#ThirdRowFirstCol"
+    ],
+    "props": {
+      "blockClass": [
+        "spaziature-impaginazione"
+      ],
+      "width": "50%"
+    }
+  },
+  "rich-text#ThirdRowFirstCol": {
+    "props": {
+      "text": "Finalità e base giuridica",
+      "textAlignment": "center",
+      "blockClass": [
+        "spaziature-impaginazione",
+        "ContRich",
+        "FontSize"
+      ],
+      "textPosition": "CENTER"
+    }
+  },
+  //First Col - First Row
+  "flex-layout.col#SecondColThirdRowFirstTableSection2.2": {
+    "children": [
+      "rich-text#ThirdRowSecondCol"
+    ],
+    "props": {
+      "blockClass": [
+        "spaziature-impaginazione",
+        "BorderTable"
+      ],
+      "width": "50%"
+    }
+  },
+  "rich-text#ThirdRowSecondCol": {
+    "props": {
+      "text": "Contitolari – Whirlpool e D&G perseguono un fine comune, quello di proporre ai consumatori l’acquisto di un’estensione di garanzia con D&G e decidono insieme le modalità di proposizione di tali offerte. Nel caso in cui tali offerte vengano fatte durante una chiamata al call center o sul sito Web di registrazione, esse si basano sul nostro legittimo interesse a fornire all'utente un'assistenza clienti più completa. Per ulteriori informazioni, i consumatori possono contattare entrambe le società.<br><br>Nel caso in cui Whirlpool e D&G effettivamente pongono in essere un’attività di marketing, invece, verrà richiesto il Suo consenso per consentire alle parti di contattarLa. <br><br>Whirlpool e D&G possono porre in essere ulteriori attività di promozione e/o marketing, secondo quanto rappresentato nella sezione 2.1. sopra oppure da D&G nella propria [informativa]( https://www.domesticandgeneral.com/whirlpool-group/sicurezza-e-privacy)",
+      "textAlignment": "center",
+      "blockClass": [
+        "spaziature-impaginazione",
+        "ContRich",
+        "FontSize"
+      ],
+      "textPosition": "CENTER"
+    }
+  },
+  // Fourth Row - Second Table
+  "flex-layout.row#FourthRowTableSection2.2": {
+    "children": [
+      "flex-layout.col#FirstColFourthRowFirstTableSection2.2",
+      "flex-layout.col#SecondColFourthRowFirstTableSection2.2"
+    ],
+    "props": {
+      "preserveLayoutOnMobile": "true",
+      "blockClass": ["PaddingTable"]
+    }
+  },
+  //First Col - Fourth Row
+  "flex-layout.col#FirstColFourthRowFirstTableSection2.2": {
+    "children": [
+      "rich-text#FourthRowFirstCol"
+    ],
+    "props": {
+      "blockClass": [
+        "spaziature-impaginazione",
+        "BorderTable"
+      ],
+      "width": "50%"
+    }
+  },
+  "rich-text#FourthRowFirstCol": {
+    "props": {
+      "text": "Registrazione delle chiamate ricevute dai call center di Whirlpool e di D&G, finalizzate al miglioramento del servizio (si veda quanto indicato alla sezione 2.1(i) sopra)",
+      "textAlignment": "center",
+      "blockClass": [
+        "spaziature-impaginazione",
+        "ContRich",
+        "FontSize"
+      ],
+      "textPosition": "CENTER"
+    }
+  },
+  //First Col - Fourth Row
+  "flex-layout.col#SecondColFourthRowFirstTableSection2.2": {
+    "children": [
+      "rich-text#FourthRowSecondCol"
+    ],
+    "props": {
+      "blockClass": [
+        "spaziature-impaginazione",
+        "BorderTable"
+      ],
+      "width": "50%"
+    }
+  },
+  "rich-text#FourthRowSecondCol": {
+    "props": {
+      "text": "Contitolari – Whirlpool e D&G intendono migliorare il proprio servizio clienti, offerto via call center e decidono insieme le modalità di registrazione.",
+      "textAlignment": "center",
+      "blockClass": [
+        "spaziature-impaginazione",
+        "ContRich",
+        "FontSize"
+      ],
+      "textPosition": "CENTER"
+    }
+  },
+  // Fifth Row - Second Table
+  "flex-layout.row#FifthRowTableSection2.2": {
+    "children": [
+      "flex-layout.col#FirstColFifthRowFirstTableSection2.2",
+      "flex-layout.col#SecondColFifthRowFirstTableSection2.2"
+    ],
+    "props": {
+      "preserveLayoutOnMobile": "true",
+      "blockClass": ["PaddingTable"]
+    }
+  },
+  //First Col - Fifth Row
+  "flex-layout.col#FirstColFifthRowFirstTableSection2.2": {
+    "children": [
+      "rich-text#FifthRowFirstCol"
+    ],
+    "props": {
+      "blockClass": [
+        "spaziature-impaginazione",
+        "BorderTable"
+      ],
+      "width": "50%"
+    }
+  },
+  "rich-text#FifthRowFirstCol": {
+    "props": {
+      "text": "Gestione della relazione contrattuale con il consumatore che abbia deciso di acquistare un’estensione di garanzia D&G  ",
+      "textAlignment": "center",
+      "blockClass": [
+        "spaziature-impaginazione",
+        "ContRich",
+        "FontSize"
+      ],
+      "textPosition": "CENTER"
+    }
+  },
+  //First Col - Fifth Row
+  "flex-layout.col#SecondColFifthRowFirstTableSection2.2": {
+    "children": [
+      "rich-text#FifthRowSecondCol"
+    ],
+    "props": {
+      "blockClass": [
+        "spaziature-impaginazione",
+        "BorderTable"
+      ],
+      "width": "50%"
+    }
+  },
+  "rich-text#FifthRowSecondCol": {
+    "props": {
+      "text": " D&G opera come titolare del trattamento. Nei casi in cui il contratto per l’estensione di garanzia venga venduto da parte di un operatore di un call center Whirlpool, quest’ultima opera come responsabile del trattamento. La relazione contrattuale è infatti tra il consumatore e D&G, che opera quale soggetto regolamentato. <br><br> Per conoscere maggiori dettagli in merito al trattamento dei Suoi dati, La invitiamo a visionare l’informativa privacy di D&G, disponibile [qui](https://www.domesticandgeneral.com/whirlpool-group/sicurezza-e-privacy).  D&G e il suo Responsabile per la Protezione dei Dati possono essere contattati per qualsiasi questione inerente al trattamento svolto in contitolarità con Whirlpool, al seguente indirizzo: privacy.customercare@domesticandgeneral.com",
+      "textAlignment": "center",
+      "blockClass": [
+        "spaziature-impaginazione",
+        "ContRich",
+        "FontSize"
+      ],
+      "textPosition": "CENTER"
+    }
+  },
+  // Sixth Row - Second Table
+  "flex-layout.row#SixthRowTableSection2.2": {
+    "children": [
+      "flex-layout.col#FirstColSixthRowFirstTableSection2.2",
+      "flex-layout.col#SecondColSixthRowFirstTableSection2.2"
+    ],
+    "props": {
+      "preserveLayoutOnMobile": "true",
+      "blockClass": ["PaddingTable"]
+    }
+  },
+  //First Col - Sixth Row
+  "flex-layout.col#FirstColSixthRowFirstTableSection2.2": {
+    "children": [
+      "rich-text#SixthRowFirstCol"
+    ],
+    "props": {
+      "blockClass": [
+        "spaziature-impaginazione",
+        "BorderTable"
+      ],
+      "width": "50%"
+    }
+  },
+  "rich-text#SixthRowFirstCol": {
+    "props": {
+      "text": "Registrazione delle chiamate ricevute dai call center di Whirlpool e di D&G, finalizzate a conformarsi alle leggi vigenti in materia di assicurazione.",
+      "textAlignment": "center",
+      "blockClass": [
+        "spaziature-impaginazione",
+        "ContRich",
+        "FontSize"
+      ],
+      "textPosition": "CENTER"
+    }
+  },
+  //First Col - Sixth Row
+  "flex-layout.col#SecondColSixthRowFirstTableSection2.2": {
+    "children": [
+      "rich-text#SixthRowSecondCol"
+    ],
+    "props": {
+      "blockClass": [
+        "spaziature-impaginazione",
+        "BorderTable"
+      ],
+      "width": "50%"
+    }
+  },
+  "rich-text#SixthRowSecondCol": {
+    "props": {
+      "text": "D&G opera come titolare del trattamento. Nei casi in cui la registrazione inerisca una chiamata tra il consumatore e un operatore di un call center Whirlpool, quest’ultima opera come responsabile del trattamento. <br><br>Per conoscere maggiori dettagli in merito al trattamento dei Suoi dati, La invitiamo a visionare l’informativa privacy di D&G, disponibile [qui](https://www.domesticandgeneral.com/whirlpool-group/sicurezza-e-privacy). D&G e il suo Responsabile per la Protezione dei Dati possono essere contattati per qualsiasi questione inerente al trattamento svolto in contitolarità con Whirlpool, al seguente indirizzo: privacy.customercare@domesticandgeneral.com",
+      "textAlignment": "center",
+      "blockClass": [
+        "spaziature-impaginazione",
+        "ContRich",
+        "FontSize"
+      ],
+      "textPosition": "CENTER"
+    }
+  },
+  // Seventh Row - Second Table
+  "flex-layout.row#SeventhRowTableSection2.2": {
+    "children": [
+      "flex-layout.col#FirstColSeventhRowFirstTableSection2.2",
+      "flex-layout.col#SecondColSeventhRowFirstTableSection2.2"
+    ],
+    "props": {
+      "preserveLayoutOnMobile": "true",
+      "blockClass": ["PaddingTable"]
+    }
+  },
+  //First Col - Seventh Row
+  "flex-layout.col#FirstColSeventhRowFirstTableSection2.2": {
+    "children": [
+      "rich-text#SeventhRowFirstCol"
+    ],
+    "props": {
+      "blockClass": [
+        "spaziature-impaginazione",
+        "BorderTable"
+      ],
+      "width": "50%"
+    }
+  },
+  "rich-text#SeventhRowFirstCol": {
+    "props": {
+      "text": "Somministrazione di questionari di soddisfazione. (si veda quanto indicato alla sezione 2.1(f) sopra)",
+      "textAlignment": "center",
+      "blockClass": [
+        "spaziature-impaginazione",
+        "ContRich",
+        "FontSize"
+      ],
+      "textPosition": "CENTER"
+    }
+  },
+  //First Col - Seventh Row
+  "flex-layout.col#SecondColSeventhRowFirstTableSection2.2": {
+    "children": [
+      "rich-text#SeventhRowSecondCol"
+    ],
+    "props": {
+      "blockClass": [
+        "spaziature-impaginazione",
+        "BorderTable"
+      ],
+      "width": "50%"
+    }
+  },
+  "rich-text#SeventhRowSecondCol": {
+    "props": {
+      "text": "A seconda della tipologia di questionario, le parti potrebbero operare come contitolari (in questo caso determinano congiuntamente finalità e mezzi) oppure ciascuna come titolare autonomo (si rinvia a quanto precisato nella presente informativa sub sezione 2.1(f) sopra nonché nell'informativa privacy di D&G, disponibile [qui]( https://www.domesticandgeneral.com/whirlpool-group/sicurezza-e-privacy).",
+      "textAlignment": "center",
+      "blockClass": [
+        "spaziature-impaginazione",
+        "ContRich",
+        "FontSize"
+      ],
+      "textPosition": "CENTER"
+    }
+  },
+  "rich-text#FinalitaTrattamento2-2part": {
+    "title": "Finalità trattamento sezione 2 - 2 parte",
+    "props": {
+      "htmlId": "FinalitaTrattamento2-2part",
+      "text": "In caso intenda richiedere maggiori informazioni in merito al perimetro di trattamento che coinvolge Whirlpool e D&G, o qualora intenda esercitare i Suoi diritti privacy, La preghiamo di fare riferimento alla sezione 7 della presente informativa privacy e di avvalersi dei contatti ivi indicati, oppure di rivolgersi al nostro partner D&G, ai contatti sopra riportati.",
+      "textAlignment": "center",
+      "blockClass": [
+        "spaziature-impaginazione",
+        "ContRich",
+        "trattamento",
+        "twoCol"
+      ],
+      "textPosition": "CENTER"
+    }
+  },
+  "rich-text#BaseGiuridica": {
+    "props": {
+      "htmlId": "BaseGiuridica",
+      "text": "",
+      "textAlignment": "center",
+      "blockClass": ["spaziature-impaginazione", "ContRich"],
+      "textPosition": "CENTER"
+    }
+  },
+  "rich-text#ConservazioneDati": {
+    "props": {
+      "htmlId": "ConservazioneDati",
+      "text": "",
+      "textAlignment": "center",
+      "blockClass": ["spaziature-impaginazione", "ContRich"],
+      "textPosition": "CENTER"
+    }
+  },
+  "rich-text#ModalitaTrattamento": {
+    "props": {
+      "htmlId": "ModalitaTrattamento",
+      "text": "",
+      "textAlignment": "center",
+      "blockClass": ["spaziature-impaginazione", "ContRich"],
+      "textPosition": "CENTER"
+    }
+  },
+  "rich-text#ComunicazioneDati": {
+    "props": {
+      "htmlId": "ComunicazioneDati",
+      "text": "",
+      "textAlignment": "center",
+      "blockClass": ["spaziature-impaginazione", "ContRich"],
+      "textPosition": "CENTER"
+    }
+  },
+  "rich-text#PrivacyShield": {
+    "props": {
+      "htmlId": "PrivacyShield",
+      "text": "",
+      "textAlignment": "center",
+      "blockClass": [
+        "spaziature-impaginazione",
+        "ContRich",
+        "diritto-opposizione"
+      ],
+      "textPosition": "CENTER"
+    }
+  },
+  "rich-text#DatiDeiMinori": {
+    "props": {
+      "htmlId": "DatiDeiMinori",
+      "text": "",
+      "textAlignment": "center",
+      "blockClass": ["spaziature-impaginazione", "ContRich"],
+      "textPosition": "CENTER"
+    }
+  },
+  "rich-text#DatiDegliInteressati": {
+    "props": {
+      "htmlId": "DatiDegliInteressati",
+      "text": "",
+      "textAlignment": "center",
+      "blockClass": ["spaziature-impaginazione", "ContRich"],
+      "textPosition": "CENTER"
+    }
+  },
+  "rich-text#ModificheAggiornamenti": {
+    "props": {
+      "htmlId": "ModificheAggiornamenti",
+      "text": "",
+      "textAlignment": "center",
+      "blockClass": ["spaziature-impaginazione", "ContRich"],
+      "textPosition": "CENTER"
+    }
+  }
+}

@@ -1,0 +1,314 @@
+.brandContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.brandRow {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 5rem;
+    margin: 1rem;
+    flex-wrap: wrap;
+    /* margin: 1rem auto; */
+}
+.imageLinkConatiner{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0 2rem 0;
+}
+.emptyContainer{
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+.brandLogo {
+   /* margin: 0 1rem; */
+   height: 2rem;
+   max-width: 7rem;
+}
+.brandLogoHotpoint {
+    max-width: 7rem;
+    transform: scale(1.3);
+    height: unset;
+}
+.brandLogoKa {
+   /* margin: 0 1rem; */
+   height: 1rem;
+   max-width: 7rem;
+}
+.brandLogoWpro {
+    height: 3rem;
+    width: 3rem;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+.catlogButtonDiv{
+    display: flex;
+    height: 38px;
+    align-self: center;
+    font-family: gothamproregular;
+}
+.catlogButton{
+    background: #231F20;
+    border-radius: 5px;
+    border: none;
+    margin: 0px 15px;
+    color: #FFFFFF;
+    cursor: pointer;
+    padding: 0 1rem;
+}
+.buttonImage{
+    margin-right: 0.3rem;
+    height: 12px;
+    width: 12px;
+}
+.catalogMenuContainer{
+    position: fixed;
+    top: 119px;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    font-family: gothamproregular;
+    background-color: rgba(35,31,32,.4);
+    overflow: hidden;
+}
+.catalogMenuLeft, .catalogMenuLeftMobile{
+    width: 30%;
+    background: #f4f4f4;
+    transition: all 0.5s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding-top: 2rem; */
+}
+.catalogMenuLeft > div:first-child{
+    margin-top: 2rem;
+}
+.catalogMenuRight{
+    width: 70%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 0 3rem;
+    transition: all 0.5s ease;
+    overflow: hidden;
+}
+.leftMenuLabel, .leftMenuLabelHover{
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    padding: .6rem 0;
+}
+.leftMenuLabelHover{
+    background: white;
+    font-weight: bold;
+}
+.leftMenuLabelHover::after{
+    position: absolute;
+    content: "";
+    width: 0.625rem;
+    height: 100%;
+    background-color: #edb112;
+    right: 0;
+    top: 0;
+}
+.labelP{
+    margin: 0;
+    color: #000;
+}
+.subMenuDiv{
+    padding-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+.subMenuDivCategory{
+    padding-top: 2rem;
+    padding-right: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+.categoryDiv{
+    width: 25%;
+    padding: 0 1rem;
+    margin-bottom: 3rem;
+}
+.subCategoryDiv{
+display: flex;
+flex-direction: column;
+margin-top: .2rem;
+}
+.subCategoryLink{
+    padding: 0.2rem 0;
+}
+.subCategoryText{
+    text-transform: capitalize;
+    transition: all 0.2s ease;
+}
+.subCategoryText:hover{
+    color: #edb112;
+    transition: all 0.2s ease;
+}
+.subItemDiv{
+    padding: .3rem;
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    margin-bottom: 1rem;
+}
+.subItemLabel, .subItemLabelCategory{
+    width: 50%;
+    font-size: 0.875rem;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.subItemLabelTitle{
+    font-weight: bolder;
+    text-transform: capitalize;
+}
+.subItemLabel:hover, .subItemLabelCategory:hover{
+    color: #edb112;
+    transition: all 0.2s ease;
+}
+.subItemLabelCategory{
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.subMenuDivMobile, .subMenuDivMobileOpened{
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    position: absolute;
+}
+.subMenuDivMobile{
+    transform: translateX(-110%);
+    transition: all 0.3s ease-in-out;
+}
+.subMenuDivMobileOpened{
+    transform: translateX(0%);
+    transition: all 0.3s ease-in-out;
+}
+.catalogMenuLeftMobile{
+    width: 100%;
+    background: #fff;
+    align-items: flex-start;
+}
+.catalogMenuLeftMobile > div:first-child{
+    margin-top: 1rem;
+}
+.catlogueTitleMobile{
+
+}
+.catalogueTitleLabel{
+    margin: 0;
+    padding: .6rem 1rem;
+}
+.subMenuContainerMobile{
+    display: flex;
+}
+.buttonImageBack{
+    height: 16px;
+    width: 16px;
+    margin: 1rem;
+    cursor: pointer;
+}
+.leftColumnMobile{
+    width: 15%;
+}
+.rightColumnMobile{
+    width: 85%;
+    padding-top: .8rem;
+    overflow-wrap: break-word;
+}
+.catalogSubTitleMobile{
+    margin: 0;
+    padding-left: .3rem;
+    margin-bottom: 0.5rem;
+}
+.groupItemTitle{
+    font-weight: bolder;
+}
+.groupItemLink{
+    margin-bottom: .5rem;
+}
+.subItemGroupDiv{
+    display: flex;
+    flex-direction: column;
+}
+.catalogImagesDiv{
+    display: flex;
+}
+.catalogImagesLink{
+    padding: 1rem;
+}
+.catalogImages{
+}
+.rightColumnTitleWrapper{
+}
+.rightColumnItemsWrapper{
+}
+/*--- Media queries ---*/
+@media only screen and (max-width: 1024px) {
+    .catlogButton{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        margin-right: 0.5rem;
+    }
+    .buttonImage{
+        margin: 1rem 1.2rem;
+        padding: 0;
+    }
+    .leftMenuLabel, .leftMenuLabelHover{
+        width: 100%;
+        text-align: left;
+        cursor: pointer;
+        position: relative;
+        padding: .6rem 1rem;
+    }
+    .catalogImagesDiv{
+        flex-direction: column;
+    }
+    .catalogImagesLink{
+        padding: 1rem 1rem 1rem 0;
+    }
+    .subMenuDivCategory{
+        flex-direction: column;
+        overflow-y: auto;
+        height: 40rem;
+        flex-wrap: nowrap;
+        padding-bottom: 10rem;
+    }
+    .categoryDiv{
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 900px) and (max-width: 1024px)  {
+    .catalogMenuContainer{
+        top: 235px;
+    }
+}
+@media only screen and (min-width: 764px) and (max-width: 900px)  {
+    .catalogMenuContainer{
+        top: 220px;
+    }
+}
+@media only screen and (min-width: 620px) and (max-width: 764px)  {
+    .catalogMenuContainer{
+        top: 200px;
+    }
+}
+@media only screen and (max-width: 620px) {
+    .catalogMenuContainer{
+        top: 190px;
+    }
+}

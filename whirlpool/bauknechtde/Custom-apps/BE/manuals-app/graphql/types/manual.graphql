@@ -1,0 +1,48 @@
+
+type Status {
+    id: Int!,
+    message: String!
+}
+
+type ManualSuggestion {
+    brand: String!
+    code12nc: String!
+    f0: String!
+    code12ncHana: String!
+    ean: String!
+    commercialCode: String!
+    productGroup: String!
+    iconUri: String!
+}
+
+type ManualDocument {
+    id: String!
+    mainType: String!
+    type: String!
+    languages: [String]
+    name: String!
+    typeId: String!
+    creationDate: String!
+    uri: String!
+}
+
+type ManualSuggestionsOutput {
+
+    status: Status!
+    response: [ManualSuggestion]!
+
+}
+
+type ManualDocumentsResponse {
+
+    documentations: [ManualDocument]!
+    pictures: [ManualDocument]!
+
+}
+
+type ManualDocumentsOutput {
+
+    status: Status!
+    response: ManualDocumentsResponse!
+
+}

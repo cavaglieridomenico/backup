@@ -1,0 +1,65 @@
+{
+  "name": "discontinued-products",
+  "vendor": "hotpointit",
+  "version": "0.0.3",
+  "title": "Discontinued products",
+  "description": "App to update redirects for discontinued products",
+  "mustUpdateAt": "2021-09-16",
+  "categories": [],
+  "dependencies": {
+    "vtex.rewriter": "1.x"
+  },
+  "builders": {
+    "node": "6.x",
+    "docs": "0.x"
+  },
+  "scripts": {
+    "prereleasy": "bash lint.sh"
+  },
+  "credentialType": "absolute",
+  "policies": [
+    {
+      "name": "colossus-fire-event"
+    },
+    {
+      "name": "colossus-write-logs"
+    },
+    {
+      "name": "vtex.rewriter:resolve-graphql"
+    },
+    {
+      "name": "ADMIN_DS"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "api.vtex.com",
+        "path": "/dataentities/*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "portal.vtexcommercestable.com.br",
+        "path": "*"
+      }
+    }
+  ],
+  "settingsSchema": {
+    "title": "Discontinued Products",
+    "type": "object",
+    "properties": {
+      "gcpappkey": {
+        "title": "GCP app key (sha-256)",
+        "type": "string",
+        "default": "c5ebf4985d4fe08ee975cc3c40b4f63588a951aa5cb2fcfcfe8a288a932afb74"
+      },
+      "gcpapptoken": {
+        "title": "GCP app token (sha-256)",
+        "type": "string",
+        "default": "e0e1251fe431769f9331f1b209de1c8bc4715001a98c2bb25b501947f6023d1c"
+      }
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

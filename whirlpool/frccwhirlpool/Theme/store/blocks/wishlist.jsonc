@@ -1,0 +1,89 @@
+{
+  "my-account-link.wishlist-link": {
+    "props": {
+      "label": "Ma liste de souhaits"
+    }
+  },
+  "my-account-page.wishlist-page": {
+    "children": [
+      "flex-layout.row#top",
+      "list-context.wishlist"
+    ]
+  },
+  "store.wishlist": {
+    "blocks": [
+      "flex-layout.row#top",
+      "list-context.wishlist"
+    ]
+  },
+  "flex-layout.row#top": {
+    "children": [
+      "flex-layout.col#wishlistTitle"
+    ],
+    "props":{
+      "blockClass": "wishlistContainer"
+    }
+  },
+  "flex-layout.col#wishlistTitle": {
+    "children": [
+      "myaccount-button",
+      "rich-text#wishlistTitle"
+    ],
+    "props": {
+      "blockClass": "titleWishlist",
+      "preventVerticalStretch": true
+    }
+  },
+  "myaccount-button": {
+    "props": {
+      "path": "/",
+      "name": "Retour"
+      // "location": "window"
+    }
+  },
+  "rich-text#wishlistTitle": {
+    "props": {
+      "text": "### Favoris",
+      "blockClass": "titleWishlistText"
+    }
+  },
+  "list-context.wishlist": {
+    "blocks": [
+      "product-summary.shelf#wishlist"
+    ],
+    "children": [
+      "slider-layout#wishlist"
+    ]
+  },
+  "product-summary.shelf#wishlist": {
+    "children": [
+      "add-to-list-btn",
+      "product-summary-image",
+      "product-summary-name",
+      "product-summary-space",
+      "flex-layout.row#pricePlp",
+      "flex-layout.row#lead-time",
+      "add-to-cart-custom"
+    ],
+    "props": {
+      "blockClass": [
+        "homeCarousel",
+        "wishlistProductSummary"
+      ]
+    }
+  },
+  "slider-layout#wishlist": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 4,
+        "tablet": 3,
+        "phone": 1
+      },
+      "showNavigationArrows": "desktopOnly",
+      "showPaginationDots": "always",
+      "infinite": false,
+      "fullWidth": true,
+      "blockClass": "wishlistSliderContainer"
+    }
+  }
+}

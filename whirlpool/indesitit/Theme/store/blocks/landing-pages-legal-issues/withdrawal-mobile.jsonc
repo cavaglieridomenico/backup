@@ -1,0 +1,30 @@
+{
+  "responsive-layout.mobile#withdrawal": {
+    "children": ["flex-layout.row#withdrawal-maxi-container-mobile"]
+  },
+  "flex-layout.row#withdrawal-maxi-container-mobile": {
+    "props": {
+      "blockClass": "withdrawal-maxi-container"
+    },
+    "children": ["flex-layout.col#withdrawal-col-maxi-container-mobile"]
+  },
+  "flex-layout.col#withdrawal-col-maxi-container-mobile": {
+    "props": {
+      "blockClass": "withdrawal-col-maxi-container"
+    },
+    "children": [
+      "breadcrumb#withdrawal-mobile",
+      "flex-layout.row#withdrawal-title-container",
+      "flex-layout.row#withdrawal-content-container",
+      "remove-link"
+    ]
+  },
+  //BREADCRUMBS
+  "breadcrumb#withdrawal-mobile": {
+    "props": {
+      "categories": ["/Home/", "Termini"],
+      "showOnMobile": true,
+      "blockClass": "breadcrumb-legal-issues-landings"
+    }
+  }
+}

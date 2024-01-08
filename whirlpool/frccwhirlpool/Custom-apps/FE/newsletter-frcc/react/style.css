@@ -1,0 +1,186 @@
+.container {
+  display: contents;
+  justify-content: center;
+  width: auto;
+  margin: 0 30%;
+  padding: 2rem 0;
+  border: 3px solid #ffffff;
+}
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+.description {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 2rem;
+  font-family: "gothamproregular";
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.2;
+}
+@media only screen and (max-width: 1100px) {
+  .container {
+    margin: unset;
+    border-left: unset;
+    border-right: unset;
+    border-bottom: unset;
+    background-color: #ffffff;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+  .description {
+    text-align: center;
+  }
+  .container :global(.vtex-button) {
+    width: 60%;
+    margin: auto;
+  }
+}
+.containerForm {
+  margin: 0;
+  padding: 0;
+  /* width: 352px; */
+}
+/* .vtex-styleguide-9-x-mh100 {
+  width: 352px;
+} */
+
+.titleForm {
+  margin: auto;
+  text-align: left;
+  font-family: "gothamproregular";
+  font-size: 1rem;
+  /* letter-spacing: 0.2rem; */
+  /* margin: 0.6rem; */
+}
+.descriptionForm {
+  margin: auto;
+  text-align: center;
+  font-family: "gothamproregular";
+  margin: 0.6rem;
+}
+.fieldContainer {
+  margin: 1rem 0 1.5rem;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
+.fieldContainerEmail > label > div > input {
+  color: #000000;
+}
+
+.fieldContainer :global(.vtex-styleguide-9-x-input) {
+  font-size: 0.625rem;
+  font-family: "gothamproregular";
+}
+
+.fieldContainer :global(.vtex-input-prefix__group) {
+  /* border-top: 0.063rem solid #231F20;
+  border-right: 0.063rem solid #231F20;
+  border-left: 0.063rem solid #231F20;
+  border-bottom: 0.063rem solid #231F20;
+  border-radius: 0.250rem; */
+}
+
+.fieldContainer :global(.vtex-input-prefix__group):first-child {
+  margin-right: 10px;
+}
+
+.submitContainer {
+  margin: 1rem 0 0;
+  padding: 0;
+}
+.informativa {
+  margin: 1rem 0 1.5rem;
+  display: flex;
+}
+.privacy {
+  text-align: left;
+  font-family: "gothamproregular";
+  color: #000000;
+  font-size: 0.625rem;
+}
+.colorEdb112 {
+  color: #231f20;
+  margin: 0 0.2rem 0 0;
+}
+.informativa :global(.vtex-checkbox__label) {
+  font-family: "gothamproregular";
+  color: #000000;
+  font-size: 0.625rem;
+}
+.submitContainer :global(.vtex-input-prefix__group) {
+  border: none;
+}
+.submitContainer :global(.vtex-styleguide-9-x-input) {
+  cursor: pointer;
+  background-color: #231f20;
+  color: white;
+  font-family: "gothamproregular";
+  font-size: 0.75rem;
+  /* text-transform: uppercase; */
+  /* width: 289px; */
+  padding: 0.3rem 1.5rem;
+  margin: 0 auto;
+  border-radius: 0.25rem;
+}
+.submitContainer :global(.vtex-styleguide-9-x-input):hover {
+  background-color: #231f20;
+  border-color: #231f20;
+}
+.containerForm :global(.vtex-input__label) {
+  font-family: "gothamproregular";
+}
+.successClass {
+  text-align: center;
+  font-family: "gothamproregular";
+  font-size: 1rem;
+  background: #000000;
+  color: white;
+  border-radius: 0;
+  width: 100%;
+  padding: 0.6rem 1.5rem;
+}
+.errorClass {
+  text-align: center;
+  font-family: "gothamproregular";
+  background-color: white;
+  color: red;
+  border-radius: unset;
+  width: 100%;
+  padding: 0.5rem;
+  margin: auto;
+}
+.loaderForm {
+  border: 16px solid #f9f9f9;
+  border-radius: 50%;
+  border-top: 16px solid #231f20;
+  width: 80px;
+  height: 80px;
+  margin: auto;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

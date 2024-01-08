@@ -1,0 +1,48 @@
+{
+  "vendor": "whirlpoolemea",
+  "name": "paypal-app",
+  "version": "1.0.6",
+  "title": "Paypal iFrame",
+  "description": "Paypal iFrame",
+  "defaultLocale": "en-GB",
+  "builders": {
+    "messages": "1.x",
+    "store": "0.x",
+    "react": "3.x"
+  },
+  "scripts": {
+    "postreleasy": "node ./react/utils/script.js"
+  },
+  "billingOptions": {
+    "termsURL": "https://compliance.vtex.com/gdpr/policies/vtex-privacy-policy",
+    "support": {
+      "url": "https://support.vtex.com/hc/requests"
+    },
+    "free": true
+  },
+  "dependencies": {
+    "vtex.styleguide": "9.x",
+    "vtex.css-handles": "0.x",
+    "vtex.product-context": "0.x",
+    "vtex.render-runtime": "8.x",
+    "vtex.apps-graphql": "3.x"
+  },
+  "settingsSchema": {
+    "title": "Paypal iFrame",
+    "type": "object",
+    "access": "public",
+    "properties": {
+      "clientId": {
+        "title": "client-id",
+        "description": "Enter the Paypal client-id",
+        "type": "string"
+      },
+      "locale": {
+        "title": "Locale",
+        "description": "Enter the country locale (ex. en_GB)",
+        "type": "string"
+      }
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

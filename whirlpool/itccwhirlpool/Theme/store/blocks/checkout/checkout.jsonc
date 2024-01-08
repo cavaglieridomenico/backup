@@ -1,0 +1,526 @@
+{
+  /* This is the interface of the Checkout,
+  whatever you put as blocks will be rendered on /checkout */
+  "store.checkout.order-form": {
+    "parent": {
+      "header": "header#cart",
+      "footer": "footer#cart"
+    },
+    "blocks": ["checkout-container"]
+  },
+  "experimental__visibility-layout#checkoutInfoBox": {
+    "title": "[TOGGLE] Drop down",
+    "props": {
+      "visible": true
+    },
+    "children": ["disclosure-layout#checkoutInfoBox"]
+  },
+  "disclosure-layout#checkoutInfoBox": {
+    "title": "[DISCLOSURE] - Checkout info accordion",
+    "props": {
+      "animated": true
+    },
+    "children": [
+      "disclosure-trigger#checkoutInfoBox",
+      "disclosure-content#checkoutInfoBox"
+    ]
+  },
+  "disclosure-trigger#checkoutInfoBox": {
+    "title": "[DISCLOSURE] - Checkout info accordion trigger",
+    "children": ["rich-text#textBoxTitle", "disclosure-state-indicator#arrows"],
+    "props": {
+      "blockClass": "checkoutInfoBoxTrigger"
+    }
+  },
+  "disclosure-content#checkoutInfoBox": {
+    "title": "[DISCLOSURE] - Checkout info accordion content",
+    "props": {
+      "blockClass": "checkoutInfoBox"
+    },
+    "children": ["rich-text#textBox"]
+  },
+  "rich-text#textBoxTitle": {
+    "title": "[TEXT] - [TOP] Text",
+    "props": {
+      "text": "Important Delivery Information: Coronavirus",
+      "blockClass": "TextBoxTextTitle"
+    }
+  },
+  "rich-text#textBox": {
+    "title": "[TEXT] - [TOP] Text",
+    "props": {
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id volutpat odio. Etiam iaculis at mi sit amet lacinia. Etiam sit amet eros elementum, iaculis dui eu, euismod mauris. Integer dolor neque, egestas a ullamcorper ac, posuere rhoncus nisl. In malesuada tristique viverra. Maecenas pellentesque varius tincidunt. Quisque bibendum, elit nec ultrices varius, arcu nibh accumsan augue, eu accumsan arcu tellus et ipsum. Nunc euismod, lacus vitae sodales tempus, lorem odio elementum ante, ac commodo metus orci eget odio. Phasellus arcu leo, dapibus vitae orci eu, ullamcorper pulvinar nisi. Nullam malesuada neque et tincidunt rhoncus. Aenean eu ante ornare, pulvinar nisi et, maximus elit. Donec aliquet dolor eget est maximus varius. Donec sit amet nisi porttitor, viverra libero a, fermentum augue. Morbi suscipit dapibus elementum. Nullam mi neque, gravida sed lacinia vitae, commodo et nulla. Praesent ultrices congue tortor, at maximus diam viverra vitae. \n*Visit our [help](https://developers.vtex.com/vtex-developer-docs/docs/welcome) section.\n**Be Bold!**\n*This is italic*",
+      "blockClass": "TextBoxText"
+    }
+  },
+  "checkout-container": {
+    "children": [
+      "responsive-layout.desktop#checkout",
+      "responsive-layout.tablet#checkout",
+      "responsive-layout.phone#checkout"
+    ]
+  },
+  "responsive-layout.desktop#checkout": {
+    "children": ["flex-layout.row#container-desktop"]
+  },
+  "responsive-layout.tablet#checkout": {
+    "children": ["flex-layout.row#container-desktop"]
+  },
+  "responsive-layout.phone#checkout": {
+    "children": ["flex-layout.row#container-desktop"]
+  },
+  "flex-layout.row#container-desktop": {
+    "children": [
+      "flex-layout.col#checkout-desktop",
+      "flex-layout.col#items-summary-desktop"
+    ],
+    "props": {
+      "blockClass": "checkoutContainer",
+      "preserveLayoutOnMobile": false,
+      "fullWidth": true,
+      "paddingBottom": 3,
+      "paddingTop": 5
+    }
+  },
+  "flex-layout.col#checkout-desktop": {
+    "children": ["checkout-step-group"],
+    "props": {
+      "preventVerticalStretch": true,
+      "width": "60%",
+      "paddingRight": 8,
+      "rowGap": 5,
+      "blockClass": "checkoutDesktopCol"
+    }
+  },
+  /* These are the rendered steps */
+  "checkout-step-group": {
+    "children": ["profile-step", "shipping-step", "payment-step"]
+  },
+  /*
+   ******************
+   *  PROFILE STEP  *
+   ******************
+   */
+  "profile-step": {
+    "children": ["profile-form", "profile-summary"]
+  },
+  "profile-form": {
+    "children": ["profile-editable-form", "profile-summary"],
+    "props": {
+      // THIS FIELD MUST NOT BE CHANGED !!!
+      "customInvoiceField": "codiceFiscaleAzienda"
+    }
+  },
+  "profile-summary": {
+    "children": ["login#checkout"]
+  },
+  "login#checkout": {
+    "props": {
+      "hideIconLabel": false,
+      "showIconProfile": false
+    }
+  },
+  "profile-editable-form": {
+    "props": {
+      // "validation": {
+      //   "isEmailRequired": true
+      //   "isFirstNameRequired": true
+      // }
+    },
+    "children": [
+      "profile-editable-form.info-data",
+      "profile-editable-form.invoice-datas",
+      "profile-editable-form.checkboxes"
+    ]
+  },
+  "profile-editable-form.invoice-datas": {
+    "children": [
+      "profile-editable-form.invoice-datas.custom-datas",
+      "profile-editable-form.invoice-datas.invoices"
+    ],
+    "props": {
+      /* 
+      "isInvoiceOpenDefault": true
+      "isInvoiceMandatory": true
+      ...
+      */
+    }
+  },
+  "profile-editable-form.invoice-datas.invoices": {
+    "children": ["profile-editable-form.invoice-datas.invoices-inputs"],
+    "props": {
+      /* 
+      invoiceSectionValidation = {
+        isStreetRequired: true,
+        isAdditionalInfosRequired: false,
+        isSDIPECRequired: false,
+        isInvoiceZipCodeRequired: true,
+        isInvoiceCityRequired: true,
+      },
+      ...
+      */
+    }
+  },
+  "profile-editable-form.invoice-datas.custom-datas": {
+    "children": [
+      "profile-editable-form.invoice-datas.custom-datas.private-section",
+      "profile-editable-form.invoice-datas.custom-datas.company-section"
+    ],
+    "props": {
+      "isSelectVisible": false
+      /* 
+      defaultSelected= "private" || "company" || not pass
+      isSelectVisible=false
+      
+      //Required fields
+        isInvoiceNameRequired= false
+        isInvoiceFiscalCodeRequired=false
+        isSDIPECRequired=true
+        isInvoiceSocialReasonRequired=false
+        isInvoiceVatRequired=false
+      ...
+      */
+    }
+  },
+  "profile-editable-form.info-data": {
+    "children": ["email-field-cc", "login#checkout-email"],
+    "props": {
+      /* 
+      "hideFirstName": true
+      ...
+      */
+    }
+  },
+  "email-field-cc": {
+    "children": ["profile-editable-form.info-data.email-modal"]
+  },
+  "login#checkout-email": {
+    "props": {
+      "hideIconLabel": true,
+      "showIconProfile": true
+    }
+  },
+  "rich-text#emailModal": {
+    "props": {
+      "text": "This email is already registered",
+      "blockClass": "emailModalText"
+    }
+  },
+  "profile-editable-form.checkboxes": {
+    "props": {
+      "acceptTermsLink": "/pages/termini-e-condizioni",
+      "hidePrivacyCheckbox": false,
+      // "isAcceptTermsRequired": false,
+      "hideAcceptTermsCheckbox": false,
+      // "acceptTermsDefaultValue": true,
+      "newsletterCheckboxText": "Selezioni questa casella se desidera ricevere comunicazioni di marketing personalizzate per e-mail ed SMS relative a prodotti, servizi e marchi di Whirlpool Corporation. Ulteriori dettagli sono disponibili nella nostra ",
+      // "newsletterTextLink": "informativa sulla privacy",
+      "optinLink": "/pagine/informativa-sulla-privacy",
+      "newsletterCheckboxLink": "/pagine/informativa-sulla-privacy",
+      "newsletterCheckboxText2": " Acconsento al trattamento dei miei dati personali per permettere a Whirlpool Italia Srl di inviarmi newsletter/comunicazioni di marketing (in forma elettronica e non, anche tramite telefono, posta tradizionale, e-mail, SMS, MMS, notifiche push su siti di terze parti tra cui sulle piattaforme Facebook e Google) riguardanti prodotti e servizi di Whirlpool Italia Srl, anche da me acquistati o registrati, nonché di svolgere ricerche di mercato."
+    }
+  },
+  /*
+   *******************
+   *  SHIPPING STEP  *
+   *******************
+   */
+  "shipping-step": {
+    "children": ["shipping-form", "shipping-summary"]
+  },
+  "shipping-form": {
+    "children": ["shipping-editable-form", "shipping-summary"]
+  },
+  "shipping-editable-form": {
+    "children": [
+      "shipping-editable-form.address-editable-form",
+      "shipping-editable-form.delivery-editable-form"
+      // "shipping-form-custom"
+    ]
+  },
+  "shipping-editable-form.delivery-editable-form": {
+    "props": {
+      "isSlotsFromThirdPartyAPI": true
+    }
+  },
+  "shipping-editable-form.address-editable-form": {
+    "children": [
+      "shipping-editable-form.address-editable-form.address-info",
+      "shipping-editable-form.address-summary"
+    ],
+    "props": {
+      "validation": {
+        "isAddressRequired": true,
+        "isAdditionalInfoAddressRequired": false,
+        "isCityRequired": true,
+        "isStateRequired": true,
+        "isPostalCodeRequired": true,
+        "isNumberRequired": true,
+        "isCountryRequired": true
+      }
+    }
+  },
+  "shipping-editable-form.address-editable-form.address-info": {
+    "props": {
+      "inputsToShow": {
+        "streetNumberLabel": true,
+        "stateLabel": true,
+        "countryLabel": true
+      }
+    }
+  },
+  "shipping-summary": {
+    "children": ["shipping-summary.delivery-summary"]
+  },
+
+  /*--- PAYMENT STEP ---*/
+  "payment-step": {
+    "children": ["payment-form", "payment-summary"]
+  },
+  "payment-form": {
+    "children": [
+      "payment-method#payPal",
+      "payment-method#worldPay",
+      "payment-method#ootbCreditCards",
+      "payment-method#googlePay",  
+      "payment-method#applePay"
+    ]
+  },
+  "payment-method#payPal": {
+    "title": "PayPal payment Method",
+    "props": {
+      // In order to correctly show this payment method in the checkout payment-step,
+      // this id must be equal to the value of "paypalConnectorId" in the checkout-custom-container appSettings
+      "id": "12",
+      "paymentMethodTitle_lang": "PayPal",
+      "title": "PayPal"
+      // "title": "",
+      // "imageSrc": ""
+    },
+    "children": ["payPal-content"]
+  },
+  "payment-method#worldPay": {
+    "title": "WorldPay payment Method",
+    "props": {
+      // In order to correctly show this payment method in the checkout payment-step,
+      // this id must be equal to the value of "worldpayConnectorId" in the checkout-custom-container appSettings
+      "id": "202",
+      "title": "Card Payment",
+      "paymentMethodTitle_lang": "Pagamento con carta"
+      // "imageSrc": ""
+    },
+    "children": ["worldPay-content"]
+  },
+  "payment-method#ootbCreditCards": {
+    "title": "VTEX OOTB Credit Cards payment Method",
+    "props": {
+      "id": "2", // To be modified in ids, in order to allow managing multiple payment systems with the same payment method
+      "title": "Card Payment",
+      "paymentMethodTitle_lang": "Pagamento con carta"
+      // "imageSrc": ""
+    },
+    "children": ["credit-card-content"]
+  },
+  "payment-method#googlePay": {
+    "title": "VTEX OOTB Google Pay",
+    "props": {
+      "id": "169", 
+      "title": "Google Pay",
+      "paymentMethodTitle_lang": "Google Pay"
+      // "imageSrc": ""
+    },
+    "children": ["googlePay-content"]
+  },
+  "payment-method#applePay": {              
+    "title": "VTEX OOTB Apple Pay",
+    "props": {
+      "id": "69",
+      "title": "Apple Pay",
+      "paymentMethodTitle_lang": "Apple Pay"
+      // "imageSrc": ""
+    },
+    "children": ["applePay-content"]
+  },
+  "payment-summary": {
+    "props": {
+      "checkOnDataSlots": true
+    }
+  },
+  //ADYEN PROP FOR 3DS
+  "custom-place-order": {
+    "props": {
+      "AuthApp": "adyen-payment-auth-app",
+      "FarEye": true
+    }
+  },
+  /*--- CHECKOUT SUMMARY ---*/
+  "flex-layout.col#items-summary-desktop": {
+    "children": [
+      "checkout-custom-summary#desktop",
+      "flex-layout.row#contact-us-box"
+    ],
+    "props": {
+      "blockClass": "itemsSummary",
+      "preventVerticalStretch": true
+    }
+  },
+
+  "checkout-custom-summary#desktop": {
+    "children": [
+      "custom-summary",
+      /* "custom-place-order" */
+      "common-f-gas-wrapper#place-order"
+    ]
+  },
+  "custom-summary": {
+    "props": {
+      "showEnergyAndSheet": true,
+      "showInStockAndLeadtime": true,
+      "showLeadTime": false,
+      "energyImageProp": ["EnergyLogo_image"],
+      "energyLabelProp": ["new-energy-label", "energy-label"],
+      "productDataSheetProp": [
+        "product-fiche",
+        "product-information-sheet",
+        "product-data-sheet"
+      ],
+      "leadTimeProp": ["leadtime"],
+      "salesChannelData": [
+        { "salesChannel": 1, "prefix": "EPP" },
+        { "salesChannel": 2, "prefix": "FF" },
+        { "salesChannel": 3, "prefix": "VIP" },
+        { "salesChannel": 4, "prefix": "O2P" }
+      ],
+      "enableCouponLogs": true
+      /* 
+        openTextCharactersNumber: "" (number | string)
+        includedOfferings: [{name: ""}, {name: ""}]
+      ...
+      */
+    }
+  },
+  "common-f-gas-wrapper#place-order": {
+    "children": ["common-f-gas-modal#place-order", "custom-place-order"],
+    "props": {
+      // Names of the components to be shown if the cart does not contain any fgas products
+      "alternativeChildren": ["custom-place-order"]
+    }
+  },
+  "common-f-gas-modal#place-order": {
+    "props": {
+      "TriggerButton": "custom-place-order"
+    },
+    "children": ["rich-text#f-gas-regulation-text"]
+  },
+
+  // CONTACT US BOX
+
+  "flex-layout.row#contact-us-box": {
+    "title": "Checkout summary ROW",
+    "children": ["flex-layout.col#contact-us-box"],
+    "props": {
+      "blockClass": "contactUsBox",
+      "preventVerticalStretch": true
+    }
+  },
+  "rich-text#bisogno-di-aiuto": {
+    "props": {
+      "text": "Hai bisogno d'aiuto?",
+      "blockClass": "bisognoDiAiuto"
+    }
+  },
+  "rich-text#support-box-title1": {
+    "props": {
+      "text": "Elettrodomestici",
+      "blockClass": ["contactUsBox", "contactUsBoxTitle"]
+    }
+  },
+  "rich-text#support-box-descr1": {
+    "props": {
+      "text": "[directsalesonline@whirlpool.com](mailto:directsalesonline@whirlpool.com)",
+      "blockClass": "contactUsBox"
+    }
+  },
+  "rich-text#support-box-title2": {
+    "props": {
+      "text": "Numero Verde Gratuito:",
+      "blockClass": ["contactUsBox", "contactUsBoxTitle"]
+    }
+  },
+  "rich-text#support-box-descr2": {
+    "props": {
+      "text": "[800.140.004](tel:800.140.004)",
+      "blockClass": ["contactUsBox", "numeroVerde"]
+    }
+  },
+  "rich-text#support-box-descr2b": {
+    "props": {
+      "text": "Lun-Ven dalle 8:30-12:30 / 13:30 - 17:30",
+      "blockClass": "contactUsBox"
+    }
+  },
+  "rich-text#support-box-title3": {
+    "props": {
+      "text": "Accessori WPRO",
+      "blockClass": ["contactUsBox", "contactUsBoxTitle"]
+    }
+  },
+  "rich-text#support-box-descr3": {
+    "props": {
+      "text": "[servizioclienti.whirlpool.it@whirlpool.com](mailto:servizioclienti.whirlpool.it@whirlpool.com)",
+      "blockClass": "contactUsBox"
+    }
+  },
+  "rich-text#support-box-title4": {
+    "props": {
+      "text": "Contact Center",
+      "blockClass": ["contactUsBox", "contactUsBoxTitle"]
+    }
+  },
+  "rich-text#support-box-descr4": {
+    "props": {
+      "text": "Per richieste di assistenza ed estensioni di garanzia <br> Whirlpool - Hotpoint - Indesit",
+      "blockClass": "contactUsBox"
+    }
+  },
+  "rich-text#support-box-title5": {
+    "props": {
+      "text": "Numero unico:",
+      "blockClass": ["contactUsBox", "contactUsBoxTitle"]
+    }
+  },
+  "rich-text#support-box-descr5": {
+    "props": {
+      "text": "[02.20.30*](tel:02.20.30)",
+      "blockClass": "contactUsBox"
+    }
+  },
+  "rich-text#support-box-descr6": {
+    "props": {
+      "text": "*al costo di una chiamata a rete fissa secondo il piano tariffario previsto dal proprio operatore. <br> [Lun-Ven dalle 9:00 alle 18:00]",
+      "blockClass": ["contactUsBox", "contactUsBoxLast"]
+    }
+  },
+  "flex-layout.col#contact-us-box": {
+    "title": "Checkout summary COL - SUPPORT BOX",
+    "children": [
+      "rich-text#bisogno-di-aiuto",
+      "rich-text#support-box-title1",
+      "rich-text#support-box-descr1",
+      "rich-text#support-box-title2",
+      "rich-text#support-box-descr2",
+      "rich-text#support-box-descr2b",
+      "rich-text#support-box-title3",
+      "rich-text#support-box-descr3",
+      "rich-text#support-box-title4",
+      "rich-text#support-box-descr4",
+      "rich-text#support-box-title5",
+      "rich-text#support-box-descr5",
+      "rich-text#support-box-descr6"
+    ],
+    "props": {
+      "blockClass": "contactUsBox",
+      "preventVerticalStretch": true
+    }
+  }
+}

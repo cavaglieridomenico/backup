@@ -1,0 +1,44 @@
+
+export function transformInUrl(modelNumber: string){
+    modelNumber = modelNumber.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    modelNumber = modelNumber.replace(/\u00a0/g, "");
+    modelNumber = modelNumber.replace(/\+/g,"plus");
+    modelNumber = modelNumber.replace(/\[/g,"");
+    modelNumber = modelNumber.replace(/\]/g,"");
+    modelNumber = modelNumber.replace(/\//g,"");
+    modelNumber = modelNumber.replace(/\!/g,"");
+    modelNumber = modelNumber.replace(/\"/g,"");
+    modelNumber = modelNumber.replace(/\£/g,"");
+    modelNumber = modelNumber.replace(/\$/g,"");
+    modelNumber = modelNumber.replace(/\%/g,"");
+    modelNumber = modelNumber.replace(/\&/g,"");
+    modelNumber = modelNumber.replace(/\(/g,"");
+    modelNumber = modelNumber.replace(/\)/g,"");
+    modelNumber = modelNumber.replace(/\=/g,"");
+    modelNumber = modelNumber.replace(/\'/g,"");
+    modelNumber = modelNumber.replace(/\?/g,"");
+    modelNumber = modelNumber.replace(/\^/g,"");
+    modelNumber = modelNumber.replace(/\|/g,"");
+    modelNumber = modelNumber.replace(/\{/g,"");
+    modelNumber = modelNumber.replace(/\}/g,"");
+    modelNumber = modelNumber.replace(/\ç/gi,"");
+    modelNumber = modelNumber.replace(/\@/g,"");
+    modelNumber = modelNumber.replace(/\°/g,"");
+    modelNumber = modelNumber.replace(/\#/g,"");
+    modelNumber = modelNumber.replace(/\§/g,"");
+    modelNumber = modelNumber.replace(/\,/g,"");
+    modelNumber = modelNumber.replace(/\;/g,"");
+    modelNumber = modelNumber.replace(/\./g,"");
+    modelNumber = modelNumber.replace(/\:/g,"");
+    modelNumber = modelNumber.replace(/\-/g,"");
+    modelNumber = modelNumber.replace(/\_/g,"");
+    modelNumber = modelNumber.replace(/\</g,"");
+    modelNumber = modelNumber.replace(/\>/g,"");
+    modelNumber = modelNumber.replace(/\•/g,"");
+    modelNumber = modelNumber.replace(/\²/g,"");
+    modelNumber = modelNumber.replace(/\n/g,"");
+    modelNumber = modelNumber.replace(/  /g," ").replace(/ /g,"");
+    modelNumber = modelNumber.replace(/\--/g,"-");
+    modelNumber = modelNumber.toLowerCase();
+    return modelNumber;
+  }

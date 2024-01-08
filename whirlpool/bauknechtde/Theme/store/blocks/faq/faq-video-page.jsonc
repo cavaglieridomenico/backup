@@ -1,0 +1,108 @@
+{
+    "store.custom#faq-video-page": {
+      "title": "[PAGE] - FAQ Page",
+      "blocks": [
+        "flex-layout.row#bread-theme-service-locator",
+        "toggle-layout#bannerFAQVideo",
+        "rich-text#TextFAQVideo",
+        "flex-layout.row#faqTitle",
+        "domande-frequenti.categoriesMenu#faqMainPage",
+        "domande-frequenti.mostAsked",
+        /* FAQ TITLE AND VIDEO SLIDER */
+        "experimental__visibility-layout#textAndFaqVideoSlider-VideoPage",
+        "experimental__visibility-layout#supportCardSliderTitle",
+        "experimental__visibility-layout#faqSupportBoxes"
+      ]
+    },
+    "experimental__visibility-layout#textAndFaqVideoSlider-VideoPage": {
+        "title": "[TOGGLE] - [MID] - Toggle Text And FAQ Video Slider",
+        "props": {
+          "visible": true
+        },
+        "children": [
+          "experimental__visibility-layout#textOverFaqVideoSlider",
+          "experimental__visibility-layout#faqVideoSlider"
+        ]
+    },
+    "toggle-layout#bannerFAQVideo": {
+      "title": "[TOGGLE] - [TOP] - Banner Video",
+      "props": {
+        "visible": true
+      },
+      "children": [
+        "flex-layout.row#bannerFAQVideo"
+      ]
+    },
+    "flex-layout.row#bannerFAQVideo": {
+      "title": "[ROW] - Banner Video",
+      "props": {
+        "blockClass": [
+          "bannerFAQVideo"
+        ]
+      },
+      "children": [
+        "flex-layout.col#leftPartBannerDesignFAQVideo",
+        "flex-layout.col#rightPartBannerDesignFAQVideo"
+      ]
+    },
+    "flex-layout.col#rightPartBannerDesignFAQVideo": {
+      "title": "[COL] - [TOP] - Video",
+      "props": {
+        "width": "50%",
+        "blockClass": [
+          "columnPostillaImage",
+          "fullheight"
+        ]
+      },
+      "children": [
+        "video#promoFAQVideo"
+      ]
+    },
+    "flex-layout.col#leftPartBannerDesignFAQVideo": {
+      "title": "[COL] - [TOP] - Text",
+      "props": {
+        "width": "50%",
+        "preventVerticalStretch": true,
+        "blockClass": [
+          "columnPostilla",
+          "columnPostillaBottom",
+          "bg-grey"
+        ]
+      },
+      "children": [
+        "rich-text#BannTitleheroFAQVideo",
+        "rich-text#BannDescheroFAQVideo"
+      ]
+    },
+    "rich-text#BannTitleheroFAQVideo": {
+      "title": "[TEXT] - Title",
+      "props": {
+        "text": "# Title",
+        "blockClass": "titleHeroFAQVideo"
+      }
+    },
+    "rich-text#BannDescheroFAQVideo": {
+      "title": "[TEXT] - Description",
+      "props": {
+        "text": "Description",
+        "blockClass": "descHeroFAQVideo"
+      }
+    },
+    "video#promoFAQVideo": {
+      "title": "[VIDEO] - Video Component",
+      "props": {
+        "src": "https://www.youtube.com/embed/IkkrhUAvy10",
+        "width": "100%",
+        "height": "100%",
+        "blockClass": "promoFAQVideo",
+        "autoPlay": true
+      }
+    },
+    "rich-text#TextFAQVideo": {
+      "title": "[TEXT] [MIDDLE] - Text ",
+      "props": {
+        "text": "Text in the middle of the page",
+        "blockClass": "TextFAQVideo"
+      }
+    }
+}

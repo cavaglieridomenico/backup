@@ -1,0 +1,178 @@
+:global(.vtex__icon-close) {
+  display: block;
+}
+
+.wishlistIconContainer--wishListBKPLP {
+  align-items: center;
+  margin-left: 0.5rem;
+  z-index: 2;
+  height: 42px;
+}
+
+.wishlistIconContainer--wishListBKPLP::after {
+  display: none !important;
+}
+
+.wishlistIconContainer--wishListBKPLP :global(.vtex-button) {
+  padding: 0.3rem;
+  padding: 0.4rem;
+  border: 0.8px solid #007d69;
+  border-radius: 0;
+  height: 100%;
+  margin-right: 0px !important;
+}
+
+.wishlistIconContainer--wishListBKPLP :global(.vtex-button__label) {
+  padding: 0 !important;
+  width: 28px;
+  height: auto;
+}
+
+.wishlistIcon--wishListBKPLP {
+  width: 80% !important;
+  margin-left: 2px;
+}
+
+.wishlistIconContainer {
+  justify-content: center;
+  display: flex;
+}
+
+.wishlistIconContainer :global(.vtex-button) {
+  width: auto;
+  margin: 0;
+}
+
+.wishlistIconContainer :global(.vtex-button):hover,
+.wishlistIconContainer :global(.vtex-button):focus {
+  background-color: unset !important;
+}
+
+.wishlistIconContainer :global(.vtex-button):hover .outline,
+.wishlistIconContainer :global(.vtex-button):focus .outline {
+  background: url("assets/icons/heart-icon-filled.svg") !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+  background-position: center !important;
+  transition: all 0.3s ease;
+}
+
+.wishlistIconContainer :global(.vtex-button__label) {
+  padding-left: unset;
+  padding-right: 0.5rem;
+}
+
+.wishlistIconContainer::after {
+  content: "Favoriten";
+  display: flex;
+  margin: auto 0;
+  color: #505050;
+  font-family: "quicksandLight";
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.outline {
+  background: url("assets/icons/heart-icon.svg") !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+  background-position: center !important;
+  transition: all 0.3s ease;
+}
+
+.fill {
+  background: url("assets/icons/heart-icon-filled.svg") !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+  background-position: center !important;
+}
+
+.iconSize {
+  width: 28px;
+}
+
+@media only screen and (max-width: 640px) {
+  .wishlistIconContainer--wishListMobile {
+    justify-content: flex-end !important;
+  }
+
+  .wishlistIconContainer--wishListBKPLP-carousel {
+    position: absolute;
+    top: 15px;
+    left: -11% !important;
+  }
+
+  .iconSize {
+    width: 20px !important;
+    height: 17px !important;
+  }
+
+  .wishlistIconContainer :global(.vtex-button__label) {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .wishlistIconContainer--wishListMobile :global(.vtex-button__label) {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    justify-content: flex-end;
+    /*margin-right: 3rem;*/
+  }
+
+  .wishlistIconContainer :global(.vtex-button) {
+    min-height: auto !important;
+  }
+
+  .wishlistIconContainer--wishListMobile :global(.vtex-button) {
+    min-height: auto !important;
+    width: 100%;
+  }
+
+  .wishlistIconContainer--wishListMobile::after {
+    content: "Favoriten";
+    position: absolute;
+    text-decoration: underline;
+    display: flex;
+    margin: auto 0;
+
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0;
+    pointer-events: none;
+  }
+}
+
+.wishlistIconContainer--wishListBKPLP-carousel-small {
+  position: absolute !important;
+  right: 8%;
+}
+
+:global(.vtex-tab-layout-0-x-contentItem--ItsCarouselMobile)
+  .wishlistIconContainer--wishListBKPLP-carousel-small {
+  right: 13% !important;
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 600px) {
+  .wishlistIconContainer {
+    width: auto !important;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .wishlistIconContainer--wishListBKPLP {
+    padding-top: 1px;
+    justify-content: flex-end;
+  }
+
+  .wishlistIconContainer--wishListBKPLP-carousel {
+    position: absolute;
+    top: 15px;
+  }
+
+  .wishlistIconContainer--wishListBKPLP :global(.vtex-button) {
+    /*width: 40px;*/
+    height: 42px;
+
+  }
+}

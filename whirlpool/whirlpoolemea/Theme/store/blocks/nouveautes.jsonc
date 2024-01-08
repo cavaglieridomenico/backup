@@ -1,0 +1,103 @@
+{
+  "store.custom#nouveautes": {
+    "children": [
+      "breadcrumb#nouveautes",
+      "flex-layout.row#halfSpace",
+      "toggle-layout#nouveautesBanner",
+      "flex-layout.row#halfSpace",
+      "toggle-layout#CarouselNouveaute",
+      "toggle-layout#gridNouveautes"
+    ]
+  },
+  "breadcrumb#nouveautes": {
+    "props": {
+      "categories": ["NOUVEAUTÉS"],
+      "showOnMobile": false
+    }
+  },
+  "toggle-layout#nouveautesBanner": {
+    "props": {
+      "visible": true
+    },
+    "children": ["info-card#nouveautesBanner", "info-card#half4"]
+  },
+  "info-card#nouveautesBanner": {
+    "props": {
+      "id": "half-banner-seconf",
+      "isFullModeStyle": false,
+      "imageUrl": "assets/placeholders/placeholder-image-square.jpg",
+      "headline": "Lave-linge FreshCare+",
+      "subhead": "100% fraîcheur, même si vous oubliez votre linge",
+      "callToActionText": "En savoir plus",
+      "callToActionUrl": "#",
+      "blockClass": ["halfBannerReverse"],
+      "textAlignment": "left"
+    }
+  },
+  "toggle-layout#CarouselNouveaute": {
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "rich-text#titleCarouselNouveautes",
+      "list-context.product-list#CarouselNouveautes"
+    ]
+  },
+  "rich-text#titleCarouselNouveautes": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Notre Sélection Nouveauté",
+      "blockClass": "textHome"
+    }
+  },
+  "list-context.product-list#CarouselNouveautes": {
+    "blocks": ["product-summary.shelf#caroselliLanding"],
+    "children": ["slider-layout#CarouselNouveautes"],
+    "props": {
+      "collection": "148",
+      "productList": {
+        "maxItems": 10,
+        "itemsPerPage": 5,
+        "minItemsPerPage": 1,
+        "scroll": "BY_PAGE",
+        "arrows": true,
+        "titleText": "Non sai da dove iniziare? Scopri i prodotti Whirlpool più venduti"
+      }
+    }
+  },
+  "slider-layout#CarouselNouveautes": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 5,
+        "tablet": 2,
+        "phone": 1
+      },
+      "infinite": true,
+      "fullWidth": false,
+      "blockClass": "shelf"
+    }
+  },
+  "toggle-layout#gridNouveautes": {
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "flex-layout.row#space",
+      "rich-text#Technology",
+      "flex-layout.row#gridNouveautes",
+      "flex-layout.row#space"
+    ]
+  },
+  "flex-layout.row#gridNouveautes": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "gridHomePage"
+    },
+    "children": [
+      "flex-layout.col#left",
+      "flex-layout.col#middle",
+      "flex-layout.col#right"
+    ]
+  }
+}

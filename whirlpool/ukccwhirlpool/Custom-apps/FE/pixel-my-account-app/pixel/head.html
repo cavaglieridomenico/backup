@@ -1,0 +1,220 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+	;(function () {
+		var pushState = history.pushState
+		var replaceState = history.replaceState
+
+		history.pushState = function () {
+			pushState.apply(history, arguments)
+			window.dispatchEvent(new Event('pushstate'))
+			window.dispatchEvent(new Event('locationchange'))
+		}
+
+		history.replaceState = function () {
+			replaceState.apply(history, arguments)
+			window.dispatchEvent(new Event('replacestate'))
+			window.dispatchEvent(new Event('locationchange'))
+		}
+
+		window.addEventListener('popstate', function () {
+			window.dispatchEvent(new Event('locationchange'))
+		})
+	})()
+
+	var waitForEl = function (selector, callback) {
+		if (jQuery(selector).is(':visible') || jQuery(selector).length > 0) {
+			callback()
+		} else {
+			setTimeout(function () {
+				waitForEl(selector, callback)
+			}, 100)
+		}
+	}
+
+	const modifymaxlength = () => {
+		waitForEl('.vtex-address-form__state input', function () {
+			const element = document.querySelector('.vtex-address-form__state input')
+			element.addEventListener('blur', () => {
+				$(element).attr('maxLength', 100)
+			})
+		})
+	}
+
+	const modifyEmptyTexts = () => {
+		if (
+			window.location.href.indexOf('account') > 0 &&
+			window.location.hash &&
+			window.location.hash.includes('#/addresses')
+		) {
+			waitForEl('.vtex-my-account-1-x-addressList', function () {
+				setInterval(() => {
+					const emptyText = document.getElementsByClassName("vtex-my-account-1-x-addressList")?.[0]?.firstChild?.firstChild?.firstChild
+						if (emptyText && emptyText?.innerHTML.toLowerCase() == 'you don\'t have any addresses yet!') {
+							emptyText?.innerHTML = 'Please register an address'
+						}
+				}, 200);
+
+			})
+		}
+		if (
+			window.location.href.indexOf('account') > 0 &&
+			window.location.hash &&
+			window.location.hash.includes('#/orders')
+		) {
+			waitForEl('.vtex-my-orders-app-3-x-ordersList', function () {
+				setInterval(() => {
+					const emptyText = document.getElementsByClassName("vtex-my-orders-app-3-x-ordersList")?.[0]?.firstChild?.firstChild?.firstChild?.firstChild?.firstChild
+						if (emptyText?.innerHTML?.toLowerCase() != 'you haven\'t ordered anything yet') {
+							emptyText?.innerHTML = emptyText?.innerHTML.replace("!", '')
+						}
+				}, 200);
+
+			})
+		}
+	}
+	const modifyConsent = () => {
+		if (
+			window.location.href.indexOf('account') > 0 &&
+			window.location.hash &&
+			window.location.hash.includes('#/profile')
+		) {
+			waitForEl('.vtex-my-account-1-x-newsletterContainerMessage', function () {
+				const link = document.getElementsByClassName(
+					'vtex-rich-text-0-x-link--spaziature-impaginazione',
+				)
+
+				var optin =
+					'<span>You can decide if you want to continue to receive marketing communications from Whirlpool UK Appliances Ltd. Set your preferences below, they will be saved automatically.<br><br>I have read and understood the content of the <a class=\'vtex-rich-text-0-x-link vtex-rich-text-0-x-link--spaziature-impaginazione vtex-rich-text-0-x-link--paragraph-text-page\' href="/privacy-policy" target="_blank">privacy notice</a>.</span>'
+
+				!link[0] &&
+					$(optin).appendTo(
+						$('.vtex-my-account-1-x-newsletterContainerMessage'),
+					)
+			})
+
+			waitForEl('#newsletterOptIn', function () {
+				const checkbox = document.getElementById('newsletterOptIn')
+
+				checkbox.addEventListener('change', (event) => {
+					event.stopPropagation()
+					event.stopImmediatePropagation()
+					window.dataLayer = window.dataLayer || []
+					if (event.currentTarget.checked) {
+						window?.dataLayer?.push({
+							event: 'optin',
+						})
+					}
+				})
+			})
+		}
+	}
+
+	const changeLabels = () => {
+		waitForEl('.vtex-pageHeader-link__container', function () {
+			setInterval(() => {
+				const backButtonContainer = [
+					...document.getElementsByClassName('vtex-pageHeader-link__container'),
+				].forEach((item) => {
+					const button = item.firstChild?.firstChild?.lastChild
+					if (button?.innerHTML.toLowerCase() != 'back') {
+						button?.innerHTML = 'Back'
+					}
+				})
+			}, 500)
+		})
+	}
+
+	const removeServicesPrefix = () => {
+		waitForEl('.vtex-my-orders-app-3-x-bundleItem', () => {
+			let bundleItemsTexts = document.getElementsByClassName(
+				'vtex-my-orders-app-3-x-bundleItem',
+			)
+			Array.from(bundleItemsTexts).forEach(function (service) {
+				service.firstChild.firstChild?.innerHTML =
+					service.firstChild.firstChild?.innerHTML
+						.replace('EPP_', '')
+						.replace('FF_', '')
+						.replace('VIP_', '')
+			})
+		})
+	}
+
+	/* change the HTML title in the my-account's Friends & Family section   */
+	const changeHtmlTitle = () => {
+		if (window.location.href.indexOf('account') > 0) {
+			switch (window.location.hash) {
+				case '#/friends':
+					document.getElementsByTagName('title')[0]?.innerHTML =
+						'Friends & Family'
+					break
+				default:
+					document.getElementsByTagName('title')[0]?.innerHTML = 'My account'
+					break
+			}
+		}
+	}
+
+	/* add placeholders to dateOfBirth and phoneNumber input fields*/
+	const addDateAndPhonePlaceholders = () => {
+		waitForEl('.vtex-my-account-1-x-dateOfBirthSubContainer', function () {
+			setInterval(() => {
+				const dateOfBirthInput = document?.querySelector(
+					'.vtex-my-account-1-x-dateOfBirthSubContainer .vtex-my-account-1-x-dataEntryChildren',
+				)
+				if (dateOfBirthInput?.innerHTML?.length <= 0) {
+					dateOfBirthInput?.setAttribute('data-placeholder', 'Date of Birth')
+					dateOfBirthInput?.innerHTML == '' &&
+						(dateOfBirthInput?.innerHTML =
+							dateOfBirthInput?.getAttribute('data-placeholder'))
+				}
+			}, 500)
+		})
+		waitForEl('.vtex-my-account-1-x-phoneNumberSubContainer', function () {
+			setInterval(() => {
+				const phoneInput = document?.querySelector(
+					'.vtex-my-account-1-x-phoneNumberSubContainer .vtex-my-account-1-x-dataEntryChildren',
+				)
+				if (phoneInput?.innerHTML?.length <= 0) {
+					phoneInput?.setAttribute('data-placeholder', 'Phone Number')
+					phoneInput?.innerHTML == '' &&
+						(phoneInput?.innerHTML =
+							phoneInput?.getAttribute('data-placeholder'))
+				}
+			}, 500)
+		})
+	}
+
+	window.addEventListener('hashchange', function () {
+		modifyEmptyTexts()
+		modifyConsent()
+		changeHtmlTitle()
+		changeLabels()
+		removeServicesPrefix()
+		modifymaxlength()
+		addDateAndPhonePlaceholders()
+		//makePhoneNumberMandatory()
+	})
+
+	window.addEventListener('locationchange', function () {
+		modifyEmptyTexts()
+		modifyConsent()
+		changeHtmlTitle()
+		removeServicesPrefix()
+		changeLabels()
+		modifymaxlength()
+		addDateAndPhonePlaceholders()
+		//makePhoneNumberMandatory()
+	})
+
+	window.addEventListener('DOMContentLoaded', function () {
+		modifyEmptyTexts()
+		modifyConsent()
+		changeHtmlTitle()
+		removeServicesPrefix()
+		changeLabels()
+		modifymaxlength()
+		addDateAndPhonePlaceholders()
+		//makePhoneNumberMandatory()
+	})
+</script>

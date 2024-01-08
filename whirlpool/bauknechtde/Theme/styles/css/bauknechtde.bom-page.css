@@ -1,0 +1,442 @@
+
+.emailMeModalOverlay {
+  position: fixed!important;
+  top: 0;
+  left: 0;
+  z-index: 1040;
+  width: 100vw;
+  height: 100vh!important;
+  background-color: #000;
+  opacity: .75;
+}
+
+.emailMeModalWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  outline: 0;
+  cursor: default;
+}
+
+.emailMeModal {
+  z-index: 100;
+  background: white;
+  position: relative;
+  border-radius: 12px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 2rem 4rem;
+  /*min-height: 100%;*/
+  max-width: 700px;
+  margin-top: 100px;
+}
+
+.emailMeModalClose {
+  position: absolute;
+  right: 10px;
+  top: -10px;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  opacity: 1;
+  cursor: pointer;
+  border: none;
+}
+
+.emailMeModalTitle {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.emailMeModalSubitle {
+  margin-top: 1rem;
+}
+.emailMeModalFormTextError{
+  margin-top: 10px;
+  font-weight: 600;
+  color: #B24C24;
+}
+.emailMeModalImageDetailsRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.emailMeImage {
+  max-width: 250px;
+}
+
+.emailMeModalProductDetailsColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.emailMeModalProductName {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 16px 0;
+}
+
+.emailMeModalProductReference {
+  font-size: 1rem;
+  margin: 16px 0;
+}
+
+.emailMeModalSubitle {
+  margin: 16px 0;
+}
+
+.emailMeModalForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.emailMeModalInput {
+  height: 60px;
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid rgb(210, 208, 208);
+  border-radius: 12px;
+  text-indent: 10px;
+  padding: 10px;
+  padding-left: 15px;
+  padding-top: 15px;
+  font-size: 0.8rem;
+  margin-top: 15px;
+}
+.emailMeModalFormWrapper{
+  position: relative;
+}
+.emailMeModalButtonsRow {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 2rem;
+}
+
+.emailMeModalButtonClose {
+  min-width: 100px;
+  background-color: black;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  margin: 0 30px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.emailMeModalButtonSend {
+  min-width: 100px;
+  background-color: #B24C24;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.emailMeModalFormText {
+  position: absolute;
+  font-size: 0.75rem;
+  background-color: #fff;
+  top: -5px;
+  left: 15px;
+  padding: 5px 10px;
+  font-weight: 600;
+}
+
+
+.emailMeModalInput:hover,
+.emailMeModalInput:active,
+.emailMeModalInput:focus {
+border-color: #B24C24;
+outline: none;
+}
+
+
+.emailMeModalInput:hover,
+.emailMeModalInput:active,
+.emailMeModalInput:focus {
+border-color: #B24C24;
+outline: none;
+}
+
+
+.emailMeModalInput {
+border-color: #B24C24;
+outline: none;
+}
+
+
+
+.emailMeModalOutOfStock {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.emailMeModalOutOfStockIcon {
+  margin-right: 10px;
+  display: flex;
+  height: 1.5rem;
+}
+
+.emailMeModalOutOfStockLabel {
+  display: flex;
+  font-size: 1rem;
+}
+
+.buttonContainer {
+  display: flex;
+  padding: 0;
+  border-radius: 11px;
+}
+.buttonContainer :global(.vtex-button) {
+  border: none;
+  cursor: pointer;
+  border-radius: 11px;
+  padding: 5px;
+}
+
+.buttonContainerDiscover :global(.vtex-button__label){
+  border: 1px solid #B24C24;
+  border-radius: 11px;
+}
+.buttonContainerDiscover :global(.vtex-button) {
+  padding: 0 0.125rem;
+  background: transparent;
+  color: #B24C24;
+}
+
+.buttonContainerDiscover :global(.vtex-button__label):hover {
+  border: none;
+  border-radius: 11px;
+}
+.buttonContainerDiscover :global(.vtex-button__label)::before{
+  display: none;
+}
+/*.buttonContainerDiscover :global(.vtex-button)::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0%;
+  width: 0%;
+  height: 1px;
+  opacity: 1;
+  background-color: #B24C24;
+  z-index: 1;
+  transition: all 0.5s ease-in-out;
+  border-radius: 11px;
+}*/
+/*.buttonContainerDiscover :global(.vtex-button):hover::before {
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  opacity: 1;
+  width: 100%;
+  border-radius: 11px;
+}*/
+.buttonContainerDiscover :global(.vtex-button__label) {
+  z-index: 10;
+  position: relative;
+}
+
+
+.buttonContainer :global(.vtex-button):hover {
+  border: none;
+}
+.buttonContainer :global(.vtex-button)::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 20%;
+  opacity: 0;
+  background-color: #953D1B;
+  z-index: 1;
+  transition: all 0.5s ease-in-out;
+  border-radius: 11px;
+}
+.buttonContainer :global(.vtex-button):hover::before {
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  opacity: 1;
+  height: 100%;
+  border-radius: 11px;
+}
+.buttonContainer :global(.vtex-button__label) {
+  padding: 0.3rem !important;
+  z-index: 10;
+}
+.button__label {
+  padding: 0;
+}
+.buttonDataContainer {
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.buttonText {
+  letter-spacing: 2px;
+  font-size: 0.875rem;
+  position: relative;
+  z-index: 10;
+}
+.addToCartIconContainerSticky {
+  display: none;
+  margin-top: -5px;
+  /* display: none; */
+}
+.buttonDataContainerPdp--stickyPdpCart {
+  display: none;
+}
+
+.buttonContainer--stickyPdpCart {
+  width: 100% !important;
+}
+.availableButton{
+  width: auto !important;
+}
+.unavailableButton{
+  position: absolute;
+  bottom: 10px;
+  /* left: 15px; */
+  width: 90% !important;
+  border-radius: 12px;
+  padding: 10px;
+  border: 1px solid #B24C24;
+  color: #B24C24;
+  margin-right: auto;
+  margin-left: auto;
+  right: 0;
+  left: 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  cursor: pointer;
+}
+.unavailableButtonPdp{
+  bottom: 0;
+  /* left: 15px; */
+  width: 100%;
+  border-radius: 12px;
+  padding: 10px;
+  border: 1px solid #B24C24;
+  color: #B24C24;
+  margin-right: auto;
+  margin-left: auto;
+  right: 0;
+  left: 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  cursor: pointer;
+}
+.obsoleteButton{
+  bottom: 10px;
+  color: #fff !important;
+  /* left: 15px; */
+  position: absolute;
+  left: 15px;
+  width: 90% !important;
+  right: 0%;
+  left: 0%;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 12px;
+  padding: 11px;
+  background: #B24C24;
+  color: #fff;
+  margin-right: auto;
+  margin-left: auto;
+  right: 0;
+  left: 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+.obsoleteButtonPdp{
+  bottom: 22px;
+  /* left: 15px; */
+  border-radius: 12px;
+  padding: 10px;
+  background: #B24C24;
+  color: #fff;
+  margin-right: auto;
+  margin-left: auto;
+  text-decoration: none;
+  right: 0;
+  left: 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.quantitySelectorContainer :global(.vtex-dropdown__container) {
+  height: 49px;
+  min-width: 74px;
+  border: none;
+  background-color: #f2f2f2;
+}
+:global(.vtex-styleguide-9-x-container) {
+  height: 100%;
+}
+.quantitySelectorContainer {
+  margin: 0;
+  width: 74px;
+  font-weight: 600;
+  
+}
+:global(.vtex-dropdown__arrow) {
+  margin-left: 15px;
+}
+.quantitySelectorDropdownContainer {
+  height: 100%;
+}
+
+.cartIcon{
+  width: 30px;
+  z-index: 10;
+}
+@media only screen and (max-width: 1100px) and (min-width: 600px) {
+  .infoCardContainer--mobileInfoCardSupporto {
+    width: 100%;
+    padding: unset;
+  }
+  .infoCardTextContainer--mobileInfoCardSupporto {
+    height: 100%;
+  }
+}
+
+@media only screen and (max-width: 1026px) {
+  .buttonDataContainerPdp--stickyPdpCart {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .buttonContainer :global(.vtex-button__label) {
+    padding: 0.2rem !important;
+  }
+}

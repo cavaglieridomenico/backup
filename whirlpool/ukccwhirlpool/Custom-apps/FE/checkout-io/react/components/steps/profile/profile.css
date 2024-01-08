@@ -1,0 +1,158 @@
+/*--- SUMMARY ---*/
+.signInContainerSummary {
+	margin-left: 1.5rem;
+	display: flex;
+	align-items: flex-end;
+}
+.mandatoryContainer {
+}
+.emailLoader {
+	right: 0;
+	top: 30%;
+}
+.signInContainerSummary :global(.vtex-button) {
+	min-height: unset;
+}
+.signInContainerSummary :global(.vtex-button):hover {
+	background: transparent;
+}
+.signInContainerSummary :global(.vtex-button__label),
+.signInContainerSummary :global(.vtex-button__label) > span > div > div {
+	padding: 0 !important;
+}
+.signInContainerSummary :global(.vtex-login-2-x-label) {
+	padding: 0;
+}
+.signInORSummary {
+	margin: 0 1rem;
+	color: #727273;
+}
+.signInChangeEmailSummary {
+	text-transform: uppercase;
+	font-size: 0.875rem;
+	cursor: pointer;
+}
+.profileSumbitButton > button {
+	border: none;
+	transition: all 0.3s ease;
+	border-radius: 11px;
+	width: 50%;
+}
+.profileSumbitButton > button:hover {
+	border: none;
+	transition: all 0.3s ease;
+}
+
+/*--- SUMMARY ---*/
+.profileSummaryContainer {
+	margin-top: 1.5rem;
+	font-size: 0.75rem;
+	color: #727273;
+	padding: 2rem;
+	border: 1px solid #e3e4e6;
+	border-radius: 0.5rem;
+}
+.profileSummaryEmail {
+}
+.profileSummaryLabel {
+}
+.profileSummaryLabelNoMargin {
+	margin-top: 0;
+}
+/*--- INFO DATA ---*/
+.errorLabel {
+	font-weight: 400;
+	font-size: 0.9375rem;
+	margin: 0;
+	margin-top: 0.125rem;
+}
+.emailModal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 999;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.emailModalContent {
+	background-color: #fff;
+	width: 50%;
+	height: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+.emailModalContentWrapper {
+}
+.modalCloseIconContainer {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.modalCloseIcon {
+	padding: 1rem;
+	cursor: pointer;
+}
+.emailModalButtonContainer {
+	display: flex;
+	justify-content: center;
+}
+.emailModalButton {
+	border: none;
+	padding: 0.5rem 1.5rem;
+	border-radius: 5px;
+	cursor: pointer;
+	min-height: 2.5rem;
+	transition: all 0.3s ease;
+}
+.emailModalButton:hover {
+	transition: all 0.3s ease;
+}
+.doubleInputsContainer {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 0.5rem;
+}
+.profileInput {
+	margin: 0;
+	width: 100%;
+	position: relative;
+}
+.profileInput .vtex-input-prefix__group {
+	border: 0;
+}
+.profileInput span {
+	font-size: 13px;
+}
+.profileSumbitButton {
+	margin-top: 1rem;
+	display: flex;
+	justify-content: center;
+	margin-bottom: -2rem;
+}
+.profileSumbitButton button:hover {
+	opacity: 0.7;
+}
+
+@media only screen and (max-width: 780px) {
+	.profileSumbitButton > button {
+		width: 100%;
+	}
+	.doubleInputsContainer {
+		flex-direction: column;
+	}
+	.profileInput {
+		width: 100% !important;
+	}
+}
+.profileEmailLogout {
+	display: inline-block;
+	position: absolute;
+	top: 40%;
+	right: 0;
+}

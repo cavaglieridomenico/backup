@@ -1,0 +1,26 @@
+<link rel="preconnect" href="https://cdn.cookielaw.org">
+<!-- OneTrust Cookies Consent Notice start -->
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" data-document-language="true" type="text/javascript" charset="UTF-8" data-domain-script="a99a2bdf-c821-40db-bac7-88936328efe8"></script>
+<script type="text/javascript">
+  function OptanonWrapper() {
+
+    //Delete blue shield
+    let blueShield = document.querySelector("#ot-sdk-btn-floating");
+    blueShield.style.display = "none";
+
+    //Catch an embedded element
+    let textMoreInfo = document.getElementById("onetrust-policy-text");
+    let linkMoreInfo =  textMoreInfo.lastChild;
+    //Set new link
+    linkMoreInfo.setAttribute("href", "../../oswiadczenie-o-wykorzystaniu-plikow-cookie");
+
+    let cookiesContainer=window.innerWidth>767? 
+      document.getElementById("onetrust-button-group").style.display = "flex":"";
+
+    let cookiesButtons=document.querySelectorAll("button")
+
+    cookiesButtons.forEach(btn=>btn.innerText? btn.style.cssText="font-size:0.9rem !important; margin:10px!important":"")
+
+  }
+ </script>
+<!-- OneTrust Cookies Consent Notice end -->

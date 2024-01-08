@@ -1,0 +1,135 @@
+.wtbTitleContainer {
+  display: flex;
+  margin: 1rem 2rem 2rem 2rem;
+}
+
+.wtbTitle {
+  font-weight: 400;
+  font-size: 1.75rem;
+  color: #007d69;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 1.875rem;
+}
+
+.wtbTitleUnderline {
+  font-weight: 400;
+  font-size: 1.75rem;
+  color: #007d69;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 1.875rem;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+}
+
+.wtbButton {
+  width: 100%;
+  margin: 10px 0px;
+  padding: 0.5rem;
+  background: white;
+  color: #007d69;
+  border-radius: 2px;
+  border: 0px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 0.875rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.buyNowButton {
+  width: 100%;
+  margin: 20px 0px;
+  padding: 0.8rem;
+  background: white;
+  color: #007d69;
+  border: 1px solid #007d69;
+  border-radius: 2px;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+}
+
+.buyNowButton:hover {
+  border: 1px solid transparent;
+}
+
+.buyNowButton:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.0625rem;
+  z-index: 1;
+  transform: scaleX(0);
+}
+
+.buyNowButton:hover:before {
+  background: none repeat scroll 0 0 teal;
+  transition: all 0.5s ease-in-out;
+  transform: scaleX(1);
+}
+
+.buyNowButton.fromLeft:before {
+  transform-origin: 0% 50%;
+}
+
+.retailerWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.retailerItemContainer {
+  flex: 0 0 25%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.storeLocatorLinkContainer {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: #f2f2f2;
+}
+
+.storeLocatorLink {
+  text-decoration: none;
+  color: #007d69;
+}
+
+.wtbImage {
+  width: 121px;
+}
+
+@media only screen and (max-width: 600px) {
+  .wtbTitle {
+    font-size: 1.25rem;
+  }
+
+  .wtbTitleUnderline {
+    font-size: 1.25rem;
+  }
+
+  .retailerWrapper {
+    justify-content: space-around;
+  }
+
+  .retailerItemContainer {
+    flex: 0 0 35%;
+    margin: 10px;
+  }
+
+  .wtbTitleContainer {
+    margin: 0.5rem;
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "store.custom#maps": {
+    // "parent": {
+    //   "header": "header#empty",
+    //   "footer": "footer#empty"
+    // },
+    "blocks": [
+      "custom-fuorisalone",
+      "sandbox#maps",
+      "newsletter-popup#footer"
+    ]
+  },
+  // "custom-fuorisalone": {
+  //   "children": ["sandbox#maps"]
+  // },
+  "sandbox#maps": {
+    "props": {
+      "width": "200px",
+      "height": "100px",
+      "initialContent": "<h1 id='test'>home</h1><script>console.log(props, document.cookie); window.addEventListener('message', function(e){ console.log('got message in home', window.props) });</script>",
+      "allowCookies": true
+    }
+  }
+}

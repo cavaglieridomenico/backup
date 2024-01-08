@@ -1,0 +1,77 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- My account gdpr-->
+<script type="text/javascript">
+  ; (function () {
+    var pushState = history.pushState;
+    var replaceState = history.replaceState;
+
+    history.pushState = function () {
+      pushState.apply(history, arguments);
+      window.dispatchEvent(new Event('pushstate'));
+      window.dispatchEvent(new Event('locationchange'));
+    };
+
+    history.replaceState = function () {
+      replaceState.apply(history, arguments);
+      window.dispatchEvent(new Event('replacestate'));
+      window.dispatchEvent(new Event('locationchange'));
+    };
+
+    window.addEventListener('popstate', function () {
+      window.dispatchEvent(new Event('locationchange'))
+    });
+  })();
+
+  const modifyConsent = () => {
+    if (window.location.href.indexOf('account') > 0 && window.location.hash && window.location.hash == '#/profile') {
+      waitForEl('.vtex-my-account-1-x-newsletterContainerMessage', function () {
+        $(".vtex-my-account-1-x-newsletterContainerTitle").text("")
+        $('.vtex-my-account-1-x-newsletterContainerMessage').text('Przeczytałem i zrozumiałem treść informacji ')
+        var optin = "<span><a class='vtex-rich-text-0-x-link vtex-rich-text-0-x-link--spaziature-impaginazione vtex-rich-text-0-x-link--paragraph-text-page' href=\" /informacja-o-ochronie-prywatnosci\" target=\"_blank\">polityki prywatności</a> dotyczących ochrony danych osobowych oraz :</span>"
+        $(optin).appendTo($('.vtex-my-account-1-x-newsletterContainerMessage'))
+        $("label[for='newsletterOptIn']").html(`Wyrażam zgodę na przetwarzanie moich danych osobowych w celu umożliwienia Whirlpool Polska Appliances Sp. z o.oprzesyłania mi newslettera/wiadomości marketingowych (w formie elektronicznej i nieelektronicznej, w tym za pośrednictwem telefonu, poczty tradycyjnej, e-mail, SMS, MMS, powiadomień push na stronach osób trzecich, w tym na platformach Facebook i Google) dotyczących produktów i usług Whirlpool Polska Appliances Sp. z o.o również tych już zakupionych lub zarejestrowanych przeze mnie, a także w celu prowadzenia badań rynkowych;`)
+        const newsletterCondition = "Warunki przyznania zniżki znajdują się w Regulaminie Promocji poniżej: Kod na 50 złotych rabatu otrzymasz mailem po zapisaniu się do newslettera, niemożliwe jest łączenie go z innymi promocjami, można go użyć tylko raz."
+        if(!$("body > div.render-container.render-route-store-account > div > div.vtex-store__template.bg-base > div > div:nth-child(3) > div > div:nth-child(1) > div > div > section > main > main > div.w-40-ns.w-100-s > div > div > article > main")?.[0]?.textContent.includes(newsletterCondition))
+          $("body > div.render-container.render-route-store-account > div > div.vtex-store__template.bg-base > div > div:nth-child(3) > div > div:nth-child(1) > div > div > section > main > main > div.w-40-ns.w-100-s > div > div > article > main").append(`<p>${newsletterCondition}</p>`)
+      })
+
+      waitForEl('#newsletterOptIn', function () {
+        const checkbox = document.getElementById('newsletterOptIn')
+
+        checkbox.addEventListener('change', (event) => {
+          event.stopPropagation();
+          event.stopImmediatePropagation();
+          let dataLayer = window.dataLayer || []
+          if (event.currentTarget.checked) {
+
+            //GA4FUNREQ61
+            window.postMessage({eventName: 'vtex:ga4-optin'}, window.origin)
+
+          }
+        })
+      })
+
+    }
+  }
+
+  window.addEventListener('locationchange', function () {
+    modifyConsent();
+  })
+  $(document).on('focus', '.vtex-address-form__state input', function () {
+    $('.vtex-address-form__state input').attr('maxLength', 2)
+  })
+  window.addEventListener('DOMContentLoaded', function () {
+    modifyConsent();
+  });
+
+  var waitForEl = function (selector, callback) {
+    if (jQuery(selector).is(":visible") || jQuery(selector).length > 0) {
+      callback()
+    } else {
+      setTimeout(function () {
+        waitForEl(selector, callback)
+      }, 100)
+    }
+  }
+</script>

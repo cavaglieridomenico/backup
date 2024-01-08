@@ -1,0 +1,1044 @@
+.container {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 3.125rem 6.875rem;
+  background: #f2f2f2;
+}
+
+.containerTop {
+}
+.recipeNumber,
+.recipeNumberBottom {
+  font-family: 'myriadLight', Arial;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  display: flex;
+  justify-content: center;
+}
+.recipeNumber {
+  text-transform: uppercase;
+  color: #000;
+}
+.recipeNumberBottom {
+  margin: auto;
+  color: #637977;
+}
+.recipeNumberText {
+  padding: 1.25rem 0;
+}
+.recipeCard {
+  max-width: 32%;
+  text-decoration: none;
+  padding-bottom: 1.875rem;
+}
+.recipeImageContainer {
+  height: auto;
+}
+.recipeImage {
+  object-fit: cover;
+  height: 21.875rem;
+  width: 100%;
+}
+.recipeContent {
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 31rem;
+  justify-content: space-between;
+}
+.recipeContentContainer {
+  display: flex;
+  flex-direction: column;
+}
+.recipeContentType {
+  text-transform: uppercase;
+  font-family: 'myriadBold', Arial;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  color: #000;
+  padding-bottom: 0.3125rem;
+}
+.recipeContentName {
+  color: #000;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0.9375rem;
+  word-break: break-word;
+  word-wrap: break-word;
+  font-family: 'myriadLight', Arial;
+  font-weight: 400;
+  font-size: 1.875rem;
+  line-height: 2.1875rem;
+  padding-right: 0.9375rem;
+}
+.recipeContentName:hover {
+  color: #40a08c;
+  transition: all 0.4s ease;
+}
+.recipeContentName::after {
+  width: 100%;
+  content: '';
+  display: block;
+  height: 0.1875rem;
+  background: #007d69;
+  margin-top: 0.625rem;
+}
+.recipeContentName:hover::after {
+  background: #40a08c;
+  transition: all 0.4s ease;
+}
+.recipeContentTime {
+  font-family: 'myriadBold', Arial;
+  color: #000;
+  padding-bottom: 0.625rem;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  text-transform: uppercase;
+}
+.recipeContentDescription {
+  font-family: 'myriadLight', Arial;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  color: #000;
+  margin-top: 0.625rem;
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+.buttonLink {
+  background: 0 0;
+  border: 0.0625rem solid #007d69;
+  color: #007d69;
+  transition: all 0.2s;
+  text-decoration: none;
+  max-width: 70%;
+  text-align: center;
+  padding: 0.7rem 2rem;
+  width: fit-content;
+  position: relative;
+}
+.buttonLink:hover {
+  border: 0.0625rem solid transparent;
+  transition: all 0.2s;
+}
+.buttonLink::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0.0625rem;
+  background-color: #007d69;
+  z-index: 1;
+  /* transition: all .4s; */
+}
+.buttonLink:hover::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.0625rem;
+  background-color: #007d69;
+  z-index: 1;
+  transition: all 0.4s;
+}
+.buttonLinkText {
+  font-size: 1.125rem;
+  color: #007d69;
+  font-family: 'myriadLight', Arial;
+}
+.buttonArrow {
+  font-family: 'myriadBold', Arial;
+}
+/*--- Pagination ---*/
+.paginationContainer {
+  width: 100%;
+}
+.paginationUl {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+}
+.paginationLi {
+  margin: 0 0.5rem;
+  border: 0.0625rem solid #bbc9c9;
+  width: 2.875rem;
+  height: 2.875rem;
+  transition: all 0.2s;
+}
+.paginationLiActive {
+  border: 0.0625rem solid #007d69;
+  transition: all 0.2s;
+  width: 2.875rem;
+  height: 2.875rem;
+  margin: 0 0.5rem;
+}
+.paginationLiActive > button {
+  color: #007d69;
+}
+.paginationLi:hover {
+  border: 0.0625rem solid #40a08c;
+  transition: all 0.2s;
+}
+.paginationButton {
+  all: unset;
+  color: #585858;
+  font-family: 'myriadLight', Arial;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.25rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.paginationButton:hover {
+  color: #40a08c;
+  transition: all 0.2s;
+}
+.paginationLiLast {
+  margin: 0 0.5rem;
+  background-color: #007d69;
+  width: 2.875rem;
+  height: 2.875rem;
+  transition: all 0.2s;
+}
+.paginationButtonLast {
+  all: unset;
+  color: #fff;
+  font-family: 'myriadLight', Arial;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.25rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  cursor: pointer;
+  margin-top: 0.7rem;
+}
+/*--- Filters --*/
+.filtersContainer {
+  padding: 3.4375rem;
+  background-color: #000;
+}
+.filters {
+  padding-bottom: 1.25rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-top: 3.125rem;
+}
+.categoryFiltersContainer {
+  flex: 0 0 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.filtersDivider {
+  margin: 0 0.9375rem;
+  flex: 0 0 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  opacity: 0.5;
+}
+.filtersDivider > div {
+  height: 12.5rem;
+  width: 0.125rem;
+  display: block;
+  background: #bbc9c9;
+}
+.coursersFiltersContainer {
+  flex: 0 0 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.imageFilter,
+.imageFilterActive,
+.imageFilterDisabled {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  margin-bottom: 1.5625rem;
+  cursor: pointer;
+  align-items: center;
+}
+.imageFilterDisabled {
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
+}
+.imageFilter:hover > svg,
+.imageFilterActive > svg {
+  fill: #007d69;
+  transition: 0.2s all ease-in-out;
+}
+.imageFilter:hover > span,
+.imageFilterActive > span {
+  color: #007d69;
+  transition: 0.2s all ease-in-out;
+}
+.FilterImage {
+  fill: #fff;
+  transition: 0.2s all ease-in-out;
+  width: 5.3125rem;
+  height: 5.3125rem;
+}
+.imageFilterText {
+  font-family: 'myriadLight', Arial;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+  text-align: center;
+}
+.filterCourses,
+.filterCoursesActive {
+  justify-content: center;
+  border: 0.0625rem solid #fff;
+  border-radius: 0.125rem;
+  padding: 0.625rem 0;
+  transition: all 0.2s ease;
+  align-items: center;
+  display: flex;
+  width: 8.75rem;
+  margin: 0.625rem 1.25rem 1.25rem;
+  cursor: pointer;
+}
+.filterCourses:hover,
+.filterCoursesActive {
+  border: 0.0625rem solid #007d69;
+  transition: all 0.2s ease;
+}
+.filterCourses:hover > span,
+.filterCoursesActive > span {
+  color: #007d69;
+  transition: all 0.2s ease;
+}
+.filterCourserText {
+  font-family: 'myriadLight', Arial;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.2;
+  color: #fff;
+  transition: color 0.5s ease;
+}
+.filterDisabled {
+  justify-content: center;
+  border: 0.0625rem solid #bbc9c9;
+  border-radius: 0.125rem;
+  padding: 0.625rem 0;
+  transition: all 0.2s ease;
+  align-items: center;
+  display: flex;
+  width: 8.75rem;
+  margin: 0.625rem 1.25rem 1.25rem;
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
+}
+/*-- Loader --*/
+.loaderFormContainer {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0;
+}
+.loaderForm {
+  font-size: 10px;
+  text-indent: -9999em;
+  width: 11em;
+  height: 11em;
+  border-radius: 50%;
+  background: #007d69;
+  background: -moz-linear-gradient(
+    left,
+    #007d69 10%,
+    rgba(237, 177, 18, 0) 42%
+  );
+  background: -webkit-linear-gradient(
+    left,
+    #007d69 10%,
+    rgba(237, 177, 18, 0) 42%
+  );
+  background: -o-linear-gradient(left, #007d69 10%, rgba(237, 177, 18, 0) 42%);
+  background: -ms-linear-gradient(left, #007d69 10%, rgba(237, 177, 18, 0) 42%);
+  background: linear-gradient(to right, #007d69 10%, rgba(237, 177, 18, 0) 42%);
+  position: relative;
+  -webkit-animation: load3 1.4s infinite linear;
+  animation: load3 1.4s infinite linear;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.loaderForm:before {
+  width: 50%;
+  height: 50%;
+  background: #007d69;
+  border-radius: 100% 0 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+}
+.loaderForm:after {
+  background: #ffffff;
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+  content: '';
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+@-webkit-keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+/*--- SINGLE RECIPE ---*/
+.sectionsContainer {
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem 3rem 0 3rem;
+}
+.sectionContainer {
+  margin: 2.5rem 0;
+}
+.breadcrumbContainer {
+  padding: 1rem 0 1rem 3.125rem;
+  max-width: 96rem;
+  margin: auto;
+  width: 100%;
+}
+.breadLink,
+.breadLinkBold {
+  font-size: 0.75rem;
+  line-height: 22px;
+  margin: auto;
+  font-weight: 300;
+  padding: 0 0.4rem;
+  text-transform: uppercase;
+  color: #505050;
+  text-decoration: none;
+}
+.breadLink:hover {
+  color: #007d69;
+}
+.breadLinkBold {
+  font-family: 'myriadBold';
+}
+.mainImage {
+  width: 100%;
+  max-height: 22.8125rem;
+  object-fit: cover;
+}
+
+.SosseMainImage {
+  object-position: 90% 30%;
+}
+/*--- SLIDER ---*/
+.carouselTopDiv {
+  display: flex;
+}
+.carouselTopContainer {
+  width: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carouselTopContainer > div > div > div {
+  transition: all 300ms linear 0ms;
+}
+.carouselTopImg {
+  pointer-events: none;
+}
+.sideCarouselContainer {
+  position: absolute;
+  transform: rotate(90deg) translateY(50%);
+}
+.carouselTopImgSmallContainer {
+}
+.carouselTopImgActive {
+  border: 2px solid #007d69;
+}
+.carouselTopImgSmall,
+.carouselTopImgSmallActive {
+  height: 100%;
+  transform: rotate(-90deg);
+  object-fit: cover;
+}
+.carouselTopImgSmallActive {
+  border: 2px solid #007d69;
+  box-sizing: border-box;
+}
+.carouselTopTextDiv {
+  width: 50%;
+  padding: 0 5rem;
+}
+.carouselTopTextContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+.carouselTopTextContainer .container {
+  margin: 0;
+  padding: 0;
+}
+.carouselTopTextName {
+  font-family: 'myriadLight', Arial;
+  font-weight: 400;
+  font-size: 2.1875rem;
+  line-height: 2.375rem;
+  color: #000;
+  text-transform: uppercase;
+  margin-bottom: 1.875rem;
+}
+.carouselTopTextName::after {
+  width: 100%;
+  content: '';
+  display: block;
+  height: 0.125rem;
+  background: #007d69;
+  margin-top: 0.625rem;
+}
+.carouselTopTextDesc .paragraph {
+  color: #000;
+  font-family: 'myriadBold', Arial;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.125rem;
+  margin: 0;
+}
+.carouselTopTextSubDesc .paragraph {
+  color: #000;
+  font-family: 'myriadLight', Arial;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.4375rem;
+  margin: 1.875rem 0;
+  text-align: left;
+}
+.carouselTopTextDesc .paragraph .link,
+.carouselTopTextSubDesc .paragraph .link {
+  color: #007d69;
+}
+.carouselTopTextTime,
+.carouselTopTextPrep,
+.carouselTopTextLevel {
+  color: rgb(0, 125, 105);
+  padding-top: 0.1875rem;
+  font-family: 'myriadLight', Arial;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.3125rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.clockSvg {
+  height: 40px;
+  width: 40px;
+  margin-right: 0.5rem;
+}
+/*--- INGREDIENTS ---*/
+.ingredientsTitle,
+.relatedTitle {
+  font-family: 'myriadLight', Arial;
+  font-weight: 400;
+  font-size: 2.625rem;
+  line-height: 2.9375rem;
+  color: #000;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.ingredientsTitleText {
+  border-bottom: 2px solid #007d69;
+  padding-bottom: 1rem;
+}
+.relatedTitleText {
+  border-bottom: 2px solid #007d69;
+  padding-bottom: 1rem;
+}
+/* .ingredientsTitle::after,
+.relatedTitle::after {
+  width: 11.125rem;
+  content: '';
+  display: block;
+  height: 0.125rem;
+  background: #007d69;
+  position: absolute;
+  bottom: -0.625rem;
+} */
+.ingredientsDiv,
+.ingredientsDivPreparation {
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+.ingredientsDivPreparation {
+  justify-content: flex-start;
+}
+.ingredientsSpecs,
+.preparationSpecs {
+  padding: 3% 6%;
+}
+.preparationSpecs {
+  display: flex;
+  align-items: center;
+}
+.ingredientsSpecsTitle {
+  font-family: 'myriadLight', Arial;
+  font-weight: 400;
+  font-size: 1.875rem;
+  line-height: 2.9375rem;
+  color: #000;
+  text-transform: uppercase;
+  position: relative;
+}
+.ingredientsSpecsTitle::after {
+  width: 100%;
+  content: '';
+  display: block;
+  height: 0.125rem;
+  background: #007d69;
+  position: absolute;
+  bottom: -0.625rem;
+  left: 0;
+}
+.ingredientsListDiv {
+}
+.ingredientsListUl {
+  margin: 3rem 0 0 0;
+  list-style: none;
+}
+.ingredientsListLi {
+  font-family: 'myriadLight', Arial;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 2.5rem;
+  color: #585858;
+}
+.ingredientsListLi::before {
+  font-family: sans-serif;
+  content: '•';
+  padding-right: 1rem;
+  color: #007d69;
+}
+.ingredientsImageDiv {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.ingredientsImageBG {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  height: 100%;
+}
+.ingredientsImage {
+  max-width: 30rem;
+  z-index: 2;
+}
+.preparationListSpan {
+  font-family: 'myriadBold', Arial;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.4375rem;
+  color: #585858;
+  margin-bottom: 1rem;
+}
+.preparationListUl {
+  margin: 0;
+  list-style: none;
+}
+.preparationListLi {
+  font-family: 'myriadLight', Arial;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  color: #585858;
+}
+.preparationListDiv {
+  margin: 0.5rem 0;
+}
+/*--- RELATED CAROUSEL ---*/
+.relatedCarouselContainer {
+  background-color: #f2f2f2;
+}
+.relatedTitle {
+  justify-content: flex-start;
+  padding-left: 3rem;
+  padding-top: 2.5rem;
+}
+.relatedCarouselDiv {
+  background-color: #000;
+  padding: 5rem 0;
+}
+.relatedImageDiv {
+  max-width: 100%;
+  max-height: 14rem;
+}
+.relatedImg {
+  width: 100%;
+  max-height: 12rem;
+  object-fit: cover;
+}
+.relatedInfoDiv {
+  padding: 1rem 1.25rem;
+  width: 100%;
+  min-height: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.relatedInfo {
+  display: flex;
+  flex-direction: column;
+}
+.relatedInfoType {
+  text-transform: uppercase;
+  font-family: 'myriadBold', Arial;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  color: #007d69;
+  padding-bottom: 0.3125rem;
+}
+.relatedInfoName {
+  font-size: 1.875rem;
+  color: #007d69;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0.9375rem;
+  word-break: break-word;
+  word-wrap: break-word;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.relatedInfoName:hover {
+  color: #40a08c;
+  transition: all 0.2s ease-in-out;
+}
+.relatedInfoName::after {
+  width: 100%;
+  content: '';
+  display: block;
+  height: 0.1875rem;
+  background: #007d69;
+  margin-top: 0.625rem;
+}
+.relatedInfoTime {
+  font-family: 'myriadBold', Arial;
+  color: #000;
+  padding-bottom: 0.625rem;
+  font-size: 0.9375rem;
+  text-transform: uppercase;
+}
+.relatedButton {
+  background: 0 0;
+  border: 0.0625rem solid #007d69;
+  color: #007d69;
+  transition: all 0.2s;
+  text-decoration: none;
+  text-align: center;
+  padding: 0.7rem 2rem;
+  width: fit-content;
+  position: relative;
+  cursor: pointer;
+}
+.relatedButton:hover {
+  border: 0.0625rem solid transparent;
+  transition: all 0.2s;
+}
+.relatedButton::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0.0625rem;
+  background-color: #007d69;
+  z-index: 1;
+}
+.relatedButton:hover::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.0625rem;
+  background-color: #007d69;
+  z-index: 1;
+  transition: all 0.4s;
+}
+.relatedButtonText {
+  font-size: 1.125rem;
+  color: #007d69;
+  font-family: 'myriadLight', Arial;
+}
+.buttonLinkRelated {
+  text-decoration: none;
+}
+.carouselDotsDiv {
+  display: flex;
+  justify-content: center;
+}
+.carouselMainImageContainer {
+  background: white;
+  width: 500px;
+  height: 500px;
+  border: 30px solid white;
+  text-align: center;
+  line-height: 240px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+.rightArrowButton {
+  width: 4.375rem;
+  height: 5rem;
+  background: #007d69;
+  align-self: center;
+  position: absolute;
+  right: 1rem;
+  z-index: 10;
+  border: none;
+  color: white;
+  font-family: myriadLight;
+  line-height: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  cursor: pointer;
+  border-radius: 0;
+  padding-bottom: 0.3rem;
+}
+.leftArrowButton {
+  width: 4.375rem;
+  height: 5rem;
+  background: #007d69;
+  align-self: center;
+  position: absolute;
+  left: 1rem;
+  z-index: 10;
+  border: none;
+  color: white;
+  font-family: myriadLight;
+  line-height: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  cursor: pointer;
+  border-radius: 0;
+  padding-bottom: 0.3rem;
+}
+.paginationAnchor {
+  display: flex;
+  text-decoration: none;
+}
+
+/*--- Media Queries ---*/
+@media only screen and (max-width: 1200px) {
+  /* .container {
+		padding: 3.125rem 1.875rem;
+	}*/
+}
+
+@media only screen and (max-width: 1024px) {
+  .paginationUl {
+    flex-wrap: wrap;
+    row-gap: 0.8rem;
+    column-gap: 0.3rem;
+  }
+  .carouselTopDiv {
+    display: block;
+  }
+  .carouselTopTextDiv {
+    width: 100%;
+  }
+  .sectionsContainer {
+    padding: 2.5rem 1rem 0 1rem;
+  }
+  .ingredientsImage {
+    max-width: 20rem;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .container {
+    display: block;
+    padding: 0;
+  }
+  .buttonLink {
+    max-width: 100%;
+    width: 100%;
+  }
+  .buttonArrow {
+    position: absolute;
+    right: 4%;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .filters {
+    flex-direction: column;
+  }
+  .filtersContainer {
+    padding: 0;
+  }
+  .filtersDivider > div {
+    width: 12.5rem;
+    height: 0.125rem;
+    margin: 1rem 0;
+  }
+  .container {
+    padding: 0;
+  }
+  .recipeCard {
+    max-width: unset;
+  }
+  .sectionsContainer {
+    padding: 2.5rem 1rem 0 1rem;
+  }
+  .carouselTopDiv {
+    flex-direction: column;
+  }
+  .carouselTopContainer,
+  .carouselTopTextDiv {
+    width: 100%;
+  }
+  .carouselTopContainer {
+    margin-bottom: 3rem;
+  }
+  .carouselTopTextDiv {
+    padding: 0 3rem;
+  }
+  .sideCarouselContainer,
+  .ingredientsImageDiv,
+  .ingredientsImageDiv {
+    display: none;
+  }
+  .carouselTopTextName,
+  .ingredientsTitle,
+  .relatedTitle {
+    font-size: 1.5rem;
+    font-family: 'myriadLight', Arial;
+  }
+  .ingredientsTitle {
+    padding-right: 2.5rem;
+  }
+  .carouselTopTextDesc,
+  .carouselTopTextSubDesc {
+    font-size: 0.9375rem;
+  }
+  .preparationSpecs {
+    padding: 1.125rem 2.5rem;
+  }
+  .preparationListUl {
+    padding: 0;
+  }
+  .carouselMainImageContainer {
+    width: 300px;
+    height: 300px;
+  }
+  .relatedCarouselDiv {
+    height: 44rem;
+  }
+  .rightArrowButton {
+    width: 2.375rem;
+    height: 5rem;
+    right: 0rem;
+    border-top-left-radius: 5rem;
+    border-bottom-left-radius: 5rem;
+  }
+  .leftArrowButton {
+    width: 2.375rem;
+    height: 5rem;
+    left: 0rem;
+    border-top-right-radius: 5rem;
+    border-bottom-right-radius: 5rem;
+  }
+  .textNearIcon {
+    font-size: 0.85rem;
+  }
+  .relatedButton {
+    width: 98%;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1300px) {
+  .carouselTopTextDiv {
+    padding: 0 0 0 5rem;
+  }
+  .carouselMainImageContainer {
+    width: 400px;
+    height: 400px;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+  .sideCarouselContainer {
+    left: -30% !important;
+  }
+}
+@media only screen and (min-width: 640px) and (max-width: 1200px) {
+  .recipeCard {
+    max-width: 48%;
+  }
+}
+@media only screen and (min-width: 640px) and (max-width: 1024px) {
+  .carouselTopContainer {
+    width: 100%;
+  }
+}

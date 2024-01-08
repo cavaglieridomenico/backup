@@ -1,0 +1,462 @@
+{
+  "toggle-layout#BannerTab": {
+    "props": {
+      "visible": true
+    },
+    "children": ["tab-layout#BannerTab"]
+  },
+  "tab-layout#BannerTab": {
+    "children": ["tab-list#BannerTab", "tab-content#BannerTab"],
+    "props": {
+      "blockClass": "BannerTab",
+      "defaultActiveTabId": "BannerTab1"
+    }
+  },
+  "tab-list#BannerTab": {
+    "children": [
+      "tab-list.item#BannerTab1",
+      "tab-list.item#BannerTab2",
+      "tab-list.item#BannerTab3",
+      "tab-list.item#BannerTab4",
+      "tab-list.item#BannerTab5",
+      "tab-list.item#BannerTab6"
+    ],
+    "props": {
+      "blockClass": ["BannerTabList-blackFiber"]
+    }
+  },
+  "tab-list.item#BannerTab1": {
+    "props": {
+      "tabId": "BannerTab1",
+      "label": "Mantenere in caldo",
+      "defaultActiveTab": true
+    }
+  },
+  "tab-list.item#BannerTab2": {
+    "props": {
+      "tabId": "BannerTab2",
+      "label": "Fondere"
+    }
+  },
+  "tab-list.item#BannerTab3": {
+    "props": {
+      "tabId": "BannerTab3",
+      "label": "Sobbollire"
+    }
+  },
+  "tab-list.item#BannerTab4": {
+    "props": {
+      "tabId": "BannerTab4",
+      "label": "Bollire"
+    }
+  },
+  "tab-list.item#BannerTab6": {
+    "props": {
+      "tabId": "BannerTab6",
+      "label": "Bollire"
+    }
+  },
+  "tab-content#BannerTab": {
+    "props": {
+      "blockClass": "bannerTab"
+    },
+    "children": [
+      "tab-content.item#BannerTab1",
+      "tab-content.item#BannerTab2",
+      "tab-content.item#BannerTab3",
+      "tab-content.item#BannerTab4"
+    ]
+  },
+  "tab-content.item#BannerTab1": {
+    "children": ["flex-layout.row#bannerTabContent"],
+    "props": {
+      "tabId": "BannerTab1",
+      "blockClass": "TabContent"
+    }
+  },
+  "tab-content.item#BannerTab2": {
+    "children": ["flex-layout.row#bannerTabContent"],
+    "props": {
+      "tabId": "BannerTab2",
+      "blockClass": "TabContent"
+    }
+  },
+  "tab-content.item#BannerTab3": {
+    "children": ["flex-layout.row#bannerTabContent"],
+    "props": {
+      "tabId": "BannerTab3",
+      "blockClass": "TabContent"
+    }
+  },
+  "tab-content.item#BannerTab4": {
+    "children": ["flex-layout.row#bannerTabContent"],
+    "props": {
+      "tabId": "BannerTab4",
+      "blockClass": "TabContent"
+    }
+  },
+  "flex-layout.row#bannerTabContent": {
+    "props": {
+      "blockClass": "bannerTabContentBanner"
+    },
+    "children": [
+      "flex-layout.col#imagebannerTabContent",
+      "flex-layout.col#descbannerTabContent"
+    ]
+  },
+  "flex-layout.col#imagebannerTabContent": {
+    "props": {
+      "blockClass": "imageBannerTabBanner"
+    },
+    "children": ["image#imageBannerTabBanner"]
+  },
+  "image#imageBannerTabBanner": {
+    "props": {
+      "src": "assets/placeholders/placeholder-vertical.jpg",
+      "blockClass": "imageBannerTabBanner"
+    }
+  },
+  "flex-layout.col#descbannerTabContent": {
+    "props": {
+      "blockClass": "textBannerTabBanner"
+    },
+    "children": [
+      "toggle-layout#logoBannerTopCarousel",
+      "rich-text#titltebannertabBanner",
+      "rich-text#descbannertabBanner",
+      "toggle-layout#logoBannerTop2",
+      "rich-text#titltebannertabBanner2",
+      "rich-text#descbannertabBanner2"
+    ]
+  },
+  "toggle-layout#logoBannerTopCarousel": {
+    "props": {
+      "visible": true
+    },
+    "children": ["image#LogoBannerTopCarousel"]
+  },
+  "image#LogoBannerTopCarousel": {
+    "props": {
+      "visible": true,
+      "src": "assets/postillaBanner/logoGoogle.jpg",
+      "width": "2rem",
+      "blockClass": ["marginBottom"]
+    }
+  },
+  "rich-text#titltebannertabBanner": {
+    "props": {
+      "text": "Mentre ti godi le bollicine... Porta in ebollizione l’acqua e la mantiene bollente.",
+      "blockClass": "titltebannertabBanner"
+    }
+  },
+  "rich-text#titltebannertabBanner2": {
+    "props": {
+      "text": "Mentre ti godi le bollicine... Porta in ebollizione l’acqua e la mantiene bollente.",
+      "blockClass": "titltebannertabBanner"
+    }
+  },
+  "rich-text#descbannertabBanner": {
+    "props": {
+      "text": "Fai bollire l'acqua e mantienila bollente.\nLa funzione “bollire” del nuovo piano induzione Whirlpool porta ad ebollizione l’acqua evitando sprechi di energia.",
+      "blockClass": "descbannertabBanner"
+    }
+  },
+  "rich-text#descbannertabBanner2": {
+    "props": {
+      "text": "Fai bollire l'acqua e mantienila bollente.\nLa funzione “bollire” del nuovo piano induzione Whirlpool porta ad ebollizione l’acqua evitando sprechi di energia.",
+      "blockClass": "descbannertabBanner"
+    }
+  },
+  //Black
+  "toggle-layout#BannerTabBlackW6": {
+    "props": {
+      "visible": true,
+      "blockClass": "BannerTabBlackContainer"
+    },
+    "children": ["tab-layout#BannerTabBlackW6"]
+  },
+  "tab-layout#BannerTabBlackW6": {
+    "children": ["tab-list#BannerTabW6", "tab-content#BannerTabBlackW6"],
+    "props": {
+      "blockClass": "BannerTabBlack",
+      "defaultActiveTabId": "BannerTab1"
+    }
+  },
+  "tab-list#BannerTabW6": {
+    "children": [
+      "tab-list.item#BannerTab1",
+      "tab-list.item#BannerTab2",
+      "tab-list.item#BannerTab3",
+      "tab-list.item#BannerTab4",
+      "tab-list.item#BannerTab5"
+    ],
+    "props": {
+      "blockClass": ["BannerTabList-blackFiber"]
+    }
+  },
+  "tab-content#BannerTabBlackW6": {
+    "props": {
+      "blockClass": "bannerTabBlack"
+    },
+    "children": [
+      "tab-content.item#BannerTab1Black",
+      "tab-content.item#BannerTab2Black",
+      "tab-content.item#BannerTab3Black",
+      "tab-content.item#BannerTab4Black",
+      "tab-content.item#BannerTab5Black"
+    ]
+  },
+  "toggle-layout#BannerTabBlack": {
+    "props": {
+      "visible": true,
+      "blockClass": "BannerTabBlackContainer"
+    },
+    "children": ["tab-layout#BannerTabBlack"]
+  },
+  "tab-layout#BannerTabBlack": {
+    "children": ["tab-list#BannerTab", "tab-content#BannerTabBlack"],
+    "props": {
+      "blockClass": "BannerTabBlack",
+      "defaultActiveTabId": "BannerTab1"
+    }
+  },
+  "tab-content#BannerTabBlack": {
+    "props": {
+      "blockClass": "bannerTabBlack"
+    },
+    "children": [
+      "tab-content.item#BannerTab1Black",
+      "tab-content.item#BannerTab2Black",
+      "tab-content.item#BannerTab3Black",
+      "tab-content.item#BannerTab4Black",
+      "tab-content.item#BannerTab5Black",
+      "tab-content.item#BannerTab6Black"
+    ]
+  },
+
+  "tab-content.item#BannerTab1Black": {
+    "children": ["flex-layout.row#bannerTabContentBlack"],
+    "props": {
+      "tabId": "BannerTab1",
+      "blockClass": "TabContentBlack"
+    }
+  },
+  "tab-content.item#BannerTab2Black": {
+    "children": ["flex-layout.row#bannerTabContentBlack"],
+    "props": {
+      "tabId": "BannerTab2",
+      "blockClass": "TabContentBlack"
+    }
+  },
+  "tab-content.item#BannerTab3Black": {
+    "children": ["flex-layout.row#bannerTabContentBlack"],
+    "props": {
+      "tabId": "BannerTab3",
+      "blockClass": "TabContentBlack"
+    }
+  },
+  "tab-content.item#BannerTab4Black": {
+    "children": ["flex-layout.row#bannerTabContentBlack"],
+    "props": {
+      "tabId": "BannerTab4",
+      "blockClass": "TabContentBlack"
+    }
+  },
+  "tab-content.item#BannerTab5Black": {
+    "children": ["flex-layout.row#bannerTabContentBlack"],
+    "props": {
+      "tabId": "BannerTab5",
+      "blockClass": "TabContentBlack"
+    }
+  },
+  "tab-content.item#BannerTab6Black": {
+    "children": ["flex-layout.row#bannerTabContentBlack"],
+    "props": {
+      "tabId": "BannerTab6",
+      "blockClass": "TabContentBlack"
+    }
+  },
+  "flex-layout.row#bannerTabContentBlack": {
+    "props": {
+      "blockClass": "bannerTabContentBanner"
+    },
+    "children": [
+      "flex-layout.col#imagebannerTabContent",
+      "flex-layout.col#descbannerTabContentBlack"
+    ]
+  },
+  "flex-layout.col#descbannerTabContentBlack": {
+    "props": {
+      "blockClass": "textBannerTabBanner"
+    },
+    "children": [
+      "toggle-layout#logoBannerTopBlack",
+      "toggle-layout#logoSmartDisplay",
+      "toggle-layout#logoBannerTop3Cont"
+    ]
+  },
+  "toggle-layout#logoSmartDisplay": {
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "image#logoSmartDisplay",
+      "rich-text#titltebannertabBannerBlack2",
+      "rich-text#descbannertabBannerBlack2"
+    ]
+  },
+  "image#logoSmartDisplay": {
+    "props": {
+      "src": "assets/postillaBanner/fours2.png",
+      "width": "2rem",
+      "blockClass": ["marginBottom", "blackBanner2"]
+    }
+  },
+  "toggle-layout#logoBannerTop3Cont": {
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "image#LogoBannerTopCarouselBlack2",
+      "rich-text#titltebannertabBannerBlack3",
+      "rich-text#descbannertabBannerBlack3"
+    ]
+  },
+  "toggle-layout#logoBannerTopBlack": {
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "image#LogoBannerTopCarouselBlack2",
+      "rich-text#titltebannertabBannerBlack",
+      "rich-text#descbannertabBannerBlack"
+    ]
+  },
+  "image#LogoBannerTopCarouselBlack2": {
+    "props": {
+      "visible": true,
+      "src": "assets/placeholders/placeholder-vertical.jpg",
+      "blockClass": ["marginBottom"]
+    }
+  },
+  "rich-text#titltebannertabBannerBlack": {
+    "props": {
+      "text": "Mentre ti godi le bollicine... Porta in ebollizione l’acqua e la mantiene bollente.",
+      "blockClass": "titltebannertabBannerBlack"
+    }
+  },
+  "rich-text#titltebannertabBannerBlack2": {
+    "props": {
+      "text": "Mentre ti godi le bollicine... Porta in ebollizione l’acqua e la mantiene bollente.",
+      "blockClass": "titltebannertabBannerBlack"
+    }
+  },
+  "rich-text#titltebannertabBannerBlack3": {
+    "props": {
+      "text": "Mentre ti godi le bollicine... Porta in ebollizione l’acqua e la mantiene bollente.",
+      "blockClass": "titltebannertabBannerBlack"
+    }
+  },
+  "rich-text#descbannertabBannerBlack": {
+    "props": {
+      "text": "Fai bollire l'acqua e mantienila bollente.\nLa funzione “bollire” del nuovo piano induzione Whirlpool porta ad ebollizione l’acqua evitando sprechi di energia.",
+      "blockClass": "descbannertabBannerBlack"
+    }
+  },
+  "rich-text#descbannertabBannerBlack2": {
+    "props": {
+      "text": "Fai bollire l'acqua e mantienila bollente.\nLa funzione “bollire” del nuovo piano induzione Whirlpool porta ad ebollizione l’acqua evitando sprechi di energia.",
+      "blockClass": "descbannertabBannerBlack"
+    }
+  },
+  "rich-text#descbannertabBannerBlack3": {
+    "props": {
+      "text": "Fai bollire l'acqua e mantienila bollente.\nLa funzione “bollire” del nuovo piano induzione Whirlpool porta ad ebollizione l’acqua evitando sprechi di energia.",
+      "blockClass": "descbannertabBannerBlack"
+    }
+  },
+  "experimental__visibility-layout#BannerTab3": {
+    "props": {
+      "visible": true
+    },
+    "children": ["tab-layout#BannerTab3"]
+  },
+  "tab-layout#BannerTab3": {
+    "children": ["tab-list#BannerTab3", "tab-content#BannerTab3"],
+    "props": {
+      "blockClass": "BannerTab",
+      "defaultActiveTabId": "BannerTab1"
+    }
+  },
+  "tab-list#BannerTab3": {
+    "children": [
+      "tab-list.item#BannerTab1",
+      "tab-list.item#BannerTab2",
+      "tab-list.item#BannerTab3"
+    ],
+    "props": {
+      "blockClass": ["BannerTabList-blackFiber"]
+    }
+  },
+  "tab-content#BannerTab3": {
+    "props": {
+      "blockClass": "bannerTab"
+    },
+    "children": [
+      "tab-content.item#BannerTab3-1",
+      "tab-content.item#BannerTab3-2",
+      "tab-content.item#BannerTab3-3"
+    ]
+  },
+  "tab-content.item#BannerTab3-1": {
+    "children": ["flex-layout.row#bannerTabContent3"],
+    "props": {
+      "tabId": "BannerTab1",
+      "blockClass": "TabContent"
+    }
+  },
+  "tab-content.item#BannerTab3-2": {
+    "children": ["flex-layout.row#bannerTabContent3"],
+    "props": {
+      "tabId": "BannerTab2",
+      "blockClass": "TabContent"
+    }
+  },
+  "tab-content.item#BannerTab3-3": {
+    "children": ["flex-layout.row#bannerTabContent3"],
+    "props": {
+      "tabId": "BannerTab3",
+      "blockClass": "TabContent"
+    }
+  },
+  "flex-layout.row#bannerTabContent3": {
+    "props": {
+      "blockClass": "bannerTabContentBanner"
+    },
+    "children": [
+      "flex-layout.col#imagebannerTabContent3",
+      "flex-layout.col#descbannerTabContent3"
+    ]
+  },
+  "flex-layout.col#imagebannerTabContent3": {
+    "props": {
+      "blockClass": "imageBannerTabBanner"
+    },
+    "children": ["image#imageBannerTabBanner3"]
+  },
+  "image#imageBannerTabBanner3": {
+    "props": {
+      "src": "assets/placeholders/placeholder-vertical.jpg",
+      "blockClass": "imageBannerTabBanner"
+    }
+  },
+  "flex-layout.col#descbannerTabContent3": {
+    "props": {
+      "blockClass": "textBannerTabBanner"
+    },
+    "children": [
+      "rich-text#titltebannertabBanner",
+      "rich-text#descbannertabBanner"
+    ]
+  }
+}

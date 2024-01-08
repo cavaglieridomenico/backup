@@ -1,0 +1,214 @@
+<!-- BEGIN LivePerson Monitor. -->
+<!-- <script type="text/javascript">
+	;(function () {
+		var pushState = history.pushState
+		var replaceState = history.replaceState
+
+		history.pushState = function () {
+			pushState.apply(history, arguments)
+			window.dispatchEvent(new Event('pushstate'))
+			window.dispatchEvent(new Event('locationchange'))
+		}
+
+		history.replaceState = function () {
+			replaceState.apply(history, arguments)
+			window.dispatchEvent(new Event('replacestate'))
+			window.dispatchEvent(new Event('locationchange'))
+		}
+
+		window.addEventListener('popstate', function () {
+			window.dispatchEvent(new Event('locationchange'))
+		})
+	})()
+
+	var waitForEl = function (selector, callback) {
+		let element = document.querySelector(selector)
+		if (
+			element &&
+			(window.getComputedStyle(element).visibility == 'visible' ||
+				document.querySelector(selector).length > 0)
+		) {
+			callback()
+		} else {
+			setTimeout(function () {
+				waitForEl(selector, callback)
+			}, 100)
+		}
+	}
+
+	const script = document.createElement('script')
+	script.src = '/arquivos/chatBotScript.js'
+	script.type = 'text/javascript'
+	script.id = 'chat-bot-script'
+
+	// waitForEl('.lpc_maximized-header__minimize-button', function () {
+	// 	console.log(
+	// 		document.getElementsByClassName('lpc_maximized-header__minimize-button'),
+	// 		"document.getElementsByClassName('lpc_maximized-header__minimize-button')",
+	// 	)
+	// 	const chatBotClose = document.getElementsByClassName(
+	// 		'lpc_maximized-header__minimize-button',
+	// 	)
+
+	// 	debugger
+	// 	chatBotClose[0].click()
+	// })
+
+	window.addEventListener('DOMContentLoaded', function () {
+		document.body.appendChild(script)
+
+		setTimeout(() => {
+			waitForEl('#LP_DIV_1619009067286', function () {
+				const chatBotDiv = document.getElementById(
+					'LP_DIV_1619009067286',
+				).firstChild
+				chatBotDiv.click()
+			})
+		}, 5000)
+
+		waitForEl('.lp_desktop', function () {
+			// debugger
+			console.log(
+				document.getElementsByClassName('lp_desktop'),
+				"document.getElementsByClassName('lp_desktop')",
+			)
+			document.getElementsByClassName('lp_desktop')[0].style.display = 'none'
+
+			setTimeout(() => {
+				// debugger
+				document
+					.getElementsByClassName('lpc_maximized-header__minimize-button')[0]
+					.click()
+			}, 2000)
+		})
+	})
+</script> -->
+<!-- <script type="text/javascript">
+	;(function () {
+		var pushState = history.pushState
+		var replaceState = history.replaceState
+
+		history.pushState = function () {
+			pushState.apply(history, arguments)
+			window.dispatchEvent(new Event('pushstate'))
+			window.dispatchEvent(new Event('locationchange'))
+		}
+
+		history.replaceState = function () {
+			replaceState.apply(history, arguments)
+			window.dispatchEvent(new Event('replacestate'))
+			window.dispatchEvent(new Event('locationchange'))
+		}
+
+		window.addEventListener('popstate', function () {
+			window.dispatchEvent(new Event('locationchange'))
+		})
+	})()
+
+	var waitForEl = function (selector, callback) {
+		let element = document.querySelector(selector)
+		if (
+			element &&
+			(window.getComputedStyle(element).visibility == 'visible' ||
+				document.querySelector(selector).length > 0)
+		) {
+			callback()
+		} else {
+			setTimeout(function () {
+				waitForEl(selector, callback)
+			}, 100)
+		}
+	}
+
+	const changeATag = () => {
+		waitForEl('.LPMcontainer', function () {
+			const chatBotDiv = document?.getElementById('LP_DIV_1547828811012')
+			setTimeout(() => {
+				const aTag = chatBotDiv.getElementsByTagName('a')[1]
+				aTag.setAttribute('href', 'javascript:void(0)')
+				debugger
+			}, 1000)
+		})
+	}
+
+	const script = document.createElement('script')
+	script.src = '/arquivos/chatBotScript.js'
+	script.type = 'text/javascript'
+	script.id = 'chat-bot-script'
+
+	window.addEventListener('locationchange', function () {
+		const url = window.location.href
+		const scriptId = document.getElementById('chat-bot-script')
+
+		// if (scriptId == null) {
+		// 	debugger
+		// 	document.body.appendChild(script)
+		// 	return
+		// }
+		document.body.appendChild(script)
+
+		// waitForEl('.LPMcontainer', function () {
+		// 	const chatBotDiv = document.getElementById(
+		// 		'LP_DIV_1619009067286',
+		// 	).firstChild
+		// 	chatBotDiv.click()
+		// })
+		// waitForEl('.lp_desktop', function () {
+		// 	debugger
+		// 	setTimeout(() => {
+		// 		const arrowToClick = document.getElementsByClassName(
+		// 			'lpc_maximized-header__minimize-button',
+		// 		)[0]
+		// 		arrowToClick.click()
+		// 	}, 3000)
+		// })
+		// waitForEl('#lpChat', function () {
+		// 	setTimeout(() => {
+		// 		const divToShow = document.getElementById('lpChat')
+		// 		divToShow.style.visibility = 'visible'
+		// 	}, 3001)
+		// })
+	})
+</script> -->
+<!-- <script type="text/javascript">
+	;(function () {
+		var pushState = history.pushState
+		var replaceState = history.replaceState
+
+		history.pushState = function () {
+			pushState.apply(history, arguments)
+			window.dispatchEvent(new Event('pushstate'))
+			window.dispatchEvent(new Event('locationchange'))
+		}
+
+		history.replaceState = function () {
+			replaceState.apply(history, arguments)
+			window.dispatchEvent(new Event('replacestate'))
+			window.dispatchEvent(new Event('locationchange'))
+		}
+
+		window.addEventListener('popstate', function () {
+			window.dispatchEvent(new Event('locationchange'))
+		})
+	})()
+
+	const script = document.createElement('script')
+	script.src = '/arquivos/chatBotScript.js'
+	script.type = 'text/javascript'
+	script.id = 'chat-bot-script'
+
+	window.addEventListener('locationchange', function () {
+		const scriptId = document.getElementById('chat-bot-script')
+		if (scriptId != null) {
+			debugger
+			document.body.removeChild(script)
+			setTimeout(() => {
+				debugger
+				document.body.appendChild(script)
+			}, 4000)
+		} else {
+			document.body.appendChild(script)
+		}
+	})
+</script> -->
+<!-- END LivePerson Monitor. -->

@@ -1,0 +1,58 @@
+<script type="text/javascript">
+  var scriptElement = document.getElementById("ot");
+  var myUrl = window.location.hostname,
+    brand = myUrl.split(".")[1],
+    domainScript = "";
+  switch (brand) {
+    case "whirlpool":
+      domainScript = "{{settings.domain-script-whirlpool}}";
+      break;
+    case "indesit":
+      domainScript = "{{settings.domain-script-indesit}}";
+      break;
+    case "bauknecht":
+      domainScript = "{{settings.domain-script-bauknecht}}";
+      break;
+    default:
+      domainScript = "{{settings.domain-script-whirlpool}}";
+  }
+  var scriptTag = document.createElement("script");
+  scriptTag.type = "text/javascript";
+  scriptTag.src = "https://{{settings.s}}/{{settings.url}}/{{settings.cdnId}}";
+  scriptTag.charset = "UTF-8";
+  scriptTag.setAttribute("data-document-language", "true");
+  scriptTag.setAttribute("data-domain-script", domainScript);
+  (document.getElementsByTagName("head")[0] || document.documentElement).appendChild(scriptTag);
+
+</script>
+
+<script type="text/javascript">
+  function OptanonWrapper() { }
+
+</script>
+
+<script>
+  setTimeout(() => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.innerHTML = `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PV6JJKW');`;
+    document.getElementsByTagName('head')[0].prepend(script);
+  }, 300);
+</script>
+
+<script>
+  setTimeout(() => {
+    var html = document.createElement("noscript");
+    var iframe = document.createElement("iframe");
+    iframe.src = "https://www.googletagmanager.com/ns.html?id=GTM-PV6JJKW";
+    iframe.height = 0;
+    iframe.width = 0;
+    iframe.style = "display:none;visibility:hidden"
+    document.body.prepend(html);
+    html.append(iframe);
+  }, 300);
+</script>

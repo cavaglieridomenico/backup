@@ -1,0 +1,456 @@
+{
+  "store.custom#wellbeing-article-2": {
+    "blocks": [
+      "head-json-component",
+      // "responsive-layout.mobile#wellbeing-article",
+      // "responsive-layout.desktop#wellbeing-article"
+      "breadcrumb-four-levels",
+      "rich-text#titleArticle-2",
+      "flex-layout.row#subtitleArticle-2",
+      "info-card#wellbeingArticle-2",
+      "flex-layout.row#rowArticle-2",
+      "flex-layout.row#space",
+      "analytics-wrapper#second-info-card-article-2",
+      "flex-layout.row#space",
+      "flex-layout.row#wellbeingArticle-2",
+      "flex-layout.row#newsletter-row"
+    ]
+  },
+  // "responsive-layout.mobile#wellbeing-article": {
+  //   "children": [
+  //     "breadcrumb-four-levels",
+  //     "rich-text#titleArticle",
+  //     "flex-layout.row#subtitleArticle",
+  //     "info-card#wellbeingArticle",
+  //     "flex-layout.row#rowArticle",
+  //     "flex-layout.row#space",
+  //     "flex-layout.row#wellbeingArticle"
+  //   ]
+  // },
+  // "responsive-layout.desktop#wellbeing-article": {
+  //   "children": [
+  //     "breadcrumb-four-levels",
+  //     "rich-text#titleArticle",
+  //     "flex-layout.row#subtitleArticle",
+  //     "info-card#wellbeingArticle",
+  //     "flex-layout.row#rowArticle",
+  //     "flex-layout.row#space",
+  //     "analytics-wrapper#second-info-card-article",
+  //     "flex-layout.row#space",
+  //     "flex-layout.row#wellbeingArticle"
+  //   ]
+  // },
+  "rich-text#titleArticle-2": {
+    "title": "Titolo articolo",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Title article",
+      "blockClass": "wellbeingTitle"
+    }
+  },
+  "rich-text#subtitleArticle-2": {
+    "title": "Label - Article in",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "ARTICLE IN ",
+      "blockClass": [
+        "wellbeingSubTitle",
+        "uppercaseAndBold"
+      ]
+    }
+  },
+  "link#articleCategory-2": {
+    "props": {
+      "label": "Category",
+      "href": "#",
+      "blockClass": [
+        "articleCategory",
+        "uppercaseAndBold"
+      ]
+    }
+  },
+  "rich-text#articleDate-2": {
+    "title": "Data articolo",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "-- April 20",
+      "blockClass": [
+        "articleDate",
+        "uppercaseAndBold"
+      ]
+    }
+  },
+  "flex-layout.row#subtitleArticle-2": {
+    "title": "Sottotitolo articolo",
+    "props": {
+      "blockClass": "subtitleArticle"
+    },
+    "children": [
+      "flex-layout.col#subtitleArticle-2",
+      "flex-layout.col#articleCategory-2",
+      "flex-layout.col#articleDate-2"
+    ]
+  },
+  "flex-layout.col#subtitleArticle-2": {
+    "props": {
+      "width": "auto"
+    },
+    "children": [
+      "rich-text#subtitleArticle-2"
+    ]
+  },
+  "flex-layout.col#articleCategory-2": {
+    "title": "Nome categoria",
+    "props": {
+      "width": "auto"
+    },
+    "children": [
+      "link#articleCategory-2"
+    ]
+  },
+  "flex-layout.col#articleDate-2": {
+    "props": {
+      "width": "auto"
+    },
+    "children": [
+      "rich-text#articleDate-2"
+    ]
+  },
+  "info-card#wellbeingArticle-2": {
+    "title": "Banner orizzontale",
+    "props": {
+      "id": "banner-grid-home",
+      "isFullModeStyle": false,
+      "imageUrl": "assets/grid6.jpg",
+      "textAlignment": "left",
+      "blockClass": "wellbeingImageBanner",
+      "textPosition": "right"
+    }
+  },
+  "flex-layout.row#rowArticle-2": {
+    "title": "Corpo dell'articolo",
+    "children": [
+      "flex-layout.col#firstColArticle-2",
+      "flex-layout.col#secondColArticle-2"
+    ]
+  },
+  "flex-layout.col#firstColArticle-2": {
+    "props": {
+      "width": "70%",
+      "blockClass": ""
+    },
+    "children": [
+      "flex-layout.col#articleRelatedTechnology-2",
+      "flex-layout.row#rowReadingTime-2",
+      "rich-text#articleBody1-2",
+      "image#wellbeingArticleImage-2",
+      "rich-text#articleBody2-2",
+      "image#wellbeingArticleImage2-2",
+      "rich-text#articleBody3-2"
+    ]
+  },
+  "flex-layout.row#rowReadingTime-2": {
+    "title": "Tempo di lettura",
+    "children": [
+      "flex-layout.col#imageReadingTime-2",
+      "flex-layout.col#titleReadingTime-2"
+    ],
+    "props": {
+      "blockClass": "rowReadingTime"
+    }
+  },
+  "flex-layout.col#imageReadingTime-2": {
+    "props": {
+      "width": "auto"
+    },
+    "children": [
+      "image#readingTime-2"
+    ]
+  },
+  "flex-layout.col#titleReadingTime-2": {
+    "props": {
+      "width": "auto"
+    },
+    "children": [
+      "rich-text#readingTime-2"
+    ]
+  },
+  "image#wellbeingArticleImage-2": {
+    "title": "Articolo Immagine 1",
+    "props": {
+      "src": "https://itwhirlpool.vtexassets.com/assets/vtex/assets-builder/itwhirlpool.whl-theme/4.0.151/grid6___1ac257cef795cfb4d38125d71bda5c9d.jpg",
+      "blockClass": "articleImage"
+    }
+  },
+  "image#wellbeingArticleImage2-2": {
+    "title": "Articolo Immagine 2",
+    "props": {
+      "src": "https://itwhirlpool.vtexassets.com/assets/vtex/assets-builder/itwhirlpool.whl-theme/4.0.151/grid6___1ac257cef795cfb4d38125d71bda5c9d.jpg",
+      "blockClass": "articleImage"
+    }
+  },
+  "flex-layout.col#secondColArticle-2": {
+    "props": {
+      "width": "30%",
+      "blockClass": [
+        "articlesSection",
+        "articlesSectionSticky"
+      ]
+    },
+    "children": [
+      "flex-layout.row#scrollingRow-2"
+      // "sticky-layout#scrollingBanner"
+      // "rich-text#textAddedOnInfoCard",
+      // "analytics-wrapper#info-card-article"
+    ]
+  },
+  "flex-layout.row#scrollingRow-2": {
+    "children": [
+      "flex-layout.col#stickyCol-2"
+    ],
+    "props": {
+      "blockClass": "scrollingRow"
+    }
+  },
+  "flex-layout.col#stickyCol-2": {
+    "children": [
+      "rich-text#textAddedOnInfoCard-2",
+      "analytics-wrapper#info-card-article-2"
+    ],
+    "props": {
+      "blockClass": "stickyCol"
+    }
+  },
+  // "sticky-layout#scrollingBanner": {
+  //   "props": {
+  //     "position": "top",
+  //     "blockClass": "stickyScrollingBanner",
+  //     "verticalSpacing": 40
+  //   },
+  //   "children": [
+  //     "rich-text#textAddedOnInfoCard",
+  //     "analytics-wrapper#info-card-article"
+  //   ]
+  // },
+  "rich-text#articleBody1-2": {
+    "title": "Articolo Paragrafo 1",
+    "props": {
+      "textAlignment": "LEFT",
+      "textPosition": "CENTER",
+      "text": "Body of the article",
+      "blockClass": [
+        "articleBody"
+      ]
+    }
+  },
+  "rich-text#articleBody2-2": {
+    "title": "Articolo Paragrafo 2",
+    "props": {
+      "textAlignment": "LEFT",
+      "textPosition": "CENTER",
+      "text": "Body of the article",
+      "blockClass": [
+        "articleBody"
+      ]
+    }
+  },
+  "rich-text#articleBody3-2": {
+    "title": "Articolo Paragrafo 3",
+    "props": {
+      "textAlignment": "LEFT",
+      "textPosition": "CENTER",
+      "text": "Body of the article",
+      "blockClass": [
+        "articleBody"
+      ]
+    }
+  },
+  "rich-text#textAddedOnInfoCard-2": {
+    "title": "Matching technology",
+    "props": {
+      "textAlignment": "LEFT",
+      "textPosition": "CENTER",
+      "text": "Matching technology",
+      "blockClass": [
+        "textAddedOnInfoCard"
+      ]
+    }
+  },
+  "rich-text#readingTime-2": {
+    "title": "Tempo di lettura",
+    "props": {
+      "textAlignment": "LEFT",
+      "textPosition": "LEFT",
+      "text": "Reading time 1 minute"
+    }
+  },
+  "image#readingTime-2": {
+    "title": "Logo tempo di lettura",
+    "props": {
+      "src": "assets/clock.svg",
+      "maxHeight": "40px",
+      "maxWidth": "40px",
+      "blockClass": "imageClock"
+    }
+  },
+  "flex-layout.col#articleRelatedTechnology-2": {
+    "children": [
+      "flex-layout.row#articleRelatedTechnologyTitle-2",
+      "flex-layout.row#articleRelatedTechnologySecondRow-2"
+    ],
+    "props": {
+      "blockClass": "articleRelatedTechnology"
+    }
+  },
+  "flex-layout.row#articleRelatedTechnologyTitle-2": {
+    "title": "Related Technology Title",
+    "children": [
+      "rich-text#articleRelatedTechnologyTitle-2"
+    ]
+  },
+  "flex-layout.row#articleRelatedTechnologySecondRow-2": {
+    "title": "Related Technology Seconda Riga",
+    "children": [
+      "flex-layout.col#firstColSubtitle-2",
+      "flex-layout.col#secondColLink-2"
+    ]
+  },
+  "rich-text#articleRelatedTechnologyTitle-2": {
+    "props": {
+      "textAlignment": "LEFT",
+      "textPosition": "LEFT",
+      "text": "RELATED TECHNOLOGY",
+      "blockClass": []
+    }
+  },
+  "flex-layout.col#firstColSubtitle-2": {
+    "children": [
+      "rich-text#firstColSubtitle-2"
+    ]
+  },
+  "rich-text#firstColSubtitle-2": {
+    "props": {
+      "textAlignment": "LEFT",
+      "textPosition": "LEFT",
+      "text": "Related Technology subtitle",
+      "blockClass": []
+    }
+  },
+  "flex-layout.col#secondColLink-2": {
+    "children": [
+      "analytics-wrapper#secondColLink-2"
+    ]
+  },
+  "analytics-wrapper#secondColLink-2": {
+    "title": "Analytics Wrapper del link 'scopri di più'",
+    "props": {
+      "isSlider": true,
+      "propsAnalytics": {
+        "analyticsProperties": "provide",
+        "nameEvent": "wellBeing_discoverMore",
+        "name": "promo",
+        "data": [
+          {
+            "title": "href",
+            "value": "/prodotti"
+          }
+        ]
+      }
+    },
+    "children": [
+      "link#secondColLink-2"
+    ]
+  },
+  "link#secondColLink-2": {
+    "props": {
+      "isPrevent": false,
+      "label": "scopri di più",
+      "href": "/prodotti/cottura/forni?initialMap=c,c,c&initialQuery=prodotti/cottura/forni&map=category-1,category-2,category-3,funzioni-speciali-&query=/prodotti/cottura/forni/cook4&searchState",
+      "blockClass": "secondColLink"
+    }
+  },
+  "analytics-wrapper#info-card-article-2": {
+    "title": "Colonna di destra (AnalyticsWrapper)",
+    "props": {
+      "isSlider": true,
+      "propsAnalytics": {
+        "analyticsProperties": "provide",
+        "nameEvent": "wellBeing_discoverMore",
+        "name": "promo",
+        "data": [
+          {
+            "title": "href",
+            "value": "/prodotti"
+          }
+        ]
+      }
+    },
+    "children": [
+      "info-card#info-card-article-2"
+    ]
+  },
+  "info-card#info-card-article-2": {
+    "props": {
+      "id": "banner-grid-home",
+      "isFullModeStyle": false,
+      "imageUrl": "assets/grid6.jpg",
+      "headline": "Nuova asciugatrice Whirlpool FreshCare+",
+      "subhead": "100% Freschezza, anche se dimentichi il bucato",
+      "textMode": "rich-text",
+      "callToActionText": "SCOPRI di PIÙ",
+      "callToActionUrl": "/prova",
+      "textAlignment": "left",
+      "blockClass": [
+        "wellbeingInfoCardArticle",
+        "differentButtonArticle"
+      ],
+      "textPosition": "right"
+    }
+  },
+  "flex-layout.row#wellbeingArticle-2": {
+    "props": {
+      "blockClass": "articlesSection"
+    },
+    "children": [
+      "flex-layout.col#articlesSection"
+    ]
+  },
+  "analytics-wrapper#second-info-card-article-2": {
+    "title": "Seconda info-card (AnalyticsWrapper)",
+    "props": {
+      "isSlider": true,
+      "propsAnalytics": {
+        "analyticsProperties": "provide",
+        "nameEvent": "wellBeing_discoverMore",
+        "name": "promo",
+        "data": [
+          {
+            "title": "href",
+            "value": "/prodotti"
+          }
+        ]
+      }
+    },
+    "children": [
+      "info-card#wellbeingSecondBannerArticle-2"
+    ]
+  },
+  "info-card#wellbeingSecondBannerArticle-2": {
+    "props": {
+      "id": "banner-grid-home",
+      "isFullModeStyle": false,
+      "imageUrl": "assets/grid6.jpg",
+      "headline": "Nuova asciugatrice Whirlpool FreshCare+",
+      "subhead": "100% Freschezza, anche se dimentichi il bucato",
+      "textMode": "HTML",
+      "callToActionText": "SCOPRI di PIÙ",
+      "callToActionUrl": "/prova",
+      "textAlignment": "left",
+      "blockClass": "wellbeingSecondBanner",
+      "textPosition": "left"
+    }
+  }
+}

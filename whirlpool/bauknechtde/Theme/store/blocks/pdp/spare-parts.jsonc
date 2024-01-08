@@ -1,0 +1,525 @@
+{
+  // "condition-layout.product#right-col": {
+  //     "props": {
+  //       "conditions": [
+  //         {
+  //           "subject": "specificationProperties",
+  //           "arguments": {
+  //             "name": "isSparePart",
+  //             "value": "true"
+  //           }
+  //         }
+  //       ],
+  //       "Then": "flex-layout.col#right-col-spare",
+  //       "Else": "flex-layout.col#right-col"
+  //     }
+  //   },
+  "condition-layout.product#single-col": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "isSparePart",
+            "value": "true"
+          }
+        }
+      ],
+      "Then": "flex-layout.col#single-col-spare",
+      "Else": "flex-layout.col#single-col"
+    }
+  },
+  "flex-layout.col#single-col-spare": {
+    "props": {
+      "blockClass": "product-desc-info",
+      "preventVerticalStretch": true,
+      "rowGap": 0
+    },
+    "children": [
+      "condition-layout.product#blackFridayPopupPDP",
+      "flex-layout.row#product-name",
+      "flex-layout.row#reference-spare",
+      "flex-layout.col#comparisonWishBKPDP3",
+      "stack-layout#imagesPDP",
+      "flex-layout.row#spare-product-and-price-mobile",
+      "condition-layout.product#sticky-sellable",
+      "condition-layout.product#pdp-query-with-modal",
+      "flex-layout.row#pdpStickyMobile"
+    ]
+  },
+  "flex-layout.row#reference-spare": {
+    "props": {
+      "blockClass": "PreServiceBlock"
+    },
+    "children": ["product-identifier.product#productRef"]
+  },
+  "product-identifier.product#productRef": {
+    "props": {
+      "idField": "productReference",
+      "label": "hide",
+      "customLabel": "",
+      "blockClass": "spareReference"
+    }
+  },
+  "flex-layout.col#right-col-spare": {
+    "title": "[COL] - [TOP] - PDP Desktop Right Container Spare",
+    "props": {
+      "blockClass": "product-desc-info",
+      "preventVerticalStretch": true,
+      "rowGap": 0,
+      "width": "60%"
+    },
+    "children": [
+      "condition-layout.product#blackFridayPopupPDP",
+      "flex-layout.row#product-name",
+      "flex-layout.row#reference-spare",
+      "flex-layout.row#spare-product-and-price",
+      "condition-layout.product#sticky-sellable",
+      "condition-layout.product#pdp-query-with-modal"
+    ]
+  },
+  "flex-layout.row#spare-product-and-price": {
+    "children": [
+      "flex-layout.col#spare-product-delivery-and-actions",
+      "flex-layout.col#productInfoPrice"
+    ],
+    "props": {
+      "blockClass": "spareRightColProductAndPrice"
+    }
+  },
+  "flex-layout.row#spare-product-and-price-mobile": {
+    "children": ["flex-layout.col#spare-product-delivery-and-actions-mobile"],
+    "props": {
+      "blockClass": "spareRightColProductAndPrice"
+    }
+  },
+  "flex-layout.col#productPriceDesktop": {
+    "children": ["flex-layout.col#productInfoPrice"],
+    "props": {
+      "blockClass": "productPriceDesktop"
+    }
+  },
+  "flex-layout.row#productPriceMobile": {
+    "children": ["flex-layout.col#productInfoPrice"],
+    "props": {
+      "blockClass": "productPriceMobile"
+    }
+  },
+  "flex-layout.col#spare-product-delivery-and-actions": {
+    "children": [
+      "flex-layout.row#spare-delivery",
+      "flex-layout.col#spare-product-actions"
+    ]
+  },
+  "flex-layout.col#spare-product-delivery-and-actions-mobile": {
+    "children": [
+      "flex-layout.row#spare-delivery-mobile",
+      "flex-layout.col#spare-product-actions"
+    ]
+  },
+  "flex-layout.row#spare-delivery-mobile": {
+    "props": {
+      "horizontalAlign": "left",
+      "colSizing": "auto",
+      "blockClass": "spareDelivery"
+    },
+    "children": [
+      "flex-layout.row#availability-conditionals",
+      "condition-layout.product#spare-shipping-image-and-text",
+      "flex-layout.row#productPriceMobile"
+    ]
+  },
+  "flex-layout.row#spare-delivery": {
+    "props": {
+      "horizontalAlign": "left",
+      "colSizing": "auto",
+      "blockClass": "spareDelivery"
+    },
+    "children": [
+      "condition-layout.product#spare-shipping-image-and-text",
+      "flex-layout.row#availability-conditionals"
+    ]
+  },
+  "condition-layout.product#spare-shipping-image-and-text": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "status",
+            "value": "in stock"
+          }
+        },
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "status",
+            "value": "limited availability"
+          }
+        }
+      ],
+      "matchType": "any",
+      "Then": "flex-layout.row#spare-shipping-image-and-text"
+    }
+  },
+  "flex-layout.row#spare-shipping-image-and-text": {
+    "props": {
+      "blockClass": "spareShippingImageText",
+      "colSizing": "auto",
+      "horizontalAlign": "center"
+    },
+    "children": ["image#spareShipping", "rich-text#spareShippingSpare"]
+  },
+  "rich-text#spareShippingSpare": {
+    "props": {
+      "text": "Kostenlose Lieferung",
+      "blockClass": "textFreeShippingSpare"
+    }
+  },
+  "image#spareShipping": {
+    "props": {
+      "src": "assets/icons/freeShippingNew.png",
+      "blockClass": "freeShippingImageSpare"
+    }
+  },
+  "rich-text#spareShipping": {
+    "props": {
+      "text": "Kostenlose Lieferung an den gewünschten Aufstellort"
+    }
+  },
+  "flex-layout.col#spare-product-actions": {
+    "children": [
+      "condition-layout.product#spare-buy-button",
+      "condition-layout.product#spare-parts-subscriber",
+      "condition-layout.product#fg-subscriber",
+      "condition-layout.product#spare-fits-block"
+    ]
+  },
+
+  "condition-layout.product#spare-parts-subscriber": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "isSparePart",
+            "value": "true"
+          }
+        },
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "status",
+            "value": "out of stock"
+          }
+        }
+      ],
+
+      "Then": "flex-layout.row#availability-subscriber-custom"
+    }
+  },
+  "condition-layout.product#fg-subscriber": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "isSparePart",
+            "value": "true"
+          }
+        }
+      ],
+
+      "Else": "condition-layout.product#availabilitySubscriber"
+    }
+  },
+  "condition-layout.product#spare-fits-block": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "status",
+            "value": "in stock"
+          }
+        },
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "status",
+            "value": "limited availability"
+          }
+        },
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "status",
+            "value": "out of stock"
+          }
+        }
+      ],
+      "matchType": "any",
+      "Then": "flex-layout.row#fit-my-appliance"
+    }
+  },
+  "flex-layout.row#fit-my-appliance": {
+    "children": ["flex-layout.col#fit-my-appliance"],
+    "props": {
+      "blockClass": "container-fit-my-appliance"
+    }
+  },
+  "flex-layout.col#fit-my-appliance": {
+    "children": [
+      "rich-text#fit-my-appliance-title",
+      "custom-search#spare-parts-pdp",
+      "drawer#findMyModelNumber"
+    ],
+    "props": {
+      "blockClass": "container-fit-my-appliance"
+    }
+  },
+  "custom-search#spare-parts-pdp": {
+    "props": {
+      "labelStructure": "twelveNc | modelNumber | industrialCode",
+      "urlStructure": "/bom/zapasnye-chasti/modelNumber-industrialCode",
+      "isLocalCheck": true,
+      "localCheckOnProperty": "industrialCode",
+      "localCheckPropValue": "productReference",
+      "localCheckApi": "/",
+      "isPdp": true,
+      "placeholder": "Industriecode oder Modellbezeichnung",
+      "iconSearch": "https://bauknechtde.vtexassets.com/assets/vtex.file-manager-graphql/images/7c136358-1636-43b9-887e-dd77ea80e1ad___d929eda1f8be6ba751c01334fc0ac178.svg",
+      // "iconClear": "https://bauknechtde.vtexassets.com/assets/vtex.file-manager-graphql/images/96b749b1-a4d7-4b25-ab45-c95427825608___702bcd2afa58ea3b55568c95953d3708.svg",
+      "iconEmpty": "https://bauknechtde.vtexassets.com/assets/vtex.file-manager-graphql/images/7c136358-1636-43b9-887e-dd77ea80e1ad___d929eda1f8be6ba751c01334fc0ac178.svg",
+      "localCheckSuccessIcon": "https://bauknechtde.vtexassets.com/assets/vtex.file-manager-graphql/images/0c844b14-51f3-4ae2-b859-3cd92c759449___6b6a1fcebb01dff1464eb94585f29be8.webp",
+      "localCheckNotFoundIcon": "https://bauknechtde.vtexassets.com/assets/vtex.file-manager-graphql/images/7b269f7d-592d-4e8c-a599-059cd8b51e2e___01c8c15deb4463c4b6c19103ad9ac8eb.svg",
+      "localCheckSuccessMessage": "Das Teil passt zu Ihrem Gerät",
+      "localCheckNotFoundMessage": "Das Teil passt nicht zu Ihrem Gerät",
+      "localCheckRedirectLabel": "Gehen Sie auf die Seite Ihres Gerätes"
+    }
+  },
+  "rich-text#fit-my-appliance-title": {
+    "props": {
+      "text": "Ist dies das richtige Teil für mein Gerät?"
+    }
+  },
+  "condition-layout.product#spare-buy-button": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "status",
+            "value": "in stock"
+          }
+        },
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "status",
+            "value": "limited availability"
+          }
+        }
+      ],
+      "matchType": "any",
+      "Then": "condition-layout.product#buy-button",
+      "Else": "condition-layout.product#spare-parts-pdp-view-substitute"
+    }
+  },
+  "condition-layout.product#spare-parts-pdp-view-substitute": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "status",
+            "value": "obsolete"
+          }
+        }
+      ],
+      "Then": "flex-layout.row#view-substitute-button"
+    }
+  },
+  "flex-layout.row#view-substitute-button": {
+    "children": ["view-substitute-button#spare-parts-pdp"]
+  },
+  "view-substitute-button#spare-parts-pdp": {
+    "props": {
+      "isPdp": true
+    }
+  },
+  "product-selling-price#summaryBKSpare": {
+    "props": {
+      "alwaysShow": true,
+      "blockClass": ["summary", "summaryPL"],
+      "markers": ["Tax"],
+      "message": "{sellingPriceValue} Inkl. MwSt. und Versand"
+    }
+  },
+  "condition-layout.product#price-summary-spare": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "isSparePart",
+            "value": "true"
+          }
+        }
+      ],
+      "Else": "condition-layout.product#delivery-cost",
+      "Then": "product-selling-price#summaryBKSpare"
+    }
+  },
+  //CONDIZIONALI PER ESCLUSIONE, SOLO SE NON E' UNA SPARE
+  "condition-layout.product#spare-comparison": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "isSparePart",
+            "value": "true"
+          }
+        }
+      ],
+      "Else": "product-comparison-block.selector#pdp"
+    }
+  },
+  "condition-layout.product#paypal-app": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "isSparePart",
+            "value": "true"
+          }
+        }
+      ],
+      "Else": "paypal-app"
+    }
+  },
+  "condition-layout.product#spare-sticky-anchors": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "isSparePart",
+            "value": "true"
+          }
+        }
+      ],
+      "Else": "flex-layout.row#pdpStickyAnchore"
+    }
+  },
+  "condition-layout.product#togglePromoHalfBannerSingle1Spare": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "isSparePart",
+            "value": "true"
+          }
+        }
+      ],
+      "Else": "experimental__visibility-layout#togglePromoHalfBannerSingle1"
+    }
+  },
+  "condition-layout.product#togglePromoHalfBannerSingle": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "isSparePart",
+            "value": "true"
+          }
+        }
+      ],
+      "Else": "experimental__visibility-layout#togglePromoHalfBannerSingle"
+    }
+  },
+  "condition-layout.product#togglePromoBannerWithIcon1": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "isSparePart",
+            "value": "true"
+          }
+        }
+      ],
+      "Else": "experimental__visibility-layout#togglePromoBannerWithIcon1"
+    }
+  },
+  "condition-layout.product#isAccessorioIntestazioneTabSpare": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "isSparePart",
+            "value": "true"
+          }
+        }
+      ],
+      "Else": "condition-layout.product#isAccessorioIntestazioneTab"
+    }
+  },
+  //CONDIZIONALI PER INCLUSIONE, SOLO SE E' UNA SPARE
+  "condition-layout.product#spare-category-videos": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "isSparePart",
+            "value": "true"
+          }
+        }
+      ],
+      "Then": "category-videos"
+    }
+  },
+  "condition-layout.product#pdp-query-with-modal": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "status",
+            "value": "in stock"
+          }
+        },
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "status",
+            "value": "out of stock"
+          }
+        },
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "status",
+            "value": "limited availability"
+          }
+        }
+      ],
+      "matchType": "any",
+      "Then": "pdp-query-with-modal"
+    }
+  },
+  "pdp-query-with-modal": {
+    "props": {
+      "modalLabel": "Auch geeignet für folgende Modelle",
+      "titleModal": "Liste der Modelle",
+      "placeholderSearchbarModal": "Modell suchen",
+      "modalTrigger": "Liste der Modelle"
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "store.custom#models": {
+    "children": [
+      "flex-layout.row#bread-models",
+      "flex-layout.row#search-wrapper",
+      "flex-layout.row#seo-block",
+      "models",
+      // PART BEFORE FOOTER
+      "experimental__visibility-layout#support-box-title",
+      "experimental__visibility-layout#support-box",
+      "flex-layout.row#newsletter-row"
+    ]
+  },
+  "flex-layout.row#search-wrapper": {
+    "children": [
+      "flex-layout.col#search-wrapper"
+    ],
+    "props": {
+      "blockClass": "searchWrapper"
+    }
+  },
+  "flex-layout.col#search-wrapper": {
+    "children": [
+      "rich-text#search-copy-h1",
+      "rich-text#search-copy-description",
+      "custom-search",
+      "drawer#findMyModelNumber"
+    ],
+    "props": {
+      "blockClass": "searchWrapper",
+      "horizontalAlign": "center",
+      "width": "100%",
+      "preventVerticalStretch": true
+    }
+  },
+  "rich-text#search-copy-h1": {
+    "props": {
+      "text": "# Hotpoint Model Number Lookup",
+      "blockClass": "searchCopyH1"
+    }
+  },
+  "rich-text#search-copy-description": {
+    "props": {
+      "blockClass": "searchCopyDescription",
+      "text": "**Looking for a spare or replacement part for your appliance?** \n To ensure you can locate the correct spare part, simply type your appliance model name or industrial code into the search box below "
+    }
+  },
+  "flex-layout.row#seo-block": {
+    "children": [
+      "flex-layout.col#seo-block"
+    ],
+    "props": {
+      "blockClass": "seoBlockRow"
+    }
+  },
+  "flex-layout.col#seo-block": {
+    "children": [
+      "rich-text#seo-block-title",
+      "read-more#models"
+    ]
+  },
+  "rich-text#seo-block-title": {
+    "props": {
+      "blockClass": "searchBlockSeoTitle",
+      "text": "## Hotpoint Spare Parts Model Number "
+    }
+  },
+  "read-more#models": {
+    "children": [
+      "rich-text#read-more-models"
+    ],
+    "props": {
+      "removeMarginLeft": true
+    }
+  },
+  "rich-text#read-more-models": {
+    "props": {
+      "blockClass": "read-more-text",
+      "text": "Hotpoint serial number lookup and model number search make it easier for you to find the right spare part to fit your appliance. We offer a great range of genuine spare parts you need to repair your Hotpoint appliance and keep it working to its full potential for longer.\n Shop washing machine parts, tumble dryers and dishwashers parts, as well as fridge freezers, ovens and cooker hoods spares you need to make your appliance running smoothly again. The easiest way to find the correct spare part is to use your appliance’s model number or industrial code. If you are not sure how to locate it, use the link just below the search bar to view where to locate the appliance model number.\n Get official Hotpoint parts with great prices plus next day delivery service, helping you restore your appliances."
+    }
+  },
+  "flex-layout.row#bread-models": {
+    "children": [
+      "rich-text#bread-spare",
+      "rich-text#bread-models"
+    ],
+    "props": {
+      "blockClass": "breadModels"
+    }
+  },
+  "rich-text#bread-spare": {
+    "props": {
+      "blockClass": "modelsBreadSpare",
+      "text": "[SPARE PARTS](/spare-parts)"
+    }
+  },
+  "rich-text#bread-models": {
+    "props": {
+      "blockClass": "modelsBreadModels",
+      "text": "MODELS"
+    }
+  }
+}

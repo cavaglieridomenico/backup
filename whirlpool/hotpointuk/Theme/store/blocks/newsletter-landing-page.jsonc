@@ -1,0 +1,90 @@
+{
+  "store.custom#newsletter-landingpage": {
+    "blocks": [
+      "image#banner-newsletterLanding",
+      "flex-layout.row#newsLetterLanding"
+    ]
+  },
+  // TOP IMAGE
+  "image#banner-newsletterLanding": {
+    "props": {
+      "src": "assets/newsletterPageBg.webp",
+      "width": "100%",
+      "height": "100%",
+      "blockClass": "imageNewsletterLanding"
+    }
+  },
+  // NEWSLETTER FORM WITH IMAGE
+  "flex-layout.row#newsLetterLanding": {
+    "children": [
+      "flex-layout.col#newsletterForm"
+    ],
+    "props": {
+      "blockClass": [
+        "newsletterFormRow"
+      ]
+    }
+  },
+  "flex-layout.col#newsletterForm": {
+    "children": [
+      "experimental__visibility-layout#image-newsletter-form",
+      "newsletter-form"
+    ],
+    "props": {
+      "blockClass": "newsletterFormCol"
+    }
+  },
+  /* FORM IMAGE*/
+  "experimental__visibility-layout#image-newsletter-form": {
+    "title": "Visibility Layout - Image Newsletter Form",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "image#image-newsletter-form"
+    ]
+  },
+  "image#image-newsletter-form": {
+    "title": "Image - Newsletter Form",
+    "props": {
+      "src": "assets/newsletterFormImage.webp",
+      "blockClass": "imageNewsletterForm"
+    }
+  },
+  "newsletter-form": {
+    "props": {
+      "title": "5% OFF YOUR FIRST ORDER",
+      "subtitles": [
+        {
+          "__editorItemTitle": "#### Register now to receive updates on our latest deals, products and innovations."
+        }
+      ],
+      "emailPlaceholder": "Email",
+      "namePlaceholder": "Name",
+      "surnamePlaceholder": "Surname",
+      "checkboxes": [
+        {
+          "checkboxLabel": "I consent to the processing of my personal data to allow Whirlpool UK Appliances Ltd. to send me newsletters/marketing communications (in electronic and non-electronic form, including via telephone, postal services, e-mail, SMS, push notifications or banners on third party sites including on Meta and Google platforms) regarding products and services of Whirlpool UK Appliances Ltd. even bought or registered by me, as well as to conduct market research. (This field is required)",
+          "checkboxRequired": true,
+          "checkboxNewsletter": true,
+          "checkboxError": "This field is required"
+        },
+        {
+          "checkboxLabel": "I consent to the processing of my personal data in order to allow Whirlpool UK Appliances Ltd. to analyse my interactions and interests as a consumer and create targeting audiences on the internal systems and platform of Whirlpool UK Appliances Ltd. as well as on third party sites (including Meta and Google platforms in Ireland and USA), in order to receive personalized marketing communications on such platforms.(This field is not required)",
+          "checkboxProfiling": true
+        }
+      ],
+      "privacyPolicyTextArray": [
+        {
+          "__editorItemTitle": "I have read and understood the content of the [privacy notice](/privacy-policy)"
+        }
+      ],
+      "campaign": "",
+      "errorRequiredField": "This field is required",
+      "errorInvalidMail": "Please enter a valid e-mail",
+      "successMessage": "Thanks for signing up. You will receive a confirmation email.",
+      "registeredErrorMessage": "You have already registered!",
+      "genericApiErrorMessage": "Generic API Error, retry later please"
+    }
+  }
+}

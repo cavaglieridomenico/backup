@@ -1,0 +1,496 @@
+{
+  "store.custom.product-comparison#plpCustom": {
+    "title": "Layout - PLP Custom",
+    "blocks": ["search-result-layout.customQuery#plpCustom"],
+    "props": {
+      "context": {
+        "skusFilter": "ALL",
+        "simulationBehavior": "default",
+        "maxItemsPerPage": 20,
+        "__unstableProductOriginVtex": true
+      }
+    }
+  },
+  "search-result-layout.customQuery#plpCustom": {
+    "blocks": [
+      "search-result-layout.desktop.product-comparison#plpCustom",
+      "search-result-layout.mobile#plpCustom",
+      "search-not-found-layout"
+    ],
+    "props": {
+      "querySchema": {
+        "orderByField": "OrderByReleaseDateDESC",
+        "hideUnavailableItems": true,
+        "maxItemsPerPage": 20
+      }
+    }
+  },
+  "search-result-layout.desktop.product-comparison#plpCustom": {
+    "title": "Search Layout - Desktop",
+    "children": [
+      // "breadcrumb-custom",
+      // "breadcrumb-plp",
+      "breadcrumb-plp-category",
+      "experimental__visibility-layout#bannerPLP",
+      "flex-layout.row#searchtitle",
+      "experimental__visibility-layout#timer-desktop",
+      "flex-layout.row#plpCustomResult",
+      "experimental__visibility-layout#textSEO",
+      "product-comparison-drawer"
+    ],
+    "props": {
+      "showFacetQuantity": true,
+      "pagination": "show-more",
+      "preventRouteChange": true,
+      "defaultGalleryLayout": "grid",
+      "hiddenFacets": {
+        "specificationFilters": {
+          "hiddenFilters": [
+            // {
+            //   "name": "Altezza:"
+            // },
+            {
+              "name": "Capacità (l):"
+            },
+            // {
+            //   "name": "Larghezza (cm):"
+            // },
+            {
+              "name": "Colore:"
+            },
+            {
+              "name": "Numero zone di cottura:"
+            },
+            {
+              "name": "Capacità di carico (kg):"
+            },
+            // {
+            //   "name": "Dimensioni:"
+            // },
+            {
+              "name": "Impostazioni di carico:"
+            },
+            {
+              "name": "Modalità di carico:"
+            },
+            // {
+            //   "name": "Profondità:"
+            // },
+            {
+              "name": "Tecnologia auto-pulente:"
+            },
+            {
+              "name": "Tipo di asciugatura:"
+            },
+            {
+              "name": "Velocità di centrifuga:"
+            },
+            {
+              "name": "Frost Free:"
+            },
+            {
+              "name": "Funzioni speciali:"
+            },
+            {
+              "name": "Tipo di elettrodomestico:"
+            },
+            {
+              "name": "Tipo di forno:"
+            },
+            {
+              "name": "Tipo di piano cottura:"
+            },
+            {
+              "name": "Ventilato:"
+            },
+            {
+              "name": "Sistema di cottura:"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "search-result-layout.mobile#plpCustom": {
+    "title": "Search Layout - Mobile",
+    "children": [
+      // "breadcrumb-custom",
+      // "breadcrumb-plp",
+      "breadcrumb-plp-category",
+      "flex-layout.row#searchtitle",
+      "experimental__visibility-layout#timer-mobile",
+      "flex-layout.row#searchinfomobile",
+      "flex-layout.row#productCountMobile",
+      "flex-layout.row#contentmobile",
+      "flex-layout.row#fetchmore",
+      "experimental__visibility-layout#textSEO",
+      "product-comparison-drawer"
+    ],
+    "props": {
+      "pagination": "show-more",
+      "preventRouteChange": true,
+      "mobileLayout": {
+        "mode1": "small",
+        "mode2": "normal"
+      },
+      "hiddenFacets": {
+        "specificationFilters": {
+          "hiddenFilters": [
+            // {
+            //   "name": "Altezza:"
+            // },
+            {
+              "name": "Capacità (l):"
+            },
+            // {
+            //   "name": "Larghezza (cm):"
+            // },
+            {
+              "name": "Colore:"
+            },
+            {
+              "name": "Numero zone di cottura:"
+            },
+            {
+              "name": "Capacità di carico (kg):"
+            },
+            // {
+            //   "name": "Dimensioni:"
+            // },
+            {
+              "name": "Impostazioni di carico:"
+            },
+            {
+              "name": "Modalità di carico:"
+            },
+            // {
+            //   "name": "Profondità:"
+            // },
+            {
+              "name": "Tecnologia auto-pulente:"
+            },
+            {
+              "name": "Tipo di asciugatura:"
+            },
+            {
+              "name": "Velocità di centrifuga:"
+            },
+            {
+              "name": "Frost Free:"
+            },
+            {
+              "name": "Funzioni speciali:"
+            },
+            {
+              "name": "Tipo di elettrodomestico:"
+            },
+            {
+              "name": "Tipo di forno:"
+            },
+            {
+              "name": "Tipo di piano cottura:"
+            },
+            {
+              "name": "Ventilato:"
+            },
+            {
+              "name": "Sistema di cottura:"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "flex-layout.row#plpCustomResult": {
+    "children": [
+      "flex-layout.col#plpCustomFilter",
+      "flex-layout.col#plpCustomContent"
+    ],
+    "props": {
+      "preventHorizontalStretch": true,
+      "fullWidth": true,
+      "blockClass": "paddingSearch"
+    }
+  },
+  "flex-layout.col#plpCustomFilter": {
+    "children": ["filter-navigator.v3"],
+    "props": {
+      "blockClass": "filterCol"
+    }
+  },
+  "flex-layout.col#plpCustomContent": {
+    "children": [
+      // "flex-layout.row#searchinfo",
+      "flex-layout.row#fetchprevious",
+      "flex-layout.row#products",
+      "flex-layout.row#fetchmore",
+      "flex-layout.row#space"
+    ],
+    "props": {
+      "width": "grow",
+      "preventVerticalStretch": true
+    }
+  },
+  "experimental__visibility-layout#plpCustomSEO": {
+    "children": ["rich-text#plpCustomSEO"]
+  },
+  "rich-text#plpCustomSEO": {
+    "props": {
+      "text": "### Forni Whirlpool \n Il forno da incasso costituisce un elemento imprescindibile per uno spazio moderno dedicato alla cucina, e Whirlpool propone una linea ricca di modelli e soluzioni pensati per venire incontro a ogni necessità: Forni a vapore e tradizionali completi di tutte le più avanzate funzioni di cottura, studiati per garantirti le performance di cui hai bisogno per qualsiasi ricetta.\n Con la nostra gamma di forni a vapore puoi preparare piatti deliziosi: scopri la combinazione di cottura tradizionale e a vapore, cucina piatti sani e deliziosi, preservando tutte le proprietà organolettiche degli ingredienti. Dai dolci e le torte agli arrosti di carne, dai piatti di pesce fino al pane fatto in casa; le numerose funzioni ti permettono di scegliere sempre il programma di cottura più adatto a ogni ricetta. \n Lasciati stupire dalla tecnologia 6° Senso dei forni multifunzione di Whirlpool: le ricette pre-programmate regolano autonomamente il riscaldamento e la durata del ciclo, mentre la lampada alogena interna è studiata per assicurarti la migliore illuminazione riducendo allo stesso tempo il consumo energetico. Immancabili le funzioni di pre-riscaldamento e la tecnologia autopulente pirolitica, pensate per farti risparmiare tempo: la prima consente di raggiungere velocemente la temperatura desiderata, mentre la seconda ti viene incontro nella pulizia dello spazio interno, aiutandoti a rimuovere anche i residui e lo sporco più ostinato. \n La massima praticità incontra il design accattivante e moderno: i forni a incasso di Whirlpool si integrano facilmente in ogni ambiente, completando il [piano cottura per la cucina](https://www.whirlpool.it/prodotti/cottura/piani-cottura)  e sposandosi alla perfezione con le linee dell’arredo contemporaneo. I colori vanno dall’elegante nero al brillante acciaio, con una gamma di proposte e combinazioni che ti permette di trovare con facilità quello più adatto ai tuoi gusti estetici. Scopri i forni Whirlpool sul catalogo online: scegli il meglio per la tua casa.",
+      "blockClass": "seoTexGatePageHub"
+    }
+  },
+  "experimental__visibility-layout#timer-desktop": {
+    "title": "Experimental Visibility - Timer Desktop",
+    "props": {
+      "renderChildren": false
+    },
+    "children": ["timer-component#timer-desktop"]
+  },
+  "timer-component#timer-desktop": {
+    "props": {
+      "showDateFormat": true,
+      "targetDate": "2021-11-30",
+      "ore": "00",
+      "minuti": "00",
+      "secondi": "00",
+      "Head": "flex-layout.row#ContainerScontiExtraBlackFriday3",
+      "Else": "flex-layout.row#ElseBlackFridayBlackFriday3"
+    },
+    "children": [
+      "experimental__visibility-layout#carouselPromo",
+      "flex-layout.row#scopriDiPiùBlackFriday3"
+    ],
+    "title": "Timer Desktop"
+  },
+  "experimental__visibility-layout#timer-mobile": {
+    "title": "Experimental Visibility - Timer Mobile",
+    "props": {
+      "renderChildren": false
+    },
+    "children": ["timer-component#timer-mobile"]
+  },
+  "timer-component#timer-mobile": {
+    "title": "Timer Mobile",
+    "props": {
+      "showDateFormat": true,
+      "targetDate": "2021-11-30",
+      "ore": "00",
+      "minuti": "00",
+      "secondi": "00",
+      "Head": "flex-layout.row#ContainerScontiExtraBlackFriday3",
+      "Else": "flex-layout.row#ElseBlackFridayBlackFriday3"
+    },
+    "children": [
+      "experimental__visibility-layout#carouselPromo",
+      "flex-layout.row#scopriDiPiùBlackFriday3"
+    ]
+  },
+  "store.custom.product-comparison#custom-plp-subcategories": {
+    "blocks": [
+      "search-result-layout.customQuery#customPLPSubcategories"
+    ],
+    "props": {
+      "context": {
+        "skusFilter": "ALL",
+        "simulationBehavior": "default",
+        "maxItemsPerPage": 20,
+        "__unstableProductOriginVtex": true
+      }
+    }
+  },
+  "search-result-layout.customQuery#customPLPSubcategories": {
+    "blocks": [
+      "search-result-layout.desktop.product-comparison#customPLPSubcategories",
+      "search-result-layout.mobile#customPLPSubcategories"
+    ],
+    "props": {
+      "querySchema": {
+        "orderByField": "OrderByScoreDESC",
+        "hideUnavailableItems": true,
+        "maxItemsPerPage": 20
+      }
+    }
+  },
+  "search-result-layout.desktop.product-comparison#customPLPSubcategories": {
+    "children": [
+      // "breadcrumb.search",
+      // "breadcrumb-custom",
+      //"flex-layout.row#bread-plp-subcategories",
+      "breadcrumb-plp-category",
+      "experimental__visibility-layout#bannerPLP-Subcategories-Desktop",
+      "experimental__visibility-layout#read-more-Subcategories-Desktop",
+      "experimental__visibility-layout#CarouselPLPSubcategories",
+      "flex-layout.row#searchtitle",
+      "flex-layout.row#subCategoryFilters",
+      "flex-layout.row#result",
+      "experimental__visibility-layout#textSEO-SubcategoriesDesktop",
+      "product-comparison-drawer"
+      //"analytics#plp"
+    ],
+    "props": {
+      "showFacetQuantity": true,
+      "pagination": "show-more",
+      "preventRouteChange": true,
+      "defaultGalleryLayout": "grid",
+      "hiddenFacets": {
+        "categories": true,
+        "specificationFilters": {
+          "hiddenFilters": [
+            {
+              "name": "Category 2"
+            },
+            {
+              "name": "Category 3"
+            },
+            {
+              "name": "Produit:"
+            },
+            {
+              "name": "Catégorie:"
+            }
+          ]
+        }
+      }
+    }
+  },
+  // "flex-layout.row#bread-plp-subcategories": {
+  //   "children": [
+  //     "breadcrumb-four-levels"
+  //   ],
+  //   "props": {
+  //     "preserveLayoutOnMobile": true,
+  //     "fullWidth": true,
+  //     "blockClass": "breadCustom"
+  //   }
+  // },
+  "search-result-layout.mobile#customPLPSubcategories": {
+    "children": [
+      //"flex-layout.row#bread-plp-subcategories",
+      "breadcrumb-plp-category",
+      "experimental__visibility-layout#bannerPLP-Subcategories-Mobile",
+      "experimental__visibility-layout#read-more-Subcategories-Mobile",
+      "experimental__visibility-layout#CarouselPLPSubcategories-Mobile",
+      //"toggle-layout#CarouselMobilePLP",
+      "flex-layout.row#searchtitle",
+      "flex-layout.row#subCategoryFiltersMobile",
+      // "toggle-layout#plptablayout",
+      // "toggle-layout#bannerAdvantageForYou",
+      "flex-layout.row#searchinfomobile",
+      "flex-layout.row#productCountMobile",
+      "flex-layout.row#contentmobile",
+      "flex-layout.row#fetchmore",
+      "flex-layout.row#space",
+      "experimental__visibility-layout#textSEO-SubcategoriesMobile",
+      "product-comparison-drawer"
+      //"analytics#plp"
+    ],
+    "props": {
+      "pagination": "show-more",
+      "preventRouteChange": true,
+      "mobileLayout": {
+        "mode1": "small",
+        "mode2": "normal"
+      }
+    }
+  },
+  "experimental__visibility-layout#CarouselPLPSubcategories": {
+    "title":"[EXPERIMENTAL-VISIBILITY] [DESKTOP] - TOP - Banner",
+    "props": {
+      "visible": false,
+      "blockClass": "plpSlider"
+    },
+    "children": ["list-context.info-card-list#homeBannersTop"]
+  },
+  "experimental__visibility-layout#CarouselPLPSubcategories-Mobile": {
+    "title":"[EXPERIMENTAL-VISIBILITY] [MOBILE]- TOP - Banner",
+    "props": {
+      "visible": false,
+      "blockClass": "plpSlider"
+    },
+    "children": ["list-context.info-card-list#homeBannersTop"]
+  },
+  "experimental__visibility-layout#bannerPLP-Subcategories-Desktop": {
+    "title": "[EXPERIMENTAL-VISIBILITY][DESKTOP] - TOP - Search Banner",
+    "props": {
+      "visible": false
+    },
+    "children": ["link#bannerPlp-Subcategories"]
+  },
+  "experimental__visibility-layout#bannerPLP-Subcategories-Mobile": {
+    "title": "[EXPERIMENTAL-VISIBILITY][MOBILE] - TOP - Search Banner",
+    "props": {
+      "visible": false
+    },
+    "children": ["link#bannerPlp-Subcategories"]
+  },
+  "link#bannerPlp-Subcategories": {
+    "title": "[LINK] - TOP - Search Banner Link",
+    "children": ["image#bannerPlp-Subcategories"],
+    "props": {
+      "href": "#",
+      "blockClass": ["bannerPlp", "centeredBannerPLP"]
+    }
+  },
+  "image#bannerPlp-Subcategories": {
+    "title": "[IMAGE] - TOP - Search Banner Iage",
+    "props": {
+      "src": "https://bauknechtde.vtexassets.com/assets/vtex.file-manager-graphql/images/5d8114c3-e98a-4e4f-b73f-3840f7ef356a___b954c108f3e1791a6ed781364cd0b65f.jpg",
+      "blockClass": "bannerPlp"
+    }
+  },
+  "experimental__visibility-layout#read-more-Subcategories-Desktop": {
+    "title": "[EXPERIMENTAL-VISIBILITY][DESKTOP] - TOP - Read More",
+    "props": {
+      "visible": false
+    },
+    "children": ["flex-layout.row#read-more-Subcategories"]
+  },
+  "experimental__visibility-layout#read-more-Subcategories-Mobile": {
+    "title": "[EXPRIMENTAL-VISIBILITY][MOBILE] - TOP - Read More",
+    "props": {
+      "visible": false
+    },
+    "children": ["flex-layout.row#read-more-Subcategories"]
+  },
+  "flex-layout.row#read-more-Subcategories": {
+    "title": "[ROW] - TOP - Read more",
+    "props": {
+      "blockClass": "readMoreRow"
+    },
+    "children": ["rich-text#readMoreTitle-Subcategories", "read-more"]
+  },
+  "rich-text#readMoreTitle-Subcategories": {
+    "title": "[TEXT] - TOP - Read more Title",
+    "props": {
+      "text": "### Makellos sauberes Geschirr und Besteck direkt aus der Spülmaschine",
+      "blockClass": "readMoreTitle"
+    }
+  },
+  "experimental__visibility-layout#textSEO-SubcategoriesMobile": {
+    "title": "[EXPERIMENTAL-VISIBILITY][MOBILE] - BOTTOM - Seo Text",
+    "children": ["rich-text#seo-SubcategoriesMobile"],
+    "props": {
+      "blockClass": "paddingSearch"
+    }
+  },
+  "rich-text#seo-SubcategoriesMobile": {
+    "props": {
+      "text": "### Forni Whirlpool \n Il forno da incasso costituisce un elemento imprescindibile per uno spazio moderno dedicato alla cucina, e Whirlpool propone una linea ricca di modelli e soluzioni pensati per venire incontro a ogni necessità: Forni a vapore e tradizionali completi di tutte le più avanzate funzioni di cottura, studiati per garantirti le performance di cui hai bisogno per qualsiasi ricetta.\n Con la nostra gamma di forni a vapore puoi preparare piatti deliziosi: scopri la combinazione di cottura tradizionale e a vapore, cucina piatti sani e deliziosi, preservando tutte le proprietà organolettiche degli ingredienti. Dai dolci e le torte agli arrosti di carne, dai piatti di pesce fino al pane fatto in casa; le numerose funzioni ti permettono di scegliere sempre il programma di cottura più adatto a ogni ricetta. \n Lasciati stupire dalla tecnologia 6° Senso dei forni multifunzione di Whirlpool: le ricette pre-programmate regolano autonomamente il riscaldamento e la durata del ciclo, mentre la lampada alogena interna è studiata per assicurarti la migliore illuminazione riducendo allo stesso tempo il consumo energetico. Immancabili le funzioni di pre-riscaldamento e la tecnologia autopulente pirolitica, pensate per farti risparmiare tempo: la prima consente di raggiungere velocemente la temperatura desiderata, mentre la seconda ti viene incontro nella pulizia dello spazio interno, aiutandoti a rimuovere anche i residui e lo sporco più ostinato. \n La massima praticità incontra il design accattivante e moderno: i forni a incasso di Whirlpool si integrano facilmente in ogni ambiente, completando il [piano cottura per la cucina](https://www.whirlpool.it/prodotti/cottura/piani-cottura)  e sposandosi alla perfezione con le linee dell’arredo contemporaneo. I colori vanno dall’elegante nero al brillante acciaio, con una gamma di proposte e combinazioni che ti permette di trovare con facilità quello più adatto ai tuoi gusti estetici. Scopri i forni Whirlpool sul catalogo online: scegli il meglio per la tua casa.",
+      "blockClass": ["seoText", "seoSubcategories"]
+    }
+  },
+  "experimental__visibility-layout#textSEO-SubcategoriesDesktop": {
+    "title": "[EXPERIMENTAL-VISIBILITY][DESKTOP] - BOTTOM - Seo Text Block",
+    "children": ["rich-text#seo-SubcategoriesDesktop"],
+    "props": {
+      "blockClass": "paddingSearch"
+    }
+  },
+  "rich-text#seo-SubcategoriesDesktop": {
+    "props": {
+      "text": "### Forni Whirlpool \n Il forno da incasso costituisce un elemento imprescindibile per uno spazio moderno dedicato alla cucina, e Whirlpool propone una linea ricca di modelli e soluzioni pensati per venire incontro a ogni necessità: Forni a vapore e tradizionali completi di tutte le più avanzate funzioni di cottura, studiati per garantirti le performance di cui hai bisogno per qualsiasi ricetta.\n Con la nostra gamma di forni a vapore puoi preparare piatti deliziosi: scopri la combinazione di cottura tradizionale e a vapore, cucina piatti sani e deliziosi, preservando tutte le proprietà organolettiche degli ingredienti. Dai dolci e le torte agli arrosti di carne, dai piatti di pesce fino al pane fatto in casa; le numerose funzioni ti permettono di scegliere sempre il programma di cottura più adatto a ogni ricetta. \n Lasciati stupire dalla tecnologia 6° Senso dei forni multifunzione di Whirlpool: le ricette pre-programmate regolano autonomamente il riscaldamento e la durata del ciclo, mentre la lampada alogena interna è studiata per assicurarti la migliore illuminazione riducendo allo stesso tempo il consumo energetico. Immancabili le funzioni di pre-riscaldamento e la tecnologia autopulente pirolitica, pensate per farti risparmiare tempo: la prima consente di raggiungere velocemente la temperatura desiderata, mentre la seconda ti viene incontro nella pulizia dello spazio interno, aiutandoti a rimuovere anche i residui e lo sporco più ostinato. \n La massima praticità incontra il design accattivante e moderno: i forni a incasso di Whirlpool si integrano facilmente in ogni ambiente, completando il [piano cottura per la cucina](https://www.whirlpool.it/prodotti/cottura/piani-cottura)  e sposandosi alla perfezione con le linee dell’arredo contemporaneo. I colori vanno dall’elegante nero al brillante acciaio, con una gamma di proposte e combinazioni che ti permette di trovare con facilità quello più adatto ai tuoi gusti estetici. Scopri i forni Whirlpool sul catalogo online: scegli il meglio per la tua casa.",
+      "blockClass": ["seoText", "seoSubcategories"]
+    }
+  }
+}

@@ -1,0 +1,89 @@
+query ($collectionId: String, $salesChannel: String, $from: Int, $to: Int) {
+  products(
+    collection: $collectionId
+    salesChannel: $salesChannel
+    from: $from
+    to: $to
+  ) {
+    brand
+    brandId
+    categoryId
+    productClusters {
+      id
+      name
+    }
+    categoryTree {
+      href
+      slug
+      id
+      name
+      titleTag
+      hasChildren
+      metaTagDescription
+    }
+    description
+    items {
+      itemId
+      name
+      nameComplete
+      complementName
+      ean
+      referenceId {
+        Key
+        Value
+      }
+      images(quantity: 10) {
+        imageId
+        imageLabel
+        imageUrl
+        imageText
+      }
+      sellers {
+        sellerId
+        sellerName
+        addToCartLink
+        commertialOffer {
+          Price
+          ListPrice
+          spotPrice
+          PriceWithoutDiscount
+          RewardValue
+          PriceValidUntil
+          AvailableQuantity
+          Tax
+          taxPercentage
+        }
+      }
+    }
+    skuSpecifications {
+      field {
+        name
+        originalName
+      }
+      values {
+        name
+        originalName
+      }
+    }
+    linkText
+    productId
+    productName
+    properties {
+      originalName
+      name
+      values
+    }
+    specificationGroups {
+      name
+      originalName
+      specifications {
+        name
+        originalName
+        values
+      }
+    }
+    productReference
+    titleTag
+    metaTagDescription
+  }
+}

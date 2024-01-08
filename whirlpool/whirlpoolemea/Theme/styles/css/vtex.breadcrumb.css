@@ -1,0 +1,59 @@
+.container {
+  position: relative;
+  margin-left: 3.125rem;
+  padding-top: 0;
+}
+.homeLink {
+  margin-right: 2.5rem;
+  padding: 0 0.25rem;
+}
+.homeLink::before {
+  content: "Strona główna";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 0.75rem 0.5rem 0;
+}
+.homeLink .homeIcon {
+  visibility: hidden;
+  height: 10px;
+}
+.link {
+  font-family: "myriadLight";
+  font-weight: 300;
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: #505050;
+}
+.term {
+  text-decoration: none;
+}
+.link:hover,
+.link:focus {
+  color: #fdc100;
+}
+.link:focus {
+  border-color: #fdc100;
+}
+.container--breadPP {
+  margin-top: 0.5rem;
+}
+.arrow:last-child {
+  pointer-events: none;
+}
+.container--breadcrumbTotalNoFrost {
+  padding-left: 1.25rem;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 1040px) {
+  .container {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1040px) {
+  .container {
+    padding-left: 1.25rem;
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "memory": 256,
+  "ttl": 10,
+  "timeout": 120,
+  "minReplicas": 2,
+  "maxReplicas": 4,
+  "workers": 1,
+  "events": {
+    "newOrder": {
+      "sender": "vtex.orders-broadcast",
+      "topics": [
+        "order-accepted",
+        "order-created",
+        "handling"
+      ]
+    }
+  },
+  "routes": {
+    "sync": {
+      "path": "/app/warehousesyncher/pvt/inventory/reservations",
+      "public": true
+    },
+    "notify": {
+      "path": "/app/warehousesyncher/pvt/inventory/notifications",
+      "public": true
+    },
+    "manualSync": {
+      "path": "/app/warehousesyncher/pvt/orders/:orderId/reservations",
+      "public": true
+    }
+  }
+}

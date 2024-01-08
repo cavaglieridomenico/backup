@@ -1,0 +1,35 @@
+.unavailableButton {
+    width: 100%;
+    min-height: 2.5rem;
+    border-radius: 0.25rem;
+    /* border-color: #edb112; */
+    background-color: #edb112;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #fff;
+    font-family: openSans;
+    letter-spacing: 0;
+    border: 0.25rem solid #edb112;
+}
+
+.unavailableButton--pdp { 
+    font-size: 1rem;
+    font-weight: 500;
+}
+.buttonContainer {
+    margin-bottom: 1rem;
+}
+.buttonContainer--pdp :global(.vtex-button),
+.buttonContainer :global(.vtex-button) {
+    background-color: #0d436b;
+    font-family: "openSans";
+    border-color: #0d436b;
+}
+@media only screen and (max-width: 640px) {
+    .buttonContainer {
+        margin-bottom: unset;
+    }
+    .buttonContainer :global(.vtex-button) {
+        border-color: #fff;
+    }
+}

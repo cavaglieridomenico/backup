@@ -1,0 +1,131 @@
+{
+  "responsive-layout.desktop#addToCartPlp": {
+    "children": ["add-to-cart-custom#plp"]
+  },
+  "responsive-layout.tablet#addToCartPlp": {
+    "children": ["add-to-cart-custom#toast"]
+  },
+  "responsive-layout.phone#addToCartPlp": {
+    "children": ["add-to-cart-custom#toast"]
+  },
+  "responsive-layout.desktop#addToCart": {
+    "children": ["add-to-cart-custom"]
+  },
+  "responsive-layout.tablet#addToCart": {
+    "children": ["add-to-cart-custom#toast"]
+  },
+  "responsive-layout.phone#addToCart": {
+    "children": ["add-to-cart-custom#toast"]
+  },
+  "add-to-cart-custom#toast": {
+    "props": {
+      "addToCartFeedback": "toast",
+      "unavailableTextProps": "Benachrichtigung anfragen",
+      "text": "Zum Warenkorb hinzufügen"
+    }
+  },
+  "add-to-cart-custom": {
+    "props": {
+      "addToCartFeedback": "toast",
+      "customToastUrl": "/checkout/#/cart",
+      "customPixelEventId": "add-to-cart-custom",
+      "unavailableTextProps": "Benachrichtigung anfragen *",
+      "text": "Zum Warenkorb hinzufügen"
+    }
+  },
+  "add-to-cart-custom#plp": {
+    "props": {
+      "addToCartFeedback": "toast",
+      "customToastUrl": "/checkout/#/cart",
+      "customPixelEventId": "add-to-cart-custom",
+      "unavailableTextProps": "Benachrichtigung anfragen",
+      "text": "Zum Warenkorb hinzufügen"
+    }
+  },
+  "minicart.v2": {
+    "props": {
+      "customPixelEventId": "add-to-cart-custom",
+      "itemCountMode": "total",
+      "variation": "link"
+    },
+    "children": ["minicart-base-content"]
+  },
+  "minicart-base-content": {
+    "blocks": ["minicart-empty-state"],
+    "children": ["minicart-product-list", "flex-layout.row#minicart-footer"]
+  },
+  "flex-layout.row#minicart-footer": {
+    "props": {
+      "blockClass": "minicart-footer"
+    },
+    "children": ["flex-layout.col#minicart-footer"]
+  },
+  "flex-layout.col#minicart-footer": {
+    "children": [
+      "minicart-summary",
+      "rich-text#minicart-footer-text",
+      "minicart-checkout-button",
+      "empty-cart-button"
+    ]
+  },
+  "rich-text#minicart-footer-text": {
+    "props": {
+      "textPosition": "LEFT",
+      "text": "inkl. MwSt.",
+      "blockClass": ["minicart-footer-text"]
+    }
+  },
+  "minicart-product-list": {
+    "blocks": ["product-list#minicart"]
+  },
+  "product-list#minicart": {
+    "blocks": ["product-list-content-mobile"]
+  },
+  "minicart-summary": {
+    "blocks": ["checkout-summary.compact#minicart"]
+  },
+  "checkout-summary.compact#minicart": {
+    "children": [
+      "bauknechtde.summary-totalizer-custom:summary-totalizers"
+      // "summary-totalizers#minicart"
+    ],
+    "props": {
+      "totalizersToShow": ["Items", "Discounts"]
+    }
+  },
+  // "summary-totalizers#minicart": {
+  //   "props": {
+  //     "showTotal": true,
+  //     "showDeliveryTotal": false,
+  //     "blockClass": ["summary-totalizers-Text"]
+  //   }
+  // },
+  "minicart-empty-state": {
+    "children": ["flex-layout.row#empty-state"]
+  },
+  "flex-layout.row#empty-state": {
+    "children": ["flex-layout.col#empty-state"]
+  },
+  "flex-layout.col#empty-state": {
+    "children": [
+      "icon-cart#minicart-empty-state",
+      "rich-text#minicart-default-empty-state"
+    ],
+    "props": {
+      "horizontalAlign": "center",
+      "verticalAlign": "middle",
+      "rowGap": 5
+    }
+  },
+  "icon-cart#minicart-empty-state": {
+    "props": {
+      "size": 64,
+      "blockClass": "minicart-empty-state"
+    }
+  },
+  "rich-text#minicart-default-empty-state": {
+    "props": {
+      "text": "Ihr Einkaufswagen ist leer"
+    }
+  }
+}

@@ -1,0 +1,126 @@
+.models {
+    max-width: 75rem;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.firstLvlCatTitle {
+    border-bottom: 2px solid #f2f2f2;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.models_first_cat_wrap {
+    margin-top: 50px;
+    position: relative;
+}
+
+.showMore {
+    position: absolute;
+    right: 0;
+    top: 40px;
+    text-decoration: none;
+    color: #B24C24;
+    font-size: 0.885rem;
+    font-weight: 600;
+}
+
+.showMore::after {
+    content: '\2192';
+    margin-left: 6px;
+    font-size: 1rem;
+}
+
+.showMore:hover {
+    color: #000;
+}
+
+.models_first_cat_wrap_items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 32%);
+    justify-content: space-between;
+}
+
+.models_second_cat_wrap_items {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.models_second_cat_wrap {
+    width: 100%;
+    margin-right: 15px;
+    padding-left: 20px;
+}
+
+h3 {
+    color: #505050;
+}
+
+.models_second_cat_wrap_items {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.models_fg_link {
+    width: 50%;
+    color: #505050;
+    font-weight: 500;
+    margin-top: 4px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.models_fg_link:hover {
+    color: #000;
+    font-weight: 600;
+    cursor: pointer
+}
+
+.seeAll {
+    text-decoration: none;
+    color: #B24C24;
+    font-weight: 600;
+    margin-top: 4px;
+    cursor: pointer
+}
+
+.seeAll:hover {
+    color: #000;
+}
+
+@media only screen and (max-width: 1024px) {
+    .models_first_cat_wrap_items {
+        flex-direction: column;
+        display: flex;
+    }
+    .showMore {
+        position: absolute;
+        left: 1px;
+        top: 48px;
+        text-decoration: none;
+        color: #B24C24;
+        font-size: 0.785rem;
+        font-weight: 600;
+    }
+    .firstLvlCatTitle {
+        border-bottom: 2px solid #f2f2f2;
+        padding-bottom: 23px;
+        text-transform: uppercase;
+    }
+    .models_second_cat_wrap {
+        padding-left: 20px;
+    }
+    h3 {
+        font-size: 1.1rem;
+    }
+    .showMore::after {
+        content: '\2192';
+        margin-left: 6px;
+        font-size: 1rem;
+    }
+}

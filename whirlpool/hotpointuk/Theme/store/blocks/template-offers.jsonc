@@ -1,0 +1,95 @@
+{
+  "store.custom#template-offers": {
+    "blocks": [
+      // "analytics"
+      "search-result-layout.customQuery#template-steam-hygiene"
+    ],
+    "props": {
+      "context": {
+        "skusFilter": "ALL",
+        "simulationBehavior": "default",
+        "maxItemsPerPage": 20,
+        "__unstableProductOriginVtex": true
+      }
+    }
+  },
+  "search-result-layout.customQuery#template-steam-hygiene": {
+    "blocks": [
+      "search-result-layout.desktop#template-steam-hygiene",
+      "search-result-layout.mobile#template-steam-hygiene"
+    ],
+    "props": {
+      "querySchema": {
+        "orderByField": "OrderByReleaseDateDESC",
+        "hideUnavailableItems": true,
+        "maxItemsPerPage": 20
+      }
+    }
+  },
+  "search-result-layout.desktop#template-steam-hygiene": {
+    "children": [
+      // "analytics",
+      "flex-layout.row#bread-steam",
+      "experimental__visibility-layout#bannerWithPostilla",
+      "experimental__visibility-layout#bannerTesto903",
+      "experimental__visibility-layout#gridHome5Offers",
+      //"list-context.product-list#suggestions-bestSellers-steam",
+      "flex-layout.col#filter",
+      "flex-layout.row#result",
+      "experimental__visibility-layout#gridHomeTechnology",
+      "experimental__visibility-layout#videoSteam",
+      "experimental__visibility-layout#titleBannerPrePlp",
+      "experimental__visibility-layout#titleBannerPrePlpReverse",
+      "experimental__visibility-layout#titleBannerPrePlp2",
+      "__fold__.experimentalLazyAssets",
+      "experimental__visibility-layout#bannerTestoFullRange"
+    ],
+    "props": {
+      "showFacetQuantity": true,
+      "pagination": "show-more",
+      "preventRouteChange": true,
+      "defaultGalleryLayout": "grid"
+    }
+  },
+  "search-result-layout.mobile#template-steam-hygiene": {
+    "children": [
+      // "analytics",
+      "flex-layout.row#bread-steam",
+      "experimental__visibility-layout#bannerWithPostilla",
+      "experimental__visibility-layout#bannerTesto903",
+      "experimental__visibility-layout#gridHome5Offers",
+      "flex-layout.row#searchinfomobile",
+      "flex-layout.row#productCountMobile",
+      "flex-layout.row#contentmobile",
+      "flex-layout.row#fetchmore",
+      "flex-layout.row#space",
+      "experimental__visibility-layout#gridHomeTechnology",
+      "experimental__visibility-layout#videoSteam",
+      "experimental__visibility-layout#titleBannerPrePlp",
+      "experimental__visibility-layout#titleBannerPrePlpReverse",
+      "experimental__visibility-layout#titleBannerPrePlp2",
+      "__fold__.experimentalLazyAssets",
+      "experimental__visibility-layout#bannerTestoFullRange"
+    ],
+    "props": {
+      "showFacetQuantity": true,
+      "pagination": "show-more",
+      "preventRouteChange": true,
+      "defaultGalleryLayout": "grid"
+    }
+  },
+  "experimental__visibility-layout#gridHome5Offers": {
+    "props": {
+      "visible": true
+    },
+    "children": ["rich-text#offers-anchor", "rich-text#OffersNoMarginTop"]
+  },
+  "rich-text#OffersNoMarginTop": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Offers",
+      "blockClass": ["carouselTitlePrePlp", "noMarginTop"]
+    }
+  }
+}

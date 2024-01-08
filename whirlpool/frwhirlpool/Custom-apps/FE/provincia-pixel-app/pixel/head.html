@@ -1,0 +1,67 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- My account gdpr-->
+<script type="text/javascript">
+  ; (function () {
+    var pushState = history.pushState;
+    var replaceState = history.replaceState;
+
+    history.pushState = function () {
+      pushState.apply(history, arguments);
+      window.dispatchEvent(new Event('pushstate'));
+      window.dispatchEvent(new Event('locationchange'));
+    };
+
+    history.replaceState = function () {
+      replaceState.apply(history, arguments);
+      window.dispatchEvent(new Event('replacestate'));
+      window.dispatchEvent(new Event('locationchange'));
+    };
+
+    window.addEventListener('popstate', function () {
+      window.dispatchEvent(new Event('locationchange'))
+    });
+
+    window.addEventListener('load', function () {
+      window.dispatchEvent(new Event('locationchange'))
+    });
+  })();
+
+  window.addEventListener('locationchange', function () {
+    if (window.location.href.indexOf('account') > 0 && window.location.hash && window.location.hash == '#/profile') {
+      waitForEl('#newsletterOptIn', function () {
+        const checkbox = document.getElementById('newsletterOptIn')
+        //onChange
+        checkbox.addEventListener('change', (event) => {
+          event.stopPropagation();
+          event.stopImmediatePropagation();
+          let dataLayer = window.dataLayer || []
+          if (event.currentTarget.checked){
+            dataLayer.push({
+              event: "optin_granted"
+            })
+          }          
+        })
+        $('.vtex-my-account-1-x-newsletterContainerTitle').text('Voulez-vous vous désinscrire de nos offres par email ?')
+        $("label[for='newsletterOptIn']").text(' Veuillez cocher cette case si vous ne souhaitez pas recevoir de bulletins d\'information/communications commerciales (électroniques ou autres) sur les produits et services de Whirlpool France S.A.S. Vous trouverez de plus amples informations dans notre ')
+        var informativaLink = "<a class='vtex-rich-text-0-x-link vtex-rich-text-0-x-link--spaziature-impaginazione vtex-rich-text-0-x-link--paragraph-text-page' href=\"/pages/politique-de-protection-des-donnees-a-caractere-personnel\" target=\"_blank\">Politique de protection des données à caractère personnel</a>"
+        $(informativaLink).appendTo($("label[for='newsletterOptIn']"))      
+      })
+    }
+  })
+
+  $(document).on('focus', '.vtex-address-form__state input', function () {
+    $('.vtex-address-form__state input').attr('maxLength', 2)
+  })
+
+  var waitForEl = function (selector, callback) {
+    if (jQuery(selector).is(":visible") || jQuery(selector).length > 0) {
+      callback()
+    } else {
+      setTimeout(function () {
+        waitForEl(selector, callback)
+      }, 100)
+    }
+  }
+
+</script>

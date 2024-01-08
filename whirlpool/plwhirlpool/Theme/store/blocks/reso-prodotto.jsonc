@@ -1,0 +1,66 @@
+{
+  "store.custom#reso-prodotto": {
+    "blocks": [
+      "breadcrumb#resoProdotto",
+      "flex-layout.row#spaceSmall",
+      "flex-layout.row#resoProdottoText",
+      "flex-layout.row#halfSpace",
+      "flex-layout.row#customFormReso",
+      "flex-layout.row#newsletter-row",
+      "analytics"
+    ]
+  },
+  "flex-layout.row#customFormReso": {
+    "props": {
+      "blockClass": "CustomFormRow"
+    },
+    "children": [
+      "custom-form#return"
+    ]
+  },
+  "custom-form#return": {
+    "props": {
+      "IsReturn": true,
+      "isProduct": true
+    }
+  },
+  "breadcrumb#resoProdotto": {
+    "props": {
+      "categories": [
+        "/supporto/",
+        "/supporto/diritto di recesso/",
+        "diritto di recesso/reso prodotto"
+      ],
+      "showOnMobile": false
+    }
+  },
+  "flex-layout.row#resoProdottoText": {
+    "props": {
+      "blockClass": [
+        "container",
+        "center"
+      ]
+    },
+    "children": [
+      "flex-layout.col#resoProdottoText"
+    ]
+  },
+  "flex-layout.col#resoProdottoText": {
+    "props": {
+      "width": "80%",
+      "margin": "auto",
+      "blockClass": "marginAuto"
+    },
+    "children": [
+      "rich-text#resoProdottoText"
+    ]
+  },
+  "rich-text#resoProdottoText": {
+    "props": {
+      "text": "# Modulo di recesso online Elettrodomestici \n\n\n ## Diritto di recesso \n\n\n Se hai cambiato idea puoi restituire il prodotto e ti sarà rimborsato. \n La richiesta di recesso deve pervenire entro 14 giorni di calendario dalla ricezione dell'ordine e puoi inserirla direttamente online compilando il modulo di reso che trovi qui sotto.\nAi sensi di quanto indicato dall’articolo 5.3 delle Condizioni Generali di Acquisto, le spese di spedizione per la restituzione del Prodotto sono a carico del cliente. \n I punti di riconsegna del prodotto sono: \n * Whirlpool Warehouse a Carinaro, via Variante 7bis KM 17 - 81032 Carinaro (CE) \n Per maggiori informazioni sulle Condizioni Generali di Acquisto, [clicca qui](https://epp.whirlpool.it/pages/termini-e-condizioni).\nA causa dell'emergenza sanitaria il punto di raccolta di Cassinetta è momentaneamente chiuso fino al 31. Pertanto i prodotti relativi al diritto di recesso potranno essere consegnati dopo tale data. Verrà comunque inserita la pratica di rimborso.",
+      "textAlignment": "left",
+      "textPosition": "LEFT",
+      "blockClass": "formText"
+    }
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "store.search": {
+    "blocks": ["countdown.secondlevelswitcher", "search-result-layout"],
+    "props": {
+        "context": {
+            "skusFilter": "FIRST_AVAILABLE",
+            "simulationBehavior": "skip",
+            "__unstableProductOriginVtex": true
+        }
+     }
+  },
+  "store.search#subcategory": {
+    "blocks": ["countdown.secondlevelswitcher","search-result-layout"],
+    "props": {
+        "context": {
+            "skusFilter": "FIRST_AVAILABLE",
+            "simulationBehavior": "skip",
+            "__unstableProductOriginVtex": true
+        }  
+     }
+  },
+
+  "rich-text#headerCustomPageClAirCondition": {
+    "props": {
+      "text": "",
+      "blockClass": "headerCustomPage"
+    }
+  },
+  "store.search#brand": {
+    "blocks": ["search-result-layout"],
+    "props": {
+        "context": {
+            "skusFilter": "FIRST_AVAILABLE",
+            "simulationBehavior": "skip",
+            "__unstableProductOriginVtex": true
+        }
+     }
+  },
+  "store.search#department": {
+    "blocks": ["search-result-layout"],
+    "props": {
+        "context": {
+            "skusFilter": "FIRST_AVAILABLE",
+            "simulationBehavior": "skip",
+            "__unstableProductOriginVtex": true
+        }
+     }
+  },
+  "store.search#category": {
+    "blocks": ["countdown.secondlevelswitcher","search-result-layout"],
+    "props": {
+        "context": {
+            "skusFilter": "FIRST_AVAILABLE",
+            "simulationBehavior": "skip",
+            "__unstableProductOriginVtex": true
+        }
+     }
+  },
+  "search-result-layout": {
+    "blocks": [
+      "search-result-layout.desktop",
+      "search-result-layout.mobile",
+      "search-not-found-layout"
+    ]
+  },
+  "search-result-layout.desktop": {
+    "children": [
+      /* "breadcrumb.search", */
+      "total-products.v2",/* ,
+      "order-by.v2", */
+      "search-fetch-previous",
+      "search-content"/* ,
+      "filter-navigator.v3",*/,
+      "search-fetch-more"  
+    ] 
+  },
+  "search-result-layout.mobile": {
+    "children": [
+      "search-fetch-previous",
+      "search-content",
+      "search-fetch-more" 
+    ]
+  },
+  "rich-text#search-title": {
+    "props": {
+      "text": "HERE PUT THE TITLE&DESCRIPTION YOU WANT FROM SITE EDITOR",
+      "blockClass": "SearchTitle"
+    }
+  },
+  "search-content": {
+    "blocks": ["gallery", "not-found"]
+  },
+  
+  "gallery": {
+    "props": {
+      "layouts": [
+        {
+          "name": "grid",
+          "component": "GridSummary",
+          "itemsPerRow": {
+            "(min-width:1300px)": 3,
+            "desktop": 3,
+            "tablet": 3,
+            "phone": 2
+          }
+        },
+        {
+          "name": "list",
+          "component": "ListSummary",
+          "itemsPerRow": 1 
+        }
+      ],
+      "ListSummary": "product-summary.shelf#plp",
+      "GridSummary": "product-summary.shelf#plp"
+    }
+  }
+  
+}

@@ -1,0 +1,9 @@
+query getProduct($identifier: ProductUniqueIdentifier) {
+  product(identifier: $identifier) {
+    categoryTree {
+      href
+      name
+    }
+    productName
+  }
+}

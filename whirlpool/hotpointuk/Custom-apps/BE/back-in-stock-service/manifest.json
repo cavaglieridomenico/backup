@@ -1,0 +1,116 @@
+{
+  "vendor": "hotpointuk",
+  "name": "back-in-stock-service",
+  "version": "0.0.7",
+  "title": "Back in stock service",
+  "description": "IO service to manage back in stock notifications",
+  "mustUpdateAt": "2022-02-22",
+  "categories": [],
+  "dependencies": {
+    "vtex.search-resolver": "1.x"
+  },
+  "builders": {
+    "node": "6.x",
+    "docs": "0.x",
+    "graphql": "1.x"
+  },
+  "scripts": {
+    "prereleasy": "bash lint.sh"
+  },
+  "credentialType": "absolute",
+  "policies": [
+    {
+      "name": "vtex.search-resolver:resolve-graphql"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "portal.vtexcommercestable.com.br",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "vtexid.vtex.com.br",
+        "path": "*"
+      }
+    },
+    {
+      "name": "ADMIN_DS"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "api.vtex.com",
+        "path": "/dataentities/*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "7329181.recs.igodigital.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "emeaservicesq.cert.whirlpool.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "emeaservices.cert.whirlpool.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "integration.hubspan.net",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "connect.hubspan.net",
+        "path": "*"
+      }
+    },
+    {
+      "name": "colossus-fire-event"
+    },
+    {
+      "name": "colossus-write-logs"
+    }
+  ],
+  "settingsSchema": {
+    "title": "Back in stock Service",
+    "type": "object",
+    "properties": {
+      "sfmcEnabled": {
+        "title": "Send email through salesforce",
+        "type": "boolean"
+      },
+      "auth": {
+        "title": "GCP Auth",
+        "type": "object",
+        "properties": {
+          "appkey": {
+            "title": "GCP app key",
+            "type": "string"
+          },
+          "apptoken": {
+            "title": "GCP app token (sha-256)",
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

@@ -1,0 +1,146 @@
+.containerDesktop{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  position: absolute;
+  padding: 4.7rem 6.5rem;
+  background-color: white;
+}
+.containerMenu{
+  border-top:1px solid lightgray;
+  display: flex;
+  position: relative;
+  padding: .3rem 0;
+  content: "";
+  overflow: hidden;
+  transition: 0.250s height linear;
+  height: 66px; /*deve essere 0*/
+}
+.linkMenu{
+  width: 70%;
+  margin-left: 1.8rem;
+  text-decoration: unset;
+  color: #979797;
+  padding: .9rem 0;
+}
+.testoMenu{
+  font-weight: 400;
+  font-size: 1.5625rem;
+  font-family: "myriadLight";
+}
+.iconaMenu{
+  width: 30%;
+  color: #979797;
+  font-size: 1.5625rem;
+  text-align: center;
+  padding: .9rem 0;
+  margin-left: .5rem;
+}
+.containerChild{
+  display: block !important;
+  position: absolute;
+  top: 66px;
+  left: 0;
+  content: "";
+  overflow: hidden;
+  transition: 0.250s height linear;
+  height: 0px; /*deve essere 0*/
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+.itemContainerDesk{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding:4.7rem 6.5rem;
+}
+.containerMobile{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.item{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-decoration: unset;
+  padding: 2.4rem 0rem;
+}
+.itemImageColumn{
+  width: 10%;
+  position: relative;
+  top: 1.2rem;
+}
+.itemTextColumn{
+  display: flex;
+  flex-direction: column;
+  font-family: "myriadLight";
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.2;
+  margin-top: 0;
+  color: #505050;
+  text-decoration: none;
+  padding-left: 1rem;
+}
+.titolo{
+  position: relative;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-family: "myriadSemibold";
+  font-weight: 400;
+  color: #505050!important;
+  padding: .5rem 0;
+  width: fit-content;
+  block-size: fit-content;
+}
+.titolo::before {
+  content: "";
+  width: 0%;
+  transition: width 0.7s cubic-bezier(0.785,0.135,0.15,0.86);
+  height: 0.125rem;
+  position: absolute;
+  left: 0;
+  bottom: 0rem;
+  background: #fdc100;
+}
+.titolo:hover.titolo::before{
+  width: 100%;
+}
+@media screen and (max-width:1200px){
+  .item{
+    padding-left: 3.3rem;
+    padding-bottom: unset;
+    padding-top: unset;
+    justify-content: unset;
+  }
+  .titolo{
+    white-space: pre-wrap;
+    width: 100%;
+    font-family: "myriadLight";
+    font-weight: 400;
+    font-size: 1.5625rem;
+    line-height: 1.2;
+    text-transform: none;
+    color: #979797 !important;
+    margin-bottom: 0rem;
+    margin-top: 0.9rem;
+  }
+  .itemImageColumn{
+    width: 16px;
+    height: 16px;
+    top: 1rem;
+  }
+  .itemTextColumn{
+    padding-left: 0.5rem;
+    bottom: 1rem;
+    position: relative;
+  }
+  .titolo:hover.titolo::before{
+    display: none;
+  }
+}

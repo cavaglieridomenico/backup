@@ -1,0 +1,33 @@
+type CreatePaymentFromExistingCartOutput {
+  error: String
+  body : String
+  redirectUrl : String
+  status: Int
+}
+
+input CreatePaymentFromExistingCartInput {
+  referenceId: String
+  savePersonalData: Boolean
+  optinNewsLetter: Boolean
+  value: Int
+  referenceValue: Int
+  interestValue: Int
+}
+
+input AddPaymentDataInput {
+  group: String
+  installments: Int
+  installmentsInterestRate: Int
+  installmentsValue: Int
+  paymentSystem: Int
+  paymentSystemName: String
+  referenceValue: Int
+  value: Int
+}
+
+type AddPaymentDataOutput {
+  error: String
+  body : String
+  redirectUrl : String
+  status: Int
+}

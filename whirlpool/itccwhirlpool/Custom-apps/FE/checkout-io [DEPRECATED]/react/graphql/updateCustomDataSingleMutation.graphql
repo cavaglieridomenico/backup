@@ -1,0 +1,7 @@
+mutation updateCustomDataSingle(
+	$orderFormId: ID
+	$appId: String
+	$customData: JSON
+) {
+	setCustomData(orderFormId: $orderFormId, appId: $appId, data: $customData)
+}

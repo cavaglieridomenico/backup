@@ -1,0 +1,529 @@
+{
+  "condition-layout.product#delivery-cost": {
+    "title": "Condition Delivery Cost",
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "DeliveryAtCost"
+          }
+        }
+      ],
+      "Then": "flex-layout.col#priceDeliveryCost",
+      "Else": "product-selling-price#summaryBK"
+    }
+  },
+  "product-selling-price#deliveryCost": {
+    "props": {
+      "alwaysShow": true,
+      "blockClass": ["summary", "summaryPL"],
+      "markers": ["Tax"],
+      "message": "{sellingPriceValue}"
+    }
+  },
+  "flex-layout.col#priceDeliveryCost": {
+    "title": "[COL] - Price delivery Cost",
+    "children": [
+      "product-selling-price#deliveryCost",
+      "flex-layout.row#deliveryCostText"
+    ],
+    "props": {
+      "blockClass": ["priceDeliveryCost"]
+    }
+  },
+  "modal-header#deliveryCostHeader": {
+    "title": "Modal header - Delivery cost",
+    "props": {
+      "showCloseButton": true,
+      "blockClass": "deliveryCostHeader"
+    }
+  },
+  "modal-trigger#deliveryCostTrigger": {
+    "title": "Modal trigger -Delivery cost",
+    "children": [
+      "rich-text#deliveryCostModalText",
+      "modal-layout#deliverycostModalLayout"
+    ],
+    "props": {
+      "blockClass": "deliveryCostTrigger"
+    }
+  },
+  "modal-layout#deliverycostModalLayout": {
+    "title": "Modal Layout - Delivery cost",
+    "children": [
+      "modal-header#deliveryCostHeader",
+      "modal-content#deliveryCostContent"
+    ],
+    "props": {
+      "fullScreen": false,
+      "blockClass": "modalDeliveryCost"
+    }
+  },
+  "flex-layout.row#deliveryCostText": {
+    "title": "[ROW] - Delivery cost text",
+    "props":{
+      "blockClass":"deliveryCostText"
+    },
+    "children": ["rich-text#deliveryCostModalText2","modal-trigger#deliveryCostTrigger"]
+  },
+  "rich-text#deliveryCostModalText2":{
+    "title":"[TEXT] - Delivery cost modal text 2",
+    "props":{
+      "text": "Inkl. MwSt.",
+      "blockClass": ["deliveryCostModalText2"]
+    }
+  },
+  "rich-text#deliveryCostModalText": {
+    "title": "[Text] - Delivery cost modal text",
+    "props": {
+      "text": " zzgl. Versand",
+      "blockClass": ["deliveryCostModalText"]
+    }
+  },
+  "flex-layout.row#deliveryCostModalRow": {
+    "title": "[ROW] - [MID] - Delivery cost Modal Row",
+    "children": ["flex-layout.col#deliveryCostModalCol"]
+  },
+  "flex-layout.col#deliveryCostModalCol": {
+    "title": "[ROW] - [MID] - Delivery cost Modal Column",
+    "children": [
+      "rich-text#deliveryCostModalTitle",
+      "rich-text#deliveryCostModalContentSubtitle"
+    ],
+    "props": {
+      "blockClass": "deliveryCostModalCol"
+    }
+  },
+  "rich-text#deliveryCostModalTitle": {
+    "title": "[TEXT] - [MID] - Delivery cost Modal Title",
+    "props": {
+      "text": "## **Versandkostenübersicht**",
+      "blockClass": ["modalTitle", "modalTitleServices"]
+    }
+  },
+  "rich-text#deliveryCostModalContentSubtitle": {
+    "title": "[TEXT] - [MID] - [Delivery cost] - Modal Content Subtitle",
+    "props": {
+      "text": "Die Versandkosten werden während des Bezahlvorgangs im Detail ausgewiesen. Zusätzliche Services, wie bspw. das Installationspaket, können auf Wunsch erworben werden. Sowohl Versandkosten, als auch Serviceleistungen sind im Warenkorb gesondert aufgeführt.",
+      "blockClass": "deliveryCostModalContentSubtitle"
+    }
+  },
+  "flex-layout.col#tablePopupDeliveryCost": {
+    "title": "[COL] - Table popup delivery Cost",
+    "props":{
+        "blockClass": "tablePopupDeliveryCost"
+    },
+    "children": [
+      "flex-layout.row#rowTableTitleDeliveryCost",
+      "flex-layout.row#rowTableContentDeliveryCost1",
+      "flex-layout.row#rowTableContentDeliveryCost2",
+      "flex-layout.row#rowTableContentDeliveryCost3",
+      "flex-layout.row#rowTableContentDeliveryCost4",
+      "flex-layout.row#rowTableContentDeliveryCost5",
+      "flex-layout.row#rowTableContentDeliveryCost6",
+      "flex-layout.row#rowTableContentDeliveryCost7"
+    ]
+  },
+  "flex-layout.col#tableTitleDeliveryCost": {
+    "title": "[COL] - Table Title Delivery Cost",
+    "children": [
+      "rich-text#deliveryCostColumnTitle1",
+      "rich-text#deliveryCostColumnTitle2"
+    ],
+    "props": {
+      "blockClass": "tableTitleDeliveryCost"
+    }
+  },
+  "flex-layout.row#rowTableContentDeliveryCost1": {
+    "title": "[ROW] - Table content delivery Cost",
+    "children": [
+      "flex-layout.col#tableContentDeliveryCostRight1",
+      "flex-layout.col#tableContentDeliveryCostLeft1"
+    ],
+    "props": {
+      "blockClass": "rowTableContentDeliveryCost"
+    }
+  },
+  "flex-layout.col#tableContentDeliveryCostRight1": {
+    "title": "[COL] - Table content delivery Cost",
+    "children": ["rich-text#deliveryCostColumnContentRight1"],
+    "props": {
+      "blockClass": "tableContentDeliveryCostRight",
+      "width": "70%"
+    }
+  },
+  "flex-layout.col#tableContentDeliveryCostLeft1": {
+    "title": "[COL] - Table content delivery Cost",
+    "children": ["rich-text#deliveryCostColumnContentLeft1"],
+    "props": {
+      "blockClass": "tableContentDeliveryCostLeft",
+      "width": "30%"
+    }
+  },
+  "rich-text#deliveryCostColumnContentRight1": {
+    "title": "[TEXT] - Table content delivery Cost",
+    "props": {
+      "text": "Lieferung zur Bordsteinkante* für Haushaltsgroßgeräte",
+      "blockClass": "deliveryCostTableContent"
+    }
+  },
+  "rich-text#deliveryCostColumnContentLeft1": {
+    "title": "[TEXT] - Table content delivery Cost",
+    "props": {
+      "text": "34,95 €",
+      "blockClass": "deliveryCostTableContent"
+    }
+  },
+  "flex-layout.row#rowTableTitleDeliveryCost": {
+    "title": "[ROW] - Table content delivery Cost",
+    "children": [
+      "flex-layout.col#tableTitleDeliveryCostRight",
+      "flex-layout.col#tableTitleDeliveryCostLeft"
+    ],
+    "props": {
+      "blockClass": "rowTableContentDeliveryCost"
+    }
+  },
+  "flex-layout.col#tableTitleDeliveryCostRight": {
+    "title": "[COL] - Table content delivery Cost",
+    "children": ["rich-text#deliveryCostColumnTitle1"],
+    "props": {
+      "blockClass": "tableContentDeliveryCostRight",
+      "width": "70%"
+    }
+  },
+  "flex-layout.col#tableTitleDeliveryCostLeft": {
+    "title": "[COL] - Table content delivery Cost",
+    "children": ["rich-text#deliveryCostColumnTitle2"],
+    "props": {
+      "blockClass": "tableContentDeliveryCostLeft",
+      "width":"30%"
+    }
+  },
+  "rich-text#deliveryCostColumnTitle1": {
+    "title": "[TEXT] - Table content delivery Cost Title",
+    "props": {
+      "text": "Versandart",
+      "blockClass": ["deliveryCostTableContent", "deliveryCostTableTitle"]
+    }
+  },
+  "rich-text#deliveryCostColumnTitle2": {
+    "title": "[TEXT] - Table content delivery Cost Title",
+    "props": {
+      "text": "Kosten",
+      "blockClass": ["deliveryCostTableContent", "deliveryCostTableTitle"]
+    }
+  },
+  "flex-layout.row#rowTableContentDeliveryCost2": {
+    "title": "[ROW] - Table content delivery Cost",
+    "children": [
+      "flex-layout.col#tableContentDeliveryCostRight2",
+      "flex-layout.col#tableContentDeliveryCostLeft2"
+    ],
+    "props": {
+      "blockClass": "rowTableContentDeliveryCost"
+    }
+  },
+  "flex-layout.col#tableContentDeliveryCostRight2": {
+    "title": "[COL] - Table content delivery Cost",
+    "children": ["rich-text#deliveryCostColumnContentRight2"],
+    "props": {
+      "blockClass": "tableContentDeliveryCostRight",
+      "width": "70%"
+    }
+  },
+  "flex-layout.col#tableContentDeliveryCostLeft2": {
+    "title": "[COL] - Table content delivery Cost",
+    "children": ["rich-text#deliveryCostColumnContentLeft2"],
+    "props": {
+      "blockClass": "tableContentDeliveryCostLeft",
+      "width": "30%"
+    }
+  },
+  "rich-text#deliveryCostColumnContentRight2": {
+    "title": "[TEXT] - Table content delivery Cost",
+    "props": {
+      "text": "Lieferung zur Bordsteinkante* für Mikrowellen",
+      "blockClass": "deliveryCostTableContent"
+    }
+  },
+  "rich-text#deliveryCostColumnContentLeft2": {
+    "title": "[TEXT] - Table content delivery Cost",
+    "props": {
+      "text": "Kostenlos",
+      "blockClass": "deliveryCostTableContent"
+    }
+  },
+  "flex-layout.row#rowTableContentDeliveryCost3": {
+    "title": "[ROW] - Table content delivery Cost",
+    "children": [
+      "flex-layout.col#tableContentDeliveryCostRight3",
+      "flex-layout.col#tableContentDeliveryCostLeft3"
+    ],
+    "props": {
+      "blockClass": "rowTableContentDeliveryCost"
+    }
+  },
+  "flex-layout.col#tableContentDeliveryCostRight3": {
+    "title": "[COL] - Table content delivery Cost",
+    "children": ["rich-text#deliveryCostColumnContentRight3"],
+    "props": {
+      "blockClass": "tableContentDeliveryCostRight",
+      "width": "70%"
+    }
+  },
+  "flex-layout.col#tableContentDeliveryCostLeft3": {
+    "title": "[COL] - Table content delivery Cost",
+    "children": ["rich-text#deliveryCostColumnContentLeft3"],
+    "props": {
+      "blockClass": "tableContentDeliveryCostLeft",
+      "width": "30%"
+    }
+  },
+  "rich-text#deliveryCostColumnContentRight3": {
+    "title": "[TEXT] - Table content delivery Cost",
+    "props": {
+      "text": "Zusätzlicher Transport zum Verwendungsort** für Haushaltsgroßgeräte (außer Kühlgeräte, Gefriergeräte )",
+      "blockClass": "deliveryCostTableContent"
+    }
+  },
+  "rich-text#deliveryCostColumnContentLeft3": {
+    "title": "[TEXT] - Table content delivery Cost",
+    "props": {
+      "text": "Kostenlos auf Wunsch",
+      "blockClass": "deliveryCostTableContent"
+    }
+  },
+  "flex-layout.row#rowTableContentDeliveryCost4": {
+    "title": "[ROW] - Table content delivery Cost",
+    "children": [
+      "flex-layout.col#tableContentDeliveryCostRight4",
+      "flex-layout.col#tableContentDeliveryCostLeft4"
+    ],
+    "props": {
+      "blockClass": "rowTableContentDeliveryCost"
+    }
+  },
+  "flex-layout.col#tableContentDeliveryCostRight4": {
+    "title": "[COL] - Table content delivery Cost",
+    "children": ["rich-text#deliveryCostColumnContentRight4"],
+    "props": {
+      "blockClass": "tableContentDeliveryCostRight",
+      "width": "70%"
+    }
+  },
+  "flex-layout.col#tableContentDeliveryCostLeft4": {
+    "title": "[COL] - Table content delivery Cost",
+    "children": ["rich-text#deliveryCostColumnContentLeft4"],
+    "props": {
+      "blockClass": "tableContentDeliveryCostLeft",
+      "width": "30%"
+    }
+  },
+  "rich-text#deliveryCostColumnContentRight4": {
+    "title": "[TEXT] - Table content delivery Cost",
+    "props": {
+      "text": "Zusätzlicher Transport zum Verwendungsort** für Kühlgeräte & Gefriergeräte (außer Side-by-Sides)",
+      "blockClass": "deliveryCostTableContent"
+    }
+  },
+  "rich-text#deliveryCostColumnContentLeft4": {
+    "title": "[TEXT] - Table content delivery Cost",
+    "props": {
+      "text": "19,95 €",
+      "blockClass": "deliveryCostTableContent"
+    }
+  },
+  "flex-layout.row#rowTableContentDeliveryCost5": {
+    "title": "[ROW] - Table content delivery Cost",
+    "children": [
+      "flex-layout.col#tableContentDeliveryCostRight5",
+      "flex-layout.col#tableContentDeliveryCostLeft5"
+    ],
+    "props": {
+      "blockClass": "rowTableContentDeliveryCost"
+    }
+  },
+  "flex-layout.col#tableContentDeliveryCostRight5": {
+    "title": "[COL] - Table content delivery Cost",
+    "children": ["rich-text#deliveryCostColumnContentRight5"],
+    "props": {
+      "blockClass": "tableContentDeliveryCostRight",
+      "width": "70%"
+    }
+  },
+  "flex-layout.col#tableContentDeliveryCostLeft5": {
+    "title": "[COL] - Table content delivery Cost",
+    "children": ["rich-text#deliveryCostColumnContentLeft5"],
+    "props": {
+      "blockClass": "tableContentDeliveryCostLeft",
+      "width": "30%"
+    }
+  },
+  "rich-text#deliveryCostColumnContentRight5": {
+    "title": "[TEXT] - Table content delivery Cost",
+    "props": {
+      "text": "Zusätzlicher Transport zum Verwendungsort** für Side-by-Sides",
+      "blockClass": "deliveryCostTableContent"
+    }
+  },
+  "rich-text#deliveryCostColumnContentLeft5": {
+    "title": "[TEXT] - Table content delivery Cost",
+    "props": {
+      "text": "39,95 €",
+      "blockClass": "deliveryCostTableContent"
+    }
+  },
+  "flex-layout.row#rowTableContentDeliveryCost6": {
+    "title": "[ROW] - Table content delivery Cost",
+    "children": [
+      "flex-layout.col#tableContentDeliveryCostRight6",
+      "flex-layout.col#tableContentDeliveryCostLeft6"
+    ],
+    "props": {
+      "blockClass": "rowTableContentDeliveryCost"
+    }
+  },
+  "flex-layout.col#tableContentDeliveryCostRight6": {
+    "title": "[ROW] - Table content delivery Cost",
+    "children": ["rich-text#deliveryCostColumnContentRight6"],
+    "props": {
+      "blockClass": "tableContentDeliveryCostRight",
+      "width": "70%"
+    }
+  },
+  "flex-layout.col#tableContentDeliveryCostLeft6": {
+    "title": "[COL] - Table content delivery Cost",
+    "children": ["rich-text#deliveryCostColumnContentLeft6"],
+    "props": {
+      "blockClass": "tableContentDeliveryCostLeft",
+      "width": "30%"
+    }
+  },
+  "rich-text#deliveryCostColumnContentRight6": {
+    "title": "[TEXT] - Table content delivery Cost",
+    "props": {
+      "text": "Zusätzlicher Transport zum Verwendungsort** für Mikrowellen",
+      "blockClass": "deliveryCostTableContent"
+    }
+  },
+  "rich-text#deliveryCostColumnContentLeft6": {
+    "title": "[TEXT] - Table content delivery Cost",
+    "props": {
+      "text": "9,95 €",
+      "blockClass": "deliveryCostTableContent"
+    }
+  },
+  "flex-layout.row#rowTableContentDeliveryCost7": {
+    "title": "[ROW] - Table content delivery Cost",
+    "children": [
+      "flex-layout.col#tableContentDeliveryCostRight7",
+      "flex-layout.col#tableContentDeliveryCostLeft7"
+    ],
+    "props": {
+      "blockClass": "rowTableContentDeliveryCost"
+    }
+  },
+  "flex-layout.col#tableContentDeliveryCostRight7": {
+    "title": "[COL] - Table content delivery Cost",
+    "children": ["rich-text#deliveryCostColumnContentRight7"],
+    "props": {
+      "blockClass": "tableContentDeliveryCostRight",
+      "width": "70%"
+    }
+  },
+  "flex-layout.col#tableContentDeliveryCostLeft7": {
+    "title": "[COL] - Table content delivery Cost",
+    "children": ["rich-text#deliveryCostColumnContentLeft7"],
+    "props": {
+      "blockClass": "tableContentDeliveryCostLeft",
+      "width": "30%"
+    }
+  },
+  "rich-text#deliveryCostColumnContentRight7": {
+    "title": "[TEXT] - Table content delivery Cost",
+    "props": {
+      "text": "Paketlieferung (Zubehör und Ersatzteile)",
+      "blockClass": "deliveryCostTableContent"
+    }
+  },
+  "rich-text#deliveryCostColumnContentLeft7": {
+    "title": "[TEXT] - Table content delivery Cost",
+    "props": {
+      "text": "Kostenlos",
+      "blockClass": "deliveryCostTableContent"
+    }
+  },
+  "flex-layout.col#detailsDeliveryCost": {
+    "title": "[COL] - details delivery Cost",
+    "children": [
+      "rich-text#deliveryCostDetailsTitle1",
+      "rich-text#deliveryCostDetailsText1",
+      "rich-text#deliveryCostDetailsTitle2",
+      "rich-text#deliveryCostDetailsText2",
+      "rich-text#deliveryCostDetailsTitle3",
+      "rich-text#deliveryCostDetailsText3",
+      "rich-text#deliveryCostDetailsText4"
+    ],
+    "props": {
+      "blockClass": "detailsDeliveryCost"
+    }
+  },
+  "rich-text#deliveryCostDetailsTitle1": {
+    "title": "[TEXT] - details delivery Cost",
+    "props": {
+      "text": "Hinweis",
+      "blockClass": "deliveryCostDetailsTitle"
+    }
+  },
+  "rich-text#deliveryCostDetailsText1": {
+    "title": "[TEXT] - details delivery Cost",
+    "props": {
+      "blockClass": "textDetailsDelivery",
+      "text": "Unsere Highlight Produkte liefern wir versandkostenfrei inklusive kostenlosem zusätzlichen Transport zum Verwendungsort. Weitere Informationen finden Sie hier (link to highlight produkte landing page)"
+    }
+  },
+  "rich-text#deliveryCostDetailsTitle2": {
+    "title": "[TEXT] - details delivery Cost",
+    "props": {
+      "text": "*Lieferung zur Bordsteinkante",
+      "blockClass": "deliveryCostDetailsTitle"
+    }
+  },
+  "rich-text#deliveryCostDetailsText2": {
+    "title": "[TEXT] - details delivery Cost",
+    "props": {
+      "blockClass": "textDetailsDelivery",
+      "text": "Das Speditionsunternehmen bzw. der Lieferant darf die entsprechende Sendung am Straßenrand ablegen. Die gelieferte Ware muss nicht bis zur Haustür oder gar in die Wohnung gebracht werden."
+    }
+  },
+  "rich-text#deliveryCostDetailsTitle3": {
+    "title": "[TEXT] - details delivery Cost",
+    "props": {
+      "text": "**Zusätzlicher Transport zum Verwendungsort",
+      "blockClass": "deliveryCostDetailsTitle"
+    }
+  },
+  "rich-text#deliveryCostDetailsText3": {
+    "title": "[TEXT] - details delivery Cost",
+    "props": {
+      "blockClass": "textDetailsDelivery",
+      "text": "Die Produkte werden von unserem Logistikpartner zur Bordsteinkante geliefert. Als zusätzlichen Service bieten wir den Transport zum Verwendungsort an. Bitte beachten Sie, dass es sich bei den gelieferten Produkten um sperrige Güter handeln kann. Bevor Sie Ihre Bestellung aufgeben, sollten Sie überprüfen, ob die Abmessungen der von Ihnen bestellten Produkte der Größe Ihrer Tür(en) entsprechen und die Breite Ihres Flurs oder Korridors nicht überschreiten. Die entsprechenden Informationen finden Sie auf der Detailseite des jeweiligen Produkts. Bei einer Überschreitung der Maße ist die Erbringung von Liefer- und Montageleistungen nicht möglich. Das Auspacken des Artikels erfolgt erst am Verwendungsort."
+    }
+  },
+  "rich-text#deliveryCostDetailsText4": {
+    "title": "[TEXT] - details delivery Cost",
+    "props": {
+      "blockClass": "textDetailsDelivery",
+      "text": "Bitte beachten Sie, dass unser Dienstleister folgende Leistung ausschließt: Sendungen, bei denen die vom Auftraggeber bezeichnete Abholadresse oder die Zustelladresse ungeeignet oder nur unter unverhältnismäßigen Schwierigkeiten erreichbar ist oder ein geeigneter Fahrstuhl ab der 5. Etage nicht vorhanden ist oder für deren Einlieferung oder Zustellung besondere Aufwendungen oder Sicherheitsmaßnahmen erforderlich sind."
+    }
+  },
+  "modal-content#deliveryCostContent":{
+    "title": "[MODAL] - Modal content delivery Cost",
+    "children": ["flex-layout.row#deliveryCostModalRow",
+      "flex-layout.col#tablePopupDeliveryCost",
+      "flex-layout.col#detailsDeliveryCost"
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+<script>
+  (function () {
+    var brand = document.location.href.includes("indesit") ? "indesit" : "hotpoint"
+    var env = document.location.href.includes("smartukb2cqa") ? "-qa" : "";
+    document.head.insertAdjacentHTML("beforeend", `<style>.render-container{opacity: 0}</style>`)
+    if (document.readyState === 'loading') {
+      document.addEventListener("DOMContentLoaded", function () {
+        document.body.classList.add("" + brand + "-theme");
+        
+          document.head.insertAdjacentHTML("beforeend", `<style>.render-container{opacity: 1}</style>`)
+
+      })
+    } else {
+      document.body.classList.add("" + brand + "-theme");
+    
+          document.head.insertAdjacentHTML("beforeend", `<style>.render-container{opacity: 1}</style>`)
+
+    }
+
+    var styleTag = document.createElement('link');
+    styleTag.rel = 'stylesheet';
+    styleTag.type = 'text/css';
+    styleTag.href = "/arquivos/" + brand + env + ".css" + "?v=" + new Date().getTime();
+    (document.getElementsByTagName("head")[0] || document.documentElement).appendChild(styleTag);
+  })()
+</script>

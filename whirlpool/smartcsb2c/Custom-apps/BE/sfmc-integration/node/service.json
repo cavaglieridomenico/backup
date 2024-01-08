@@ -1,0 +1,32 @@
+{
+  "memory": 256,
+  "ttl": 10,
+  "timeout": 120,
+  "minReplicas": 2,
+  "maxReplicas": 4,
+  "workers": 1,
+  "events": {
+    "orderConfirmationEvent": {
+      "sender": "vtex.orders-broadcast",
+      "topics": [
+        "approve-payment"
+      ]
+    },
+    "orderCancellationEvent": {
+      "sender": "vtex.orders-broadcast",
+      "topics": [
+        "cancel"
+      ]
+    }
+  },
+  "routes": {
+    "confirmOrder": {
+      "path": "/v1/api/order/confirm",
+      "public": true
+    },
+    "cancelOrder": {
+      "path": "/v1/api/order/cancel",
+      "public": true
+    }
+  }
+}

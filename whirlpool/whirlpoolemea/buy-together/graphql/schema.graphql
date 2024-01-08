@@ -1,0 +1,7 @@
+type Query {
+    retrieveAssociation(skuId:ID, categoryId:ID): [Product]  @cacheControl(scope: PRIVATE, maxAge: MEDIUM)
+}
+
+type Mutation {
+    discountData(listSku: [ID]): DiscountResponse  @cacheControl(scope: PRIVATE)
+}

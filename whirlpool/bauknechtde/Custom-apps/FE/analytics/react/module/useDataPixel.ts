@@ -1,0 +1,27 @@
+import { useEffect, useRef } from 'react'
+import { usePixel } from 'vtex.pixel-manager/PixelContext'
+
+const useDataPixel = (data :any, isLoading = false) => {
+  const { push } = usePixel()
+  const prevLoadingRef = useRef(true)
+
+  useEffect(() => {
+    if (prevLoadingRef.current && !isLoading) {
+      if (!data) {
+        return
+      }
+
+      if (Array.isArray(data)) {
+        data.forEach(event => push(event))
+        console.log()
+      } else {
+        push(data)
+        console.log(data,"prova")
+      }
+    }
+
+    prevLoadingRef.current = isLoading
+  }, [data, isLoading, push])
+}
+
+export default useDataPixel

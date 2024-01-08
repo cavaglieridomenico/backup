@@ -1,0 +1,18 @@
+{
+  "memory": 256,
+  "ttl": 120,
+  "timeout": 20,
+  "minReplicas": 2,
+  "maxReplicas": 4,
+  "workers": 1,
+  "routes": {
+    "generatecoupon":{
+      "path": "/v1/coupon/generate",
+      "public": true
+    },
+    "getcoupons":{
+      "path": "/v1/coupon/:fileid/coupons.csv",
+      "public": true
+    }
+  }
+}

@@ -1,0 +1,18 @@
+<link href="https://{{settings.s}}" />
+<script defer src="https://{{settings.s}}/{{settings.url}}/{{settings.cdnId}}" data-document-language="true"
+type="text/javascript" charset="UTF-8" data-domain-script="{{settings.domain}}"></script>
+<script defer type="text/javascript">
+function OptanonWrapper() {
+    var first = true;
+    function injectAcceptButton() {
+        if (!document.cookie.split(';').find(row => row.startsWith('OneTrust-custom'))) {
+            var acceptBtn = document.getElementById("accept-recommended-btn-handler")
+            acceptBtn.innerText = "Consenti tutti";
+            var rejectBtn =document.querySelector('.ot-pc-refuse-all-handler');
+            rejectBtn.before(acceptBtn)
+            document.cookie=`OneTrust-custom=True; expires=${new Date(new Date().getTime()+1000*60*60*24*365).toGMTString()}; path=/`;
+            }
+        }
+    injectAcceptButton();
+ }
+</script>

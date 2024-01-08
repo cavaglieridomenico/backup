@@ -1,0 +1,150 @@
+query products($field: ProductUniqueIdentifierField!, $values: [ID!]) {
+  productsByIdentifier(field: $field, values: $values) {
+    brand
+    brandId
+    cacheId
+    categoryId
+    categoryTree{
+      name
+    }
+    clusterHighlights {
+      id
+      name
+    }
+    productClusters {
+      id
+      name
+    }
+    items {
+      itemId
+      name
+      nameComplete
+      complementName
+      ean
+      referenceId {
+        Key
+        Value
+      }
+      measurementUnit
+      unitMultiplier
+      kitItems {
+        itemId
+      }
+      images {
+        cacheId
+        imageId
+        imageLabel
+        imageUrl
+        imageText
+      }
+      sellers {
+        sellerId
+        sellerName
+        addToCartLink
+        sellerDefault
+        commertialOffer {
+          Installments {
+            Value
+            InterestRate
+            TotalValuePlusInterestRate
+            NumberOfInstallments
+            PaymentSystemName
+            PaymentSystemGroupName
+            Name
+          }
+          Price
+          ListPrice
+          spotPrice
+          PriceWithoutDiscount
+          RewardValue
+          PriceValidUntil
+          AvailableQuantity
+          Tax
+          taxPercentage
+          CacheVersionUsedToCallCheckout
+          discountHighlights {
+            name
+          }
+          teasers {
+            name
+          }
+          giftSkuIds
+          gifts {
+            productName
+            skuName
+            linkText
+            description
+            images {
+              imageUrl
+              imageLabel
+              imageText
+            }
+          }
+        }
+      }
+    },
+    skuSpecifications{
+      field{
+        originalName,
+        name
+      }
+      values{
+        originalName,
+        name
+      }
+    },
+    link,
+    linkText,
+    productId,
+    productName,
+    propertyGroups{
+      name,
+      properties
+    },
+    propertyGroups{
+      name,
+      properties
+    },
+    productReference,
+    titleTag,
+    metaTagDescription,
+    jsonSpecifications,
+    benefits{
+      featured,
+      id,
+      name,
+      teaserType
+    },
+    itemMetadata{
+    	items{
+        id,
+        productId,
+        refId
+      }
+    },
+    specificationGroups{
+      originalName,
+      name,
+      specifications{
+        originalName,
+        name,
+        values
+      }
+    },
+    priceRange{
+      sellingPrice{
+        highPrice,
+        lowPrice
+      },
+      listPrice{
+        highPrice,
+        lowPrice
+      }
+    },
+    releaseDate,
+    selectedProperties{
+      key,
+      value
+    }
+  }
+}

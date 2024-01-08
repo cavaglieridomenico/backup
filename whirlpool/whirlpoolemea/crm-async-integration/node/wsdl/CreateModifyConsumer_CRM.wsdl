@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions targetNamespace="urn:sap-com:document:sap:soap:functions:mc-style" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsoap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="urn:sap-com:document:sap:soap:functions:mc-style" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:n1="urn:sap-com:document:sap:rfc:functions">
+ <wsdl:documentation>
+  <sidl:sidl xmlns:sidl="http://www.sap.com/2007/03/sidl"/>
+ </wsdl:documentation>
+ <wsp:UsingPolicy wsdl:required="true"/>
+ <wsp:Policy wsu:Id="IF_IF_Z_ES_MYACC_CREATECONSUMER">
+  <sapsession:Session xmlns:sapsession="http://www.sap.com/webas/630/soap/features/session/">
+   <sapsession:enableSession>false</sapsession:enableSession>
+  </sapsession:Session>
+ </wsp:Policy>
+ <wsp:Policy wsu:Id="OP_IF_OP_ZEsCreaconMyacc">
+  <sapblock:enableBlocking xmlns:sapblock="http://www.sap.com/NW05/soap/features/blocking/">true</sapblock:enableBlocking>
+  <sapcomhnd:enableCommit xmlns:sapcomhnd="http://www.sap.com/NW05/soap/features/commit/">false</sapcomhnd:enableCommit>
+  <saptrhnw05:required xmlns:saptrhnw05="http://www.sap.com/NW05/soap/features/transaction/">no</saptrhnw05:required>
+  <saprmnw05:enableWSRM xmlns:saprmnw05="http://www.sap.com/NW05/soap/features/wsrm/">false</saprmnw05:enableWSRM>
+ </wsp:Policy>
+ <wsdl:types>
+  <xsd:schema attributeFormDefault="qualified" targetNamespace="urn:sap-com:document:sap:rfc:functions">
+   <xsd:simpleType name="char1">
+    <xsd:restriction base="xsd:string">
+     <xsd:maxLength value="1"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="char10">
+    <xsd:restriction base="xsd:string">
+     <xsd:maxLength value="10"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="char18">
+    <xsd:restriction base="xsd:string">
+     <xsd:maxLength value="18"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="char2">
+    <xsd:restriction base="xsd:string">
+     <xsd:maxLength value="2"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="char20">
+    <xsd:restriction base="xsd:string">
+     <xsd:maxLength value="20"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="char220">
+    <xsd:restriction base="xsd:string">
+     <xsd:maxLength value="220"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="char241">
+    <xsd:restriction base="xsd:string">
+     <xsd:maxLength value="241"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="char3">
+    <xsd:restriction base="xsd:string">
+     <xsd:maxLength value="3"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="char30">
+    <xsd:restriction base="xsd:string">
+     <xsd:maxLength value="30"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="char32">
+    <xsd:restriction base="xsd:string">
+     <xsd:maxLength value="32"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="char4">
+    <xsd:restriction base="xsd:string">
+     <xsd:maxLength value="4"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="char40">
+    <xsd:restriction base="xsd:string">
+     <xsd:maxLength value="40"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="char50">
+    <xsd:restriction base="xsd:string">
+     <xsd:maxLength value="50"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="char6">
+    <xsd:restriction base="xsd:string">
+     <xsd:maxLength value="6"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="char60">
+    <xsd:restriction base="xsd:string">
+     <xsd:maxLength value="60"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="char8">
+    <xsd:restriction base="xsd:string">
+     <xsd:maxLength value="8"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="numeric3">
+    <xsd:restriction base="xsd:string">
+     <xsd:maxLength value="3"/>
+     <xsd:pattern value="\d*"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="numeric6">
+    <xsd:restriction base="xsd:string">
+     <xsd:maxLength value="6"/>
+     <xsd:pattern value="\d*"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+  </xsd:schema>
+  <xsd:schema attributeFormDefault="qualified" targetNamespace="urn:sap-com:document:sap:soap:functions:mc-style" xmlns:n0="urn:sap-com:document:sap:rfc:functions">
+   <xsd:import namespace="urn:sap-com:document:sap:rfc:functions"/>
+   <xsd:complexType name="ZzmyacAddressData">
+    <xsd:sequence>
+     <xsd:element name="HouseNum" type="n0:char10"/>
+     <xsd:element name="Street1" type="n0:char60"/>
+     <xsd:element name="Street2" type="n0:char40"/>
+     <xsd:element name="Street3" type="n0:char40"/>
+     <xsd:element name="City" type="n0:char40"/>
+     <xsd:element name="District" type="n0:char40"/>
+     <xsd:element name="State" type="n0:char3"/>
+     <xsd:element name="Country" type="n0:char3"/>
+     <xsd:element name="PostCode" type="n0:char10"/>
+     <xsd:element name="EmailAddress" type="n0:char241"/>
+     <xsd:element name="HousePhone" type="n0:char30"/>
+     <xsd:element name="WorkPhone" type="n0:char30"/>
+     <xsd:element name="MobilePhone" type="n0:char30"/>
+    </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="ZzmyacNameData">
+    <xsd:sequence>
+     <xsd:element name="CrmBpId" type="n0:char10"/>
+     <xsd:element name="TitleKey" type="n0:char4"/>
+     <xsd:element name="FirstName" type="n0:char40"/>
+     <xsd:element name="MiddleName" type="n0:char40"/>
+     <xsd:element name="LastName" type="n0:char40"/>
+     <xsd:element name="DateOfBirth" type="n0:char8"/>
+     <xsd:element name="CorrLanguage" type="n0:char2"/>
+     <xsd:element name="Contactable" type="n0:char1"/>
+     <xsd:element name="CreateDate" type="n0:char8"/>
+     <xsd:element name="CreateTime" type="n0:char6"/>
+     <xsd:element name="LastChangeDate" type="n0:char8"/>
+     <xsd:element name="LastChangeTime" type="n0:char6"/>
+     <xsd:element name="Vip" type="n0:char1"/>
+    </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="ZzisbMktInfo">
+    <xsd:sequence>
+     <xsd:element name="AttSet" type="n0:char18"/>
+     <xsd:element name="AttName" type="n0:char30"/>
+     <xsd:element name="AttValue" type="n0:char30"/>
+    </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="Bapiret2">
+    <xsd:sequence>
+     <xsd:element name="Type" type="n0:char1"/>
+     <xsd:element name="Id" type="n0:char20"/>
+     <xsd:element name="Number" type="n0:numeric3"/>
+     <xsd:element name="Message" type="n0:char220"/>
+     <xsd:element name="LogNo" type="n0:char20"/>
+     <xsd:element name="LogMsgNo" type="n0:numeric6"/>
+     <xsd:element name="MessageV1" type="n0:char50"/>
+     <xsd:element name="MessageV2" type="n0:char50"/>
+     <xsd:element name="MessageV3" type="n0:char50"/>
+     <xsd:element name="MessageV4" type="n0:char50"/>
+     <xsd:element name="Parameter" type="n0:char32"/>
+     <xsd:element name="Row" type="xsd:int"/>
+     <xsd:element name="Field" type="n0:char30"/>
+     <xsd:element name="System" type="n0:char10"/>
+    </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="ZzmyacMktAttrib">
+    <xsd:sequence>
+     <xsd:element name="item" type="tns:ZzisbMktInfo" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="Bapiret2Tab">
+    <xsd:sequence>
+     <xsd:element name="item" type="tns:Bapiret2" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+   </xsd:complexType>
+   <xsd:element name="ZEsCreaconMyacc">
+    <xsd:complexType>
+     <xsd:sequence>
+      <xsd:element name="CrmBpId" type="n0:char10" minOccurs="0"/>
+      <xsd:element name="CsAddressData" type="tns:ZzmyacAddressData"/>
+      <xsd:element name="CsNameData" type="tns:ZzmyacNameData"/>
+      <xsd:element name="CtMktAttrib" type="tns:ZzmyacMktAttrib" minOccurs="0"/>
+      <xsd:element name="WebChgDate" type="n0:char8" minOccurs="0"/>
+      <xsd:element name="WebChgTime" type="n0:char6" minOccurs="0"/>
+      <xsd:element name="WebCrtDate" type="n0:char8" minOccurs="0"/>
+      <xsd:element name="WebCrtTime" type="n0:char6" minOccurs="0"/>
+      <xsd:element name="WebId" type="n0:char20" minOccurs="0"/>
+     </xsd:sequence>
+    </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="ZEsCreaconMyaccResponse">
+    <xsd:complexType>
+     <xsd:sequence>
+      <xsd:element name="CsAddressData" type="tns:ZzmyacAddressData"/>
+      <xsd:element name="CsNameData" type="tns:ZzmyacNameData"/>
+      <xsd:element name="CtMktAttrib" type="tns:ZzmyacMktAttrib"/>
+      <xsd:element name="EtReturn" type="tns:Bapiret2Tab"/>
+     </xsd:sequence>
+    </xsd:complexType>
+   </xsd:element>
+  </xsd:schema>
+ </wsdl:types>
+ <wsdl:message name="ZEsCreaconMyacc">
+  <wsdl:part name="parameters" element="tns:ZEsCreaconMyacc"/>
+ </wsdl:message>
+ <wsdl:message name="ZEsCreaconMyaccResponse">
+  <wsdl:part name="parameter" element="tns:ZEsCreaconMyaccResponse"/>
+ </wsdl:message>
+ <wsdl:portType name="Z_ES_MYACC_CREATECONSUMER">
+  <wsp:Policy>
+   <wsp:PolicyReference URI="#IF_IF_Z_ES_MYACC_CREATECONSUMER"/>
+  </wsp:Policy>
+  <wsdl:operation name="ZEsCreaconMyacc">
+   <wsp:Policy>
+    <wsp:PolicyReference URI="#OP_IF_OP_ZEsCreaconMyacc"/>
+   </wsp:Policy>
+   <wsdl:input message="tns:ZEsCreaconMyacc"/>
+   <wsdl:output message="tns:ZEsCreaconMyaccResponse"/>
+  </wsdl:operation>
+ </wsdl:portType>
+</wsdl:definitions>

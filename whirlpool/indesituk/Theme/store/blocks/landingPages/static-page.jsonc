@@ -1,0 +1,315 @@
+{
+  "store.custom#remote-html-embed-page": {
+    "blocks": [
+      // "analytics",
+      "remote-html-embed",
+      "condition-layout-search#free-ariel-offer",
+      "store-locator-landing-pages#landing"
+    ]
+  },
+  //---- START FREE ARIEL OFFER ----//
+  "condition-layout-search#free-ariel-offer": {
+    "props": {
+      "conditions": "free-ariel"
+    },
+    "children": ["flex-layout.row#row-ariel-offer"]
+  },
+  "flex-layout.row#row-ariel-offer": {
+    "props": {
+      "width": "100%",
+      "blockClass": "free-ariel-offer-landing-page-cards-container"
+    },
+    "children": ["card-home-landing-page#free-ariel-offer"]
+  },
+  "card-home-landing-page#free-ariel-offer": {
+    "props": {
+      "collectionID": "173"
+    }
+  },
+  "store.custom#free-ariel-landing-page": {
+    "blocks": [
+      // "analytics",
+      // "remote-html-embed#free-ariel",
+      "flex-layout.row#free-ariel-landing-page-banner-top",
+      "flex-layout.row#banner-free-ariel-july-2023-1",
+      "flex-layout.row#banner-free-ariel-july-2023-2",
+      "flex-layout.row#row-ariel-offer",
+
+      "store-locator-landing-pages#landing"
+    ]
+  },
+  //---- END FREE ARIEL OFFER ----//
+  "store.custom#washing-machine-landing-page": {
+    "blocks": [
+      // "analytics",
+      // "remote-html-embed#innex-washing-machine",
+      "flex-layout.row#washing-machine-landing-page-cards-container",
+      "store-locator-landing-pages#landing"
+    ]
+  },
+  "flex-layout.row#free-ariel-landing-page-banner-top": {
+    "props": {
+      "width": "100%",
+      "blockClass": "washing-machine-landing-page-cards-container"
+    },
+    "children": ["flex-layout.row#image-card-laundry"]
+  },
+  "flex-layout.row#image-card-laundry": {
+    "props": {},
+    "children": ["image#cardLaundryc"]
+  },
+  "image#cardLaundryc": {
+    "props": {
+      "blockClass": "image-banner-free-ariel",
+      "src": "assets/free-ariel-july-2023-landing-page-banner-desktop.png"
+    }
+  },
+  "flex-layout.row#banner-free-ariel-july-2023-1": {
+    "props": {
+      "blockClass": "banner-landing-ariel"
+    },
+    "children": ["flex-layout.col#banner-free-ariel-july-2023-1"
+    ]
+  },
+  "flex-layout.row#banner-free-ariel-july-2023-2": {
+    "props": {
+      "blockClass": "banner-landing-ariel"
+    },
+    "children": ["flex-layout.col#banner-free-ariel-july-2023-2"
+    ]
+  },
+  "flex-layout.col#banner-free-ariel-july-2023-1": {
+    "props": {
+      "blockClass": "banner-landing-ariel"
+    },
+    "children": [
+      "rich-text#title-slide-banner-free-ariel-july-2023-1",
+      "rich-text#desc-slide-banner-free-ariel-july-2023-1",
+      "rich-text#desc-slide-banner-free-ariel-july-2023-1-postilla",
+      "flex-layout.row#btn-container-slide-1",
+      "flex-layout.row#btn-container-slide-2"
+    ]
+  },
+  "flex-layout.col#banner-free-ariel-july-2023-2": {
+    "props": {
+      "blockClass": "banner-landing-ariel"
+    },
+    "children": [
+      "rich-text#title-slide--banner-free-ariel-july-2023-2"
+      // "rich-text#desc-slide-2",
+      // "flex-layout.row#btn-container-slide-2"
+    ]
+  },
+  "rich-text#title-slide-banner-free-ariel-july-2023-1": {
+    "props": {
+      "text": "# Claim a free 6 month supply of Ariel washing detergent for a limited time with selected Indesit washing machine purchases*. ",
+      "blockClass": [
+        "title-slide-free-ariel"
+        // "title-slide-5"
+      ]
+    }
+  },
+  "rich-text#desc-slide-banner-free-ariel-july-2023-1": {
+    "props": {
+      "text": "For a limited time, claim a 6 month supply of Ariel detergent with selected Indesit washing machine purchases*. When there's a pile of laundry to contend with, Indesit has you covered. With Push&Go technology, the whole family can help with the housework - simply press the blue button for two seconds to start a daily, 30°C cycle.",
+      "blockClass": "desc-slide-free-ariel"
+    }
+  },
+  "rich-text#desc-slide-banner-free-ariel-july-2023-1-postilla": {
+    "props": {
+      "text": "*T&Cs apply. UK & 18+ only. Subject to availability. Valid on purchases made between 1/7/23 - 30/9/23. Claim submissions can be made until 15/10/23 or whilst stocks last.",
+      "blockClass": ["desc-slide-free-ariel","home-banner-postilla"]
+    }
+  },
+  "flex-layout.row#btn-container-slide-1": {
+    "props": {
+      "blockClass": "btn-container-slide-free-ariel"
+    },
+    "children": [
+      "button-primary#btn-slide-1"
+    ]
+  },
+  "button-primary#btn-slide-1": {
+    "props": {
+      "width": "230px",
+      "text": "Submit your claim",
+      "href": "/claim-free-ariel "
+    }
+  },
+  "rich-text#title-slide--banner-free-ariel-july-2023-2": {
+    "props": {
+      "text": "# Shop campaign washing machines",
+      "blockClass": [
+        "title-slide-free-ariel"
+      ]
+    }
+  },
+  "rich-text#desc-slide-2": {
+    "props": {
+      "text": "For a limited time, claim your 6 month free supply of Ariel detergent with selected washing machine purchases*.",
+      "blockClass": "desc-slide-free-ariel"
+    }
+  },
+  "flex-layout.row#btn-container-slide-2": {
+    "props": {
+      "blockClass": "btn-container-slide-free-ariel"
+    },
+    "children": [
+      "button-primary#btn-slide-2"
+    ]
+  },
+  "button-primary#btn-slide-2": {
+    "props": {
+      "width": "235px",
+      "text": "Read the T&Cs here",
+      "href": "/free-ariel-tcs"
+    }
+  },
+  "flex-layout.row#washing-machine-landing-page-cards-container": {
+    "props": {
+      "width": "100%",
+      "blockClass": "washing-machine-landing-page-cards-container"
+    },
+    "children": ["card-home-landing-page#landing-washing-machine"]
+  },
+  "card-home-landing-page#landing-washing-machine": {
+    "props": {
+      "collectionID": "163"
+    }
+  },
+  "store.custom#washer-dryer-landing-page": {
+    "blocks": [
+      "remote-html-embed#innex-washer-dryer",
+      "store-locator-landing-pages#landing"
+    ]
+  },
+  "store.custom#dishwashing-landing-page": {
+    "blocks": [
+      "remote-html-embed#dishwashing-60",
+      "store-locator-landing-pages#landing"
+    ]
+  },
+  "store.custom#dryer-landing-page": {
+    "blocks": [
+      "remote-html-embed#my-time-tumble-dryer",
+      "store-locator-landing-pages#landing"
+    ]
+  },
+  "store.custom#energy-class-landing-page": {
+    "blocks": [
+      // "analytics",
+      "remote-html-embed#THE-NEW-ENERGY-EFFICIENCY",
+      "flex-layout.row#energy-class-landing-page-container",
+      "store-locator-landing-pages#landing"
+    ]
+  },
+  "flex-layout.row#energy-class-landing-page-container": {
+    "props": {
+      "blockClass": "energy-class-landing-page-container-style"
+    },
+    "children": [
+      "product-carousel-landing-page-new#energy-class-landing-page-carousel"
+    ]
+  },
+  "product-carousel-landing-page-new#energy-class-landing-page-carousel": {
+    "props": {
+      "collectionID": "164",
+      "isBottomCarousel": false
+    }
+  },
+  "store.custom#hobs-landing-page": {
+    "blocks": [
+      // "analytics",
+      "remote-html-embed#induction-hob",
+      "flex-layout.row#hob-landing-page-cards-container",
+      "store-locator-landing-pages#landing"
+    ]
+  },
+  "store-locator-landing-pages#landing": {},
+  "flex-layout.row#hob-landing-page-cards-container": {
+    "props": {
+      "width": "100%",
+      "blockClass": "hob-landing-page-cards-container-style"
+    },
+    "children": ["card-home-landing-page#hob-landing-page-cards"]
+  },
+  "card-home-landing-page#hob-landing-page-cards": {
+    "props": {
+      "collectionID": "165"
+    }
+  },
+  //fairy landing page**************************************
+  "store.custom#free-fairy-landing-page": {
+    "blocks": [
+      // "analytics",
+      "remote-html-embed#free-fairy",
+      "flex-layout.row#free-fairy-built-in-container",
+      "flex-layout.row#free-fairy-landing-page-cards-container-built-in",
+      "flex-layout.row#free-fairy-free-standing-container",
+      "flex-layout.row#free-fairy-landing-page-cards-container-free-standing",
+      "store-locator-landing-pages#landing"
+    ]
+  },
+  "store.custom#free-fairy-landing-page-2022": {
+    "blocks": [
+      // "analytics",
+      "remote-html-embed#free-fairy-2022",
+      // "product-carousel-new#second-carousel-dit",
+      "product-carousel-new#free-fairy"
+    ]
+  },
+  "product-carousel-new#free-fairy": {
+    "props": {
+      "collectionID": "172"
+    }
+  },
+
+  "flex-layout.row#free-fairy-landing-page-cards-container-built-in": {
+    "props": {
+      "width": "100%",
+      "blockClass": "free-fairy-landing-page-cards-container-built-in-style"
+    },
+    "children": ["card-home-landing-page#free-fairy-landing-built-in"]
+  },
+  "card-home-landing-page#free-fairy-landing-built-in": {
+    "props": {
+      "collectionID": "166"
+    }
+  },
+  "card-home-landing-page#free-fairy-landing-free-standing": {
+    "props": {
+      "collectionID": "167"
+    }
+  },
+  "flex-layout.row#free-fairy-landing-page-cards-container-free-standing": {
+    "props": {
+      "width": "100%",
+      "blockClass": "free-fairy-landing-page-cards-container-free-standing-style"
+    },
+    "children": ["card-home-landing-page#free-fairy-landing-free-standing"]
+  },
+  "flex-layout.row#free-fairy-built-in-container": {
+    "props": {
+      "blockClass": "free-fairy-built-in-container-style"
+    },
+    "children": ["rich-text#free-fairy-built-in"]
+  },
+  "flex-layout.row#free-fairy-free-standing-container": {
+    "props": {
+      "blockClass": "free-fairy-free-standing-container-style"
+    },
+    "children": ["rich-text#free-fairy-free-standing"]
+  },
+  "rich-text#free-fairy-built-in": {
+    "props": {
+      "text": "Built In",
+      "blockClass": "free-fairy-built-in-style"
+    }
+  },
+  "rich-text#free-fairy-free-standing": {
+    "props": {
+      "text": "Free Standing",
+      "blockClass": "free-fairy-free-standing-style"
+    }
+  }
+}

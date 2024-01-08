@@ -1,0 +1,33 @@
+.topbarDiv {
+  position: relative;
+  z-index: 0;
+  animation: 1s ease-out 0s 1 slideInFromTop;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.2s ease;
+  padding: 10px 5px;
+}
+
+.topbarContent {
+  flex-grow: 1;
+}
+
+.topbarCloseButton {
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

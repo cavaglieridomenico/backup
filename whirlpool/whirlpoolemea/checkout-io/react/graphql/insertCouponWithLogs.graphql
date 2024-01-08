@@ -1,0 +1,27 @@
+mutation addCouponWithLogs($orderFormId: ID, $coupon: String) {
+	insertCouponWithLogs(orderFormId: $orderFormId, coupon: $coupon) {
+		id
+		value
+		marketingData {
+			utmCampaign
+			utmMedium
+			utmSource
+			utmiCampaign
+			utmiPart
+			utmiPage
+			coupon
+		}
+		messages {
+			couponMessages {
+				code
+				status
+				text
+			}
+			generalMessages {
+				code
+				status
+				text
+			}
+		}
+	}
+}

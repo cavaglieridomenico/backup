@@ -1,0 +1,101 @@
+/* Blocks can be defined both on the store/blocks.json file, and in any number of json
+ * files inside the store/blocks directory, with any arbitrary directory structure.
+ *
+ * Additionally, all blocks files can support comments, such as this one, if given the
+ * .jsonc file extension.
+ *
+ * The store/blocks.json file is intended for backwards compatibility, for miscellaneous
+ * blocks, or if the app is simple enough that it doesn't warrant splitting the file.
+ */
+{
+  "store.orderplaced": {
+    "blocks": [
+      "order-placed-custom"
+    ]
+  },
+  "store.account": {
+    "blocks": [
+      "my-account"
+    ],
+    "parent": {
+      "challenge": "challenge.profile"
+    }
+  },
+  "store.product-review-form": {
+    "blocks": [
+      "product-review-form"
+    ]
+  },
+  "store.not-found#product": {
+    "blocks": [
+      // "analytics#error",
+      "flex-layout.row#page-not-found-product"
+    ]
+  },
+  "store.not-found#search": {
+    "blocks": [
+      // "analytics#error",
+      "flex-layout.row#page-not-found-search"
+    ]
+  },
+  // BLOCCO NOT FOUND
+  "flex-layout.row#page-not-found-search": {
+    "children": [
+      "flex-layout.col#notfound-coltesto",
+      "flex-layout.col#notfound-info-search"
+    ],
+    "props": {
+      "blockClass": "pageNotFoundSearch",
+      "marginBottom": 10,
+      "marginTop": 10
+    }
+  },
+  "flex-layout.row#page-not-found-product": {
+    "children": [
+      "flex-layout.col#notfound-coltesto",
+      "flex-layout.col#notfound-info-product"
+    ],
+    "props": {
+      "marginBottom": 10,
+      "marginTop": 10
+    }
+  },
+  "flex-layout.col#notfound-coltesto": {
+    "children": [
+      "flex-layout.row#text-not-found"
+    ]
+  },
+  "flex-layout.row#text-not-found": {
+    "children": [
+      "rich-text#not-found"
+    ]
+  },
+  "rich-text#not-found": {
+    "props": {
+      "textAlignment": "center",
+      "textPosition": "center",
+      "text": "# OOPS!",
+      "blockClass": "notfoundrow"
+    }
+  },
+  "flex-layout.col#notfound-info-product": {
+    "children": [
+      "rich-text#not-found-info-product"
+    ]
+  },
+  "rich-text#not-found-info-product": {
+    "props": {
+      "text": "Sorry, nothing was found.\n - It is possible that an error was made when entering the address of the page or request.\n - You can use the Search, go to the [main page](/appliances)."
+    }
+  },
+  "flex-layout.col#notfound-info-search": {
+    "children": [
+      "rich-text#not-found-info-search"
+    ]
+  },
+  "rich-text#not-found-info-search": {
+    "props": {
+      "text": "Sorry, nothing was found.\n - The page has been deleted or moved to another location.\n - You can use Search, go to the [main page](/) or use the [product catalog](/appliances)."
+    }
+  }
+}

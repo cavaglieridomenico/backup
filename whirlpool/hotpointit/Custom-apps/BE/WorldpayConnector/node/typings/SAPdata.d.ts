@@ -1,0 +1,22 @@
+export interface SAP {
+  CC_TYPE: string,
+  CC_NUMBER: string,
+  CC_VALID_T: string,
+  CC_NAME: string,
+  BILLAMOUNT: string,
+  AUTH_FLAG: string,
+  AUTHAMOUNT: string,
+  CURRENCY: string,
+  CURR_ISO: string,
+  AUTH_DATE: string,
+  AUTH_TIME: string,
+  AUTH_CC_NO: string,
+  AUTH_REFNO: string,
+  CC_REACT: string,
+  CC_RE_AMOUNT: string,
+  GL_ACCOUNT: string,
+  CC_STAT_EX: string,
+  CC_REACT_T: string,
+  MERCHIDCL: string,
+  DATAORIGIN: string
+}

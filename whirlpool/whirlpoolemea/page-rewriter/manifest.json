@@ -1,0 +1,103 @@
+{
+  "name": "page-rewriter",
+  "vendor": "whirlpoolemea",
+  "version": "1.0.3",
+  "title": "Page rewriter",
+  "description": "App to update redirects for new pages",
+  "mustUpdateAt": "2023-02-17",
+  "categories": [],
+  "dependencies": {
+    "vtex.rewriter": "1.x"
+  },
+  "builders": {
+    "node": "6.x",
+    "docs": "0.x",
+    "graphql": "1.x"
+  },
+  "billingOptions": {
+    "termsURL": "https://compliance.vtex.com/gdpr/policies/vtex-privacy-policy",
+    "support": {
+      "url": "https://support.vtex.com/hc/requests"
+    },
+    "free": true
+  },
+  "scripts": {
+    "prereleasy": "bash lint.sh"
+  },
+  "credentialType": "absolute",
+  "policies": [
+    {
+      "name": "colossus-fire-event"
+    },
+    {
+      "name": "colossus-write-logs"
+    },
+    {
+      "name": "vtex.rewriter:resolve-graphql"
+    },
+    {
+      "name": "ADMIN_DS"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "api.vtex.com",
+        "path": "/dataentities/*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "portal.vtexcommercestable.com.br",
+        "path": "*"
+      }
+    },
+    {
+      "name": "vbase-read-write"
+    }
+  ],
+  "settingsSchema": {
+    "title": "Page rewriter",
+    "type": "object",
+    "properties": {
+      "disableSitemapEntry": {
+        "title": "Disable the sitemap entry",
+        "type": "boolean"
+      },
+      "isVBaseEnabled": {
+        "title": "Enable saving queryParam in VBase",
+        "type": "boolean",
+        "default": false
+      },
+      "appKey": {
+        "title": "App key (sha-256)",
+        "type": "string"
+      },
+      "appToken": {
+        "title": "App token (sha-256)",
+        "type": "string"
+      },
+      "allowedPage": {
+        "title": "Allowed type of pages (es. service)",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "fromPath": {
+              "title": " -> From allowed string",
+              "type": "string"
+            },
+            "resolveAsPath": {
+              "title": "  --> ResolveAs allowed string",
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

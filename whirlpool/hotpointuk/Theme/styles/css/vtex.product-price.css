@@ -1,0 +1,142 @@
+.listPrice {
+  color: #d0d3d4;
+  /* margin-bottom: 0.25rem; */
+}
+.sellingPrice--SearchResult{
+  color: black;
+}
+.sellingPriceValue {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-family: "hotpointRegular";
+}
+.sellingPriceValue--SearchResult{
+  font-size: 18px !important;
+}
+.sellingPrice--summary {
+  font-size: 0.65rem;
+  margin: 0;
+  color: #505050;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 0.5rem !important;
+
+}
+.sellingPriceValue--summary {
+  color: #505050;
+  padding: 0;
+}
+.savings--summary {
+  background: #B24C24;
+  border-radius: 1000px;
+  padding: 0.2rem;
+  align-items: center;
+  display: flex;
+  color: #ffffff;
+}
+.savings-discount--summary {
+  font-size: 0.875rem;
+  font-weight: 600;
+  vertical-align: baseline;
+  color: #ffffff;
+}
+.listPrice--summary {
+  margin-bottom: 0;
+}
+.listPrice--comparison {
+  padding-left: 20px;
+}
+.savings{
+  color: #505050;
+  font-size: 0.8rem;
+}
+.savings--saving {
+  padding: 0 0.3rem;
+  color: #505050;
+  font-weight: 600;
+}
+.savings--savingPdp {
+  color: #B24C24;
+  font-family: "hotpointRegular";
+  font-size: 1rem;
+}
+.savingsValue--savingPdp {
+  color: #B24C24;
+  font-family: "hotpointRegular";
+  font-size: 1.1rem;
+  font-weight: bolder;
+}
+.savings--widthMinContent {
+  width: min-content;
+}
+
+.currencyCode {
+  margin: 0px 5px;
+  margin-left: 0;
+}
+:global(.vtex-flex-layout-0-x-flexRowContent--discountedPriceDesk) .savings--savingPdp{
+  display: flex;
+  flex-direction: column;
+  padding-right: 1rem;
+}
+/* Media Queries */
+@media only screen and (min-width: 1024px) {
+  .sellingPriceValue {
+    font-size: 2rem;
+    line-height: 1.5;
+    font-family: "hotpointRegular";
+  }
+  }
+
+@media only screen and (max-width: 600px) {
+  .currencyContainer--summary {
+    font-size: 2rem;
+  }
+  .savings--saving {
+    padding: 0;
+  }
+
+  .sellingPriceValue {
+    font-size: 1.3rem;
+  }
+  .sellingPrice--summary {
+    font-size: 0.65rem;
+    margin: 0;
+    color: #505050;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .sellingPrice--SearchResult{
+    justify-content: left;
+    padding-left: 4rem;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .currencyContainer--SearchResult, .sellingPrice--SearchResult {
+    position: static;
+    padding-left: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 900px) {
+.sellingPrice--summary {
+  margin-right: 1.8rem !important;
+}
+
+}
+
+@media only screen and (max-width: 1370px) and (min-width: 1020px)  {
+  .sellingPrice--summary {
+  margin-right: 1.2rem !important;
+}
+
+}
+
+@media only screen and (max-width: 640px){
+  :global(.vtex-flex-layout-0-x-flexRow--principalMobile-right) .sellingPriceValue {
+    line-height: 2;
+  }
+}

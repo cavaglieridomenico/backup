@@ -1,0 +1,63 @@
+.orderedSteps {
+	counter-reset: step;
+	list-style-type: none;
+	padding-left: 0 !important;
+}
+.step {
+}
+
+.orderedSteps li {
+	counter-increment: step;
+	margin: 0;
+	position: relative;
+	margin-bottom: 2rem !important;
+	padding: 1.875rem;
+	padding-bottom: 0;
+	border-bottom-width: 3px;
+	border-bottom-style: solid;
+}
+.orderedSteps .StepHeader::before {
+	content: counter(step) " ";
+	border-radius: 50%;
+	height: 40px;
+	width: 42px;
+	text-align: center;
+	color: #fff;
+	line-height: 50%;
+	font-weight: bold;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 15px;
+}
+.StepHeaderText {
+}
+.StepHeaderTitleText {
+}
+.editButtonsContainer {
+}
+.editButtonsContainer button {
+	color: #000;
+}
+.editButtonsContainer :global(.vtex__icon-edit) {
+	width: 0.8rem;
+	margin-right: 0.25rem;
+	color: #000;
+}
+.editButton {
+	color: #000;
+}
+.inlineBlock {
+	display: inline-block;
+}
+/* MEDIA QUERY */
+@media screen and (max-width: 1024px) {
+	.orderedSteps > li > div {
+		width: 100%;
+	}
+}
+@media screen and (max-width: 64em) {
+	.orderedSteps li {
+		padding-left: 2rem;
+	}
+}

@@ -1,0 +1,203 @@
+.wrapper--stickyButton .container--stickyButton {
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: hidden;
+}
+.wrapper--stuck .container--stickyButton {
+  background: #ffff;
+  padding: 1rem 0rem 1rem 0rem;
+  opacity: 1;
+  visibility: visible;
+  z-index: 999 !important;
+  border-bottom: 0.063rem solid #c9c9c9;
+}
+.container--stickyButton :global(.vtex-button) {
+  margin: 1.25rem 3rem;
+  transition: all 0.5s ease-in-out;
+}
+.container--sticky-header {
+  background: linear-gradient(to left, #282828 0%, #000000 100%) !important;
+  height: 89px;
+}
+.container--stickyButton :global(.vtex-store-components-3-x-imageElement) {
+  width: 6rem;
+}
+.wrapper--stickyButton {
+  height: 50px !important;
+  position: absolute !important;
+  left: 0;
+  max-width: 100%;
+}
+.wrapper--stickyCardBottom {
+  visibility: hidden;
+  position: absolute !important;
+}
+:global(.vtex-sticky-layout-0-x-wrapper--stuck)
+  :global(.vtex-flex-layout-0-x-flexColChild--supportoCardBottom)
+  :global(.vtex-rich-text-0-x-paragraph--colonnaSupportoCard) {
+  display: none;
+  flex-direction: row;
+}
+:global(.vtex-sticky-layout-0-x-wrapper--stuck)
+  :global(.vtex-flex-layout-0-x-flexRowContent--supportoCardsBottom) {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  justify-content: space-between;
+  background-color: #f6f6f6;
+}
+:global(.vtex-sticky-layout-0-x-wrapper--stuck)
+  :global(.vtex-flex-layout-0-x-flexCol--supportoCard) {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly !important;
+  padding: 0;
+  margin-top: 2rem;
+  background-color: transparent;
+}
+:global(.vtex-sticky-layout-0-x-wrapper--stuck)
+  :global(.vtex-flex-layout-0-x-flexRow--colonnaSupportoCardBottom) {
+  height: auto;
+}
+:global(.vtex-sticky-layout-0-x-wrapper--stuck)
+  :global(.vtex-flex-layout-0-x-stretchChildrenWidth) {
+  margin: 0;
+  /* width: 20% !important; */
+}
+:global(.vtex-sticky-layout-0-x-wrapper--stuck)
+  :global(.vtex-slider-layout-0-x-sliderLayoutContainer--carousel) {
+  background-color: #f9f9f9 !important;
+  margin-bottom: 0;
+  /* width: 20% !important; */
+}
+:global(.vtex-sticky-layout-0-x-wrapper--stuck)
+  :global(.vtex-slider-layout-0-x-sliderTrackContainer--carousel) {
+  max-width: 100%;
+}
+.wrapper--stuck .container--stickyCardBottom {
+  visibility: visible;
+}
+
+.wrapper--stuck .container--stickyButton {
+  /* max-width: 96rem; */
+  margin: auto;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  padding-top: 1rem;
+}
+.wrapper--stickyCottura
+  :global(.vtex-sticky-layout-0-x-container--stickyCottura) {
+  top: 5rem;
+  background-color: white;
+  position: unset;
+}
+.wrapper--stickyCottura--stuck
+  :global(.vtex-sticky-layout-0-x-container--stickyCottura) {
+  position: fixed;
+  z-index: 5;
+}
+.container--stickyButton {
+  padding-bottom: 0 !important;
+}
+.container--stickyMenu {
+  z-index: 998;
+}
+/* PRE ORDER PAGE */
+.wrapper--stickyMenu {
+  max-width: 122rem;
+  margin: auto;
+}
+/**/
+/* .container--compareStickyMobile {
+  top: 130px !important;
+} */
+.container--compareStickyMobile {
+  z-index: 998 !important;
+}
+.wrapper--compareStickyMobile--stuck .container--compareStickyMobile {
+  z-index: 999 !important;
+}
+/* .container--compareStickyMobile.fixed{
+  z-index: 999 !important;
+} */
+
+@media only screen and (max-width: 1024px) {
+  .wrapper--stickyMenu {
+    height: unset !important;
+  }
+  .wrapper--stickyMenuButton {
+    opacity: 0;
+    height: 0 !important;
+  }
+  /* .container--stickyMenu{
+    top: 157px !important;
+  } */
+}
+/* -------------------- */
+/* Media Queries */
+@media only screen and (min-width: 1025px) {
+  .wrapper--stuck .container--stickyButton {
+    top: 0px !important;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 600px) {
+  .container--stickyButton :global(.vtex-button) {
+    margin: unset;
+  }
+}
+
+@media only screen and (max-width: 1024px),
+  (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .wrapper--stickyButton {
+    z-index: 999999;
+    height: 0 !important;
+  }
+  .wrapper--stuck .container--stickyButton {
+    bottom: 0px !important;
+    top: unset !important;
+    width: 100%;
+  }
+  :global(.vtex-flex-layout-0-x-flexColChild--EtichettaEnergeticaNew) {
+    display: none;
+  }
+  .wrapper--stickyCardBottom {
+    display: none;
+  }
+  .container--stickyCardBottom {
+    display: none;
+  }
+  .container--stickyButton
+    :global(.vtex-flex-layout-0-x-flexRowContent--sticky) {
+    display: flex;
+    transform: scale(0.8);
+  }
+  .container--stickyButton :global(.vtex-button) {
+    margin: auto;
+  }
+  .wrapper--stuck .container--stickyButton {
+    background: #505050;
+  }
+}
+@media only screen and (max-width: 1024px){
+  .wrapper--stickyMenu--stuck .container--stickyMenu {
+    top: 155px !important;
+  }
+}
+@media only screen and (max-width: 640px){
+  .wrapper--stickyMenu--stuck .container--stickyMenu {
+    top: 135px !important;
+  }
+}
+@media only screen and (max-width: 1024px){
+  .wrapper--stickyMenuButton--stuck {
+    opacity: 1;
+  }
+  .wrapper--stickyMenuButton--stuck .container--stickyMenuButton {
+    display: block;
+    bottom: 0;
+    top: unset !important;
+  }
+}

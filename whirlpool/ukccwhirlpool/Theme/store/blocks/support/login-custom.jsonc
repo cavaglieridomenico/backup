@@ -1,0 +1,235 @@
+{
+  //   "store.login#custom": {
+  //     "blocks": ["login-content", "rich-text#BanntitleParag"]
+  //   }
+  "store.custom#custom-login": {
+    "blocks": [
+      "experimental__visibility-layout#disclaimerLoginVIP",
+      "login-custom",
+      "flex-layout.row#halfSpace",
+      "experimental__visibility-layout#support-section-login",
+      "flex-layout.row#halfSpace",
+      "experimental__visibility-layout#infosLogin2",
+      "experimental__visibility-layout#infosLogin"
+    ],
+    "parent": {
+      "header": "header#login",
+      "footer": "footer#login"
+    }
+  },
+  "experimental__visibility-layout#support-section-login": {
+    "title": "[LAYOUT] Support section",
+    "props": {
+      "visible": false,
+      "blockClass": ["supportSection"]
+    },
+    "children": ["flex-layout.row#support-section-login"]
+  },
+  "flex-layout.row#support-section-login": {
+    "title": "[ROW] - Support section",
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": ["supportCenterSection", "supportWidth"]
+    },
+    "children": [
+      "flex-layout.col#support-image-login",
+      "flex-layout.col#support-content-login"
+    ]
+  },
+  "flex-layout.col#support-image-login": {
+    "title": "[COL] - Support image",
+    "props": {
+      "blockClass": "supportCenterImageContainer"
+    },
+    "children": ["image#support-image-login"]
+  },
+  "image#support-image-login": {
+    "title": "[IMAGE]",
+    "props": {
+      "blockClass": "supportCenterImage",
+      "horizontalAlign": "center",
+      "src": "assets/support-section.png"
+    }
+  },
+  "flex-layout.col#support-content-login": {
+    "title": "[COL] - Support content",
+    "props": {
+      "blockClass": "supportCenterContent"
+    },
+    "children": [
+      "experimental__visibility-layout#support-title-login",
+      "experimental__visibility-layout#support-subtitle-login",
+      "experimental__visibility-layout#support-buttons-login"
+    ]
+  },
+  "experimental__visibility-layout#support-title-login": {
+    "title": "[LAYOUT] Support section title",
+    "props": {
+      "visible": true
+    },
+    "children": ["rich-text#support-title-login"]
+  },
+  "rich-text#support-title-login": {
+    "title": "[TEXT] - Support title",
+    "props": {
+      "blockClass": "supportCenterTitle",
+      "text": "Support Center"
+    }
+  },
+  "experimental__visibility-layout#support-subtitle-login": {
+    "title": "[LAYOUT] Support section title",
+    "props": {
+      "visible": true
+    },
+    "children": ["rich-text#support-subtitle-login"]
+  },
+  "rich-text#support-subtitle-login": {
+    "title": "[TEXT] - Support subtitle",
+    "props": {
+      "blockClass": "supportCenterSubtitle",
+      "text": "Lorem ipsum dolor sit amet"
+    }
+  },
+  "experimental__visibility-layout#support-buttons-login": {
+    "title": "[LAYOUT] Support section buttons",
+    "props": {
+      "visible": true
+    },
+    "children": ["support-center-buttons"]
+  },
+  "experimental__visibility-layout#disclaimerLoginVIP": {
+    "title": "disclaimerLoginVIP",
+    "children": ["rich-text#disclaimerLoginVIP"]
+  },
+  "rich-text#disclaimerLoginVIP": {
+    "props": {
+      "textAlignment": "center",
+      "textPosition": "center",
+      "text": "Notre site fait peau neuve ! Pour vous connecter et avoir accès à cette nouvelle version, veuillez recréer votre compte.",
+      "blockClass": "disclaimerLoginVIP"
+    }
+  },
+  "header#login": {
+    "blocks": ["header-layout.desktop#login", "header-layout.mobile#login"]
+  },
+  "header-layout.desktop#login": {
+    "children": ["flex-layout.row#header-login"]
+  },
+  "header-layout.mobile#login": {
+    "children": ["flex-layout.row#header-login"]
+  },
+  "flex-layout.row#header-login": {
+    "props": {
+      "blockClass": "headerDesktopLogin",
+      "fullWidth": "true"
+    },
+    "children": ["image#logo-header-login", "custom-catalog-menu-desktop"]
+  },
+  "image#logo-header-login": {
+    "props": {
+      "src": "assets/ph-ultrawide.png",
+      "blockClass": "logo-header-login"
+    }
+  },
+  "footer#login": {
+    "blocks": ["footer-layout.desktop#login", "footer-layout.mobile#login"]
+  },
+  "footer-layout.desktop#login": {
+    "children": ["flex-layout.row#footer-4-desktop"]
+  },
+  "footer-layout.mobile#login": {
+    "children": ["flex-layout.row#footer-4-desktop"]
+  },
+  "experimental__visibility-layout#infosLogin": {
+    "title": "Infos Login",
+    "children": ["flex-layout.row#infosLogin"]
+  },
+  "experimental__visibility-layout#infosLogin2": {
+    "title": "Infos Login",
+    "children": ["flex-layout.row#infosLogin2"]
+  },
+
+  "flex-layout.row#infosLogin": {
+    "props": {
+      "blockClass": "infosLoginRow",
+      "fullWidth": "true"
+    },
+    "children": ["flex-layout.col#infosLogin"]
+  },
+  "flex-layout.col#infosLogin": {
+    "props": {
+      "blockClass": "infosLoginCol",
+      "fullWidth": "true"
+    },
+    "children": [
+      "rich-text#infoLoginQuestion",
+      "rich-text#infoContactForm",
+      "link#supportForm"
+    ]
+  },
+
+  "rich-text#infoLoginQuestion": {
+    "props": {
+      "textAlignment": "center",
+      "textPosition": "center",
+      "text": "A connection problem? \n Contact us:",
+      "blockClass": "infoLoginQuestion"
+    }
+  },
+  "rich-text#infoContactForm": {
+    "props": {
+      "textAlignment": "center",
+      "textPosition": "center",
+      "text": "Fill our support form, we'll quickly get in touch.",
+      "blockClass": "infoLoginText"
+    }
+  },
+  "link#supportForm": {
+    "props": {
+      "blockClass": "supportForm",
+      "displayMode": "button",
+      "href": "/support-form",
+      "label": "Support form"
+    }
+  },
+  "flex-layout.row#infosLogin2": {
+    "props": {
+      "blockClass": ["infosLoginRow", "infosLoginRowOld"],
+      "fullWidth": "true"
+    },
+    "children": ["flex-layout.col#infosLogin2"]
+  },
+  "flex-layout.col#infosLogin2": {
+    "props": {
+      "blockClass": "infosLoginCol",
+      "fullWidth": "true"
+    },
+    "children": [
+      "rich-text#infoLoginQuestion2",
+      "link#infoLoginEmail",
+      "link#infoLoginPhone"
+    ]
+  },
+  "rich-text#infoLoginQuestion2": {
+    "props": {
+      "textAlignment": "center",
+      "textPosition": "center",
+      "text": "A connection problem? \n Contact us:",
+      "blockClass": "infoLoginQuestion"
+    }
+  },
+  "link#infoLoginEmail": {
+    "props": {
+      "label": "MDL-UK.D2C@whirlpool.com",
+      "href": "mailto:MDL-UK.D2C@whirlpool.com",
+      "blockClass": "infoLoginLink"
+    }
+  },
+  "link#infoLoginPhone": {
+    "props": {
+      "label": "03448 224 224",
+      "href": "tel:03448224224",
+      "blockClass": "infoLoginLink"
+    }
+  }
+}

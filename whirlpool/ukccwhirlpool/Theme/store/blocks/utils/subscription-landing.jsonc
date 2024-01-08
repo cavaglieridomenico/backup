@@ -1,0 +1,2025 @@
+{
+  "store.custom#subscription-landing-2": {
+    "blocks": [
+      "breadcrumb-custom#subscription",
+      "flex-layout.row#subscriptionHeader",
+      "flex-layout.row#subscription-cards",
+      "flex-layout.row#imageHero",
+      // "analytics#subscription",
+      "__fold__",
+      "flex-layout.row#product-carousel-subscription",
+      "flex-layout.row#title-pre-card",
+      "flex-layout.row#subscription-cards-2",
+      "link#subscription-contract-agreement",
+      "link#subscription-contract",
+      "flex-layout.row#subscriptionHeroEnd"
+    ]
+  },
+  //SubscriptionHeader
+  "breadcrumb-custom#subscription": {
+    "props": {
+      "showOnMobile": false,
+      "categories": [
+        "/Техника по подписке"
+      ],
+      "blockClass": [
+        "contentBreadcrumb",
+        "breadcrumbContainer",
+        "subscriptionBreadcrumb"
+      ]
+    }
+  },
+  "flex-layout.row#subscriptionHeader": {
+    "children": [
+      "flex-layout.col#text-wrapper-subscription",
+      "flex-layout.col#image-subscription"
+    ],
+    "props": {
+      "blockClass": "subscriptionHeader"
+    }
+  },
+  "flex-layout.col#text-wrapper-subscription": {
+    "children": [
+      "flex-layout.col#text-subscription"
+    ],
+    "props": {
+      "blockClass": "subscriptionHeaderLeft"
+    }
+  },
+  "flex-layout.col#image-subscription": {
+    "children": [
+      "image#header-subscription"
+    ],
+    "props": {
+      "blockClass": "image-column"
+    }
+  },
+  "image#header-subscription": {
+    "props": {
+      "src": "assets/ph-square.jpg"
+    }
+  },
+  "flex-layout.col#text-subscription": {
+    "children": [
+      "rich-text#title-subscription",
+      "rich-text#paragraph-subscription",
+      "modal-trigger#video-button-subscribe"
+      // "link#video-button-subscribe"
+    ]
+  },
+  "rich-text#title-subscription": {
+    "props": {
+      "text": "Чтобы пользоваться,<br />не обязательно покупать",
+      "blockClass": "titleSubscription"
+    }
+  },
+  "rich-text#paragraph-subscription": {
+    "props": {
+      "text": "Подпишитесь на технику и меняйте каждые 4 года",
+      "textColor": "c-auto",
+      "blockClass": "paragraphSubscription"
+    }
+  },
+  "modal-trigger#video-button-subscribe": {
+    "children": [
+      "rich-text#video-button-subscribe",
+      "modal-layout#video-button-subscribe"
+    ],
+    "props": {
+      "blockClass": "modalSubscription"
+    }
+  },
+  "rich-text#video-button-subscribe": {
+    "props": {
+      "text": "Смотреть видео",
+      "textPosition": "CENTER",
+      "blockClass": "notificationButtonSubscribe"
+    }
+  },
+  "modal-layout#video-button-subscribe": {
+    "children": [
+      "video#youtube-subsciption"
+    ],
+    "props": {
+      "blockClass": "modalSubscriptionContainer"
+    }
+  },
+  "video#youtube-subsciption": {
+    "props": {
+      "width": "100%",
+      "height": "100%",
+      "loop": false,
+      "autoPlay": false,
+      "muted": true,
+      "src": "https://www.youtube.com/watch?v=4Pk7fxodvhk",
+      "blockClass": "videoSub"
+    }
+  },
+  "link#video-button-subscribe": {
+    "props": {
+      "displayMode": "button",
+      "buttonProps": {
+        "variant": "secondary"
+      },
+      "href": "https://www.youtube.com/watch?v=4Pk7fxodvhk",
+      "label": "Смотреть видео",
+      "blockClass": "notificationButtonSubscribe"
+    }
+  },
+  //SubscriptionCards
+  "flex-layout.row#subscription-cards": {
+    "children": [
+      "flex-layout.col#subscription-card1",
+      "flex-layout.col#subscription-card2",
+      "flex-layout.col#subscription-card3"
+    ],
+    "props": {
+      "blockClass": "subscriptionCards"
+    }
+  },
+  "flex-layout.col#subscription-card1": {
+    "children": [
+      "link#subscription-card1"
+    ],
+    "props": {
+      "blockClass": "subscriptionCardsContainer"
+    }
+  },
+  "flex-layout.col#subscription-card2": {
+    "children": [
+      "link#subscription-card2"
+    ],
+    "props": {
+      "blockClass": "subscriptionCardsContainer"
+    }
+  },
+  "flex-layout.col#subscription-card3": {
+    "children": [
+      "link#subscription-card3"
+    ],
+    "props": {
+      "blockClass": "subscriptionCardsContainer"
+    }
+  },
+  "link#subscription-card1": {
+    "props": {
+      "blockClass": "linkCardsSubscription",
+      "href": "#"
+    },
+    "children": [
+      "image#logoLinkCard1",
+      "rich-text#TitleCard1",
+      "rich-text#DescCard1"
+    ]
+  },
+  "link#subscription-card2": {
+    "props": {
+      "blockClass": "linkCardsSubscription",
+      "href": "#"
+    },
+    "children": [
+      "image#logoLinkCard2",
+      "rich-text#TitleCard2",
+      "rich-text#DescCard2"
+    ]
+  },
+  "link#subscription-card3": {
+    "props": {
+      "blockClass": "linkCardsSubscription",
+      "href": "#"
+    },
+    "children": [
+      "image#logoLinkCard3",
+      "rich-text#TitleCard3",
+      "rich-text#DescCard3"
+    ]
+  },
+  "image#logoLinkCard1": {
+    "props": {
+      "blockClass": "logoCardsSubscription",
+      "width": "1rem",
+      "src": "assets/icons/subscription-icon-1.svg"
+    }
+  },
+  "rich-text#TitleCard1": {
+    "props": {
+      "text": "Легкое <br />оформление",
+      "textColor": "c-auto",
+      "blockClass": "card-text-subscription"
+    }
+  },
+  "rich-text#DescCard1": {
+    "props": {
+      "text": "0 ₽ первый взнос<br/>0 ₽ доставка и монтаж<br/>Оформление онлайн",
+      "textColor": "c-auto",
+      "blockClass": "banner-desc-paragraph"
+    }
+  },
+  "image#logoLinkCard2": {
+    "props": {
+      "blockClass": "logoCardsSubscription",
+      "width": "1rem",
+      "src": "assets/icons/subscription-icon-2.svg"
+    }
+  },
+  "rich-text#TitleCard2": {
+    "props": {
+      "text": "Низкий<br />платеж",
+      "textColor": "c-auto",
+      "blockClass": "card-text-subscription"
+    }
+  },
+  "rich-text#DescCard2": {
+    "props": {
+      "text": "0% годовых<br/>4 года срок договора<br/>Ремонт и запчасти бесплатно",
+      "textColor": "c-auto",
+      "blockClass": "banner-desc-paragraph"
+    }
+  },
+  "image#logoLinkCard3": {
+    "props": {
+      "blockClass": "logoCardsSubscription",
+      "width": "1rem",
+      "src": "assets/icons/subscription-icon-3.svg"
+    }
+  },
+  "rich-text#TitleCard3": {
+    "props": {
+      "text": "Выбор <br />в конце срока",
+      "textColor": "c-auto",
+      "blockClass": "card-text-subscription"
+    }
+  },
+  "rich-text#DescCard3": {
+    "props": {
+      "text": "Через 4 года решите,<br/>оставить себе или получить<br/>новую модель",
+      "textColor": "c-auto",
+      "blockClass": "banner-desc-paragraph"
+    }
+  },
+  //ImageHero
+  "flex-layout.row#imageHero": {
+    "children": [
+      "flex-layout.col#bannerHero"
+    ],
+    "props": {
+      "blockClass": "imageHeroSubscription"
+    }
+  },
+  "flex-layout.col#bannerHero": {
+    "children": [
+      "flex-layout.row#bannerHeroText",
+      "flex-layout.row#bannerHeroChart",
+      "flex-layout.row#bannerHeroDescription"
+    ],
+    "props": {
+      "blockClass": "bannerHeroSubscription"
+    }
+  },
+  "flex-layout.row#bannerHeroText": {
+    "children": [
+      "rich-text#Titlebanner",
+      "rich-text#Paragraphbanner"
+    ],
+    "props": {
+      "blockClass": "bannerHeroTextSubscription"
+    }
+  },
+  "rich-text#Titlebanner": {
+    "props": {
+      "text": "Пользуйтесь техникой за небольшую плату в месяц",
+      "textColor": "c-auto",
+      "blockClass": "titleSubscriptionBanner"
+    }
+  },
+  "rich-text#Paragraphbanner": {
+    "props": {
+      "text": "экономя на остаточной стоимости каждые 4 года",
+      "textColor": "c-auto",
+      "blockClass": "paragraphSubscriptionBanner"
+    }
+  },
+  "flex-layout.row#bannerHeroChart": {
+    "children": [
+      "image#banner-chart"
+    ],
+    "props": {
+      "blockClass": "chartImageContainer"
+    }
+  },
+  "image#banner-chart": {
+    "props": {
+      "src": "assets/icons/banner-chart.svg",
+      "blockClass": "chartImage"
+    }
+  },
+  "flex-layout.row#bannerHeroDescription": {
+    "children": [
+      "flex-layout.col#bannerTextLeft",
+      "flex-layout.col#bannerTextRight"
+    ],
+    "props": {
+      "blockClass": "bannerHeroDescription"
+    }
+  },
+  "flex-layout.col#bannerTextLeft": {
+    "children": [
+      "rich-text#TitlebannerDesc1",
+      "rich-text#ParagraphbannerDesc1"
+    ],
+    "props": {
+      "blockClass": "bannerTextLeft",
+      "width": "40%"
+    }
+  },
+  "flex-layout.col#bannerTextRight": {
+    "children": [
+      "rich-text#TitlebannerDesc2",
+      "rich-text#ParagraphbannerDesc2"
+    ],
+    "props": {
+      "blockClass": "bannerTextLeft",
+      "width": "30%"
+    }
+  },
+  "rich-text#TitlebannerDesc1": {
+    "props": {
+      "text": "48 ежемесячных <br/>платежей",
+      "textColor": "c-auto",
+      "blockClass": "card-text-subscription"
+    }
+  },
+  "rich-text#ParagraphbannerDesc1": {
+    "props": {
+      "text": "платежи вносятся удобным <br/>для вас способом: в личном кабинете <br/>на сайте или через приложение",
+      "textColor": "c-auto",
+      "blockClass": "banner-desc-paragraph"
+    }
+  },
+  "rich-text#TitlebannerDesc2": {
+    "props": {
+      "text": "остаточная <br/>стоимость 10%",
+      "textColor": "c-auto",
+      "blockClass": "card-text-subscription"
+    }
+  },
+  "rich-text#ParagraphbannerDesc2": {
+    "props": {
+      "text": "не нужно выплачивать <br/>при обмене на новую<br/>модель из данной категории",
+      "textColor": "c-auto",
+      "blockClass": "banner-desc-paragraph"
+    }
+  },
+  //Product Carousel
+  "flex-layout.row#product-carousel-subscription": {
+    "children": [
+      "slider-layout#bannerCarouselSub"
+    ],
+    "props": {
+      "blockClass": "subscriptionCarousel"
+    }
+  },
+  "slider-layout#bannerCarouselSub": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 4,
+        "tablet": 2,
+        "phone": 1
+      },
+      "infinite": false,
+      "showNavigationArrows": "desktopOnly",
+      "showPaginationDots": "never",
+      "blockClass": [
+        "carousel",
+        "carouselHp",
+        "carouselSubscription"
+      ]
+    },
+    "children": [
+      "link#subscription-carousel-1",
+      "link#subscription-carousel-2",
+      // "link#subscription-carousel-3",
+      "link#subscription-carousel-4",
+      "link#subscription-carousel-5",
+      "link#subscription-carousel-6",
+      "link#subscription-carousel-7",
+      "link#subscription-carousel-8",
+      "link#subscription-carousel-9",
+      "link#subscription-carousel-10"
+      // "link#subscription-carousel-11",
+      // "link#subscription-carousel-12"
+    ]
+  },
+  // "slider-layout#bannerCarouselSubscription": {
+  //   "props": {
+  //     "itemsPerPage": {
+  //       "desktop": 4,
+  //       "tablet": 2,
+  //       "phone": 1
+  //     },
+  //     "infinite": false,
+  //     "showNavigationArrows": "never",
+  //     "showPaginationDots":"never",
+  //     "blockClass": ["carouselSub", "white-bg-su"]
+  //   },
+  //   "children": [
+  //     "link#subscription-carousel-1",
+  //     "link#subscription-carousel-2",
+  //     "link#subscription-carousel-3",
+  //     "link#subscription-carousel-4",
+  //     "link#subscription-carousel-5",
+  //     "link#subscription-carousel-6",
+  //     "link#subscription-carousel-7",
+  //     "link#subscription-carousel-8",
+  //     "link#subscription-carousel-9",
+  //     "link#subscription-carousel-10",
+  //     // "link#subscription-carousel-11",
+  //     "link#subscription-carousel-12"
+  //   ]
+  // },
+  //Card 1
+  "link#subscription-carousel-1": {
+    "children": [
+      "image#carousel-1",
+      "rich-text#TitleCarousel1",
+      "rich-text#PriceCarousel1",
+      "link#subscription-link-card"
+    ],
+    "props": {
+      "blockClass": "cardCarousel"
+    }
+  },
+  "image#carousel-1": {
+    "props": {
+      "src": "assets/ph-logo.jpeg",
+      "blockClass": "imageCardCarousel"
+    }
+  },
+  "rich-text#TitleCarousel1": {
+    "props": {
+      "text": "Стиральные машины",
+      "textColor": "c-auto",
+      "blockClass": "carousel-desc-paragraph-center"
+    }
+  },
+  "rich-text#PriceCarousel1": {
+    "props": {
+      "text": "от 576 ₽/мес",
+      "textColor": "c-auto",
+      "blockClass": "carousel-text-subscription-center"
+    }
+  },
+  "link#subscription-link-card": {
+    "props": {
+      "href": "/podpiska-na-tekhniku/stiralnye-mashiny"
+    },
+    "children": [
+      "rich-text#LinkCarousel1"
+    ]
+  },
+  "rich-text#LinkCarousel1": {
+    "props": {
+      "text": "voir tout",
+      "textColor": "c-auto",
+      "blockClass": "link-text-subscription-center"
+    }
+  },
+  //Card 2
+  "link#subscription-carousel-2": {
+    "children": [
+      "image#carousel-2",
+      "rich-text#TitleCarousel2",
+      "rich-text#PriceCarousel2",
+      "link#subscription-link-card-2"
+    ],
+    "props": {
+      "blockClass": "cardCarousel"
+    }
+  },
+  "image#carousel-2": {
+    "props": {
+      "src": "assets/ph-logo.jpeg",
+      "blockClass": "imageCardCarousel"
+    }
+  },
+  "rich-text#TitleCarousel2": {
+    "props": {
+      "text": "Стиральные машины",
+      "textColor": "c-auto",
+      "blockClass": "carousel-desc-paragraph-center"
+    }
+  },
+  "rich-text#PriceCarousel2": {
+    "props": {
+      "text": "от 926 ₽/мес",
+      "textColor": "c-auto",
+      "blockClass": "carousel-text-subscription-center"
+    }
+  },
+  "link#subscription-link-card-2": {
+    "props": {
+      "href": "/podpiska-na-tekhniku/stiralnye-mashiny-s-sushkoj"
+    },
+    "children": [
+      "rich-text#LinkCarousel2"
+    ]
+  },
+  "rich-text#LinkCarousel2": {
+    "props": {
+      "text": "voir tout",
+      "textColor": "c-auto",
+      "blockClass": "link-text-subscription-center"
+    }
+  },
+  //Card 3
+  // "link#subscription-carousel-3": {
+  //   "children": [
+  //     "image#carousel-3",
+  //     "rich-text#TitleCarousel3",
+  //     "rich-text#PriceCarousel3",
+  //     "link#subscription-link-card-3"
+  //   ],
+  //   "props": {
+  //     "blockClass": "cardCarousel"
+  //   }
+  // },
+  // "image#carousel-3": {
+  //   "props": {
+  //     "src": "assets/ph-logo.jpeg",
+  //     "blockClass": "imageCardCarousel"
+  //   }
+  // },
+  // "rich-text#TitleCarousel3": {
+  //   "props": {
+  //     "text": "Стиральные машины",
+  //     "textColor": "c-auto",
+  //     "blockClass": "carousel-desc-paragraph-center"
+  //   }
+  // },
+  // "rich-text#PriceCarousel3": {
+  //   "props": {
+  //     "text": "от 3197 ₽/мес",
+  //     "textColor": "c-auto",
+  //     "blockClass": "carousel-text-subscription-center"
+  //   }
+  // },
+  // "link#subscription-link-card-3": {
+  //   "props": {
+  //     "href": "/podpiska-na-tekhniku/morozilnye-kamery"
+  //   },
+  //   "children": [
+  //     "rich-text#LinkCarousel3"
+  //   ]
+  // },
+  // "rich-text#LinkCarousel3": {
+  //   "props": {
+  //     "text": "voir tout",
+  //     "textColor": "c-auto",
+  //     "blockClass": "link-text-subscription-center"
+  //   }
+  // },
+  //Card 4
+  "link#subscription-carousel-4": {
+    "children": [
+      "image#carousel-4",
+      "rich-text#TitleCarousel4",
+      "rich-text#PriceCarousel4",
+      "link#subscription-link-card-4"
+    ],
+    "props": {
+      "blockClass": "cardCarousel"
+    }
+  },
+  "image#carousel-4": {
+    "props": {
+      "src": "assets/ph-logo.jpeg",
+      "blockClass": "imageCardCarousel"
+    }
+  },
+  "rich-text#TitleCarousel4": {
+    "props": {
+      "text": "Стиральные машины",
+      "textColor": "c-auto",
+      "blockClass": "carousel-desc-paragraph-center"
+    }
+  },
+  "rich-text#PriceCarousel4": {
+    "props": {
+      "text": "от 455 ₽/мес",
+      "textColor": "c-auto",
+      "blockClass": "carousel-text-subscription-center"
+    }
+  },
+  "link#subscription-link-card-4": {
+    "props": {
+      "href": "/podpiska-na-tekhniku/varochnye-paneli"
+    },
+    "children": [
+      "rich-text#LinkCarousel4"
+    ]
+  },
+  "rich-text#LinkCarousel4": {
+    "props": {
+      "text": "voir tout",
+      "textColor": "c-auto",
+      "blockClass": "link-text-subscription-center"
+    }
+  },
+  //Card 5
+  "link#subscription-carousel-5": {
+    "children": [
+      "image#carousel-5",
+      "rich-text#TitleCarousel5",
+      "rich-text#PriceCarousel5",
+      "link#subscription-link-card-5"
+    ],
+    "props": {
+      "blockClass": "cardCarousel"
+    }
+  },
+  "image#carousel-5": {
+    "props": {
+      "src": "assets/ph-logo.jpeg",
+      "blockClass": "imageCardCarousel"
+    }
+  },
+  "rich-text#TitleCarousel5": {
+    "props": {
+      "text": "Стиральные машины",
+      "textColor": "c-auto",
+      "blockClass": "carousel-desc-paragraph-center"
+    }
+  },
+  "rich-text#PriceCarousel5": {
+    "props": {
+      "text": "от 619 ₽/мес",
+      "textColor": "c-auto",
+      "blockClass": "carousel-text-subscription-center"
+    }
+  },
+  "link#subscription-link-card-5": {
+    "props": {
+      "href": "/podpiska-na-tekhniku/mikrovolnovye-pechi"
+    },
+    "children": [
+      "rich-text#LinkCarousel5"
+    ]
+  },
+  "rich-text#LinkCarousel5": {
+    "props": {
+      "text": "voir tout",
+      "textColor": "c-auto",
+      "blockClass": "link-text-subscription-center"
+    }
+  },
+  //Card 6
+  "link#subscription-carousel-6": {
+    "children": [
+      "image#carousel-6",
+      "rich-text#TitleCarousel6",
+      "rich-text#PriceCarousel6",
+      "link#subscription-link-card-6"
+    ],
+    "props": {
+      "blockClass": "cardCarousel"
+    }
+  },
+  "image#carousel-6": {
+    "props": {
+      "src": "assets/ph-logo.jpeg",
+      "blockClass": "imageCardCarousel"
+    }
+  },
+  "rich-text#TitleCarousel6": {
+    "props": {
+      "text": "Стиральные машины",
+      "textColor": "c-auto",
+      "blockClass": "carousel-desc-paragraph-center"
+    }
+  },
+  "rich-text#PriceCarousel6": {
+    "props": {
+      "text": "от 702 ₽/мес",
+      "textColor": "c-auto",
+      "blockClass": "carousel-text-subscription-center"
+    }
+  },
+  "link#subscription-link-card-6": {
+    "props": {
+      "href": "/podpiska-na-tekhniku/posudomoechnye-mashiny"
+    },
+    "children": [
+      "rich-text#LinkCarousel6"
+    ]
+  },
+  "rich-text#LinkCarousel6": {
+    "props": {
+      "text": "voir tout",
+      "textColor": "c-auto",
+      "blockClass": "link-text-subscription-center"
+    }
+  },
+  //Card 7
+  "link#subscription-carousel-7": {
+    "children": [
+      "image#carousel-7",
+      "rich-text#TitleCarousel7",
+      "rich-text#PriceCarousel7",
+      "link#subscription-link-card-7"
+    ],
+    "props": {
+      "blockClass": "cardCarousel"
+    }
+  },
+  "image#carousel-7": {
+    "props": {
+      "src": "assets/ph-logo.jpeg",
+      "blockClass": "imageCardCarousel"
+    }
+  },
+  "rich-text#TitleCarousel7": {
+    "props": {
+      "text": "Стиральные машины",
+      "textColor": "c-auto",
+      "blockClass": "carousel-desc-paragraph-center"
+    }
+  },
+  "rich-text#PriceCarousel7": {
+    "props": {
+      "text": "от 1223 ₽/мес",
+      "textColor": "c-auto",
+      "blockClass": "carousel-text-subscription-center"
+    }
+  },
+  "link#subscription-link-card-7": {
+    "props": {
+      "href": "/podpiska-na-tekhniku/sushilnye-mashiny"
+    },
+    "children": [
+      "rich-text#LinkCarousel7"
+    ]
+  },
+  "rich-text#LinkCarousel7": {
+    "props": {
+      "text": "voir tout",
+      "textColor": "c-auto",
+      "blockClass": "link-text-subscription-center"
+    }
+  },
+  //Card 8
+  "link#subscription-carousel-8": {
+    "children": [
+      "image#carousel-8",
+      "rich-text#TitleCarousel8",
+      "rich-text#PriceCarousel8",
+      "link#subscription-link-card-8"
+    ],
+    "props": {
+      "blockClass": "cardCarousel"
+    }
+  },
+  "image#carousel-8": {
+    "props": {
+      "src": "assets/ph-logo.jpeg",
+      "blockClass": "imageCardCarousel"
+    }
+  },
+  "rich-text#TitleCarousel8": {
+    "props": {
+      "text": "Стиральные машины",
+      "textColor": "c-auto",
+      "blockClass": "carousel-desc-paragraph-center"
+    }
+  },
+  "rich-text#PriceCarousel8": {
+    "props": {
+      "text": "от 643 ₽/мес",
+      "textColor": "c-auto",
+      "blockClass": "carousel-text-subscription-center"
+    }
+  },
+  "link#subscription-link-card-8": {
+    "props": {
+      "href": "/podpiska-na-tekhniku/holodilniki"
+    },
+    "children": [
+      "rich-text#LinkCarousel8"
+    ]
+  },
+  "rich-text#LinkCarousel8": {
+    "props": {
+      "text": "voir tout",
+      "textColor": "c-auto",
+      "blockClass": "link-text-subscription-center"
+    }
+  }, //Card 9
+  "link#subscription-carousel-9": {
+    "children": [
+      "image#carousel-9",
+      "rich-text#TitleCarousel9",
+      "rich-text#PriceCarousel9",
+      "link#subscription-link-card-9"
+    ],
+    "props": {
+      "blockClass": "cardCarousel"
+    }
+  },
+  "image#carousel-9": {
+    "props": {
+      "src": "assets/ph-logo.jpeg",
+      "blockClass": "imageCardCarousel"
+    }
+  },
+  "rich-text#TitleCarousel9": {
+    "props": {
+      "text": "Стиральные машины",
+      "textColor": "c-auto",
+      "blockClass": "carousel-desc-paragraph-center"
+    }
+  },
+  "rich-text#PriceCarousel9": {
+    "props": {
+      "text": "от 557 ₽/мес",
+      "textColor": "c-auto",
+      "blockClass": "carousel-text-subscription-center"
+    }
+  },
+  "link#subscription-link-card-9": {
+    "props": {
+      "href": "/podpiska-na-tekhniku/duhovye-shkafy"
+    },
+    "children": [
+      "rich-text#LinkCarousel9"
+    ]
+  },
+  "rich-text#LinkCarousel9": {
+    "props": {
+      "text": "voir tout",
+      "textColor": "c-auto",
+      "blockClass": "link-text-subscription-center"
+    }
+  },
+  //Card 10
+  "link#subscription-carousel-10": {
+    "children": [
+      "image#carousel-10",
+      "rich-text#TitleCarousel10",
+      "rich-text#PriceCarousel10",
+      "link#subscription-link-card-10"
+    ],
+    "props": {
+      "blockClass": "cardCarousel"
+    }
+  },
+  "image#carousel-10": {
+    "props": {
+      "src": "assets/ph-logo.jpeg",
+      "blockClass": "imageCardCarousel"
+    }
+  },
+  "rich-text#TitleCarousel10": {
+    "props": {
+      "text": "Стиральные машины",
+      "textColor": "c-auto",
+      "blockClass": "carousel-desc-paragraph-center"
+    }
+  },
+  "rich-text#PriceCarousel10": {
+    "props": {
+      "text": "от 472 ₽/мес",
+      "textColor": "c-auto",
+      "blockClass": "carousel-text-subscription-center"
+    }
+  },
+  "link#subscription-link-card-10": {
+    "props": {
+      "href": "/podpiska-na-tekhniku/vytyazhki"
+    },
+    "children": [
+      "rich-text#LinkCarousel10"
+    ]
+  },
+  "rich-text#LinkCarousel10": {
+    "props": {
+      "text": "voir tout",
+      "textColor": "c-auto",
+      "blockClass": "link-text-subscription-center"
+    }
+  },
+  //Card 11
+  "link#subscription-carousel-11": {
+    "children": [
+      "image#carousel-11",
+      "rich-text#TitleCarousel11",
+      "rich-text#PriceCarousel11",
+      "link#subscription-link-card-11"
+    ],
+    "props": {
+      "blockClass": "cardCarousel"
+    }
+  },
+  "image#carousel-11": {
+    "props": {
+      "src": "assets/ph-logo.jpeg",
+      "blockClass": "imageCardCarousel"
+    }
+  },
+  "rich-text#TitleCarousel11": {
+    "props": {
+      "text": "Стиральные машины",
+      "textColor": "c-auto",
+      "blockClass": "carousel-desc-paragraph-center"
+    }
+  },
+  "rich-text#PriceCarousel11": {
+    "props": {
+      "text": "от 700 ₽/мес",
+      "textColor": "c-auto",
+      "blockClass": "carousel-text-subscription-center"
+    }
+  },
+  "link#subscription-link-card-11": {
+    "props": {
+      "href": "/podpiska-na-tekhniku/kondicionery"
+    },
+    "children": [
+      "rich-text#LinkCarousel11"
+    ]
+  },
+  "rich-text#LinkCarousel11": {
+    "props": {
+      "text": "voir tout",
+      "textColor": "c-auto",
+      "blockClass": "link-text-subscription-center"
+    }
+  },
+  //Card 12
+  "link#subscription-carousel-12": {
+    "children": [
+      "image#carousel-12",
+      "rich-text#TitleCarousel12",
+      "rich-text#PriceCarousel12",
+      "link#subscription-link-card-12"
+    ],
+    "props": {
+      "blockClass": "cardCarousel"
+    }
+  },
+  "image#carousel-12": {
+    "props": {
+      "src": "assets/ph-logo.jpeg",
+      "blockClass": "imageCardCarousel"
+    }
+  },
+  "rich-text#TitleCarousel12": {
+    "props": {
+      "text": "Стиральные машины",
+      "textColor": "c-auto",
+      "blockClass": "carousel-desc-paragraph-center"
+    }
+  },
+  "rich-text#PriceCarousel12": {
+    "props": {
+      "text": "от 700 ₽/мес",
+      "textColor": "c-auto",
+      "blockClass": "carousel-text-subscription-center"
+    }
+  },
+  "link#subscription-link-card-12": {
+    "props": {
+      "href": "/podpiska-na-tekhniku/kuhonnye-plity"
+    },
+    "children": [
+      "rich-text#LinkCarousel12"
+    ]
+  },
+  "rich-text#LinkCarousel12": {
+    "props": {
+      "text": "voir tout",
+      "textColor": "c-auto",
+      "blockClass": "link-text-subscription-center"
+    }
+  },
+  //title-pre-card
+  "flex-layout.row#title-pre-card": {
+    "children": [
+      "rich-text#title-pre-card"
+    ],
+    "props": {
+      "blockClass": "RowPreCard"
+    }
+  },
+  "rich-text#title-pre-card": {
+    "props": {
+      "text": "Как работает подписка?",
+      "textColor": "c-auto",
+      "blockClass": "titleSubscriptionBanner"
+    }
+  },
+  //subscription card
+  "flex-layout.row#subscription-cards-2": {
+    "children": [
+      "flex-layout.col#subscription-card21",
+      "flex-layout.col#subscription-card22",
+      "flex-layout.col#subscription-card23",
+      "flex-layout.col#subscription-card24"
+    ],
+    "props": {
+      "blockClass": "subscriptionCards2"
+    }
+  },
+  "flex-layout.col#subscription-card21": {
+    "children": [
+      "link#subscription-card21"
+    ],
+    "props": {
+      "blockClass": "subscriptionCardsContainer2"
+    }
+  },
+  "flex-layout.col#subscription-card22": {
+    "children": [
+      "link#subscription-card22"
+    ],
+    "props": {
+      "blockClass": "subscriptionCardsContainer2"
+    }
+  },
+  "flex-layout.col#subscription-card23": {
+    "children": [
+      "link#subscription-card23"
+    ],
+    "props": {
+      "blockClass": "subscriptionCardsContainer2"
+    }
+  },
+  "flex-layout.col#subscription-card24": {
+    "children": [
+      "link#subscription-card24"
+    ],
+    "props": {
+      "blockClass": "subscriptionCardsContainer2"
+    }
+  },
+  "link#subscription-card21": {
+    "props": {
+      "blockClass": "linkCardsSubscription",
+      "href": "#"
+    },
+    "children": [
+      "rich-text#TitleCard21",
+      "rich-text#DescCard12",
+      "rich-text#DescCardPlus12"
+    ]
+  },
+  "link#subscription-card22": {
+    "props": {
+      "blockClass": "linkCardsSubscription",
+      "href": "#"
+    },
+    "children": [
+      "rich-text#TitleCard22",
+      "rich-text#DescCard22",
+      "rich-text#DescCardPlus22"
+    ]
+  },
+  "link#subscription-card23": {
+    "props": {
+      "blockClass": "linkCardsSubscription",
+      "href": "#"
+    },
+    "children": [
+      "rich-text#TitleCard23",
+      "rich-text#DescCard23"
+    ]
+  },
+  "link#subscription-card24": {
+    "props": {
+      "blockClass": "linkCardsSubscription",
+      "href": "#"
+    },
+    "children": [
+      "rich-text#TitleCard24",
+      "rich-text#DescCard24",
+      "rich-text#DescCardPlus24"
+    ]
+  },
+  "rich-text#TitleCard21": {
+    "props": {
+      "text": "Выберите <br />модель",
+      "textColor": "c-auto",
+      "blockClass": "card-text-subscription"
+    }
+  },
+  "rich-text#DescCard12": {
+    "props": {
+      "text": "оформите короткую заявку и подпишите договор онлайн",
+      "textColor": "c-auto",
+      "blockClass": "banner-desc-paragraph"
+    }
+  },
+  "rich-text#DescCardPlus12": {
+    "props": {
+      "text": "+бесплатная доставка и установка",
+      "textColor": "c-auto",
+      "blockClass": "banner-desc-paragraph-plus"
+    }
+  },
+  "rich-text#TitleCard22": {
+    "props": {
+      "text": "Пользуйтесь <br />4 года",
+      "textColor": "c-auto",
+      "blockClass": "card-text-subscription"
+    }
+  },
+  "rich-text#DescCard22": {
+    "props": {
+      "text": "внося небольшие ежемесячные платежи с любой карты без комиссии",
+      "textColor": "c-auto",
+      "blockClass": "banner-desc-paragraph"
+    }
+  },
+  "rich-text#DescCardPlus22": {
+    "props": {
+      "text": "+бесплатный ремонт и запчасти",
+      "textColor": "c-auto",
+      "blockClass": "banner-desc-paragraph-plus"
+    }
+  },
+  "rich-text#TitleCard23": {
+    "props": {
+      "text": "Решите <br />через 4 года",
+      "textColor": "c-auto",
+      "blockClass": "card-text-subscription"
+    }
+  },
+  "rich-text#DescCard23": {
+    "props": {
+      "text": "внести остаток и выкупить себе или оформить подписку на новую модель",
+      "textColor": "c-auto",
+      "blockClass": "banner-desc-paragraph"
+    }
+  },
+  "rich-text#TitleCard24": {
+    "props": {
+      "text": "Повторная <br />подписка",
+      "textColor": "c-auto",
+      "blockClass": "card-text-subscription"
+    }
+  },
+  "rich-text#DescCard24": {
+    "props": {
+      "text": "на новую модель прежняя остается у вас, при этом остаточную стоимость за нее выплачитвать не нужно!*",
+      "textColor": "c-auto",
+      "blockClass": "banner-desc-paragraph"
+    }
+  },
+  "rich-text#DescCardPlus24": {
+    "props": {
+      "text": "*при повторной подписке на данную категорию техники",
+      "textColor": "c-auto",
+      "blockClass": "banner-desc-paragraph-plus"
+    }
+  },
+  //subscription-contract
+  "link#subscription-contract": {
+    "props": {
+      "blockClass": "linkContract",
+      "href": "https://static-sl.insales.ru/files/1/4848/12522224/original/ПФ_Вирлпул_стиральная_машина.pdf"
+    },
+    "children": [
+      "image#logoContract",
+      "rich-text#Contract-sub"
+    ]
+  },
+  "image#logoContract": {
+    "props": {
+      "blockClass": "logoCardsSubscription",
+      "width": "1rem",
+      "src": "assets/icons/contract-icon.svg"
+    }
+  },
+  "rich-text#Contract-sub": {
+    "props": {
+      "text": "Пример договора подписки",
+      "blockClass": "link-text-subscription-center"
+    }
+  },
+  //Link 2
+  "link#subscription-contract-agreement": {
+    "props": {
+      "blockClass": "linkContract",
+      "href": "https://static-sl.insales.ru/files/1/2211/12183715/original/sub_rule.pdf"
+    },
+    "children": [
+      "image#logoContract-agreement",
+      "rich-text#Contract-sub-agreement"
+    ]
+  },
+  "image#logoContract-agreement": {
+    "props": {
+      "blockClass": "logoCardsSubscription",
+      "width": "1rem",
+      "src": "assets/icons/contract-icon.svg"
+    }
+  },
+  "rich-text#Contract-sub-agreement": {
+    "props": {
+      "text": "Общие правила лизинга товаров",
+      "blockClass": "link-text-subscription-center"
+    }
+  },
+  //subscription-heroEnd
+  "flex-layout.row#subscriptionHeroEnd": {
+    "children": [
+      "flex-layout.row#accordion",
+      "flex-layout.col#image-subscription-hero-end"
+    ],
+    "props": {
+      "blockClass": "subscriptionHeroEnd"
+    }
+  },
+  "flex-layout.col#image-subscription-hero-end": {
+    "children": [
+      "image#header-subscription-hero-end"
+    ],
+    "props": {
+      "blockClass": "image-column"
+    }
+  },
+  "image#header-subscription-hero-end": {
+    "props": {
+      "src": "assets/ph-16-9.png"
+    }
+  },
+  //Accordion
+  "flex-layout.row#accordion": {
+    "props": {
+      "blockClass": "easyCareAccordion"
+    },
+    "children": [
+      "disclosure-layout#Faq",
+      "disclosure-layout#PaymentInfo",
+      "disclosure-layout#Services",
+      "disclosure-layout#Legal"
+    ]
+  },
+  "disclosure-state-indicator": {
+    "props": {
+      "Show": "image#PlusIcon",
+      "Hide": "image#MinusIcon"
+    }
+  },
+  "image#PlusIcon": {
+    "props": {
+      "src": "assets/icons/plus-icon.svg",
+      "blockClass": "PlusIcon"
+    }
+  },
+  "image#MinusIcon": {
+    "props": {
+      "src": "assets/icons/minus-icon.svg",
+      "blockClass": "MinusIcon"
+    }
+  },
+  //Faq
+  "disclosure-layout#Faq": {
+    "children": [
+      "disclosure-trigger#Faq",
+      "disclosure-content#Faq"
+    ]
+  },
+  "disclosure-trigger#Faq": {
+    "children": [
+      "rich-text#FaqTitle",
+      "disclosure-state-indicator"
+    ],
+    "props": {
+      "blockClass": "ButtonContainer"
+    }
+  },
+  "disclosure-content#Faq": {
+    "children": [
+      "disclosure-layout#FaqFirst",
+      "disclosure-layout#FaqSecond",
+      "disclosure-layout#FaqThird",
+      "disclosure-layout#FaqFourth"
+    ]
+  },
+  "rich-text#FaqTitle": {
+    "props": {
+      "text": "FAQ",
+      "blockClass": "FaqTitleSub"
+    }
+  },
+  //Faq First
+  "disclosure-layout#FaqFirst": {
+    "children": [
+      "disclosure-trigger#FaqFirst",
+      "disclosure-content#FaqFirst"
+    ]
+  },
+  "disclosure-trigger#FaqFirst": {
+    "children": [
+      "rich-text#FaqTitleFirst",
+      "disclosure-state-indicator"
+    ],
+    "props": {
+      "blockClass": "ButtonContainer"
+    }
+  },
+  "disclosure-content#FaqFirst": {
+    "children": [
+      "rich-text#FaqFirstAnswer"
+    ]
+  },
+  "rich-text#FaqTitleFirst": {
+    "props": {
+      "text": "Как происходит процесс оформления подписки?",
+      "blockClass": "FaqTitleSub"
+    }
+  },
+  "rich-text#FaqFirstAnswer": {
+    "props": {
+      "text": "После выбора предмета лизинга клиент заполняет заявку с указанием своих личных данных и направляет ее в лизинговую компанию. Лизинговая компания с помощью банка-партнера производит оценку возможности заключения договора лизинга с клиентом.  Рассмотрение заявки проходит через сложный алгоритм, который учитывает не только кредитную историю. Биометрические данные не собираются.",
+      "blockClass": "FaqDescSub"
+    }
+  },
+  //Faq Second
+  "disclosure-layout#FaqSecond": {
+    "children": [
+      "disclosure-trigger#FaqSecond",
+      "disclosure-content#FaqSecond"
+    ]
+  },
+  "disclosure-trigger#FaqSecond": {
+    "children": [
+      "rich-text#FaqTitleSecond",
+      "disclosure-state-indicator"
+    ],
+    "props": {
+      "blockClass": "ButtonContainer"
+    }
+  },
+  "disclosure-content#FaqSecond": {
+    "children": [
+      "rich-text#FaqSecondAnswer"
+    ]
+  },
+  "rich-text#FaqTitleSecond": {
+    "props": {
+      "text": "Сколько договоров может единовременно заключить один человек?",
+      "blockClass": "FaqTitleSub"
+    }
+  },
+  "rich-text#FaqSecondAnswer": {
+    "props": {
+      "text": "Один клиент может оформить по одному договору в каждой категории товаров, в общей сложности до 5-ти единиц.",
+      "blockClass": "FaqDescSub"
+    }
+  },
+  //Faq Third
+  "disclosure-layout#FaqThird": {
+    "children": [
+      "disclosure-trigger#FaqThird",
+      "disclosure-content#FaqThird"
+    ]
+  },
+  "disclosure-trigger#FaqThird": {
+    "children": [
+      "rich-text#FaqTitleThird",
+      "disclosure-state-indicator"
+    ],
+    "props": {
+      "blockClass": "ButtonContainer"
+    }
+  },
+  "disclosure-content#FaqThird": {
+    "children": [
+      "rich-text#FaqThirdAnswer"
+    ]
+  },
+  "rich-text#FaqTitleThird": {
+    "props": {
+      "text": "Можно ли оформить в лизинг несколько единиц техники в одном договоре?",
+      "blockClass": "FaqTitleSub"
+    }
+  },
+  "rich-text#FaqThirdAnswer": {
+    "props": {
+      "text": "Для каждой единицы техники заключается отдельный договор. Если Вам необходимо оформить несколько единиц техники, то Вы можете оформить их по очереди. С момента оформления первого договора необходимо осуществить первые 3 платежа, после чего можно переходить к оформлению следующего договора. И так с каждым последующим договором.",
+      "blockClass": "FaqDescSub"
+    }
+  },
+  //Faq Fourth
+  "disclosure-layout#FaqFourth": {
+    "children": [
+      "disclosure-trigger#FaqFourth",
+      "disclosure-content#FaqFourth"
+    ]
+  },
+  "disclosure-trigger#FaqFourth": {
+    "children": [
+      "rich-text#FaqTitleFourth",
+      "disclosure-state-indicator"
+    ],
+    "props": {
+      "blockClass": "ButtonContainer"
+    }
+  },
+  "disclosure-content#FaqFourth": {
+    "children": [
+      "rich-text#FaqFourthAnswer"
+    ]
+  },
+  "rich-text#FaqTitleFourth": {
+    "props": {
+      "text": "Можно ли оформить по подписке любую модель из каталога?",
+      "blockClass": "FaqTitleSub"
+    }
+  },
+  "rich-text#FaqFourthAnswer": {
+    "props": {
+      "text": "Вы можете оформить по подписке технику из выделенного ассортимента на сайте. Для того, чтобы ознакомиться с полным модельным рядом, необходимо установить фильтр 'Подписка' в общем каталоге товаров.",
+      "blockClass": "FaqDescSub"
+    }
+  },
+  //Payment
+  "disclosure-layout#PaymentInfo": {
+    "children": [
+      "disclosure-trigger#PaymentInfo",
+      "disclosure-content#PaymentInfo"
+    ]
+  },
+  "disclosure-trigger#PaymentInfo": {
+    "children": [
+      "rich-text#PaymentTitle",
+      "disclosure-state-indicator"
+    ],
+    "props": {
+      "blockClass": "ButtonContainer"
+    }
+  },
+  "disclosure-content#PaymentInfo": {
+    "children": [
+      "disclosure-layout#PaymentFirst",
+      "disclosure-layout#PaymentSecond"
+    ]
+  },
+  "rich-text#PaymentTitle": {
+    "props": {
+      "text": "Платежная информация",
+      "blockClass": "FaqTitleSub"
+    }
+  },
+  //Payment First
+  "disclosure-layout#PaymentFirst": {
+    "children": [
+      "disclosure-trigger#PaymentFirst",
+      "disclosure-content#PaymentFirst"
+    ]
+  },
+  "disclosure-trigger#PaymentFirst": {
+    "children": [
+      "rich-text#PaymentTitleFirst",
+      "disclosure-state-indicator"
+    ],
+    "props": {
+      "blockClass": "ButtonContainer"
+    }
+  },
+  "disclosure-content#PaymentFirst": {
+    "children": [
+      "rich-text#PaymentFirstAnswer"
+    ]
+  },
+  "rich-text#PaymentTitleFirst": {
+    "props": {
+      "text": "Как вносить платежи?",
+      "blockClass": "FaqTitleSub"
+    }
+  },
+  "rich-text#PaymentFirstAnswer": {
+    "props": {
+      "text": "Оператором данной программы является ООО “Форвард Лизинг”. Все платежи вносятся через личный кабинет на сайте ООО “Форвард Лизинг”: подпишись.рф или в мобильном приложении Forward. Оплатить можно с любых банковских карт, комиссия отсутствует. Реквизиты банковских карт вводятся на защищенной странице банка-эквайрера, Paiement услуги осуществляется безопасным способом. Приложение Forward доступно для скачивания в Google Play и App Store Информация о совершённом платеже обновляется в течение нескольких минут, тем не менее мы рекомендуем вносить платежи заранее и напоминаем о приближении даты внесения оплаты.",
+      "blockClass": "FaqDescSub"
+    }
+  },
+  //Payment Second
+  "disclosure-layout#PaymentSecond": {
+    "children": [
+      "disclosure-trigger#PaymentSecond",
+      "disclosure-content#PaymentSecond"
+    ]
+  },
+  "disclosure-trigger#PaymentSecond": {
+    "children": [
+      "rich-text#PaymentTitleSecond",
+      "disclosure-state-indicator"
+    ],
+    "props": {
+      "blockClass": "ButtonContainer"
+    }
+  },
+  "disclosure-content#PaymentSecond": {
+    "children": [
+      "rich-text#PaymentSecondAnswer"
+    ]
+  },
+  "rich-text#PaymentTitleSecond": {
+    "props": {
+      "text": "Могу ли я досрочно погасить лизинг?",
+      "blockClass": "FaqTitleSub"
+    }
+  },
+  "rich-text#PaymentSecondAnswer": {
+    "props": {
+      "text": "Клиент вправе досрочно выкупить предмет лизинга. При этом, если досрочный выкуп осуществляется до истечения изначально определенного в договоре лизинга срока, то для полного досрочного исполнения обязанностей клиент должен выплатить все подлежащие уплате по договору лизинга ежемесячные платежи и платеж для выкупа предмета лизинга в размере остаточной стоимости. При этом срок сервисной защиты остается неизменным и составляет 4 года.",
+      "blockClass": "FaqDescSub"
+    }
+  },
+  //Services
+  "disclosure-layout#Services": {
+    "children": [
+      "disclosure-trigger#Services",
+      "disclosure-content#Services"
+    ]
+  },
+  "disclosure-trigger#Services": {
+    "children": [
+      "rich-text#ServicesTitle",
+      "disclosure-state-indicator"
+    ],
+    "props": {
+      "blockClass": "ButtonContainer"
+    }
+  },
+  "disclosure-content#Services": {
+    "children": [
+      "disclosure-layout#ServicesFirst"
+    ]
+  },
+  "rich-text#ServicesTitle": {
+    "props": {
+      "text": "Услуги",
+      "blockClass": "FaqTitleSub"
+    }
+  },
+  //Services First
+  "disclosure-layout#ServicesFirst": {
+    "children": [
+      "disclosure-trigger#ServicesFirst",
+      "disclosure-content#ServicesFirst"
+    ]
+  },
+  "disclosure-trigger#ServicesFirst": {
+    "children": [
+      "rich-text#ServicesTitleFirst",
+      "disclosure-state-indicator"
+    ],
+    "props": {
+      "blockClass": "ButtonContainer"
+    }
+  },
+  "disclosure-content#ServicesFirst": {
+    "children": [
+      "rich-text#ServicesFirstAnswer"
+    ]
+  },
+  "rich-text#ServicesTitleFirst": {
+    "props": {
+      "text": "Предоставляется ли сервисное обслуживание на товары в лизинге?",
+      "blockClass": "FaqTitleSub"
+    }
+  },
+  "rich-text#ServicesFirstAnswer": {
+    "props": {
+      "text": "Да, предоставляется полное сервисное обслуживание и защита на 4 года.",
+      "blockClass": "FaqDescSub"
+    }
+  },
+  //Legal
+  "disclosure-layout#Legal": {
+    "children": [
+      "disclosure-trigger#Legal",
+      "disclosure-content#Legal"
+    ]
+  },
+  "disclosure-trigger#Legal": {
+    "children": [
+      "rich-text#LegalTitle",
+      "disclosure-state-indicator"
+    ],
+    "props": {
+      "blockClass": "ButtonContainer"
+    }
+  },
+  "disclosure-content#Legal": {
+    "children": [
+      "disclosure-layout#LegalFirst",
+      "disclosure-layout#LegalSecond"
+    ]
+  },
+  "rich-text#LegalTitle": {
+    "props": {
+      "text": "Юридический",
+      "blockClass": "FaqTitleSub"
+    }
+  },
+  "rich-text#FourthAnswer": {
+    "props": {
+      "text": "Вы можете оформить по подписке технику из выделенного ассортимента на сайте. Для того, чтобы ознакомиться с полным модельным рядом, необходимо установить фильтр 'Подписка' в общем каталоге товаров.",
+      "blockClass": "FaqDescSub"
+    }
+  },
+  //Legal First
+  "disclosure-layout#LegalFirst": {
+    "children": [
+      "disclosure-trigger#LegalFirst",
+      "disclosure-content#LegalFirst"
+    ]
+  },
+  "disclosure-trigger#LegalFirst": {
+    "children": [
+      "rich-text#LegalTitleFirst",
+      "disclosure-state-indicator"
+    ],
+    "props": {
+      "blockClass": "ButtonContainer"
+    }
+  },
+  "disclosure-content#LegalFirst": {
+    "children": [
+      "rich-text#LegalFirstAnswer"
+    ]
+  },
+  "rich-text#LegalTitleFirst": {
+    "props": {
+      "text": "Расторжение договора лизинга",
+      "blockClass": "FaqTitleSub"
+    }
+  },
+  "rich-text#LegalFirstAnswer": {
+    "props": {
+      "text": "Расторжение договора купли-продажи допустимо только с согласия лизинговой компании и при условии, что товар принят торговой организацией к возврату в связи с обнаружением в нем существенных недостатков.",
+      "blockClass": "FaqDescSub"
+    }
+  },
+  //Legal Second
+  "disclosure-layout#LegalSecond": {
+    "children": [
+      "disclosure-trigger#LegalSecond",
+      "disclosure-content#LegalSecond"
+    ]
+  },
+  "disclosure-trigger#LegalSecond": {
+    "children": [
+      "rich-text#LegalTitleSecond",
+      "disclosure-state-indicator"
+    ],
+    "props": {
+      "blockClass": "ButtonContainer"
+    }
+  },
+  "disclosure-content#LegalSecond": {
+    "children": [
+      "rich-text#LegalSecondAnswer"
+    ]
+  },
+  "rich-text#LegalTitleSecond": {
+    "props": {
+      "text": "Где можно ознакомиться с полными условиями договора?",
+      "blockClass": "FaqTitleSub"
+    }
+  },
+  "rich-text#LegalSecondAnswer": {
+    "props": {
+      "text": "Подробнее о правилах лизинга можно прочитать  <a href='https://static-sl.insales.ru/files/1/2211/12183715/original/sub_rule.pdf' target='_blank'>тут.</a>",
+      "blockClass": "FaqDescSub"
+    }
+  },
+  //Link plp
+  "store.custom#subscription-plp-1": {
+    "blocks": [
+      "search-result-layout.customQuery#subscription-plp-1"
+    ],
+    "props": {
+      "context": {
+        "skusFilter": "ALL",
+        "simulationBehavior": "default",
+        "maxItemsPerPage": 20,
+        "__unstableProductOriginVtex": true
+      }
+    }
+  },
+  "search-result-layout.customQuery#subscription-plp-1": {
+    "blocks": [
+      "search-result-layout.desktop",
+      "search-result-layout.mobile",
+      "search-not-found-layout"
+    ],
+    "props": {
+      "querySchema": {
+        "__unstableProductOriginVtex": true,
+        "hideUnavailableItems": true,
+        "maxItemsPerPage": 20
+      }
+    }
+  },
+  "store.custom#subscription-plp-lavasciuga": {
+    "blocks": [
+      "search-result-layout.customQuery#subscription-plp-lavasciuga"
+    ],
+    "props": {
+      "context": {
+        "skusFilter": "ALL",
+        "simulationBehavior": "default",
+        "maxItemsPerPage": 20,
+        "__unstableProductOriginVtex": true
+      }
+    }
+  },
+  "search-result-layout.customQuery#subscription-plp-lavasciuga": {
+    "blocks": [
+      "search-result-layout.desktop",
+      "search-result-layout.mobile",
+      "search-not-found-layout"
+    ],
+    "props": {
+      "querySchema": {
+        "__unstableProductOriginVtex": true,
+        "hideUnavailableItems": true,
+        "maxItemsPerPage": 20
+      }
+    }
+  },
+  "store.custom#subscription-plp-congelatori": {
+    "blocks": [
+      "search-result-layout.customQuery#subscription-plp-congelatori"
+    ],
+    "props": {
+      "context": {
+        "skusFilter": "ALL",
+        "simulationBehavior": "default",
+        "maxItemsPerPage": 20,
+        "__unstableProductOriginVtex": true
+      }
+    }
+  },
+  "search-result-layout.customQuery#subscription-plp-congelatori": {
+    "blocks": [
+      "search-result-layout.desktop",
+      "search-result-layout.mobile",
+      "search-not-found-layout"
+    ],
+    "props": {
+      "querySchema": {
+        "__unstableProductOriginVtex": true,
+        "hideUnavailableItems": true,
+        "maxItemsPerPage": 20
+      }
+    }
+  },
+  "store.custom#subscription-plp-pianiCottura": {
+    "blocks": [
+      "search-result-layout.customQuery#subscription-plp-pianiCottura"
+    ],
+    "props": {
+      "context": {
+        "skusFilter": "ALL",
+        "simulationBehavior": "default",
+        "maxItemsPerPage": 20,
+        "__unstableProductOriginVtex": true
+      }
+    }
+  },
+  "search-result-layout.customQuery#subscription-plp-pianiCottura": {
+    "blocks": [
+      "search-result-layout.desktop",
+      "search-result-layout.mobile",
+      "search-not-found-layout"
+    ],
+    "props": {
+      "querySchema": {
+        "__unstableProductOriginVtex": true,
+        "hideUnavailableItems": true,
+        "maxItemsPerPage": 20
+      }
+    }
+  },
+  "store.custom#subscription-plp-microonde": {
+    "blocks": [
+      "search-result-layout.customQuery#subscription-plp-microonde"
+    ],
+    "props": {
+      "context": {
+        "skusFilter": "ALL",
+        "simulationBehavior": "default",
+        "maxItemsPerPage": 20,
+        "__unstableProductOriginVtex": true
+      }
+    }
+  },
+  "search-result-layout.customQuery#subscription-plp-microonde": {
+    "blocks": [
+      "search-result-layout.desktop",
+      "search-result-layout.mobile",
+      "search-not-found-layout"
+    ],
+    "props": {
+      "querySchema": {
+        "__unstableProductOriginVtex": true,
+        "hideUnavailableItems": true,
+        "maxItemsPerPage": 20
+      }
+    }
+  },
+  "store.custom#subscription-plp-lavastoviglie": {
+    "blocks": [
+      "search-result-layout.customQuery#subscription-plp-lavastoviglie"
+    ],
+    "props": {
+      "context": {
+        "skusFilter": "ALL",
+        "simulationBehavior": "default",
+        "maxItemsPerPage": 20,
+        "__unstableProductOriginVtex": true
+      }
+    }
+  },
+  "search-result-layout.customQuery#subscription-plp-lavastoviglie": {
+    "blocks": [
+      "search-result-layout.desktop",
+      "search-result-layout.mobile",
+      "search-not-found-layout"
+    ],
+    "props": {
+      "querySchema": {
+        "__unstableProductOriginVtex": true,
+        "hideUnavailableItems": true,
+        "maxItemsPerPage": 20
+      }
+    }
+  },
+  "store.custom#subscription-plp-asciugatrici": {
+    "blocks": [
+      "search-result-layout.customQuery#subscription-plp-asciugatrici"
+    ],
+    "props": {
+      "context": {
+        "skusFilter": "ALL",
+        "simulationBehavior": "default",
+        "maxItemsPerPage": 20,
+        "__unstableProductOriginVtex": true
+      }
+    }
+  },
+  "search-result-layout.customQuery#subscription-plp-asciugatrici": {
+    "blocks": [
+      "search-result-layout.desktop",
+      "search-result-layout.mobile",
+      "search-not-found-layout"
+    ],
+    "props": {
+      "querySchema": {
+        "__unstableProductOriginVtex": true,
+        "hideUnavailableItems": true,
+        "maxItemsPerPage": 20
+      }
+    }
+  },
+  "store.custom#subscription-plp-frigoriferi": {
+    "blocks": [
+      "search-result-layout.customQuery#subscription-plp-frigoriferi"
+    ],
+    "props": {
+      "context": {
+        "skusFilter": "ALL",
+        "simulationBehavior": "default",
+        "maxItemsPerPage": 20,
+        "__unstableProductOriginVtex": true
+      }
+    }
+  },
+  "search-result-layout.customQuery#subscription-plp-frigoriferi": {
+    "blocks": [
+      "search-result-layout.desktop",
+      "search-result-layout.mobile",
+      "search-not-found-layout"
+    ],
+    "props": {
+      "querySchema": {
+        "__unstableProductOriginVtex": true,
+        "hideUnavailableItems": true,
+        "maxItemsPerPage": 20
+      }
+    }
+  },
+  "store.custom#subscription-plp-forni": {
+    "blocks": [
+      "search-result-layout.customQuery#subscription-plp-forni"
+    ],
+    "props": {
+      "context": {
+        "skusFilter": "ALL",
+        "simulationBehavior": "default",
+        "maxItemsPerPage": 20,
+        "__unstableProductOriginVtex": true
+      }
+    }
+  },
+  "search-result-layout.customQuery#subscription-plp-forni": {
+    "blocks": [
+      "search-result-layout.desktop",
+      "search-result-layout.mobile",
+      "search-not-found-layout"
+    ],
+    "props": {
+      "querySchema": {
+        "__unstableProductOriginVtex": true,
+        "hideUnavailableItems": true,
+        "maxItemsPerPage": 20
+      }
+    }
+  },
+  "store.custom#subscription-plp-cappeChimiche": {
+    "blocks": [
+      "search-result-layout.customQuery#subscription-plp-cappeChimiche"
+    ],
+    "props": {
+      "context": {
+        "skusFilter": "ALL",
+        "simulationBehavior": "default",
+        "maxItemsPerPage": 20,
+        "__unstableProductOriginVtex": true
+      }
+    }
+  },
+  "search-result-layout.customQuery#subscription-plp-cappeChimiche": {
+    "blocks": [
+      "search-result-layout.desktop",
+      "search-result-layout.mobile",
+      "search-not-found-layout"
+    ],
+    "props": {
+      "querySchema": {
+        "__unstableProductOriginVtex": true,
+        "hideUnavailableItems": true,
+        "maxItemsPerPage": 20
+      }
+    }
+  },
+  "store.custom#subscription-plp-condizionatori": {
+    "blocks": [
+      "search-result-layout.customQuery#subscription-plp-condizionatori"
+    ],
+    "props": {
+      "context": {
+        "skusFilter": "ALL",
+        "simulationBehavior": "default",
+        "maxItemsPerPage": 20,
+        "__unstableProductOriginVtex": true
+      }
+    }
+  },
+  "search-result-layout.customQuery#subscription-plp-condizionatori": {
+    "blocks": [
+      "search-result-layout.desktop",
+      "search-result-layout.mobile",
+      "search-not-found-layout"
+    ],
+    "props": {
+      "querySchema": {
+        "__unstableProductOriginVtex": true,
+        "hideUnavailableItems": true,
+        "maxItemsPerPage": 20
+      }
+    }
+  },
+  "store.custom#subscription-plp-lastre": {
+    "blocks": [
+      "search-result-layout.customQuery#subscription-plp-lastre"
+    ],
+    "props": {
+      "context": {
+        "skusFilter": "ALL",
+        "simulationBehavior": "default",
+        "maxItemsPerPage": 20,
+        "__unstableProductOriginVtex": true
+      }
+    }
+  },
+  "search-result-layout.customQuery#subscription-plp-lastre": {
+    "blocks": [
+      "search-result-layout.desktop",
+      "search-result-layout.mobile",
+      "search-not-found-layout"
+    ],
+    "props": {
+      "querySchema": {
+        "__unstableProductOriginVtex": true,
+        "hideUnavailableItems": true,
+        "maxItemsPerPage": 20
+      }
+    }
+  }
+}

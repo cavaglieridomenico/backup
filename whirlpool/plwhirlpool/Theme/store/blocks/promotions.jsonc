@@ -1,0 +1,97 @@
+{
+  "store.custom#promotions": {
+    "blocks": [
+      "breadcrumb#promotion",
+      "toggle-layout#bannerSliderHome",
+      "analytics",
+      "flex-layout.row#halfSpace",
+      "toggle-layout#gridPromotions",
+      "flex-layout.row#newsletter-row"
+    ]
+  },
+  "breadcrumb#promotion": {
+    "props": {
+      "categories": [
+        "promotions"
+      ],
+      "showOnMobile": false
+    }
+  },
+  "toggle-layout#gridPromotions": {
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "flex-layout.row#space",
+      "rich-text#Technology",
+      "flex-layout.row#gridPromo",
+      "flex-layout.row#space"
+    ]
+  },
+  "flex-layout.row#gridPromo": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "gridHomePage"
+    },
+    "children": [
+      "flex-layout.row#firstCard",
+      "flex-layout.row#secondCard",
+      "flex-layout.row#thirdCard",
+      "flex-layout.row#fifthCard"
+    ]
+  },
+  "toggle-layout#promotionsSlider": {
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "list-context.image-list#promotionsBanners2"
+    ]
+  },
+  "list-context.image-list#promotionsBanners2": {
+    "children": [
+      "slider-layout#promo2"
+    ],
+    "props": {
+      "height": 650,
+      "images": [
+        {
+          "image": "https://storecomponents.vteximg.com.br/arquivos/banner-infocard2.png",
+          "width": "auto",
+          "link": {
+            "url": "#",
+            "title": "Image 1 promotions banner"
+          },
+          "description": "image promotion 1"
+        },
+        {
+          "image": "https://storecomponents.vteximg.com.br/assets/vtex.file-manager-graphql/images/Group%207%20(1)%20(1)%20(1)%20(1)%20(1)___c6b3ed853fb16a08b265753b50e0c57a.png",
+          "width": "auto",
+          "link": {
+            "url": "#",
+            "title": "Image 2 promotions banner"
+          },
+          "description": "image promotion 2"
+        }
+      ]
+    }
+  },
+  "slider-layout#promo2": {
+    "title": "slider - promo2",
+    "props": {
+      "totalItems": 2,
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "showNavigationArrows": "desktopOnly",
+      "autoplay": {
+        "timeout": 5000,
+        "stopOnHover": false
+      },
+      "blockClass": "imageCarousel"
+    }
+  }
+}

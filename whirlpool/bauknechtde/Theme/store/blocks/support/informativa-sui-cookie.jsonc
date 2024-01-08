@@ -1,0 +1,135 @@
+{
+  "store.custom#informativa-sui-cookie": {
+    "children": ["flex-layout.row#infoCookieRow"]
+  },
+  "flex-layout.row#infoCookieRow": {
+    "title": "[ROW] - [TOP] - Main container Row",
+    "children": ["flex-layout.col#infoCookieCol"],
+    "props": { "blockClass": "infoCookieRow" }
+  },
+  "flex-layout.col#infoCookieCol": {
+    "title": "[COL] - [TOP] - Main container Column",
+    "props": { "blockClass": ["infoCookieMainCol"] },
+    "children": [
+      "flex-layout.col#breadAndTitleCol",
+      "flex-layout.col#tableContainerCol"
+    ]
+  },
+  "flex-layout.col#breadAndTitleCol": {
+    "title": "[COL] - [TOP] - Bread And Title Col",
+    "children": ["flex-layout.row#bread-theme", "rich-text#pageTitle"],
+    "props": { "blockClass": "breadAndTitleCol" }
+  },
+  "breadcrumb#cookie": {
+    "title": "[BREADCRUMB] - [TOP] - Breadcrumb",
+    "props": {
+      "categories": ["Nutzung von Cookies"],
+      "showOnMobile": false
+    }
+  },
+  "rich-text#pageTitle": {
+    "title": "[TEXT] - [TOP] Title",
+    "props": {
+      "text": "# Nutzung von Cookies ",
+      "blockClass": ["titleSearchPage", "cookieInfoTitle"]
+    }
+  },
+  "flex-layout.col#tableContainerCol": {
+    "title": "[COL] - [MID] Table Container COl",
+    "props": {
+      "blockClass": "infoCookieCol"
+    },
+    "children": [
+      "rich-text#textUnderTitle",
+      "flex-layout.row#cookieTableFirstPopup",
+      "rich-text#textUnderTitle-2part",
+      "Cookie-table",
+      "rich-text#textUnderTable1",
+      "flex-layout.row#link",
+      "rich-text#textUnderTable2",
+      "rich-text#textUnderTable3"
+      //"analytics",
+
+      // "Cookie-table.title"
+    ]
+  },
+  "rich-text#textUnderTitle": {
+    "title": "[TEXT] - [Mid] Text Under Title",
+    "props": {
+      "text": "Titolo",
+      "textPosition": "LEFT",
+      "blockClass": [
+        "textUnderTitle",
+        "paragraphCookieLink",
+        "cookieParagraphAlignment"
+      ]
+    }
+  },
+  "rich-text#textUnderTitle-2part": {
+    "title": "[TEXT] - [Mid] Text Under Title 2 part",
+    "props": {
+      "text": "Titolo",
+      "textPosition": "LEFT",
+      "blockClass": [
+        "textUnderTitle",
+        "paragraphCookieLink",
+        "cookieParagraphAlignment"
+      ]
+    }
+  },
+  "flex-layout.row#table": {
+    "children": ["Cookie-table"],
+    "props": {
+      "blockClass": "rowTable"
+    }
+  },
+  "flex-layout.row#link": {
+    "children": ["Cookie-table.title"],
+    "props": {
+      "blockClass": "rowLink"
+    }
+  },
+  "flex-layout.row#cookieTableFirstPopup": {
+    "children": ["Cookie-table.CookiePolicyFirstPopup"],
+    "props": {
+      "blockClass": "rowLink"
+    }
+  },
+  "rich-text#textUnderTable1": {
+    "title": "[TEXT] - [Mid] Text Under Table 1",
+
+    "props": {
+      "text": "Titolo",
+      "textPosition": "LEFT",
+      "blockClass": [
+        "cookieTextUnderTable",
+        "paragraphCookieLink",
+        "cookieParagraphAlignment"
+      ]
+    }
+  },
+  "rich-text#textUnderTable2": {
+    "title": "[TEXT] - [Mid] Text Under Table 2",
+    "props": {
+      "text": "Titolo",
+      "textPosition": "LEFT",
+      "blockClass": [
+        "cookieTextUnderTable",
+        "paragraphCookieLink",
+        "cookieParagraphAlignment"
+      ]
+    }
+  },
+  "rich-text#textUnderTable3": {
+    "title": "[TEXT] - [Mid] Text Under Table 3",
+    "props": {
+      "text": "Titolo",
+      "textPosition": "LEFT",
+      "blockClass": [
+        "cookieTextUnderTable",
+        "paragraphCookieLink",
+        "cookieParagraphAlignment"
+      ]
+    }
+  }
+}

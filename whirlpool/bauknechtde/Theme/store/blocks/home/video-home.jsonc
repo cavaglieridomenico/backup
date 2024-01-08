@@ -1,0 +1,47 @@
+{
+  "stack-layout#video": {
+    "props": {
+      "blockClass": "video"
+    },
+    "children": ["video#introduction", "modal-trigger#videoBannerHome"]
+  },
+  "rich-text#videoButton": {
+    "props": {
+      "text": "### SENSING WHAT MATTERS\n##### PLAY VIDEO",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": "cover"
+    }
+  },
+  "video#introduction": {
+    "props": {
+      "width": "100%",
+      "height": "calc(99vh - 93px - 3.1875rem)",
+      "loop": true,
+      "autoPlay": true,
+      "muted": false,
+      "src": "https://youtu.be/IkkrhUAvy10",
+      "blockClass": "videoEl"
+    }
+  },
+  "modal-trigger#videoBannerHome": {
+    "props": {
+      "blockClass": "cover"
+    },
+    "children": ["rich-text#videoButton", "modal-layout#videoContent"]
+  },
+  "modal-layout#videoContent": {
+    "props": {
+      "blockClass": "video"
+    },
+    "children": ["modal-header", "iframe#videoModal"]
+  },
+  "iframe#videoModal": {
+    "props": {
+      "src": "https://www.youtube.com/embed/IkkrhUAvy10",
+      "width": "100%",
+      "height": "100%",
+      "blockClass": "video"
+    }
+  }
+}

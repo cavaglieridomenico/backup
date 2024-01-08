@@ -1,0 +1,15 @@
+
+input FacetInput {
+    name: String
+    values: [String]
+}
+
+input RecipeInput {
+  pageSize: Int
+  pageNumber: Int
+  facets: [FacetInput]
+}
+
+type Query {
+    queryRecipes(query : RecipeInput): RecipePage @cacheControl(maxAge: MEDIUM, scope: PUBLIC)
+}

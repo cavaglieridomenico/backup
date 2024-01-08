@@ -1,0 +1,10 @@
+mutation mutationCreatePaymentFromExistingCart(
+  $query: CreatePaymentFromExistingCartInput
+) {
+  mutationCreatePaymentFromExistingCart(query: $query) {
+    status
+    error
+    body
+    redirectUrl
+  }
+}

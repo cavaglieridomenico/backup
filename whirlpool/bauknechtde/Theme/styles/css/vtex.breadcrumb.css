@@ -1,0 +1,78 @@
+.container {
+  position: relative;
+  padding: 1rem 0 1rem 3.125rem;
+  max-width: 96rem;
+  margin: auto;
+  width: 100%;
+}
+.homeLink::before {
+  content: "Home";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 0.15rem 0.1rem 1.15rem;
+}
+.homeLink .homeIcon {
+  visibility: hidden;
+  height: 10px;
+}
+.link {
+  font-weight: 300;
+  font-size: 0.8rem;
+  line-height: 1.2;
+  text-decoration: none;
+  color: #505050;
+}
+.term {
+  text-decoration: none;
+}
+.link:hover,
+.link:focus {
+  color: #40a08c;
+}
+.link:focus {
+  border-color: #40a08c;
+}
+.container--breadPP {
+  margin-top: 0.5rem;
+}
+.arrow:last-child {
+  pointer-events: none;
+}
+
+/*--------FAQ---------*/
+.container--breadcrumbFaq {
+  text-transform: capitalize!important;
+  display: flex;
+  padding-left: 2.5rem !important;
+  background-color: #f2f2f2;
+}
+.link--breadcrumbFaq {
+  font-size: 1rem;
+  margin: 0.5rem;
+}
+.homeLink--breadcrumbFaq::before {
+  position: static;
+  padding: 0.5rem;
+}
+.homeIcon--breadcrumbFaq {
+  display: none;
+}
+.caretIcon--breadcrumbFaq {
+  height: 10px;
+  width: 15px;
+}
+/*--------------------*/
+
+/* Media Queries */
+@media only screen and (max-width: 1040px) {
+  .container {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1040px) {
+  .container {
+    margin-left: 0;
+  }
+}

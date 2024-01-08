@@ -1,0 +1,132 @@
+{
+  "flex-layout.row#images-menu": {
+    "children": ["flex-layout.col#images-menu"]
+  },
+  "flex-layout.col#images-menu": {
+    "children": [
+      "rich-text#title-images-menu",
+      "rich-text#sub-title-images-menu",
+      "flex-layout.row#images-card"
+    ]
+  },
+  "rich-text#title-images-menu": {
+    "props": {
+      "text": "# Elettrodomestici Indesit",
+      "blockClass": "images-menu-title"
+    }
+  },
+  "rich-text#sub-title-images-menu": {
+    "props": {
+      "text": "Esplora la nostra gamma di elettrodomestici: ricchi di funzionalità per farti risparmiare tempo e denaro, il che significa che puoi dedicare più tempo alle cose che ami.",
+      "blockClass": "images-menu-subtitle"
+    }
+  },
+  "flex-layout.row#images-card": {
+    "children": [
+      "link#washing-machines-home",
+      "link#dryers-home",
+      "link#ovens-home",
+      "link#cookers-home",
+      "link#fridges-home",
+      "link#freezers-home"
+    ],
+    "props": {
+      "blockClass": "images-menu-row-container"
+    }
+  },
+  /* washing machines */
+  "link#washing-machines-home": {
+    "props": {
+      "blockClass": "link-home-page",
+      "href": "/prodotti/lavare/lavatrici"
+    },
+    "children": ["category-card-home#washing-machines"]
+  },
+  "category-card-home#washing-machines": {
+    "props": {
+      "text": "Lavatrici",
+      "url": "assets/menu-images/washing-machines_mp.gif",
+      "src": "assets/menu-images/washing-machines-menu.svg"
+
+    }
+  },
+  /* dryers */
+  "link#dryers-home": {
+    "props": {
+      "blockClass": "link-home-page",
+      "href": "/prodotti/lavare/asciugatrici"
+    },
+    "children": ["category-card-home#dryers"]
+  },
+  "category-card-home#dryers": {
+    "props": {
+      "text": "Asciugatrici",
+      "url": "assets/menu-images/dryers_mp.gif",
+      "src": "assets/menu-images/dryers-menu.svg"
+    }
+  },
+  /* ovens */
+  "link#ovens-home": {
+    "props": {
+      "blockClass": "link-home-page",
+      "href": "/prodotti/cucina/forni"
+    },
+    "children": ["category-card-home#ovens"]
+  },
+  "category-card-home#ovens": {
+    "props": {
+      "text": "Forni",
+      "url": "assets/menu-images/oven_mp.gif",
+      "src": "assets/menu-images/ovens-menu.svg"
+
+    }
+  },
+  /* cookers */
+  "link#cookers-home": {
+    "props": {
+      "blockClass": "link-home-page",
+      "href": "/prodotti/cucina/piani-cottura"
+    },
+    "children": ["category-card-home#cookers"]
+  },
+  "category-card-home#cookers": {
+    "props": {
+      "text": "Piani cottura",
+      "url": "assets/menu-images/oven.gif",
+      "src": "assets/hods-menu.jpg"
+
+    }
+  },
+  /* fridges */
+  "link#fridges-home": {
+    "props": {
+      "blockClass": "link-home-page",
+      "href": "/prodotti/conservare/frigoriferi"
+    },
+    "children": ["category-card-home#fridges"]
+  },
+  "category-card-home#fridges": {
+    "props": {
+      "text": "Frigoriferi",
+      "url": "assets/menu-images/fridges_mp.gif",
+      "src": "assets/menu-images/fridges-menu.svg"
+
+    }
+  },
+  /* dishwashsers */
+  "link#freezers-home": {
+    "props": {
+      "blockClass": "link-home-page",
+      "href": "/prodotti/lavare-i-piatti/lavastoviglie"
+    },
+    "children": ["category-card-home#dish-washers"]
+  },
+  "category-card-home#dish-washers": {
+    "props": {
+      "text": "Lavastoviglie",
+      "url": "assets/menu-images/dishwashers.gif",
+      "src": "assets/dishwasher-menu.jpg"
+
+    }
+  }
+}

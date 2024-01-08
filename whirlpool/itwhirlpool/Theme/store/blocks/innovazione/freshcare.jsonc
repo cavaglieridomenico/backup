@@ -1,0 +1,126 @@
+{
+  "store.custom#freshcare": {
+    "children": [
+      "flex-layout.row#bread-theme",
+      "experimental__visibility-layout#heroBannerAnto",
+      "toggle-layout#chatWidget",
+      ////"analytics",
+      "__fold__.experimentalLazyAssets",
+      "experimental__visibility-layout#videoHalf",
+      "experimental__visibility-layout#bannerTesto90",
+      "flex-layout.row#BnnrPostillaWCollectionFrigo4PorteBottom1",
+      "flex-layout.row#BnnrPostillaWCollectionFrigo4PorteBottom2",
+      "experimental__visibility-layout#CaruselTextBanner",
+      "flex-layout.row#space",
+      "experimental__visibility-layout#listImageInnovazione",
+      "experimental__visibility-layout#listContextInnovazione",
+      "responsive-layout.mobile#caroselloProdottiFreshcare",
+      "responsive-layout.desktop#caroselloProdottiFreshcare",
+      "newsletter-popup#footer"
+    ]
+  },
+  "responsive-layout.mobile#caroselloProdottiFreshcare": {
+    "children": [
+      "experimental__visibility-layout#caroselloProdottiFreshcareMobile"
+    ]
+  },
+  "responsive-layout.desktop#caroselloProdottiFreshcare": {
+    "children": [
+      "experimental__visibility-layout#caroselloProdottiFreshcareDesktop"
+    ]
+  },
+  "experimental__visibility-layout#caroselloProdottiFreshcareMobile": {
+    "props": {
+      "visible": false
+    },
+    "children": ["list-context.product-list#caroselloProdottiFreshcareMobile"]
+  },
+  "experimental__visibility-layout#caroselloProdottiFreshcareDesktop": {
+    "props": {
+      "visible": false
+    },
+    "children": ["list-context.product-list#caroselloProdottiFreshcareDesktop"]
+  },
+  "list-context.product-list#caroselloProdottiFreshcareMobile": {
+    "blocks": ["product-summary.shelf#caroselliLanding"],
+    "children": ["slider-layout#innovazione"],
+    "props": {
+      "collection": "150",
+      "productList": {
+        "maxItems": 10,
+        "itemsPerPage": 5,
+        "minItemsPerPage": 1,
+        "scroll": "BY_PAGE",
+        "arrows": true,
+        "titleText": "Non sai da dove iniziare? Scopri i prodotti Whirlpool più venduti"
+      }
+    }
+  },
+  "list-context.product-list#caroselloProdottiFreshcareDesktop": {
+    "blocks": ["product-summary.shelf#caroselliLanding"],
+    "children": ["slider-layout#caroselloProdottiFreshcareDesktop"],
+    "props": {
+      "collection": "150",
+      "productList": {
+        "maxItems": 10,
+        "itemsPerPage": 5,
+        "minItemsPerPage": 1,
+        "scroll": "BY_PAGE",
+        "arrows": true,
+        "titleText": "Non sai da dove iniziare? Scopri i prodotti Whirlpool più venduti"
+      }
+    }
+  },
+  "slider-layout#caroselloProdottiFreshcareMobile": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 5,
+        "tablet": 2,
+        "phone": 1
+      },
+      "infinite": true,
+      "fullWidth": true,
+      "blockClass": "shelWCollectionfMobile",
+      "showPaginationDots": "never",
+      "showNavigationArrows": "never"
+    }
+  },
+  "slider-layout#caroselloProdottiFreshcareDesktop": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 5,
+        "tablet": 2,
+        "phone": 1
+      },
+      "infinite": true,
+      "fullWidth": false,
+      "blockClass": "shelf"
+    }
+  },
+  "experimental__visibility-layout#listContextInnovazione": {
+    "props": {
+      "visible": true
+    },
+    "children": ["list-context.product-list#innovazione"]
+  },
+  "list-context.product-list#innovazione": {
+    "blocks": ["product-summary.shelf"],
+    "children": ["slider-layout#innovazione"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC",
+      "maxItems": 5
+    }
+  },
+  "slider-layout#innovazione": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 5,
+        "tablet": 3,
+        "phone": 1
+      },
+      "infinite": true,
+      "fullWidth": false,
+      "blockClass": ["shelf", "marginBottom2rem"]
+    }
+  }
+}

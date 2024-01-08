@@ -1,0 +1,8 @@
+query product($refId: String) {
+	getProduct(refId:$refId) @context(provider:"vtex.countdown") {
+    Id,
+    Name,	
+    DepartmentId,	
+    CategoryId
+  }
+}

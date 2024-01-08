@@ -1,0 +1,118 @@
+.linkPhoneNumber {
+  color: black !important;
+  font-weight: bold;
+  font-size: 0.85rem !important;
+  line-height: 1.4375rem;
+  margin-left: 0.5rem;
+  text-decoration: none;
+  cursor: pointer;
+  display: flex;
+  font-size: 0.65rem;
+  align-items: center;
+}
+
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  top: 140%;
+  left: 0%;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  rotate: 180deg;
+  margin-left: -95px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: #D9D9D9 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popuptext.show {
+  visibility: visible;
+  -webkit-animation: hotpointuk-custom-phone-number-uk-0-x-fadeIn 1s;
+  animation: hotpointuk-custom-phone-number-uk-0-x-fadeIn 1s;
+  background: #D9D9D9;
+  width: 12rem;
+  padding: 10px;
+  color: black;
+}
+
+.rowButton{
+  display: flex;
+  justify-content: space-between;
+  padding: 0.2rem 0rem;
+}
+
+.phoneIcon {
+  width: 25px;
+  height: 25px;
+}
+
+.labelPopup{
+  font-size: 0.65rem;
+}
+.phoneIcon {
+  width: 25px;
+  height: 25px;
+}
+.phoneNumberLabel {
+  margin-left: .5rem;
+  color: white;
+  position: relative;
+  bottom: 4px;
+}
+
+@media only screen and (max-width: 900px) {
+  .phoneNumberLabel {
+    display: none;
+  }
+
+  .phoneIcon {
+    height: 1.75rem;
+    padding-bottom: .25rem;
+    width: 2.5rem;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .popup .popuptext::after {
+    margin-left: -68px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .popuptext.show {
+    width: 8rem;
+  }
+}
+@media only screen and (min-width: 401px) and (max-width: 600px) {
+  .popuptext.show {
+    width: 9rem;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  .popuptext.show {
+    width: 10rem;
+  }
+}

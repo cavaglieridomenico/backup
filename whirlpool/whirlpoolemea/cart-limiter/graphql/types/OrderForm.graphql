@@ -1,0 +1,152 @@
+type ItemAddInfo {
+  brandName: String
+  brandId: String
+}
+
+type BundleItemAddInfo {
+  offeringType: String
+  offeringTypeId: String
+}
+
+type BundleItem {
+  uniqueId: String
+  id: String
+  name: String
+  price: Float
+  listPrice: Float
+  sellingPrice: Float
+  additionalInfo: BundleItemAddInfo
+  quantity: Float
+}
+
+type Item {
+  uniqueId: String
+  id: String
+  productId: String
+  productRefId: String
+  refId: String
+  ean: String
+  name: String
+  modalType: String
+  price: Float
+  listPrice: Float
+  sellingPrice: Float
+  additionalInfo: ItemAddInfo
+  productCategoryIds: String
+  quantity: Float
+  seller: String
+  imageUrl: String
+  detailUrl: String
+  bundleItems: [BundleItem]
+  availability: String
+  ignore: Boolean
+}
+
+type Address {
+  addressType: String
+  receiverName: String
+  addressId: String
+  postalCode: String
+  city: String
+  state: String
+  country: String
+  street: String
+  number: String
+  neighborhood: String
+  complement: String
+  reference: String
+}
+
+type DeliveryID {
+  courierId: String
+  warehouseId: String
+  dockId: String
+  courierName: String
+  quantity: Float
+}
+
+type DeliveryWindow {
+  startDateUtc: String
+  endDateUtc: String
+  price: Float
+  lisPrice: Float
+}
+
+type SLA {
+  id: String
+  name: String
+  deliveryIds: [DeliveryID]
+  shippingEstimate: String
+  shippingEstimateDate: String
+  availableDeliveryWindows: [DeliveryWindow]
+  deliveryWindow: DeliveryWindow
+  price: Float
+  listPrice: Float
+}
+
+type LogisticsInfo {
+  itemIndex: Float
+  selectedSla: String
+  slas: [SLA]
+  itemId: String
+}
+
+type ShippingData {
+  address: Address
+  logisticsInfo: [LogisticsInfo]
+}
+
+type ClientProfileData {
+  email: String
+  firstName: String
+  lastName: String
+  phone: String
+  canBuyMDAs: Boolean
+  canPlaceOrders: Boolean
+  underMDAQtyThreshold: Boolean
+}
+
+type StorePreferencesData {
+  countryCode: String
+  currencyCode: String
+  currencySymbol: String
+}
+
+type CustomApp {
+  id: String
+  major: ID
+}
+
+type Totalizer {
+  id: String
+  name: String
+  value: Float
+}
+
+type ClientPreferencesData {
+   locale: String
+   optinNewsLetter: Boolean
+}
+
+type OpenTextField {
+  value: String
+}
+
+type CustomData {
+  customApps: [CustomApp]
+}
+
+type OrderForm {
+  orderFormId: String
+  salesChannel: String
+  userProfileId: String
+  value: Float
+  items: [Item]
+  totalizers:  [Totalizer]
+  shippingData: ShippingData
+  clientProfileData: ClientProfileData
+  clientPreferencesData: ClientPreferencesData
+  storePreferencesData: StorePreferencesData
+  openTextField: OpenTextField
+  customData: CustomData
+}

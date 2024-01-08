@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="it">
+  <head>
+  	<title>html comparisons template</title>
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v5.15.4/css/all.css">
+    <style type="text/css">
+		body {font-family: Arial, Helvetica, sans-serif; font-size: 80%;}
+		#container {width: 60%}
+		#products {border-collapse: collapse; clear: both;}
+		#products td img {width: 60%; display: block; margin-left: auto; margin-right: auto;}
+		#products td, #products th {border: 1px solid #ddd;padding: 8px;}
+		#products tr:nth-child(even){background-color: #f2f2f2;}
+		#products tr.specificationGroupName td {background-color: #FFCC00;}
+		.bold {font-weight: bold;}
+		.center {text-align: center;}
+		.no-bgcolor td {background-color: #FFF;}
+		#products tr.no-border td {border-style: none;}
+		#header img {float: left; margin: 5px 10px; width:15%}
+		#header h1 { margin-left: 180px; padding: 15px 20px; background-color: #000; color: #FFF; font-size: 15px;}      
+    </style>
+  </head>
+  <body>
+  	<div id="container">
+      <div id="header"> 
+          <img src="https://itwhirlpool.vtexassets.com/assets/vtex.file-manager-graphql/images/3ff5a944-94ce-4f50-b122-8289fc2b7c5c___733fd95312aac1564a0445c1e01ba670.svg"> 
+          <h1>Products comparison</h1>
+      </div>
+      <table id="products">
+          <tr class="no-border">
+              <td></td>
+              {{#each urlImgs}}    
+              <td><img src="{{this}}" alt="frontal view of goods"></td>
+              {{/each}}
+          </tr>
+          <tr class="no-border center no-bgcolor">
+              <td></td>
+              {{#each productsName}}
+              <td>{{this}}</td>
+              {{/each}}
+          </tr>
+          <tr class="no-border bold center">
+              <td></td>
+              {{#each prices}}
+              <td><span class="fa fa-euro-sign"></span>{{this}}</td>
+              {{/each}}
+          </tr>  
+          {{#each specifications}}
+          <tr class="specificationGroupName">	  	
+              <td colspan="5">{{this.specificationGroupName}}</td>
+          </tr>
+          <tr>
+              {{#each specificationGroupItems}}
+              <td class="bold">{{this.fieldLabel}}</td>
+              {{#each values}}
+              <td class="center">{{this}}</td>
+              {{/each}}
+           </tr>
+          {{/each}}   
+          {{/each}}  		
+      </table>
+    </div>	
+  </body>
+</html>
+
+

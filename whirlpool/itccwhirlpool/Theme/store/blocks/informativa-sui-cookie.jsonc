@@ -1,0 +1,133 @@
+{
+  "store.custom#informativa-sui-cookie": {
+    "children": [
+      "flex-layout.row#breadcrumb-container-cookie",
+      "rich-text#titleCookies1",
+      "rich-text#paragraphCookies1",
+      "flex-layout.row#preferenceLink1",
+      "rich-text#paragraphCookies2",
+      "flex-layout.row#cookietable",
+      "rich-text#paragraphCookies3",
+      "flex-layout.row#preferenceLink2",
+      "rich-text#paragraphCookies4"
+    ]
+  },
+  "flex-layout.row#breadcrumb-container-cookie": {
+    "children": ["flex-layout.col#breadcrumb-container-cookie"],
+    "props": {
+      "blockClass": "breadcrumbContainer"
+    }
+  },
+  "flex-layout.col#breadcrumb-container-cookie": {
+    "props": {
+      "blockClass": "breadcrumb-container-cookie"
+    },
+    "children": [
+      "link#breadcrumb-link1",
+      "rich-text#breadcrumb-spacer",
+      "link#breadcrumb-link2",
+      "rich-text#breadcrumb-spacer",
+      "link#breadcrumb-link3"
+    ]
+  },
+  "link#breadcrumb-link1": {
+    "props": {
+      "label": "Home",
+      "href": "/",
+      "blockClass": "breadcrumb-link"
+    }
+  },
+  "rich-text#breadcrumb-spacer": {
+    "props": {
+      "text": "-",
+      "blockClass": "breadcrumb-spacer"
+    }
+  },
+  "link#breadcrumb-link2": {
+    "props": {
+      "label": "2 cat",
+      "href": "/",
+      "blockClass": "breadcrumb-link"
+    }
+  },
+  "link#breadcrumb-link3": {
+    "props": {
+      "label": "3 cat",
+      "blockClass": ["breadcrumb-link", "breadcrumb-link-no-href"]
+    }
+  },
+  "rich-text#titleCookies1": {
+    "title": "Title text",
+    "props": {
+      "text": "## Titolo",
+      "blockClass": ["spaziature-impaginazione", "title-text-page"]
+    }
+  },
+  "rich-text#paragraphCookies1": {
+    "title": "First paragraph",
+    "props": {
+      "text": "Text1",
+      "textPosition": "CENTER",
+      "blockClass": ["spaziature-impaginazione", "paragraph-text-page"]
+    }
+  },
+  "flex-layout.row#preferenceLink1": {
+    "title": "First pref link",
+    "children": ["itcc-cookie-table.title"],
+    "props": {
+      "blockClass": "preferenceLink1"
+    }
+  },
+  "rich-text#paragraphCookies2": {
+    "title": "Second paragraph",
+    "props": {
+      "text": "Text2",
+      "textPosition": "CENTER",
+      "blockClass": ["spaziature-impaginazione", "paragraph-text-page"]
+    }
+  },
+  "flex-layout.row#cookietable": {
+    "children": ["itcc-cookie-table#info"],
+    "props": {
+      "blockClass": "rowTable"
+    }
+  },
+  "itcc-cookie-table#info": {
+    "props":{
+      "cookieGroups":[
+        "C0001","C0002","C0003","C0007"
+      ],
+      "mappedCookies": {"C0001": "BG1052", "C0002": "BG1053", "C0003": "BG1054", "C0007": "BG1055"},
+      "cookieFields_EN":[
+        "Name","Host","Length"
+      ],
+      "cookieFields_IT":[
+        "Nome","Host","Durata"
+      ]
+    }
+  },
+
+  "rich-text#paragraphCookies3": {
+    "title": "Third paragraph",
+    "props": {
+      "text": "Text3",
+      "textPosition": "CENTER",
+      "blockClass": ["spaziature-impaginazione", "paragraph-text-page"]
+    }
+  },
+  "flex-layout.row#preferenceLink2": {
+    "title": "Second pref link",
+    "children": ["itcc-cookie-table.title"],
+    "props": {
+      "blockClass": "preferenceLink2"
+    }
+  },
+  "rich-text#paragraphCookies4": {
+    "title": "Fouth paragraph",
+    "props": {
+      "text": "Text4",
+      "textPosition": "CENTER",
+      "blockClass": ["spaziature-impaginazione", "paragraph-text-page"]
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "responsive-layout.mobile#legal-info": {
+    "children": ["flex-layout.row#legal-info-maxi-container-mobile"]
+  },
+  "flex-layout.row#legal-info-maxi-container-mobile": {
+    "props": {
+      "blockClass": "legal-info-maxi-container"
+    },
+    "children": ["flex-layout.col#legal-info-col-maxi-container-mobile"]
+  },
+  "flex-layout.col#legal-info-col-maxi-container-mobile": {
+    "props": {
+      "blockClass": "legal-info-col-maxi-container"
+    },
+    "children": [
+      "breadcrumb#legal-info-mobile",
+      "flex-layout.row#legal-info-title-container",
+      "flex-layout.row#legal-info-content-container"
+    ]
+  },
+  //BREADCRUMBS
+  "breadcrumb#legal-info-mobile": {
+    "props": {
+      "categories": ["/Home/", "Mentions Légales"],
+      "showOnMobile": true,
+      "blockClass": "breadcrumb-legal-issues-landings"
+    }
+  }
+}

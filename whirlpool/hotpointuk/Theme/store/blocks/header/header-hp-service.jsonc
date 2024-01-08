@@ -1,0 +1,457 @@
+{
+  /* HEADER HOTPOINT SERVICE */
+  "header#hp-service": {
+    "blocks": [
+      "header-layout.desktop#hp-service",
+      "header-layout.mobile#hp-service"
+    ]
+  },
+  // DESKTOP
+  "header-layout.desktop#hp-service": {
+    "title": "Header Desktop - Hotpoint Service",
+    "children": [
+      "flex-layout.row#newsletter-automatic-popup",
+      "flex-layout.row#header-hp-service"
+    ]
+  },
+  "flex-layout.row#header-hp-service": {
+    "props": {
+      "blockClass": [
+        "containerHeaderHpService"
+      ],
+      "width": "100%",
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.row#sticky-header-hp-service"
+    ]
+  },
+  "flex-layout.row#sticky-header-hp-service": {
+    "props": {
+      "blockClass": [
+        "stickyHeaderHpService"
+      ],
+      "width": "100%",
+      "fullWidth": true
+    },
+    "children": [
+      "sticky-layout#desktop-header-hp-service"
+    ]
+  },
+  "sticky-layout#desktop-header-hp-service": {
+    "props": {
+      "blockClass": "stickyHeaderHpService"
+    },
+    "children": [
+      "stripe-custom#stripe",
+      "flex-layout.row#desktopTopABTest",
+      "flex-layout.row#desktop-header-hp-service"
+    ]
+  },
+  "flex-layout.row#desktop-header-hp-service": {
+    "title": "[ROW] - Layout Desktop Header Hotpoint Service",
+    "props": {
+      "blockClass": "headerHpService",
+      "width": "100%",
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.col#header-hp-service-menu-items",
+      "flex-layout.col#header-hp-service-search"
+    ]
+  },
+  // MENU ITEMS
+  "flex-layout.col#header-hp-service-menu-items": {
+    "title": "[COL] - Layout Menu Items",
+    "props": {
+      "blockClass": "headerHpServiceMenuItems",
+      "width": "70%",
+      "fullWidth": true
+    },
+    "children": [
+      "menu-item#appliances-support",
+      "analytics-wrapper#menu-item-service-register",
+      "analytics-wrapper#menu-item-service-care-plans",
+      "analytics-wrapper#menu-item-service-manuals",
+      "analytics-wrapper#menu-item-service-help",
+      // "analytics-wrapper#menu-item-service-parts",
+      "analytics-wrapper#menu-item-service-contact"
+    ]
+  },
+  "menu-item#appliances-support": {
+    "title": "[MENU] Appliances Support Desktop",
+    "props": {
+      "id": "menu-item-appliances-support",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": true,
+        "text": "Select the appliance you need support with"
+      },
+      "blockClass": [
+        "menuItemAppliancesSupport"
+      ]
+    },
+    "blocks": [
+      "vtex.menu@2.x:submenu#appliances-support"
+    ]
+  },
+  "vtex.menu@2.x:submenu#appliances-support": {
+    "title": "[SUBMENU] - Appliances Support Desktop",
+    "props": {
+      "width": "100%",
+      "blockClass": "submenuAppliancesSupport"
+    },
+    "children": [
+      "flex-layout.row#appliances-support"
+    ]
+  },
+  "flex-layout.row#appliances-support": {
+    "title": "[ROW] - Layout Appliances Support Desktop",
+    "props": {
+      "blockClass": "submenuAppliancesSupport"
+    },
+    "children": [
+      "flex-layout.col#appliances-service-menu-items",
+      "flex-layout.col#additionalServices"
+    ]
+  },
+  "flex-layout.col#appliances-service-menu-items": {
+    "title": "[COL] - Appliances Service Menu Items",
+    "props": {
+      "blockClass": "colAppliancesServiceMenuItems"
+    },
+    "children": [
+      "flex-layout.row#appliances-service-menu-items"
+    ]
+  },
+  "flex-layout.row#appliances-service-menu-items": {
+    "title": "[ROW] - Menu Items Container Desktop",
+    "props": {
+      "fullWidth": true,
+      "blockClass": "rowAppliancesServiceMenuItems",
+      "colGap": 5
+    },
+    "children": [
+      "flex-layout.col#first-appliances-service",
+      "flex-layout.col#second-appliances-service",
+      "flex-layout.col#third-appliances-service"
+    ]
+  },
+  // APPLIANCES FIRST COL
+  "flex-layout.col#first-appliances-service": {
+    "title": "[COL] - First Column Appliances Service",
+    "props": {
+      "blockClass": "menuItemContainerDesktop",
+      "rowGap": 5,
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "rich-text#service-menu-header-laundry",
+      "analytics-wrapper#menu-item-washing-machine-repair",
+      "analytics-wrapper#menu-item-dryer-repair",
+      "analytics-wrapper#menu-item-washer-dryer-repair",
+      "rich-text#service-menu-header-dishwashing",
+      "analytics-wrapper#menu-item-dishwasher-repair",
+      "analytics-wrapper#menu-item-integrated-dishwasher-repair",
+      "analytics-wrapper#menu-item-simline-dishwasher-repair"
+    ]
+  },
+  // APPLIANCES SECOND COL
+  "flex-layout.col#second-appliances-service": {
+    "title": "[COL] - Second Column Appliances Service",
+    "props": {
+      "blockClass": "menuItemContainerDesktop",
+      "rowGap": 5,
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "rich-text#service-menu-header-cooling",
+      "analytics-wrapper#menu-item-fridge-freezer-repair",
+      "analytics-wrapper#menu-item-fridge-repair",
+      "analytics-wrapper#menu-item-freezer-repair",
+      "analytics-wrapper#menu-item-integrated-fridge-freezer-repair"
+    ]
+  },
+  // APPLIANCES THIRD COL
+  "flex-layout.col#third-appliances-service": {
+    "title": "[COL] - Third Column Appliances Service",
+    "props": {
+      "blockClass": "menuItemContainerDesktop",
+      "rowGap": 5,
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "rich-text#service-menu-header-cooking",
+      "analytics-wrapper#menu-item-oven-repair",
+      "analytics-wrapper#menu-item-microwave-repair",
+      "analytics-wrapper#menu-item-hob-repair",
+      "analytics-wrapper#menu-item-hood-repair",
+      "analytics-wrapper#menu-item-cooker-repair"
+    ]
+  },
+  // APPLIANCES ADDITIONAL SERVICES
+  // Same as the one currently used in the D2C header
+  // SEARCH BAR + BUTTON
+  "flex-layout.col#header-hp-service-search": {
+    "title": "[COL] - Layout Search Bar + Button",
+    "props": {
+      "blockClass": "headerHpServiceSearch",
+      "width": "30%",
+      "fullWidth": true,
+      "horizontalAlign": "right"
+    },
+    "children": [
+      "link#hp-service-search",
+      "link#header-book-a-repair"
+    ]
+  },
+  "link#hp-service-search": {
+    "title": "[LINK] - Search",
+    "props": {
+      "href": "/service/search",
+      "target": "_self",
+      "isAnalyticsEvent": true,
+      "isPrevent": false,
+      "useVtexLinkComponent": false,
+      "analyticsEventName": "menu_footer_click",
+      "analyticsData": {
+        "event": "menu_footer_click",
+        "linkUrl": "/service/search",
+        "linkText": "",
+        "clickArea": "menu"
+      },
+      "blockClass": [
+        "headerLinkSearch"
+      ]
+    },
+    "children": [
+      "image#hp-service-search"
+    ]
+  },
+  "image#hp-service-search": {
+    "title": "[IMAGE] - Search",
+    "props": {
+      "blockClass": [
+        "headerLinkSearch"
+      ],
+      "src": "assets/search_orange.svg",
+      "maxWidth": "24px",
+      "maxHeight": "24px"
+    }
+  },
+  "link#header-book-a-repair": {
+    "title": "[LINK] - Book A Repair",
+    "props": {
+      "href": "/service/repair",
+      "target": "_self",
+      "label": "Book a repair",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "menu_footer_click",
+      "isPrevent": false,
+      "useVtexLinkComponent": false,
+      "analyticsData": {
+        "event": "menu_footer_click",
+        "linkUrl": "/service/repair",
+        "linkText": "Book a repair",
+        "clickArea": "menu"
+      },
+      "blockClass": [
+        "headerLinkBookRepair"
+      ]
+    }
+  },
+  // MOBILE
+  "header-layout.mobile#hp-service": {
+    "title": "Header Mobile - Hotpoint Service",
+    "children": [
+      "flex-layout.row#newsletter-automatic-popup",
+      "flex-layout.row#header-hp-service-mobile"
+    ]
+  },
+  "flex-layout.row#header-hp-service-mobile": {
+    "title": "[ROW] - Layout Top Header Hotpoint Service Mobile",
+    "props": {
+      "blockClass": [
+        "headerHpServiceMobile"
+      ],
+      "width": "100%",
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.row#sticky-row-mobile-hp-service",
+      // "flex-layout.row#searchBarRow",
+      "flex-layout.row#search-bar-service-mobile"
+      // "flex-layout.row#top-row-service-mobile"
+    ]
+  },
+  /* FIRST PART MOBILE */
+  "flex-layout.row#sticky-row-mobile-hp-service": {
+    "title": "[ROW] - First Part Header Mobile",
+    "props": {
+      "blockClass": "fullHeaderRowMobileHpService",
+      "width": "100%",
+      "fullWidth": true
+    },
+    "children": [
+      "sticky-layout#sticky-mobile-hp-service"
+    ]
+  },
+  "sticky-layout#sticky-mobile-hp-service": {
+    "title": "[STICKY] - Sticky Layout Header Mobile",
+    "children": [
+      "stripe-custom#stripe",
+      "flex-layout.row#mobile-header-hp-service",
+      "flex-layout.row#top-row-service-mobile"
+    ]
+  },
+  "flex-layout.row#mobile-header-hp-service": {
+    "title": "[ROW] - Mobile Header Hotpoint Service",
+    "children": [
+      "link#logo",
+      "flex-layout.col#space",
+      // "custom-phone-number-uk",
+      "conditional-login",
+      "minicart.v2#mini-mobile",
+      "drawer#mobile-header-hp-service"
+    ],
+    "props": {
+      "blockClass": "mobileHeaderHpService",
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    }
+  },
+  "drawer#mobile-header-hp-service": {
+    "title": "[DRAWER] - Mobile Header Hotpoint Service",
+    "props": {
+      "blockClass": "mobileHeaderHpService",
+      "slideDirection": "rightToLeft",
+      "renderingStrategy": "eager"
+    },
+    "children": [
+      "dropdown",
+      "analytics-wrapper#menu-item-Accessories-Mobile",
+      "analytics-wrapper#menu-item-Spare-Parts-Mobile",
+      "dropdown#service-and-support-mobile",
+      "analytics-wrapper#menu-item-Blog-Mobile"
+    ]
+  },
+  "dropdown#service-and-support-mobile": {
+    "title": "[DROPDOWN] - Dropdown Service & Support",
+    "props": {
+      "label": "Service & Support"
+    },
+    "children": [
+      "analytics-wrapper#menu-item-service-get-service-mobile",
+      "analytics-wrapper#menu-item-service-book-repair-mobile",
+      "dropdown#support-appliances-mobile",
+      "analytics-wrapper#menu-item-service-register-mobile",
+      "analytics-wrapper#menu-item-service-care-plans-mobile",
+      "analytics-wrapper#menu-item-service-manuals-mobile",
+      "analytics-wrapper#menu-item-service-help-mobile",
+      "analytics-wrapper#menu-item-service-contact-mobile"
+    ]
+  },
+  "dropdown#support-appliances-mobile": {
+    "title": "[DROPDOWN] - Dropdown Support Appliances",
+    "props": {
+      "label": "Select the appliance you need support with",
+      "blockClass": "headerHpService"
+    },
+    "children": [
+      "analytics-wrapper#menu-item-washing-machine-repair-mobile",
+      "analytics-wrapper#menu-item-dryer-repair-mobile",
+      "analytics-wrapper#menu-item-washer-dryer-repair-mobile",
+      "analytics-wrapper#menu-item-dishwasher-repair-mobile",
+      "analytics-wrapper#menu-item-integrated-dishwashers-repair-mobile",
+      "analytics-wrapper#menu-item-simline-dishwashers-repair-mobile",
+      "analytics-wrapper#menu-item-fridge-freezer-repair-mobile",
+      "analytics-wrapper#menu-item-fridge-repair-mobile",
+      "analytics-wrapper#menu-item-freezer-repair-mobile",
+      "analytics-wrapper#menu-item-integrated-fridge-freezer-repair-mobile",
+      "analytics-wrapper#menu-item-oven-repair-mobile",
+      "analytics-wrapper#menu-item-microwave-repair-mobile",
+      "analytics-wrapper#menu-item-hob-repair-mobile",
+      "analytics-wrapper#menu-item-hood-repair-mobile",
+      "analytics-wrapper#menu-item-cooker-repair-mobile"
+    ]
+  },
+  /* SECOND PART MOBILE */
+  "flex-layout.row#search-bar-service-mobile": {
+    "title": "[ROW] - Search Bar Service Mobile",
+    "props": {
+      "blockClass": "searchBarServiceRowMobile"
+    },
+    "children": [
+      "search-bar-service"
+    ]
+  },
+  "search-bar-service": {
+    "props": {
+      "blockClass": "service"
+    }
+  },
+  /* THIRD PART MOBILE */
+  /* BOOK A REPAIR AND TELEPHONE NUMBER */
+  "flex-layout.row#top-row-service-mobile": {
+    "title": "[ROW] - Layout Top Service Mobile",
+    "props": {
+      "blockClass": [
+        "topRowServiceMobile"
+      ],
+      "width": "100%",
+      "fullWidth": true
+    },
+    "children": [
+      "link#header-book-a-repair",
+      "link#header-phone-service"
+    ]
+  },
+  "link#header-phone-service": {
+    "title": "[LINK] - Header Phone Service",
+    "props": {
+      "href": "tel:03301732857",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "contacts_click",
+      "analyticsType": "telephone",
+      "blockClass": [
+        "headerPhoneService"
+      ]
+    },
+    "children": [
+      "flex-layout.row#header-phone-service"
+    ]
+  },
+  "flex-layout.row#header-phone-service": {
+    "title": "[ROW] - Layout Header Phone Service",
+    "props": {
+      "blockClass": [
+        "headerPhoneService"
+      ],
+      "width": "100%",
+      "fullWidth": true
+    },
+    "children": [
+      "image#header-phone-service",
+      "rich-text#header-phone-service"
+    ]
+  },
+  "image#header-phone-service": {
+    "title": "[IMAGE] - Header Phone Service",
+    "props": {
+      "blockClass": "headerPhoneService",
+      "maxWidth": "28px",
+      "src": "https://hotpointuk.vtexassets.com/assets/vtex.file-manager-graphql/images/de312258-696c-4738-9dc5-0e6a4e0255b3___d7b256ed6b49240426623e33b5ef9335.png"
+    }
+  },
+  "rich-text#header-phone-service": {
+    "title": "[TEXT] - Header Phone Service",
+    "props": {
+      "blockClass": "headerPhoneService",
+      "text": "[0330 173 2857](tel:03301732857)"
+    }
+  }
+}

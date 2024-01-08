@@ -1,0 +1,13 @@
+# !WARN: this call takes only few elements by the orderForm. Add what you need based on this schema: /admin/graphql-ide => vtex.checkout-graphql
+query getOfferings($orderFormId: ID) {
+  orderForm(orderFormId: $orderFormId, refreshOutdatedData: true) @context(provider: "vtex.checkout-graphql") {
+    id
+    items {
+      offerings {
+        id
+        name
+        price
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+query ProductGifts($identifier: ProductUniqueIdentifier) {
+  product(identifier: $identifier){
+    
+    items {
+      sellers {
+        commertialOffer {
+          gifts {
+            productName
+            }
+          }
+        }
+      }
+    }
+  
+}

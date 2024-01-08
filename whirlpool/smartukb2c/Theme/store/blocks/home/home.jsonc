@@ -1,0 +1,345 @@
+{
+  "store.home": {
+    "blocks": [
+      "responsive-layout.desktop",
+      "responsive-layout.mobile"
+    ]
+  },
+  "responsive-layout.desktop": {
+    "children": [ /*"slider-layout#text-test",
+                "flex-layout.row#search-box-wrapper",*/
+      "flex-layout.row#search-box",
+      "countdown.categories",
+      "countdown.videostitle",
+      "flex-layout.row#videos",
+      /*"countdown.promotionstitle",
+                "flex-layout.row#promotions",*/
+      "countdown.services"
+    ]
+  },
+  /* Start of Mobile part */
+  "responsive-layout.mobile": {
+    "children": [
+      /*"slider-layout#text-test",
+      "flex-layout.row#search-box-wrapper",*/
+      "flex-layout.row#search-box-mobile",
+      "countdown.categories",
+      "flex-layout.row#videosMobile",
+      /*"countdown.promotionstitle",
+      "countdown.promotions",*/
+      "countdown.services"
+    ]
+  },
+  "flex-layout.row#videosMobile": {
+    "props": {
+      "blockClass": "videosMobileRow"
+    },
+    "children": [
+      "flex-layout.col#videosMobile"
+    ]
+  },
+  "flex-layout.col#videosMobile": {
+    "props": {
+      "blockClass": "videosMobileCol"
+    },
+    "children": [
+      "countdown.videostitle",
+      "video#mobile1",
+      "video#mobile2",
+      "video#mobile3"
+    ]
+  },
+  "video#mobile1": {
+    "props": {
+      "width": "100%",
+      "height": "200px",
+      "loop": false,
+      "autoPlay": false,
+      "muted": false,
+      "src": "https://youtu.be/OukvCiz2Ivg",
+      "blockClass": "videoLandingMobile"
+    }
+  },
+  "video#mobile2": {
+    "props": {
+      "width": "100%",
+      "height": "200px",
+      "loop": false,
+      "autoPlay": false,
+      "muted": false,
+      "src": "https://youtu.be/c0f-oFKZ_os",
+      "blockClass": "videoLandingMobile"
+    }
+  },
+  "video#mobile3": {
+    "props": {
+      "width": "100%",
+      "height": "200px",
+      "loop": false,
+      "autoPlay": false,
+      "muted": false,
+      "src": "https://youtu.be/_bqGn6jQk8M",
+      "blockClass": "videoLandingMobile"
+    }
+  },
+  /* End of Mobile part */
+  "slider-layout#text-test": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "slideTransition": {
+        "speed": 1500,
+        "delay": 2000,
+        "timing": "ease-in-out"
+      },
+      "autoplay": {
+        "timeout": 4000
+      },
+      "infinite": true,
+      "showNavigationArrows": "desktopOnly",
+      "blockClass": "carousel",
+      "fullWidth": true
+    },
+    "children": [
+      "stack-layout#cta2",
+      "stack-layout#cta1",
+      "stack-layout#cta3"
+    ]
+  },
+  "stack-layout#cta1": {
+    "children": [
+      "image#cta1",
+      "flex-layout.row#cta2"
+    ]
+  },
+  "image#cta1": {
+    "props": {
+      "blockClass": "cta",
+      "width": "100%",
+      "height": 330,
+      "src": "assets/landing.jpg"
+    }
+  },
+  "stack-layout#cta2": {
+    "children": [
+      "image#cta2",
+      "flex-layout.row#cta2"
+    ]
+  },
+  "image#cta2": {
+    "props": {
+      "blockClass": "cta",
+      "width": "100%",
+      "height": 330,
+      "src": "assets/landing3.jpg"
+    }
+  },
+  "stack-layout#cta3": {
+    "children": [
+      "image#cta3",
+      "flex-layout.row#cta2"
+    ]
+  },
+  "image#cta3": {
+    "props": {
+      "blockClass": "cta",
+      "width": "100%",
+      "height": 330,
+      "src": "assets/landing2.jpg"
+    }
+  },
+  "flex-layout.row#cta2": {
+    "props": {
+      "blockClass": "cta2"
+    },
+    "children": [
+      "flex-layout.col#cta2"
+    ]
+  },
+  "flex-layout.col#cta2": {
+    "props": {
+      "blockClass": "cta2"
+    }
+  },
+  "flex-layout.row#search-box": {
+    "props": {
+      "blockClass": "searchBox"
+    },
+    "children": [
+      "flex-layout.col#search-box"
+    ]
+  },
+  "flex-layout.col#search-box": {
+    "props": {
+      "blockClass": "searchBox"
+    },
+    "children": [
+      "rich-text#headerTitle",
+      "rich-text#headerSubtitle",
+      "countdown.autoComplete",
+      "flex-layout.row#barcodeOpen"
+    ]
+  },
+  "rich-text#headerTitle": {
+    "props": {
+      "text": "test",
+      "blockClass": "headerTitle"
+    }
+  },
+  "rich-text#headerSubtitle": {
+    "props": {
+      "text": "test",
+      "blockClass": "headerSubtitle"
+    }
+  },
+  "flex-layout.row#search-box-mobile": {
+    "props": {
+      "blockClass": "searchBox"
+    },
+    "children": [
+      "flex-layout.col#search-box-mobile"
+    ]
+  },
+  "flex-layout.col#search-box-mobile": {
+    "props": {
+      "blockClass": "searchBox"
+    },
+    "children": [
+      "rich-text#headerTitle",
+      "rich-text#headerSubtitle",
+      "flex-layout.row#barcodeOpen"
+    ]
+  },
+ /* "rich-text#headerTitle": {
+    "props": {
+      "text": "test Title Mobile",
+      "blockClass": "headerTitle"
+    }
+  },
+  "rich-text#headerSubtitle": {
+    "props": {
+      "text": "test Subtitle Mobile",
+      "blockClass": "headerSubtitle"
+    }
+  },*/
+  "flex-layout.row#search-box-wrapper": {
+    "props": {
+      "blockClass": "searchBoxWrapper"
+    },
+    "children": [
+      "flex-layout.col#search-box-elements"
+    ]
+  },
+  "flex-layout.col#search-box-elements": {
+    "props": {
+      "blockClass": "searchBoxElements"
+    },
+    "children": [
+      "countdown.slidertitle",
+      "countdown.autoComplete",
+      "flex-layout.row#barcodeOpen"
+    ]
+  },
+  "flex-layout.row#search-box-search": {
+    "props": {
+      "blockClass": "searchWithButton"
+    },
+    "children": [
+      "search-bar",
+      "link#cta2"
+    ]
+  },
+  "search-bar": {
+    "props": {
+      "blockClass": "homeAutocomplete"
+    }
+  },
+  "link#cta2": {
+    "props": {
+      "blockClass": "buttonSearch",
+      "displayMode": "button",
+      "buttonProps": {
+        "variant": "secondary",
+        "size": "large"
+      },
+      "href": "/Lavatrici",
+      "label": "ZOEKEN"
+    }
+  },
+  "flex-layout.row#barcodeOpen": {
+    "props": {
+      "blockClass": "barcode"
+    },
+    "children": [
+      "modal-trigger#barcodeOpen"
+    ]
+  },
+  "modal-trigger#barcodeOpen": {
+    "props": {
+      "blockClass": "barcodeModalOpen"
+    },
+    "children": [
+      "countdown.barcodetitle",
+      "modal-layout#barcode"
+    ]
+  },
+  "flex-layout.row#videos": {
+    "props": {
+      "blockClass": "flexboxVideos"
+    },
+    "children": [
+      "video#1",
+      "video#2",
+      "video#3"
+    ]
+  },
+  "video#1": {
+    "props": {
+      "width": "400px",
+      "height": "220px",
+      "loop": false,
+      "autoPlay": false,
+      "muted": false,
+      "src": "https://youtu.be/OukvCiz2Ivg",
+      "blockClass": "videoLanding"
+    }
+  },
+  "video#2": {
+    "props": {
+      "width": "400px",
+      "height": "220px",
+      "loop": false,
+      "autoPlay": false,
+      "muted": false,
+      "src": "https://youtu.be/c0f-oFKZ_os",
+      "blockClass": "videoLanding"
+    }
+  },
+  "video#3": {
+    "props": {
+      "width": "400px",
+      "height": "220px",
+      "loop": false,
+      "autoPlay": false,
+      "muted": false,
+      "src": "https://youtu.be/_bqGn6jQk8M",
+      "blockClass": "videoLanding"
+    }
+  },
+  "flex-layout.row#promotions": {
+    "props": {
+      "blockClass": "promotions"
+    },
+    "children": [
+      "countdown.promotions"
+    ]
+  },
+  "custom-autocomplete": {
+    "props": {
+      "type": "full"
+    }
+  }
+}

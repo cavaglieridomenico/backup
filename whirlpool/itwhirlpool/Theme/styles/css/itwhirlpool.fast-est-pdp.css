@@ -1,0 +1,53 @@
+.container :global(.vtex-button) {
+  width: 100%;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  padding: 0.1rem;
+  font-family: "myriadLight";
+  background-color: #fdc100;
+  border-color: #fdc100;
+}
+.container {
+  margin: 0.5rem 0;
+}
+.fastEstForm {
+  margin: 1rem 0;
+}
+.container :global(.vtex-styleguide-9-x-input) {
+  border: 1px solid #c7c7c7;
+  border-top-right-radius: 0;
+  margin-right: 0;
+  border-bottom-right-radius: 0;
+  border-right: 0;
+}
+.container :global(.vtex-input__label) {
+  font-family: "myriadLight";
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 668px) {
+  .container :global(.vtex-input__label) {
+    font-size: 0.875rem;
+  }
+  .fastEstForm {
+    margin: 0.5rem 0;
+  }
+}
+@media only screen and (max-width:600px){
+  .fastEstForm{
+    flex-direction: column;
+  }
+  .containerSuccess{
+    width: 100%;
+    position: relative;
+    top: 4.5rem;
+  }
+  .containerPreOrderLabel {
+    position: relative;
+    bottom: 2.5rem;
+  }
+}

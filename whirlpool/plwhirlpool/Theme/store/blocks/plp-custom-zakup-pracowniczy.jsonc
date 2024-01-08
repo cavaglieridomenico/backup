@@ -1,0 +1,127 @@
+{
+  // Custom PLP
+  "store.custom.product-comparison#custom-plp-zakup-pracowniczy": {
+    "blocks": [
+      "search-result-layout.customQuery#customPLP3",
+      "flex-layout.row#newsletter-row"
+    ],
+    "props": {
+      "context": {
+        "skusFilter": "ALL",
+        "simulationBehavior": "default",
+        "maxItemsPerPage": 20,
+        "__unstableProductOriginVtex": true
+      }
+    }
+  },
+  "search-result-layout.customQuery#customPLP3": {
+    "blocks": [
+      "search-result-layout.desktop.product-comparison#customPLP3",
+      "search-result-layout.mobile"
+    ],
+    "props": {
+      "querySchema": {
+        "orderByField": "OrderByScoreDESC",
+        "hideUnavailableItems": true,
+        "maxItemsPerPage": 20
+      }
+    }
+  },
+  "search-result-layout.desktop.product-comparison#customPLP3": {
+    "children": [
+      "no-index",
+      "custom-helmet",
+      // "breadcrumb.search",
+      "breadcrumb-custom",
+      "toggle-layout#CarouselPLP",
+      "flex-layout.row#searchtitle",
+      "flex-layout.row#result",
+      "product-comparison-drawer",
+      "analytics#plp"
+    ],
+    "props": {
+      "showFacetQuantity": true,
+      "pagination": "show-more",
+      "preventRouteChange": true,
+      "defaultGalleryLayout": "grid",
+      "hiddenFacets": {
+        "categories": true,
+        "specificationFilters": {
+          "hiddenFilters": [
+            {
+              "name": "Category 2"
+            },
+            {
+              "name": "Category 3"
+            },
+            {
+              "name": "Produit"
+            },
+            {
+              "name": "Catégorie"
+            }
+          ]
+        }
+      }
+    }
+  },
+  // Custom PLP 2
+  "store.custom.product-comparison#custom-plp2": {
+    "blocks": [
+      "search-result-layout.customQuery#customPLP2"
+    ],
+    "props": {
+      "context": {
+        "skusFilter": "ALL",
+        "simulationBehavior": "default",
+        "maxItemsPerPage": 20,
+        "__unstableProductOriginVtex": true
+      }
+    }
+  },
+  "search-result-layout.customQuery#customPLP2": {
+    "blocks": [
+      "search-result-layout.desktop.product-comparison#customPLP2",
+      "search-result-layout.mobile"
+    ],
+    "props": {
+      "querySchema": {
+        "orderByField": "OrderByScoreDESC",
+        "hideUnavailableItems": true,
+        "maxItemsPerPage": 20
+      }
+    }
+  },
+  "search-result-layout.desktop.product-comparison#customPLP2": {
+    "children": [
+      // "breadcrumb.search",
+      "no-index",
+      "custom-helmet",
+      "breadcrumb-custom",
+      "toggle-layout#CarouselPLP",
+      "flex-layout.row#searchtitle",
+      "flex-layout.row#result",
+      "product-comparison-drawer",
+      "analytics#plp"
+    ],
+    "props": {
+      "showFacetQuantity": true,
+      "pagination": "show-more",
+      "preventRouteChange": true,
+      "defaultGalleryLayout": "grid",
+      "hiddenFacets": {
+        "categories": true,
+        "specificationFilters": {
+          "hiddenFilters": [
+            {
+              "name": "Category 2"
+            },
+            {
+              "name": "Catégorie"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

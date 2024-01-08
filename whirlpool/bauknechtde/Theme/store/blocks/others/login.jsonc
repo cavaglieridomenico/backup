@@ -1,0 +1,44 @@
+{
+  "store.login": {
+    "parent": {
+      "footer": "footer#login"
+    },
+    "blocks": ["login-content#default", "login-custom-flow"
+      //"analytics"
+    ]
+  },
+  "login-content#default": {
+    "props": {
+      "isInitialScreenOptionOnly": false,
+      "defaultOption": 1,
+      "showPasswordVerificationIntoTooltip": true
+    }
+  },
+  "footer#login": {
+    "blocks": ["footer-layout.desktop#login", "footer-layout.mobile#login"]
+  },
+  "footer-layout.desktop#login": {
+    "children": [
+      "flex-layout.row#spaceFooter",
+      "flex-layout.row#footer-1-desktop"
+    ]
+  },
+  "footer-layout.mobile#login": {
+    "children": [
+      // "image#payment-methods-mobile",
+      // "flex-layout.row#accordionFooter",
+      // "flex-layout.row#3-footer-mobile",
+      // "rich-text#footer-mobile",
+      // "social-networks#mobile"
+      "flex-layout.row#spaceFooterMobile",
+      "flex-layout.row#menusRow1-mobile",
+      "flex-layout.row#menusRow2-mobile",
+      "flex-layout.row#social-mobile"
+    ]
+  },
+  "flex-layout.row#spaceFooterMobile": {
+    "props": {
+      "blockClass": ["halfRowSpace", "bgWhiteMobile"]
+    }
+  }
+}

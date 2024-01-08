@@ -1,0 +1,92 @@
+query productReviews($sort: String!, $filter: Int, $offset: Int, $pageId: String, $quantity: Int) {
+	productReviews(sort: $sort, offset: $offset, pageId: $pageId, filter: $filter, quantity: $quantity) {
+    Limit
+    Offset
+    TotalResults
+    Results {
+      Id
+      Rating
+      TotalCommentCount
+      IsRatingsOnly
+      TotalFeedbackCount
+      IsRecommended
+      SecondaryRatingsOrder
+      TotalNegativeFeedbackCount
+      TotalPositiveFeedbackCount
+      UserNickname
+      UserLocation
+      SubmissionTime
+      Title
+      ReviewText
+      SecondaryRatings {
+        Value
+        Id
+        ValueRange
+        ValueLabel
+        MinLabel
+        Label
+        DisplayType
+        MaxLabel
+      }
+      ContextDataValues {
+        IncentivizedReview {
+          Value
+          ValueLabel
+          DimensionLabel
+          Id
+        }
+      }
+      TagDimensions {
+        Pros {
+          Values
+          Id
+          Label
+        }
+        Cons {
+          Values
+          Id
+          Label
+        }
+      }
+      Photos {
+        Sizes {
+          normal {
+            Url
+          }
+          thumbnail {
+            Url
+          }
+        }
+      }
+      ClientResponses {
+        Department
+        Response
+        ResponseType
+        ResponseSource
+        Name
+        Date
+      }
+    }
+    Includes {
+      Products {
+        ReviewStatistics {
+          TotalReviewCount
+          AverageOverallRating
+          RatingDistribution {
+            RatingValue
+            Count
+          }
+          SecondaryRatingsAverages {
+            AverageRating
+            Id
+            ValueRange
+            MinLabel
+            Label
+            DisplayType
+            MaxLabel
+          }
+        }
+      }
+    }
+  }
+}

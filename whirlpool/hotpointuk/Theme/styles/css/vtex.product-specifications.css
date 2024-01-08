@@ -1,0 +1,94 @@
+.groupName {
+  text-transform: uppercase;
+  color: #505050;
+  font-family: "hotpointRegular";
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.375rem;
+}
+.specificationName {
+  color: #505050;
+  font-family: "hotpointRegular";
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.3125rem;
+  text-transform: lowercase;
+}
+.specificationValue {
+  color: #505050;
+  font-family: "hotpointRegular";
+  font-weight: 300;
+  font-size: 0.75rem;
+  /* line-height: 1.3125rem; */
+  display: none;
+}
+.specificationValue--plpCommercialCode {
+  padding: 0 1rem 0 1rem;
+}
+.specificationValue--codiceProdotto {
+  padding: 0;
+  color: #505050;
+  font-family: "hotpointRegular";
+  font-weight: 300;
+  font-size: 0.8rem;
+  line-height: 1.2;
+  padding-left: 1rem;
+}
+.specificationValue--codiceProdottoPDP {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 123px;
+  padding-left: 0;
+  font-size: 0.95rem;
+  color: #7b8888;
+  background-color: #e2e2e2;
+  padding: 2px 7px;
+  border-radius: 2px;
+  font-weight: bold;
+}
+.specificationValue--noPaddingBottom {
+  padding-bottom: 0 !important;
+}
+.specificationValue--dettagli {
+  font-weight: bold;
+}
+:global(.vtex-flex-layout-0-x-flexCol--productMainMobileAccessories) .specificationValue--codiceProdottoPDP{
+	display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 123px;
+  font-size: .95rem;
+  color: #7b8888;
+  background-color: #e2e2e2;
+  padding: 2px 7px;
+  border-radius: 2px;
+  font-weight: 700;
+}
+/* Media Queries */
+@media only screen and (max-width: 600px) {
+  .specificationValue--codiceProdottoPDP {
+    padding-left: 0;
+    font-size: 0.875rem;
+    color: #505050;
+    background-color: transparent;
+    justify-content: center;
+    margin-right: 0px !important;
+    padding: 0px !important;
+    /* display: none; */
+  }
+  :global(.vtex-flex-layout-0-x-flexCol--productMainMobileAccessories) .specificationValue--codiceProdottoPDP {
+    padding-left: 0;
+    font-size: .875rem;
+    color: #505050;
+    background-color: transparent;
+    justify-content: center;
+    margin-right: 0!important;
+    padding: 0!important;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .specificationValue--codiceProdottoPDP {
+    background-color: transparent;
+  }
+}

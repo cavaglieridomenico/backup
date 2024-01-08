@@ -1,0 +1,93 @@
+{
+  "store.custom#newsletter-landingpage": {
+    "blocks": [
+      "image#banner-newsletterLanding",
+      "flex-layout.row#newsLetterLanding"
+    ]
+  },
+  // TOP IMAGE
+  "image#banner-newsletterLanding": {
+    "props": {
+      "src": "assets/newsletterPageBg.webp",
+      "width": "100%",
+      "height": "100%",
+      "blockClass": "imageNewsletterLanding"
+    }
+  },
+  // NEWSLETTER FORM WITH IMAGE
+  "flex-layout.row#newsLetterLanding": {
+    "children": [
+      "flex-layout.col#newsletterForm"
+    ],
+    "props": {
+      "blockClass": [
+        "newsletterFormRow"
+      ]
+    }
+  },
+  "flex-layout.col#newsletterForm": {
+    "children": [
+      "experimental__visibility-layout#image-newsletter-form",
+      "newsletter-form"
+    ],
+    "props": {
+      "blockClass": "newsletterFormCol"
+    }
+  },
+  /* FORM IMAGE*/
+  "experimental__visibility-layout#image-newsletter-form": {
+    "title": "Visibility Layout - Image Newsletter Form",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "image#image-newsletter-form"
+    ]
+  },
+  "image#image-newsletter-form": {
+    "title": "Image - Newsletter Form",
+    "props": {
+      "src": "assets/newsletterFormImage.webp",
+      "blockClass": "imageNewsletterForm"
+    }
+  },
+  "newsletter-form": {
+    "props": {
+      "title": "ZAPISZ SIĘ NA NASZ NEWSLETTER",
+      "subtitles": [
+        {
+          "__editorItemTitle": "#### Odbierz 50 zł rabatu"
+        }
+      ],
+      "emailPlaceholder": "EMAIL*",
+      "namePlaceholder": "IMIĘ*",
+      "surnamePlaceholder": "NAZWISKO*",
+      "checkboxes": [
+        {
+          "checkboxLabel": "Wyrażam zgodę na przetwarzanie moich danych osobowych w celu umożliwienia Whirlpool Polska Appliances Sp. z o.oprzesyłania mi newslettera/wiadomości marketingowych (w formie elektronicznej i nieelektronicznej, w tym za pośrednictwem telefonu, poczty tradycyjnej, e-mail, SMS, MMS, powiadomień push na stronach osób trzecich, w tym na platformach Facebook i Google) dotyczących produktów i usług Whirlpool Polska Appliances Sp. z o.o również tych już zakupionych lub zarejestrowanych przeze mnie, a także w celu prowadzenia badań rynkowych;",
+          "checkboxRequired": true,
+          "checkboxNewsletter": true,
+          "checkboxError": "To pole jest wymagane"
+        }
+      ],
+      "privacyPolicyTextArray": [
+        {
+          "__editorItemTitle": "Przeczytałem i zrozumiałem treść informacji [polityki prywatności](/informacja-o-ochronie-prywatnosci) dotyczących ochrony danych osobowych oraz:"
+        }
+      ],
+      "privacyPolicyTextArrayAfterCheckboxes": [
+        {
+          "__editorItemTitle": "Warunki przyznania zniżki znajdują się w Regulaminie Promocji poniżej:"
+        },
+        {
+          "__editorItemTitle": "Kod na 50 złotych rabatu otrzymasz mailem po zapisaniu się do newslettera, niemożliwe jest łączenie go z innymi promocjami, można go użyć tylko raz."
+        }
+      ],
+      "errorRequiredField": "To pole jest wymagane",
+      "errorInvalidMail": "Proszę wpisać prawidłowy email",
+      "successMessage": "Dziękujemy za subskrybcję.",
+      "registeredErrorMessage": "Twój e-mail był już zarejestrowany w naszej bazie danych. Dziękujemy.",
+      "genericApiErrorMessage": "Coś poszło nie tak, proszę spróbować ponownie"
+    }
+  }
+}

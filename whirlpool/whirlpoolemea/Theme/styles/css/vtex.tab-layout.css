@@ -1,0 +1,206 @@
+.contentContainer .contentItem--TabContent {
+  background-color: white;
+  position: relative;
+  -webkit-animation: slide 0.6s;
+  animation: slide;
+  animation-duration: 0.6s;
+}
+.contentContainer .contentItem--TabContentBlack {
+  background-color: #222325;
+  position: relative;
+  -webkit-animation: slide 0.6s;
+  animation: slide;
+  animation-duration: 0.6s;
+}
+@keyframes slide {
+  0% {
+    opacity: 0;
+    left: 100%;
+    top: 0px;
+  }
+  10% {
+    opacity: 0.1;
+    left: 90%;
+    top: 0px;
+  }
+  20% {
+    opacity: 0.2;
+    left: 80%;
+    top: 0px;
+  }
+  30% {
+    opacity: 0.3;
+    left: 70%;
+    top: 0px;
+  }
+  40% {
+    opacity: 0.4;
+    left: 60%;
+    top: 0px;
+  }
+  50% {
+    opacity: 0.5;
+    left: 50%;
+    top: 0px;
+  }
+  60% {
+    opacity: 0.6;
+    left: 40%;
+    top: 0px;
+  }
+  70% {
+    opacity: 0.7;
+    left: 30%;
+    top: 0px;
+  }
+  80% {
+    opacity: 0.8;
+    left: 20%;
+    top: 0px;
+  }
+  90% {
+    opacity: 0.9;
+    left: 10%;
+    top: 0px;
+  }
+  100% {
+    opacity: 1;
+    left: 0px;
+    top: 0px;
+  }
+}
+.container--BannerTab {
+  padding-top: 5.625rem;
+}
+.container--BannerTabBlack {
+  background-color: #222325;
+}
+.container--BannerTabBlack {
+  margin-top: -0.3rem;
+  padding-top: 5.625rem;
+}
+.container--BannerTab .listContainer {
+  border-bottom: 0.0625rem solid #979797;
+}
+.container--BannerTabBlack .listContainer {
+  border-bottom: 0.0625rem solid #979797;
+}
+.container--BannerTab .listItem {
+  padding: 0;
+  margin: 0;
+}
+.container--BannerTabBlack .listItem {
+  padding: 0;
+  margin: 0;
+}
+.container--BannerTab :global(.vtex-button__label) {
+  padding: 0;
+  padding-bottom: 2.1875rem !important;
+  color: #353535;
+  font-family: "myriadLight";
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.625rem;
+  min-width: 10rem;
+}
+.container--BannerTabBlack :global(.vtex-button__label) {
+  padding: 0;
+  padding-bottom: 2.1875rem !important;
+  color: #ffffff;
+  font-family: "myriadLight";
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.625rem;
+  min-width: 10rem;
+}
+.container--BannerTab .listItemActive :global(.vtex-button) {
+  border-bottom: 0.1875rem solid #edb112;
+  border-radius: 0;
+}
+.container--BannerTabBlack .listItemActive :global(.vtex-button) {
+  border-bottom: 0.1875rem solid #edb112;
+  border-radius: 0;
+}
+.container--BannerTab :global(.vtex-button) {
+  background-color: unset;
+  outline: unset;
+  border: unset;
+  text-transform: unset;
+  margin: 0 2.5rem;
+}
+.container--BannerTabBlack :global(.vtex-button) {
+  background-color: unset;
+  outline: unset;
+  border: unset;
+  text-transform: unset;
+  margin: 0;
+}
+.listItemChildren {
+  margin: 0;
+}
+.listItemChildrenActive {
+  border-bottom: 0.1875rem solid #edb112;
+}
+.contentContainer--bannerTab {
+  margin-top: 3.75rem;
+}
+.contentContainer--bannerTabBlack {
+  margin-top: 3.75rem;
+}
+.contentItem--documentContainer {
+  padding-top: 2.625rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 1024px) {
+  .contentItem--documentContainer {
+    align-items: unset;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .container--BannerTab .listContainer {
+    display: flex;
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+    justify-content: start;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .contentContainer .contentItem--TabContent {
+    -webkit-animation: slide 0.4s;
+    animation: slide;
+    animation-duration: 0.4s;
+  }
+  .contentContainer .contentItem--TabContentBlack {
+    -webkit-animation: slide 0.4s;
+    animation: slide;
+    animation-duration: 0.4s;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .listContainer--pdpTab {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    justify-content: start;
+  }
+  .listItem--pdpTab {
+    min-width: 10rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .container--bannerTabHomeTotal {
+    padding-top: 2rem;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .contentContainer--tabPdpCollection
+    :global(.vtex-flex-layout-0-x-flexRowContent--imageAndPriceMobile) {
+    display: none;
+  }
+}

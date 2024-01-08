@@ -1,0 +1,17 @@
+:global(.vtex-menu-2-x-submenuWrapper) .containerDesktop {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    content: "";
+    overflow: hidden;
+    transition: 0.5s height linear;
+    height: 0px; /*deve essere 0*/
+    padding: 0;
+    margin: 0;
+    border: none;
+  }
+  :global(.vtex-menu-2-x-submenuWrapper--isOpen)  .containerDesktop {
+    height: 405px;
+    z-index: 1000;
+    border-bottom: 1px solid lightgray;
+  }

@@ -1,0 +1,152 @@
+{
+    "menu-item#dishwashing" : {
+        "props": {
+          "id": "menu-item-dishwashing",
+          "orientation": "horizontal",
+          "type": "custom",
+          "highlight": false,
+          "blockClass" : "first-level-category",
+          "itemProps": {
+            "type": "custom",
+            "href": "#",
+            "noFollow": false,
+            "tagTitle": "Dishwashing",
+            "text": "Dishwashing"
+          }
+        },
+        "blocks": [ "vtex.menu@2.x:submenu#dishwashing" ]
+      },
+    
+      "vtex.menu@2.x:submenu#dishwashing" : {
+        "props": {
+          "orientation": "vertical",
+          "placement":"left"
+        },
+        "children": [ 
+          "menu-item#dishwasher"
+        ]
+      },
+
+      "menu-item#dishwasher" : {
+        "props": {
+            "placement": "right",
+            "type": "custom",
+            "highlight": false,
+            "itemProps": {
+              "type": "internal",
+              "noFollow": false,
+              "tagTitle": "Dishwasher",
+              "text" : "Hotpoint Dishwasher Parts",
+              "href" : "/spare-parts/dishwashing/dishwasher"
+            }
+          },
+          "blocks": [
+            "vtex.menu@2.x:submenu#dishwasher"
+          ]
+      }, 
+      
+      "vtex.menu@2.x:submenu#dishwasher" : {
+        "props": {
+            "orientation": "vertical",
+            "placement":"right"
+          },
+          "children": [
+              "menu-item#dw_basket_trays_and_shelves",
+              "menu-item#dw_gaskets_and_seals",
+              "menu-item#dw_hoses_and_pipes",
+              "menu-item#dw_knobs",
+              "menu-item#dw_sensors",
+              "menu-item#all-dishwasher"
+          ]
+      }, 
+
+      "menu-item#dw_basket_trays_and_shelves" : {
+        "props": {
+            "type": "custom",
+            "blockClass": "dropdownRowMenu",
+            "highlight": false,
+            "itemProps": {
+              "type": "internal",
+              "noFollow": false,
+              "tagTitle": "Dishwasher Basket trays and Shelves",
+              "text" : "Dishwasher Basket trays and Shelves",
+              "href" : "/spare-parts/dishwashing/dishwasher/basket-trays-and-shelves"
+            }
+          }
+      },
+
+      "menu-item#dw_gaskets_and_seals": {
+        "props": {
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "noFollow": false,
+            "tagTitle": "Dishwasher Gaskets And Seals",
+            "text" : "Dishwasher Gaskets And Seals",
+            "href" : "/spare-parts/dishwashing/dishwasher/gaskets-and-seals"
+          }
+        }
+      },
+
+      "menu-item#dw_hoses_and_pipes": {
+        "props": {
+          "type": "custom",
+          "blockClass": "dropdownRowMenu",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "noFollow": false,
+            "tagTitle": "Dishwasher Hoses and Pipes",
+            "text" : "Dishwasher Hoses and Pipes",
+            "href" : "/spare-parts/dishwashing/dishwasher/hoses-and-pipes"
+          }
+        }
+      },
+
+      "menu-item#dw_knobs": {
+        "props": {
+          "type": "custom",
+          "blockClass": "dropdownRowMenu",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "noFollow": false,
+            "tagTitle": "Dishwasher Knobs",
+            "text" : "Dishwasher Knobs",
+            "href" : "/spare-parts/dishwashing/dishwasher/knobs"
+          }
+        }
+      },
+
+      "menu-item#dw_sensors": {
+        "props": {
+          "type": "custom",
+          "blockClass": "dropdownRowMenu",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "noFollow": false,
+            "tagTitle": "Dishwasher Sensors",
+            "text" : "Dishwasher Sensors",
+            "href" : "/spare-parts/dishwashing/dishwasher/sensors"
+          }
+        }
+      },
+
+      "menu-item#all-dishwasher": {
+        "props": {
+          "type": "category",
+          "blockClass": "dropdownRowMenu",
+          "categoryId": "17",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "noFollow": false,
+            "tagTitle": "Dishwasher",
+            "text" : "See All Hotpoint Dishwasher Parts",
+            "href" : "/spare-parts/dishwashing/dishwasher"
+          }
+        }
+      }
+}

@@ -1,0 +1,115 @@
+/* MAIN CONTAINER */
+.bf__container {
+  color: white;
+  background-color: #007d69;
+}
+
+.bf__container :global(.vtex-input-prefix__group) {
+  border: none;
+  min-height: 50px;
+  border-radius: 0;
+}
+
+.bf__container :global(.vtex-styleguide-9-x-input) {
+  padding: 1rem 0.8rem;
+  border-radius: 0;
+}
+
+.bf__container :global(.vtex-checkbox__container) {
+  background-color: none;
+}
+/* FORM */
+.form__checkBoxes :global(.vtex-checkbox__inner-container) {
+  border: 1px solid #ffffff;
+  border-radius: 0;
+}
+.form__checkBoxes :global(.vtex-checkbox__label) {
+  color: #ffffff;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+  text-align: justify;
+}
+
+.form__container {
+  margin: 0.5rem 0;
+}
+
+.form__container-input {
+  min-height: 65px;
+}
+.form__container-input :global(.vtex-input__error) {
+  margin-top: 0.1rem !important;
+  font-weight: 600;
+}
+/* SUBMIT BUTTON */
+.form__container-btn {
+  height: 50px;
+  min-width: 182px;
+  justify-content: center;
+}
+.form__container-btn :global(.vtex-button) {
+  background-color: #1e1e1e;
+  border: none !important;
+  border-radius: 0.15rem;
+}
+.form__container-btn :global(.vtex-button):hover {
+  background-color: #1e1e1ece;
+}
+/* PRIVACY SECTION */
+.form__privacy-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+}
+.form__privacy-link:hover {
+  text-decoration: underline;
+}
+/* USER MESSAGES */
+.error__span-message {
+  font-weight: 700;
+}
+.success__span-message {
+  font-weight: 700;
+  color: #1e1e1e;
+}
+/* MEDIA QUERIES */
+@media only screen and (max-width: 900px) {
+  .form__container {
+    padding: 0;
+    margin: 0;
+  }
+  .form__container-row {
+    flex-direction: column;
+  }
+  .form__containerinputs {
+    margin-top: 0;
+    flex-direction: column;
+  }
+
+  .form__container-input {
+    font-size: 0.7rem;
+    margin-bottom: 0.3rem;
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+  .form__container-btn {
+    margin-left: 0 !important;
+  }
+  .form__container-btn :global(.vtex-button) {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .form__containername {
+    font-size: 0.7rem;
+    margin-left: 0.5rem;
+  }
+  .form__containersurname {
+    font-size: 0.7rem;
+    margin-left: 0.5rem;
+  }
+  .form__containeremail {
+    font-size: 0.7rem;
+    margin-left: 0.5rem;
+  }
+}

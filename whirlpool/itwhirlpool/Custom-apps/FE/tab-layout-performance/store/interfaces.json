@@ -1,0 +1,32 @@
+{
+  "tab-layout": {
+    "component": "TabLayout",
+    "composition": "children",
+    "allowed": "*"
+  },
+  "tab-list": {
+    "component": "TabList",
+    "composition": "children",
+    "allowed": ["tab-list.item"]
+  },
+  "tab-list.item": {
+    "component": "TabListItem",
+    "content": {
+      "$ref": "app:itwhirlpool.tab-layout#/definitions/TabListItem"
+    }
+  },
+  "tab-list.item.children": {
+    "component": "TabListItemChildren",
+    "composition": "children"
+  },
+  "tab-content": {
+    "component": "TabContent",
+    "composition": "children",
+    "allowed": "*"
+  },
+  "tab-content.item": {
+    "component": "TabContentItem",
+    "composition": "children",
+    "allowed": "*"
+  }
+}

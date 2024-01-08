@@ -1,0 +1,710 @@
+{
+  "store.custom#faq": {
+    "title": "[PAGE] - FAQ Page",
+    "blocks": [
+      "flex-layout.row#bread-theme-service-locator",
+      //"breadcrumb#faq",
+      // "slider-layout#faqSupportBar",
+      "flex-layout.row#faqTopImage",
+      "flex-layout.row#faqTitle",
+      "flex-layout.row#faqSearch",
+      "domande-frequenti.categoriesMenu#faqMainPage",
+      //"faq",
+      // "domande-frequenti",
+      "domande-frequenti.mostAsked",
+      /* FAQ TITLE AND VIDEO SLIDER */
+      "experimental__visibility-layout#textAndFaqVideoSlider",
+      "manuali-istruzione",
+      "experimental__visibility-layout#supportCardSliderTitle",
+      // "experimental__visibility-layout#supp"
+      "experimental__visibility-layout#faqSupportBoxes"
+      // "slider-layout#faqSupportBoxesCards"
+      //"analytics"
+    ]
+  },
+  "breadcrumb#faq": {
+    "title": "[BREADCRUMB] - [TOP] - Breadcrumb FAQ Page",
+    "props": {
+      "categories": ["/kundencenter/", "/kundencenter/faq/"],
+      "showOnMobile": false
+      /* "blockClass": "breadcrumbFaq" */
+    }
+  },
+  "flex-layout.row#faqTopImage": {
+    "title": "[ROW] - [TOP] - FAQ Top Image Container",
+    "children": ["image#faqTopImage"],
+    "props": {
+      "blockClass": "faqTopImage"
+    }
+  },
+  "image#faqTopImage": {
+    "title": "[IMAGE] - [TOP] - FAQ Image under Support Bar",
+    "props": {
+      "src": "https://assets.wpsandwatch.com/storage/images/_aliases/BK_compressed/6/2/5/3/13063526-1-ger-DE/HP-Module-Hero-Image.jpg",
+      "alt": "Image under Support Bar",
+      "blockClass": "faqTopImage"
+    }
+  },
+  "flex-layout.row#faqTitle": {
+    "title": "[ROW] - [MID] - FAQ Title Container",
+    "props": {
+      "blockClass": "faqTitle"
+    },
+    "children": ["flex-layout.col#faqTitle"]
+  },
+  "flex-layout.col#faqTitle": {
+    "title": "[COL] - [MID] - FAQ Title Container",
+    "children": ["rich-text#faqTitle"]
+  },
+  "rich-text#faqTitle": {
+    "title": "[TEXT] - [MID] - FAQ Title Text",
+    "props": {
+      "text": "# HÄUFIGE FRAGEN",
+      "textAlignment": "left",
+      "textPosition": "left",
+      "blockClass": ["faqTitle", "titleSearchPage"]
+    }
+  },
+  "flex-layout.row#faqSearch": {
+    "title": "[ROW] - [MID] - FAQ Search Section Container",
+    "children": ["flex-layout.col#faqSearch"],
+    "props": {
+      "blockClass": "faqSearch"
+    }
+  },
+  "flex-layout.col#faqSearch": {
+    "title": "[COL] - [MID] - FAQ Search Section Container",
+    "children": [
+      "domande-frequenti.searchFAQ",
+      //"search-bar#faq",
+      "rich-text#faqPageDescription",
+      "rich-text#textOverCategoriesMenu"
+    ],
+    "props": {
+      "blockClass": "faqSearch"
+    }
+  },
+  "rich-text#faqPageDescription": {
+    "title": "[TEXT] - [MID] - FAQ Search Page Description Text",
+    "props": {
+      "text": "Hier finden Sie Lösungen, um Fragestellungen beim Betrieb und der Wartung Ihres Bauknecht Geräts zu beantworten.\nWählen Sie die passende Produktkategorie aus, um Hinweise zur Wartung und Reparatur für Ihr Bauknecht Hausgerät zu erhalten.\nFür einige besondere Fragestellungen finden Sie zusätzlich untenstehend Videos.",
+      "blockClass": "faqSearchPageDescription"
+    }
+  },
+  "domande-frequenti.categoriesMenu#faqMainPage": {
+    "title": "[MENU] - [MID] - FAQ Categories Menu",
+    "props": {}
+  },
+  "rich-text#textOverCategoriesMenu": {
+    "title": "[TEXT] - [MID] - Text Over Categories Menu",
+    "props": {
+      "text": "# HABEN SIE FRAGEN ZU EINER BESTIMMTEN KATEGORIE?",
+      //"textAlignment": "left",
+      "textPosition": "center",
+      "blockClass": ["faqTitle", "titleSearchPage", "textOverCategoriesMenu"]
+    }
+  },
+  "domande-frequenti.mostAsked": {
+    "children": ["analytics-wrapper#faqReadMoreBtn"]
+  },
+  "analytics-wrapper#faqReadMoreBtn": {
+    "props": {
+      "propsAnalytics": {
+        "id": "",
+        "name": "",
+        "position": "",
+        "creative": ""
+      }
+    },
+    "children": ["rich-text-custom#faqReadMoreBtn"] // Contenuto wrapper
+  },
+  "rich-text-custom#faqReadMoreBtn": {
+    "props": {
+      "text": "Mehr erfahren",
+      "blockClass": "faqReadMoreBtn"
+    }
+  },
+  "experimental__visibility-layout#textAndFaqVideoSlider": {
+    "title": "[TOGGLE] - [MID] - Toggle Text And FAQ Video Slider",
+    "props": {
+      "visible": false
+    },
+    "children": [
+      "experimental__visibility-layout#textOverFaqVideoSlider",
+      "experimental__visibility-layout#faqVideoSlider"
+    ]
+  },
+
+  /* -----------------FAQ VIDEO SLIDER TITLE--------------- */
+  "experimental__visibility-layout#textOverFaqVideoSlider": {
+    "title": "[TOGGLE] - [MID] - Toggle Text Over FAQ Video Slider",
+    "props": {
+      "visible": true
+    },
+    "children": ["rich-text#textOverFaqVideoSlider"]
+  },
+  "rich-text#textOverFaqVideoSlider": {
+    "title": "[TEXT] - [MID] - Text Over Faq Video Slider ",
+    "props": {
+      "text": "## SERVICE TUTORIAL VIDEOS",
+      "blockClass": "faqVideoTitle"
+    }
+  },
+  /* -----------------FAQ VIDEO SLIDER--------------- */
+  "experimental__visibility-layout#faqVideoSlider": {
+    "title": "[TOGGLE] - [MID] - Toggle FAQ Video Slider",
+    "props": {
+      "visible": true
+    },
+    "children": ["flex-layout.row#faqVideoSliderRow"]
+  },
+  "flex-layout.row#faqVideoSliderRow": {
+    "title": "[ROW] - [MID] - ROW FAQ Video Slider",
+    "children": ["slider-layout#faqVideoSlider"],
+    "props": { "blockClass": "faqVideoSliderMainContainer" }
+  },
+  "slider-layout#faqVideoSlider": {
+    "title": "[LIDER] - [MID] - Slider container",
+    "props": {
+      "itemsPerPage": {
+        "desktop": 4,
+        "tablet": 2,
+        "phone": 1
+      },
+      "infinite": true,
+      "showNavigationArrows": "always",
+      "blockClass": "faqSliderVideo"
+    },
+    "children": [
+      "flex-layout.row#rowVideoContainer1",
+      "flex-layout.row#rowVideoContainer2",
+      "flex-layout.row#rowVideoContainer3",
+      "flex-layout.row#rowVideoContainer4",
+      "flex-layout.row#rowVideoContainer5",
+      "flex-layout.row#rowVideoContainer6",
+      "flex-layout.row#rowVideoContainer7",
+      "flex-layout.row#rowVideoContainer8",
+      "flex-layout.row#rowVideoContainer9",
+      "flex-layout.row#rowVideoContainer10",
+      "flex-layout.row#rowVideoContainer11",
+      "flex-layout.row#rowVideoContainer12",
+      "flex-layout.row#rowVideoContainer13",
+      "flex-layout.row#rowVideoContainer14"
+    ]
+  },
+
+  /* ----------------VIDEO 1------------ */
+
+  "flex-layout.row#rowVideoContainer1": {
+    "title": "[ROW] - [MID] - ROW FAQ Video Slider 1",
+    "children": ["flex-layout.col#colVideoContainer1"]
+  },
+  "flex-layout.col#colVideoContainer1": {
+    "title": "[COL] - [MID] - COL FAQ Video Slider",
+    "children": [
+      "iframe#faqVideo1",
+      "rich-text#titleFaqVideo1",
+      "link#faqVideoLink1"
+    ],
+    "props": { "blockClass": ["colVideoContainer"] }
+  },
+  "iframe#faqVideo1": {
+    "title": "[IFRAME] - [MID] - VIDEO",
+    "props": {
+      "src": "https://whirlpool-cdn.thron.com/shared/plugins/embed/current/whirlpool/vi-db2255a8-72b2-4960-a527-cf9927eb8679/sckne7?filename=Bauknecht%20Backofen%20Scheibe%20reinigen.mp4?autohide=1&rel=0&showinfo=0"
+    }
+  },
+  "rich-text#titleFaqVideo1": {
+    "title": "[TEXT] - [MID] - Description",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Reinigung der Scheibe im Backofen",
+      "blockClass": "faqVideoText"
+    }
+  },
+  "link#faqVideoLink1": {
+    "title": "[LINK] - [MID] - LINK",
+    "props": {
+      "blockClass": ["faqVideoLink"],
+      "target": "_blank",
+      "href": "/video/reinigung-der-scheibe-im-backofen"
+    }
+  },
+  /* ----------------VIDEO 2------------ */
+  "flex-layout.row#rowVideoContainer2": {
+    "title": "[ROW] - [MID] - ROW FAQ Video Slider 2",
+    "children": ["flex-layout.col#colVideoContainer2"]
+  },
+  "flex-layout.col#colVideoContainer2": {
+    "title": "[COL] - [MID] - COL FAQ Video Slider",
+    "children": [
+      "iframe#faqVideo2",
+      "rich-text#titleFaqVideo2",
+      "link#faqVideoLink2"
+    ],
+    "props": { "blockClass": ["colVideoContainer"] }
+  },
+  "iframe#faqVideo2": {
+    "title": "[IFRAME] - [MID] - VIDEO",
+    "props": {
+      "src": "https://whirlpool-cdn.thron.com/shared/plugins/embed/current/whirlpool/vi-cea421c1-6c1b-4483-af8a-aff469bc539c/sckne7?filename=Bauknecht%20Waschmaschine%20Transportsicherung.mp4?autohide=1&rel=0&showinfo=0"
+    }
+  },
+  "rich-text#titleFaqVideo2": {
+    "title": "[TEXT] - [MID] - Description",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Transportsicherung der Waschmaschine entfernen",
+      "blockClass": "faqVideoText"
+    }
+  },
+  "link#faqVideoLink2": {
+    "title": "[LINK] - [MID] - LINK",
+    "props": {
+      "blockClass": ["faqVideoLink"],
+      "target": "_blank",
+      "href": "/video/transportsicherung-der-waschmaschine-entfernen"
+    }
+  },
+  /* ----------------VIDEO 3------------ */
+  "flex-layout.row#rowVideoContainer3": {
+    "title": "[ROW] - [MID] - ROW FAQ Video Slider 3",
+    "children": ["flex-layout.col#colVideoContainer3"]
+  },
+  "flex-layout.col#colVideoContainer3": {
+    "title": "[COL] - [MID] - COL FAQ Video Slider",
+    "children": [
+      "iframe#faqVideo3",
+      "rich-text#titleFaqVideo3",
+      "link#faqVideoLink3"
+    ],
+    "props": { "blockClass": ["colVideoContainer"] }
+  },
+  "iframe#faqVideo3": {
+    "title": "[VIDEO] - [MID] - VIDEO",
+    "props": {
+      "src": "https://whirlpool-cdn.thron.com/shared/plugins/embed/current/whirlpool/vi-5b3d6d04-97f0-47b6-87a8-498f7f76f389/sckne7?filename=Bauknecht%20Waschmaschine%20Wasseraustritt.mp4?autohide=1&rel=0&showinfo=0"
+    }
+  },
+  "rich-text#titleFaqVideo3": {
+    "title": "[TEXT] - [MID] - Description",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Wasseraustritt bei der Waschmaschine -was tun?",
+      "blockClass": "faqVideoText"
+    }
+  },
+  "link#faqVideoLink3": {
+    "title": "[LINK] - [MID] - LINK",
+    "props": {
+      "blockClass": ["faqVideoLink"],
+      "target": "_blank",
+      "href": "/video/wasseraustritt-bei-der-waschmaschine-was-tun"
+    }
+  },
+  /* ----------------VIDEO 4------------ */
+  "flex-layout.row#rowVideoContainer4": {
+    "title": "[ROW] - [MID] - ROW FAQ Video Slider 4",
+    "children": ["flex-layout.col#colVideoContainer4"]
+  },
+  "flex-layout.col#colVideoContainer4": {
+    "title": "[COL] - [MID] - COL FAQ Video Slider",
+    "children": [
+      "iframe#faqVideo4",
+      "rich-text#titleFaqVideo4",
+      "link#faqVideoLink4"
+    ],
+    "props": { "blockClass": ["colVideoContainer"] }
+  },
+  "iframe#faqVideo4": {
+    "title": "[VIDEO] - [MID] - VIDEO",
+    "props": {
+      "src": "https://whirlpool-cdn.thron.com/shared/plugins/embed/current/whirlpool/vi-09497d34-2481-43a5-a670-7a0003de7465/sckne7?filename=Bauknecht%20Trockner%20Filterreinigung.mp4?autohide=1&rel=0&showinfo=0"
+    }
+  },
+  "rich-text#titleFaqVideo4": {
+    "title": "[TEXT] - [MID] - Description",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Filterreinigung beim Trockner",
+      "blockClass": "faqVideoText"
+    }
+  },
+  "link#faqVideoLink4": {
+    "title": "[LINK] - [MID] - LINK",
+    "props": {
+      "blockClass": ["faqVideoLink"],
+      "target": "_blank",
+      "href": "/video/filterreinigung-beim-trockner"
+    }
+  },
+  /* ----------------VIDEO 5------------ */
+  "flex-layout.row#rowVideoContainer5": {
+    "title": "[ROW] - [MID] - ROW FAQ Video Slider 5",
+    "children": ["flex-layout.col#colVideoContainer5"]
+  },
+  "flex-layout.col#colVideoContainer5": {
+    "title": "[COL] - [MID] - COL FAQ Video Slider",
+    "children": [
+      "iframe#faqVideo5",
+      "rich-text#titleFaqVideo5",
+      "link#faqVideoLink5"
+    ],
+    "props": { "blockClass": ["colVideoContainer"] }
+  },
+  "iframe#faqVideo5": {
+    "title": "[VIDEO] - [MID] - VIDEO",
+    "props": {
+      "src": "https://whirlpool-cdn.thron.com/shared/plugins/embed/current/whirlpool/vi-019f2454-2473-4d1b-9592-c41d7bfd4a1d/sckne7?filename=Bauknecht%20Waschmaschine%20Fremdk?rperfalle.mp4?autohide=1&rel=0&showinfo=0"
+    }
+  },
+  "rich-text#titleFaqVideo5": {
+    "title": "[TEXT] - [MID] - Description",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Fremdkörperfalle der Waschmaschine reinigen",
+      "blockClass": "faqVideoText"
+    }
+  },
+  "link#faqVideoLink5": {
+    "title": "[LINK] - [MID] - LINK",
+    "props": {
+      "blockClass": ["faqVideoLink"],
+      "target": "_blank",
+      "href": "/video/fremdkoerperfalle-der-waschmaschine-reinigen"
+    }
+  } /* ----------------VIDEO 6------------ */,
+  "flex-layout.row#rowVideoContainer6": {
+    "title": "[ROW] - [MID] - ROW FAQ Video Slider 6",
+    "children": ["flex-layout.col#colVideoContainer6"]
+  },
+  "flex-layout.col#colVideoContainer6": {
+    "title": "[COL] - [MID] - COL FAQ Video Slider",
+    "children": [
+      "iframe#faqVideo6",
+      "rich-text#titleFaqVideo6",
+      "link#faqVideoLink6"
+    ],
+    "props": { "blockClass": ["colVideoContainer"] }
+  },
+  "iframe#faqVideo6": {
+    "title": "[VIDEO] - [MID] - VIDEO",
+    "props": {
+      "src": "https://whirlpool-cdn.thron.com/shared/plugins/embed/current/whirlpool/vi-cb48c067-0b17-4baf-b0db-ce62fbd9383a/sckne7?filename=Bauknecht%20Waschmaschine%20Toplader%20Deckel%20wechseln.mp4?autohide=1&rel=0&showinfo=0"
+    }
+  },
+  "rich-text#titleFaqVideo6": {
+    "title": "[TEXT] - [MID] - Description",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Deckel einer Toplader Waschmaschine wechseln",
+      "blockClass": "faqVideoText"
+    }
+  },
+  "link#faqVideoLink6": {
+    "title": "[LINK] - [MID] - LINK",
+    "props": {
+      "blockClass": ["faqVideoLink"],
+      "target": "_blank",
+      "href": "/video/deckel-einer-toplader-waschmaschine-wechseln"
+    }
+  } /* ----------------VIDEO 7------------ */,
+  "flex-layout.row#rowVideoContainer7": {
+    "title": "[ROW] - [MID] - ROW FAQ Video Slider 7",
+    "children": ["flex-layout.col#colVideoContainer7"]
+  },
+  "flex-layout.col#colVideoContainer7": {
+    "title": "[COL] - [MID] - COL FAQ Video Slider",
+    "children": [
+      "iframe#faqVideo7",
+      "rich-text#titleFaqVideo7",
+      "link#faqVideoLink7"
+    ],
+    "props": { "blockClass": ["colVideoContainer"] }
+  },
+  "iframe#faqVideo7": {
+    "title": "[VIDEO] - [MID] - VIDEO",
+    "props": {
+      "src": "https://whirlpool-cdn.thron.com/shared/plugins/embed/current/whirlpool/vi-2105ae99-f3f4-4995-ad40-de264cb93307/sckne7?filename=Bauknecht%20Dunstabzugshauben%20Kohlefilter%20wechseln.mp4?autohide=1&rel=0&showinfo=0"
+    }
+  },
+  "rich-text#titleFaqVideo7": {
+    "title": "[TEXT] - [MID] - Description",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Kohlefilter bei der Dunstabzugshaube wechseln",
+      "blockClass": "faqVideoText"
+    }
+  },
+  "link#faqVideoLink7": {
+    "title": "[LINK] - [MID] - LINK",
+    "props": {
+      "blockClass": ["faqVideoLink"],
+      "target": "_blank",
+      "href": "/video/kohlefilter-bei-der-dunstabzugshaube-wechseln"
+    }
+  } /* ----------------VIDEO 8------------ */,
+  "flex-layout.row#rowVideoContainer8": {
+    "title": "[ROW] - [MID] - ROW FAQ Video Slider 8",
+    "children": ["flex-layout.col#colVideoContainer8"]
+  },
+  "flex-layout.col#colVideoContainer8": {
+    "title": "[COL] - [MID] - COL FAQ Video Slider",
+    "children": [
+      "iframe#faqVideo8",
+      "rich-text#titleFaqVideo8",
+      "link#faqVideoLink8"
+    ],
+    "props": { "blockClass": ["colVideoContainer"] }
+  },
+  "iframe#faqVideo8": {
+    "title": "[VIDEO] - [MID] - VIDEO",
+    "props": {
+      "src": "https://whirlpool-cdn.thron.com/shared/plugins/embed/current/whirlpool/vi-6e798079-18d2-4b2a-8229-01ddab2b2498/sckne7?filename=Bauknecht%20Trockner%20Fuktionen.mp4?autohide=1&rel=0&showinfo=0"
+    }
+  },
+  "rich-text#titleFaqVideo8": {
+    "title": "[TEXT] - [MID] - Description",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Funktionen eines Wärmepumpentrockners",
+      "blockClass": "faqVideoText"
+    }
+  },
+  "link#faqVideoLink8": {
+    "title": "[LINK] - [MID] - LINK",
+    "props": {
+      "blockClass": ["faqVideoLink"],
+      "target": "_blank",
+      "href": "/video/funktionen-eines-waermepumpentrockners"
+    }
+  },
+  /* ----------------VIDEO 9------------ */
+  "flex-layout.row#rowVideoContainer9": {
+    "title": "[ROW] - [MID] - ROW FAQ Video Slider 9",
+    "children": ["flex-layout.col#colVideoContainer9"]
+  },
+  "flex-layout.col#colVideoContainer9": {
+    "title": "[COL] - [MID] - COL FAQ Video Slider",
+    "children": [
+      "iframe#faqVideo9",
+      "rich-text#titleFaqVideo9",
+      "link#faqVideoLink9"
+    ],
+    "props": { "blockClass": ["colVideoContainer"] }
+  },
+  "iframe#faqVideo9": {
+    "title": "[VIDEO] - [MID] - VIDEO",
+    "props": {
+      "src": "https://whirlpool-cdn.thron.com/shared/plugins/embed/current/whirlpool/vi-6618771b-cfaf-45ba-906f-6a1bc476e353/sckne7?filename=Bauknecht%20Geschirrsp?ler%20Filter%20reinigen.mp4?autohide=1&rel=0&showinfo=0"
+    }
+  },
+  "rich-text#titleFaqVideo9": {
+    "title": "[TEXT] - [MID] - Description",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Filterwechsel beim Geschirrspüler",
+      "blockClass": "faqVideoText"
+    }
+  },
+  "link#faqVideoLink9": {
+    "title": "[LINK] - [MID] - LINK",
+    "props": {
+      "blockClass": ["faqVideoLink"],
+      "target": "_blank",
+      "href": "/video/filterwechsel-beim-geschirrspueler"
+    }
+  } /* ----------------VIDEO 10------------ */,
+  "flex-layout.row#rowVideoContainer10": {
+    "title": "[ROW] - [MID] - ROW FAQ Video Slider 10",
+    "children": ["flex-layout.col#colVideoContainer10"]
+  },
+  "flex-layout.col#colVideoContainer10": {
+    "title": "[COL] - [MID] - COL FAQ Video Slider",
+    "children": [
+      "iframe#faqVideo10",
+      "rich-text#titleFaqVideo10",
+      "link#faqVideoLink10"
+    ],
+    "props": { "blockClass": ["colVideoContainer"] }
+  },
+  "iframe#faqVideo10": {
+    "title": "[VIDEO] - [MID] - VIDEO",
+    "props": {
+      "src": "https://whirlpool-cdn.thron.com/shared/plugins/embed/current/whirlpool/vi-39b278f1-b7c3-4a8e-b912-cdb9e035616c/sckne7?filename=Bauknecht%20Backofen%20Dichtung%20auswechseln.mp4?autohide=1&rel=0&showinfo=0"
+    }
+  },
+  "rich-text#titleFaqVideo10": {
+    "title": "[TEXT] - [MID] - Description",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Backofen-Dichtung austauschen",
+      "blockClass": "faqVideoText"
+    }
+  },
+  "link#faqVideoLink10": {
+    "title": "[LINK] - [MID] - LINK",
+    "props": {
+      "blockClass": ["faqVideoLink"],
+      "target": "_blank",
+      "href": "/video/backofen-dichtung-austauschen"
+    }
+  } /* ----------------VIDEO 11------------ */,
+  "flex-layout.row#rowVideoContainer11": {
+    "title": "[ROW] - [MID] - ROW FAQ Video Slider 11",
+    "children": ["flex-layout.col#colVideoContainer11"]
+  },
+  "flex-layout.col#colVideoContainer11": {
+    "title": "[COL] - [MID] - COL FAQ Video Slider",
+    "children": [
+      "iframe#faqVideo11",
+      "rich-text#titleFaqVideo11",
+      "link#faqVideoLink11"
+    ],
+    "props": { "blockClass": ["colVideoContainer"] }
+  },
+  "iframe#faqVideo11": {
+    "title": "[VIDEO] - [MID] - VIDEO",
+    "props": {
+      "src": "https://whirlpool-cdn.thron.com/shared/plugins/embed/current/whirlpool/vi-267c01ed-20ab-4c8b-ad5d-fa71834c906d/sckne7?filename=Bauknecht%20Geschirrsp?ler%20Salz%20und%20Klarsp?ler.mp4?autohide=1&rel=0&showinfo=0"
+    }
+  },
+  "rich-text#titleFaqVideo11": {
+    "title": "[TEXT] - [MID] - Description",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Salz und Klarspüler im Geschirrspüler nachfüllen",
+      "blockClass": "faqVideoText"
+    }
+  },
+  "link#faqVideoLink11": {
+    "title": "[LINK] - [MID] - LINK",
+    "props": {
+      "blockClass": ["faqVideoLink"],
+      "target": "_blank",
+      "href": "/video/salz-und-klarspueler-im-geschirrspueler-nachfuellen"
+    }
+  },
+  /* ----------------VIDEO 12------------ */
+  "flex-layout.row#rowVideoContainer12": {
+    "title": "[ROW] - [MID] - ROW FAQ Video Slider 12",
+    "children": ["flex-layout.col#colVideoContainer12"]
+  },
+  "flex-layout.col#colVideoContainer12": {
+    "title": "[COL] - [MID] - COL FAQ Video Slider",
+    "children": [
+      "iframe#faqVideo12",
+      "rich-text#titleFaqVideo12",
+      "link#faqVideoLink12"
+    ],
+    "props": { "blockClass": ["colVideoContainer"] }
+  },
+  "iframe#faqVideo12": {
+    "title": "[VIDEO] - [MID] - VIDEO",
+    "props": {
+      "src": "https://whirlpool-cdn.thron.com/shared/plugins/embed/current/whirlpool/vi-3b813d4f-1c8d-4c22-ac20-f19915e23404/sckne7?filename=Bauknecht%20K?hlschrank%20Kondenswasser%202.mp4?autohide=1&rel=0&showinfo=0"
+    }
+  },
+  "rich-text#titleFaqVideo12": {
+    "title": "[TEXT] - [MID] - Description",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Kondenswasser im Kühlschrank",
+      "blockClass": "faqVideoText"
+    }
+  },
+  "link#faqVideoLink12": {
+    "title": "[LINK] - [MID] - LINK",
+    "props": {
+      "blockClass": ["faqVideoLink"],
+      "target": "_blank",
+      "href": "/video/kondenswasser-im-kuehlschrank"
+    }
+  },
+  /* ----------------VIDEO 13------------ */
+  "flex-layout.row#rowVideoContainer13": {
+    "title": "[ROW] - [MID] - ROW FAQ Video Slider 13",
+    "children": ["flex-layout.col#colVideoContainer13"]
+  },
+  "flex-layout.col#colVideoContainer13": {
+    "title": "[COL] - [MID] - COL FAQ Video Slider",
+    "children": [
+      "iframe#faqVideo13",
+      "rich-text#titleFaqVideo13",
+      "link#faqVideoLink13"
+    ],
+    "props": { "blockClass": ["colVideoContainer"] }
+  },
+  "iframe#faqVideo13": {
+    "title": "[VIDEO] - [MID] - VIDEO",
+    "props": {
+      "src": "https://whirlpool-cdn.thron.com/shared/plugins/embed/current/whirlpool/vi-671bccd7-3f57-4acd-a4a1-c505c696275a/sckne7?filename=Bauknecht%20Geschirrsp?ler%20Salz.mp4?autohide=1&rel=0&showinfo=0"
+    }
+  },
+  "rich-text#titleFaqVideo13": {
+    "title": "[TEXT] - [MID] - Description",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Geschirrspüler Salz nachfüllen",
+      "blockClass": "faqVideoText"
+    }
+  },
+  "link#faqVideoLink13": {
+    "title": "[LINK] - [MID] - LINK",
+    "props": {
+      "blockClass": ["faqVideoLink"],
+      "target": "_blank",
+      "href": "/video/geschirrspueler-salz-nachfuellen"
+    }
+  },
+  /* ----------------VIDEO 14------------ */
+  "flex-layout.row#rowVideoContainer14": {
+    "title": "[ROW] - [MID] - ROW FAQ Video Slider 14",
+    "children": ["flex-layout.col#colVideoContainer14"]
+  },
+  "flex-layout.col#colVideoContainer14": {
+    "title": "[COL] - [MID] - COL FAQ Video Slider",
+    "children": [
+      "iframe#faqVideo14",
+      "rich-text#titleFaqVideo14",
+      "link#faqVideoLink14"
+    ],
+    "props": { "blockClass": ["colVideoContainer"] }
+  },
+  "iframe#faqVideo14": {
+    "title": "[VIDEO] - [MID] - VIDEO",
+    "props": {
+      "src": "https://whirlpool-cdn.thron.com/shared/plugins/embed/current/whirlpool/vi-c6247916-b177-4630-95ac-78592833a883/sckne7?filename=Bauknecht%20K?hlschrank%20Kondenswasser.mp4?autohide=1&rel=0&showinfo=0"
+    }
+  },
+  "rich-text#titleFaqVideo14": {
+    "title": "[TEXT] - [MID] - Description",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Kondenswasser im Kühlschrank vermeiden",
+      "blockClass": "faqVideoText"
+    }
+  },
+  "link#faqVideoLink14": {
+    "title": "[LINK] - [MID] - LINK",
+    "props": {
+      "blockClass": ["faqVideoLink"],
+      "target": "_blank",
+      "href": "/video/kondenswasser-im-kuehlschrank-vermeiden"
+    }
+  }
+}

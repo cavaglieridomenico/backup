@@ -1,0 +1,395 @@
+/* ---------------------- MOBILE ---------------------------- */
+{
+  "flex-layout.row#product-main-mobile": {
+    "children": ["flex-layout.col#product-main"]
+  },
+  "flex-layout.col#product-main": {
+    "props": {
+      "blockClass": [],
+      "preserveLayoutOnMobile": true
+    },
+    "children": ["flex-layout.col#single-col"]
+  },
+  "flex-layout.row#breadcrumbPdp": {
+    "props": {
+      "blockClass": "breadcrumb-pdp-mobile"
+    },
+    "children": ["breadcrumb#bd-mobilepdp"]
+  },
+  "breadcrumb#bd-mobilepdp": {
+    "props": {
+      "showOnMobile": true,
+      "blockClass": "breadcrumb-pdp-mobile"
+    }
+  },
+  "flex-layout.row#button3dRow": {
+    "props": {
+      "width": "50%",
+      "blockClass": "button3dPdpMobileBack"
+    },
+    "children": [
+      //"button3DAndAr#pdpMobile"
+    ]
+  },
+  "button3DAndAr#pdpMobile": {},
+  "flex-layout.col#single-col": {
+    "props": {
+      "blockClass": "product-desc-info",
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "flex-layout.row#breadcrumbPdp",
+      "flex-layout.row#product-image-mobile",
+      "flex-layout.row#button3dRow",
+      "flex-layout.row#info-mobile",
+      "flex-layout.row#button-layer-3-mobile",
+      "flex-layout.row#button-layer-4-mobile",
+      "flex-layout.row#measures-mobile",
+      "flex-layout.row#accordion-specification",
+      "rich-text#costumer-reviews-mobile",
+      "flex-layout.row#product-review-container-mobile",
+      "flex-layout.row#modal-review-mobile",
+      "flex-layout.row#store-locator-after-revoo-mobile-container",
+      "condition-layout.product#pdp-seo-text-ovens",
+      "condition-layout.product#pdp-seo-text-cookers",
+      "condition-layout.product#pdp-seo-text-hobs",
+      "condition-layout.product#pdp-seo-text-hoods",
+      "condition-layout.product#pdp-seo-text-microwaves",
+      "condition-layout.product#pdp-seo-text-freezers",
+      "condition-layout.product#pdp-seo-text-fridges",
+      "condition-layout.product#pdp-seo-text-dishwashing",
+      "condition-layout.product#pdp-seo-text-dryers",
+      "condition-layout.product#pdp-seo-text-washer-dryers",
+      "condition-layout.product#pdp-seo-text-washing-machines",
+      "flex-layout.row#product-reccomandation-carousel-mobile-new",
+      /* "product-reccomandation-carousel-new#pdp-mobile", */
+      "banner-product-buy-online",
+      "product-comparison-drawer"
+    ]
+  },
+  "product-reccomandation-carousel-new#pdp-mobile": {},
+  "flex-layout.row#product-reccomandation-carousel-mobile-new": {
+    "props": {
+      "blockClass": "product-reccomandation-carousel-mobile-new-style"
+    },
+    "children": ["product-reccomandation-carousel-new#pdp-mobile"]
+  },
+  /* ---------------------- PRODUCT IMAGE MOBILE ----------------------------  */
+  "flex-layout.row#product-image-mobile": {
+    "props": {
+      "blockClass": "image-row-mobile"
+    },
+    "children": [
+      "flex-layout.col#energy-class-icon-pdp-mobile",
+      "flex-layout.col#product-image-mobile",
+      "flex-layout.col#share-button-mobile-pdp"
+    ]
+  },
+  "flex-layout.col#product-image-mobile": {
+    "children": ["stack-layout#imagesPDP-mobile"]
+  },
+  "stack-layout#imagesPDP-mobile": {
+    "children": ["video-player-thron-pdp#mobile"]
+  },
+  "video-player-thron-pdp#mobile": {
+    "props": {
+      "aspectRatio": {
+        "desktop": "auto",
+        "phone": "1:1"
+      },
+      "showNavigationArrows": false,
+      "showPaginationDots": true,
+      /* "zoomMode": "disabled", */ // DA FIXARE
+      "contentType": "all",
+      "blockClass": "productPage-mobile"
+    }
+  },
+  "flex-layout.col#energy-class-icon-pdp-mobile": {
+    "props": {
+      "blockClass": "energy-class-icon-pdp-mobile"
+    },
+    "children": [
+      "image-from-specification#EnergyClassPdpMobile",
+      "reevoo-badge#pdp"
+    ]
+  },
+  "image-from-specification#EnergyClassPdpMobile": {
+    "props": {
+      /*  "blockClass": "energyClassBtnPlpMobile", */
+      "specificationName": "EnergyLogo_image",
+      "imageLink": "Specification.energy-label",
+      "labelWithHref": true,
+      "target": "_blank"
+    }
+  },
+  "reevoo-badge#pdp": {},
+  "flex-layout.col#share-button-mobile-pdp": {
+    "props": {
+      "blockClass": "share-btn-mobile-style"
+    },
+    "children": ["share-button#mobile-pdp"]
+  },
+  "share-button#mobile-pdp": {},
+  /* ---------------------- PRODUCT INFO MOBILE ----------------------------  */
+  "flex-layout.row#info-mobile": {
+    "props": {
+      "blockClass": "info-mobile"
+    },
+    "children": ["flex-layout.col#single-col-background"]
+  },
+  "flex-layout.col#single-col-background": {
+    "children": [
+      "flex-layout.row#descriptionCode",
+      "flex-layout.row#product-name",
+      "flex-layout.row#description",
+      "flex-layout.row#button-layer-1-mobile",
+      "flex-layout.row#bottomRow-mobile-energy-saving-pdp",
+      "flex-layout.row#button-layer-2-mobile"
+    ]
+  },
+  /* ---------------------- PRODUCT ENERGY CLASS & STORE LOCATOR MOBILE ----------------------------  */
+  "flex-layout.row#button-layer-1-mobile": {
+    "props": {
+      "blockClass": "button-layer-1-mobile"
+    },
+    "children": [
+      "condition-layout.product#etichetta-image-pre-new-mobile",
+      "flex-layout.col#store-locator-button#store-col-mobile"
+    ]
+  },
+  "condition-layout.product#etichetta-image-pre-new-mobile": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "new-energy-label"
+          }
+        }
+      ],
+      "Then": "flex-layout.col#energy-class-new-pdp-mobile",
+      "Else": "condition-layout.product#etichetta-image-pre-old-mobile"
+    }
+  },
+  "condition-layout.product#etichetta-image-pre-old-mobile": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "energy-label"
+          }
+        }
+      ],
+      "Then": "flex-layout.col#energy-class-old-pdp-mobile"
+    }
+  },
+  "flex-layout.col#energy-class-old-pdp-mobile": {
+    "children": ["link.product#energyClassNewLinkTab-old-mobile"]
+  },
+  "flex-layout.col#energy-class-new-pdp-mobile": {
+    "children": ["link.product#energyClassNewLinkTab-new-mobile"]
+  },
+  "link.product#energyClassNewLinkTab-old-mobile": {
+    "props": {
+      "href": "{specificationGroups.Document.specifications.energy-label}",
+      "blockClass": "tabPDP",
+      "target": "_blank",
+      "escapeLinkRegex": "[%+]"
+    },
+    "children": [
+      "image-from-specification#EtichettaEnergetica-mobile",
+      "rich-text#energy-class-btn-mobile"
+    ]
+  },
+  "link.product#energyClassNewLinkTab-new-mobile": {
+    "props": {
+      "href": "{specificationGroups.Document.specifications.new-energy-label}",
+      "blockClass": "tabPDP",
+      "target": "_blank",
+      "escapeLinkRegex": "[%+]"
+    },
+    "children": [
+      "image-from-specification#EtichettaEnergetica-mobile",
+      "rich-text#energy-class-btn-mobile"
+    ]
+  },
+  "image-from-specification#EtichettaEnergetica-mobile": {
+    "props": {
+      "blockClass": "energy-class-icon-style",
+      "specificationName": "EnergyLogo_image",
+      "imageLink": "Specification.energy-label",
+      "labelWithHref": true,
+      "target": "_blank"
+    }
+  },
+  "rich-text#energy-class-btn-mobile": {
+    "props": {
+      "blockClass": "energy-class-btn",
+      "text": "Energy class"
+    }
+  },
+  "flex-layout.col#store-locator-button#store-col-mobile": {
+    "props": {
+      "blockClass": "store-locator-button-style"
+    },
+    "children": ["button-store-locator#button-mobile"]
+  },
+  "flex-layout.row#store-locator-after-revoo-mobile-container": {
+    "props": {
+      "blockClass": "store-locator-button-style-container-after-revoo"
+    },
+    "children": ["button-store-locator#button-mobile-after-revoo"]
+  },
+  "button-store-locator#button-mobile": {
+    "props": {
+      "href": "/store-locator",
+      "hasTargetBlank": false
+    }
+  },
+  "button-store-locator#button-mobile-after-revoo": {
+    "props": {
+      "href": "/store-locator",
+      "hasTargetBlank": false
+    }
+  },
+  "flex-layout.row#bottomRow-mobile-energy-saving-pdp": {
+    "props": {
+      "blockClass": "energy-saving-pdp-mobile"
+    },
+    "children": ["button-youreko"]
+  },
+  /* ---------------------- BUTTON LAYER 2 ---------------------------- */
+  "flex-layout.row#button-layer-2-mobile": {
+    "props": {
+      "blockClass": "button-layer-2-style"
+    },
+    "children": ["flex-layout.col#buy-online-btn-mobile"]
+  },
+  "flex-layout.col#buy-online-btn-mobile": {
+    "props": {
+      "blockClass": "buy-online-btn-style"
+    },
+    "children": ["button-special-generic#buy-online-mobile"]
+  },
+  "button-special-generic#buy-online-mobile": {
+    "props": {
+      "width": "100%",
+      "isButton": true
+    }
+  },
+  /* ---------------------- BUTTON LAYER 3 ---------------------------- */
+  "flex-layout.row#button-layer-3-mobile": {
+    "props": {
+      "blockClass": "compare-button-style"
+    },
+    "children": [
+      "flex-layout.col#customized-mobile-pdp",
+      "flex-layout.col#compare-button"
+    ]
+  },
+  "flex-layout.col#customized-mobile-pdp": {
+    "props": {
+      "blockClass": "customized-mobile-pdp",
+      "width": "100%"
+    },
+    "children": ["condition-layout.product#customizedMT-mobile"]
+  },
+  /* ---------------------- COMPARE COL ---------------------------- */
+  "flex-layout.col#compare-button": {
+    "props": {
+      "width": "100%",
+      "blockClass": "compare-col-style"
+    },
+    "children": ["product-comparison-block.selector"]
+  },
+  /* ---------------------- Condition MT COL  ---------------------------- */
+  "condition-layout.product#customizedMT-mobile": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "customizedMT"
+          }
+        }
+      ],
+      "Then": "flex-layout.row#customizedMT-mobile",
+      "Else": "flex-layout.col#features-pdp-mobile"
+    }
+  },
+  "flex-layout.row#customizedMT-mobile": {
+    "children": ["customizedMT-mobile-pdp"]
+  },
+  "customizedMT-mobile-pdp": {
+    "props": {
+      "url": "assets/menu-images/cookers_mp.mp4",
+      "filter": {
+        "specificationGroups": ["RatingGroupAttrLogo"],
+        "type": "show"
+      }
+    }
+  },
+  /* ---------------------- FEATURES COL ---------------------------- */
+  "flex-layout.col#features-pdp-mobile": {
+    "props": {
+      "width": "100%",
+      "blockClass": "features-col-style"
+    },
+    "children": ["flex-layout.row#features-container"]
+  },
+  /* ---------------------- BUTTON LAYER 4 ---------------------------- */
+  "flex-layout.row#button-layer-4-mobile": {
+    "props": {
+      "blockClass": ""
+    },
+    "children": ["reevoo-badge-mobile"]
+  },
+  "reevoo-badge-mobile": {},
+  /* ---------------------- PRODUCT MEASURES MOBILE ----------------------------  */
+  "flex-layout.row#measures-mobile": {
+    "props": {},
+    "children": ["flex-layout.col#measure-mobile"]
+  },
+  "flex-layout.col#measure-mobile": {
+    "props": {
+      "blockClass": "measure-col-style-mobile"
+    },
+    "children": [
+      "rich-text#measures-text-mobile",
+      "product-specification-group#minimal"
+    ]
+  },
+  "rich-text#measures-text-mobile": {
+    "props": {
+      "text": "Measurements",
+      "textPosition": "Left",
+      "blockClass": "measure-text-style-mobile"
+    }
+  },
+  /* -------------------------- CUSTOMER REVIEWS ---------------------------*/
+  "rich-text#costumer-reviews-mobile": {
+    "props": {
+      "text": "Customer reviews",
+      "blockClass": "costumer-reviews-text-style-mobile"
+    }
+  },
+  /* ---------------------- MODAL REVIEW ----------------------------  */
+  "flex-layout.row#modal-review-mobile": {
+    "children": ["modal-review#pdp-mobile"]
+  },
+  "modal-review#pdp-mobile": {},
+  /* ---------------------- PRODUCT REVIEW ----------------------------  */
+  "flex-layout.row#product-review-container-mobile": {
+    "props": {
+      "blockClass": "product-review-container-style"
+    },
+    "children": ["product-review"]
+  },
+  "product-carousel-new#slider-bottom-pdp-mobile": {
+    "props": {
+      "collectionID": "140",
+      "isBottomCarousel": true
+    }
+  }
+}

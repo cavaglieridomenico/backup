@@ -1,0 +1,46 @@
+.listContainer--caratt-tec {
+  background-color: #f2f2f2;
+}
+.listItem--caratt-tec :global(.vtex-button) {
+  color: #505050;
+  background-color: #f2f2f2;
+  border: none;
+}
+.listItemActive--caratt-tec {
+  border: none;
+  background-color: #f2f2f2;
+}
+.listItemActive--caratt-tec :global(.vtex-button) {
+  border-bottom: 0.25rem solid #B24C24;
+  border-radius: unset;
+}
+.listItemActive--caratt-tec :global(.vtex-button__label) {
+  padding: 0;
+}
+.listItem--caratt-tec {
+  width: 25%; /*Con il tab documenti 33.3*/
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 600px) {
+  .listItem--caratt-tec {
+    width: 50%;
+  }
+  .listContainer--caratt-tec {
+    flex-wrap: unset;
+    overflow-x: scroll;
+    justify-content: unset;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .contentItem {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+}

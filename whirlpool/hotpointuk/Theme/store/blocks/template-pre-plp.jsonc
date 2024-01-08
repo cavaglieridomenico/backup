@@ -1,0 +1,616 @@
+{
+  "store.custom#template-pre-plp": {
+    "blocks": [
+      "responsive-layout.desktop#pre",
+      "responsive-layout.mobile#pre",
+      // PART BEFORE FOOTER
+      "experimental__visibility-layout#support-box-title",
+      "experimental__visibility-layout#support-box",
+      "flex-layout.row#newsletter-row"
+    ]
+  },
+  "responsive-layout.desktop#pre": {
+    "title":"[LAYOUT] - Desktop",
+    "children": [
+      "flex-layout.row#bread-pre-plp",
+      "experimental__visibility-layout#bannerPrePlp",
+      "sticky-layout#pre-plp-landing-links",
+      "experimental__visibility-layout#gridHomeTechnology",
+      "experimental__visibility-layout#titleBannerPrePlp",
+      "experimental__visibility-layout#titleBannerPrePlpReverse",
+      "experimental__visibility-layout#titleBannerPrePlp2",
+      "experimental__visibility-layout#gridHome4",
+      "list-context.product-list#suggestions-bestSellers",
+      "experimental__visibility-layout#gridHome5",
+      "list-context.product-list#suggestions-offers",
+      "experimental__visibility-layout#titleBannerPrePlpReverse2",
+      "experimental__visibility-layout#gridHome6",
+      "experimental__visibility-layout#titleBannerBuyingGuide"
+    ]
+  },
+  "responsive-layout.mobile#pre": {
+    "title":"[LAYOUT] - Mobile",
+    "children": [
+      "flex-layout.row#bread-pre-plp",
+      "experimental__visibility-layout#bannerPrePlp",
+      "sticky-layout#pre-plp-landing-links",
+      "experimental__visibility-layout#gridHomeTechnology",
+      "experimental__visibility-layout#titleBannerPrePlp",
+      "experimental__visibility-layout#titleBannerPrePlpReverse",
+      "experimental__visibility-layout#titleBannerPrePlp2",
+      "experimental__visibility-layout#gridHome4",
+      "list-context.product-list#suggestions-bestSellers",
+      "experimental__visibility-layout#gridHome5",
+      "list-context.product-list#suggestions-offers",
+      "experimental__visibility-layout#titleBannerPrePlpReverse2",
+      "experimental__visibility-layout#gridHome6",
+      "experimental__visibility-layout#titleBannerBuyingGuide"
+    ]
+  },
+  "flex-layout.row#bread-pre-plp": {
+    "title":"[ROW] - Breadcrumb",
+    "children": [
+      "breadcrumb-two-levels"
+    ],
+    "props": {
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true,
+      "blockClass": "breadCustom"
+    }
+  },
+  "link#2level-pre-plp": {
+    "title":"[LINK] - 2 Level",
+    "props": {
+      "href": "/",
+      "label": "2ndlevel",
+      "blockClass": [
+        "breadLink",
+        "breadBold"
+      ]
+    }
+  },
+  "experimental__visibility-layout#bannerPrePlp": {
+    "title":"[EXPERIMENTAL-VISIBILITY] - Banner Pre-PLP",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "flex-layout.row#bannerPrePlp"
+    ]
+  },
+  "flex-layout.row#bannerPrePlp": {
+    "title":"[ROW] - Banner Pre-PLP",
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": [
+        "columnPostillaBannerAntonio",
+        "bgColorAntonioHero",
+        "width100"
+      ]
+    },
+    "children": [
+      "flex-layout.col#leftPartBannerPrePlp",
+      "flex-layout.col#rightPartBannerPrePlp"
+    ]
+  },
+  "flex-layout.col#leftPartBannerPrePlp": {
+    "title":"[COL] - Left part banner",
+    "props": {
+      "width": "45%",
+      "preventVerticalStretch": true,
+      "blockClass": [
+        "columnPostilla",
+        "columnPostillaBottom",
+        "greyBackground"
+      ]
+    },
+    "children": [
+      "flex-layout.row#bannerPrePlpTitle",
+      "flex-layout.row#bannerPrePlpButtonsFirstRow1",
+      "flex-layout.row#bannerPrePlpButtonsSecondRow"
+    ]
+  },
+  "flex-layout.col#rightPartBannerPrePlp": {
+    "title":"[COL] - Right part banner",
+    "props": {
+      "width": "55%",
+      "blockClass": "columnPostillaImage"
+    },
+    "children": [
+      "image#bannerPostilla"
+    ]
+  },
+  "flex-layout.row#bannerPrePlpTitle": {
+    "title":"[ROW] - Title",
+    "props": {
+      "preventHorizontalStretch": false
+    },
+    "children": [
+      "rich-text#BannTitle"
+    ]
+  },
+  "flex-layout.row#bannerPrePlpButtonsFirstRow1": {
+    "title":"[ROW] - Description",
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": "buttonsRow"
+    },
+    "children": [
+      "rich-text#BannDescPrePlp"
+    ]
+  },
+  "rich-text#BannDescPrePlp": {
+    "title":"[TEXT] - Description",
+    "props": {
+      "text": "33% di spazio extra per frutta e verdura *",
+      "blockClass": "descBannerPostilla"
+    }
+  },
+  "flex-layout.row#bannerPrePlpButtonsSecondRow": {
+    "title":"[ROW] - Banner Second row button",
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": "buttonsRow"
+    },
+    "children": [
+      "experimental__visibility-layout#button1",
+      "experimental__visibility-layout#button2"
+    ]
+  },
+  "experimental__visibility-layout#button1": {
+    "title":"[EXPERIMENTAL-VISIBILITY] - Button 1",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "rich-text#ourTechnologies"
+    ]
+  },
+  "rich-text#ourTechnologies": {
+    "title":"[TEXT] - Our Technologies",
+    "props": {
+      "text": "Our Technologies",
+      "textAlignment": "center",
+      "blockClass": [
+        "ourTechnologies",
+        "ourTechnologiesPrePlp"
+      ],
+      "textPosition": "CENTER"
+    }
+  },
+  "experimental__visibility-layout#button2": {
+    "title":"[EXPERIMENTAL-VISIBILITY] - Button 2",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "link#viewFullRange"
+    ]
+  },
+  "link#viewFullRange": {
+    "title":"[LINK] - View full range",
+    "props": {
+      "href": "/appliances/laundry/washing-machines",
+      "label": "View Full Range",
+      "blockClass": [
+        "viewFullRange"
+      ]
+    }
+  },
+  //Sticky
+  "slider-layout#pre-plp-landing-links": {
+    "title":"[SLIDER] - Landing Links",
+    "props": {
+      "blockClass": "stickySliderPrePlp",
+      "itemsPerPage": {
+        "desktop": 5,
+        "tablet": 4,
+        "phone": 2
+      },
+      "showPaginationDots": "never",
+      "infinite": false,
+      "showNavigationArrows": "always"
+    },
+    "children": [
+      "rich-text#TechnologySticky",
+      "rich-text#bestSellersSticky",
+      "rich-text#promotionsSticky",
+      "rich-text#buyingGuideSticky",
+      "rich-text#fullRangeSticky"
+    ]
+  },
+  "sticky-layout#pre-plp-landing-links": {
+    "title":"[SLIDER] - Landing Links",
+    "children": ["slider-layout#pre-plp-landing-links"],
+    "props": {
+      "blockClass": [
+        "mt-10",
+        "mw9",
+        "ph3",
+        "top100"
+      ]
+    }
+  },
+  "flex-layout.row#pre-plp-landing-links": {
+    "title":"[ROW] - Landing Links",
+    "props": {
+      "blockClass": "stickyPrePlpContainer"
+    },
+    "children": [
+      "rich-text#TechnologySticky",
+      "rich-text#bestSellersSticky",
+      "rich-text#promotionsSticky",
+      "rich-text#buyingGuideSticky",
+      "rich-text#fullRangeSticky"
+    ]
+  },
+  "rich-text#TechnologySticky": {
+    "title":"[TEXT] - Our Technologies Sticky",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Our Technologies",
+      "blockClass": "stickyLink"
+    }
+  },
+  "rich-text#bestSellersSticky": {
+    "title":"[TEXT] - Best seller Sticky",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Best Sellers",
+      "blockClass": "stickyLink"
+    }
+  },
+  "rich-text#promotionsSticky": {
+    "title":"[TEXT] - Promotion Sticky",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Promotions",
+      "blockClass": "stickyLink"
+    }
+  },
+  "rich-text#buyingGuideSticky": {
+    "title":"[TEXT] - Buying Guide Sticky",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Buying Guide",
+      "blockClass": "stickyLink"
+    }
+  },
+  "rich-text#fullRangeSticky": {
+    "title":"[TEXT] - Full range Sticky",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "View Full Range",
+      "blockClass": "stickyLink"
+    }
+  },
+  //Title
+  "experimental__visibility-layout#gridHomeTechnology": {
+    "title":"[EXPERIMENTAL-VISIBILITY] - Grid Home Technology",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "rich-text#technology-anchor",
+      "rich-text#Technology2"
+    ]
+  },
+  "rich-text#technology-anchor": {
+    "title":"[TEXT] - Technology",
+    "props": {
+      "htmlId": "technologies",
+      "blockClass": "anchorPrePlp"
+    }
+  },
+  "rich-text#Technology2": {
+    "title":"[TEXT] - Technology 2",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Technology & Design",
+      "blockClass": [
+        "textHome",
+        "textHomePrePlp"
+      ]
+    }
+  },
+  //
+  "experimental__visibility-layout#titleBannerPrePlp": {
+    "title":"[EXPERIMENTAL-VISIBILITY] - Banner Pre-PLP Title",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "flex-layout.row#titleBannerPrePlp"
+    ]
+  },
+  "flex-layout.row#titleBannerPrePlp": {
+    "title":"[ROW] - Banner Pre-PLP Title",
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": [
+        "halfBannerWithPostilla4PorteTop",
+        "supreme"
+      ]
+    },
+    "children": [
+      "flex-layout.col#leftPartPostillaWCollection4PorteTop",
+      "flex-layout.col#rightPartTitleBannerPrePlp"
+    ]
+  },
+  "flex-layout.col#rightPartTitleBannerPrePlp": {
+    "title":"[COL] - Right part banner",
+    "props": {
+      "width": "50%",
+      "blockClass": "columnPostilla"
+    },
+    "children": [
+      "experimental__visibility-layout#logoBannerTop",
+      "rich-text#titleBannerSupreme",
+      "rich-text#BannTitleWCollection4Porte",
+      "rich-text#BannDescWCollection4Porte",
+      "experimental__visibility-layout#ButtonBannerTitleBannerPrePlp",
+      "rich-text#BannPostillaWCollection4Porte"
+    ]
+  },
+  "experimental__visibility-layout#ButtonBannerTitleBannerPrePlp": {
+    "title":"[EXPERIMENTAL-VISIBILITY] - Banner Pre-PLP Title",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "flex-layout.col#ButtonBannerTitleBannerPrePlp"
+    ]
+  },
+  "flex-layout.col#ButtonBannerTitleBannerPrePlp": {
+    "title":"[COL] - Button Banner Title",
+    "props": {
+      "blockClass": "twoButtonRow"
+    },
+    "children": [
+      "experimental__visibility-layout#ButtonBannLeft",
+      "experimental__visibility-layout#ButtonBannRight"
+    ]
+  },
+  "experimental__visibility-layout#ButtonBannLeft": {
+    "title":"[EXPERIMENTAL-VISIBILITY] - Banner Pre-PLP Left",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "link#ButtonBannLeft"
+    ]
+  },
+  "link#ButtonBannLeft": {
+    "title":"[TEXT] - Text Button Banner Left",
+    "props": {
+      "label": "TESTO BOTTONE",
+      "href": "#",
+      "displayMode": "button",
+      "blockClass": "prePlpButton"
+    }
+  },
+  "experimental__visibility-layout#ButtonBannRight": {
+    "title":"[EXPERIMENTAL-VISIBILITY] - Banner Pre-PLP Right",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "link#ButtonBannRight"
+    ]
+  },
+  "link#ButtonBannRight": {
+    "title":"[TEXT] - Button Banner Right",
+    "props": {
+      "label": "TESTO BOTTONE",
+      "href": "#",
+      "displayMode": "button",
+      "blockClass": "prePlpButton"
+    }
+  },
+  "experimental__visibility-layout#titleBannerPrePlpReverse": {
+    "title":"[TEXT] - Title Banner Pre PLP Reverse",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "flex-layout.row#titleBannerPrePlpReverse"
+    ]
+  },
+  "flex-layout.row#titleBannerPrePlpReverse": {
+    "title":"[ROW] - Banner Pre-PLP Title Reverse",
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": [
+        "halfBannerWithPostilla4PorteTop",
+        "supreme",
+        "reverse"
+      ]
+    },
+    "children": [
+      "flex-layout.col#rightPartTitleBannerPrePlp",
+      "flex-layout.col#leftPartPostillaWCollection4PorteTop"
+    ]
+  },
+  "experimental__visibility-layout#titleBannerPrePlp2": {
+    "title":"[EXPERIMENTAL-VISIBILITY] - Banner Pre-PLP 2",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "flex-layout.row#titleBannerPrePlp"
+    ]
+  },
+  "experimental__visibility-layout#gridHome4": {
+    "title": "[EXPERIMENTAL-VISIBILITY] - Grid Home 4",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "rich-text#best-sellers-anchor",
+      "rich-text#BestSellers"
+    ]
+  },
+  "rich-text#best-sellers-anchor": {
+    "title": "[TEXT] - Best seller",
+    "props": {
+      "htmlId": "bestseller",
+      "blockClass": "anchorPrePlp"
+    }
+  },
+  "rich-text#BestSellers": {
+    "title": "[TEXT] - Best seller",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Best Sellers",
+      "blockClass": "carouselTitlePrePlp"
+    }
+  },
+  "experimental__visibility-layout#gridHome5": {
+    "title": "[EXPERIMENTAL-VISIBILITY] - Grid Home 5",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "rich-text#offers-anchor",
+      "rich-text#Offers"
+    ]
+  },
+  "rich-text#offers-anchor": {
+    "title": "[TEXT] - Offers",
+    "props": {
+      "htmlId": "offert",
+      "blockClass": "anchorPrePlp"
+    }
+  },
+  "rich-text#Offers": {
+    "title": "[TEXT] - Offers",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Offers",
+      "blockClass": "carouselTitlePrePlp"
+    }
+  },
+  "list-context.product-list#suggestions-offers": {
+    "title": "[PRODUCT-LIST] - Suggestion offers",
+    "blocks": ["product-summary.shelf.product-comparison#search"],
+    "children": ["slider-layout#innovazione"],
+    "props": {
+      "collection": "138"
+    }
+  },
+  "experimental__visibility-layout#gridHome6": {
+    "title": "[EXPERIMENTAL-VISIBILITY] - Grid Home 6",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "rich-text#buying-guide-anchor",
+      "rich-text#buyingGuide"
+    ]
+  },
+  "rich-text#buying-guide-anchor": {
+    "title": "[TEXT] - Buying guide anchor",
+    "props": {
+      "htmlId": "buyingGuide",
+      "blockClass": "anchorPrePlp"
+    }
+  },
+  "rich-text#buyingGuide": {
+    "title": "[TEXT] - Buying guide",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "",
+      "blockClass": "carouselTitlePrePlp"
+    }
+  },
+  "experimental__visibility-layout#titleBannerBuyingGuide": {
+    "title": "[EXPERIMENTAL-VISIBILITY] - Title Banner Buying Guide",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "flex-layout.row#titleBannerBuyingGuide"
+    ]
+  },
+  "flex-layout.row#titleBannerBuyingGuide": {
+    "title": "[ROW] - Title Banner Buying Guide",
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": [
+        "halfBannerWithPostilla4PorteTop",
+        "supreme",
+        "topSpace"
+      ]
+    },
+    "children": [
+      "flex-layout.col#leftPartPostillaWCollection4PorteTop",
+      "flex-layout.col#rightPartBuyingGuide"
+    ]
+  },
+  "flex-layout.col#rightPartBuyingGuide": {
+    "title": "[COL] - Right part banner Buying Guide",
+    "props": {
+      "width": "50%",
+      "blockClass": "columnPostilla"
+    },
+    "children": [
+      "rich-text#BannTitleWCollection4Porte",
+      "rich-text#BannDescWCollection4Porte",
+      "experimental__visibility-layout#ButtonBannerBuyingGuide"
+    ]
+  },
+  "experimental__visibility-layout#ButtonBannerBuyingGuide": {
+    "title": "[EXPERIMENTAL-VISIBILITY] - Button Banner Buying Guide",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "link#ButtonBannBuyingGuide"
+    ]
+  },
+  "link#ButtonBannBuyingGuide": {
+    "title": "[LINK] - Button Banner Buying Guide",
+    "props": {
+      "label": "TESTO BOTTONE",
+      "href": "#",
+      "displayMode": "button",
+      "blockClass": [
+        "prePlpButton",
+        "buttonCustomWidth"
+      ]
+    }
+  },
+  "experimental__visibility-layout#titleBannerPrePlpReverse2": {
+    "title": "[EXPERIMENTAL-VISIBILITY] - Title Banner Reverse 2",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "flex-layout.row#titleBannerPrePlpReverse2"
+    ]
+  },
+  "flex-layout.row#titleBannerPrePlpReverse2": {
+    "title": "[ROW] - Banner Pre-PLP Title Reverse 2",
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": [
+        "halfBannerWithPostilla4PorteTop",
+        "supreme",
+        "marginTop"
+      ]
+    },
+    "children": [
+      "flex-layout.col#leftPartPostillaWCollection4PorteTop",
+      "flex-layout.col#rightPartTitleBannerPrePlp"
+    ]
+  }
+}

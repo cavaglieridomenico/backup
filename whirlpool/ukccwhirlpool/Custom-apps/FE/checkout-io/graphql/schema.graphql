@@ -1,0 +1,33 @@
+scalar JSON
+
+type Query {
+  checkoutOrder(orderFormId: ID): OrderForm! @withOrderFormId @noCache
+
+  specifications(productId: String, specificationNames: [String]): [Specification]
+}
+
+type Mutation {
+  changeToAnonymousUser(orderFormId: ID): Boolean @withOrderFormId @noCache
+
+  setProfileData(orderFormId: ID, profileData: ProfileDataInput!): Boolean
+    @withOrderFormId
+    @noCache
+
+  setClientPreferencesData(orderFormId: ID, clientPreferencesData: ClientPreferencesData!): Boolean
+    @withOrderFormId
+    @noCache
+
+  setCustomData(orderFormId: ID, appId: String, data: JSON): Boolean
+    @withOrderFormId
+    @noCache
+
+  setInvoiceData(orderFormId: ID, data: InvoiceDataInput): Boolean
+    @withOrderFormId
+    @noCache
+
+  mutationCreatePaymentFromExistingCart(query : CreatePaymentFromExistingCartInput): CreatePaymentFromExistingCartOutput
+    @noCache
+
+  mutationAddPaymentData(orderFormId: String, query : [AddPaymentDataInput]): AddPaymentDataOutput
+    @noCache
+}

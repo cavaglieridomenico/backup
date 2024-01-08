@@ -1,0 +1,515 @@
+/*---------------GENERAL FILTER -----------------*/
+:global(.vtex-checkbox__line-container) {
+  width: 100%;
+}
+
+.galleryItem {
+  position: relative;
+}
+
+.galleryItem :global(.vtex-product-summary-2-x-containerNormal) {
+  overflow: unset !important;
+  position: relative;
+}
+
+.gallery {
+  display: flex;
+}
+
+.gallery--newProductCard {
+  display: none;
+  width: 100%;
+}
+
+.buttonShowMore {
+  margin: 2rem 0;
+}
+
+.filterTitle {
+  color: #505050;
+  text-transform: uppercase;
+  font-family: "myriadSemibold";
+  font-weight: 400;
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+  line-height: 1.2;
+}
+
+.filterItem {
+  background-color: #f2f2f2;
+  display: flex;
+  cursor: pointer;
+  width: calc(50% - 0.3rem);
+  padding: 0;
+  text-align: center;
+  margin-bottom: 0.625rem;
+  -webkit-box-align: center;
+  justify-content: center;
+  border-radius: 3px;
+}
+
+.filterItem--selected {
+  background-color: #ffffff;
+  border: 1px solid #fdc100;
+}
+
+.filterContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  -webkit-box-pack: justify;
+  padding-bottom: 0.5rem;
+}
+
+.filterItem--9999 {
+  display: none;
+}
+
+.filterItem :global(.vtex-checkbox__container) {
+  display: none;
+}
+
+.filterItem :global(.vtex-checkbox__label) {
+  color: #505050;
+  border-radius: 0.1875rem;
+  font-family: "myriadLight";
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.2;
+  margin: auto;
+  padding: 0.625rem 1rem;
+}
+
+.accordionFilter .filterAccordionItemBox:not(.accordionFilterItem) {
+  border: none;
+}
+
+.filterItem--selected :global(.vtex-checkbox__label) {
+  color: #fdc100;
+}
+
+.filter__container--title {
+  display: none;
+}
+
+.filter__container {
+  border: none;
+}
+
+/* .filterIcon{
+    display: none;
+} */
+/*---------------MY FILTER (First block)-----------------*/
+.filter__container--selectedFilters .filterSelected {
+  padding: 0;
+  padding-top: 10px;
+}
+
+.filter__container--selectedFilters .filterTemplateOverflow::before {
+  content: "La tua selezione:";
+  padding: 3px;
+  color: #505050;
+  font-family: "myriadLight";
+  font-weight: 400;
+  font-size: 1.188rem;
+  display: block;
+  width: 100%;
+  line-height: 35px;
+}
+
+.filter__container--selectedFilters .filterTemplateOverflow:empty {
+  display: none !important;
+}
+
+.filter__container--selectedFilters .filterTemplateOverflow {
+  background: #f2f2f2;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.filter__container--selectedFilters .filterSelected .filterTitle {
+  display: none;
+}
+
+.filter__container--selectedFilters .filterItem {
+  border-radius: 15.5px;
+  cursor: pointer;
+  text-align: center;
+  padding: 0.625rem 1.875rem;
+  margin: 0.62rem 0.62rem 0.62rem 0;
+  display: flex;
+  vertical-align: middle;
+  position: relative;
+  border: none;
+}
+
+.filter__container--selectedFilters .filterItem::before {
+  content: "+";
+  color: #505050;
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg) scale(1.2);
+}
+
+.filter__container--selectedFilters .filterItem--selected {
+  background-color: #ffffff;
+}
+
+.filter__container--selectedFilters :global(.vtex-checkbox__line-container) {
+  margin: auto auto;
+}
+
+.filter__container--selectedFilters :global(.vtex-search-result-3-x-filterTemplateOverflow) {
+  display: flex;
+  flex-wrap: wrap;
+  /* flex-direction: column-reverse; */
+}
+
+.filter__container--selectedFilters :global(.vtex-checkbox__line-container) :global(.vtex-checkbox__container) {
+  display: none;
+}
+
+.filter__container--selectedFilters :global(.vtex-checkbox__line-container) :global(.vtex-checkbox__label) {
+  color: #505050;
+  font-family: "myriadLight";
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.2;
+  padding-right: 2rem;
+}
+
+.filter__container--selectedFilters .filterItem--selected {
+  padding: 0;
+  width: auto;
+}
+
+
+/*----------------------------------*/
+.orderByOptionsContainer {
+  z-index: 3;
+}
+
+.filterApplyButtonWrapper :global(.vtex-button) {
+  background-color: white;
+  border-color: #fdc100;
+}
+
+.filterApplyButtonWrapper :global(.vtex-button):hover {
+  border-color: rgba(237, 177, 18, 0.1);
+  background-color: rgba(237, 177, 18, 0.1);
+}
+
+.filterPopupTitle {
+  font-family: "myriadLight";
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.2;
+  text-transform: capitalize;
+  color: #5a5a5a;
+  text-align: right;
+}
+
+.filterPopupArrowIcon {
+  color: #5a5a5a;
+}
+
+.orderByText {
+  margin-right: 0.9375rem;
+}
+
+.showingProducts--layout,
+.orderByText {
+  text-transform: uppercase;
+  font-family: "myriadSemibold";
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  color: #000000;
+}
+
+.showingProducts {
+  text-transform: uppercase;
+  font-family: "myriadSemibold";
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  color: #000000;
+}
+
+.orderByOptionItem {
+  font-family: "myriadLight";
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.2;
+  color: #5a5a5a;
+}
+
+.orderByButton {
+  border: none;
+}
+
+.orderByOptionItem:hover,
+.orderByOptionItem--selected {
+  color: #ffffff;
+  background-color: #fdc100;
+}
+
+/* .filter__container--category-3 .filterTitle {
+  position:relative;
+  visibility:hidden
+}
+.filter__container--category-3 .filterIcon {
+  visibility:visible
+}
+.filter__container--category-3 .filterIcon::after {
+  content:'Categoria';
+  color:#505050;
+  position: absolute;
+  left: 0;
+}
+.filterAccordionItemBox--sottocategoria .accordionFilterItemTitle {
+  visibility:hidden
+}
+.filterAccordionItemBox--sottocategoria .accordionFilterContent {
+  position:relative
+}
+.filterAccordionItemBox--sottocategoria .accordionFilterItemIcon::after {
+  content:'Categoria';
+  text-transform:uppercase;
+  position:absolute;
+  left:0
+} */
+/* Media Queries */
+@media only screen and (max-width: 1000px) {
+
+  .filterBreadcrumbsText,
+  .accordionFilterItemTitle {
+    text-transform: uppercase;
+  }
+
+  .accordionFilter .filterAccordionItemBox:not(.accordionFilterItem) :global(.vtex-checkbox__input) {
+    display: none;
+  }
+
+  .accordionFilter .filterAccordionItemBox:not(.accordionFilterItem) :global(.vtex-checkbox__label) {
+    z-index: 999;
+    line-height: 46px;
+    margin-left: -10px;
+  }
+
+  .accordionFilter .accordionFilterOpen {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+  }
+
+  .accordionFilter .filterAccordionItemBox:not(.accordionFilterItem) {
+    width: 50%;
+  }
+
+  .accordionFilter .filterAccordionItemBox:not(.accordionFilterItem) :global(.vtex-checkbox__inner-container) {
+    background-color: #f2f2f2;
+    display: flex;
+    cursor: pointer;
+    min-width: 43vw;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 0.625rem;
+    -webkit-box-align: center;
+    justify-content: center;
+    border-radius: 3px;
+    padding: 20px;
+  }
+
+  .accordionFilter .filterAccordionItemBox:not(.accordionFilterItem) :global(.vtex-checkbox__box-wrapper) {
+    display: none;
+  }
+
+  .filterButtonsBox {
+    border: none;
+    height: 4.25rem;
+  }
+
+  .filterClearButtonWrapper {
+    background: #f2f2f2;
+    height: 100%;
+  }
+
+  .filterClearButtonWrapper :global(.vtex-button) {
+    background: #f2f2f2;
+    height: 100%;
+  }
+
+  .filterClearButtonWrapper :global(.vtex-button__label) {
+    color: #505050;
+    text-transform: capitalize;
+    font-weight: 100;
+  }
+
+  .filterApplyButtonWrapper {
+    background: #fdc100;
+    color: white;
+    border-radius: 0;
+    height: 100%;
+  }
+
+  .filterApplyButtonWrapper :global(.vtex-button) {
+    background: #fdc100 !important;
+    color: white;
+    border-radius: 0;
+    height: 100%;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .showingProducts {
+    line-height: 6.2;
+  }
+
+  .searchResultContainer {
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  .filterTemplateOverflow {
+    max-height: unset !important;
+  }
+
+  .accordionFilterOpen--funzioni-speciali- {
+    margin-left: -2rem !important;
+  }
+}
+
+@media only screen and (min-width: 1026px) {
+  .gallery {
+    padding-left: 4em !important;
+  }
+}
+
+@media only screen and (max-width: 1260px) and (min-width: 1024px) {
+  .gallery {
+    padding-left: 0em !important;
+  }
+}
+
+@media only screen and (max-width: 1400px) and (min-width: 1260px) {
+  .gallery {
+    padding-left: 0em !important;
+  }
+}
+
+@media only screen and (max-width: 1028px) and (min-width: 1024px) {
+  .gallery--newProductCard {
+    display: flex !important;
+    width: 90%;
+  }
+}
+
+@media only screen and (min-width: 1026px) {
+  .gallery {
+    padding: 0;
+    display: flex;
+  }
+
+  .galleryItem {
+    position: relative;
+    flex-basis: 33%;
+    max-width: 33%;
+    min-width: auto;
+  }
+
+  .gallery--newProductCard {
+    display: none;
+    width: 100%;
+  }
+
+  .galleryItem--newProductCard {
+    position: relative;
+    flex-basis: 100% !important;
+    max-width: 100% !important;
+    min-width: auto;
+  }
+
+  .orderByDropdown {
+    padding: 0;
+    min-width: auto;
+  }
+
+  .filterPopupArrowIcon {
+    margin-left: 0.9375rem;
+  }
+
+  .orderByText {
+    margin-right: 1.875rem;
+  }
+}
+
+@media only screen and (min-width: 669px) {
+  .filtersWrapperMobile {
+    justify-content: flex-start;
+    padding-left: 1.75rem;
+  }
+}
+
+@media only screen and (max-width: 668px) {
+  .filterPopupTitle {
+    text-align: unset;
+  }
+
+  .orderByDropdown {
+    padding: 0;
+    height: 100%;
+  }
+
+  .orderBy--layout {
+    height: 100%;
+  }
+
+  .orderByButton {
+    background-color: #f2f2f2;
+    border-radius: 0;
+    height: 100%;
+    justify-content: space-around;
+  }
+
+  .showingProducts--layout {
+    padding: 0;
+    border: 0;
+    margin-top: 2.8rem;
+    margin-bottom: 1.7rem;
+    letter-spacing: 1.5px;
+    font-family: "myriadSemibold";
+    font-weight: 600;
+    width: auto;
+    text-align: left;
+  }
+
+  .filterPopupTitle {
+    text-transform: uppercase;
+    font-family: "myriadSemibold";
+    color: #505050;
+    font-weight: 600;
+    letter-spacing: 1.75px;
+    padding: 0 1rem;
+  }
+
+  .filters--layout {
+    height: 100%;
+  }
+
+  .filters {
+    height: 100%;
+  }
+}
+
+@media only screen and (max-width: 639px) {
+  .orderByText {
+    margin-right: 0;
+    display: block;
+  }
+}

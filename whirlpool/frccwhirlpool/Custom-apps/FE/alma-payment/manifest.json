@@ -1,0 +1,41 @@
+{
+  "vendor": "frccwhirlpool",
+  "name": "alma-payment",
+  "version": "0.0.16",
+  "title": "Alma payment",
+  "description": "Alma payment component",
+  "defaultLocale": "fr-FR",
+  "builders": {
+    "store": "0.x",
+    "react": "3.x",
+    "pixel": "0.x"
+  },
+  "dependencies": {
+    "vtex.styleguide": "9.x",
+    "vtex.product-context": "0.x",
+    "vtex.pixel-interfaces": "1.x",
+    "vtex.apps-graphql": "2.x"
+  },
+  "settingsSchema": {
+    "title": "Alma payment",
+    "type": "object",
+    "properties": {
+      "merchantIdVIP": {
+        "title": "merchant id VIP",
+        "description": "Enter the merchant id",
+        "type": "string"
+      },
+      "merchantIdEPP": {
+        "title": "merchant id EPP",
+        "description": "Enter the merchant id",
+        "type": "string"
+      },
+      "merchantIdFF": {
+        "title": "merchant id FF",
+        "description": "Enter the merchant id",
+        "type": "string"
+      }
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

@@ -1,0 +1,222 @@
+{
+  "store.custom#remote-html-embed-page": {
+    "blocks": [
+      "remote-html-embed",
+      /* carousel */
+      // "responsive-layout.desktop#carouselsDesktop",
+      // "responsive-layout.tablet#carouselsDesktop",
+      // "responsive-layout.phone#carouselsPhone"
+      "experimental__visibility-layout#custom-embeded-carousel1",
+      "experimental__visibility-layout#custom-embeded-carousel2",
+      "experimental__visibility-layout#seo-textbox"
+    ]
+  },
+  /* carousel desktop */
+  // "responsive-layout.desktop#carouselsDesktop": {
+  //   "title": "[layout] - BOTTOM - Desktop Carousels",
+  //   "children": [
+  //     "experimental__visibility-layout#custom-embeded-carousel1",
+  //     "experimental__visibility-layout#custom-embeded-carousel2"
+  //   ]
+  // },
+  "experimental__visibility-layout#custom-embeded-carousel1": {
+    "title": "[layout] - BOTTOM - Carousel 1",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "rich-text#title-custom-embeded-carousel1",
+      "tab-content#custom-embeded-carousel1",
+      "experimental__visibility-layout#button-custom-embeded-carousel1"
+    ]
+  },
+  "rich-text#title-custom-embeded-carousel1": {
+    "title": "[text] - BOTTOM - title Carousel 1",
+    "props": {
+      "htmlId": "#",
+      "blockClass": ["TitleAndLine", "f2f2f2"],
+      "text": "text test",
+      "textPosition": "LEFT"
+    }
+  },
+  "tab-content#custom-embeded-carousel1": {
+    "title": "[TAB-CONTENT] - MID - Carousel",
+    "children": ["tab-content.item#custom-embeded-carousel1"]
+  },
+  "tab-content.item#custom-embeded-carousel1": {
+    "title": "[TAB-CONTENT] - MID - First tab content",
+    "children": ["list-context.product-list#custom-embeded-carousel1"],
+    "props": {
+      "tabId": "1",
+      "blockClass": ["f2f2f2", "Itslider1OurBest", "customEmbedCarousel"]
+    }
+  },
+  "list-context.product-list#custom-embeded-carousel1": {
+    "title": "[PRODUCT-LIST] - MID - First tab products list",
+    "blocks": [
+      "product-summary.shelf.product-comparison#bauknechtPLP-carousel-no-comparison-button"
+      // "product-summary.shelf.product-comparison#bauknechtPLP-carousel"
+    ],
+    "children": [
+      // "slider-layout#innovazioneHome2"
+      "slider-layout#Itslider3"
+    ],
+    "props": {
+      "collection": "137"
+    }
+  },
+  "experimental__visibility-layout#custom-embeded-carousel2": {
+    "title": "[layout] - BOTTOM - Carousel 2",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "rich-text#title-custom-embeded-carousel2",
+      "tab-content#custom-embeded-carousel2",
+      "experimental__visibility-layout#button-custom-embeded-carousel2"
+    ]
+  },
+  "experimental__visibility-layout#button-custom-embeded-carousel2": {
+    "title": "[layout] - BOTTOM - Button for Carousel 2",
+    "props": {
+      "visible": false
+    },
+    "children": ["link#button-custom-embeded-carousel2"]
+  },
+  "experimental__visibility-layout#button-custom-embeded-carousel1": {
+    "title": "[layout] - [BOTTOM] - Button for Carousel 1",
+    "props": {
+      "visible": false
+    },
+    "children": ["link#button-custom-embeded-carousel1"]
+  },
+  "link#button-custom-embeded-carousel1": {
+    "title": "[LINK] - [BOTTOM] - Button for Carousel 1",
+    "props": {
+      "href": "#",
+      "displayMode": "button",
+      "blockClass": [
+        "postillaButton",
+        "marginBottomClassico",
+        "customEmbedCarousel"
+      ]
+    },
+    "children": [
+      "rich-text#title-button-custom-embeded-carousel1",
+      "image#icon-button-custom-embeded-carousel1"
+    ]
+  },
+  "rich-text#title-button-custom-embeded-carousel1": {
+    "title": "[TEXT] - BUTTON TITLE - Button for Carousel 1",
+    "props": {
+      "text": "Text Button",
+      "blockClass": "buttonCustomEmbedCarousel"
+    }
+  },
+  "image#icon-button-custom-embeded-carousel1": {
+    "title": "[IMAGE] - BOTTOM ICON - Button for Carousel 1",
+    "props": {
+      "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iNDgiIHdpZHRoPSI0OCIgZmlsbD0iI2ZmZiI+PHBhdGggZD0iTTI4LjA1IDM2IDE2IDIzLjk1IDI4LjA1IDExLjkgMzAuMiAxNC4wNSAyMC4zIDIzLjk1IDMwLjIgMzMuODVaIi8+PC9zdmc+",
+      "blockClass": "iconButtonCustomEmbedCarousel"
+    }
+  },
+  "link#button-custom-embeded-carousel2": {
+    "title": "[LINK] - [BOTTOM] - Button for Carousel 2",
+    "props": {
+      "href": "#",
+      "displayMode": "button",
+      "blockClass": [
+        "postillaButton",
+        "marginBottomClassico",
+        "customEmbedCarousel"
+      ]
+    },
+    "children": [
+      "rich-text#title-button-custom-embeded-carousel2",
+      "image#icon-button-custom-embeded-carousel1"
+    ]
+  },
+  "rich-text#title-button-custom-embeded-carousel2": {
+    "title": "[TEXT] - BUTTON TITLE - Button for Carousel 2",
+    "props": {
+      "text": "Text Button",
+      "blockClass": "buttonCustomEmbedCarousel"
+    }
+  },
+  "image#icon-button-custom-embeded-carousel2": {
+    "title": "[IMAGE] - BOTTOM ICON - Button for Carousel 2",
+    "props": {
+      "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iNDgiIHdpZHRoPSI0OCIgZmlsbD0iI2ZmZiI+PHBhdGggZD0iTTI4LjA1IDM2IDE2IDIzLjk1IDI4LjA1IDExLjkgMzAuMiAxNC4wNSAyMC4zIDIzLjk1IDMwLjIgMzMuODVaIi8+PC9zdmc+",
+      "blockClass": "iconButtonCustomEmbedCarousel"
+    }
+  },
+  "rich-text#title-custom-embeded-carousel2": {
+    "title": "[text] - BOTTOM - title Carousel 2",
+    "props": {
+      "htmlId": "#",
+      "blockClass": ["TitleAndLine", "f2f2f2"],
+      "text": "text test",
+      "textPosition": "LEFT"
+    }
+  },
+  "tab-content#custom-embeded-carousel2": {
+    "title": "[TAB-CONTENT] - MID - Carousel",
+    "children": ["tab-content.item#custom-embeded-carousel2"]
+  },
+  "tab-content.item#custom-embeded-carousel2": {
+    "title": "[TAB-CONTENT] - MID - second tab content",
+    "children": ["list-context.product-list#custom-embeded-carousel2"],
+    "props": {
+      "tabId": "2",
+      "blockClass": [
+        "f2f2f2",
+        "Itslider1OurBest",
+        "ItsCarouselMobile",
+        "customEmbedCarousel"
+      ]
+    }
+  },
+  "list-context.product-list#custom-embeded-carousel2": {
+    "title": "[PRODUCT-LIST] - MID - second tab products list",
+    "blocks": [
+      "product-summary.shelf.product-comparison#bauknechtPLP-carousel-no-comparison-button"
+      // "product-summary.shelf.product-comparison#bauknechtPLP-carousel-small"
+    ],
+    "children": [
+      // "slider-layout#innovazioneHome2"
+      "slider-layout#Itslider3"
+    ],
+    "props": {
+      "collection": "137"
+    }
+  // },
+  // /* carousel tablet */
+  // "responsive-layout.tablet#carouselsDesktop": {
+  //   "title": "[layout] - BOTTOM - Tablet Carousels",
+  //   "children": [
+  //     "experimental__visibility-layout#custom-embeded-carousel1",
+  //     "experimental__visibility-layout#custom-embeded-carousel2"
+  //   ]
+  // },
+  // /* carousel mobile */
+  // "responsive-layout.phone#carouselsPhone": {
+  //   "title": "[layout] - BOTTOM - Mobile Carousels",
+  //   "children": ["experimental__visibility-layout#custom-embeded-carousel2"]
+  },
+  "experimental__visibility-layout#seo-textbox": {
+    "title": "[layout] - BOTTOM - Visibility SEO Textbox",
+    "props": {
+      "visible": false
+    },
+    "children": [
+      "rich-text#seo-textbox"
+    ]
+  },
+  "rich-text#seo-textbox": {
+    "title": "[text] - BOTTOM - SEO Textbox",
+    "props": {
+      "text": "Seo Text",
+      "blockClass": "seoTextbox"
+    }
+  }
+}

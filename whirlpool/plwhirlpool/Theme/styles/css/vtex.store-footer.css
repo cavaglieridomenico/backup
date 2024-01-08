@@ -1,0 +1,99 @@
+.socialNetworkImage--facebook,
+.socialNetworkImage--instagram,
+.socialNetworkImage--youtube {
+  display: none;
+}
+.socialNetworkLink {
+  position: relative;
+  margin-right: 0.425em;
+  height: 2.25rem;
+  width: 2.25rem;
+}
+.socialNetworkLink--facebook::after {
+  position: absolute;
+  content: url(https://plwhirlpool.vteximg.com.br/arquivos/fb_footer.svg);
+  height: 100%;
+  width: 100%;
+}
+.socialNetworkLink--instagram::after {
+  position: absolute;
+  content: url(https://plwhirlpool.vteximg.com.br/arquivos/insta_footer.svg);
+  height: 100%;
+  width: 100%;
+} 
+.socialNetworkLink--youtube::after {
+  position: absolute;
+  content: url(https://plwhirlpool.vteximg.com.br/arquivos/yt_footer.svg);
+  height: 100%;
+  width: 100%;
+}
+.row--menu-row {
+  padding-right: 24px;
+}
+.row--menu-row .rowContainer {
+  align-items: flex-start;
+}
+.row--payment-methods {
+  padding-top: 16px;
+}
+.socialNetworkWrapper--footerMobile {
+  width: auto !important;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+}
+.footerLayout {
+  padding-top: 0;
+  background-color: unset;
+}
+.footerLayout :global(.vtex-flex-layout-0-x-flexRowContent) {
+  width: 100%;
+}
+
+.footerLayout :global(.vtex-flex-layout-0-x-flexCol) {
+  width: 100%;
+}
+.footerLayout :global(.vtex-menu-2-x-styledLinkContent) {
+  white-space: pre-wrap !important;
+  /* overflow: hidden;
+  text-overflow: ellipsis; */
+}
+.footerLayout :global(.vtex-menu-2-x-styledLinkContent--footerBold) {
+  white-space: pre-wrap !important;
+  overflow: visible;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 640px) {
+  .socialNetworksContainer--footerMobile {
+    justify-content: center;
+  }
+  .socialNetworkWrapper--footerMobile {
+    width: 60% !important;
+  }
+  .footerLayout :global(.vtex-flex-layout-0-x-stretchChildrenWidth) {
+    flex: 0 0 100%;
+  }
+  .footerLayout :global(.vtex-flex-layout-0-x-flexCol) {
+    width: 100%;
+  }
+  .footerLayout :global(.vtex-rich-text-0-x-wrapper) {
+    width: 50%;
+    margin: 0 auto 2rem auto;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .footerLayout {
+    background-color: #f9f9f9;
+  }
+}
+@media only screen and (min-width: 1039px) {
+  .footerLayout :global(.vtex-flex-layout-0-x-stretchChildrenWidth) {
+    flex: 0 0 20%;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .footerLayout :global(.vtex-flex-layout-0-x-flexRowContent) {
+    width: 50%;
+    margin: auto;
+  }
+}

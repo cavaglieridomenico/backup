@@ -1,0 +1,492 @@
+{
+  "store.custom#imprintPage": {
+    "blocks": [
+      "flex-layout.row#bread-theme-service-locator",
+      /* title */
+      "rich-text#basicTitle",
+      /* info section */
+      "flex-layout.row#infoSection",
+      /* Description */
+      "rich-text#basicDescriptionTitle",
+      "rich-text#basicDescription"
+      //"analytics"
+    ]
+  },
+  /* info section */
+  "flex-layout.row#infoSection": {
+    "title": "[ROW] - top -info section",
+    "props": {
+      "blockClass": ["infoSectionContainer"]
+    },
+    "children": ["flex-layout.col#infoSection"]
+  },
+  "flex-layout.col#infoSection": {
+    "title": "[col] - top -info section",
+    "props": {
+      "blockClass": ["infoSectionContainer"]
+    },
+    "children": [
+      "flex-layout.row#infoSectionTitle",
+      "flex-layout.row#addressSection",
+      "flex-layout.row#TelefonSection",
+      "flex-layout.row#FaxSection",
+      "flex-layout.row#E-mailSection",
+      "flex-layout.row#DirectorsSection",
+      "flex-layout.row#SocietySection",
+      "flex-layout.row#Registry-courtSection",
+      "flex-layout.row#Seller-IdentifierSection",
+      "flex-layout.row#WEE-REG-NrSection"
+    ]
+  },
+  "flex-layout.row#infoSectionTitle": {
+    "title": "[ROW] - top -Title info section",
+    "props": {
+      "blockClass": ["infoSection", "infoSectionTitle"]
+    },
+    "children": ["rich-text#infoSectionTitle"]
+  },
+  "rich-text#infoSectionTitle": {
+    "title": "[TEXT] - top -Title info section",
+    "props": {
+      "text": "  titolo Descrizione",
+      "textAlignment": "left",
+      "blockClass": [
+        "basicDescriptionTitle",
+        "rich-text-margin-unset",
+        "infoSectionLink"
+      ],
+      "textPosition": "CENTER"
+    }
+  },
+  /* addressSection */
+  "flex-layout.row#addressSection": {
+    "title": "[ROW] - MID - Address Section",
+    "props": {
+      "blockClass": ["infoSection", "addressSection"]
+    },
+    "children": [
+      "flex-layout.col#addressSectionLabel",
+      "flex-layout.col#addressSectioninfo"
+    ]
+  },
+  "flex-layout.col#addressSectionLabel": {
+    "title": "[COL] - MID - Address Section Label",
+    "props": {
+      "width": "25%",
+      "blockClass": ["SectionLabel"]
+    },
+    "children": ["rich-text#addressSectionLabel"]
+  },
+  "rich-text#addressSectionLabel": {
+    "title": "[TEXT] - MID - Address Section Label",
+    "props": {
+      "text": "  titolo Descrizione",
+      "textAlignment": "left",
+      "blockClass": [
+        "basicDescriptionTitle",
+        "rich-text-margin-unset",
+        "infoSectionLink"
+      ]
+    }
+  },
+  "flex-layout.col#addressSectioninfo": {
+    "title": "[COL] - MID - Address Section info",
+    "props": {
+      "blockClass": []
+    },
+    "children": ["rich-text#addressSectionInfo", "link#addressSectionInfo"]
+  },
+  "rich-text#addressSectionInfo": {
+    "title": "[TEXT] - MID - Address Section Info",
+    "props": {
+      "text": "  titolo Descrizione",
+      "textAlignment": "left",
+      "blockClass": ["rich-text-margin-unset", "infoSectionLink"]
+    }
+  },
+  "link#addressSectionInfo": {
+    "title": "[LINK] - MID -  Link",
+    "children": ["rich-text#linkaddressSectionInfo"],
+    "props": {
+      "href": "#paragraph1",
+      "blockClass": []
+    }
+  },
+  "rich-text#linkaddressSectionInfo": {
+    "title": "[TEXT] - MID -  Link text",
+    "props": {
+      "text": "termine",
+      "textAlignment": "left",
+      "blockClass": ["linkOfTerm", "rich-text-margin-unset", "infoSectionLink"],
+      "textPosition": "Left"
+    }
+  },
+  /* TelefonSection */
+  "flex-layout.row#TelefonSection": {
+    "title": "[ROW] - MID -Telefon Section",
+    "props": {
+      "blockClass": ["infoSection"]
+    },
+    "children": [
+      "flex-layout.col#TelefonSectionLabel",
+      "flex-layout.col#TelefonSectioninfo"
+    ]
+  },
+  "flex-layout.col#TelefonSectionLabel": {
+    "title": "[COL] - MID -Telefon Section Label",
+    "props": {
+      "width": "25%",
+      "blockClass": ["SectionLabel"]
+    },
+    "children": ["rich-text#TelefonSectionLabel"]
+  },
+  "rich-text#TelefonSectionLabel": {
+    "title": "[TEXT] - MID -Telefon Section Label",
+    "props": {
+      "text": "  titolo Descrizione",
+      "textAlignment": "left",
+      "blockClass": [
+        "rich-text-margin-unset",
+        "infoSectionLink",
+        "basicDescriptionTitle"
+      ]
+    }
+  },
+  "flex-layout.col#TelefonSectioninfo": {
+    "title": "[COL] - MID -Telefon Section info",
+    "props": {
+      "blockClass": []
+    },
+    "children": ["rich-text#TelefonSectionInfo"]
+  },
+  "rich-text#TelefonSectionInfo": {
+    "title": "[TEXT] - MID -Telefon Section Info",
+    "props": {
+      "text": "  titolo Descrizione",
+      "textAlignment": "left",
+      "blockClass": ["rich-text-margin-unset", "infoSectionLink"]
+    }
+  },
+  /* FaxSection */
+  "flex-layout.row#FaxSection": {
+    "title": "[ROW] - MID -Fax Section",
+    "props": {
+      "blockClass": ["infoSection"]
+    },
+    "children": [
+      "flex-layout.col#FaxSectionLabel",
+      "flex-layout.col#FaxSectioninfo"
+    ]
+  },
+  "flex-layout.col#FaxSectionLabel": {
+    "title": "[COL] - MID -Fax Section Label",
+    "props": {
+      "width": "25%",
+      "blockClass": ["SectionLabel"]
+    },
+    "children": ["rich-text#FaxSectionLabel"]
+  },
+  "rich-text#FaxSectionLabel": {
+    "title": "[TEXT] - MID -Fax Section Label",
+    "props": {
+      "text": "  titolo Descrizione",
+      "textAlignment": "left",
+      "blockClass": [
+        "rich-text-margin-unset",
+        "infoSectionLink",
+        "basicDescriptionTitle"
+      ]
+    }
+  },
+  "flex-layout.col#FaxSectioninfo": {
+    "title": "[COL] - MID -Fax Section info",
+    "props": {
+      "blockClass": []
+    },
+    "children": ["rich-text#FaxSectionInfo"]
+  },
+  "rich-text#FaxSectionInfo": {
+    "title": "[TEXT] - MID -Fax Section Info",
+    "props": {
+      "text": "  titolo Descrizione",
+      "textAlignment": "left",
+      "blockClass": ["rich-text-margin-unset", "infoSectionLink"]
+    }
+  },
+  /* E-mailSection */
+  "flex-layout.row#E-mailSection": {
+    "title": "[ROW] - MID -E-mail Section",
+    "props": {
+      "blockClass": ["infoSection", "mailSection"]
+    },
+    "children": [
+      "flex-layout.col#E-mailSectionLabel",
+      "flex-layout.col#E-mailSectioninfo"
+    ]
+  },
+  "flex-layout.col#E-mailSectionLabel": {
+    "title": "[COL] - MID -E-mail Section Label",
+    "props": {
+      "width": "25%",
+      "blockClass": ["SectionLabel"]
+    },
+    "children": ["rich-text#E-mailSectionLabel"]
+  },
+  "rich-text#E-mailSectionLabel": {
+    "title": "[TEXT] - MID -E-mail Section Label",
+    "props": {
+      "text": "  titolo Descrizione",
+      "textAlignment": "left",
+      "blockClass": [
+        "rich-text-margin-unset",
+        "infoSectionLink",
+        "basicDescriptionTitle"
+      ]
+    }
+  },
+  "flex-layout.col#E-mailSectioninfo": {
+    "title": "[COL] - MID -E-mail Section info",
+    "props": {
+      "blockClass": []
+    },
+    "children": ["rich-text#E-mailSectionInfo"]
+  },
+  "rich-text#E-mailSectionInfo": {
+    "title": "[TEXT] - MID -E-mail Section Info",
+    "props": {
+      "text": "  titolo Descrizione",
+      "textAlignment": "left",
+      "blockClass": ["rich-text-margin-unset", "infoSectionLink"]
+    }
+  },
+  /* DirectorsSection */
+  "flex-layout.row#DirectorsSection": {
+    "title": "[ROW] - MID -Directors Section",
+    "props": {
+      "blockClass": ["infoSection"]
+    },
+    "children": [
+      "flex-layout.col#DirectorsSectionLabel",
+      "flex-layout.col#DirectorsSectioninfo"
+    ]
+  },
+  "flex-layout.col#DirectorsSectionLabel": {
+    "title": "[COL] - MID -Directors Section Label",
+    "props": {
+      "width": "25%",
+      "blockClass": ["SectionLabel"]
+    },
+    "children": ["rich-text#DirectorsSectionLabel"]
+  },
+  "rich-text#DirectorsSectionLabel": {
+    "title": "[TEXT] - MID -Directors Section Label",
+    "props": {
+      "text": "  titolo Descrizione",
+      "textAlignment": "left",
+      "blockClass": [
+        "basicDescriptionTitle",
+        "rich-text-margin-unset",
+        "infoSectionLink"
+      ]
+    }
+  },
+  "flex-layout.col#DirectorsSectioninfo": {
+    "title": "[COL] - MID -Directors Section info",
+    "props": {
+      "blockClass": []
+    },
+    "children": ["rich-text#DirectorsSectionInfo"]
+  },
+  "rich-text#DirectorsSectionInfo": {
+    "title": "[TEXT] - MID -Directors Section Info",
+    "props": {
+      "text": "  titolo Descrizione",
+      "textAlignment": "left",
+      "blockClass": ["rich-text-margin-unset", "infoSectionLink"]
+    }
+  },
+  /* SocietySection */
+  "flex-layout.row#SocietySection": {
+    "title": "[ROW] - MID -Society Section",
+    "props": {
+      "blockClass": ["infoSection"]
+    },
+    "children": [
+      "flex-layout.col#SocietySectionLabel",
+      "flex-layout.col#SocietySectioninfo"
+    ]
+  },
+  "flex-layout.col#SocietySectionLabel": {
+    "title": "[COL] - MID -Society Section Label",
+    "props": {
+      "width": "25%",
+      "blockClass": ["SectionLabel"]
+    },
+    "children": ["rich-text#SocietySectionLabel"]
+  },
+  "rich-text#SocietySectionLabel": {
+    "title": "[TEXT] - MID -Society Section Label",
+    "props": {
+      "text": "  titolo Descrizione",
+      "textAlignment": "left",
+      "blockClass": [
+        "basicDescriptionTitle",
+        "rich-text-margin-unset",
+        "infoSectionLink"
+      ]
+    }
+  },
+  "flex-layout.col#SocietySectioninfo": {
+    "title": "[COL] - MID -Society Section info",
+    "props": {
+      "blockClass": []
+    },
+    "children": ["rich-text#SocietySectionInfo"]
+  },
+  "rich-text#SocietySectionInfo": {
+    "title": "[TEXT] - MID -Society Section Info",
+    "props": {
+      "text": "  titolo Descrizione",
+      "textAlignment": "left",
+      "blockClass": ["rich-text-margin-unset", "infoSectionLink"]
+    }
+  },
+  /* Registry-courtSection */
+  "flex-layout.row#Registry-courtSection": {
+    "title": "[ROW] - MID - Registry-court Section",
+    "props": {
+      "blockClass": ["infoSection"]
+    },
+    "children": [
+      "flex-layout.col#Registry-courtSectionLabel",
+      "flex-layout.col#Registry-courtSectioninfo"
+    ]
+  },
+  "flex-layout.col#Registry-courtSectionLabel": {
+    "title": "[COL] - MID - Registry-court Section Label",
+    "props": {
+      "width": "25%",
+      "blockClass": ["SectionLabel"]
+    },
+    "children": ["rich-text#Registry-courtSectionLabel"]
+  },
+  "rich-text#Registry-courtSectionLabel": {
+    "title": "[TEXT] - MID - Registry-court Section Label",
+    "props": {
+      "text": "  titolo Descrizione",
+      "textAlignment": "left",
+      "blockClass": [
+        "basicDescriptionTitle",
+        "rich-text-margin-unset",
+        "infoSectionLink"
+      ]
+    }
+  },
+  "flex-layout.col#Registry-courtSectioninfo": {
+    "title": "[COL] - MID - Registry-court Section info",
+    "props": {
+      "blockClass": []
+    },
+    "children": ["rich-text#Registry-courtSectionInfo"]
+  },
+  "rich-text#Registry-courtSectionInfo": {
+    "title": "[TEXT] - MID - Registry-court Section Info",
+    "props": {
+      "text": "  titolo Descrizione",
+      "textAlignment": "left",
+      "blockClass": ["rich-text-margin-unset", "infoSectionLink"]
+    }
+  },
+  /* Seller-IdentifierSection */
+  "flex-layout.row#Seller-IdentifierSection": {
+    "title": "[ROW] - MID -Seller-Identifier Section",
+    "props": {
+      "blockClass": ["infoSection", "IdentifierSection"]
+    },
+    "children": [
+      "flex-layout.col#Seller-IdentifierSectionLabel",
+      "flex-layout.col#Seller-IdentifierSectioninfo"
+    ]
+  },
+  "flex-layout.col#Seller-IdentifierSectionLabel": {
+    "title": "[COL] - MID -Seller-Identifier Section Label",
+    "props": {
+      "width": "25%",
+      "blockClass": ["SectionLabel"]
+    },
+    "children": ["rich-text#Seller-IdentifierSectionLabel"]
+  },
+  "rich-text#Seller-IdentifierSectionLabel": {
+    "title": "[TEXT] - MID -Seller-Identifier Section Label",
+    "props": {
+      "text": "  titolo Descrizione",
+      "textAlignment": "left",
+      "blockClass": [
+        "basicDescriptionTitle",
+        "rich-text-margin-unset",
+        "infoSectionLink"
+      ]
+    }
+  },
+  "flex-layout.col#Seller-IdentifierSectioninfo": {
+    "title": "[COL] - MID -Seller-Identifier Section info",
+    "props": {
+      "blockClass": []
+    },
+    "children": ["rich-text#Seller-IdentifierSectionInfo"]
+  },
+  "rich-text#Seller-IdentifierSectionInfo": {
+    "title": "[TEXT] - MID -Seller-Identifier Section Info",
+    "props": {
+      "text": "  titolo Descrizione",
+      "textAlignment": "left",
+      "blockClass": ["rich-text-margin-unset", "infoSectionLink"]
+    }
+  },
+  /* WEE-REG-NrSection */
+  "flex-layout.row#WEE-REG-NrSection": {
+    "title": "[ROW] - MID -WEE-REG-Nr Section",
+    "props": {
+      "blockClass": ["infoSection", "REG-NrSection"]
+    },
+    "children": [
+      "flex-layout.col#WEE-REG-NrSectionLabel",
+      "flex-layout.col#WEE-REG-NrSectioninfo"
+    ]
+  },
+  "flex-layout.col#WEE-REG-NrSectionLabel": {
+    "title": "[COL] - MID -WEE-REG-Nr Section Label",
+    "props": {
+      "width": "25%",
+      "blockClass": ["SectionLabel"]
+    },
+    "children": ["rich-text#WEE-REG-NrSectionLabel"]
+  },
+  "rich-text#WEE-REG-NrSectionLabel": {
+    "title": "[TEXT] - MID -WEE-REG-Nr Section Label",
+    "props": {
+      "text": "  titolo Descrizione",
+      "textAlignment": "left",
+      "blockClass": [
+        "basicDescriptionTitle",
+        "rich-text-margin-unset",
+        "infoSectionLink"
+      ]
+    }
+  },
+  "flex-layout.col#WEE-REG-NrSectioninfo": {
+    "title": "[COL] - MID -WEE-REG-Nr Section info",
+    "props": {
+      "blockClass": []
+    },
+    "children": ["rich-text#WEE-REG-NrSectionInfo"]
+  },
+  "rich-text#WEE-REG-NrSectionInfo": {
+    "title": "[TEXT] - MID -WEE-REG-Nr Section Info",
+    "props": {
+      "text": "  titolo Descrizione",
+      "textAlignment": "left",
+      "blockClass": ["rich-text-margin-unset", "infoSectionLink"]
+    }
+  }
+}

@@ -1,0 +1,12 @@
+
+
+type Query {
+    getBomCodes(searchTerm: String!): [BomCodes]    @cacheControl(scope: PUBLIC, maxAge: LONG)
+    getFitsIn(sparePartId:  String!): [FitsInFG]    @cacheControl(scope: PUBLIC, maxAge: LONG)
+    doesItFit(sparePartId:  String!, industrialCode: String!): OutcomeFit   @cacheControl(scope: PUBLIC, maxAge: LONG)
+    getBomImage(industrialCode: String!): [BomTD] @cacheControl(scope: PUBLIC, maxAge: LONG)
+    getJcodeForBom(referenceNumber: String!, bomId: String!, industrialCode: String!): [SpareAndReference]   @cacheControl(scope: PUBLIC, maxAge: LONG)
+    getSpareByIndustrialWithFilterPAG(filter: [Filter], page: Int, pageSize: Int): [SparePart]  @cacheControl(scope: PUBLIC, maxAge: LONG)
+    getFamilyGroup(industrialCode: String!): FamilyGroupL   @cacheControl(scope: PUBLIC, maxAge: LONG)
+    getSupportVideos(sparePartId:  String!): SupportVideos   @cacheControl(scope: PUBLIC, maxAge: LONG)
+}

@@ -1,0 +1,119 @@
+{
+  "name": "pixel-my-account-app",
+  "vendor": "whirlpoolemea",
+  "version": "1.1.1",
+  "title": "Pixel app for my-account field",
+  "description": "",
+  "builders": {
+    "store": "0.x",
+    "pixel": "0.x",
+    "docs": "0.x"
+  },
+  "dependencies": {
+    "vtex.pixel-interfaces": "1.x"
+  },
+  "billingOptions": {
+    "termsURL": "https://compliance.vtex.com/gdpr/policies/vtex-privacy-policy",
+    "support": {
+      "url": "https://support.vtex.com/hc/requests"
+    },
+    "free": true
+  },
+  "settingsSchema": {
+    "title": "Pixel app my-account",
+    "type": "object",
+    "properties": {
+      "newsletterContainerTitle": {
+        "title": "Newsletter Container Title",
+        "description": "Enter the newsletterContainerTitle",
+        "type": "string"
+      },
+      "newsletterContainerMessage": {
+        "title": "Newsletter Container Message",
+        "description": "Enter the newsletter Container Message, could cointain HTML TAG and class like: class='vtex-rich-text-0-x-link vtex-rich-text-0-x-link--spaziature-impaginazione vtex-rich-text-0-x-link--paragraph-text-page'",
+        "type": "string"
+      },
+      "newsletterOptIn": {
+        "title": "Newsletter Opt In",
+        "description": "Insert newsletter Opt In",
+        "type": "string"
+      },
+      "showNewsletterOptInConfirmationButton": {
+        "title": "Show Newsletter OptIn Confirmation Button",
+        "description": "Tick this if you want to show a confirmation button to save the opt-in changes",
+        "type": "boolean",
+        "default": false
+      },
+      "confirmationButtonText": {
+        "title": "Newsletter OptIn Confirmation Button",
+        "description": "Newsletter optIn button text",
+        "type": "string",
+        "default": "Save"
+      },
+      "hasGA4": {
+        "title": "Is GA4 Implemented",
+        "description": "Set true if GA4 is implemented",
+        "type": "boolean",
+        "default": false
+      },
+      "showProfilingOptIn": {
+        "title": "Show Profiling OptIn",
+        "description": "Set true if you want to show and handle the Profiling OptIn",
+        "type": "boolean",
+        "default": false
+      },
+      "profilingContainerTitle": {
+        "title": "Profiling Container Title",
+        "description": "Enter the Profiling container title",
+        "type": "string"
+      },
+      "profilingContainerMessage": {
+        "title": "Profiling Container Message",
+        "description": "Enter the Profiling Container message (the one shown before checkbox), could cointain HTML TAG and class like: class='vtex-rich-text-0-x-link vtex-rich-text-0-x-link--spaziature-impaginazione vtex-rich-text-0-x-link--paragraph-text-page'",
+        "type": "string"
+      },
+      "profilingOptIn": {
+        "title": "Profiling Opt In",
+        "description": "Insert Profiling Opt In (text shown next to the checkbox)",
+        "type": "string"
+      },
+      "sessionAPIEndpoint": {
+        "title": "Get Session API Endpoint",
+        "description": "Endpoint used in the API call to get session info",
+        "type": "string",
+        "default": "/api/sessions?items=*"
+      },
+      "getUserInfoAPIEndpoint": {
+        "title": "Get User Info API Endpoint",
+        "description": "Endpoint used in the API call to get user info based on its email",
+        "type": "string",
+        "default": "/_v/wrapper/api/user/email/userinfo?email="
+      },
+      "addOptInAPIEndpoint": {
+        "title": "Add OptIn API Endpoint",
+        "description": "Endpoint used in the API call to add the OptIn",
+        "type": "string",
+        "default": "/_v/wrapper/api/user/newsletteroptin?email="
+      },
+      "errorProfilingOptIn": {
+        "title": "Error Profiling OptIn",
+        "description": "Error message shown clicking on profiling optin without isNewsletterOptIn checked",
+        "type": "string",
+        "default": "You must accept the marketing consent above in order to accept the profiling consent"
+      },
+      "cssFileName": {
+        "title": "CSS File Name",
+        "description": "Name of the css file name uploaded in /admin/a/ section",
+        "type": "string",
+        "default": "emea-pixel-my-account.css"
+      },
+      "activateFarEye": {
+        "title": "Fareye integration",
+        "description": "activate Fareye integration inside my account orders page",
+        "type": "boolean",
+        "default": false
+      }
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

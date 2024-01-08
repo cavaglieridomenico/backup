@@ -1,0 +1,61 @@
+{
+  "condition-layout.product#stickyAddToCart": {
+    "title": " [CONDITION] isProductAvailable? showAddToCArtSticky",
+    "props": {
+      "conditions": [
+        {
+          "subject": "isProductAvailable"
+        }
+      ],
+      "Then": "flex-layout.row#pdpSticky"
+    }
+  },
+  "sticky-layout#addToCart-button": {
+    "children": ["flex-layout.row#pdpSticky"],
+    "props": {
+      "blockClass": ["stickyButton", "mw9", "ph3"],
+      "position": "bottom"
+    }
+  },
+  "flex-layout.row#pdpSticky": {
+    "props": {
+      "blockClass": "stickyContainer",
+      "preserveLayoutOnMobile": true
+    },
+    "children": [
+      "flex-layout.col#pdpStickyColPrice",
+      "flex-layout.col#pdpStickyColAddToCart"
+    ]
+  },
+  "flex-layout.col#pdpStickyColPrice": {
+    "props": {
+      "blockClass": "pdpStickyColPrice",
+      "width": "40%"
+    },
+    "children": ["flex-layout.row#showPriceSticky"]
+  },
+  "flex-layout.col#pdpStickyColAddToCart": {
+    "props": {
+      "blockClass": "pdpStickyColAddToCart",
+      "width": "60%"
+    },
+    "children": [
+      "condition-layout.product#hasAccessoryAssociationsNotStock"
+      // "add-to-cart-custom#pdp"
+    ]
+  },
+  /*--- PRICE ---*/
+  "flex-layout.row#showPriceSticky": {
+    "props": {
+      "blockClass": "showPriceSticky"
+    },
+    "children": ["product-price-custom"]
+  },
+  "product-price-custom": {
+    "props": {
+      "showStar": false,
+      "showPercentageBadge": true,
+      "sellerID": "hotpointuk"
+    }
+  }
+}

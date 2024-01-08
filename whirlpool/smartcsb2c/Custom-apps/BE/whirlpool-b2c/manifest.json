@@ -1,0 +1,140 @@
+{
+  "name": "smartcsb2cqa-ch",
+  "version": "0.0.43",
+  "description": "SmartcsB2C-CH",
+  "vendor": "smartcsb2c",
+  "title": "SmartcsB2C-CH",
+  "categories": [],
+  "dependencies": {
+    "vtex.catalog-graphql": "1.x"
+  },
+  "builders": {
+    "node": "6.x",
+    "graphql": "1.x"
+  },
+  "credentialType": "absolute",
+  "policies": [
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "httpstat.us",
+        "path": "*"
+      }
+    },
+    {
+      "name": "colossus-fire-event"
+    },
+    {
+      "name": "colossus-write-logs"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "portal.vtexcommercestable.com.br",
+        "path": "/api/catalog/*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "portal.vtexcommercestable.com.br",
+        "path": "/api/catalog_system/*"
+      }
+    },
+    {
+      "name": "ADMIN_DS"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "api.vtex.com",
+        "path": "/dataentities/*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "portal.vtexcommercestable.com.br",
+        "path": "/api/logistics/*"
+      }
+    },
+    {
+      "name": "vtex.catalog-graphql:resolve-graphql"
+    }
+  ],
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema",
+  "settingsSchema": {
+    "title": "smartcsb2c",
+    "type": "object",
+    "properties": {
+      "X_VTEX_API_APPKEY": {
+        "title": "X-VTEX-API-APPKEY",
+        "type": "string"
+      },
+      "X_VTEX_API_APPTOKEN": {
+        "title": "X-VTEX-API-APPTOKEN",
+        "type": "string"
+      },
+      "COMMERCIAL_CODE_ID": {
+        "title": "Finished Good Commercial Code ID",
+        "type": "number"
+      },
+      "TRIMMED_CODE_ID": {
+        "title": "Finished Good Trimmed Code ID",
+        "type": "number"
+      },
+      "HANA_CODE_ID": {
+        "title": "Finished Good HANA Code ID",
+        "type": "number"
+      },
+      "INDESIT_MATERIAL_CODE_ID": {
+        "title": "Finished Good Indesit Material Code ID",
+        "type": "number"
+      },
+      "INDUSTRIAL_CODE_ID": {
+        "title": "Finished Good Industrial Code ID",
+        "type": "number"
+      },
+      "WHIRLPOOL_CODE_ID": {
+        "title": "Finished Good Whirlpool Code ID",
+        "type": "number"
+      },
+      "SPARE_JCODE_ID": {
+        "title": "Spare jCode ID",
+        "type": "number"
+      },
+      "SPARE_WINNER_ID": {
+        "title": "Spare Winner ID",
+        "type": "number"
+      },
+      "SPARE_LOOSER_ID": {
+        "title": "Spare Looser ID",
+        "type": "number"
+      },
+      "ACCESSORIES_JCODE_ID": {
+        "title": "Accessories jCode ID",
+        "type": "number"
+      },
+      "ACCESSORIES_WINNER_ID": {
+        "title": "Accessories Winner ID",
+        "type": "number"
+      },
+      "ACCESSORIES_LOOSER_ID": {
+        "title": "Accessories Looser ID",
+        "type": "number"
+      },
+      "FINISHED_GOODS_CATEGORY_ID": {
+        "title": "Finished Goods Category ID",
+        "type": "number"
+      },
+      "SPARE_PARTS_CATEGORY_ID": {
+        "title": "Spare Parts Category ID",
+        "type": "number"
+      },
+      "ACCESSORIES_CATEGORY_ID": {
+        "title": "Accessories Category ID",
+        "type": "number"
+      }
+    }
+  }
+}

@@ -1,0 +1,313 @@
+.section--deliveryInfo .productList,
+.section--deliveryInfo .packageHeader--delivery {
+  display: none;
+}
+.section--deliveryInfo--deliveryInfo .productList--deliveryInfo {
+  display: none; /* not working anymore, dunno why..*/
+}
+.package--delivery {
+  margin-top: 1rem;
+}
+.section--deliveryInfo {
+  border: none;
+  font-family: "hotpointRegular";
+}
+.section--deliveryInfo .package--delivery {
+  margin: 0;
+}
+.packageHeaderColumn {
+  margin: 0;
+  color: #505050;
+}
+.section--delivery-shipping-billing-wrapper .productList{
+  background-color: #03044e;
+  display: none;
+}
+.section--deliveryPackages {
+  font-family: "hotpointRegular";
+}
+.section--deliveryPackages .packageHeaderColumn {
+  display: none;
+}
+.confirmationIconWrapper {
+  color: #B24C24 !important;
+}
+.productList {
+  width: 100%;
+}
+.productWrapper {
+  margin-bottom: 2rem;
+}
+.productName {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #505050;
+  width: 50%;
+  align-self: center;
+}
+.productInfoColumn {
+  flex-direction: row;
+}
+.productPrice {
+  font-size: 1.5rem;
+  font-weight: 300;
+  font-family: "hotpointMedium";
+  color: #505050;
+  align-items: center;
+  align-content: center;
+  display: flex;
+}
+.productQuantity {
+  font-size: 1.25rem;
+  color: #505050;
+  align-items: center;
+  align-content: center;
+  display: flex;
+}
+.totalListWrapper {
+  justify-content: flex-start;
+}
+.totalListItem {
+  padding-top: 1rem;
+  padding-bottom: 0;
+
+  color: #505050;
+}
+.ivaTYP {
+  font-size: 0.625rem;
+}
+.attachmentHeader {
+  position: relative;
+  width: 100%;
+}
+.theoreticalPrice {
+  margin-right: 1rem !important;
+  text-decoration: line-through !important;
+  color: gray !important;
+  font-size: 0.7rem;
+  font-weight: 400;
+}
+.price,.attachmentToggleLabel{
+  color: #B24C24;
+  font-size: 1rem;
+  font-weight: 700;
+
+}
+.attachmentHeader::before {
+  content: url(assets/check2.svg);
+  position: absolute;
+  max-width: 0.3rem;
+  color: #B24C24;
+  border: none;
+  left: 0;
+}
+.sectionTitle {
+  margin-left: 9.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #353535;
+
+  position: relative;
+}
+.sectionTitle .price {
+  position: absolute;
+  text-transform: capitalize;
+  right: 0;
+  font-weight: 300;
+  font-family: "hotpointMedium";
+  color: #B24C24;
+}
+.attachmentPrice,
+.attachmentPriceFree {
+  text-transform: capitalize;
+  font-weight: 300;
+  font-family: "hotpointMedium";
+  color: #505050;
+}
+.attachmentPriceFree {
+  color: #B24C24;
+}
+.freePrice {
+  color: #B24C24;
+  font-size: 1rem;
+}
+.listContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 0;
+  margin-left: 9.5rem;
+}
+.attachmentTitle {
+  color: #353535;
+
+  margin-left: 0.8rem;
+}
+.attachmentWrapper {
+  margin-top: 0;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.garanziaContainer {
+  margin-left: 9.5rem;
+  padding: 0.5rem 0;
+}
+.attachmentToggleWrapper {
+  /* display: none; */
+}
+.totalList {
+  width: 100%;
+  margin-top: 10px;
+}
+.addressContainer {
+  line-height: 2;
+}
+.totalListItem:last-child {
+  border-top: 1px solid #e3e4e6;
+  margin-top: 12px;
+}
+.orderOptionsWrapper {
+  display: none;
+}
+.orderNumber {
+  font-size: 1.875rem;
+  font-family: "hotpointRegular";
+  font-weight: 600;
+  text-transform: none;
+  text-align: center;
+  letter-spacing: 0;
+  color: #505050;
+}
+.orderDatetime {
+  padding-left: 0.5rem;
+}
+.orderNumber--title {
+  text-align: left;
+}
+.productImageWrapper {
+  max-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1.5rem;
+}
+
+.energyLabel{
+  display: flex;
+  align-items: center;
+}
+
+.linkEnergy:hover {
+  color: #fdc100;
+}
+
+.linkEnergy {
+  color: #505050;
+}
+
+.linkEnergyHide{
+  display:none;
+}
+
+/* Media Queries */
+@media screen and (max-width: 668px) {
+  .orderNumber {
+    padding: 0 10px;
+  }
+  :global(.vtex-flex-layout-0-x-flexCol--quantity) {
+    display: none;
+  }
+  .productInfoColumn {
+    display: none;
+  }
+  .productImageWrapper {
+    max-height: 70px;
+    padding: 10px;
+    width: 3.813rem;
+    margin-left: 0;
+    height: 3.813rem;
+    max-width: 100%;
+    justify-content: space-evenly;
+    border-radius: 3px;
+    border: solid 1px #f7f7f7;
+  }
+  .productImageColumn {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+  .productImageWrapper {
+    margin-right: 0.5rem;
+  }
+  .productWrapper {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2rem;
+    position: relative;
+    padding: 0 0.5rem;
+  }
+  .productQuantity {
+    width: 100%;
+  }
+  .orderNumber {
+    font-size: 1.5rem;
+  }
+  .productName {
+    width: 70%;
+    font-size: 1rem;
+    line-height: normal;
+    display: flex;
+    text-align: left;
+    justify-content: flex-start;
+  }
+  .productQuantity {
+    margin: 0;
+    font-size: 1rem;
+  }
+  .productInfoColumn {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .sectionTitle {
+    margin-top: 30px;
+  }
+
+  .sectionTitle,
+  .attachmentWrapper,
+  .garanziaContainer {
+    margin-left: 0;
+    font-size: 0.875rem;
+  }
+  .garanziaContainer :global(.vtex-button) {
+    text-align: left;
+  }
+  .garanziaContainer :global(.vtex-button__label) {
+    padding: 0 0.5rem;
+  }
+  .productInfoColumn {
+    font-size: 1rem;
+  }
+  .listContainer {
+    padding: 0;
+    flex-direction: column;
+    margin-left: 0;
+  }
+  .totalListItemValue {
+    color: #727273;
+    padding: 0;
+  }
+  .productPrice {
+    width: 20%;
+    margin: 0;
+    font-size: 1rem;
+  }
+}
+
+.totalListItemLabel,
+.totalListItemValue {
+  font-family: "hotpointRegular";
+}

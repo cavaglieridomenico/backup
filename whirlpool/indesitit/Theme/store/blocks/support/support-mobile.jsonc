@@ -1,0 +1,1020 @@
+/* MOBILE SUPPORT */
+{
+  "responsive-layout.mobile#support": {
+    "children": [
+      "flex-layout.row#support-container-maxi-mobile"
+      // "analytics#support"
+    ]
+  },
+  "flex-layout.row#support-container-maxi-mobile": {
+    "children": ["flex-layout.col#support-container-maxi-mobile"],
+    "props": {
+      "blockClass": "support-container-maxi-mobile"
+    }
+  },
+  /* MAXI CONTAINER OF ALL ELEMENT IN THE PAGE */
+  "flex-layout.col#support-container-maxi-mobile": {
+    "children": [
+      "breadcrumb-custom#support-mobile",
+      "flex-layout.row#embedded-cta-container-mobile",
+      "flex-layout.row#troubleshooting-title-support-mobile-desktop",
+      "flex-layout.row#troubleshooting-desc-support-mobile-desktop",
+      "__fold__",
+      "flex-layout.row#support-page-layer-1-mobile",
+      "flex-layout.row#support-page-layer-2-mobile",
+      "flex-layout.row#support-page-layer-3-mobile",
+      "__fold__",
+      "flex-layout.row#other-category-mobile",
+      "flex-layout.row#book-an-appointment-mobile",
+      "flex-layout.row#protection-plans-card-mobile",
+      "__fold__",
+      "flex-layout.row#register-product-card-mobile",
+      "flex-layout.row#original-spare-parts-card-mobile",
+      //"flex-layout.row#find-your-manual-mobile",
+      "__fold__",
+      "flex-layout.row#technician-locator-card-mobile",
+      "flex-layout.row#top-service-card-mobile",
+      "flex-layout.row#contact-us-mobile",
+      "flex-layout.row#contact-us-carousel-mobile"
+    ],
+    "props": {
+      "blockClass": "support-container-maxi-mobile"
+    }
+  },
+  /* BREADCRUMB SUPPORT */
+  "breadcrumb-custom#support-mobile": {
+    "props": {
+      /* "blockClass": "containerBreadcrumbs", */
+      "currentPage": "Home",
+      "currentPath": "/"
+    }
+  },
+  "flex-layout.row#manuals-mobile": {
+    "children": ["manuals-page#mobile"]
+  },
+  "manuals-page#mobile": {},
+  /* SECTION WITH ALL EMBEDDED CTA */
+  "flex-layout.row#embedded-cta-container-mobile": {
+    "props": {
+      "blockClass": "embedded-cta-container-mobile"
+    },
+    "children": [
+      "flex-layout.col#embedded-cta-info-container-mobile",
+      "flex-layout.col#embedded-cta-link-container-mobile"
+    ]
+  },
+  "flex-layout.col#embedded-cta-info-container-mobile": {
+    "props": {
+      "blockClass": "embedded-cta-info-container-mobile"
+    },
+    "children": [
+      "rich-text#embedded-cta-title-mobile",
+      "rich-text#embedded-cta-desc-mobile"
+    ]
+  },
+  "rich-text#embedded-cta-title-mobile": {
+    "props": {
+      "text": "Come possiamo aiutarti oggi?",
+      "blockClass": "embedded-cta-title-mobile"
+    }
+  },
+  "rich-text#embedded-cta-desc-mobile": {
+    "props": {
+      "text": "Benvenuto nel Servizio Clienti Indesit! Da noi potrai trovare tutte le risposte alle tue domande, in modo da poter gestire, mantenere e riparare i tuoi elettrodomestici e farli funzionare come nuovi.",
+      "blockClass": "embedded-cta-desc-mobile"
+    }
+  },
+  "flex-layout.col#embedded-cta-link-container-mobile": {
+    "props": {
+      "blockClass": "embedded-cta-link-container-mobile"
+    },
+    "children": [
+      "flex-layout.row#protection-plans-container-mobile",
+      "flex-layout.row#intervetion-container-mobile",
+      "flex-layout.row#manuals-container-mobile",
+      "flex-layout.row#register-product-container-mobile",
+      "flex-layout.row#troubleshooting-container-mobile"
+    ]
+  },
+  /* PROTECTION PLANS CTA mobile*/
+  "flex-layout.row#protection-plans-container-mobile": {
+    "props": {
+      "blockClass": "ancor-container-mobile"
+    },
+    "children": [
+      "flex-layout.col#pp-text-container-mobile",
+      "flex-layout.col#pp-cta-container-mobile"
+    ]
+  },
+  "flex-layout.col#pp-text-container-mobile": {
+    "props": {
+      "blockClass": "pp-text-container-mobile"
+    },
+    "children": ["rich-text#pp-title-mobile", "rich-text#pp-preview-mobile"]
+  },
+  "rich-text#pp-title-mobile": {
+    "props": {
+      "text": "Piani di protezione",
+      "blockClass": "sup-title-mobile"
+    }
+  },
+  "rich-text#pp-preview-mobile": {
+    "props": {
+      "text": "Scopri i nostri piani di protezione per ricevere una copertura completa.",
+      "blockClass": "sup-preview-mobile"
+    }
+  },
+  "flex-layout.col#pp-cta-container-mobile": {
+    "props": {
+      "blockClass": "cta-container-mobile"
+    },
+    "children": ["menu-service-link-support#pp-cta-mobile"]
+  },
+  "menu-service-link-support#pp-cta-mobile": {
+    "props": {
+      "blockClass": "sup-cta-desktop",
+      "text": "Per saperne di più",
+      "src": "#piani-di-protezione",
+      "isBlank": false,
+      "gaEvent": "Protection plans",
+      "labelGa": "Learn more"
+    }
+  },
+  /* INTERVETION CTA mobile */
+  "flex-layout.row#intervetion-container-mobile": {
+    "props": {
+      "blockClass": "ancor-container-mobile"
+    },
+    "children": [
+      "flex-layout.col#int-text-container-mobile",
+      "flex-layout.col#int-cta-container-mobile"
+    ]
+  },
+  "flex-layout.col#int-text-container-mobile": {
+    "props": {
+      "blockClass": "int-text-container-mobile"
+    },
+    "children": ["rich-text#int-title-mobile", "rich-text#int-preview-mobile"]
+  },
+  "rich-text#int-title-mobile": {
+    "props": {
+      "text": "Prenota un intervento",
+      "blockClass": "sup-title-mobile"
+    }
+  },
+  "rich-text#int-preview-mobile": {
+    "props": {
+      "text": "Prenota, modifica o cancella il tuo appuntamento con i nostri esperti Indesit.",
+      "blockClass": "sup-preview-mobile"
+    }
+  },
+  "flex-layout.col#int-cta-container-mobile": {
+    "props": {
+      "blockClass": "cta-container-mobile"
+    },
+    "children": ["menu-service-link-support#int-cta-mobile"]
+  },
+  "menu-service-link-support#int-cta-mobile": {
+    "props": {
+      "blockClass": "sup-cta-desktop",
+      "text": "Prenota ora",
+      "src": "assistenza/richiedi-un-intervento#prenota-intervento",
+      "isBlank": false,
+      "gaEvent": "Intervention",
+      "labelGa": "Book now"
+    }
+  },
+  /* MANUALS CTA mobile */
+  "flex-layout.row#manuals-container-mobile": {
+    "props": {
+      "blockClass": "ancor-container-mobile"
+    },
+    "children": [
+      "flex-layout.col#man-text-container-mobile",
+      "flex-layout.col#man-cta-container-mobile"
+    ]
+  },
+  "flex-layout.col#man-text-container-mobile": {
+    "props": {
+      "blockClass": "man-text-container-mobile"
+    },
+    "children": ["rich-text#man-title-mobile", "rich-text#man-preview-mobile"]
+  },
+  "rich-text#man-title-mobile": {
+    "props": {
+      "text": "Manuali",
+      "blockClass": "sup-title-mobile"
+    }
+  },
+  "rich-text#man-preview-mobile": {
+    "props": {
+      "text": "Scarica il manuale d'uso del tuo apparecchio.",
+      "blockClass": "sup-preview-mobile"
+    }
+  },
+  "flex-layout.col#man-cta-container-mobile": {
+    "props": {
+      "blockClass": "cta-container-mobile"
+    },
+    "children": ["menu-service-link-support#man-cta-mobile"]
+  },
+  "menu-service-link-support#man-cta-mobile": {
+    "props": {
+      "blockClass": "sup-cta-desktop",
+      "text": "Vai ai Manuali",
+      "src": "/assistenza/manuali-istruzione",
+      "isBlank": false,
+      "gaEvent": "Manuals",
+      "labelGa": "Go to manuals"
+    }
+  },
+  /* REGISTER PRODUCT CTA mobile */
+  "flex-layout.row#register-product-container-mobile": {
+    "props": {
+      "blockClass": "ancor-container-mobile"
+    },
+    "children": [
+      "flex-layout.col#rp-text-container-mobile",
+      "flex-layout.col#rp-cta-container-mobile"
+    ]
+  },
+  "flex-layout.col#rp-text-container-mobile": {
+    "props": {
+      "blockClass": "rp-text-container-mobile"
+    },
+    "children": ["rich-text#rp-title-mobile", "rich-text#rp-preview-mobile"]
+  },
+  "rich-text#rp-title-mobile": {
+    "props": {
+      "text": "Registra il tuo prodotto",
+      "blockClass": "sup-title-mobile"
+    }
+  },
+  "rich-text#rp-preview-mobile": {
+    "props": {
+      "text": "Registra il tuo prodotto gratuitamente per scoprire ulteriori garanzie e supporto.",
+      "blockClass": "sup-preview-mobile"
+    }
+  },
+  "flex-layout.col#rp-cta-container-mobile": {
+    "props": {
+      "blockClass": "cta-container-mobile"
+    },
+    "children": ["menu-service-link-support#rp-cta-mobile"]
+  },
+  "menu-service-link-support#rp-cta-mobile": {
+    "props": {
+      "blockClass": "sup-cta-desktop",
+      "text": "Registrati ora",
+      "src": "#registra-il-prodotto",
+      "isBlank": false,
+      "gaEvent": "Register your product",
+      "labelGa": "Register now"
+    }
+  },
+  /* TROUBLESHOOTING CTA mobile */
+  "flex-layout.row#troubleshooting-container-mobile": {
+    "props": {
+      "blockClass": "ancor-container-mobile"
+    },
+    "children": [
+      "flex-layout.col#ts-text-container-mobile",
+      "flex-layout.col#ts-cta-container-mobile"
+    ]
+  },
+  "flex-layout.col#ts-text-container-mobile": {
+    "props": {
+      "blockClass": "ts-text-container-mobile"
+    },
+    "children": ["rich-text#ts-title-mobile", "rich-text#ts-preview-mobile"]
+  },
+  "rich-text#ts-title-mobile": {
+    "props": {
+      "text": "Risoluzione dei problemi",
+      "blockClass": "sup-title-mobile"
+    }
+  },
+  "rich-text#ts-preview-mobile": {
+    "props": {
+      "text": "Scopri come risolvere rapidamente il problema dei tuoi apparecchi.",
+      "blockClass": "sup-preview-mobile"
+    }
+  },
+  "flex-layout.col#ts-cta-container-mobile": {
+    "props": {
+      "blockClass": "cta-container-mobile"
+    },
+    "children": ["menu-service-link-support#ts-cta-mobile"]
+  },
+  "menu-service-link-support#ts-cta-mobile": {
+    "props": {
+      "blockClass": "sup-cta-desktop",
+      "text": "Per saperne di più",
+      "src": "#problemi-e-soluzioni",
+      "isBlank": false,
+      "gaEvent": "Troubleshooting",
+      "labelGa": "Learn more"
+    }
+  },
+  /* TROUBLESHOOTING SECTION TITLE MOBILE */
+  "flex-layout.row#troubleshooting-title-support-mobile-desktop": {
+    "props": {
+      "blockClass": "troubleshooting-title-support-mobile-desktop"
+    },
+    "children": [
+      "rich-text#text-none-troubleshooting",
+      "rich-text#troubleshooting-title-support-mobile"
+    ]
+  },
+  "rich-text#text-none-troubleshooting": {
+    "props": {
+      "text": "A",
+      "blockClass": "text-none-troubleshooting",
+      "htmlId": "problemi-e-soluzioni"
+    }
+  },
+  "rich-text#troubleshooting-title-support-mobile": {
+    "props": {
+      "text": "Hai bisogno di un supporto rapido?",
+      "blockClass": "troubleshooting-title-support-mobile"
+    }
+  },
+  "flex-layout.row#troubleshooting-desc-support-mobile-desktop": {
+    "props": {
+      "blockClass": "troubleshooting-desc-support-mobile-desktop"
+    },
+    "children": ["rich-text#troubleshooting-desc-support-mobile"]
+  },
+  "rich-text#troubleshooting-desc-support-mobile": {
+    "props": {
+      "text": "Seleziona la categoria del tuo elettrodomestico, ti guideremo dandoti soluzioni utili, senza necessità di un intervento",
+      "blockClass": "troubleshooting-desc-support-mobile"
+    }
+  },
+  /* BUTTON OTHER CATEGORY mobile */
+  "flex-layout.row#other-category-mobile": {
+    "props": {
+      "blockClass": "other-category-container-mobile"
+    },
+    "children": ["button-assistenza#button-other-category-mobile"]
+  },
+  "button-assistenza#button-other-category-mobile": {
+    "props": {
+      "src": "/assistenza/problemi-e-soluzioni/",
+      "isBlank": false,
+      "isPrimary": false,
+      "text": "Altre categorie",
+      "labelGa": "Other categories"
+    }
+  },
+  /* BOOK AN APPOINTMENT mobile */
+  "flex-layout.row#book-an-appointment-mobile": {
+    "props": {
+      "blockClass": "book-an-appointment-mobile"
+    },
+    "children": ["flex-layout.col#book-an-appointment-mobile"]
+  },
+  "flex-layout.col#book-an-appointment-mobile": {
+    "props": {
+      "blockClass": "book-an-appointment-mobile"
+    },
+    "children": [
+      "flex-layout.row#baa-title-container-mobile",
+      "flex-layout.row#baa-desc-container-mobile",
+      "flex-layout.row#baa-buttons-container-mobile"
+    ]
+  },
+  "flex-layout.row#baa-title-container-mobile": {
+    "props": {
+      "blockClass": "baa-title-container-mobile"
+    },
+    "children": ["rich-text#baa-title-mobile"]
+  },
+  "rich-text#baa-title-mobile": {
+    "props": {
+      "text": "Organizza una riparazione con un tecnico autorizzato Indesit!",
+      "blockClass": "baa-title-mobile",
+      "htmlId": "intervento"
+    }
+  },
+  "flex-layout.row#baa-desc-container-mobile": {
+    "props": {
+      "blockClass": "baa-desc-container-mobile"
+    },
+    "children": ["rich-text#baa-desc-mobile"]
+  },
+  "rich-text#baa-desc-mobile": {
+    "props": {
+      "text": "Prenota, modifica o cancella il tuo appuntamento con uno dei nostri tecnici autorizzati",
+      "blockClass": "baa-desc-mobile"
+    }
+  },
+  "flex-layout.row#baa-buttons-container-mobile": {
+    "props": {
+      "blockClass": "baa-buttons-container-mobile"
+    },
+    "children": [
+      "button-assistenza#baa-button-mobile",
+      "button-assistenza#baa-button-amend-cancel-mobile"
+    ]
+  },
+  "button-assistenza#baa-button-mobile": {
+    "props": {
+      "src": "/assistenza/richiedi-un-intervento#prenota-intervento",
+      "text": "Prenota un appuntamento",
+      "isPrimary": true,
+      "isBlank": false,
+      "labelGa": "Book an appointment",
+      "gaEvent": "clickExpertTechnician"
+    }
+  },
+  "button-assistenza#baa-button-amend-cancel-mobile": {
+    "props": {
+      "src": "/assistenza/easy-service?soid=#/",
+      "text": "Modifica / Cancella",
+      "isPrimary": false,
+      "isBlank": false
+    }
+  },
+  /* PROTECTION PLANS CARD WITH TEXT ON THE RIGHT */
+  "flex-layout.row#protection-plans-card-mobile": {
+    "props": {
+      "blockClass": "card-mobile"
+    },
+    "children": ["flex-layout.col#protection-plans-card-mobile"]
+  },
+  "flex-layout.col#protection-plans-card-mobile": {
+    "props": {
+      "blockClass": "card-mobile"
+    },
+    "children": ["flex-layout.row#protection-plans-card-container-mobile"]
+  },
+  "flex-layout.row#protection-plans-card-container-mobile": {
+    "props": {
+      "blockClass": "card-tr-container-mobile"
+    },
+    "children": [
+      "flex-layout.col#protection-plans-card-image-mobile",
+      "flex-layout.col#protection-plans-card-container-desc-mobile"
+    ]
+  },
+  /* ------------------------------------ */
+  "flex-layout.col#protection-plans-card-image-mobile": {
+    "children": [
+      "rich-text#text-none-protection-plans-mobile",
+      "image#protection-plans-card-image-mobile"
+    ],
+    "props": {
+      "blockClass": "card-tr-text-image-mobile"
+    }
+  },
+  "rich-text#text-none-protection-plans-mobile": {
+    "props": {
+      "text": "A",
+      "blockClass": "text-none-protection-plans-mobile",
+      "htmlId": "piani-di-protezione"
+    }
+  },
+  "image#protection-plans-card-image-mobile": {
+    "props": {
+      "blockClass": "card-image-mobile",
+      "src": "assets/main-service/protection-plans.png"
+    }
+  },
+  /* ------------------------------------ */
+  "flex-layout.col#protection-plans-card-container-desc-mobile": {
+    "children": [
+      "rich-text#protection-plans-card-title-mobile",
+      "rich-text#protection-plans-card-desc-mobile",
+      "flex-layout.col#button-container-pp-mobile",
+      "rich-text#protection-plans-card-note-mobile"
+    ],
+    "props": {
+      "blockClass": "container-text-image-support-template-mobile"
+    }
+  },
+  "rich-text#protection-plans-card-title-mobile": {
+    "props": {
+      "blockClass": "title-text-image-support-template-mobile",
+      "text": "Piani di protezione Indesit"
+    }
+  },
+  "rich-text#protection-plans-card-desc-mobile": {
+    "props": {
+      "blockClass": "description-text-image-support-template-mobile",
+      "text": "Ricevi una tranquillità extra con il nostro piano di assistenza. La protezione Indesit offre riparazioni su più elettrodomestici per mantenerli come nuovi."
+    }
+  },
+  /* PULSANTI */
+  "flex-layout.col#button-container-pp-mobile": {
+    "children": [
+      "flex-layout.row#button-u24-protection-plans-card-mobile",
+      "flex-layout.row#button-o24-protection-plans-card-mobile"
+    ],
+    "props": {
+      "blockClass": "button-container-pp-mobile"
+    }
+  },
+  "flex-layout.row#button-o24-protection-plans-card-mobile": {
+    "children": ["button-assistenza#button-o24-protection-plans-card-mobile"]
+  },
+  "button-assistenza#button-o24-protection-plans-card-mobile": {
+    "props": {
+      "src": "/assistenza/piani-di-protezione#piu-24-mesi",
+      "isBlank": false,
+      "text": "Più di 24 mesi*",
+      "isPrimary": true,
+      "gaEvent": "clickProtectionPlan",
+      "labelGa": "Over 24 months"
+    }
+  },
+  "flex-layout.row#button-u24-protection-plans-card-mobile": {
+    "children": ["button-assistenza#button-u24-protection-plans-card-mobile"]
+  },
+  "button-assistenza#button-u24-protection-plans-card-mobile": {
+    "props": {
+      "src": "/assistenza/piani-di-protezione#meno-24-mesi",
+      "isBlank": false,
+      "text": "Meno di 24 mesi*",
+      "isPrimary": true,
+      "gaEvent": "clickProtectionPlan",
+      "labelGa": "Under 24 months"
+    }
+  },
+  "rich-text#protection-plans-card-note-mobile": {
+    "props": {
+      "blockClass": "note-card-mobile",
+      "text": "*La sua garanzia è iniziata il giorno in cui ha comprato l'apparecchio."
+    }
+  },
+  /* REGISTER PRODUCT CARD WITH TEXT ON THE LEFT */
+  "flex-layout.row#register-product-card-mobile": {
+    "props": {
+      "blockClass": "card-mobile"
+    },
+    "children": ["flex-layout.col#register-product-card-mobile"]
+  },
+  "flex-layout.col#register-product-card-mobile": {
+    "props": {
+      "blockClass": "card-mobile"
+    },
+    "children": ["flex-layout.row#register-product-card-container-mobile"]
+  },
+  "flex-layout.row#register-product-card-container-mobile": {
+    "props": {
+      "blockClass": "card-tr-container-mobile"
+    },
+    "children": [
+      // "image#register-product-card-image-mobile",
+      "flex-layout.row#text-none-register-mobile",
+      "flex-layout.row#register-product-card-image-mobile",
+      "flex-layout.col#register-product-card-container-desc-mobile"
+    ]
+  },
+  /* ------------------------------------ */
+  "flex-layout.row#register-product-card-image-mobile": {
+    "children": ["image#register-product-card-image-mobile"],
+    "props": {
+      "blockClass": "card-tr-image-mobile"
+    }
+  },
+  "image#register-product-card-image-mobile": {
+    "props": {
+      "blockClass": "image-container-mobile",
+      "src": "assets/main-service/register-product.png"
+    }
+  },
+  "flex-layout.row#text-none-register-mobile": {
+    "props": {
+      "blockClass": "text-none-register"
+    },
+    "children": ["rich-text#text-none-register-mobile"]
+  },
+  "rich-text#text-none-register-mobile": {
+    "props": {
+      "text": "A",
+      "blockClass": "text-none-register",
+      "htmlId": "registra-il-prodotto"
+    }
+  },
+  /* ------------------------------------ */
+  "flex-layout.col#register-product-card-container-desc-mobile": {
+    "children": [
+      "rich-text#register-product-card-title-mobile",
+      "rich-text#register-product-card-desc-mobile",
+      "flex-layout.col#button-register-product-mobile"
+    ],
+    "props": {
+      "blockClass": "container-text-image-support-template-mobile"
+    }
+  },
+  "rich-text#register-product-card-title-mobile": {
+    "props": {
+      "blockClass": "title-text-image-support-template-mobile",
+      "text": "Registra il tuo prodotto e ottieni 10 anni di garanzia su tutte le parti!"
+    }
+  },
+  "rich-text#register-product-card-desc-mobile": {
+    "props": {
+      "blockClass": "description-text-image-support-template-mobile",
+      "text": "Hai acquistato di recente un elettrodomestico Indesit? Registra il tuo prodotto e richiedi i tuoi 10 anni di garanzia sui pezzi di ricambio."
+    }
+  },
+  /* PULSANTE */
+  "flex-layout.col#button-register-product-mobile": {
+    "children": ["button-assistenza#button-register-product-mobile"]
+  },
+  "button-assistenza#button-register-product-mobile": {
+    "props": {
+      "src": "https://indesit.register-appliance.com/RegistroPorMarca?country=IT&language=it",
+      "isPrimary": true,
+      "isBlank": true,
+      "text": "Registrati ora",
+      "gaEvent": "clickProductRegistration",
+      "labelGa": "Register now"
+    }
+  },
+  /* ORIGINAL SPARE PARTS CARD WITH TEXT ON THE LEFT mobile*/
+  "flex-layout.row#original-spare-parts-card-mobile": {
+    "props": {
+      "blockClass": "card-mobile"
+    },
+    "children": ["flex-layout.col#original-spare-parts-card-mobile"]
+  },
+  "flex-layout.col#original-spare-parts-card-mobile": {
+    "props": {
+      "blockClass": "card-mobile"
+    },
+    "children": ["flex-layout.row#original-spare-parts-card-container-mobile"]
+  },
+  "flex-layout.row#original-spare-parts-card-container-mobile": {
+    "props": {
+      "blockClass": "card-tr-container-mobile"
+    },
+    "children": [
+      "flex-layout.row#original-spare-parts-card-image-mobile",
+      "flex-layout.col#original-spare-parts-card-container-desc-mobile"
+    ]
+  },
+  /* ------------------------------------ */
+  "flex-layout.row#original-spare-parts-card-image-mobile": {
+    "children": ["image#original-spare-parts-card-image-mobile"],
+    "props": {
+      "blockClass": "card-tr-image-mobile"
+    }
+  },
+  "image#original-spare-parts-card-image-mobile": {
+    "props": {
+      "blockClass": "image-container-mobile",
+      "src": "assets/main-service/original-spare-parts.png"
+    }
+  },
+  /* ------------------------------------ */
+  "flex-layout.col#original-spare-parts-card-container-desc-mobile": {
+    "children": [
+      "rich-text#original-spare-parts-card-title-mobile",
+      "rich-text#original-spare-parts-card-desc-mobile",
+      "flex-layout.col#text-none-manuals"
+    ],
+    "props": {
+      "blockClass": "container-text-image-support-template-mobile"
+    }
+  },
+  "rich-text#original-spare-parts-card-title-mobile": {
+    "props": {
+      "blockClass": "title-text-image-support-template-mobile",
+      "text": "Ricambi originali"
+    }
+  },
+  "rich-text#original-spare-parts-card-desc-mobile": {
+    "props": {
+      "blockClass": "description-text-image-support-template-mobile",
+      "text": "Scopri  il nostro catalogo di  ricambio originali per tutti i tuoi elettrodomestici."
+    }
+  },
+  "flex-layout.col#text-none-manuals": {
+    "children": [
+      "button-assistenza#text-none-manuals",
+      "rich-text#text-none-manuals-mobile"
+    ]
+  },
+  "button-assistenza#text-none-manuals": {
+    "props": {
+      "src": "https://www.indesit-ricambi.it/",
+      "isBlank": true,
+      "isPrimary": true,
+      "text": "Per saperne di più",
+      "gaEvent": "Protection plans",
+      "labelGa": "Learn more"
+    }
+  },
+  "rich-text#text-none-manuals-mobile": {
+    "props": {
+      "text": "A",
+      "blockClass": "text-none-manuals",
+      "htmlId": "manuali"
+    }
+  },
+  /* FIND YOUR MANUALS mobile */
+  "flex-layout.row#find-your-manual-mobile": {
+    "props": {
+      "blockClass": "find-your-manual-mobile"
+    },
+    "children": ["flex-layout.col#find-your-manual-mobile"]
+  },
+  "flex-layout.col#find-your-manual-mobile": {
+    "props": {
+      "blockClass": "find-your-manual-mobile"
+    },
+    "children": [
+      "flex-layout.row#fym-title-container-mobile",
+      "flex-layout.row#fym-desc-container-mobile",
+      "flex-layout.row#manuals-mobile",
+      //TODO EMBEDDED https://docs.indesit.eu/?Campo_Ricerca=&Campo_Ricerca_Code=&typeSearch=12NC&startSearch=1&brand=ID&locale=IT
+      "flex-layout.row#fym-link-where-I-can-find-mobile", // DOVE POSSO TROVARE IL CODICE?
+      "flex-layout.row#fym-buttons-container-mobile"
+    ]
+  },
+  "flex-layout.row#fym-title-container-mobile": {
+    "props": {
+      "blockClass": "fym-title-container-mobile"
+    },
+    "children": ["rich-text#fym-title-mobile"]
+  },
+  "rich-text#fym-title-mobile": {
+    "props": {
+      "text": "Trova i tuoi manuali",
+      "blockClass": "fym-title-mobile"
+    }
+  },
+  "flex-layout.row#fym-desc-container-mobile": {
+    "props": {
+      "blockClass": "fym-desc-container-mobile"
+    },
+    "children": ["rich-text#fym-desc-mobile"]
+  },
+  "rich-text#fym-desc-mobile": {
+    "props": {
+      "text": "Scarica il manuale d'uso del tuo apparecchio.",
+      "blockClass": "fym-desc-mobile"
+    }
+  },
+  "flex-layout.row#fym-link-where-I-can-find-mobile": {
+    "props": {
+      "blockClass": "fym-buttons-text-container-mobile"
+    },
+    "children": ["modal-trigger#modal-manuals-mobile"]
+  },
+  "modal-trigger#modal-manuals-mobile": {
+    "props": {
+      "blockClass": "trigger-link-where-i-can-find-mobile"
+    },
+    "children": [
+      "rich-text#modal-manuals-mobile",
+      "modal-layout#manuals-code-mobile"
+    ]
+  },
+  "rich-text#modal-manuals-mobile": {
+    "props": {
+      "blockClass": "modal-manuals-text-mobile",
+      "text": "Dove posso trovare il codice?​​​​​​​"
+    }
+  },
+  "modal-layout#manuals-code-mobile": {
+    "props": {
+      "blockClass": "modal-layout-manuals-code-mobile"
+    },
+    "children": [
+      "modal-actions.close#close-manuals-modal-mobile",
+      "flex-layout.col#modal-manuals-mobile"
+    ]
+  },
+  "modal-actions.close#close-manuals-modal-mobile": {
+    "props": {
+      "label": "",
+      "blockClass": "close-modal-button-manuals-code-mobile"
+    }
+  },
+  "flex-layout.col#modal-manuals-mobile": {
+    "props": {
+      "blockClass": "modal-manuals-code-container-mobile"
+    },
+    "children": ["modal-manual#modal-manual-code-mobile"]
+  },
+  "modal-manual#modal-manual-code-mobile": {
+    "props": {
+      "pathImage": "assets/code-manual-modal.png"
+    }
+  },
+  "flex-layout.row#fym-buttons-container-mobile": {
+    "props": {
+      "blockClass": "fym-buttons-container-mobile"
+    },
+    "children": ["button-assistenza#fym-button-amend-cancel-mobile"]
+  },
+  "button-assistenza#fym-button-amend-cancel-mobile": {
+    "props": {
+      "src": "/assistenza/manuali-istruzione",
+      "text": "Vedi tutti i manuali",
+      "isPrimary": false,
+      "isBlank": true,
+      "gaEvent": "clickManualsOverview",
+      "labelGa": "See all manuals"
+    }
+  },
+  /* TECHNICIAN LOCATOR CARD WITH TEXT ON THE RIGHT mobile */
+  "flex-layout.row#technician-locator-card-mobile": {
+    "props": {
+      "blockClass": "card-mobile"
+    },
+    "children": ["flex-layout.col#technician-locator-card-mobile"]
+  },
+  "flex-layout.col#technician-locator-card-mobile": {
+    "props": {
+      "blockClass": "card-mobile"
+    },
+    "children": ["flex-layout.row#technician-locator-card-container-mobile"]
+  },
+  "flex-layout.row#technician-locator-card-container-mobile": {
+    "props": {
+      "blockClass": "card-tr-container-mobile"
+    },
+    "children": [
+      "flex-layout.col#technician-locator-card-image-mobile",
+      "flex-layout.col#technician-locator-card-container-desc-mobile"
+    ]
+  },
+  /* ------------------------------------ */
+  "flex-layout.col#technician-locator-card-image-mobile": {
+    "children": ["image#technician-locator-card-image-mobile"],
+    "props": {
+      "blockClass": "card-tr-image-mobile"
+    }
+  },
+  "image#technician-locator-card-image-mobile": {
+    "props": {
+      "blockClass": "card-image-mobile",
+      "src": "assets/main-service/technician-locator.png"
+    }
+  },
+  /* ------------------------------------ */
+  "flex-layout.col#technician-locator-card-container-desc-mobile": {
+    "children": [
+      "rich-text#technician-locator-card-title-mobile",
+      "rich-text#technician-locator-card-desc-mobile",
+      "flex-layout.col#button-technician-locator-card-mobile"
+    ],
+    "props": {
+      "blockClass": "container-text-image-support-template-mobile"
+    }
+  },
+  "rich-text#technician-locator-card-title-mobile": {
+    "props": {
+      "blockClass": "title01-text-image-support-template-mobile",
+      "text": "Ricerca di un centro assistenza autorizzato Indesit"
+    }
+  },
+  "rich-text#technician-locator-card-desc-mobile": {
+    "props": {
+      "blockClass": "description-text-image-support-template-mobile",
+      "text": "Trova il tecnico autorizzato più vicino."
+    }
+  },
+  "flex-layout.col#button-technician-locator-card-mobile": {
+    "children": ["button-assistenza#button-technician-locator-card-mobile"]
+  },
+  "button-assistenza#button-technician-locator-card-mobile": {
+    "props": {
+      "src": "/assistenza/service-locator",
+      "isBlank": true,
+      "isPrimary": true,
+      "text": "Scopri di più",
+      "gaEvent": "clickTechnicianFinder",
+      "labelGa": "Discover more"
+    }
+  },
+  /* TOP SERVICE CARD mobile */
+  "flex-layout.row#top-service-card-mobile": {
+    "title": "Row - Top Service Card Mobile",
+    "props": {
+      "blockClass": "card-mobile"
+    },
+    "children": ["flex-layout.col#top-service-card-mobile"]
+  },
+  "flex-layout.col#top-service-card-mobile": {
+    "props": {
+      "blockClass": "card-mobile"
+    },
+    "children": ["flex-layout.row#top-service-card-container-mobile"]
+  },
+  "flex-layout.row#top-service-card-container-mobile": {
+    "props": {
+      "blockClass": "card-tr-container-mobile"
+    },
+    "children": [
+      "flex-layout.col#top-service-card-image-mobile",
+      "flex-layout.col#top-service-card-container-desc-mobile"
+    ]
+  },
+  /* ------------------------------------ */
+  "flex-layout.col#top-service-card-image-mobile": {
+    "children": ["image#top-service-card-image-mobile"],
+    "props": {
+      "blockClass": "card-tr-image-mobile"
+    }
+  },
+  "image#top-service-card-image-mobile": {
+    "title": "Image - Top Service Image",
+    "props": {
+      "blockClass": ["card-image-mobile", "card-image-mobile-support"],
+      "src": "https://itwhirlpool.vtexassets.com/assets/vtex.file-manager-graphql/images/4ff056b9-f2a0-4e1c-b161-c4c37468994c___f2afa48372c36309d09382339e6a56cd.jpg"
+    }
+  },
+  /* ------------------------------------ */
+  "flex-layout.col#top-service-card-container-desc-mobile": {
+    "children": [
+      "rich-text#top-service-card-title-mobile",
+      "rich-text#top-service-card-desc-mobile"
+    ],
+    "props": {
+      "blockClass": "container-text-image-support-template-mobile"
+    }
+  },
+  "rich-text#top-service-card-title-mobile": {
+    "title": "Rich Text - Top Service Title",
+    "props": {
+      "blockClass": "title01-text-image-support-template-mobile",
+      "text": "Indesit eletta Top Service"
+    }
+  },
+  "rich-text#top-service-card-desc-mobile": {
+    "title": "Rich Text - Top Service Description",
+    "props": {
+      "blockClass": "description-text-image-support-template-mobile",
+      "text": "Indesit è stata eletta Top Service posizionandosi al vertice delle classifiche per quanto riguarda il servizio ai consumatori. A dirlo è un’analisi condotta dall’Istituto Tedesco Qualità e Finanza, ente indipendente specializzato nell’analisi e nella comparazione di prodotti e servizi!"
+    }
+  },
+  /* CONTACT US mobile */
+  "flex-layout.row#contact-us-mobile": {
+    "props": {
+      "blockClass": "contact-us-service"
+    },
+    "children": ["flex-layout.col#contact-us-mobile"]
+  },
+  "flex-layout.col#contact-us-mobile": {
+    "props": {
+      "blockClass": "contact-us"
+    },
+    "children": [
+      "flex-layout.row#cu-title-container-mobile",
+      "flex-layout.row#cu-desc-container-mobile"
+    ]
+  },
+  "flex-layout.row#cu-title-container-mobile": {
+    "props": {
+      "blockClass": "cu-title-container-mobile"
+    },
+    "children": ["rich-text#cu-title-mobile"]
+  },
+  "rich-text#cu-title-mobile": {
+    "props": {
+      "text": "Hai bisogno di aiuto? Contattaci.",
+      "blockClass": "cu-title-mobile"
+    }
+  },
+  "flex-layout.row#cu-desc-container-mobile": {
+    "props": {
+      "blockClass": "cu-desc-container-mobile"
+    },
+    "children": ["rich-text#cu-desc-mobile"]
+  },
+  "rich-text#cu-desc-mobile": {
+    "props": {
+      "text": "Se non hai trovato una soluzione con i nostri servizi, mettiti in contatto con il nostro servizio clienti.",
+      "blockClass": "cu-desc-mobile"
+    }
+  },
+  /* ---------------------------------------------- */
+  "flex-layout.row#contact-us-carousel-mobile": {
+    "props": {
+      "blockClass": "contact-us-carousel-mobile"
+    },
+    "children": [
+      "contact-us-carousel-mobile",
+      "flex-layout.row#contact-us-disclaimer-mobile"
+    ]
+  },
+  "contact-us-carousel-mobile": {},
+  "flex-layout.row#contact-us-disclaimer-mobile": {
+    "props": {
+      "blockClass": "contactUsDisclaimerMobile"
+    },
+    "children": ["rich-text#contact-us-disclaimer-mobile"]
+  },
+  "rich-text#contact-us-disclaimer-mobile": {
+    "props": {
+      "text": "*Al costo di una chiamata a rete fissa secondo il piano tariffario previsto dal proprio operatore.",
+      "blockClass": "contactUsDisclaimerMobile"
+    }
+  }
+}

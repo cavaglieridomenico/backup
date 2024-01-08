@@ -1,0 +1,10 @@
+query ($key: String!, $value: String) {
+  Subscribe(email: $key, refId: $value) {
+    email
+    emailSent
+    isDropPriceAlert
+    isDropPriceExpire
+    refId
+    subscriptionPrice
+  }
+}

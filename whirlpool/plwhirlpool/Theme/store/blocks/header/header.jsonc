@@ -1,0 +1,592 @@
+{
+  "header": {
+    "blocks": [
+      "header-layout.desktop",
+      "header-layout.mobile"
+    ]
+  },
+  "header.full": {
+    "blocks": [
+      "header-layout.desktop",
+      "header-layout.mobile"
+    ]
+  },
+  "header-layout.desktop": {
+    "children": [
+      "experimental__visibility-layout#popup-home",
+      "sticky-layout#desktop",
+      "slider-layout#banner-carousel",
+      // "newsletter-popup#header"
+      "flex-layout.row#newsletter-automatic-popup"
+    ]
+  },
+  "experimental__visibility-layout#popup-home": {
+    "title": "Toggle layout Desktop - Stripe Popup Banner",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "popup-custom#home"
+    ]
+  },
+  "popup-custom#home": {
+    "props": {
+      "blockClass": "popupHome"
+    },
+    "children": [
+      "image#popup-home",
+      "rich-text#popup-home",
+      "analytics-wrapper#popup-home"
+    ]
+  },
+  "image#popup-home": {
+    "title": "Stripe Icon - Pop Up Banner",
+    "props": {
+      "blockClass": "popupHome",
+      "alt": "icon of stripe",
+      "src": "assets/account-icon.svg",
+      "maxWidth": 24,
+      "maxHeight": 24
+    }
+  },
+  "rich-text#popup-home": {
+    "title": "Stripe Text - Pop Up Banner",
+    "props": {
+      "blockClass": "popupHome",
+      "text": "TEXT OF THE BANNER",
+      "textAlignment": "LEFT",
+      "textPosition": "CENTER"
+    }
+  },
+  "analytics-wrapper#popup-home": {
+    "title": "[Analytics] CTA of Stripe",
+    "props": {
+      "isSlider": false,
+      "isLazy": false,
+      "propsAnalytics": {
+        "analyticsProperties": "provide",
+        "nameEvent": "stripeBanner_clickCTA",
+        "name": "data",
+        "data": [
+          {
+            "title": "section",
+            "value": "Homepage"
+          }
+        ]
+      },
+      "isView": true
+    },
+    "children": [
+      "link#popup-home"
+    ]
+  },
+  "link#popup-home": {
+    "title": "CTA of Stripe - Pop Up Banner",
+    "props": {
+      "blockClass": "popupHome",
+      "label": "CTA TEXT",
+      "href": "#",
+      "displayMode": "button",
+      "buttonProps": {
+        "variant": "primary",
+        "size": "small"
+      },
+      "isPrevent": false
+    }
+  },
+  "newsletter-popup#header": {
+    "props": {
+      "time": 0.25 // default time is 1 = 60 sec -> 60 / 4 = 15 res
+    },
+    "children": [
+      "newletter-form"
+    ]
+  },
+  "sticky-layout#desktop": {
+    "props": {
+      "blockClass": "sticky-header"
+    },
+    "children": [
+      "flex-layout.row#desktop"
+    ]
+  },
+  "flex-layout.row#desktop": {
+    "props": {
+      "horizontalAlign": "center",
+      "verticalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": true,
+      "blockClass": "headerContent"
+    },
+    "children": [
+      "flex-layout.col#logo-desktop",
+      "flex-layout.col#spacer",
+      // "disclosure-layout#search",
+      "minicart.v2",
+      "conditional-login"
+    ]
+  },
+  "link#account": {
+    "props": {
+      "href": "/account",
+      "blockClass": "loginIcon"
+    },
+    "children": [
+      "image#iconAccount"
+    ]
+  },
+  "image#iconAccount": {
+    "props": {
+      "src": "assets/account-icon.svg"
+    }
+  },
+  "flex-layout.col#search-bar": {
+    "props": {
+      "verticalAlign": "middle",
+      "blockClass": "sb"
+    },
+    "children": [
+      "search-bar#header"
+    ]
+  },
+  "search-bar#header": {
+    "props": {
+      "blockClass": "searchHeader",
+      "displayMode": "search-and-clear-buttons",
+      "placeholder": "Chercher"
+    }
+  },
+  "flex-layout.col#spacer": {
+    "props": {
+      "width": "grow",
+      "verticalAlign": "middle",
+      "horizontalAlign": "center"
+    },
+    "children": [
+      "flex-layout.row#searchBar-newSearchBar",
+      "vtex.menu@2.x:menu#ws"
+    ]
+  },
+  "flex-layout.row#searchBar-newSearchBar": {
+    "props": {
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.col#search-newSearchBar"
+    ]
+  },
+  "flex-layout.col#search-newSearchBar": {
+    "props": {
+      "width": "grow",
+      "blockClass": "newSearchBar"
+    },
+    "children": [
+      "search-bar#headerBlock"
+    ]
+  },
+  "search-bar#headerBlock": {
+    "blocks": [
+      "autocomplete-result-list.v2"
+    ],
+    "props": {
+      "openAutocompleteOnFocus": true,
+      "blockClass": "headerSearch",
+      "placeholder": "Wyszukaj"
+    }
+  },
+  "autocomplete-result-list.v2": {
+    "blocks": [
+      "product-summary.shelf#headerSearch"
+    ],
+    "props": {
+      "maxSuggestedProducts": 8,
+      "maxSuggestedTerms": 3,
+      "maxTopSearches": 5,
+      "maxHistory": 3,
+      "productLayout": "VERTICAL"
+    }
+  },
+  "product-summary.shelf#headerSearch": {
+    "children": [
+      "condition-layout.product#inStockLabel-SearchResult",
+      "product-summary-image#headerSearchShelf",
+      "vtex.store-components:product-name#headerSearchSummary",
+      "condition-layout.product#showPricePDPSellingSearchResult"
+    ],
+    "props": {
+      "blockClass": "shelfHeaderSearch"
+    }
+  },
+  "condition-layout.product#inStockLabel-SearchResult": {
+    "title": "[Condition Layout] - In stock label",
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "sellable",
+            "value": "true"
+          }
+        }
+      ],
+      "Then": "flex-layout.col#stock-SearchResult",
+      "Else": "rich-text#outOfStock-SearchResult"
+    }
+  },
+  "rich-text#outOfStock-SearchResult": {
+    "props": {
+      "text": "Produkt niedostępny",
+      "blockClass": [
+        "specProp",
+        "specificationAttribute",
+        "outOfStock",
+        "SearchResult"
+      ]
+    }
+  },
+  "flex-layout.col#stock-SearchResult": {
+    "children": [
+      "print-specification#stock-SearchResult"
+    ],
+    "props": {
+      "blockClass": [
+        "specProps",
+        "inStockProp",
+        "SearchResult",
+        "SearchResult"
+      ]
+    }
+  },
+  "print-specification#stock-SearchResult": {
+    "props": {
+      "specificationToPrint": [
+        {
+          "specGroup": "allSpecifications",
+          "specAttribute": "Do kupienia online",
+          "value": "Sklep whirlpool.pl"
+        }
+      ],
+      "blockClass": "SearchResult",
+      "aggregate": false,
+      "label": "",
+      "isLink": true
+    }
+  },
+  "condition-layout.product#showPricePDPSellingSearchResult": {
+    "title": "[Product Condition] - Show selling price",
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "showPrice",
+            "value": "true"
+          }
+        }
+      ],
+      "Then": "flex-layout.row#price-selling-pdp-SearchResult"
+    }
+  },
+  "flex-layout.row#price-selling-pdp-SearchResult": {
+    "children": [
+      "flex-layout.col#product-selling-price-SearchResult"
+    ],
+    "props": {
+      "blockClass": [
+        "discountedPrice",
+        "SearchResult"
+      ],
+      "colSizing": "auto",
+      "fullWidth": true,
+      "preserveLayoutOnMobile": true,
+      "horizontalAlign": "left"
+    }
+  },
+  "flex-layout.col#product-selling-price-SearchResult": {
+    "children": [
+      "product-selling-price#pdp-SearchResult"
+    ]
+  },
+  "product-selling-price#pdp-SearchResult": {
+    "props": {
+      "blockClass": [
+        "summary2",
+        "SearchResult"
+      ],
+      "markers": [
+        "Tax"
+      ],
+      "message": "{sellingPriceValue}"
+    }
+  },
+  "product-summary-image#headerSearchShelf": {
+    "props": {
+      "showBadge": false,
+      "aspectRatio": "1:1",
+      "maxHeight": 100,
+      "blockClass": "headerSearchShelfImage"
+    }
+  },
+  "vtex.store-components:product-name#headerSearchSummary": {
+    "props": {
+      "tag": "div",
+      "displayMode": "linkToProductPage",
+      "blockClass": [
+        "headerSearchSummaryName",
+        "summaryName"
+      ]
+    }
+  },
+  "flex-layout.col#logo-desktop": {
+    "props": {
+      "verticalAlign": "middle",
+      "preventVerticalStretch": true,
+      "blockClass": "logo"
+    },
+    "children": [
+      "link#logo"
+    ]
+  },
+  "link#logo": {
+    "props": {
+      "href": "/"
+    },
+    "children": [
+      "image#logo2"
+    ]
+  },
+  "image#logo2": {
+    "props": {
+      "height": "100%",
+      "src": "assets/whrlogo.svg",
+      "blockClass": "logoImage"
+    }
+  },
+  "header-layout.mobile": {
+    "children": [
+      "sticky-layout#mobile",
+      "flex-layout.row#searchBar-newSearchBar",
+      "slider-layout#banner-carousel",
+      // "newsletter-popup#header"
+      "flex-layout.row#newsletter-automatic-popup"
+    ]
+  },
+  "sticky-layout#mobile": {
+    "children": [
+      "flex-layout.row#mobile"
+    ]
+  },
+  "flex-layout.row#mobile": {
+    "children": [
+      "drawer",
+      "link#logo",
+      "flex-layout.col#space",
+      // "disclosure-layout#search",
+      "minicart.v2",
+      "conditional-login"
+    ],
+    "props": {
+      "blockClass": "main-header-mobile",
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    }
+  },
+  "drawer": {
+    "children": [
+      "vtex.menu@2.x:menu#mobile",
+      "flex-layout.row#loginMobile"
+    ]
+  },
+  "flex-layout.row#loginMobile": {
+    "props": {
+      "fullWidth": true
+    },
+    "children": []
+  },
+  "vtex.menu@2.x:menu#mobile": {
+    "props": {
+      "orientation": "vertical",
+      "blockClass": "mobileMenu"
+    },
+    "children": [
+      "menu-item#prodottiMobile",
+      "menu-item#w-collectionMobile",
+      "menu-item#promozioniMobile",
+      "menu-item#ricetteMobile",
+      "menu-item#support",
+      "menu-item#ricambi-originaliMobile"
+    ]
+  },
+  "vtex.menu@2.x:menu#ws": {
+    "children": [
+      "menu-item#prodotti",
+      "menu-item#w-collection",
+      "menu-item#astuces",
+      "menu-item#offres",
+      "menu-item#spareParts",
+      "menu-item#services"
+    ]
+  },
+  "disclosure-layout#search": {
+    "props": {
+      "blockClass": "header"
+    },
+    "children": [
+      "disclosure-trigger#image",
+      "disclosure-content#search-bar"
+    ]
+  },
+  "disclosure-trigger#image": {
+    "children": [
+      "image#search"
+    ]
+  },
+  "image#search": {
+    "props": {
+      "blockClass": "search-icon",
+      "width": "24px",
+      "src": "assets/search.svg"
+    }
+  },
+  "disclosure-content#search-bar": {
+    "children": [
+      "flex-layout.row#searchBar"
+    ]
+  },
+  "flex-layout.row#searchBar": {
+    "props": {
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.col#search"
+    ]
+  },
+  "flex-layout.col#space": {
+    "props": {
+      "width": "grow"
+    }
+  },
+  "flex-layout.col#search": {
+    "props": {
+      "width": "grow"
+    },
+    "children": [
+      "responsive-layout.desktop#searchbar",
+      "responsive-layout.tablet#searchbar",
+      "responsive-layout.phone#searchbar"
+    ]
+  },
+  "responsive-layout.desktop#searchbar": {
+    "children": [
+      "search-bar"
+    ]
+  },
+  "responsive-layout.tablet#searchbar": {
+    "children": [
+      "search-bar"
+    ]
+  },
+  "responsive-layout.phone#searchbar": {
+    "children": [
+      "search-bar#mobile"
+    ]
+  },
+  "search-bar": {
+    "props": {
+      "placeholder": "Wyszukaj"
+    }
+  },
+  "search-bar#mobile": {
+    "props": {
+      "placeholder": "Wyszukaj",
+      "displayMode": "search-and-clear-buttons"
+    }
+  },
+  "link#Accedi": {
+    "props": {
+      "href": "/account#"
+    },
+    "children": [
+      "rich-text#login"
+    ]
+  },
+  "rich-text#login": {
+    "props": {
+      "text": "Login / My Account",
+      "blockClass": [
+        "mobileMenu",
+        "buttonCard",
+        "margin"
+      ]
+    }
+  },
+  /* NEWSLETTER AUTOMATIC POPUP */
+  "flex-layout.row#newsletter-automatic-popup": {
+    "title": "Row - Newsletter Automatic Popup",
+    "children": [
+      "newsletter-automatic-popup"
+    ]
+  },
+  "newsletter-automatic-popup": {
+    "props": {
+      "time": 10000
+    },
+    "children": [
+      "flex-layout.col#newsletterFormAutoPopup"
+    ]
+  },
+  "flex-layout.col#newsletterFormAutoPopup": {
+    "children": [
+      "experimental__visibility-layout#image-newsletter-form",
+      "newsletter-form#automatic-popup"
+    ],
+    "props": {
+      "blockClass": "newsletterFormCol"
+    }
+  },
+  "newsletter-form#automatic-popup": {
+    "props": {
+      "title": "ZAPISZ SIĘ NA NASZ NEWSLETTER",
+      "subtitles": [
+        {
+          "__editorItemTitle": "#### Odbierz 50 zł rabatu"
+        }
+      ],
+      "emailPlaceholder": "EMAIL*",
+      "namePlaceholder": "IMIĘ*",
+      "surnamePlaceholder": "NAZWISKO*",
+      "checkboxes": [
+        {
+          "checkboxLabel": "Wyrażam zgodę na przetwarzanie moich danych osobowych w celu umożliwienia Whirlpool Polska Appliances Sp. z o.oprzesyłania mi newslettera/wiadomości marketingowych (w formie elektronicznej i nieelektronicznej, w tym za pośrednictwem telefonu, poczty tradycyjnej, e-mail, SMS, MMS, powiadomień push na stronach osób trzecich, w tym na platformach Facebook i Google) dotyczących produktów i usług Whirlpool Polska Appliances Sp. z o.o również tych już zakupionych lub zarejestrowanych przeze mnie, a także w celu prowadzenia badań rynkowych;",
+          "checkboxRequired": true,
+          "checkboxNewsletter": true,
+          "checkboxError": "To pole jest wymagane"
+        }
+      ],
+      "privacyPolicyTextArray": [
+        {
+          "__editorItemTitle": "Przeczytałem i zrozumiałem treść informacji [polityki prywatności](/informacja-o-ochronie-prywatnosci) dotyczących ochrony danych osobowych oraz:"
+        }
+      ],
+      "privacyPolicyTextArrayAfterCheckboxes": [
+        {
+          "__editorItemTitle": "Warunki przyznania zniżki znajdują się w Regulaminie Promocji poniżej:"
+        },
+        {
+          "__editorItemTitle": "Kod na 50 złotych rabatu otrzymasz mailem po zapisaniu się do newslettera, niemożliwe jest łączenie go z innymi promocjami, można go użyć tylko raz."
+        }
+      ],
+      "errorRequiredField": "To pole jest wymagane",
+      "errorInvalidMail": "Proszę wpisać prawidłowy email",
+      "successMessage": "Dziękujemy za subskrybcję.",
+      "registeredErrorMessage": "Twój e-mail był już zarejestrowany w naszej bazie danych. Dziękujemy.",
+      "genericApiErrorMessage": "Coś poszło nie tak, proszę spróbować ponownie",
+      "campaign": "POPUP_CAMPAIGN"
+    }
+  }
+  /*__________________________*/
+}

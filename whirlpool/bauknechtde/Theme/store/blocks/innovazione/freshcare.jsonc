@@ -1,0 +1,44 @@
+{
+  "store.custom#freshcare": {
+    "children": [
+      "flex-layout.row#bread-theme",
+      "experimental__visibility-layout#heroBannerAnto",
+      //"analytics",
+      "__fold__.experimentalLazyAssets",
+      "experimental__visibility-layout#videoHalf",
+      "experimental__visibility-layout#bannerTesto90",
+      "flex-layout.row#BnnrPostillaWCollectionFrigo4PorteBottom1",
+      "flex-layout.row#BnnrPostillaWCollectionFrigo4PorteBottom2",
+      "experimental__visibility-layout#CaruselTextBanner",
+      "flex-layout.row#space",
+      "experimental__visibility-layout#listImageInnovazione",
+      "experimental__visibility-layout#listContextInnovazione"
+    ]
+  },
+  "experimental__visibility-layout#listContextInnovazione": {
+    "props": {
+      "visible": true
+    },
+    "children": ["list-context.product-list#innovazione"]
+  },
+  "list-context.product-list#innovazione": {
+    "blocks": ["product-summary.shelf"],
+    "children": ["slider-layout#innovazione"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC",
+      "maxItems": 5
+    }
+  },
+  "slider-layout#innovazione": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 5,
+        "tablet": 3,
+        "phone": 1
+      },
+      "infinite": true,
+      "fullWidth": false,
+      "blockClass": ["shelf", "marginBottom2rem"]
+    }
+  }
+}

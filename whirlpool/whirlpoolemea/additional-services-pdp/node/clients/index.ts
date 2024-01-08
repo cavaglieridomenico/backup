@@ -1,0 +1,13 @@
+import { IOClients } from '@vtex/api'
+import vtexAPI from './vtexAPI'
+import VtexSeller from './VtexSeller'
+
+// Extend the default IOClients implementation with our own custom clients.
+export class Clients extends IOClients {
+  public get vtexAPI() {
+    return this.getOrSet('vtexAPI', vtexAPI)
+  }
+  public get VtexSeller(){
+    return this.getOrSet('VtexSeller', VtexSeller)
+  }
+}

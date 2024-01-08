@@ -1,0 +1,55 @@
+{
+  "vendor": "whirlpoolemea",
+  "name": "newsletter-custom-app",
+  "version": "0.0.9",
+  "title": "Newsletter Custom App",
+  "description": "Custom App that exports some useful blocks for the User Newsletter subscription",
+  "defaultLocale": "en-EN",
+  "builders": {
+    "messages": "1.x",
+    "store": "0.x",
+    "react": "3.x"
+  },
+  "billingOptions": {
+    "termsURL": "https://compliance.vtex.com/gdpr/policies/vtex-privacy-policy",
+    "support": {
+      "url": "https://support.vtex.com/hc/requests"
+    },
+    "free": true
+  },
+  "dependencies": {
+    "vtex.styleguide": "9.x",
+    "vtex.css-handles": "0.x",
+    "vtex.rich-text": "0.x",
+    "vtex.apps-graphql": "3.x",
+    "vtex.pixel-manager": "1.x"
+  },
+  "settingsSchema": {
+    "title": "Newsletter Custom App",
+    "type": "object",
+    "access": "public",
+    "properties": {
+      "sessionApi": {
+        "title": "Session API Endpoint",
+        "description": "Set the endpoint for the API call used to retrieve user session info, this is useful to know if user is logged in (i.e write something like this: /_v/wrapper/api/user/newsletteroptin).",
+        "type": "string"
+      },
+      "userInfoApi": {
+        "title": "User Info API Endpoint",
+        "description": "Set the endpoint for the API call used to retrieve user info basing on user email (i.e write something like this: /_v/wrapper/api/user/email/userinfo?email=).",
+        "type": "string"
+      },
+      "postUserApi": {
+        "title": "Post User API Endpoint",
+        "description": "Set the endpoint for the API call used to subscribe user to newsletter and create an account for it in VTEX (i.e write something like this: /_v/wrapper/api/user?userId=true).",
+        "type": "string"
+      },
+      "newsletteroptinApi": {
+        "title": "Newsletter Optin API Endpoint",
+        "description": "Set the endpoint for the API call used to set isNewsletterOptin to true to user that has already an account in VTEX (i.e write something like this: /_v/wrapper/api/user/newsletteroptin).",
+        "type": "string"
+      }
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

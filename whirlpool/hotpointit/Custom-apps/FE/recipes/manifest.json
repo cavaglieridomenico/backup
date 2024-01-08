@@ -1,0 +1,35 @@
+{
+  "vendor": "hotpointit",
+  "name": "recipes",
+  "version": "0.0.29",
+  "title": "recipes",
+  "description": "recipes",
+  "defaultLocale": "it-IT",
+  "builders": {
+    "messages": "1.x",
+    "store": "0.x",
+    "react": "3.x",
+    "node": "6.x"
+  },
+  "dependencies": {
+    "vtex.styleguide": "9.x",
+    "vtex.css-handles": "0.x",
+    "vtex.admin-graphql-ide": "3.x",
+    "vtex.render-runtime": "8.x",
+    "vtex.pixel-manager": "1.x",
+    "vtex.store-sitemap": "2.x",
+    "vtex.store": "2.x",
+    "vtex.flex-layout": "0.x",
+    "vtex.rich-text": "0.x",
+    "vtex.store-graphql": "2.x"
+  },
+  "policies": [
+    {
+      "name": "vtex.store-sitemap:resolve-graphql"
+    },
+    {
+      "name": "vbase-read-write"
+    }
+  ],
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

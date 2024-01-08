@@ -1,0 +1,64 @@
+{
+  "name": "my-account",
+  "vendor": "vtex",
+  "version": "1.17.1",
+  "title": "My Account",
+  "description": "User's my account page.",
+  "registries": [
+    "smartcheckout"
+  ],
+  "dependencies": {
+    "vtex.my-cards": "1.x",
+    "vtex.my-orders-app": "3.x",
+    "vtex.my-account-commons": "1.x",
+    "vtex.store-graphql": "2.x",
+    "vtex.styleguide": "9.x",
+    "vtex.profile-form": "3.x",
+    "vtex.country-codes": "2.x",
+    "vtex.address-form": "4.x",
+    "vtex.react-vtexid": "4.x",
+    "vtex.pixel-manager": "1.x",
+    "vtex.store-messages": "0.x",
+    "vtex.css-handles": "0.x"
+  },
+  "builders": {
+    "react": "3.x",
+    "store": "0.x",
+    "node": "4.x",
+    "graphql": "1.x",
+    "docs": "0.x",
+    "messages": "1.x"
+  },
+  "scripts": {
+    "postreleasy": "vtex publish --verbose"
+  },
+  "settingsSchema": {
+    "title": "My Account",
+    "type": "object",
+    "properties": {
+      "profile": {
+        "type": "object",
+        "title": "Profile",
+        "properties": {
+          "showGenders": {
+            "title": "Show non-binary genders when editing profile",
+            "type": "boolean",
+            "default": false
+          }
+        }
+      },
+      "cards": {
+        "type": "object",
+        "title": "Cards",
+        "properties": {
+          "showMyCards": {
+            "type": "boolean",
+            "title": "Visible",
+            "default": true
+          }
+        }
+      }
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

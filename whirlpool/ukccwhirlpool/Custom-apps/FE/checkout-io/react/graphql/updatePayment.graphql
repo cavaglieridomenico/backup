@@ -1,0 +1,7 @@
+mutation updatePayment($orderFormId: String, $query: [AddPaymentDataInput]) {
+  mutationAddPaymentData(orderFormId: $orderFormId, query: $query) {
+    status
+    error
+    body
+  }
+}

@@ -1,0 +1,1122 @@
+{
+  "menu-item#prodotti": {
+    "props": {
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Produits",
+        "text": "Produits"
+      },
+      "blockClass": ["linkMenu"]
+    },
+    "blocks": ["vtex.menu@2.x:submenu#prodotti"]
+  },
+  "menu-item#offres": {
+    "props": {
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Nos Offres",
+        "text": "Nos Offres"
+      },
+      "blockClass": ["linkMenu"]
+    },
+    "blocks": ["vtex.menu@2.x:submenu#menuOffres"]
+  },
+  "vtex.menu@2.x:submenu#menuOffres": {
+    "props": {
+      "width": "100%",
+      "blockClass": "menuOffres"
+    },
+    "children": ["promotions-submenu"]
+  },
+  "promotions-submenu": {
+    "props": {
+      "items": []
+    }
+  },
+  "flex-layout.row#menuNosoffres": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "menuHeader"
+    },
+    "children": ["flex-layout.col#menuNosoffres"]
+  },
+  "flex-layout.col#menuNosoffres": {
+    "props": {
+      "fullWidth": true
+    },
+    "children": [
+      "menu-item#offresSpeciales",
+      "menu-item#promotions",
+      "menu-item#packCuisineEquipee"
+    ]
+  },
+  "menu-item#offresSpeciales": {
+    "props": {
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/offres-speciales",
+        "noFollow": false,
+        "tagTitle": "Offres speciales",
+        "text": "Offres speciales"
+      },
+      "blockClass": ["menu", "menuAstuces", "linkMenu"]
+    }
+  },
+  "menu-item#promotions": {
+    "props": {
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/promotions",
+        "noFollow": false,
+        "tagTitle": "Promotions",
+        "text": "Promotions"
+      },
+      "blockClass": ["menu", "menuAstuces", "linkMenu"]
+    }
+  },
+  "menu-item#packCuisineEquipee": {
+    "props": {
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/pack-cuisine-equipee",
+        "noFollow": false,
+        "tagTitle": "Pack cuisine équipée",
+        "text": "Pack cuisine équipée"
+      },
+      "blockClass": ["menu", "menuAstuces", "linkMenu"]
+    }
+  },
+  "menu-item#astuces": {
+    "props": {
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "noFollow": false,
+        "tagTitle": "Astuces",
+        "text": "Astuces"
+      },
+      "blockClass": ["linkMenu"]
+    },
+    "blocks": ["vtex.menu@2.x:submenu#menuAstuces"]
+  },
+  "menu-item#wellbeing": {
+    "props": {
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/bien-etre",
+        "noFollow": false,
+        "tagTitle": "Bien-Être",
+        "text": "Bien-Être"
+      },
+      "blockClass": ["linkMenu"]
+    }
+  },
+  "menu-item#pieces": {
+    "props": {
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/services/pieces-detachees-d-origine",
+        "noFollow": false,
+        "tagTitle": "Pièces Détachées",
+        "text": "Pièces Détachées"
+      },
+      "blockClass": ["linkMenu"]
+    }
+  },
+  "menu-item#accessori": {
+    "props": {
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Accessoires Wpro",
+        "text": "Accessoires Wpro"
+      },
+      "blockClass": ["menu", "linkMenu"]
+    },
+    "blocks": ["vtex.menu@2.x:submenu#moreAccessori"]
+  },
+  "menu-item#ricambi-originali": {
+    "props": {
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/services/pieces-detachees",
+        "noFollow": false,
+        "tagTitle": "Ricambi",
+        "text": "Ricambi"
+      },
+      "blockClass": ["menu", "linkMenu"]
+    },
+    "blocks": ["vtex.menu@2.x:submenu#moreRicambiOriginali"]
+  },
+  "menu-item#w-collection": {
+    "props": {
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/nouveautes",
+        "noFollow": false,
+        "tagTitle": "Nouveautés",
+        "text": "Nouveautés"
+      },
+      "children": ["flex-layout.col#menu", "flex-layout.col#card"],
+      "blockClass": "linkMenu"
+    }
+  },
+  "menu-item#services": {
+    "props": {
+      "id": "menu-item-services",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/services",
+        "noFollow": false,
+        "tagTitle": "Support et Services",
+        "text": "Service"
+      },
+      "blockClass": ["linkMenu"]
+    }
+  },
+  "vtex.menu@2.x:submenu#prodotti": {
+    "props": {
+      "width": "100%",
+      "blockClass": "menu"
+    },
+    "children": ["flex-layout.row#menuPrimoLivello"]
+  },
+  "vtex.menu@2.x:submenu#menuAstuces": {
+    "props": {
+      "width": "100%",
+      "blockClass": "menuAstuces"
+    },
+    "children": ["flex-layout.row#menuAstuces"]
+  },
+  "vtex.menu@2.x:submenu#supporto": {
+    "props": {
+      "width": "100%",
+      "blockClass": "menuSupporto"
+    },
+    "children": ["flex-layout.row#supporto"]
+  },
+  "flex-layout.row#menuAstuces": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "menuHeader"
+    },
+    "children": ["flex-layout.col#menuAstuces"]
+  },
+  "flex-layout.col#menuAstuces": {
+    "props": {
+      "fullWidth": true
+    },
+    "children": [
+      "menu-item#recettes",
+      "menu-item#conseilsEntretienInstallation"
+    ]
+  },
+  "menu-item#recettes": {
+    "props": {
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/recettes?page=1&hash=144171060",
+        "noFollow": false,
+        "tagTitle": "Recettes",
+        "text": "Recettes"
+      },
+      "blockClass": ["menu", "menuAstuces", "linkMenu"]
+    }
+  },
+  "menu-item#conseilsEntretienInstallation": {
+    "props": {
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/conseils-dentretien-et-dinstallation",
+        "noFollow": false,
+        "tagTitle": "Conseils d’entretien et d’installation",
+        "text": "Conseils d’entretien et d’installation"
+      },
+      "blockClass": ["menu", "linkMenu"]
+    }
+  },
+  "flex-layout.row#menuPrimoLivello": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "menuHeader"
+    },
+    "children": ["flex-layout.col#menu"]
+  },
+  "flex-layout.col#menu": {
+    "props": {
+      "fullWidth": true
+    },
+    "children": ["vtex.menu@2.x:menu#submenuprodotti"]
+  },
+  "flex-layout.col#card": {
+    "props": {
+      "blockClass": "imageFirstLevel"
+    },
+    "children": ["info-card#primoLivello"]
+  },
+  "info-card#primoLivello": {
+    "props": {
+      "id": "W-Collection",
+      "isFullModeStyle": false,
+      "textPosition": "left",
+      "imageUrl": "assets/mainmenu.jpg",
+      "headline": "W-Collection",
+      "subhead": "Scopri la collezione",
+      "callToActionText": "SOPRI DI PIU",
+      "callToActionUrl": "/sale/d",
+      "blockClass": "mainMenu",
+      "textAlignment": "LEFT"
+    }
+  },
+  "vtex.menu@2.x:menu#submenuprodotti": {
+    "props": {
+      "orientation": "vertical"
+    },
+    "children": [
+      "menu-item#lavaggio",
+      "menu-item#refrigerazione",
+      "menu-item#cottura",
+      "menu-item#lavastoviglie",
+      "menu-item#aria-condizionata",
+      "menu-item#accessori",
+      "menu-item#see-all"
+    ]
+  },
+  "menu-item#see-all": {
+    "props": {
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/produits",
+        "noFollow": false,
+        "tagTitle": "see-all",
+        "text": "Tout l'électroménager"
+      },
+      "blockClass": ["menu", "linkMenu"]
+    }
+  },
+  "menu-item#lavaggio": {
+    "props": {
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "lavaggio-asciugatura",
+        "text": "Lavaggio e Asciugatura"
+      },
+      "blockClass": ["menu", "linkMenu"]
+    },
+    "blocks": ["vtex.menu@2.x:submenu#more"]
+  },
+  "menu-item#refrigerazione": {
+    "props": {
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "refrigerazione",
+        "text": "Froid"
+      },
+      "blockClass": ["menu", "linkMenu"]
+    },
+    "blocks": ["vtex.menu@2.x:submenu#moreRefrigerazione"]
+  },
+  "menu-item#cottura": {
+    "props": {
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Cuisson",
+        "text": "Cuisson"
+      },
+      "blockClass": ["menu", "linkMenu"]
+    },
+    "blocks": ["vtex.menu@2.x:submenu#moreCottura"]
+  },
+  "menu-item#lavastoviglie": {
+    "props": {
+      "type": "category",
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 27,
+        "text": "Lave-vaisselle"
+      },
+      "blockClass": ["menu", "linkMenu"]
+    },
+    "blocks": ["vtex.menu@2.x:submenu#moreLavastoviglie"]
+  },
+  "menu-item#aria-condizionata": {
+    "props": {
+      "type": "category",
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 28,
+        "text": "Climatisation"
+      },
+      "blockClass": ["menu", "linkMenu"]
+    },
+    "blocks": ["vtex.menu@2.x:submenu#moreAria"]
+  },
+  "menu-item#altri-prodotti": {
+    "props": {
+      "type": "category",
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 29,
+        "text": "Altri prodotti"
+      },
+      "blockClass": ["menu", "linkMenu"]
+    },
+    "blocks": ["vtex.menu@2.x:submenu#moreAltri"]
+  },
+  "vtex.menu@2.x:submenu#more": {
+    "props": {
+      "width": "100%",
+      "blockClass": "menuSecondoLivello"
+    },
+    "children": ["flex-layout.row#menu-more"]
+  },
+  "vtex.menu@2.x:submenu#moreAccessori": {
+    "props": {
+      "width": "100%",
+      "blockClass": "menuSecondoLivello"
+    },
+    "children": ["flex-layout.row#menu-moreAccessori"]
+  },
+  "flex-layout.row#menu-moreAccessori": {
+    "children": ["flex-layout.col#menu-more-1Accessori"]
+  },
+  "flex-layout.col#menu-more-1Accessori": {
+    "children": ["vtex.menu@2.x:menu#moreAccessori"]
+  },
+  "vtex.menu@2.x:menu#moreAccessori": {
+    "props": {
+      "orientation": "vertical"
+    },
+    "children": [
+      "menu-item#AccessoriLavaggio",
+      "menu-item#AccessoriLavastoviglie",
+      "menu-item#AccessoriCottura",
+      "menu-item#AccessoriRefrigerazione",
+      "menu-item#AccessoriAriaCondizionata",
+      "menu-item#consigli"
+    ]
+  },
+  "menu-item#consigli": {
+    "props": {
+      "type": "category",
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 10,
+        "text": "Conseils d’entretien et d’installation"
+      },
+      "blockClass": ["itemSecondoLivello", "linkMenu", "conseilsMenu"]
+    },
+    "children": ["image#AccessoriLavaggio"]
+  },
+  "menu-item#AccessoriLavaggio": {
+    "props": {
+      "type": "category",
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 10,
+        "text": "Lavage"
+      },
+      "blockClass": ["itemSecondoLivello", "linkMenu"]
+    },
+    "children": ["image#AccessoriLavaggio"]
+  },
+  "image#AccessoriLavaggio": {
+    "props": {
+      "blockClass": ["imageSecond", "AccessoriLavaggio"],
+      "src": "assets/accessoriHeader.jpg"
+    }
+  },
+  "menu-item#AccessoriRefrigerazione": {
+    "props": {
+      "type": "category",
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 11,
+        "text": "Froid"
+      },
+      "blockClass": ["itemSecondoLivello", "linkMenu"]
+    },
+    "children": ["image#AccessoriRefrigerazione"]
+  },
+  "image#AccessoriRefrigerazione": {
+    "props": {
+      "blockClass": ["imageSecond", "AccessoriRefrigerazione"],
+      "src": "assets/accessoriHeader.jpg"
+    }
+  },
+  "menu-item#AccessoriCottura": {
+    "props": {
+      "type": "category",
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 12,
+        "text": "Cuisson"
+      },
+      "blockClass": ["itemSecondoLivello", "linkMenu"]
+    },
+    "children": ["image#AccessoriCottura"]
+  },
+  "image#AccessoriCottura": {
+    "props": {
+      "blockClass": ["imageSecond", "AccessoriCottura"],
+      "src": "assets/accessoriHeader.jpg"
+    }
+  },
+  "menu-item#AccessoriLavastoviglie": {
+    "props": {
+      "type": "category",
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 13,
+        "text": "Lave-vaisselle"
+      },
+      "blockClass": ["itemSecondoLivello", "linkMenu"]
+    },
+    "children": ["image#AccessoriLavastoviglie"]
+  },
+  "image#AccessoriLavastoviglie": {
+    "props": {
+      "blockClass": ["imageSecond", "AccessoriLavastoviglie"],
+      "src": "assets/accessoriHeader.jpg"
+    }
+  },
+  "menu-item#AccessoriAriaCondizionata": {
+    "props": {
+      "type": "category",
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 13,
+        "text": "Climatisation"
+      },
+      "blockClass": ["itemSecondoLivello", "linkMenu"]
+    },
+    "children": ["image#AccessoriAriaCondizionata"]
+  },
+  "image#AccessoriAriaCondizionata": {
+    "props": {
+      "blockClass": ["imageSecond", "AccessoriAriaCondizionata"],
+      "src": "assets/accessoriHeader.jpg"
+    }
+  },
+  "menu-item#conseils": {
+    "props": {
+      "type": "category",
+      "href": "https://www.indesit.fr/Landings/About-WPro",
+      "target": "_blank",
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 15,
+        "text": "Conseils d’entretien"
+      },
+      "blockClass": ["itemSecondoLivello", "linkMenu"]
+    },
+    "children": ["image#conseils"]
+  },
+  "image#conseils": {
+    "props": {
+      "blockClass": ["imageSecond", "AccessoriPiccoliElettrodomestici"],
+      "src": "assets/accessoriHeader.jpg"
+    }
+  },
+  "flex-layout.row#menu-more": {
+    "children": ["flex-layout.col#menu-more-1", "flex-layout.col#menu-more-2"]
+  },
+  "flex-layout.col#menu-more-1": {
+    "props": {
+      "blockClass": "menu2"
+    },
+    "children": ["vtex.menu@2.x:menu#more"]
+  },
+  "flex-layout.col#menu-more-2": {
+    "props": {
+      "width": "grow"
+    }
+  },
+  "vtex.menu@2.x:menu#more": {
+    "props": {
+      "orientation": "vertical"
+    },
+    "children": [
+      "menu-item#lavatrici",
+      "menu-item#asciugatrici",
+      "menu-item#lavasciuga",
+      "menu-item#sub-accessori-lavage"
+    ]
+  },
+  "menu-item#lavatrici": {
+    "props": {
+      "type": "category",
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 17,
+        "text": "Lave-linge"
+      },
+      "blockClass": ["itemSecondoLivello", "linkMenu"]
+    },
+    "children": ["image#lavatrici"]
+  },
+  "image#lavatrici": {
+    "props": {
+      "blockClass": ["imageSecond", "lavatriciCss"],
+      "src": "assets/lavaggio.jpg"
+    }
+  },
+  "menu-item#asciugatrici": {
+    "props": {
+      "type": "category",
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 18,
+        "text": "Sèche-linge"
+      },
+      "blockClass": ["itemSecondoLivello", "linkMenu"]
+    },
+    "children": ["image#asciuga"]
+  },
+  "image#asciuga": {
+    "props": {
+      "blockClass": ["imageSecond", "asciugatriciCss"],
+      "src": "assets/asciugatrici.jpg"
+    }
+  },
+  "menu-item#lavasciuga": {
+    "props": {
+      "type": "category",
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 19,
+        "text": "Lavante-séchante"
+      },
+      "blockClass": ["itemSecondoLivello", "linkMenu"]
+    },
+    "children": ["image#lavasciuga"]
+  },
+  "image#lavasciuga": {
+    "props": {
+      "blockClass": ["imageSecond", "lavasciugaCss"],
+      "src": "assets/lavasciuga.jpg"
+    }
+  },
+  "menu-item#sub-accessori-lavage": {
+    "props": {
+      "type": "category",
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 10,
+        "text": "Accessoires Lavage"
+      },
+      "blockClass": ["itemSecondoLivello", "linkMenu"]
+    }
+  },
+  "menu-item#sub-accessori-froid": {
+    "props": {
+      "type": "category",
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 11,
+        "text": "Accessoires Froid"
+      },
+      "blockClass": ["itemSecondoLivello", "linkMenu"]
+    }
+  },
+  "menu-item#sub-accessori-cuisson": {
+    "props": {
+      "type": "category",
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 12,
+        "text": "Accessoires Cuisson"
+      },
+      "blockClass": ["itemSecondoLivello", "linkMenu"]
+    }
+  },
+  "menu-item#sub-accessori-lavastoviglie": {
+    "props": {
+      "type": "category",
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 13,
+        "text": "Accessoires Lave-vaisselle"
+      },
+      "blockClass": ["itemSecondoLivello", "linkMenu"]
+    }
+  },
+  "menu-item#climatisation-accessoires": {
+    "props": {
+      "type": "category",
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 13,
+        "text": "Accessoires Climatisation"
+      },
+      "blockClass": ["itemSecondoLivello", "linkMenu"]
+    }
+  },
+  "menu-item#climatisation-submenu": {
+    "props": {
+      "type": "category",
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 28,
+        "text": "Climatisation"
+      },
+      "blockClass": ["itemSecondoLivello", "linkMenu"]
+    }
+  },
+  "menu-item#froid-multi-portes": {
+    "props": {
+      "type": "category",
+      "highlight": false,
+      "isActive": false,
+      "itemProps": {
+        "categoryId": 11,
+        "text": "Multi-portes"
+      },
+      "blockClass": ["itemSecondoLivello", "linkMenu"]
+    }
+  },
+  "menu-item#f-multi-portes": {
+    "props": {
+      "type": "custom",
+      "highlight": false,
+      "isActive": false,
+      "itemProps": {
+        "href": "/produits/froid/froid-multi-portes",
+        "text": "Froid Multi Portes"
+      },
+      "blockClass": ["itemSecondoLivello", "linkMenu"]
+    }
+  },
+  "menu-item#cuisson-bundle-accessoires": {
+    "props": {
+      "type": "custom",
+      "highlight": false,
+      "isActive": false,
+      "itemProps": {
+        "href": "/pack-cuisine-equipee",
+        "text": "Pack cuisine équipée"
+      },
+      "blockClass": ["itemSecondoLivello", "linkMenu"]
+    }
+  },
+  "menu-item#aria-condizionata-sub": {
+    "props": {
+      "type": "category",
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 28,
+        "text": "Climatisation"
+      },
+      "blockClass": ["itemSecondoLivello", "linkMenu"]
+    }
+  },
+  "menu-item#lave-vaisselle-sub": {
+    "props": {
+      "type": "category",
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 27,
+        "text": "Lave-vaisselle"
+      },
+      "blockClass": ["itemSecondoLivello", "linkMenu"]
+    }
+  },
+  "menu-item#lave-vaisselle-pose-libre": {
+    "props": {
+      "type": "category",
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 27,
+        "text": "Pose-libre"
+      },
+      "blockClass": ["itemSecondoLivello", "linkMenu"]
+    }
+  },
+  "menu-item#lave-vaisselle-encastrable": {
+    "props": {
+      "type": "category",
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 27,
+        "text": "Encastrables"
+      },
+      "blockClass": ["itemSecondoLivello", "linkMenu"]
+    }
+  },
+  "vtex.menu@2.x:submenu#moreRefrigerazione": {
+    "props": {
+      "width": "100%",
+      "blockClass": "menuSecondoLivello"
+    },
+    "children": ["flex-layout.row#menu-moreRefrigerazione"]
+  },
+  "flex-layout.row#menu-moreRefrigerazione": {
+    "children": [
+      "flex-layout.col#menu-more-1Refrigerazione",
+      "flex-layout.col#menu-more-2Refrigerazione"
+    ]
+  },
+  "flex-layout.col#menu-more-1Refrigerazione": {
+    "children": ["vtex.menu@2.x:menu#moreRefrigerazione"]
+  },
+  "flex-layout.col#menu-more-2Refrigerazione": {
+    "children": ["image#Refrigerazione"]
+  },
+  "vtex.menu@2.x:menu#moreRefrigerazione": {
+    "props": {
+      "orientation": "vertical"
+    },
+    "children": [
+      "menu-item#frigoriferi",
+      "menu-item#f-multi-portes",
+      "menu-item#congelatori",
+      "menu-item#sub-accessori-froid"
+    ]
+  },
+  "image#Refrigerazione": {
+    "props": {
+      "blockClass": "imageMenu",
+      "src": "assets/frigo.jpg"
+    }
+  },
+  "menu-item#frigoriferi": {
+    "props": {
+      "type": "category",
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 20,
+        "text": "Réfrigérateur"
+      },
+      "blockClass": ["itemSecondoLivello", "linkMenu"]
+    },
+    "children": ["image#frigoriferi"]
+  },
+  "image#frigoriferi": {
+    "props": {
+      "blockClass": ["imageSecond", "frigoriferiCss"],
+      "src": "assets/frigo.jpg"
+    }
+  },
+  "menu-item#congelatori": {
+    "props": {
+      "type": "category",
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 21,
+        "text": "Congélateur"
+      },
+      "blockClass": ["itemSecondoLivello", "linkMenu"]
+    },
+    "children": ["image#congelatori"]
+  },
+  "image#congelatori": {
+    "props": {
+      "blockClass": ["imageSecond", "congelatoriCss"],
+      "src": "assets/congelatori.jpg"
+    }
+  },
+  "vtex.menu@2.x:submenu#moreCottura": {
+    "props": {
+      "width": "100%",
+      "blockClass": "menuSecondoLivello"
+    },
+    "children": ["flex-layout.row#menu-moreCottura"]
+  },
+  "flex-layout.row#menu-moreCottura": {
+    "children": [
+      "flex-layout.col#menu-more-1Cottura",
+      "flex-layout.col#menu-more-2Cottura"
+    ]
+  },
+  "flex-layout.col#menu-more-1Cottura": {
+    "children": ["vtex.menu@2.x:menu#moreCottura"]
+  },
+  "flex-layout.col#menu-more-2Cottura": {
+    "children": ["image#Cottura"]
+  },
+  "vtex.menu@2.x:menu#moreCottura": {
+    "props": {
+      "orientation": "vertical"
+    },
+    "children": [
+      "menu-item#forni",
+      "menu-item#piani-cottura",
+      "menu-item#forni-a-microonde",
+      "menu-item#cappe",
+      "menu-item#cuisson-bundle-accessoires",
+      "menu-item#sub-accessori-cuisson"
+    ]
+  },
+  "image#Cottura": {
+    "props": {
+      "blockClass": "imageMenu",
+      "src": "assets/cottura.jpg"
+    }
+  },
+  "menu-item#forni": {
+    "props": {
+      "type": "category",
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 22,
+        "text": "Four"
+      },
+      "blockClass": ["itemSecondoLivello", "linkMenu"]
+    },
+    "children": ["image#forni"]
+  },
+  "image#forni": {
+    "props": {
+      "blockClass": ["imageSecond", "forniCss"],
+      "src": "assets/cottura.jpg"
+    }
+  },
+  "menu-item#forni-a-microonde": {
+    "props": {
+      "type": "category",
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 23,
+        "text": "Micro-ondes"
+      },
+      "blockClass": ["itemSecondoLivello", "linkMenu"]
+    },
+    "children": ["image#forni-a-microonde"]
+  },
+  "image#forni-a-microonde": {
+    "props": {
+      "blockClass": ["imageSecond", "forniMicroondeCss"],
+      "src": "assets/forni_a_microonde.jpg"
+    }
+  },
+  "menu-item#piani-cottura": {
+    "props": {
+      "type": "category",
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 24,
+        "text": "Plaques"
+      },
+      "blockClass": ["itemSecondoLivello", "linkMenu"]
+    },
+    "children": ["image#piani_cottura"]
+  },
+  "image#piani_cottura": {
+    "props": {
+      "blockClass": ["imageSecond", "pianiCotturaCss"],
+      "src": "assets/piani_cottura.jpg"
+    }
+  },
+  "menu-item#cappe": {
+    "props": {
+      "type": "category",
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 25,
+        "text": "Hotte"
+      },
+      "blockClass": ["itemSecondoLivello", "linkMenu"]
+    },
+    "children": ["image#cappe"]
+  },
+  "image#cappe": {
+    "props": {
+      "blockClass": ["imageSecond", "cappeCss"],
+      "src": "assets/cappe.jpg"
+    }
+  },
+  "vtex.menu@2.x:submenu#moreLavastoviglie": {
+    "props": {
+      "width": "100%",
+      "blockClass": "menuSecondoLivello"
+    },
+    "children": ["flex-layout.row#menu-moreLavastoviglie"]
+  },
+  "flex-layout.row#menu-moreLavastoviglie": {
+    "children": [
+      "flex-layout.col#menu-more-1Lavastoviglie",
+      "flex-layout.col#menu-more-2Lavastoviglie"
+    ]
+  },
+  "flex-layout.col#menu-more-1Lavastoviglie": {
+    "children": ["vtex.menu@2.x:menu#moreLavastoviglie"]
+  },
+  "flex-layout.col#menu-more-2Lavastoviglie": {
+    "children": ["image#Lavastoviglie"]
+  },
+  "vtex.menu@2.x:menu#moreLavastoviglie": {
+    "props": {
+      "orientation": "vertical"
+    },
+    "children": [
+      "menu-item#lave-vaisselle-encastrable",
+      "menu-item#lave-vaisselle-pose-libre",
+      "menu-item#sub-accessori-lavastoviglie"
+    ]
+  },
+  "image#Lavastoviglie": {
+    "props": {
+      "blockClass": ["imageMenu", "senzaCategoria"],
+      "src": "assets/Lavastoviglie.jpg"
+    }
+  },
+  "vtex.menu@2.x:submenu#moreAria": {
+    "props": {
+      "width": "100%",
+      "blockClass": "menuSecondoLivello"
+    },
+    "children": ["flex-layout.row#menu-moreAria"]
+  },
+  "flex-layout.row#menu-moreAria": {
+    "children": [
+      "flex-layout.col#menu-more-1Aria",
+      "flex-layout.col#menu-more-2Aria"
+    ]
+  },
+  "flex-layout.col#menu-more-1Aria": {
+    "children": ["vtex.menu@2.x:menu#moreAria"]
+  },
+  "flex-layout.col#menu-more-2Aria": {
+    "children": ["image#Aria"]
+  },
+  "vtex.menu@2.x:menu#moreAria": {
+    "props": {
+      "orientation": "vertical"
+    },
+    "children": [
+      "menu-item#aria-condizionata-sub",
+      "menu-item#climatisation-accessoires"
+    ]
+  },
+  "image#Aria": {
+    "props": {
+      "blockClass": ["imageMenu", "senzaCategoria"],
+      "src": "assets/Aria.jpg"
+    }
+  },
+  "vtex.menu@2.x:submenu#moreAltri": {
+    "props": {
+      "width": "100%",
+      "blockClass": "menuSecondoLivello"
+    },
+    "children": ["flex-layout.row#menu-moreAltri"]
+  },
+  "flex-layout.row#menu-moreAltri": {
+    "children": [
+      "flex-layout.col#menu-more-1Altri",
+      "flex-layout.col#menu-more-2Altri"
+    ]
+  },
+  "flex-layout.col#menu-more-1Altri": {
+    "children": ["vtex.menu@2.x:menu#moreAltri"]
+  },
+  "flex-layout.col#menu-more-2Altri": {
+    "children": ["image#Altri"]
+  },
+  "vtex.menu@2.x:menu#moreAltri": {
+    "props": {
+      "orientation": "vertical"
+    },
+    "children": []
+  },
+  "image#Altri": {
+    "props": {
+      "blockClass": ["imageMenu", "senzaCategoria"],
+      "src": "assets/Altri.jpg"
+    }
+  },
+  "vtex.menu@2.x:submenu#moreRicambiOriginali": {
+    "props": {
+      "width": "100%",
+      "blockClass": "menuSecondoLivello"
+    },
+    "children": ["flex-layout.row#menu-moreRicambiOriginali"]
+  },
+  "flex-layout.row#menu-moreRicambiOriginali": {
+    "children": [
+      "flex-layout.col#menu-more-1RicambiOriginali",
+      "flex-layout.col#menu-more-2RicambiOriginali"
+    ]
+  },
+  "flex-layout.col#menu-more-1RicambiOriginali": {
+    "children": ["vtex.menu@2.x:menu#moreRicambiOriginali"]
+  },
+  "flex-layout.col#menu-more-2RicambiOriginali": {
+    "children": ["image#RicambiOriginaliMenuHeader"]
+  },
+  "vtex.menu@2.x:menu#moreRicambiOriginali": {
+    "props": {
+      "orientation": "vertical"
+    },
+    "children": []
+  },
+  "image#RicambiOriginaliMenuHeader": {
+    "props": {
+      "blockClass": ["imageMenu", "senzaCategoria"],
+      "src": "assets/ricambiOriginaliMenuHeader.jpg"
+    }
+  }
+}

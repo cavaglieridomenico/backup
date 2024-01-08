@@ -1,0 +1,90 @@
+query retrieveAssociation($skuId: ID, $categoryId: ID){
+  retrieveAssociation(skuId:$skuId, categoryId:$categoryId){
+    cacheId,
+    productId,
+    titleTag,
+    description,
+    productName,
+    productReference,
+    linkText,
+    brand,
+    productClusters {
+      id,
+      name
+    },
+    clusterHighlights {
+      id,
+      name
+    },
+    properties {
+      originalName,
+      name,
+      values
+    },
+    brandId,
+    categoryId,
+    priceRange {
+      sellingPrice {
+        highPrice,
+        lowPrice
+      }
+      listPrice {
+        highPrice,
+        lowPrice
+      }
+    },
+    specificationGroups {
+      originalName,
+      name, 
+      specifications {
+        originalName,
+        name,
+        values
+      }
+    },
+    items {
+      itemId,
+      name,
+      nameComplete,
+      ean,
+      measurementUnit,
+      referenceId {
+        Key,
+        Value
+      },
+      images {
+        cacheId,
+        imageId, 
+        imageLabel, 
+        imageTag, 
+        imageUrl,
+        imageText
+      },
+      sellers {
+        sellerId, 
+        sellerName,
+        addToCartLink,
+        commertialOffer {
+          Price,
+          ListPrice,
+          spotPrice,
+          PriceWithoutDiscount,
+          RewardValue,
+          PriceValidUntil,
+          AvailableQuantity,
+          Tax,
+          taxPercentage,
+          Installments {
+            InterestRate,
+            Value,
+            TotalValuePlusInterestRate,
+            IDOfInstallments,
+            PaymentSystemName, 
+            PaymentSystemGroupName,
+            Name
+          }
+        }
+      }
+    }
+  }
+}

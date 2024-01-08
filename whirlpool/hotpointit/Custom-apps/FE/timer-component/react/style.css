@@ -1,0 +1,172 @@
+.countdownContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: red;
+  flex-wrap: wrap;
+}
+.widthDataFormat {
+  width: 208px;
+  display: flex;
+}
+.width25 {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+}
+
+.containerLoader {
+  display: block;
+  margin: auto;
+}
+.loaderWidth {
+  max-width: 1500px;
+}
+.containerDataFormat {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.effectOpacicyOn {
+  opacity: 1;
+  animation: putOpacity 5s; /* other keywords like "infinite alternate" can be useful here */
+}
+.effectOpacicyOff {
+  opacity: 0;
+  animation: putOpacityOff 5s; /* other keywords like "infinite alternate" can be useful here */
+}
+.timer {
+  font-size: 2rem;
+  font-weight: bold;
+  /* font-family: "myriadSemibold"; */
+  margin: 2rem 0;
+}
+.marginSideDot5Rem {
+  margin: 0 0.5rem;
+}
+.colorBord {
+  color: #7b002c;
+}
+.colorBlack {
+  color: black;
+}
+
+@keyframes putOpacity {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.75;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+@keyframes putOpacityOff {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.loaderForm {
+  font-size: 10px;
+  margin: 50px auto;
+  text-indent: -9999em;
+  width: 11em;
+  height: 11em;
+  border-radius: 50%;
+  background: #B24C24;
+  background: -moz-linear-gradient(
+    left,
+    #B24C24 10%,
+    rgba(237, 177, 18, 0) 42%
+  );
+  background: -webkit-linear-gradient(
+    left,
+    #B24C24 10%,
+    rgba(237, 177, 18, 0) 42%
+  );
+  background: -o-linear-gradient(left, #B24C24 10%, rgba(237, 177, 18, 0) 42%);
+  background: -ms-linear-gradient(left, #B24C24 10%, rgba(237, 177, 18, 0) 42%);
+  background: linear-gradient(to right, #B24C24 10%, rgba(237, 177, 18, 0) 42%);
+  position: relative;
+  -webkit-animation: load3 1.4s infinite linear;
+  animation: load3 1.4s infinite linear;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.loaderForm:before {
+  width: 50%;
+  height: 50%;
+  background: #B24C24;
+  border-radius: 100% 0 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+}
+.loaderForm:after {
+  background: #ffffff;
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+  content: "";
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+@-webkit-keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@media only screen and (max-width: 1100px) and (min-width: 600px) {
+  .loaderWidth {
+    max-width: 1000px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .loaderWidth {
+    max-width: 600px;
+  }
+  .fontSizeMobile {
+    font-size: 1.3rem;
+  }
+}

@@ -1,0 +1,46 @@
+.buttonDataContainer--stickyPdpAddToCart {
+  font-size: 16px;
+}
+
+.buttonContainer :global(.vtex-button):hover {
+  background-color: white;
+  color: #0d436b;
+  border: 1px solid #0d436b;
+}
+
+:global(.vtex-flex-layout-0-x-flexColChild--pdpStickyColAddToCart)
+  .buttonContainer {
+  border: 2px solid white;
+  border-radius: 3px;
+}
+
+:global(.vtex-flex-layout-0-x-flexColChild--pdpStickyColAddToCart)
+  .buttonContainer
+  :global(.vtex-button) {
+  background-color: #0d436b;
+  color: white;
+}
+
+:global(.vtex-product-summary-2-x-element--drawer-summary) .buttonContainer {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+@media only screen and (max-width: 640px) {
+  .buttonContainer :global(.vtex-button):hover {
+    background-color: white;
+  }
+
+  .buttonContainer :global(.vtex-button) {
+    color: white;
+  }
+  :global(.vtex-flex-layout-0-x-flexRowContent--AddToCArtPdp)
+    .buttonContainer
+    :global(.vtex-button):hover {
+    background-color: transparent;
+  }
+  :global(.vtex-modal-layout-0-x-triggerContainer--modalPDP) .buttonContainer {
+    width: 70%;
+    margin-left: auto;
+  }
+}

@@ -1,0 +1,38 @@
+<script id="chat-script" src="/arquivos/jquery.js"></script>
+<!-- <script id="chat-script" src="/arquivos/chat.js?v=1666600771250"></script> -->
+<script id="chat-script" src="/arquivos/m-chat10.js?v=1680079479553"></script>
+
+<script>
+  ; (function () {
+    var pushState = history.pushState
+    var replaceState = history.replaceState
+
+    history.pushState = function () {
+      pushState.apply(history, arguments)
+      window.dispatchEvent(new Event('pushstate'))
+      window.dispatchEvent(new Event('locationchange'))
+    }
+
+    history.replaceState = function () {
+      replaceState.apply(history, arguments)
+      window.dispatchEvent(new Event('replacestate'))
+      window.dispatchEvent(new Event('locationchange'))
+    }
+
+    window.addEventListener('popstate', function () {
+      window.dispatchEvent(new Event('locationchange'))
+    })
+  })()
+</script>
+
+<link type="text/css" rel="stylesheet" href="/arquivos/ionicons.min.css" />
+<link type="text/css" rel="stylesheet" href="https://apps.mypurecloud.ie/widgets/9.0/widgets.min.css" />
+<!-- <link type="text/css" rel="stylesheet" href="/arquivos/footer_chat.css?v=1626766444969" /> -->
+<link type="text/css" rel="stylesheet" href="/arquivos/new_css_V6.css" />
+<!-- <link
+  type="text/css"
+  rel="stylesheet"
+  href="/arquivos/chat.css?v=1665670564808"
+/> -->
+<link type="text/css" rel="stylesheet" href="/arquivos/new-chat-hotpoint-service.css?v=1677842729467" />
+<link type="text/css" rel="stylesheet" href="/arquivos/chat-hotpoint-V3.css" />

@@ -1,0 +1,85 @@
+{
+  "product-gifts": {
+    "props": {
+      "maxVisibleItems": {
+        "desktop": 10,
+        "mobile": 10
+      }
+    },
+    "children": ["flex-layout.row#product-gifts-text", "product-gift-list"]
+  },
+
+  "flex-layout.row#product-gifts-text": {
+    "props": {
+      "verticalAlign": "middle",
+      "colSizing": "auto",
+      "preserveLayoutOnMobile": true
+    },
+    "children": [
+      "rich-text#product-gifts",
+      "flex-layout.col#product-gifts-text"
+    ]
+  },
+  "flex-layout.col#product-gifts-text": {
+    "children": ["modal-trigger#product-gifts"],
+    "props": {
+      "verticalAlign": "middle"
+    }
+  },
+  "rich-text#product-gifts": {
+    "props": {
+      "text": "**PRODOTTI IN OMAGGIO**"
+    }
+  },
+  "gift-text": {
+    "props": {
+      "blockClass": "default",
+      "text": ""
+    }
+  },
+  "product-gift-list": {
+    "children": ["flex-layout.row#gift"]
+  },
+  "flex-layout.row#gift": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "gift"
+    },
+    "children": ["gift-image", "flex-layout.col#gift-name-description"]
+  },
+  "flex-layout.col#gift-name-description": {
+    "props": {
+      "verticalAlign": "middle",
+      "rowGap": 3
+    },
+    "children": ["gift-name"]
+  },
+  "gift-image": {
+    "props": {
+      "maxWidth": "60px",
+      "minWidth": "50px",
+      "minHeight": "50px"
+    }
+  },
+  "modal-trigger#product-gifts": {
+    "children": ["modal-layout#product-gifts", "gift-text"],
+    "props": {
+      "blockClass": "product-gifts"
+    }
+  },
+  "modal-layout#product-gifts": {
+    "props": {
+      "blockClass": "product-gifts",
+      "fullScreen": {
+        "phone": true,
+        "desktop": false,
+        "tablet": false
+      }
+    },
+    "children": ["product-gifts#modal"]
+  },
+
+  "product-gifts#modal": {
+    "children": ["product-gift-list"]
+  }
+}

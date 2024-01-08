@@ -1,0 +1,73 @@
+{
+  "memory": 256,
+  "ttl": 10,
+  "timeout": 120,
+  "minReplicas": 2,
+  "maxReplicas": 4,
+  "workers": 1,
+  "events":{
+    "fetchDataFromCRM":{
+      "keys": ["fetch-user-data-from-crm"]
+    },
+    "recoverPlan":{
+      "keys": ["crm-recover-plan"]
+    },
+    "newsletterSubscription":{
+      "keys": ["crm-newsletter-subscription"]
+    },
+    "newOrder": {
+      "sender": "vtex.orders-broadcast",
+      "topics": ["order-created"]
+    },
+    "onAppInstalled": {
+      "sender": "apps",
+      "keys": ["setup"]
+    }
+  },
+  "routes": {
+    "ping": {
+      "path": "/app/crm-async-integration/ping",
+      "public": true
+    },
+    "notificationHandler":{
+      "path": "/app/crm-async-integration/notify",
+      "public": true
+    },
+    "setCrmBpId":{
+      "path": "/app/crm-async-integration/vtex/crmbpid",
+      "public": true
+    },
+    "getUserDataFromVtex":{
+      "path": "/app/crm-async-integration/vtex/user",
+      "public": true
+    },
+    "deleteUserDataFromVtex":{
+      "path": "/app/crm-async-integration/vtex/user/:id",
+      "public": true
+    },
+    "getUserDataFromCRM":{
+      "path": "/app/crm-async-integration/crm/user",
+      "public": true
+    },
+    "eppExportHandler":{
+      "path": "/app/crm-async-integration/epp",
+      "public": true
+    },
+    "guestUserRegistration":{
+      "path": "/app/crm-async-integration/crm/guest/:orderId",
+      "public": true
+    },
+    "registrationForm":{
+      "path": "/app/crm-async-integration/registration-form",
+      "public": true
+    },
+    "crmBackflowStatus":{
+      "path": "/app/crm-async-integration/crm-backflow/status",
+      "public": true
+    },
+    "productRegistration":{
+      "path": "/app/crm-async-integration/product-registration",
+      "public": true
+    }
+  }
+}

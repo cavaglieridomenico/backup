@@ -1,0 +1,53 @@
+{
+  "memory": 256,
+  "ttl": 10,
+  "timeout": 60,
+  "minReplicas": 2,
+  "maxReplicas": 4,
+  "workers": 1,
+  "events": {
+    "newOrder": {
+      "sender": "vtex.orders-broadcast",
+      "topics": ["handling"]
+    },
+    "newInvitation": {
+      "keys": ["ff-new-invitation"]
+    },
+    "invitationAccepted": {
+      "keys": ["ff-invitation-accepted"]
+    },
+    "dropPriceAlert":{
+      "keys": ["broadcaster.notification"]
+    }
+  },
+  "routes": {
+    "createOrder":{
+      "path": "/app/sfmc/order/:orderId/confirm",
+      "public": true
+    },
+    "cancelOrder":{
+      "path": "/app/sfmc/order/:orderId/cancel",
+      "public": true
+    },
+    "getProduct":{
+      "path": "/app/sfmc/catalog",
+      "public": true
+    },
+    "refundOrder":{
+      "path": "/app/sfmc/order/refund",
+      "public": true
+    },
+    "returnOrder":{
+      "path": "/app/sfmc/order/return",
+      "public": true
+    },
+    "getProductRecommendations":{
+      "path": "/app/sfmc/recommendations",
+      "public": true
+    },
+    "dropPriceExpire":{
+      "path": "/app/sfmc/dropPriceExpire",
+      "public": true
+    }
+  }
+}

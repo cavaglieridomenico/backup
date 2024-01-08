@@ -1,0 +1,123 @@
+{
+  "experimental__visibility-layout#bannerWithPostilla": {
+    "props": {
+      "visible": true
+    },
+    "children": ["flex-layout.row#bannerWithPostilla"]
+  },
+  "flex-layout.row#bannerWithPostilla": {
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": ["columnPostillaBannerAntonio", "bgColorAntonioHero"]
+    },
+    "children": [
+      "flex-layout.col#leftPartPostilla",
+      "flex-layout.col#rightPartPostilla"
+    ]
+  },
+  "flex-layout.col#leftPartPostilla": {
+    "props": {
+      "width": "40%",
+      "preventVerticalStretch": true,
+      "blockClass": ["columnPostilla", "columnPostillaBottom"]
+    },
+    "children": [
+      "rich-text#BanntitleParag",
+      "rich-text#BannTitle",
+      "rich-text#BannDesc",
+      "experimental__visibility-layout#ButtonBannerWithPostilla"
+      // "rich-text#BannPostilla"
+    ]
+  },
+  "flex-layout.col#rightPartPostilla": {
+    "props": {
+      "width": "60%",
+      "blockClass": "columnPostillaImage"
+    },
+    "children": ["image#bannerPostilla"]
+  },
+  "rich-text#BanntitleParag": {
+    "props": {
+      "text": "W COLLECTION",
+      "blockClass": "titlePBannerPostilla"
+    }
+  },
+  "rich-text#BannTitle": {
+    "props": {
+      "text": "# Frigorifero combinato 4 porte",
+      "blockClass": ["titleHBannerPostilla"]
+    }
+  },
+  "rich-text#BannDesc": {
+    "props": {
+      "text": "33% di spazio extra per frutta e verdura *",
+      "blockClass": "descBannerPostilla"
+    }
+  },
+  "experimental__visibility-layout#ButtonBannerWithPostilla": {
+    "props": {
+      "visible": true
+    },
+    "children": ["link#ButtonBann"]
+  },
+  "link#ButtonBann": {
+    "props": {
+      "label": "TESTO BOTTONE",
+      "href": "#",
+      "displayMode": "button",
+      "blockClass": "postillaButton"
+    }
+  },
+  "rich-text#BannPostilla": {
+    "props": {
+      "text": "*Considerando la capacità dello spazio convertibile impostato a 4 ° C.",
+      "blockClass": ["postillaBannerPostilla", "anchorPostilla"]
+    }
+  },
+  "image#bannerPostilla": {
+    "props": {
+      "src": "assets/postillaBanner/frigoBannerPostilla.jpg",
+      "blockClass": "imagePostillaBanner"
+    }
+  },
+  //Banenr 2
+  "experimental__visibility-layout#bannerWithPostillaHome": {
+    "props": {
+      "visible": true
+    },
+    "children": ["flex-layout.row#bannerWithPostillaHome"]
+  },
+  "flex-layout.row#bannerWithPostillaHome": {
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": ["columnPostillaBannerAntonio", "bgColorAntonioHero"]
+    },
+    "children": [
+      "flex-layout.col#leftPartPostillaHome",
+      "flex-layout.col#rightPartPostilla"
+    ]
+  },
+  "flex-layout.col#leftPartPostillaHome": {
+    "props": {
+      "width": "40%",
+      "preventVerticalStretch": true,
+      "blockClass": ["columnPostilla", "columnPostillaBottom"]
+    },
+    "children": [
+      "image#LogoBannerTopCarousel",
+      "rich-text#BanntitleParag",
+      "rich-text#BannTitle",
+      "rich-text#BannDesc",
+      "experimental__visibility-layout#ButtonBannerWithPostilla",
+      "rich-text#BannPostilla"
+    ]
+  },
+  "image#LogoBannerTopCarousel": {
+    "props": {
+      "visible": true,
+      "src": "assets/postillaBanner/logoGoogle.jpg",
+      "width": "2rem",
+      "blockClass": ["marginBottom"]
+    }
+  }
+}

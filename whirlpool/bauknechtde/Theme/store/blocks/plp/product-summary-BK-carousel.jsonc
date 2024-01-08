@@ -1,0 +1,230 @@
+{
+  "product-summary.shelf.product-comparison#bauknechtPLP-carousel": {
+    "children": [
+      "flex-layout.row#comparisonWishBKPLP-carousel",
+      "flex-layout.row#promotionPLPBK",
+      "flex-layout.row#productImageCarouselPLPBK",
+      "condition-layout.product#blackFridayPopupPLP-Grid",
+      "flex-layout.row#productTitleCarouselPLPBK",
+      "flex-layout.row#productRatingCarouselPLPBK",
+      "flex-layout.col#productStockCarouselPLPBK",
+      "flex-layout.row#tootltipLabelMouseHover",
+      "flex-layout.row#productEnergyLabelAndStockCarouselPLPBKNo10YW",
+      "flex-layout.row#productPriceCarouselPLPBK"
+    ],
+    "props": {
+      "blockClass": "bauknechtPLPCard-carousel"
+    }
+  },
+  "flex-layout.row#comparisonWishBKPLP-carousel": {
+    "props": {
+      "blockClass": ["comparisonWishBKPLP-carousel"],
+      "colSizing": "auto"
+    },
+    "children": [
+      "add-to-list-btn#BKPLP-carousel"
+    ]
+  },
+  "add-to-list-btn#BKPLP-carousel": {
+    "props": {
+      "blockClass": ["wishListBKPLP", "wishListBKPLP-carousel"]
+    }
+  },
+  "flex-layout.row#productImageCarouselPLPBK": {
+    "children": ["product-summary-image#bkPLPCard"],
+    "props": {
+      "blockClass": "productImageMobilePLPBK"
+    }
+  },
+  "flex-layout.row#productTitleCarouselPLPBK": {
+    "children": ["vtex.store-components:product-name#bkPLP"],
+    "props": {
+      "blockClass": "productTitleMobilePLPBK-carousel"
+    }
+  },
+  "flex-layout.row#productStockCarouselPLPBK": {
+    "title": "[ROW] - Product's availability",
+    "children": ["flex-layout.col#productStockCarouselPLPBK"],
+    "props": {
+      "blockClass": "productStockCorouselPLPBKCol"
+    }
+  },
+  "flex-layout.row#productRatingCarouselPLPBK": {
+    "children": ["flex-layout.col#productRatingCarouselPLPBK"],
+    "props": {
+      "blockClass": "productRatingMobilePLPBKRow"
+    }
+  },
+  "flex-layout.col#productRatingCarouselPLPBK": {
+    "children": ["product-rating-inline.bazaarvoice"],
+    "props": {
+      "blockClass": "productRatingMobilePLPBKCol"
+    }
+  },
+  "flex-layout.row#productEnergyLabelAndStockCarouselPLPBK": {
+    "children": ["flex-layout.row#energyLabelAndBadgeBKPLP"],
+    "props": {
+      "blockClass": "productEnergyLabelAndStockCaroselPLPBKRow",
+      "preserveLayoutOnMobile": true
+    }
+  },
+  "flex-layout.row#productEnergyLabelAndStockCarouselPLPBKNo10YW": {
+    "children": ["flex-layout.row#energyLabelAndBadgeBKPLPNo10YW"],
+    "props": {
+      "blockClass": [
+        "productEnergyLabelAndStockCaroselPLPBKRow",
+        "productEnergyLabelAndStockCaroselPLPBKRowNo10YW"
+      ],
+      "preserveLayoutOnMobile": true
+    }
+  },
+  "flex-layout.row#energyLabelAndBadgeBKPLPNo10YW": {
+    "props": {
+      "blockClass": ["energyLabelAndBadgeBKPLP"]
+      // "colSizing": "auto"
+    },
+    "children": [
+      "flex-layout.col#EnergyLabelCol",
+      // "flex-layout.col#10YWLogoCol",
+      "flex-layout.col#reddotPrizeBadgeCol"
+    ]
+  },
+  "flex-layout.col#productEnergyLabelCarouselPLPBK": {
+    "children": ["condition-layout.product#etichetta-image"],
+    "props": {
+      "blockClass": ["productEnergyLabelMobilePLPBKCol", "EnergyLabelCol"],
+      "width": "50%"
+    }
+  },
+  "flex-layout.col#productStockCarouselPLPBK": {
+    "title": "[COL] - Product's availability",
+    "children": ["condition-layout.product#isProductSellableBK-carousel"],
+    "props": {
+      "blockClass": "productStockCorouselPLPBKCol",
+      "width": "50%"
+    }
+  },
+  /*  */
+  "condition-layout.product#isProductSellableBK-carousel": {
+    "title": "[CONDITION] - Product's availability",
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "sellable",
+            "value": "true"
+          }
+        }
+      ],
+      "Then": "condition-layout.product#isProductAvailableBK-carousel",
+      "Else": "rich-text#productNotSellableLabel-carousel"
+    }
+  },
+  "rich-text#productNotSellableLabel-carousel": {
+    "title": "[TEXT] - Product's availability (Not sellable)",
+    "props": {
+      "text": "![](assets/icons/grey_dot.svg) Nicht im Bauknecht Online Shop verfügbar",
+      "blockClass": ["productNotSellableLabel-carousel", "stockBadges"]
+    }
+  },
+  "condition-layout.product#isProductAvailableBK-carousel": {
+    "title": "[CONDITION] - Product's availability",
+    "props": {
+      "conditions": [
+        {
+          "subject": "isProductAvailable"
+        }
+      ],
+      "Then": "condition-layout.product#isFewPiecesBK-carousel",
+      "Else": "rich-text#productNotInStockLabel-carousel"
+    }
+  },
+  "rich-text#productNotInStockLabel-carousel": {
+    "title": "[TEXT] - Product's availability (Not in stock)",
+    "props": {
+      "text": "![](assets/icons/red_dot.svg) Zurzeit nicht im Shop verfügbar",
+      "blockClass": ["productNotInStockLabel-carousel", "stockBadges"]
+    }
+  },
+  "condition-layout.product#isFewPiecesBK-carousel": {
+    "title": "[CONDITION] - Product's availability",
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "showFewPiecesAlert",
+            "value": "true"
+          }
+        }
+      ],
+      "Then": "rich-text#productFewPiecesLabel-carousel",
+      "Else": "rich-text#productInStockLabel-carousel"
+    }
+  },
+  "rich-text#productFewPiecesLabel-carousel": {
+    "title": "[TEXT] - Product's availability (Few piece)",
+    "props": {
+      "text": "![](assets/icons/orange_dot.svg) Nur noch wenige verfügbar",
+      "blockClass": ["productFewPiecesLabel-carousel", "stockBadges"]
+    }
+  },
+  "rich-text#productInStockLabel-carousel": {
+    "title": "[TEXT] - Product's availability (In stock)",
+    "props": {
+      "text": "![](assets/icons/green_dot.svg) Auf Lager: Lieferzeit 4-6 Werktage",
+      "blockClass": ["productInStockLabel-carousel", "stockBadges"]
+    }
+  },
+  /*  */
+  "flex-layout.row#tootltipLabelMouseHover": {
+    "children": ["overlay-trigger#tootltipLabelMouseHover"],
+    "props": {
+      "blockClass": ["tootltipLabelMouseHover"]
+    }
+  },
+  "overlay-trigger#tootltipLabelMouseHover": {
+    "children": [
+      "analytics-wrapper#overlay-trigger",
+      "overlay-layout#tootltipLabelMouseHover"
+    ]
+  },
+  "analytics-wrapper#overlay-trigger": {
+    "props": {
+      "propsAnalytics": {
+        "analyticsProperties": "provide",
+        "nameEvent": "extra_info_interaction_tooltip",
+        "name": "extraInfoInteraction",
+        "nameView": "",
+        "data": [
+          {
+            "title": "type",
+            "value": "detail tab bewertungen"
+          }
+        ],
+        "isView": false
+      }
+    },
+    "children": ["rich-text#tootltipLabelText"]
+  },
+  "rich-text#tootltipLabelText": {
+    "props": {
+      "text": "![The San Juan Mountains are beautiful!](/arquivos/service-newguidelines.png) Zusätzliche Leistungen ![The San Juan Mountains are beautiful!](https://bauknechtde.vtexassets.com/arquivos/800px-Infobox_info_icon.svg.png)",
+      "blockClass": ["tootltipLabelText"]
+    }
+  },
+  "overlay-layout#tootltipLabelMouseHover": {
+    "children": ["flex-layout.row#additionalServicesPLPBK"]
+  },
+  "flex-layout.row#productPriceCarouselPLPBK": {
+    "children": [
+      "flex-layout.col#savingsPriceCol",
+      "flex-layout.col#sellingPriceCol"
+    ],
+    "props": {
+      "blockClass": ["productPriceMobilePLPBK"],
+      "colSizing": "auto"
+    }
+  }
+}

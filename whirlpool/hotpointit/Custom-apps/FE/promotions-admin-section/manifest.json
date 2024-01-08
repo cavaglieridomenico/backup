@@ -1,0 +1,33 @@
+{
+  "name": "promotions-admin-section",
+  "vendor": "hotpointit",
+  "version": "1.0.3",
+  "title": "Promotion report",
+  "description": "",
+  "mustUpdateAt": "2025-12-30",
+  "scripts": {
+    "postreleasy": "vtex publish"
+  },
+  "dependencies": {
+    "vtex.styleguide": "9.x",
+    "vtex.render-runtime": "8.x"
+  },
+  "builders": {
+    "react": "3.x",
+    "admin": "0.x",
+    "messages": "1.x",
+    "docs": "0.x",
+    "node": "6.x"
+  },
+  "credentialType": "absolute",
+  "policies": [
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "portal.vtexcommercestable.com.br",
+        "path": "*"
+      }
+    }
+  ],
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

@@ -1,0 +1,6 @@
+query getSpareInBom($referenceNumber: String!, $bomId: String!, $industrialCode: String!){
+  getJcodeForBom(referenceNumber: $referenceNumber, bomId: $bomId, industrialCode: $industrialCode){
+    sparePartId,
+    referenceNumber
+  }
+}

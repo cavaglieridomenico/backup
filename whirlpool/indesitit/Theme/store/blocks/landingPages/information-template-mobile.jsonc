@@ -1,0 +1,361 @@
+{
+  /* ---MAXI CONTAINER MOBILE--- */
+  "responsive-layout.mobile#information-landing-mobile": {
+    "children": ["flex-layout.row#information-landing-maxi-mobile"]
+  },
+  "flex-layout.row#information-landing-maxi-mobile": {
+    "children": ["flex-layout.col#information-landing-maxi-mobile"],
+    "props": {
+      "blockClass": "information-landing-maxi-mobile"
+    }
+  },
+  "flex-layout.col#information-landing-maxi-mobile": {
+    "children": [
+      //"analytics#landing-pages",
+      /* "breadcrumb#information-mobile", */
+      "breadcrumb-custom#information-mobile",
+      "flex-layout.row#information-intro-mobile",
+      "flex-layout.row#text-after-intro-mobile",
+      "flex-layout.row#first-point-mobile",
+      "flex-layout.col#learn-more-01-mobile",
+      "flex-layout.row#second-point-mobile",
+      "flex-layout.col#learn-more-02-mobile",
+      "flex-layout.row#third-point-mobile",
+      "flex-layout.col#learn-more-03-mobile",
+      "flex-layout.row#fourth-point-mobile",
+      "flex-layout.col#learn-more-04-mobile",
+      "flex-layout.row#information-mobile-last-centered-title-desktop-container",
+      "flex-layout.row#information-last-carousel-mobile-container"
+    ],
+    "props": {
+      "blockClass": "information-landing-maxi-container-mobile"
+    }
+  },
+  /* BREADCRUMB */
+  "breadcrumb#information-mobile": {
+    "props": {
+      "categories": ["/Home/", "Product launch"],
+      "showOnMobile": true,
+      "blockClass": "breadcrumb-landing-template-mobile"
+    }
+  },
+  "breadcrumb-custom#information-mobile": {
+    "props": {
+      /* "blockClass": "containerBreadcrumbs", */
+      "firstPage": "Home",
+      "currentPage": "Information"
+    }
+  },
+  /* ---INTRO TO INFORMATION MOBILE--- */
+  "flex-layout.row#information-intro-mobile": {
+    "children": ["flex-layout.col#information-intro-mobile"]
+  },
+  "flex-layout.col#information-intro-mobile": {
+    "children": [
+      "flex-layout.row#intro-image-mobile",
+      "flex-layout.row#intro-text-desktop"
+    ],
+    "props": {
+      "blockClass": "information-intro-mobile"
+    }
+  },
+  /* FIRST INTRO */
+  "flex-layout.row#intro-image-mobile": {
+    "children": ["image#information-intro-mobile"],
+    "props": {
+      "blockClass": "information-image-mobile"
+    }
+  },
+  "image#information-intro-mobile": {
+    "props": {
+      "blockClass": "image-information-intro-mobile",
+      "src": "https://i.picsum.photos/id/1002/4312/2868.jpg?hmac=5LlLE-NY9oMnmIQp7ms6IfdvSUQOzP_O3DPMWmyNxwo"
+    }
+  },
+  /* SECOND INTRO */
+  "flex-layout.row#intro-text-desktop": {
+    "children": [
+      "title-text#information-intro-text-title",
+      "rich-text#intro-text-paragraph-mobile"
+    ],
+    "props": {
+      "blockClass": "text-landing-template-intro-mobile"
+    }
+  },
+  "rich-text#intro-text-title-mobile": {
+    "props": {
+      "text": "Informative communication title",
+      "blockClass": "intro-landing-template-title-mobile"
+    }
+  },
+  "rich-text#intro-text-paragraph-mobile": {
+    "props": {
+      "text": "Overview and context information about the information the page should communicate",
+      "blockClass": "intro-landing-template-paragraph-mobile"
+    }
+  },
+  /* ---TEXT AFTER THE INTRO MOBILE--- */
+  "flex-layout.row#text-after-intro-mobile": {
+    "children": ["flex-layout.col#desc-after-intro-mobile"],
+    "props": {
+      "blockClass": "text-after-intro-mobile"
+    }
+  },
+  "flex-layout.col#desc-after-intro-mobile": {
+    "children": ["rich-text#paragraph-text-after-intro-mobile"],
+    "props": {
+      "blockClass": "desc-after-intro-mobile"
+    }
+  },
+  "rich-text#paragraph-text-after-intro-mobile": {
+    "props": {
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt enim sit imperdiet id aenan nunc ut faucibus. Vitae ullamcorper turpis blandit semper at. Aliquam tristique eget a et lectus vestibulu, nascetur dolor.",
+      "blockClass": "text-full-screen-landing-template-mobile"
+    }
+  },
+  /* ---FIRST POINT--- */
+  "flex-layout.row#first-point-mobile": {
+    "children": ["flex-layout.col#component-first-point-mobile"]
+  },
+  "flex-layout.col#component-first-point-mobile": {
+    "children": [
+      "flex-layout.row#image-first-point-mobile",
+      "flex-layout.row#text-first-point-mobile"
+    ]
+  },
+  /* IMAGE FIRST POINT */
+  "flex-layout.row#image-first-point-mobile": {
+    "children": ["image#first-point-mobile"],
+    "props": {
+      "blockClass": "container-image-text-image-landing-template-mobile"
+    }
+  },
+  "image#first-point-mobile": {
+    "props": {
+      "blockClass": "image-text-image-landing-template-mobile",
+      "src": "https://i.picsum.photos/id/1002/4312/2868.jpg?hmac=5LlLE-NY9oMnmIQp7ms6IfdvSUQOzP_O3DPMWmyNxwo"
+    }
+  },
+  /* TEXT FIRST POINT */
+  "flex-layout.row#text-first-point-mobile": {
+    "children": [
+      "rich-text#title-first-point-mobile",
+      "rich-text#paragraph-first-point-mobile"
+    ],
+    "props": {
+      "blockClass": "container-text-text-image-landing-template-mobile-01"
+    }
+  },
+  "rich-text#title-first-point-mobile": {
+    "props": {
+      "text": "First point, most generical",
+      "blockClass": "title-text-image-landing-template-mobile"
+    }
+  },
+  "rich-text#paragraph-first-point-mobile": {
+    "props": {
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "blockClass": "description-text-image-landing-template-mobile"
+    }
+  },
+
+  /* LEARN MORE */
+  "flex-layout.col#learn-more-01-mobile": {
+    "children": ["button-learn-more-information#button-01-mobile"]
+  },
+  "button-learn-more-information#button-01-mobile": {},
+
+  /* ---SECOND POINT--- */
+  "flex-layout.row#second-point-mobile": {
+    "children": ["flex-layout.col#component-second-point-mobile"]
+  },
+  "flex-layout.col#component-second-point-mobile": {
+    "children": [
+      "flex-layout.row#image-second-point-mobile",
+      "flex-layout.row#text-second-point-mobile"
+    ]
+  },
+  /* IMAGE SECOND POINT */
+  "flex-layout.row#image-second-point-mobile": {
+    "children": ["image#second-point-mobile"],
+    "props": {
+      "blockClass": "container-image-text-image-landing-template-mobile"
+    }
+  },
+  "image#second-point-mobile": {
+    "props": {
+      "blockClass": "image-text-image-landing-template-mobile",
+      "src": "https://i.picsum.photos/id/1002/4312/2868.jpg?hmac=5LlLE-NY9oMnmIQp7ms6IfdvSUQOzP_O3DPMWmyNxwo"
+    }
+  },
+  /* TEXT SECOND POINT */
+  "flex-layout.row#text-second-point-mobile": {
+    "children": [
+      "rich-text#title-second-point-mobile",
+      "rich-text#paragraph-second-point-mobile"
+    ],
+    "props": {
+      "blockClass": "container-text-text-image-landing-template-mobile-01"
+    }
+  },
+  "rich-text#title-second-point-mobile": {
+    "props": {
+      "text": "Second point, most generical",
+      "blockClass": "title-text-image-landing-template-mobile"
+    }
+  },
+  "rich-text#paragraph-second-point-mobile": {
+    "props": {
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "blockClass": "description-text-image-landing-template-mobile"
+    }
+  },
+
+  /* LEARN MORE */
+  "flex-layout.col#learn-more-02-mobile": {
+    "children": ["button-learn-more-information#button-02-mobile"]
+  },
+  "button-learn-more-information#button-02-mobile": {},
+
+  /* ---THIRD POINT--- */
+  "flex-layout.row#third-point-mobile": {
+    "children": ["flex-layout.col#component-third-point-mobile"]
+  },
+  "flex-layout.col#component-third-point-mobile": {
+    "children": [
+      "flex-layout.row#image-third-point-mobile",
+      "flex-layout.row#text-third-point-mobile"
+    ]
+  },
+  /* IMAGE THIRD POINT */
+  "flex-layout.row#image-third-point-mobile": {
+    "children": ["image#third-point-mobile"],
+    "props": {
+      "blockClass": "container-image-text-image-landing-template-mobile"
+    }
+  },
+  "image#third-point-mobile": {
+    "props": {
+      "blockClass": "image-text-image-landing-template-mobile",
+      "src": "https://i.picsum.photos/id/1002/4312/2868.jpg?hmac=5LlLE-NY9oMnmIQp7ms6IfdvSUQOzP_O3DPMWmyNxwo"
+    }
+  },
+  /* TEXT THIRD POINT */
+  "flex-layout.row#text-third-point-mobile": {
+    "children": [
+      "rich-text#title-third-point-mobile",
+      "rich-text#paragraph-third-point-mobile"
+    ],
+    "props": {
+      "blockClass": "container-text-text-image-landing-template-mobile-01"
+    }
+  },
+  "rich-text#title-third-point-mobile": {
+    "props": {
+      "text": "Third point, most generical",
+      "blockClass": "title-text-image-landing-template-mobile"
+    }
+  },
+  "rich-text#paragraph-third-point-mobile": {
+    "props": {
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "blockClass": "description-text-image-landing-template-mobile"
+    }
+  },
+
+  /* LEARN MORE */
+  "flex-layout.col#learn-more-03-mobile": {
+    "children": ["button-learn-more-information#button-03-mobile"]
+  },
+  "button-learn-more-information#button-03-mobile": {},
+
+  /* ---FOURTH POINT--- */
+  "flex-layout.row#fourth-point-mobile": {
+    "children": ["flex-layout.col#component-fourth-point-mobile"]
+  },
+  "flex-layout.col#component-fourth-point-mobile": {
+    "children": [
+      "flex-layout.row#image-fourth-point-mobile",
+      "flex-layout.row#text-fourth-point-mobile"
+    ]
+  },
+  /* IMAGE FOURTH POINT */
+  "flex-layout.row#image-fourth-point-mobile": {
+    "children": ["image#fourth-point-mobile"],
+    "props": {
+      "blockClass": "container-image-text-image-landing-template-mobile"
+    }
+  },
+  "image#fourth-point-mobile": {
+    "props": {
+      "blockClass": "image-text-image-landing-template-mobile",
+      "src": "https://i.picsum.photos/id/1002/4312/2868.jpg?hmac=5LlLE-NY9oMnmIQp7ms6IfdvSUQOzP_O3DPMWmyNxwo"
+    }
+  },
+  /* TEXT FOURTH POINT */
+  "flex-layout.row#text-fourth-point-mobile": {
+    "children": [
+      "rich-text#title-fourth-point-mobile",
+      "rich-text#paragraph-fourth-point-mobile"
+    ],
+    "props": {
+      "blockClass": "container-text-fourth-point-mobile"
+    }
+  },
+  "rich-text#title-fourth-point-mobile": {
+    "props": {
+      "text": "Fourth point, most generical",
+      "blockClass": "title-text-image-landing-template-mobile"
+    }
+  },
+  "rich-text#paragraph-fourth-point-mobile": {
+    "props": {
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "blockClass": "description-text-image-landing-template-mobile"
+    }
+  },
+
+  /* LEARN MORE */
+  "flex-layout.col#learn-more-04-mobile": {
+    "children": ["button-learn-more-information#button-04-mobile"]
+  },
+  "button-learn-more-information#button-04-mobile": {},
+
+  /* ---CAROSELLO MOBILE--- */
+  /* TITLE CAROSELLO */
+  "flex-layout.row#information-mobile-last-centered-title-desktop-container": {
+    "children": [
+      "flex-layout.col#information-mobile-last-centered-title-desktop-container"
+    ],
+    "props": {
+      "blockClass": "information-mobile-last-centered-title-desktop-container-style"
+    }
+  },
+  "flex-layout.col#information-mobile-last-centered-title-desktop-container": {
+    "children": ["rich-text#information-mobile-last-centered-text"],
+    "props": {
+      "blockClass": "information-mobile-firlastst-centered-title-desktop-container-style"
+    }
+  },
+  "rich-text#information-mobile-last-centered-text": {
+    "props": {
+      "text": "You may also be interested in",
+      "blockClass": "title-centered-text-information-mobile"
+    }
+  },
+  /* CARD CAROSELLO */
+  "flex-layout.row#information-last-carousel-mobile-container": {
+    "children": [
+      "product-carousel-landing-page-new#information-last-carousel-mobile"
+    ],
+    "props": {
+      "blockClass": "information-last-carousel-mobile-container"
+    }
+  },
+  "product-carousel-landing-page-new#information-last-carousel-mobile": {
+    "props": {
+      "collectionID": "137",
+      "isBottomCarousel": true
+    }
+  }
+}

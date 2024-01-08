@@ -1,0 +1,315 @@
+{
+  "name": "hdx-connector",
+  "vendor": "ukccwhirlpool",
+  "version": "1.0.14",
+  "title": "Paragon HDX",
+  "description": "App connecting Vtex with Paragon HDX",
+  "categories": [],
+  "dependencies": {},
+  "builders": {
+    "node": "6.x",
+    "docs": "0.x"
+  },
+  "scripts": {},
+  "credentialType": "absolute",
+  "policies": [
+    {
+      "name": "ADMIN_DS"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "emeaservicesq.cert.whirlpool.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "emeaservices.cert.whirlpool.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "api.vtex.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.myvtex.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.vtexcommercestable.com.br",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "portal.vtexcommercestable.com.br",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "*.vtexcommercebeta.com.br",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "portal.vtexcommercebeta.com.br",
+        "path": "*"
+      }
+    },
+    {
+      "name": "colossus-fire-event"
+    },
+    {
+      "name": "colossus-write-logs"
+    },
+    {
+      "name": "ADMIN_DS"
+    },
+    {
+      "name": "AcessaTodosCarrinhos"
+    },
+    {
+      "name": "AcessaTodosPedidos"
+    },
+    {
+      "name": "OMSViewer"
+    },
+    {
+      "name": "vbase-read-write"
+    }
+  ],
+  "settingsSchema": {
+    "title": "Paragon HDX",
+    "type": "object",
+    "properties": {
+      "sappo": {
+        "title": "SAP PO Settings",
+        "type": "object",
+        "properties": {
+          "environment": {
+            "title": "Environment",
+            "type": "string",
+            "enum": [
+              "production",
+              "quality"
+            ]
+          },
+          "password": {
+            "title": "Password",
+            "type": "string"
+          }
+        }
+      },
+      "hdx": {
+        "title": "HDX Settings",
+        "type": "object",
+        "properties": {
+          "userId": {
+            "title": "User ID",
+            "type": "string"
+          },
+          "password": {
+            "title": "Password",
+            "type": "string"
+          },
+          "systemID": {
+            "title": "System ID",
+            "type": "string",
+            "default": "Hotpoint UK"
+          },
+          "clientNum": {
+            "title": "Client Number",
+            "type": "string"
+          },
+          "isoLanguageCode": {
+            "title": "Default ISO Language Code",
+            "type": "string",
+            "default": "EN"
+          },
+          "isoCountryCode": {
+            "title": "Default ISO Country Code",
+            "type": "string",
+            "default": "GBR"
+          },
+          "isoCurrencyCode": {
+            "title": "Default ISO Currency Code",
+            "type": "string",
+            "default": "GBP"
+          },
+          "visitNumDays": {
+            "title": "Visit - Number of days",
+            "type": "string",
+            "default": "20"
+          },
+          "visitTimeSlotGroupNum": {
+            "title": "Visit - Time slot group number",
+            "type": "string",
+            "default": "1"
+          },
+          "visitTimeSlotNum": {
+            "title": "Visit - Time slot number",
+            "type": "string",
+            "default": "1"
+          },
+          "visitReleasedInd": {
+            "title": "Visit - Released index",
+            "type": "string",
+            "default": "1"
+          }
+        }
+      },
+      "vtex": {
+        "title": "Vtex Settings",
+        "type": "object",
+        "properties": {
+          "enabledAPICredentials": {
+            "title": "Enabled API Credentials (template: key1:value1;key2:value2)",
+            "type": "string",
+            "default": "6606af5e0d4e7b1730704f8577f2b214043178bfa5619c99b9565e1f44c4d354:ab6586ebfc0ec6d7526a189017730599200c82c9063c8c6674c14a4cc5d6bb6a;90a402ea904815788230c950ab6bf11c7ade8478b2131fc72a21256f0b6a921f:1f2abf0d73a9af7c129faaab5b87f121df2843e32cf6e2752b1b88e1ea69ecab"
+          },
+          "inStockShippingPolicy": {
+            "title": "Shipping Policy In Stock - Name",
+            "type": "string",
+            "default": "Scheduled"
+          },
+          "additionalServicesData": {
+            "title": "Additional Services Ids",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "tradePolicyId": {
+                  "title": "Trade Policy Id",
+                  "type": "string"
+                },
+                "installationId": {
+                  "title": "Id of the service \"Installation\"",
+                  "type": "string"
+                },
+                "collectScrapId": {
+                  "title": "Id of the service \"Collect scrap\"",
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "categoriesMap": {
+            "title": "Categories map",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "ids": {
+                  "title": "ids (comma separated)",
+                  "type": "string"
+                },
+                "keyword": {
+                  "title": "Internal keyword (e.g. \"cookers\")",
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "deliveryMatrix": {
+            "title": "Delivery Matrix",
+            "type": "object",
+            "properties": {
+              "mdName": {
+                "title": "Master Data - Entity Name (2 chars)",
+                "type": "string",
+                "default": "DM"
+              }
+            }
+          },
+          "deliveryTimeCalc": {
+            "title": "Delivery Time",
+            "type": "object",
+            "properties": {
+              "mdName": {
+                "title": "Master Data - Entity Name (2 chars)",
+                "type": "string",
+                "default": "DT"
+              },
+              "mainRecordId": {
+                "title": "Main Record - Id (i.e. timeCalCode)",
+                "type": "string",
+                "default": "1"
+              }
+            }
+          },
+          "depotConfiguration": {
+            "title": "Depot Configuration",
+            "type": "object",
+            "properties": {
+              "mdName": {
+                "title": "Master Data - Entity Name (2 chars)",
+                "type": "string",
+                "default": "DC"
+              },
+              "defaultEOD": {
+                "title": "Default EOD (format: hh:mm:ss)",
+                "type": "string",
+                "default": "20:00:00"
+              }
+            }
+          },
+          "offsetTable": {
+            "title": "Offset Config",
+            "type": "object",
+            "properties": {
+              "mdName": {
+                "title": "Master Data - Entity Name (2 chars)",
+                "type": "string",
+                "default": "OT"
+              }
+            }
+          },
+          "holidayTable": {
+            "title": "Holiday Config",
+            "type": "object",
+            "properties": {
+              "mdName": {
+                "title": "Master Data - Entity Name (2 chars)",
+                "type": "string",
+                "default": "HT"
+              }
+            }
+          },
+          "reservationTable": {
+            "title": "HDX - Visit Codes",
+            "type": "object",
+            "properties": {
+              "mdName": {
+                "title": "Master Data - Entity Name (2 chars)",
+                "type": "string",
+                "default": "VC"
+              }
+            }
+          },
+          "productsWithoutSlots": {
+            "title": "Products for which slots cannot be shown due to business needs",
+            "description": "12nc comma separated",
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

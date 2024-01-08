@@ -1,0 +1,111 @@
+{
+  "product-summary.shelf#caroselliLanding": {
+    // "children": [
+    //   "flex-layout.row#collection-badges",
+    //   "product-summary-image#shelf",
+    //   "vtex.store-components:product-name#summary",
+    //   "flex-layout.row#plpPrice",
+    //   "flex-layout.row#etichetteCarousel",
+    //   "add-to-cart-custom#plp",
+    //   "add-to-list-btn"
+    // ]
+    "children": [
+      "responsive-layout.desktop#caroselliLanding",
+      "responsive-layout.mobile#caroselliLanding"
+    ],
+    "props": {
+      "blockClass": [
+        "summaryNorthStar"
+      ]
+    }
+  },
+  "responsive-layout.desktop#caroselliLanding": {
+    "children": [
+      // "flex-layout.row#collection-badges",
+      "flex-layout.row#promotionCashback",
+      "flex-layout.row#promotionCashbackNew",
+      // "flex-layout.row#promotionCashbackNew-178-PLP",
+      "flex-layout.row#promotionArielGratis",
+      "flex-layout.row#row-promo-collection-badges-plp",
+      "flex-layout.row#row-collection-badges-plp",
+      "product-summary-image#shelf", //temp
+      // "stack-layout#head",
+      "flex-layout.row#warranty5yearsCarousel",
+      "vtex.store-components:product-name#summary",
+      "flex-layout.row#priceAndWPROKey",
+      // "flex-layout.row#plpPrice",
+      "add-to-cart-custom#plp",
+      "add-to-list-btn"
+    ]
+  },
+  "flex-layout.row#warranty5yearsCarousel": {
+    "props": {
+      "blockClass": [
+        "warranty5yearsCarousel"
+      ]
+    },
+    "children": [
+      "condition-layout.product#warranty5years"
+    ]
+  },
+  "responsive-layout.mobile#caroselliLanding": {
+    "children": [
+      // "flex-layout.row#collection-badges",
+      "flex-layout.row#promotionCashback",
+      "flex-layout.row#promotionCashbackNew",
+      // "flex-layout.row#promotionCashbackNew-178-PLP",
+      "flex-layout.row#promotionArielGratis",
+      "flex-layout.row#row-promo-collection-badges-plp",
+      "flex-layout.row#row-collection-badges-plp",
+      "flex-layout.row#imageAndPriceMobile",
+      "vtex.store-components:product-name#summary",
+      "flex-layout.row#commercialCodeMobile",
+      // "flex-layout.row#ratingsRowCarouselMobile",
+      // "add-to-cart-custom#plp",
+      "flex-layout.row#WPROKeyMobile"
+    ]
+  },
+  "flex-layout.row#ratingsRowCarouselMobile": {
+    "children": [
+      "flex-layout.col#ratingsRow"
+    ],
+    "props": {
+      "blockClass": "ratingsRowCarouselMobile"
+    }
+  },
+  "flex-layout.row#priceAndPostilla": {
+    "children": [
+      "product-summary-price",
+      "rich-text#pricePostilla"
+    ],
+    "props": {
+      "blockClass": [
+        "carouselsPriceRow",
+        "priceColLanding"
+      ]
+    }
+  },
+  "flex-layout.row#selling-price-savings-carousels": {
+    "props": {
+      "preserveLayoutOnMobile": true,
+      "preventHorizontalStretch": false,
+      "blockClass": "priceSummaryCarousels",
+      "colSizing": "equal"
+    },
+    "children": [
+      "flex-layout.col#price-selling"
+    ]
+  },
+  "flex-layout.row#etichetteCarousel": {
+    "props": {
+      "blockClass": [
+        "etichetteRow",
+        "etichetteRowCarousel"
+      ]
+    },
+    "children": [
+      "flex-layout.col#energy"
+      // "flex-layout.col#indexRepairability"
+    ]
+  }
+}

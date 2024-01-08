@@ -1,0 +1,37 @@
+{
+  "memory": 256,
+  "ttl": 10,
+  "timeout": 5,
+  "minReplicas": 2,
+  "maxReplicas": 4,
+  "workers": 1,
+  "events": {
+    "wakeUpServices": {
+      "keys": [
+        "crm-wake-up-services"
+      ]
+    }
+  },
+  "routes": {
+    "notificationHandler": {
+      "path": "/app/crm-async-integration/notify",
+      "public": true
+    },
+    "setCrmBpId": {
+      "path": "/app/crm-async-integration/vtex/crmbpid",
+      "public": true
+    },
+    "getUserDataFromVtex": {
+      "path": "/app/crm-async-integration/vtex/user",
+      "public": true
+    },
+    "getUserDataFromCRM": {
+      "path": "/app/crm-async-integration/crm/user",
+      "public": true
+    },
+    "deleteEntryFromVbase": {
+      "path": "/app/crm-async-integration/vbase/:recordId",
+      "public": true
+    }
+  }
+}

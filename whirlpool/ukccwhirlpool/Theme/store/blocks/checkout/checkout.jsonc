@@ -1,0 +1,533 @@
+{
+  /* This is the interface of the Checkout,
+  whatever you put as blocks will be rendered on /checkout */
+  "store.checkout.order-form": {
+    "parent": {
+      "header": "header#cart",
+      "footer": "footer#cart"
+    },
+    "blocks": [
+      "flex-layout.row#textBoxContainer",
+      "checkout-container"
+    ]
+  },
+  "flex-layout.row#textBoxContainer": {
+    "title": "[ROW] - [TOP] Accordion Text Box Container",
+    "children": [
+      "experimental__visibility-layout#checkoutInfoBox"
+    ],
+    "props": {
+      "blockClass": "textBoxRow"
+    }
+  },
+  "experimental__visibility-layout#checkoutInfoBox": {
+    "title": "[TOGGLE] Drop down",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "disclosure-layout#checkoutInfoBox"
+    ]
+  },
+  "disclosure-layout#checkoutInfoBox": {
+    "title": "[DISCLOSURE] - Checkout info accordion",
+    "props": {
+      "animated": true
+    },
+    "children": [
+      "disclosure-trigger#checkoutInfoBox",
+      "disclosure-content#checkoutInfoBox"
+    ]
+  },
+  "disclosure-trigger#checkoutInfoBox": {
+    "title": "[DISCLOSURE] - Checkout info accordion trigger",
+    "children": [
+      "rich-text#textBoxTitle",
+      "disclosure-state-indicator#arrows"
+    ],
+    "props": {
+      "blockClass": "checkoutInfoBoxTrigger"
+    }
+  },
+  "disclosure-content#checkoutInfoBox": {
+    "title": "[DISCLOSURE] - Checkout info accordion content",
+    "props": {
+      "blockClass": "checkoutInfoBox"
+    },
+    "children": [
+      "rich-text#textBox"
+    ]
+  },
+  "rich-text#textBoxTitle": {
+    "title": "[TEXT] - [TOP] Text",
+    "props": {
+      "text": "Important Delivery Information: Coronavirus",
+      "blockClass": "TextBoxTextTitle"
+    }
+  },
+  "rich-text#textBox": {
+    "title": "[TEXT] - [TOP] Text",
+    "props": {
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id volutpat odio. Etiam iaculis at mi sit amet lacinia. Etiam sit amet eros elementum, iaculis dui eu, euismod mauris. Integer dolor neque, egestas a ullamcorper ac, posuere rhoncus nisl. In malesuada tristique viverra. Maecenas pellentesque varius tincidunt. Quisque bibendum, elit nec ultrices varius, arcu nibh accumsan augue, eu accumsan arcu tellus et ipsum. Nunc euismod, lacus vitae sodales tempus, lorem odio elementum ante, ac commodo metus orci eget odio. Phasellus arcu leo, dapibus vitae orci eu, ullamcorper pulvinar nisi. Nullam malesuada neque et tincidunt rhoncus. Aenean eu ante ornare, pulvinar nisi et, maximus elit. Donec aliquet dolor eget est maximus varius. Donec sit amet nisi porttitor, viverra libero a, fermentum augue. Morbi suscipit dapibus elementum. Nullam mi neque, gravida sed lacinia vitae, commodo et nulla. Praesent ultrices congue tortor, at maximus diam viverra vitae. \n*Visit our [help](https://developers.vtex.com/vtex-developer-docs/docs/welcome) section.\n**Be Bold!**\n*This is italic*",
+      "blockClass": "TextBoxText"
+    }
+  },
+  "checkout-container": {
+    "children": [
+      "responsive-layout.desktop#checkout",
+      "responsive-layout.tablet#checkout",
+      "responsive-layout.phone#checkout"
+    ]
+  },
+  "responsive-layout.desktop#checkout": {
+    "children": [
+      "flex-layout.row#container-desktop"
+    ]
+  },
+  "responsive-layout.tablet#checkout": {
+    "children": [
+      "flex-layout.row#container-desktop"
+    ]
+  },
+  "responsive-layout.phone#checkout": {
+    "children": [
+      "flex-layout.row#container-desktop"
+    ]
+  },
+  "flex-layout.row#container-desktop": {
+    "children": [
+      "flex-layout.col#checkout-desktop",
+      "flex-layout.col#items-summary-desktop"
+    ],
+    "props": {
+      "blockClass": "checkoutContainer",
+      "preserveLayoutOnMobile": false,
+      "fullWidth": true,
+      "paddingBottom": 3,
+      "paddingTop": 5
+    }
+  },
+  "flex-layout.col#checkout-desktop": {
+    "children": [
+      "checkout-step-group"
+    ],
+    "props": {
+      "preventVerticalStretch": true,
+      "width": "60%",
+      "paddingRight": 8,
+      "rowGap": 5,
+      "blockClass": "checkoutDesktopCol"
+    }
+  },
+  /* These are the rendered steps */
+  "checkout-step-group": {
+    "children": [
+      "profile-step",
+      "shipping-step",
+      // "address-step"
+      // "delivery-step",
+      "payment-step"
+    ]
+  },
+  /*
+   ******************
+   *  PROFILE STEP  *
+   ******************
+   */
+  "profile-step": {
+    "children": [
+      "profile-form",
+      "profile-summary"
+    ]
+  },
+  "profile-form": {
+    "children": [
+      "profile-editable-form",
+      "profile-summary"
+    ]
+  },
+  "profile-summary": {
+    "children": [
+      "login#checkout"
+    ]
+  },
+  "login#checkout": {
+    "props": {
+      "hideIconLabel": false,
+      "showIconProfile": false
+    }
+  },
+  "profile-editable-form": {
+    "props": {
+      // "validation": {
+      //   "isEmailRequired": true
+      //   "isFirstNameRequired": true
+      // }
+    },
+    "children": [
+      "profile-editable-form.info-data",
+      // "profile-editable-form.invoice-datas",
+      "profile-editable-form.checkboxes"
+    ]
+  },
+  "profile-editable-form.invoice-datas": {
+    "children": [
+      "profile-editable-form.invoice-datas.custom-datas",
+      "profile-editable-form.invoice-datas.invoices"
+    ],
+    "props": {
+      /* 
+      "isInvoiceOpenDefault": true
+      "isInvoiceMandatory": true
+      ...
+      */
+    }
+  },
+  "profile-editable-form.invoice-datas.invoices": {
+    "children": [
+      "profile-editable-form.invoice-datas.invoices-inputs"
+    ],
+    "props": {
+      /* 
+      invoiceSectionValidation = {
+        isStreetRequired: true,
+        isAdditionalInfosRequired: false,
+        isSDIPECRequired: false,
+        isInvoiceZipCodeRequired: true,
+        isInvoiceCityRequired: true,
+      },
+      ...
+      */
+    }
+  },
+  "profile-editable-form.invoice-datas.custom-datas": {
+    "children": [
+      "profile-editable-form.invoice-datas.custom-datas.private-section",
+      "profile-editable-form.invoice-datas.custom-datas.company-section"
+    ],
+    "props": {
+      /* 
+      defaultSelected= "private" || "company" || not pass
+      isSelectVisible=false
+      
+      //Required fields
+        isInvoiceNameRequired= false
+        isInvoiceFiscalCodeRequired=false
+        isSDIPECRequired=true
+        isInvoiceSocialReasonRequired=false
+        isInvoiceVatRequired=false
+      ...
+      */
+    }
+  },
+  "profile-editable-form.info-data": {
+    "children": [
+      "email-field-cc",
+      "login#checkout-email"
+    ],
+    "props": {
+      /* 
+      "hideFirstName": true
+      ...
+      */
+    }
+  },
+  "email-field-cc": {
+    "children": [
+      "profile-editable-form.info-data.email-modal"
+    ]
+  },
+  "login#checkout-email": {
+    "props": {
+      "hideIconLabel": true,
+      "showIconProfile": true
+    }
+  },
+  // "profile-editable-form.info-data.email-modal": {
+  //   "children": [
+  //     "flex-layout.row#email-modal-text",
+  //     "flex-layout.row#identification-spacer"
+  //   ]
+  // },
+  "flex-layout.row#email-modal-text": {
+    "children": [
+      "rich-text#emailModal"
+    ],
+    "props": {
+      "blockClass": "emailModalText",
+      "horizontalAlign": "left"
+    }
+  },
+  "rich-text#emailModal": {
+    "props": {
+      "text": "This email is already registered",
+      "blockClass": "emailModalText"
+    }
+  },
+  "flex-layout.row#login-checkout": {
+    "children": [
+      "login#checkout"
+    ],
+    "props": {
+      "horizontalAlign": "right",
+      "blockClass": "loginRowModal"
+    }
+  },
+  "profile-editable-form.checkboxes": {
+    "props": {
+      /* 
+        acceptTermsLink: ""
+        optInLink: ""
+      ...
+      */
+    }
+  },
+  /*
+   *******************
+   *  SHIPPING STEP  *
+   *******************
+   */
+  "shipping-step": {
+    "children": [
+      "shipping-form",
+      "shipping-summary"
+    ]
+  },
+  "shipping-form": {
+    "children": [
+      "shipping-editable-form",
+      "shipping-summary"
+    ]
+  },
+  "shipping-editable-form": {
+    "children": [
+      "shipping-form-hdx"
+    ]
+  },
+  "shipping-form-hdx": {
+    "props": {
+      "showShipTogheter": false
+    }
+  },
+  "shipping-summary": {
+    "children": [
+      "shipping-summary-hdx"
+    ]
+  },
+  "shipping-summary-hdx": {
+    "props": {
+      "deliveriesOverrides": [
+        {
+          "deliveryId": "Scheduled",
+          "deliveryName": "Products that will arrive on ",
+          "hideLeadTime": true,
+          "position": 1,
+          "groupOnShipTogheter": true,
+          "hideBussinessDays": true
+        },
+        {
+          "deliveryId": "LeadTime",
+          "deliveryName": "Products that will be shipped when available",
+          "position": 100,
+          "groupOnShipTogheter": true,
+          "hideBussinessDays": true,
+          "hideLeadTime": false
+        },
+        {
+          "deliveryId": "Second day delivery",
+          "deliveryName": "Products that will arrive in",
+          "hideLeadTime": true,
+          "position": 2
+        },
+        {
+          "deliveryId": "Next day delivery",
+          "deliveryName": "Products that will arrive in",
+          "position": 3,
+          "hideLeadTime": true
+        },
+        {
+          "deliveryId": "Standard charged",
+          "deliveryName": "Products that will arrive in up to",
+          "hideLeadTime": true,
+          "position": 4
+        },
+        {
+          "deliveryId": "Standard free",
+          "deliveryName": "Products that will arrive in up to",
+          "position": 5,
+          "hideLeadTime": true
+        },
+        {
+          "deliveryId": "Special",
+          "deliveryName": "We will contact you for Delivery and/or Installation",
+          "position": 6,
+          "hideLeadTime": true,
+          "hideBussinessDays": true
+        },
+        {
+          "deliveryId": "shipTogheter",
+          "deliveryName": "Products that will be shipped togheter",
+          "position": 100
+        }
+      ]
+    }
+  },
+  /*--- PAYMENT STEP ---*/
+  "payment-step": {
+    "children": [
+      "payment-form",
+      "payment-summary"
+    ]
+  },
+  "payment-form": {
+    "children": [
+      "flex-layout.row#payment-methods"
+    ]
+  },
+  "flex-layout.row#payment-methods": {
+    "children": [
+      "flex-layout.col#payment-methods"
+    ],
+    "props": {
+      "blockClass": "paymentMethodsRow2"
+    }
+  },
+  "flex-layout.col#payment-methods": {
+    "children": [
+      "payment-method#ootbCreditCards",
+      "payment-method#worldPay",
+      "payment-method#payPal",
+      "payment-method#googlePay",  
+      "payment-method#applePay"
+    ],
+    "props": {
+      "blockClass": "paymentMethodsCol2"
+    }
+  },
+  "payment-method#payPal": {
+    "title": "PayPal payment Method",
+    "props": {
+      "id": "12",
+      "title": "PayPal",
+      "paymentMethodTitle_lang": "PayPal"
+      // "imageSrc": ""
+    },
+    "children": [
+      "payPal-content"
+    ]
+  },
+  "payment-method#ootbCreditCards": {
+    "title": "VTEX OOTB Credit Cards payment Method",
+    "props": {
+      "id": "2", // To be modified in ids, in order to allow managing multiple payment systems with the same payment method
+      "title": "Card Payment",
+      "paymentMethodTitle_lang": "Card Payment"
+      // "imageSrc": ""
+    },
+    "children": ["credit-card-content"]
+  },
+  "payment-method#worldPay": {
+    "title": "WorldPay payment Method",
+    "props": {
+      "id": "202",
+      "title": "Card Payment",
+      "imageSrc": "assets/icons/paymentMethods_withoutAE.svg"
+    },
+    "children": [
+      "worldPay-content"
+    ]
+  },
+  "payment-method#googlePay": {
+    "title": "VTEX OOTB Google Pay",
+    "props": {
+      "id": "169", 
+      "title": "Google Pay",
+      "paymentMethodTitle_lang": "Google Pay"
+      // "imageSrc": ""
+    },
+    "children": ["googlePay-content"]
+  },
+  "payment-method#applePay": {              
+    "title": "VTEX OOTB Apple Pay",
+    "props": {
+      "id": "69",
+      "title": "Apple Pay",
+      "paymentMethodTitle_lang": "Apple Pay"
+      // "imageSrc": ""
+    },
+    "children": ["applePay-content"]
+  },
+  "payment-summary": {
+    "props": {
+      "checkOnDataSlots": true,
+      "worldPayImage": "assets/icons/paymentMethods_withoutAE.svg"
+    }
+  },
+  //ADYEN PROP FOR 3DS
+  "custom-place-order": {
+    "props": {
+      "AuthApp": "adyen-payment-auth-app",
+      "Hdx": true
+    }
+  },
+  /*--- CHECKOUT SUMMARY ---*/
+  "flex-layout.col#items-summary-desktop": {
+    "children": [
+      "checkout-custom-summary#desktop"
+    ],
+    "props": {
+      "blockClass": "itemsSummary",
+      "preventVerticalStretch": true
+    }
+  },
+  "checkout-custom-summary#desktop": {
+    "children": [
+      "custom-summary",
+      "custom-place-order"
+    ]
+  },
+  "custom-summary": {
+    "props": {
+      "showEnergyAndSheet": true,
+      "showInStockAndLeadtime": true,
+      "showLeadTime": false,
+      "energyImageProp": [
+        "EnergyLogo_image"
+      ],
+      "energyLabelProp": [
+        "new-energy-label",
+        "energy-label"
+      ],
+      "productDataSheetProp": [
+        "product-information-sheet"
+      ],
+      "leadTimeProp": [
+        "leadtime"
+      ],
+      "salesChannelData": [
+        {
+          "salesChannel": 1,
+          "prefix": "EPP"
+        },
+        {
+          "salesChannel": 2,
+          "prefix": "FF"
+        },
+        {
+          "salesChannel": 3,
+          "prefix": "VIP"
+        },
+        {
+          "salesChannel": 4,
+          "prefix": "O2P"
+        }
+      ],
+      "hasDiscountTooltip": false
+      /* 
+        openTextCharactersNumber: "" (number | string)
+        includedOfferings: [{name: ""}, {name: ""}]
+      ...
+      */
+    }
+  }
+}

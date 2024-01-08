@@ -1,0 +1,107 @@
+.textInputContainer--homePageForm {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+.button--homePageForm {
+  background-color: #134468;
+  color: white;
+  font-family: openSans;
+  padding: 9px 19px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  border-color: #134468;
+  max-height: 40px;
+}
+.formContainer--homePageForm {
+  padding: 1rem;
+}
+.formContainer--homePageForm :global(.vtex-checkbox__container) {
+  background-color: white;
+}
+.formContainer--homePageForm :global(.vtex-checkbox__label) {
+  color: #134468;
+  font-family: openSans;
+  font-size: 10px;
+  font-weight: 400;
+}
+.checkBoxes--homePageForm {
+  margin-top: 2px;
+  padding-bottom: 0.5rem;
+}
+.formContainer--homePageForm :global(.vtex-checkbox__inner-container) {
+  border: 1px solid #b1b1b1 !important;
+}
+
+.formContainer--homePageForm :global(.vtex-input-prefix__group) {
+  border: 2px solid #b1b1b1 !important;
+}
+
+.popUpContainer--homePageForm {
+  position: fixed;
+  width: 300px;
+  top: calc(50vh - 100px);
+  left: calc(50vw - 150px);
+  background-color: #DEE0E3;
+  border: solid 1px #b1b1b1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  z-index: 15000;
+}
+
+.popUpMessage--homePageForm {
+  text-align: center;
+  padding: 0 1rem;
+  color: #134468;
+  font-family: openSans;
+}
+
+.errorMessage--homePageForm {
+  font-size: 12px;
+  color: red;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  margin: 1rem 0;
+  text-align: center;
+  font-family: openSans;
+}
+
+.checked--homePageForm {
+  margin-top: 2px;
+  padding-bottom: 0.5rem;
+}
+
+/* .formContainer--homePageForm :global(.vtex-input__error) {
+  background-color: #DEE0E3 !important;
+} */
+
+.formContainer--homePageForm .vtex-input__error {
+  background-color: #DEE0E3 !important;
+}
+
+/*--- MEDIA QUERIES ---*/
+@media only screen and (max-width: 1024px) {
+  .textInputContainer--homePageForm {
+    display: flex;
+    flex-direction: column;
+  }
+  .button--homePageForm {
+    max-width: 9rem;
+    margin: auto;
+    display: flex;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .errorMessage--homePageForm {
+    position: absolute;
+    right: 4%;
+    margin-top: 3rem;
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "slider-layout#faqSupportBar": {
+    "title": "[LAYOUT] - [TOP] - FAQ Support Bar Slider",
+    "props": {
+      "itemsPerPage": {
+        "desktop": 4,
+        "tablet": 4,
+        "phone": 2
+      },
+      "infinite": false,
+      "autoplay": {
+        "timeout": 3000
+      },
+      "showNavigationArrows": "never",
+      "showPaginationDots": "never",
+      "blockClass": "faqSupportBar"
+    },
+    "children": [
+      "flex-layout.row#faqSupportBar1",
+      "flex-layout.row#faqSupportBar2",
+      "chatbot-button-wrapper#faqSupportBar",
+      "flex-layout.row#faqSupportBar4"
+    ]
+  },
+
+  "chatbot-button-wrapper#faqSupportBar": {
+    "children": ["flex-layout.row#faqSupportBar3"]
+  },
+
+  "flex-layout.row#faqSupportBar1": {
+    "title": "[ROW] - [TOP] - Element 1 Container FAQ Support Bar",
+    "props": {
+      "blockClass": ["faqSupportBar", "BorderCenterElements"],
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true,
+      "horizontalAlign": "center",
+      "colSizing": "auto"
+    },
+    "children": ["image#logoFaqSupportBar1", "link#faqSupportBarText1"]
+  },
+  "image#logoFaqSupportBar1": {
+    "title": "[IMAGE] - [TOP] - Element 1 Image FAQ Support Bar",
+    "props": {
+      "src": "assets/icons/faq_supportBar_call.svg",
+      "blockClass": "faqSupportBar"
+    }
+  },
+  "link#faqSupportBarText1": {
+    "title": "[LINK] - [TOP] - Element 1 Link FAQ Support Bar",
+    "props": {
+      "href": "tel:00497118888900"
+    },
+    "children": ["rich-text#faqSupportBarText1"]
+  },
+  "rich-text#faqSupportBarText1": {
+    "title": "[TEXT] - [TOP] - Element 1 Text FAQ Support Bar",
+    "props": {
+      "text": "## Kundencenter \n## __0711 8888 900__*",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": ["faqSupportBar"]
+    }
+  },
+  "flex-layout.row#faqSupportBar2": {
+    "title": "[ROW] - [TOP] - Element 2 Container FAQ Support Bar",
+    "props": {
+      "blockClass": ["faqSupportBar", "BorderCenterElements"],
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true,
+      "horizontalAlign": "center",
+      "colSizing": "auto"
+    },
+    "children": ["image#logoFaqSupportBar2", "link#faqSupportBarText2"]
+  },
+  "image#logoFaqSupportBar2": {
+    "title": "[IMAGE] - [TOP] - Element 2 Image FAQ Support Bar",
+    "props": {
+      "src": "assets/icons/faq_supportBar_whatsapp.svg",
+      "blockClass": "faqSupportBar"
+    }
+  },
+  "link#faqSupportBarText2": {
+    "title": "[LINK] - [TOP] - Element 2 Link FAQ Support Bar",
+    "props": {
+      "href": "https://api.whatsapp.com/send?phone=491712286337",
+      "linkId": "service_whatsapp_2"
+    },
+    "children": ["rich-text#faqSupportBarText2"]
+  },
+  "rich-text#faqSupportBarText2": {
+    "title": "[TEXT] - [TOP] - Element 2 Text FAQ Support Bar",
+    "props": {
+      "text": "## Whatsapp",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": ["faqSupportBar"]
+    }
+  },
+  "flex-layout.row#faqSupportBar3": {
+    "title": "[ROW] - [TOP] - Element 3 Container FAQ Support Bar",
+    "props": {
+      "blockClass": ["faqSupportBar", "BorderCenterElements"],
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true,
+      "horizontalAlign": "center",
+      "colSizing": "auto"
+    },
+    "children": ["image#logoFaqSupportBar3", "rich-text#faqSupportBarText3"]
+  },
+  "image#logoFaqSupportBar3": {
+    "title": "[IMAGE] - [TOP] - Element 3 Image FAQ Support Bar",
+    "props": {
+      "src": "assets/icons/faq_supportBar_chat.svg",
+      "blockClass": "faqSupportBar"
+    }
+  },
+  // "link#faqSupportBarText3": {
+  //   "title": "[LINK] - [TOP] - Element 3 Link FAQ Support Bar",
+  //   "props": {
+  //     "href": "#"
+  //   },
+  //   "children": ["rich-text#faqSupportBarText3"]
+  // },
+  "rich-text#faqSupportBarText3": {
+    "title": "[TEXT] - [TOP] - Element 3 Text FAQ Support Bar",
+    "props": {
+      "text": "## Chat",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": ["faqSupportBar"]
+    }
+  },
+  "flex-layout.row#faqSupportBar4": {
+    "title": "[ROW] - [TOP] - Element 4 Container FAQ Support Bar",
+    "props": {
+      "blockClass": "faqSupportBar",
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true,
+      "horizontalAlign": "center",
+      "colSizing": "auto"
+    },
+    "children": ["image#logoFaqSupportBar4", "link#faqSupportBarText4"]
+  },
+  "image#logoFaqSupportBar4": {
+    "title": "[IMAGE] - [TOP] - Element 4 Image FAQ Support Bar",
+    "props": {
+      "src": "assets/icons/faq_supportBar_repair.svg",
+      "blockClass": "faqSupportBar"
+    }
+  },
+  "link#faqSupportBarText4": {
+    "title": "[LINK] - [TOP] - Element 4 Link FAQ Support Bar",
+    "props": {
+      "href": "/kundencenter/buchen-sie-einen-reparaturtermin"
+    },
+    "children": ["rich-text#faqSupportBarText4"]
+  },
+  "rich-text#faqSupportBarText4": {
+    "title": "[TEXT] - [TOP] - Element 4 Text FAQ Support Bar",
+    "props": {
+      "text": "## Termin buchen",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": ["faqSupportBar"]
+    }
+  }
+}

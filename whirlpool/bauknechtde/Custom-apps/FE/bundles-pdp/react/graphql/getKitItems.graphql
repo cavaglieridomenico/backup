@@ -1,0 +1,46 @@
+query getKitItems($field: ProductUniqueIdentifierField!, $values: [ID!]) {
+  productsByIdentifier(field: $field, values: $values) {
+    items {
+      kitItems {
+        itemId
+        amount
+        product {
+          brand
+          categoryId
+          description
+          linkText
+          productId
+          productName
+        }
+        sku {
+          images {
+            imageUrl
+          }
+          itemId
+          name
+          referenceId {
+            Key
+            Value
+          }
+          sellers {
+            sellerId
+            sellerName
+            addToCartLink
+            sellerDefault
+            commertialOffer {
+              AvailableQuantity
+              ListPrice
+              Price
+              PriceValidUntil
+              PriceWithoutDiscount
+              RewardValue
+              Tax
+              spotPrice
+              taxPercentage
+            }
+          }
+        }
+      }
+    }
+  }
+}

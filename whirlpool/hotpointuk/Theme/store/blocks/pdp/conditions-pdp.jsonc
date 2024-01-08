@@ -1,0 +1,268 @@
+{
+  "condition-layout.product#isAccessorioseparator": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "constructionType",
+            "value": "Accessory"
+          }
+        }
+      ],
+      "matchType": "any",
+      "Else": "product-specification-group#minimal"
+    }
+  },
+  "condition-layout.product#isAccessoriosku-selector": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "constructionType",
+            "value": "Accessory"
+          }
+        }
+      ],
+      "matchType": "any"
+      // "Else": "product-separator"
+    }
+  },
+  // "condition-layout.product#isAccessoriominimal": {
+  //   "props": {
+  //     "conditions": [
+  //       {
+  //         "subject": "specificationProperties",
+  //         "arguments": {
+  //           "name": "constructionType",
+  //           "value": "Accessory"
+  //         }
+  //       }
+  //     ],
+  //     "matchType": "any",
+  //     "Else": "sku-selector"
+  //   }
+  // },
+  "condition-layout.product#isAccessorioIntestazioneTab": {
+    "title": "[PRODUCT-CONDITION] - Is Accessories Tab Header",
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "constructionType",
+            "value": "Accessory"
+          }
+        },
+        {
+          "subject": "specificationProperties",
+          "arguments": { "name": "isDiscontinued", "value": "true" }
+        }
+      ],
+      "matchType": "any",
+      "Else": "flex-layout.row#dettagliTitle"
+    }
+  },
+  "condition-layout.product#isAccessorioTab": {
+    "title": "[PRODUCT-CONDITION] - Is Accessories",
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "constructionType",
+            "value": "Accessory"
+          }
+        },
+        {
+          "subject": "specificationProperties",
+          "arguments": { "name": "isDiscontinued", "value": "true" }
+        }
+      ],
+      "matchType": "any",
+      "Else": "flex-layout.row#tabPdp"
+    }
+  },
+  "condition-layout.product#isAccessorioTabSticky": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "constructionType",
+            "value": "Accessory"
+          }
+        },
+        {
+          "subject": "specificationProperties",
+          "arguments": { "name": "isDiscontinued", "value": "true" }
+        }
+      ],
+      "matchType": "any",
+      "Else": "vtex.menu@2.x:menu#pdpTabSticky"
+    }
+  },
+  "condition-layout.product#isAccessorioComparisonButton": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "constructionType",
+            "value": "Accessory"
+          }
+        },
+        {
+          "subject": "specificationProperties",
+          "arguments": { "name": "isDiscontinued", "value": "true" }
+        }
+      ],
+      "matchType": "any",
+      "Else": "product-comparison-block.selector#search"
+    }
+  },
+  "condition-layout.product#isAccessorioDettaglio": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "constructionType",
+            "value": "Accessory"
+          }
+        }
+      ],
+      "matchType": "any",
+      "Else": "flex-layout.row#dettagli"
+    }
+  },
+  "condition-layout.product#isAccessoryVideos": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "constructionType",
+            "value": "Accessory"
+          }
+        }
+      ],
+      "matchType": "any",
+      "Then": "category-videos"
+    }
+  },
+  "condition-layout.product#share-btn-no-accessory": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "constructionType",
+            "value": "Accessory"
+          }
+        }
+      ],
+      "matchType": "any",
+      "Else": "flex-layout.row#share-button"
+    }
+  },
+  "condition-layout.product#add-to-cart-is-accessory": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "constructionType",
+            "value": "Accessory"
+          }
+        },
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "sellable",
+            "value": "false"
+          }
+        }
+      ],
+      "matchType": "all",
+      "Then": "add-to-cart-custom#plp"
+    }
+  },
+  "condition-layout.product#quantity-is-accessory": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "constructionType",
+            "value": "Accessory"
+          }
+        },
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "sellable",
+            "value": "true"
+          }
+        }
+      ],
+      "matchType": "all",
+      "Then": "product-quantity#pdp"
+    }
+  },
+  "condition-layout.product#fg-product-page-is-spare": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "isSparePart",
+            "value": "true"
+          }
+        }
+      ],
+      "Then": "flex-layout.row#spare-product-page",
+      "Else": "flex-layout.row#fg-product-page"
+    }
+  },
+  "condition-layout.product#product-page-is-accessories": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "constructionType",
+            "value": "Accessory"
+          }
+        }
+      ],
+      "Then": "flex-layout.row#bread-pdp-accessories",
+      "Else": "flex-layout.row#bread-pdp"
+    }
+  },
+  //
+  "condition-layout.product#pdp-is-spare-accessories": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "isSparePart",
+            "value": "true"
+          }
+        },
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "constructionType",
+            "value": "Accessory"
+          }
+        }
+      ],
+      "matchType": "any",
+      "Then": "flex-layout.col#fg-product-page-accessories",
+      "Else": "flex-layout.col#fg-product-page"
+    }
+  }
+}

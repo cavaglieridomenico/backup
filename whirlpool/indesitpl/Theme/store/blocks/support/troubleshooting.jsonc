@@ -1,0 +1,118 @@
+{
+  "store.custom#trouble-shooting": {
+    "blocks": [
+      "responsive-layout.desktop#trouble-shooting",
+      "responsive-layout.mobile#trouble-shooting-mobile"
+      // "analytics#support"
+    ]
+  },
+  "store.custom#trouble-shooting-step1": {
+    "blocks": [
+      "responsive-layout.desktop#trouble-shooting",
+      "responsive-layout.mobile#trouble-shooting-mobile"
+    ]
+  },
+  "store.custom#trouble-shooting-step2": {
+    "blocks": [
+      "responsive-layout.desktop#trouble-shooting",
+      "responsive-layout.mobile#trouble-shooting-mobile",
+      "no-index"
+    ]
+  },
+  "store.custom#trouble-shooting-step3": {
+    "blocks": [
+      "responsive-layout.desktop#trouble-shooting",
+      "responsive-layout.mobile#trouble-shooting-mobile",
+      "no-index"
+    ]
+  },
+  "store.custom#trouble-shooting-all-categories": {
+    "blocks": [
+      "responsive-layout.desktop#trouble-shooting",
+      "responsive-layout.mobile#trouble-shooting-mobile",
+      "no-index"
+    ]
+  },
+  "store.custom#trouble-shooting-category-issue": {
+    "blocks": [
+      "responsive-layout.desktop#trouble-shooting",
+      "responsive-layout.mobile#trouble-shooting-mobile",
+      "no-index"
+    ]
+  },
+  "store.custom#trouble-shooting-l1": {
+    "blocks": [
+      "responsive-layout.desktop#trouble-shooting",
+      "responsive-layout.mobile#trouble-shooting-mobile",
+      "no-index"
+    ]
+  },
+  "store.custom#trouble-shooting-issues": {
+    "blocks": [
+      "responsive-layout.desktop#trouble-shooting",
+      "responsive-layout.mobile#trouble-shooting-mobile",
+      "no-index"
+    ]
+  },
+  "store.custom#trouble-shooting-result": {
+    "blocks": [
+      "responsive-layout.desktop#trouble-shooting",
+      "responsive-layout.mobile#trouble-shooting-mobile"
+    ]
+  },
+  "responsive-layout.desktop#trouble-shooting": {
+    "children": ["flex-layout.row#trouble-shooting-container-maxi-desktop"]
+  },
+  "flex-layout.row#trouble-shooting-container-maxi-desktop": {
+    "children": ["flex-layout.col#trouble-shooting-container-maxi-desktop"],
+    "props": {
+      "blockClass": "trouble-shooting-container-maxi-desktop"
+    }
+  },
+  /* MAXI CONTAINER OF ALL ELEMENT IN THE PAGE */
+  "flex-layout.col#trouble-shooting-container-maxi-desktop": {
+    "children": [
+      "breadcrumb-custom#trouble-shooting",
+      "flex-layout.col#rich-text-desktop",
+      "trouble-shooting-page#desktop",
+      "custom-helmet"
+    ],
+    "props": {
+      "blockClass": "trouble-shooting-container-maxi-desktop"
+    }
+  },
+  "no-index": {},
+  "custom-helmet": {},
+  /* BREADCRUMB */
+  "breadcrumb-custom#trouble-shooting": {
+    "props": {
+      /* "blockClass": "containerBreadcrumbs", */
+      "firstPage": "Home",
+      "previousPage": "Pomoc",
+      "previousPath": "/pomoc",
+      "currentPage": "Rozwiązywanie problemów"
+    }
+  },
+  "flex-layout.col#rich-text-desktop": {
+    "children": [
+      "rich-text#trouble-shooting-title-desktop",
+      "rich-text#trouble-shooting-desc-desktop"
+    ],
+    "props": {
+      "blockClass": "rich-text-container"
+    }
+  },
+  "rich-text#trouble-shooting-title-desktop": {
+    "props": {
+      "text": "Rozwiązywanie problemów",
+      "blockClass": "ts-title-desktop"
+    }
+  },
+  "rich-text#trouble-shooting-desc-desktop": {
+    "props": {
+      "text": "Pytania i odpowiedzi, które pomogą Ci rozwiązać problemy z Twoim urządzeniem",
+      "blockClass": "ts-desc-desktop"
+    }
+  },
+  "trouble-shooting-page#desktop": {}
+}

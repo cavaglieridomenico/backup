@@ -1,0 +1,471 @@
+{
+  "store.custom#nel-template": {
+    "blocks": [
+      "responsive-layout.desktop#nel",
+      "responsive-layout.mobile#nel-mobile"
+    ]
+  },
+  /* ---MAXI CONTAINER--- */
+  "responsive-layout.desktop#nel": {
+    "children": ["flex-layout.row#nel-maxi"]
+  },
+  "flex-layout.row#nel-maxi": {
+    "children": ["flex-layout.col#nel-maxi"],
+    "props": {
+      "blockClass": "breadcrumb-container-landing-template-desktop"
+    }
+  },
+  "flex-layout.col#nel-maxi": {
+    "children": [
+      "breadcrumb#nel-desktop",
+      "flex-layout.row#nel-intro-desktop",
+      "flex-layout.row#text-after-intro-nel-desktop",
+      "flex-layout.row#energy-efficiency-desktop",
+      "flex-layout.row#text-after-energy-efficency-desktop",
+
+      "flex-layout.row#energy-label-washing-machines-desktop",
+      "flex-layout.col#learn-more-button-nel-container",
+
+      "flex-layout.row#energy-label-washer-dryers-desktop",
+      "flex-layout.col#learn-more-button-nel-container-dryers",
+
+      "flex-layout.row#energy-label-dishwashers-desktop",
+      "flex-layout.col#learn-more-button-nel-container-dishwashers",
+
+      "flex-layout.row#energy-label-refrigerators-desktop",
+      "flex-layout.col#learn-more-button-nel-container-fridges",
+
+      "flex-layout.row#nel-title-main-products-desktop",
+      "flex-layout.row#nel-last-carousel-desktop-container",
+
+      "flex-layout.row#ecodesign-regulation-desktop"
+    ],
+    "props": {
+      "blockClass": "nel-maxi-container"
+    }
+  },
+  /* ---BREADCRUMB--- */
+  "breadcrumb#nel-desktop": {
+    "props": {
+      "categories": ["/Home/", "Product launch"],
+      "showOnMobile": true,
+      "blockClass": "breadcrumb-landing-template-desktop"
+    }
+  },
+  /* ---INTRO TO NEL--- */
+  "flex-layout.row#nel-intro-desktop": {
+    "children": [
+      "flex-layout.col#nel-intro-image-desktop",
+      "flex-layout.col#nel-intro-text-desktop"
+    ],
+    "props": {
+      "blockClass": "nel-intro-desktop"
+    }
+  },
+  /* LEFT INTRO */
+  "flex-layout.col#nel-intro-image-desktop": {
+    "children": ["image#nel-intro-desktop"],
+    "props": {
+      "blockClass": "nel-image-desktop"
+    }
+  },
+  "image#nel-intro-desktop": {
+    "props": {
+      "blockClass": "landing-template-intro-desktop",
+      "src": "assets/The-new-energy-efficiency-class-nel-landing.png"
+    }
+  },
+  /* RIGHT INTRO */
+  "flex-layout.col#nel-intro-text-desktop": {
+    "children": [
+      "title-text#nel-intro-text-title",
+      "rich-text#nel-intro-text-paragraph-desktop"
+    ],
+    "props": {
+      "blockClass": "intro-desc-desktop"
+    }
+  },
+  "title-text#nel-intro-text-title-desktop": {
+    "props": {
+      "text": "The new energy efficiency class"
+    }
+  },
+  "rich-text#nel-intro-text-paragraph-desktop": {
+    "props": {
+      "text": "From March 2021 there will be new energy labels and revised energy efficiency classes for household appliances. Here, you will find all relevant information on the subject.",
+      "blockClass": "intro-landing-template-paragraph-desktop"
+    }
+  },
+  /* ---TEXT AFTER NEL INTRO--- */
+  "flex-layout.row#text-after-intro-nel-desktop": {
+    "children": ["flex-layout.col#desc-after-intro-nel-desktop"],
+    "props": {
+      "blockClass": "text-intro-center-nel-desktop"
+    }
+  },
+  "flex-layout.col#desc-after-intro-nel-desktop": {
+    "children": ["rich-text#paragraph-text-after-intro-nel-desktop"],
+    "props": {
+      "blockClass": "intro-center-landing-template-desktop"
+    }
+  },
+  "rich-text#paragraph-text-after-intro-nel-desktop": {
+    "props": {
+      "text": "The energy label (or EU label) has provided information on low energy and water consumption data for major domestic appliances since 1996. It is required by law and is shown on the product, both in shops and via websites of retailers. The energy label is intended to show the customer energy efficiency data at a glance, in order to enable a better comparison with other products. Over time, household appliances have become more cost and energy efficient. For this reason, the EU label is now being updated. The European Union has issued a mandatory update of the current energy label for the following product categories. From March 2021, the label alone must be visible on all devices.",
+      "blockClass": "desc-intro-center-landing-template-desktop"
+    }
+  },
+  /* ---ENERGY EFFICIENCY--- */
+  "flex-layout.row#energy-efficiency-desktop": {
+    "children": [
+      "flex-layout.col#text-energy-efficiency-desktop",
+      "flex-layout.col#image-energy-efficiency-desktop"
+    ],
+    "props": {
+      "blockClass": "container-global-text-image-landing-template-desktop"
+    }
+  },
+  /* LEFT ENERGY EFFICIENCY */
+  "flex-layout.col#text-energy-efficiency-desktop": {
+    "children": [
+      "rich-text#title-energy-efficiency-desktop",
+      "rich-text#paragraph-energy-efficiency-desktop"
+    ],
+    "props": {
+      "blockClass": "container-text-text-image-landing-template-desktop"
+    }
+  },
+  "rich-text#title-energy-efficiency-desktop": {
+    "props": {
+      "text": "Changes in energy efficiency class",
+      "blockClass": "title-text-image-landing-template-desktop"
+    }
+  },
+  "rich-text#paragraph-energy-efficiency-desktop": {
+    "props": {
+      "text": "It's actually quite simple: The usual \"Plus\" classes, such as A +++, A ++ and A +, are replaced by a uniform energy consumption scale from A to G. The seven-step color scale is retained. Due to changed measurement methods, it is not possible to convert the old label to the new label. Only approximate information is possible. For the time being, the changes will not affect the tumble dryers, ovens and hoods. These are expected to be revised from 2022. So it is quite possible that you will find a C-Class washing machine next to an A +++ dryer.",
+      "blockClass": "description-energy-efficiency-desktop"
+    }
+  },
+  /* RIGHT ENERGY EFFICIENCY */
+  "flex-layout.col#image-energy-efficiency-desktop": {
+    "children": ["image#energy-efficiency-desktop"],
+    "props": {
+      "blockClass": "container-image-text-image-landing-template-desktop"
+    }
+  },
+  "image#energy-efficiency-desktop": {
+    "props": {
+      "blockClass": "image-text-image-landing-template-desktop",
+      "src": "assets/Changes-in energy-efficiency-class-nel-landing.png"
+    }
+  },
+  /* ---TEXT AFTER ENERGY EFFICINECY INTRO--- */
+  "flex-layout.row#text-after-energy-efficency-desktop": {
+    "children": ["flex-layout.col#desc-after-energy-efficency-desktop"],
+    "props": {
+      "blockClass": "text-intro-center-nel-desktop"
+    }
+  },
+  "flex-layout.col#desc-after-energy-efficency-desktop": {
+    "children": ["rich-text#paragraph-text-after-energy-efficency-desktop"],
+    "props": {
+      "blockClass": "intro-center-landing-template-desktop"
+    }
+  },
+  "rich-text#paragraph-text-after-energy-efficency-desktop": {
+    "props": {
+      "text": "The European manufacturers association (APPLIA) explains the background of the revision, deadlines, obligation of manufacturers and retailers, the new ecodesign requirements with regards to resource efficiency and the new energy label itself. Consumers will only see the new labels on the devices from March 1, 2021.",
+      "blockClass": "desc-intro-center-landing-template-desktop"
+    }
+  },
+  /* ---ENERGY LABEL WASHING MACHINES--- */
+  "flex-layout.row#energy-label-washing-machines-desktop": {
+    "children": [
+      "flex-layout.col#image-energy-label-washing-machines-desktop",
+      "flex-layout.col#text-energy-label-washing-machines-desktop"
+    ],
+    "props": {
+      "blockClass": "container-global-text-image-landing-template-desktop"
+    }
+  },
+  /* LEFT ENERGY LABEL WASHING MACHINES */
+  "flex-layout.col#image-energy-label-washing-machines-desktop": {
+    "children": ["image#energy-label-washing-machines-desktop"],
+    "props": {
+      "blockClass": "container-image-text-image-landing-template-desktop"
+    }
+  },
+  "image#energy-label-washing-machines-desktop": {
+    "props": {
+      "blockClass": "image-text-image-landing-template-desktop",
+      "src": "assets/New-energy-label-for-washing-machines-nel-landing.png"
+    }
+  },
+  /* RIGHT ENERGY LABEL WASHING MACHINES */
+  "flex-layout.col#text-energy-label-washing-machines-desktop": {
+    "children": [
+      "rich-text#title-energy-label-washing-machines-desktop",
+      "rich-text#paragraph-energy-label-washing-machines-desktop"
+    ],
+    "props": {
+      "blockClass": "container-text-text-image-landing-template-desktop"
+    }
+  },
+  "rich-text#title-energy-label-washing-machines-desktop": {
+    "props": {
+      "text": "New energy label for washing machines",
+      "blockClass": "title-text-image-landing-template-desktop"
+    }
+  },
+  "rich-text#paragraph-energy-label-washing-machines-desktop": {
+    "props": {
+      "text": "With the redesigned energy label, some content innovations are introduced: in general, a QR code will be found on all energy labels, which links to the EU product database EPREL. There you will find further information on the energy label and the product information sheet of the respective device. The previous Plus classes (A +++, A ++ and A +) will no longer apply to the washing machine sector. The available energy efficiency classes then range from A to G. The consumption of water and electricity is now no longer stated on the annual value, but per single cycle and 100 cycles respectively.",
+      "blockClass": "description-energy-efficiency-desktop"
+    }
+  },
+
+  /* ---QUI CI VA LA CUSTOM APP DEL BOTTONE READ MORE READ LESS WASHERS--- */
+  "flex-layout.col#learn-more-button-nel-container": {
+    "children": ["learn-more-NEL#nel-template"],
+    "props": {
+      "blockClass": "learn-more-card-button-container"
+    }
+  },
+  "learn-more-NEL#nel-template": {},
+  /* ---ENERGY LABEL WASHER DRYERS--- */
+  "flex-layout.row#energy-label-washer-dryers-desktop": {
+    "children": [
+      "flex-layout.col#text-energy-label-washer-dryers-desktop",
+      "flex-layout.col#image-energy-label-washer-dryers-desktop"
+    ],
+    "props": {
+      "blockClass": "container-global-text-image-landing-template-desktop"
+    }
+  },
+  /* LEFT ENERGY LABEL WASHER DRYERS */
+  "flex-layout.col#text-energy-label-washer-dryers-desktop": {
+    "children": [
+      "rich-text#title-energy-label-washer-dryers-desktop",
+      "rich-text#paragraph-energy-label-washer-dryers-desktop"
+    ],
+    "props": {
+      "blockClass": "container-text-text-image-landing-template-desktop"
+    }
+  },
+  "rich-text#title-energy-label-washer-dryers-desktop": {
+    "props": {
+      "text": "The new energy label for washer-dryers",
+      "blockClass": "title-text-image-landing-template-desktop"
+    }
+  },
+  "rich-text#paragraph-energy-label-washer-dryers-desktop": {
+    "props": {
+      "text": "As with all new energy labels, there will also be a QR code for the washer-dryer, which links to the EU product database EPREL. There you will find further information on the energy label and the product data sheet of the respective device. For the washer dryer area, the available energy efficiency classes continue to range from A to G. The complete layout of this product group will be revised. The washing and drying area and the washing area are shown on their own scale and the values for them are shown more clearly. The consumption of water and electricity is now no longer stated on the annual value, but per cycle or 100 washing processes.",
+      "blockClass": "description-energy-efficiency-desktop"
+    }
+  },
+  /* ---QUI CI VA LA CUSTOM APP DEL BOTTONE READ MORE READ LESS DRYERS--- */
+  "flex-layout.col#learn-more-button-nel-container-dishwashers": {
+    "children": ["learn-more-NEL-dishwashers#nel-template"],
+    "props": {
+      "blockClass": "learn-more-card-button-container"
+    }
+  },
+  "learn-more-NEL-dishwashers#nel-template": {},
+  /* RIGHT ENERGY LABEL WASHER DRYERS */
+  "flex-layout.col#image-energy-label-washer-dryers-desktop": {
+    "children": ["image#energy-label-washer-dryers-desktop"],
+    "props": {
+      "blockClass": "container-image-text-image-landing-template-desktop"
+    }
+  },
+  "image#energy-label-washer-dryers-desktop": {
+    "props": {
+      "blockClass": "image-text-image-landing-template-desktop",
+      "src": "assets/The-new-energy-label-for-washer-dryers-nel-landing.png"
+    }
+  },
+
+  /* ---ENERGY LABEL DISHWASHERS--- */
+  "flex-layout.row#energy-label-dishwashers-desktop": {
+    "children": [
+      "flex-layout.col#image-energy-label-dishwashers-desktop",
+      "flex-layout.col#text-energy-label-dishwashers-desktop"
+    ],
+    "props": {
+      "blockClass": "container-global-text-image-landing-template-desktop"
+    }
+  },
+  /* LEFT ENERGY LABEL DISHWASHERS */
+  "flex-layout.col#image-energy-label-dishwashers-desktop": {
+    "children": ["image#energy-label-dishwashers-desktop"],
+    "props": {
+      "blockClass": "container-image-text-image-landing-template-desktop"
+    }
+  },
+  "image#energy-label-dishwashers-desktop": {
+    "props": {
+      "blockClass": "image-text-image-landing-template-desktop",
+      "src": "assets/The-new-energy-label-for-dishwashers-nel-landing.png"
+    }
+  },
+  /* RIGHT ENERGY LABEL DISHWASHERS */
+  "flex-layout.col#text-energy-label-dishwashers-desktop": {
+    "children": [
+      "rich-text#title-energy-label-dishwashers-desktop",
+      "rich-text#paragraph-energy-label-dishwashers-desktop"
+    ],
+    "props": {
+      "blockClass": "container-text-text-image-landing-template-desktop"
+    }
+  },
+  "rich-text#title-energy-label-dishwashers-desktop": {
+    "props": {
+      "text": "New energy label for dishwashers",
+      "blockClass": "title-text-image-landing-template-desktop"
+    }
+  },
+  "rich-text#paragraph-energy-label-dishwashers-desktop": {
+    "props": {
+      "text": "As part of the standardisation process, the previous \"Plus\" classes (A +++, A ++ and A +) have also been replaced for dishwashers by a uniform scale from A to G. According to the previous standard, the new energy efficiency class B corresponds approximately to a device with A +++ -23 %. In the future, a QR code will generally be found on all energy labels, which links to the EU product database EPREL. There you will find further information on the energy label and the product data sheet of the respective device. Furthermore, new more realistic requirements (e.g. with pots) are introduced when specifying the place settings. Therefore, the values here will now be different compared to the old energy label.",
+      "blockClass": "description-energy-efficiency-desktop"
+    }
+  },
+  /* ---QUI CI VA LA CUSTOM APP DEL BOTTONE READ MORE READ LESS DISHWASHERS--- */
+  "flex-layout.col#learn-more-button-nel-container-dryers": {
+    "children": ["learn-more-NEL-dryers#nel-template"],
+    "props": {
+      "blockClass": "learn-more-card-button-container"
+    }
+  },
+  "learn-more-NEL-dryers#nel-template": {},
+  /* ---ENERGY LABEL REFRIGERATORS FREEZERS--- */
+  "flex-layout.row#energy-label-refrigerators-desktop": {
+    "children": [
+      "flex-layout.col#text-energy-label-refrigerators-desktop",
+      "flex-layout.col#image-energy-label-refrigerators-desktop"
+    ],
+    "props": {
+      "blockClass": "container-global-text-image-landing-template-desktop"
+    }
+  },
+  /* LEFT ENERGY LABEL REFRIGERATORS FREEZERS */
+  "flex-layout.col#text-energy-label-refrigerators-desktop": {
+    "children": [
+      "rich-text#title-energy-label-refrigerators-desktop",
+      "rich-text#paragraph-energy-label-refrigerators-desktop"
+    ],
+    "props": {
+      "blockClass": "container-text-text-image-landing-template-desktop"
+    }
+  },
+  "rich-text#title-energy-label-refrigerators-desktop": {
+    "props": {
+      "text": "The new energy label for refrigerators / freezers",
+      "blockClass": "title-text-image-landing-template-desktop"
+    }
+  },
+  "rich-text#paragraph-energy-label-refrigerators-desktop": {
+    "props": {
+      "text": "There will also be a QR code on the labels of the refrigerators and freezers, which links to the EU product database EPREL. There you will find further information on the energy label and the product data sheet of the respective device. The previous plus classes (A +++, A ++ and A +) will no longer apply to the area of cooling and freezing. The available energy efficiency classes then range from A to G. The new energy efficiency class A corresponds to a device with A +++ - 60% according to the previous standard. As before, the consumption of electricity is reported on an annual basis.",
+      "blockClass": "description-energy-efficiency-desktop"
+    }
+  },
+  /* RIGHT ENERGY LABEL REFRIGERATORS FREEZERS */
+  "flex-layout.col#image-energy-label-refrigerators-desktop": {
+    "children": ["image#energy-label-refrigerators-desktop"],
+    "props": {
+      "blockClass": "container-image-text-image-landing-template-desktop"
+    }
+  },
+  "image#energy-label-refrigerators-desktop": {
+    "props": {
+      "blockClass": "image-text-image-landing-template-desktop",
+      "src": "assets/The-new-energy-label-for-refrigerators-freezers-nel-landing.png"
+    }
+  },
+  /* ---QUI CI VA LA CUSTOM APP DEL BOTTONE READ MORE READ LESS DRYERS--- */
+  "flex-layout.col#learn-more-button-nel-container-fridges": {
+    "children": ["learn-more-NEL-fridges#nel-template"],
+    "props": {
+      "blockClass": "learn-more-card-button-container"
+    }
+  },
+  "learn-more-NEL-fridges#nel-template": {},
+  /* TITLE CAROUSEL */
+  "flex-layout.row#nel-title-main-products-desktop": {
+    "children": ["rich-text#nel-title-main-products-desktop"],
+    "props": {
+      "blockClass": "container-nel-title-main-products-desktop"
+    }
+  },
+  "rich-text#nel-title-main-products-desktop": {
+    "props": {
+      "blockClass": "nel-title-main-products-desktop",
+      "text": "Indesit Energy-Efficient Appliances"
+    }
+  },
+  /* CAROUSEL */
+  "flex-layout.row#nel-last-carousel-desktop-container": {
+    "children": ["product-carousel-landing-page-new#nel-last-carousel-desktop"],
+    "props": {
+      "blockClass": "nel-last-carousel-desktop-container"
+    }
+  },
+  "product-carousel-landing-page-new#nel-last-carousel-desktop": {
+    "props": {
+      "collectionID": "137",
+      "isBottomCarousel": true
+    }
+  },
+  /* ---ECODESIGN REGULATION--- */
+  "flex-layout.row#ecodesign-regulation-desktop": {
+    "children": [
+      "flex-layout.col#text-ecodesign-regulation-desktop",
+      "flex-layout.col#image-ecodesign-regulation-desktop"
+    ],
+    "props": {
+      "blockClass": "container-ecodesign-regulation-desktop"
+    }
+  },
+  /* LEFT ECODESIGN REGULATION */
+  "flex-layout.col#text-ecodesign-regulation-desktop": {
+    "children": [
+      "rich-text#title-ecodesign-regulation-desktop",
+      "rich-text#paragraph-ecodesign-regulation-desktop",
+      "rich-text#button-discover-more-ecodesign-desktop"
+    ],
+    "props": {
+      "blockClass": "container-text-ecodesign-regulation-desktop"
+    }
+  },
+  "rich-text#title-ecodesign-regulation-desktop": {
+    "props": {
+      "text": "The ecodesign regulation",
+      "blockClass": "title-ecodesign-regulation-desktop"
+    }
+  },
+  "rich-text#paragraph-ecodesign-regulation-desktop": {
+    "props": {
+      "text": "In addition to the changed energy efficiency classes, the new ECODESIGN REGULATION also applies from 1st March 2021. This regulates the environmentally friendly design of products, the minimum availability of spare parts and the ability to recycle and repair.",
+      "blockClass": "description-energy-efficiency-desktop"
+    }
+  },
+  "rich-text#button-discover-more-ecodesign-desktop": {
+    "props": {
+      "text": "[ PER SAPERNE DIU PIÙ ](https://www.indesit.it/Assistenza/Ricambi)",
+      "blockClass": ["button-discover-more-ecodesign-desktop"]
+    }
+  },
+  /* RIGHT ECODESIGN REGULATION */
+  "flex-layout.col#image-ecodesign-regulation-desktop": {
+    "children": ["image#ecodesign-regulation-desktop"]
+  },
+  "image#ecodesign-regulation-desktop": {
+    "props": {
+      "blockClass": "image-ecodesign-regulation-desktop",
+      "src": "assets/The-ecodesign-regulation-nel-landing.png"
+    }
+  }
+}

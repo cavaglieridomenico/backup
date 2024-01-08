@@ -1,0 +1,292 @@
+/*LEGAL ISSUES BREADCRUMB************************/
+
+/* .container--breadcrumb-legal-issues-style {
+  margin-left: 106px;
+} */
+
+/*LEGAL ISSUES BREADCRUMB END************************/
+
+.container {
+  position: relative;
+  padding-top: 31px;
+  padding-bottom: 20px;
+  width: 1228px;
+  margin: 0 auto;
+}
+
+.homeLink {
+  transform: translateY(-1px);
+}
+
+.homeLink::before {
+  content: "Home";
+  position: relative;
+  /*bottom: 0.035rem;*/
+  /*bottom: 0.75px;*/
+}
+
+@media screen and (max-width: 1440px) {
+  .homeLink::before {
+    /* bottom: 0.035rem; */
+  }
+}
+
+.homeLink .homeIcon {
+  display: none;
+}
+
+.link {
+  font-family: "Roboto";
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+
+.link--2 {
+  pointer-events: none;
+  user-select: none;
+}
+
+.arrow--1 {
+  display: none;
+}
+
+:global(.vtex-breadcrumb-1-x-arrow):last-child .link {
+  font-weight: normal;
+  font-family: "Roboto";
+}
+
+:global(.vtex-breadcrumb-1-x-term) {
+  color: #42515a;
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 22px;
+  text-transform: capitalize;
+  padding: 0 !important;
+  pointer-events: none;
+}
+
+:global(.vtex-breadcrumb-1-x-link) {
+  font-family: "Roboto-Light";
+  color: #42515a;
+  font-weight: 300;
+}
+
+:global(.vtex-breadcrumb-1-x-arrow) {
+  padding-left: 0;
+  padding-right: 0;
+  visibility: visible !important; /*modificato 04/08*/
+}
+
+:global(.vtex-breadcrumb-1-x-term) {
+  padding-left: 6px !important;
+}
+
+.arrow {
+  visibility: hidden;
+}
+
+.arrow--1,
+.arrow--2,
+.arrow--3 {
+  visibility: visible;
+}
+
+@media only screen and (max-width: 1024px) {
+  /*------------------------PDP STYLE--------------------------*/
+  :global(.vtex-breadcrumb-1-x-homeLink--breadcrumb-pdp-mobile) {
+    display: none;
+  }
+
+  :global(.vtex-breadcrumb-1-x-link--breadcrumb-pdp-mobile--3) {
+    color: #42515a !important;
+    font-family: "Roboto" !important;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    line-height: 22px;
+    text-transform: capitalize;
+    padding: 0 !important;
+    pointer-events: auto;
+  }
+
+  :global(.vtex-breadcrumb-1-x-termArrow--breadcrumb-pdp-mobile) {
+    display: none;
+  }
+
+  :global(.vtex-breadcrumb-1-x-term--breadcrumb-pdp-mobile) {
+    display: none;
+  }
+
+  :global(.vtex-breadcrumb---breadcrumb-pdp-mobile--2) {
+    display: none;
+  }
+
+  :global(.vtex-breadcrumb-1-x-arrow--breadcrumb-pdp-mobile--2) {
+    display: none;
+  }
+
+  :global(.vtex-breadcrumb-1-x-container--breadcrumb-pdp-mobile) {
+    padding-left: 23px !important;
+    padding-top: 14px;
+    padding-bottom: 0;
+    margin-bottom: -38px;
+  }
+
+  :global(.vtex-breadcrumb-1-x-caretIcon--breadcrumb-pdp-mobile) {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
+
+  /*----------------------------PLP STYLE-----------------------------*/
+  :global(.vtex-breadcrumb-1-x-homeLink) {
+    display: none;
+  }
+
+  :global(.vtex-breadcrumb-1-x-link--breadcrumb-plp-mobile--2) {
+    color: #42515a !important;
+    font-family: "Roboto";
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: capitalize;
+    pointer-events: unset;
+  }
+
+  :global(.vtex-breadcrumb-1-x-termArrow--breadcrumb-plp-mobile) {
+    display: none;
+  }
+
+  :global(.vtex-breadcrumb-1-x-term--breadcrumb-plp-mobile) {
+    display: none;
+  }
+
+  :global(.vtex-breadcrumb-1-x-link--breadcrumb-plp-mobile--3) {
+    display: none;
+  }
+
+  :global(.vtex-breadcrumb-1-x-arrow--breadcrumb-plp-mobile--3) {
+    display: none;
+  }
+
+  :global(.vtex-breadcrumb-1-x-container--breadcrumb-plp-mobile) {
+    padding-left: 23px !important;
+    padding-top: 14px;
+    padding-bottom: 56px !important;
+  }
+
+  :global(.vtex-breadcrumb-1-x-caretIcon--breadcrumb-plp-mobile) {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
+
+  :global(.vtex-breadcrumb-1-x-caretIcon) {
+    transform: rotate(180deg);
+  }
+
+  :global(.vtex-breadcrumb-1-x-link) {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  :global(.vtex-breadcrumb-1-x-arrow) {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  :global(.vtex-breadcrumb-1-x-caretIcon) {
+    margin-left: 0px !important;
+    margin-right: 7.5px !important;
+  }
+
+  :global(.vtex-breadcrumb-1-x-link) {
+    cursor: pointer;
+    color: #42515a;
+    font-family: "Roboto";
+  }
+
+  /* START OF SUPPORT PAGE STYLE */
+  .container--support {
+    margin-left: 7.361vw;
+  }
+
+  /* END OF SUPPORT PAGE STYLE */
+  /* START PRODUCTION PLANS  */
+  .container--container-breadcrumb-protection-plans {
+    width: 1228px;
+    margin: 0 auto;
+  }
+
+  /* END PRODUCTION PLANS */
+  /* NEW LANDING PAGES */
+  /* NEW LANDING PAGES */
+  .container--breadcrumb-landing-template-desktop {
+    width: 1228px !important;
+    margin: 0 auto !important;
+  }
+
+  .container--breadcrumb-landing-template-mobile {
+    margin: 0 0 0 20px;
+    padding: 15px 0;
+    position: absolute;
+  }
+
+  :global(.vtex-breadcrumb-1-x-container--breadcrumb-landing-template-mobile)
+    .link--breadcrumb-landing-template-mobile {
+    color: #ffffff;
+    font-family: "Roboto-Light";
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  :global(.vtex-breadcrumb-1-x-container--breadcrumb-landing-template-mobile)
+    .caretIcon--breadcrumb-landing-template-mobile {
+    color: #ffffff;
+  }
+
+  /* START PROTECTION PLANS MOBILE */
+  .link--container-breadcrumb-protection-plans-mobile {
+    font-family: "Roboto";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: rgba(66, 81, 90, 1);
+  }
+
+  /* END PROTECTION PLANS MOBILE */
+  /* START TECHNICAL SUPPORT MOBILE */
+  .container--container-breadcrumb-book-intervention-mobile {
+    padding-left: 20px;
+    padding-right: 20px;
+    position: absolute;
+  }
+
+  /* END TECHNICAL SUPPORT MOBILE */
+  /* START TECHNICAL SUPPORT MOBILE */
+  .link--container-breadcrumb-book-intervention-mobile--2 {
+    font-family: "Roboto";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: #42515a;
+  }
+
+  /* END TECHNICAL SUPPORT MOBILE */
+  .container--breadcrumb-legal-issues-landings {
+    width: auto !important;
+  }
+
+  .container--breadcrumb-terms-by-online {
+    width: auto !important;
+  }
+}

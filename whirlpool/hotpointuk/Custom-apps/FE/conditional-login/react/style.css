@@ -1,0 +1,52 @@
+.menuItemContainer {
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 1rem;
+    padding-bottom: 0.5rem;
+    position: relative;
+}
+
+.menuItemContainer>.menuItemLabel {
+    position: absolute;
+    top: 110%;
+    color: white;
+}
+
+
+/* @media only screen and (max-width: 640px) {
+  .menuItemContainer {
+    padding: 0;
+  }
+} */
+
+@media only screen and (max-width: 1024px) {
+    .menuItemLabel {
+        display: none;
+    }
+    .menuItemContainer {
+        align-items: center;
+        display: flex;
+        cursor: pointer;
+        justify-content: center;
+        flex-direction: column;
+        margin-left: 1rem;
+        padding-bottom: 0.25rem;
+        height: 1.75rem;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .menuItemContainer {
+        align-items: center;
+        display: flex;
+        cursor: pointer;
+        justify-content: center;
+        flex-direction: column;
+        margin-left: 1rem;
+        padding-bottom: 0rem;
+        height: 1.25rem;
+    }
+}

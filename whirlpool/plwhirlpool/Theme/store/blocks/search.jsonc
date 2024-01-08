@@ -1,0 +1,6657 @@
+{
+  "store.search.product-comparison": {
+    "blocks": [
+      // "plp-structured-data",
+      "no-index",
+      "custom-helmet",
+      "search-result-layout",
+      "flex-layout.row#newsletter-row"
+    ],
+    "props": {
+      "context": {
+        "skusFilter": "ALL",
+        "maxItemsPerPage": 9,
+        "__unstableProductOriginVtex": true
+      }
+    }
+  },
+  "store.search.product-comparison#search": {
+    "blocks": [
+      "search-result-layout#generic",
+      "flex-layout.row#newsletter-row"
+    ],
+    "props": {
+      "context": {
+        "skusFilter": "ALL",
+        "maxItemsPerPage": 9,
+        "__unstableProductOriginVtex": true
+      }
+    }
+  },
+  "store.search.product-comparison#brand": {
+    "blocks": [
+      "search-result-layout",
+      "flex-layout.row#newsletter-row"
+    ],
+    "props": {
+      "context": {
+        "orderByField": "OrderByReleaseDateDESC",
+        "hideUnavailableItems": false,
+        "maxItemsPerPage": 9,
+        "skusFilter": "ALL",
+        "__unstableProductOriginVtex": true
+      }
+    }
+  },
+  "store.search.product-comparison#department": {
+    "blocks": [
+      "search-result-layout#dep",
+      "flex-layout.row#newsletter-row"
+    ],
+    "props": {
+      "maxItemsPerPage": 9,
+      "__unstableProductOriginVtex": true
+    }
+  },
+  "search-result-layout#dep": {
+    "title": "[SEARCH PAGE] - TOP - Search Result",
+    "blocks": [
+      "search-result-layout.desktop#dep",
+      "search-result-layout.mobile",
+      "search-not-found-layout"
+    ]
+  },
+  "search-result-layout.desktop#dep": {
+    "title": "[SEARCH PAGE] - TOP - Search Result",
+    "children": [
+      // "breadcrumb.search",
+      "breadcrumb-custom",
+      "toggle-layout#CarouselPLP",
+      "flex-layout.row#searchtitle",
+      "flex-layout.row#result",
+      "product-comparison-drawer"
+      // "analytics#plp"
+    ],
+    "props": {
+      "pagination": "show-more",
+      "preventRouteChange": true,
+      "mobileLayout": {
+        "mode1": "small",
+        "mode2": "normal"
+      },
+      "hiddenFacets": {
+        "categories": true,
+        "specificationFilters": {
+          "hiddenFilters": [
+            {
+              "name": "Category"
+            },
+            {
+              "name": "Produit"
+            },
+            {
+              "name": "Produkt"
+            },
+            {
+              "name": "Subcategory"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "toggle-layout#textSEO": {
+    "title": "[TOGGLE LAYOUT] - SEO Text Home",
+    "children": [
+      "rich-text#seo"
+    ],
+    "props": {
+      "blockClass": "paddingSearch"
+    }
+  },
+  "toggle-layout#textSEOCustom": {
+    "title": "[TOGGLE LAYOUT] - SEO Text Home",
+    "children": [
+      "rich-text#seoCustom"
+    ],
+    "props": {
+      "blockClass": "paddingSearch"
+    }
+  },
+  "rich-text#seo": {
+    "title": "[RICH TEXT] - SEO Text Home",
+    "props": {
+      "text": "## Forni Whirlpool \n Il forno da incasso costituisce un elemento imprescindibile per uno spazio moderno dedicato alla cucina, e Whirlpool propone una linea ricca di modelli e soluzioni pensati per venire incontro a ogni necessità: Forni a vapore e tradizionali completi di tutte le più avanzate funzioni di cottura, studiati per garantirti le performance di cui hai bisogno per qualsiasi ricetta.\n Con la nostra gamma di forni a vapore puoi preparare piatti deliziosi: scopri la combinazione di cottura tradizionale e a vapore, cucina piatti sani e deliziosi, preservando tutte le proprietà organolettiche degli ingredienti. Dai dolci e le torte agli arrosti di carne, dai piatti di pesce fino al pane fatto in casa; le numerose funzioni ti permettono di scegliere sempre il programma di cottura più adatto a ogni ricetta. \n Lasciati stupire dalla tecnologia 6° Senso dei forni multifunzione di Whirlpool: le ricette pre-programmate regolano autonomamente il riscaldamento e la durata del ciclo, mentre la lampada alogena interna è studiata per assicurarti la migliore illuminazione riducendo allo stesso tempo il consumo energetico. Immancabili le funzioni di pre-riscaldamento e la tecnologia autopulente pirolitica, pensate per farti risparmiare tempo: la prima consente di raggiungere velocemente la temperatura desiderata, mentre la seconda ti viene incontro nella pulizia dello spazio interno, aiutandoti a rimuovere anche i residui e lo sporco più ostinato. \n La massima praticità incontra il design accattivante e moderno: i forni a incasso di Whirlpool si integrano facilmente in ogni ambiente, completando il [piano cottura per la cucina](https://www.whirlpool.it/prodotti/cottura/piani-cottura)  e sposandosi alla perfezione con le linee dell’arredo contemporaneo. I colori vanno dall’elegante nero al brillante acciaio, con una gamma di proposte e combinazioni che ti permette di trovare con facilità quello più adatto ai tuoi gusti estetici. Scopri i forni Whirlpool sul catalogo online: scegli il meglio per la tua casa.",
+      "blockClass": "seoText"
+    }
+  },
+  "rich-text#seoCustom": {
+    "title": "[RICH TEXT] - SEO Text Home",
+    "props": {
+      "text": "",
+      "blockClass": "seoText"
+    }
+  },
+  "breadcrumb.search": {
+    "props": {
+      "showOnMobile": true
+    }
+  },
+  "toggle-layout#bannerPLP": {
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "info-card#heroBannerSearch1",
+      "info-card#heroBannerSearch2"
+    ]
+  },
+  "toggle-layout#CarouselPLP": {
+    "title": "[TOGGLE-VISIBILITY] - TOP - Search Banner",
+    "props": {
+      "visible": true,
+      "blockClass": "plpSlider"
+    },
+    "children": [
+      "list-context.info-card-list#plpBanners"
+    ]
+  },
+  "list-context.info-card-list#plpBanners": {
+    "children": [
+      "slider-layout#plp"
+    ],
+    "props": {
+      "infoCards": [
+        {
+          "id": "hero-banner-main-search",
+          "isFullModeStyle": false,
+          "textPosition": "left",
+          "imageUrl": "assets/placeholders/placeholder-image-square.jpg",
+          "headline": "Lave-linge Whirlpool : la technologie 6ème SENS pour un lavage parfait",
+          "subhead": "Nous proposons une large gamme de lave-linge alliant une utilisation intuitive, une efficacité énergétique, ainsi que des résultats de lavage parfait.",
+          "callToActionMode": "none",
+          "blockClass": [
+            "heroBanner",
+            "heroBannerSearch"
+          ],
+          "textAlignment": "left"
+        },
+        {
+          "id": "hero-banner-main-search",
+          "isFullModeStyle": false,
+          "textPosition": "left",
+          "imageUrl": "assets/placeholders/placeholder-image-square.jpg",
+          "headline": "Supreme Care",
+          "subhead": "La lavatrice più silenziosa",
+          "callToActionMode": "none",
+          "blockClass": [
+            "heroBanner",
+            "heroBannerSearch"
+          ],
+          "textAlignment": "left"
+        }
+      ]
+    }
+  },
+  "experimental__visibility-layout#CarouselPLP": {
+    "props": {
+      "visible": false,
+      "blockClass": "plpSlider"
+    },
+    "children": [
+      "slider-layout#plp"
+    ]
+  },
+  "slider-layout#plp": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": false,
+      "showNavigationArrows": "never",
+      "blockClass": [
+        "carousel",
+        "carouselPlp"
+      ]
+    }
+  },
+  "info-card#heroBannerSearch1": {
+    "props": {
+      "id": "hero-banner-main-search",
+      "title": "hero-banner-search-1",
+      "isFullModeStyle": false,
+      "textPosition": "left",
+      "imageUrl": "assets/placeholders/placeholder-image-square.jpg",
+      "headline": "Lave-linge Whirlpool : la technologie 6ème SENS pour un lavage parfait",
+      "subhead": "Nous proposons une large gamme de lave-linge alliant une utilisation intuitive, une efficacité énergétique, ainsi que des résultats de lavage parfait.",
+      "callToActionMode": "none",
+      "blockClass": [
+        "heroBanner",
+        "heroBannerSearch"
+      ],
+      "textAlignment": "left"
+    }
+  },
+  "info-card#heroBannerSearch2": {
+    "props": {
+      "id": "hero-banner-main-search",
+      "title": "hero-banner-search-2",
+      "isFullModeStyle": false,
+      "textPosition": "left",
+      "imageUrl": "assets/placeholders/placeholder-image-square.jpg",
+      "headline": "Lave-linge Whirlpool : la technologie 6ème SENS pour un lavage parfait",
+      "subhead": "Nous proposons une large gamme de lave-linge alliant une utilisation intuitive, une efficacité énergétique, ainsi que des résultats de lavage parfait.",
+      "callToActionMode": "none",
+      "blockClass": [
+        "heroBanner",
+        "heroBannerSearch"
+      ],
+      "textAlignment": "left"
+    }
+  },
+  "flex-layout.row#searchtitleDep": {
+    "children": [
+      "rich-text#category"
+    ]
+  },
+  "store.search.product-comparison#category": {
+    "blocks": [
+      "search-result-layout#cat",
+      "flex-layout.row#newsletter-row"
+    ],
+    "props": {
+      "context": {
+        "skusFilter": "ALL",
+        "maxItemsPerPage": 9,
+        "__unstableProductOriginVtex": true
+      }
+    }
+  },
+  "store.search.product-comparison#subcategory": {
+    "blocks": [
+      "search-result-layout#subcategory",
+      "flex-layout.row#newsletter-row"
+    ],
+    "props": {
+      "context": {
+        "skusFilter": "ALL",
+        "maxItemsPerPage": 9,
+        "__unstableProductOriginVtex": true
+      }
+    }
+  },
+  "search-result-layout": {
+    "title": "[SEARCH PAGE] - TOP - Search Result",
+    "blocks": [
+      "search-result-layout.desktop.product-comparison#search",
+      "search-result-layout.mobile",
+      "search-not-found-layout"
+    ]
+  },
+  "search-result-layout#cat": {
+    "title": "[SEARCH PAGE] - TOP - Search Result",
+    "blocks": [
+      "search-result-layout.desktop.product-comparison#searchCategory",
+      "search-result-layout.mobile",
+      "search-not-found-layout"
+    ]
+  },
+  "search-result-layout#subcategory": {
+    "title": "[SEARCH PAGE] - TOP - Search Result",
+    "blocks": [
+      "search-result-layout.desktop.product-comparison#searchSubcategory",
+      "search-result-layout.mobile",
+      "search-not-found-layout"
+    ]
+  },
+  "search-result-layout#generic": {
+    "title": "[SEARCH PAGE] - TOP - Search Result",
+    "blocks": [
+      "search-result-layout.desktop.product-comparison#searchGeneric",
+      "search-result-layout.mobile#Generic",
+      "search-not-found-layout"
+    ]
+  },
+  "search-result-layout.desktop.product-comparison#searchGeneric": {
+    "title": "[SEARCH PAGE] - TOP - Search Result",
+    "children": [
+      // "plp-structured-data",
+      // "breadcrumb.search",
+      "breadcrumb-custom",
+      "flex-layout.row#queryRow",
+      "flex-layout.row#searchinfo",
+      "flex-layout.row#fetchprevious",
+      "flex-layout.row#products",
+      "flex-layout.row#fetchmore",
+      "flex-layout.row#space",
+      "product-comparison-drawer"
+      //"live-agent-chat",
+      // "analytics#plp"
+    ]
+  },
+  "flex-layout.row#queryRow": {
+    "children": [
+      "rich-text#query",
+      "search-title.v2"
+    ],
+    "props": {
+      "blockClass": "queryRow"
+    }
+  },
+  "rich-text#query": {
+    "props": {
+      "text": "Chercher: ",
+      "blockClass": "query"
+    }
+  },
+  "search-result-layout.mobile#Generic": {
+    "children": [
+      "breadcrumb-custom",
+      "flex-layout.row#queryRow",
+      "flex-layout.row#countAndorderByMobile",
+      "flex-layout.row#contentmobile",
+      "flex-layout.row#fetchmore",
+      "flex-layout.row#space",
+      "product-comparison-drawer"
+      // "analytics#plp"
+    ]
+  },
+  "flex-layout.row#countAndorderByMobile": {
+    "children": [
+      "search-products-count-per-page",
+      "order-by.v2"
+    ],
+    "props": {
+      "blockClass": [
+        "orderByMobileCol",
+        "disFlexDirCol",
+        "widthFit"
+      ]
+    }
+  },
+  "order-by.v2": {
+    "title": "[ORDER-BY] - MID - OrderBy",
+    "props": {
+      "hiddenOptions": [
+        "OrderByReleaseDateDESC",
+        "OrderByNameDESC",
+        "OrderByNameASC",
+        "OrderByCollection"
+      ]
+    }
+  },
+  "search-result-layout.desktop.product-comparison#searchSubcategory": {
+    "children": [
+      // "plp-structured-data",
+      // "breadcrumb.search",
+      "breadcrumb-custom",
+      "toggle-layout#CarouselPLP",
+      "flex-layout.row#searchtitle",
+      "toggle-layout#filterSubCategories-PLPCustom",
+      "flex-layout.row#result",
+      "product-comparison-drawer"
+      // "analytics#plp"
+    ],
+    "props": {
+      "pagination": "show-more",
+      "preventRouteChange": true,
+      "mobileLayout": {
+        "mode1": "small",
+        "mode2": "normal"
+      },
+      "hiddenFacets": {
+        "categories": true,
+        "specificationFilters": {
+          "hiddenFilters": [
+            {
+              "name": "Category 3"
+            },
+            {
+              "name": "Category 2"
+            },
+            {
+              "name": "Product"
+            },
+            {
+              "name": "Catégorie"
+            },
+            {
+              "name": "Produkt:"
+            },
+            // {
+            //   "name": "Do kupienia online"
+            // },
+            {
+              "name": "Kategoria:"
+            },
+            {
+              "name": "Subcategory"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "search-result-layout.desktop.product-comparison#searchCategory": {
+    "children": [
+      // "plp-structured-data",
+      // "breadcrumb.search",
+      "breadcrumb-custom",
+      "toggle-layout#CarouselPLP",
+      "flex-layout.row#searchtitle",
+      "toggle-layout#filterSubCategories-PLPCustom",
+
+      "flex-layout.row#result",
+      "product-comparison-drawer"
+      // "analytics#plp"
+    ],
+    "props": {
+      "pagination": "show-more",
+      "preventRouteChange": true,
+      "mobileLayout": {
+        "mode1": "small",
+        "mode2": "normal"
+      },
+      "hiddenFacets": {
+        "categories": true,
+        "specificationFilters": {
+          "hiddenFilters": [
+            {
+              "name": "Category"
+            },
+            {
+              "name": "Catégorie"
+            },
+            {
+              "name": "Subcategory"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "search-result-layout.desktop.product-comparison#search": {
+    "children": [
+      // "plp-structured-data",
+      "breadcrumb.search",
+      "toggle-layout#CarouselPLP",
+      "flex-layout.row#searchtitle",
+      "flex-layout.row#result",
+      "product-comparison-drawer"
+      // "analytics#plp"
+    ],
+    "props": {
+      "pagination": "show-more",
+      "preventRouteChange": true,
+      "mobileLayout": {
+        "mode1": "small",
+        "mode2": "normal"
+      },
+      "hiddenFacets": {
+        "categories": true,
+        "specificationFilters": {
+          "hiddenFilters": [
+            {
+              "name": "Subcategory"
+            },
+            {
+              "name": "Category 3"
+            },
+            {
+              "name": "Category"
+            },
+            {
+              "name": "Produit"
+            },
+            {
+              "name": "Catégorie"
+            },
+            {
+              "name": "new-energy-label"
+            },
+            {
+              "name": "product-information-sheet"
+            },
+            {
+              "name": "use-care"
+            },
+            {
+              "name": "health-safety-environmental"
+            },
+            {
+              "name": "nel-data-sheet"
+            },
+            {
+              "name": "daily-reference-guide"
+            },
+            {
+              "name": "energy-label"
+            },
+            {
+              "name": "product-fiche"
+            },
+            {
+              "name": "installation-instructions"
+            },
+            {
+              "name": "instruction-for-use"
+            },
+            {
+              "name": "product-data-sheet"
+            },
+            {
+              "name": "program-chart"
+            },
+            {
+              "name": "Total unit net capacity (l)"
+            },
+            {
+              "name": "Tipo di installazione"
+            },
+            {
+              "name": "Classe Energetica"
+            },
+            {
+              "name": "Colore"
+            },
+            {
+              "name": "Capacità netta totale (l)"
+            },
+            {
+              "name": "Tipo di costruzione"
+            },
+            {
+              "name": "EnergyLogo_description"
+            },
+            {
+              "name": "EnergyLogo_image"
+            },
+            {
+              "name": "Colore principale"
+            },
+            {
+              "name": "Porta pannellabile"
+            },
+            {
+              "name": "Sezione termometro frigorifero"
+            },
+            {
+              "name": "Somma del volume degli scomparti congelati"
+            },
+            {
+              "name": "Tipo"
+            },
+            {
+              "name": "Numero di zone temperatura"
+            },
+            {
+              "name": "Sistema No Frost"
+            },
+            {
+              "name": "Volume totale del prodotto"
+            },
+            {
+              "name": "Numero di cassetti nel freezer"
+            },
+            {
+              "name": "sistema di drenaggio dell'acqua"
+            },
+            {
+              "name": "Ripiani per bottiglie"
+            },
+            {
+              "name": "Numero di ripiani regolabili nel compartimento frigorifero"
+            },
+            {
+              "name": "Piedini regolabili"
+            },
+            {
+              "name": "Processo di scongelamento comparto freezer"
+            },
+            {
+              "name": "Sezione termometro freezer"
+            },
+            {
+              "name": "Numero di ripiani nel compartimento frigorifero"
+            },
+            {
+              "name": "Segnale di allarme/guasto"
+            },
+            {
+              "name": "Macchina del ghiaccio automatica motorizzata"
+            },
+            {
+              "name": "Lunghezza del cavo di alimentazione elettrica (cm)"
+            },
+            {
+              "name": "Indicatore porta aperta del congelatore"
+            },
+            {
+              "name": "Capacità di congelamento (Sezione 4-Stelle)"
+            },
+            {
+              "name": "Codice EAN"
+            },
+            {
+              "name": "Processo di scongelamento comparto frigorifero"
+            },
+            {
+              "name": "Somma del volume degli scomparti refrigerazione"
+            },
+            {
+              "name": "Tipo di controlli"
+            },
+            {
+              "name": "Numero di sportelli nel freezer"
+            },
+            {
+              "name": "Dati nominali collegamento elettrico (W)"
+            },
+            {
+              "name": "Da incasso / a libera installazione"
+            },
+            {
+              "name": "Corrente (A)"
+            },
+            {
+              "name": "Altezza massima della nicchia (cm)"
+            },
+            {
+              "name": "Emissioni di rumore aereo"
+            },
+            {
+              "name": "Capacità lorda del congelatore"
+            },
+            {
+              "name": "Cerniera porta"
+            },
+            {
+              "name": "Interruttore luce interno"
+            },
+            {
+              "name": "Numero di compartimenti"
+            },
+            {
+              "name": "Porta bloccabile"
+            },
+            {
+              "name": "Consumo medio annuale di energia in chilowattora per anno (kWh/a)"
+            },
+            {
+              "name": "Funzione congelamento rapido"
+            },
+            {
+              "name": "Funzione raffreddamento veloce"
+            },
+            {
+              "name": "Capacità di conservazione in caso di assenza corrente (h)"
+            },
+            {
+              "name": "Stelle"
+            },
+            {
+              "name": "Classe di efficienza energetica"
+            },
+            {
+              "name": "Interruttore congelamento rapido"
+            },
+            {
+              "name": "Numero di compressori"
+            },
+            {
+              "name": "Display temperatura del frigorifero"
+            },
+            {
+              "name": "Indicatore porta aperta"
+            },
+            {
+              "name": "Consumo di energia annuale (KWh/annum)"
+            },
+            {
+              "name": "Segnalazione guasti / Malfunzionamenti"
+            },
+            {
+              "name": "Capacità di bottiglie da 75 cl"
+            },
+            {
+              "name": "Capacità lorda totale apparecchio (l)"
+            },
+            {
+              "name": "Numero di ripiani"
+            },
+            {
+              "name": "Tipo di controllo"
+            },
+            {
+              "name": "Consumo di energia (KWh/giorno)"
+            },
+            {
+              "name": "Numero di ripiani regolabili"
+            },
+            {
+              "name": "Capacità lorda del frigorifero (L)"
+            },
+            {
+              "name": "Larghezza (cm)"
+            },
+            {
+              "name": "Larghezza massima della nicchia (cm)"
+            },
+            {
+              "name": "Profondità (cm)"
+            },
+            {
+              "name": "Profondità della nicchia (cm)"
+            },
+            {
+              "name": "Larghezza minima della nicchia (cm)"
+            },
+            {
+              "name": "Altezza minima della nicchia (cm)"
+            },
+            {
+              "name": "Altezza (cm)"
+            },
+            {
+              "name": "Altezza massima della nicchia"
+            },
+            {
+              "name": "Altezza minima della nicchia"
+            },
+            {
+              "name": "Balconcino portabottiglie"
+            },
+            {
+              "name": "Capacità fino a 250 litri"
+            },
+            {
+              "name": "Space Management"
+            },
+            {
+              "name": "Ripiani in vetro"
+            },
+            {
+              "name": "Porta Reversibile"
+            },
+            {
+              "name": "Classe Energetica: F"
+            },
+            {
+              "name": "Fresh Box"
+            },
+            {
+              "name": "Illuminazione a LED"
+            },
+            {
+              "name": "Porta a filo"
+            },
+            {
+              "name": "Capacità 115 - 185 litri"
+            },
+            {
+              "name": "Autosbrinamento"
+            },
+            {
+              "name": "Scomparto congelatore"
+            },
+            {
+              "name": "Capacità 380 - 430 litri"
+            },
+            {
+              "name": "Secondo scomparto frutta e verdura"
+            },
+            {
+              "name": "Anti-impronte"
+            },
+            {
+              "name": "NoFrost"
+            },
+            {
+              "name": "Classe energetica E"
+            },
+            {
+              "name": "Tecnologia 6° Senso"
+            },
+            {
+              "name": "Activ0°"
+            },
+            {
+              "name": "Sistema di controllo elettronico"
+            },
+            {
+              "name": "Fast Freezing"
+            },
+            {
+              "name": "Fresh Box+"
+            },
+            {
+              "name": "Total NoFrost"
+            },
+            {
+              "name": "Ripiano bottiglie"
+            },
+            {
+              "name": "Separatore bottiglie"
+            },
+            {
+              "name": "Capacità superiore a 350 litri"
+            },
+            {
+              "name": "Separatore"
+            },
+            {
+              "name": "Balconcino porta-formaggi"
+            },
+            {
+              "name": "Filtro antibatterico Microban"
+            },
+            {
+              "name": "Ventilazione"
+            },
+            {
+              "name": "Risparmio Energia"
+            },
+            {
+              "name": "Modalità vacanza"
+            },
+            {
+              "name": "Fast Cooling"
+            },
+            {
+              "name": "FreshControl"
+            },
+            {
+              "name": "Installazione semplice"
+            },
+            {
+              "name": "Capacità oltre 550 litri"
+            },
+            {
+              "name": "Balconcino per piccoli oggetti"
+            },
+            {
+              "name": "Dual No Frost"
+            },
+            {
+              "name": "FreshBox 0°"
+            },
+            {
+              "name": "Cassetto con guide"
+            },
+            {
+              "name": "Distributore d'acqua con filtro"
+            },
+            {
+              "name": "Capacità 450 - 500 litri"
+            },
+            {
+              "name": "Display Touch"
+            },
+            {
+              "name": "Allarme temperatura"
+            },
+            {
+              "name": "Classe Energetica: D"
+            },
+            {
+              "name": "Capacità 220-250 litri"
+            },
+            {
+              "name": "Capacità 250 - 290 litri"
+            },
+            {
+              "name": "Everest"
+            },
+            {
+              "name": "Metal Multi Flow"
+            },
+            {
+              "name": "Freeze Control"
+            },
+            {
+              "name": "Illuminazione interna"
+            },
+            {
+              "name": "Ripiani in rovere"
+            },
+            {
+              "name": "Classe Energetica G"
+            },
+            {
+              "name": "Capacità 36 bottiglie"
+            },
+            {
+              "name": "Flushline"
+            },
+            {
+              "name": "4 ripiani"
+            },
+            {
+              "name": "Anti UV"
+            },
+            {
+              "name": "Capacità 560 - 600 litri"
+            },
+            {
+              "name": "6TH SENSE Freeze Lock"
+            },
+            {
+              "name": "6TH SENSE Fresh Lock"
+            },
+            {
+              "name": "6th sense Live"
+            },
+            {
+              "name": "CONNECTIVITY"
+            },
+            {
+              "name": "Convertible Space"
+            },
+            {
+              "name": "FlexiFreeze"
+            },
+            {
+              "name": "Fabbricatore ghiaccio"
+            },
+            {
+              "name": "In-door Ice"
+            },
+            {
+              "name": "Numero di zone di temperatura"
+            },
+            {
+              "name": "Pure control"
+            },
+            {
+              "name": "Triple No Frost technology"
+            },
+            {
+              "name": "Capacità 340 - 380 litri"
+            },
+            {
+              "name": "Ripiano estraibile"
+            },
+            {
+              "name": "Easy access tray"
+            },
+            {
+              "name": "Display esterno"
+            },
+            {
+              "name": "6th Sense Control"
+            },
+            {
+              "name": "Capacità 310 - 340 litri"
+            },
+            {
+              "name": "Divisore porta"
+            },
+            {
+              "name": "Flexi Shelf"
+            },
+            {
+              "name": "Design WCollection"
+            },
+            {
+              "name": "Compressore Inverter"
+            },
+            {
+              "name": "6th Sense Precision Control"
+            },
+            {
+              "name": "Fast Freeze Pad"
+            },
+            {
+              "name": "Fresh Pad"
+            },
+            {
+              "name": "Illuminazione laterale a LED"
+            },
+            {
+              "name": "Ripiano portabottiglie premium"
+            },
+            {
+              "name": "37 dB(A)"
+            },
+            {
+              "name": "Classe energetica C"
+            },
+            {
+              "name": "StopFrost"
+            },
+            {
+              "name": "LessFrost"
+            },
+            {
+              "name": "35 dB(A)"
+            },
+            {
+              "name": "Separatore per cassetto congelatore"
+            },
+            {
+              "name": "Capacità 185 - 245 litri"
+            },
+            {
+              "name": "Balconcino secondario"
+            },
+            {
+              "name": "Capacità 290 - 310 litri"
+            },
+            {
+              "name": "Capacità 310 - 350 litri"
+            },
+            {
+              "name": "Separatore per ripiani"
+            },
+            {
+              "name": "34dB(A)"
+            },
+            {
+              "name": "Zen Technology"
+            },
+            {
+              "name": "Capacità 175 - 220 litri"
+            },
+            {
+              "name": "SETMO"
+            },
+            {
+              "name": "Capacità 245- 310 litri"
+            },
+            {
+              "name": "constructionType"
+            },
+            {
+              "name": "field5"
+            },
+            {
+              "name": "sellable"
+            },
+            {
+              "name": "fewPiecesThreshold"
+            },
+            {
+              "name": "minimumQuantityThreshold"
+            },
+            {
+              "name": "showPrice"
+            },
+            {
+              "name": "isDiscontinued"
+            },
+            {
+              "name": "productType"
+            },
+            {
+              "name": "extendedWarranty"
+            },
+            {
+              "name": "CommercialCode_field"
+            },
+            {
+              "name": "Delicati"
+            },
+            {
+              "name": "Key lock"
+            },
+            {
+              "name": "Quick Dry Sintetici"
+            },
+            {
+              "name": "My option"
+            },
+            {
+              "name": "90'"
+            },
+            {
+              "name": "Low/High Heat"
+            },
+            {
+              "name": "My program"
+            },
+            {
+              "name": "Extra Dry cotone"
+            },
+            {
+              "name": "Tappeti"
+            },
+            {
+              "name": "100'"
+            },
+            {
+              "name": "Camicie sintetiche"
+            },
+            {
+              "name": "Less Creased"
+            },
+            {
+              "name": "Piumini"
+            },
+            {
+              "name": "Misti"
+            },
+            {
+              "name": "120'"
+            },
+            {
+              "name": "Camicie"
+            },
+            {
+              "name": "Microfibra"
+            },
+            {
+              "name": "Capi in vera piuma"
+            },
+            {
+              "name": "Less Fluff"
+            },
+            {
+              "name": "Ciclo rapido 35'"
+            },
+            {
+              "name": "140'"
+            },
+            {
+              "name": "Programma Sport leggero"
+            },
+            {
+              "name": "Ciclo rapido 45'"
+            },
+            {
+              "name": "160'"
+            },
+            {
+              "name": "Programma Gym Kit"
+            },
+            {
+              "name": "Heat&Enjoy"
+            },
+            {
+              "name": "150'"
+            },
+            {
+              "name": "Pre Care"
+            },
+            {
+              "name": "Crease Care"
+            },
+            {
+              "name": "Scarpe sportive"
+            },
+            {
+              "name": "Quick Dry Cotone"
+            },
+            {
+              "name": "Tempo massimo partenza ritardata (h)"
+            },
+            {
+              "name": "Cotton Hanger"
+            },
+            {
+              "name": "Risparmio energetico"
+            },
+            {
+              "name": "Carico ridotto"
+            },
+            {
+              "name": "Fast&Eco Cotone"
+            },
+            {
+              "name": "Ready to Iron"
+            },
+            {
+              "name": "Jeans"
+            },
+            {
+              "name": "Light Dry camicie"
+            },
+            {
+              "name": "Additional reversing"
+            },
+            {
+              "name": "Cuddly Toys"
+            },
+            {
+              "name": "Seta"
+            },
+            {
+              "name": "Bed linen"
+            },
+            {
+              "name": "Crease Relax"
+            },
+            {
+              "name": "Camicie in cotone"
+            },
+            {
+              "name": "Cupoboard Dry sintetici"
+            },
+            {
+              "name": "Speed 15"
+            },
+            {
+              "name": "Programma Quick Dry"
+            },
+            {
+              "name": "Baby & Delicates"
+            },
+            {
+              "name": "Fitness"
+            },
+            {
+              "name": "Iron Dry cotone"
+            },
+            {
+              "name": "Fast&Eco Sintetici"
+            },
+            {
+              "name": "70'"
+            },
+            {
+              "name": "Fast Iron"
+            },
+            {
+              "name": "Funzioni di partenza ritardata"
+            },
+            {
+              "name": "Selettore tempo asciugatura"
+            },
+            {
+              "name": "45'"
+            },
+            {
+              "name": "Iron Dry sintetici"
+            },
+            {
+              "name": "High Heat"
+            },
+            {
+              "name": "Regolazione della temperatura di asciugatura"
+            },
+            {
+              "name": "Turbo Dry"
+            },
+            {
+              "name": "Off"
+            },
+            {
+              "name": "Selezione durata asciugatura"
+            },
+            {
+              "name": "Programma durata asciugatura"
+            },
+            {
+              "name": "Eco Time"
+            },
+            {
+              "name": "Programma Sport intensivo"
+            },
+            {
+              "name": "Nero e colori scuri"
+            },
+            {
+              "name": "80'"
+            },
+            {
+              "name": "Funzione anti-piega"
+            },
+            {
+              "name": "Ciclo Baby"
+            },
+            {
+              "name": "Anti Allergy"
+            },
+            {
+              "name": "Regolazione dei livelli di asciugatura"
+            },
+            {
+              "name": "Activewear"
+            },
+            {
+              "name": "Lingerie"
+            },
+            {
+              "name": "Extra Care"
+            },
+            {
+              "name": "Sintetici"
+            },
+            {
+              "name": "Cotone"
+            },
+            {
+              "name": "Programma Easy Ironing"
+            },
+            {
+              "name": "20'"
+            },
+            {
+              "name": "Fast&Eco Camicie"
+            },
+            {
+              "name": "Segnale acustico"
+            },
+            {
+              "name": "30'"
+            },
+            {
+              "name": "Grande carico/Piumoni"
+            },
+            {
+              "name": "Pulsante ON-OFF"
+            },
+            {
+              "name": "40'"
+            },
+            {
+              "name": "Quick dry"
+            },
+            {
+              "name": "Programma Cotone standard"
+            },
+            {
+              "name": "Sport Kit"
+            },
+            {
+              "name": "Refresh"
+            },
+            {
+              "name": "60'"
+            },
+            {
+              "name": "Avvio/Pausa"
+            },
+            {
+              "name": "PRE-IRON"
+            },
+            {
+              "name": "Bed and Bath"
+            },
+            {
+              "name": "Fast Iron cotone"
+            },
+            {
+              "name": "Spia fine ciclo"
+            },
+            {
+              "name": "Colore porta"
+            },
+            {
+              "name": "Spia di blocco filtro"
+            },
+            {
+              "name": "Peso (kg)"
+            },
+            {
+              "name": "Capacità in asciugatura (kg)"
+            },
+            {
+              "name": "Piano rimovibile"
+            },
+            {
+              "name": "Spia serbatoio pieno"
+            },
+            {
+              "name": "PIedini regolabili"
+            },
+            {
+              "name": "Lunghezza del cavo elettrico (cm)"
+            },
+            {
+              "name": "Tipo di Display"
+            },
+            {
+              "name": "Inversione rotazione cestello"
+            },
+            {
+              "name": "Tubo di sfiato"
+            },
+            {
+              "name": "Efficienza della condensazione"
+            },
+            {
+              "name": "Volume del cestello (l)"
+            },
+            {
+              "name": "Tipo di carico"
+            },
+            {
+              "name": "Tempo standard del programma cotone a pieno carico"
+            },
+            {
+              "name": "Dati nominali di collegamento (W)"
+            },
+            {
+              "name": "Corrente elettrica (A)"
+            },
+            {
+              "name": "Consumo annuale di energia"
+            },
+            {
+              "name": "Silenziosità (dBA)"
+            },
+            {
+              "name": "Peso lordo (kg)"
+            },
+            {
+              "name": "Capacità 8kg"
+            },
+            {
+              "name": "Finitura del cestello"
+            },
+            {
+              "name": "Classe energetica A+"
+            },
+            {
+              "name": "Super silenziosa"
+            },
+            {
+              "name": "Livello di asciugatura regolabile"
+            },
+            {
+              "name": "Programma grandi capi"
+            },
+            {
+              "name": "Easy Cleaning"
+            },
+            {
+              "name": "FreshCare+"
+            },
+            {
+              "name": "Pompa di calore"
+            },
+            {
+              "name": "Programma jeans"
+            },
+            {
+              "name": "Programma seta"
+            },
+            {
+              "name": "Programma Sport"
+            },
+            {
+              "name": "Partenza ritardata"
+            },
+            {
+              "name": "Classe energetica A+++"
+            },
+            {
+              "name": "Risparmio Energetico"
+            },
+            {
+              "name": "Motore SenseInverter"
+            },
+            {
+              "name": "Classe energetica A++"
+            },
+            {
+              "name": "Woolmark Blue"
+            },
+            {
+              "name": "Tecnologia 6° SENSO"
+            },
+            {
+              "name": "SoftMove"
+            },
+            {
+              "name": "Design Premium"
+            },
+            {
+              "name": "Interfaccia utente intuitiva"
+            },
+            {
+              "name": "Tecnologia 6° SENSO 3Dry"
+            },
+            {
+              "name": "Opzione luce cestello"
+            },
+            {
+              "name": "Ecomonitor"
+            },
+            {
+              "name": "Asciugatura delicata"
+            },
+            {
+              "name": "Design avanzato"
+            },
+            {
+              "name": "Capacità 9kg"
+            },
+            {
+              "name": "Capacità (kg)"
+            },
+            {
+              "name": "Tipo di asciugatura"
+            },
+            {
+              "name": "Funzione antiodore"
+            },
+            {
+              "name": "Centrifuga + scarico acqua"
+            },
+            {
+              "name": "Rapido 30'"
+            },
+            {
+              "name": "Sport"
+            },
+            {
+              "name": "Lana 40°"
+            },
+            {
+              "name": "Gym Kit"
+            },
+            {
+              "name": "20°C"
+            },
+            {
+              "name": "Eco 40-60"
+            },
+            {
+              "name": "Lana"
+            },
+            {
+              "name": "Tessuti misti 40°"
+            },
+            {
+              "name": "Tessuti misti 30°"
+            },
+            {
+              "name": "Seta 30°"
+            },
+            {
+              "name": "Sintetico 30°"
+            },
+            {
+              "name": "Risciacquo + Centrifuga"
+            },
+            {
+              "name": "Cotone 40°"
+            },
+            {
+              "name": "Cotone 60°"
+            },
+            {
+              "name": "Piumoni"
+            },
+            {
+              "name": "Push & Wash"
+            },
+            {
+              "name": "Ruote"
+            },
+            {
+              "name": "Capacità massima in kg"
+            },
+            {
+              "name": "Capienza (kg)"
+            },
+            {
+              "name": "Water plus"
+            },
+            {
+              "name": "Entrata acqua calda e fredda ?"
+            },
+            {
+              "name": "Velocità di rotazione in giri al minuto del programma eco 40-60 a capacità nominale"
+            },
+            {
+              "name": "Removable worktop"
+            },
+            {
+              "name": "Funzione lavaggio a freddo"
+            },
+            {
+              "name": "Consumo di acqua del programma eco in litri per ciclo"
+            },
+            {
+              "name": "Tempo massimo di partenza ritardata (h)"
+            },
+            {
+              "name": "Funzione di scelta della temperatura"
+            },
+            {
+              "name": "Opzioni velocità centrifuga"
+            },
+            {
+              "name": "Consumo energetico ponderato in kWh per 100 cicli di lavaggio del programma eco 40-60"
+            },
+            {
+              "name": "Classe di efficienza di asciugatura con centrifuga del programma eco 40-60"
+            },
+            {
+              "name": "Classe di efficienza di asciugatura con centrifuga"
+            },
+            {
+              "name": "Consumo energetico annuale (kWh/anno)"
+            },
+            {
+              "name": "Rumorosità lavaggio  (dB(A) re 1 pW)"
+            },
+            {
+              "name": "Consumo d'acqua annuo (l/anno)"
+            },
+            {
+              "name": "Rumorosità centrifuga  (dB(A) re 1 pW)"
+            },
+            {
+              "name": "Velocità di rotazione massima (giri/min)"
+            },
+            {
+              "name": "Classe Energetica: A"
+            },
+            {
+              "name": "Isolamento acustico"
+            },
+            {
+              "name": "ZENTechnology"
+            },
+            {
+              "name": "1400 giri al minuto"
+            },
+            {
+              "name": "Programma Bambini"
+            },
+            {
+              "name": "Blocco di sicurezza bambini"
+            },
+            {
+              "name": "Luce cestello"
+            },
+            {
+              "name": "PrecisionClean"
+            },
+            {
+              "name": "Indicatore di avanzamento programma"
+            },
+            {
+              "name": "Programma lana"
+            },
+            {
+              "name": "Programma Rapido"
+            },
+            {
+              "name": "Opzione rapido"
+            },
+            {
+              "name": "Indicazione tempo residuo"
+            },
+            {
+              "name": "Programmi speciali"
+            },
+            {
+              "name": "Igiene Vapore"
+            },
+            {
+              "name": "Refresh Vapore"
+            },
+            {
+              "name": "Sistema Acquastop"
+            },
+            {
+              "name": "Sistema di protezione per rubinetto chiuso"
+            },
+            {
+              "name": "WaterSave"
+            },
+            {
+              "name": "Classe energetica B"
+            },
+            {
+              "name": "La più silenziosa"
+            },
+            {
+              "name": "Capacità 8 Kg"
+            },
+            {
+              "name": "Bio Stains"
+            },
+            {
+              "name": "Fine ciclo"
+            },
+            {
+              "name": "Raccomandazioni di dosaggio"
+            },
+            {
+              "name": "Fresh Care"
+            },
+            {
+              "name": "Programma antipiega"
+            },
+            {
+              "name": "Capacità 9 Kg"
+            },
+            {
+              "name": "Lavaggio rapido"
+            },
+            {
+              "name": "Classe Energetica: C"
+            },
+            {
+              "name": "Motore inverter"
+            },
+            {
+              "name": "Programma colori"
+            },
+            {
+              "name": "Giornaliero"
+            },
+            {
+              "name": "1200 giri al minuto"
+            },
+            {
+              "name": "Livello di sporco"
+            },
+            {
+              "name": "Capacità 6 Kg"
+            },
+            {
+              "name": "Drum Up"
+            },
+            {
+              "name": "Sportello ad apertura rallentata"
+            },
+            {
+              "name": "Capacità 7 Kg"
+            },
+            {
+              "name": "Capacità 6,5 Kg"
+            },
+            {
+              "name": "Tipo di prodotto"
+            },
+            {
+              "name": "Classe energetica (freddo)"
+            },
+            {
+              "name": "Tipo di sistema"
+            },
+            {
+              "name": "Classe energetica (caldo)"
+            },
+            {
+              "name": "Colore principale del prodotto"
+            },
+            {
+              "name": "Altezza dell'unità esterna (cm)"
+            },
+            {
+              "name": "Profondità dell'unità esterna (cm)"
+            },
+            {
+              "name": "Ampiezza dell'unità esterna (cm)"
+            },
+            {
+              "name": "Ampiezza dell'unità interna (cm)"
+            },
+            {
+              "name": "Profondità dell'unità interna (cm)"
+            },
+            {
+              "name": "Altezza dell'unità interna (cm)"
+            },
+            {
+              "name": "Connettività"
+            },
+            {
+              "name": "Tipo di interfaccia"
+            },
+            {
+              "name": "Gas refrigerante"
+            },
+            {
+              "name": "Funzione deumidificazione"
+            },
+            {
+              "name": "Peso netto (kg)"
+            },
+            {
+              "name": "Filtro Hepa"
+            },
+            {
+              "name": "BTU"
+            },
+            {
+              "name": "Frequenza (Hz)"
+            },
+            {
+              "name": "Classe energetica (riscaldamento)"
+            },
+            {
+              "name": "Livello IDU di pressione sonora - Velocità media del ventilatore"
+            },
+            {
+              "name": "Livello ODU di pressione sonora"
+            },
+            {
+              "name": "Livello IDU di pressione sonora - Modalità silenzioso"
+            },
+            {
+              "name": "Classe energetica (raffreddamento)"
+            },
+            {
+              "name": "Livello IDU di pressione sonora - Velocità bassa del ventilatore"
+            },
+            {
+              "name": "Livello IDU di pressione sonora - Velocità jet del ventilatore"
+            },
+            {
+              "name": "Intervallo di temperatura di funzionamento per il raffreddamento - In esterno"
+            },
+            {
+              "name": "Intervallo di temperatura di funzionamento per il riscaldamento - In esterno"
+            },
+            {
+              "name": "Potenza (V)"
+            },
+            {
+              "name": "Potenza riscaldante (W)"
+            },
+            {
+              "name": "Livello IDU di pressione sonora - Velocità massima del ventilatore"
+            },
+            {
+              "name": "Potenza refrigerante (W)"
+            },
+            {
+              "name": "Tipo di interfaccia d'uso"
+            },
+            {
+              "name": "12000 BTU"
+            },
+            {
+              "name": "Filtro aria HEPA"
+            },
+            {
+              "name": "Design"
+            },
+            {
+              "name": "TELECOMANDO"
+            },
+            {
+              "name": "Interfaccia Utente"
+            },
+            {
+              "name": "Classe energetica di raffreddamento A+++"
+            },
+            {
+              "name": "MODALITA' ECO ENERGY"
+            },
+            {
+              "name": "Nuovo Gas R32"
+            },
+            {
+              "name": "4D XPERT"
+            },
+            {
+              "name": "6° SENSO COMFORT ZONE"
+            },
+            {
+              "name": "ATTORNO A TE"
+            },
+            {
+              "name": "JET FUNCTION"
+            },
+            {
+              "name": "Nuova funzione notturna"
+            },
+            {
+              "name": "REVERSIBILE"
+            },
+            {
+              "name": "MODALITA' SILENZIOSA"
+            },
+            {
+              "name": "Controllo Vocale"
+            },
+            {
+              "name": "9000 BTU"
+            },
+            {
+              "name": "Filtro aria ai carboni attivi"
+            },
+            {
+              "name": "Classe energetica di raffreddamento A++"
+            },
+            {
+              "name": "Riscaldamento in classe energetica A+"
+            },
+            {
+              "name": "TECNOLOGIA 6° SENSO"
+            },
+            {
+              "name": "18000 BTU"
+            },
+            {
+              "name": "Design compatto"
+            },
+            {
+              "name": "Classe energetica di raffreddamento A+"
+            },
+            {
+              "name": "Nuovo Gas R290"
+            },
+            {
+              "name": "NUOVA MODALITA' SILENZIOSA"
+            },
+            {
+              "name": "Classe energetica di raffreddamento A"
+            },
+            {
+              "name": "20000 BTU"
+            },
+            {
+              "name": "24000 BTU"
+            },
+            {
+              "name": "Serbatoio dell'acqua da 6,5 litri"
+            },
+            {
+              "name": "Filtrazione a doppio strato"
+            },
+            {
+              "name": "Gas Ecologico"
+            },
+            {
+              "name": "Indicatore a LED"
+            },
+            {
+              "name": "Programma lavaggio"
+            },
+            {
+              "name": "Azione di sbrinamento"
+            },
+            {
+              "name": "Numero di cassetti/cesti"
+            },
+            {
+              "name": "Temperatura regolabile"
+            },
+            {
+              "name": "Sistema di scarico dell'acqua"
+            },
+            {
+              "name": "4 cassetti"
+            },
+            {
+              "name": "Cassetti trasparenti"
+            },
+            {
+              "name": "Allarmi / Avvisi"
+            },
+            {
+              "name": "Eco Night"
+            },
+            {
+              "name": "Comandi elettronici"
+            },
+            {
+              "name": "FastFreeze"
+            },
+            {
+              "name": "Sistema NoFrost"
+            },
+            {
+              "name": "5 cassetti"
+            },
+            {
+              "name": "Porta reversibile"
+            },
+            {
+              "name": "Ice maker"
+            },
+            {
+              "name": "Sottobase"
+            },
+            {
+              "name": "2 cassetti"
+            },
+            {
+              "name": "3 cassetti"
+            },
+            {
+              "name": "Dimensioni compatte"
+            },
+            {
+              "name": "1 cestello"
+            },
+            {
+              "name": "Cavità XXL"
+            },
+            {
+              "name": "Funzione blocco"
+            },
+            {
+              "name": "4 cestelli"
+            },
+            {
+              "name": "Bilanciatura coperchio"
+            },
+            {
+              "name": "Easy to move"
+            },
+            {
+              "name": "SpaceMax"
+            },
+            {
+              "name": "TurboFreeze"
+            },
+            {
+              "name": "3 cestelli"
+            },
+            {
+              "name": "Frost Out"
+            },
+            {
+              "name": "2 cestelli"
+            },
+            {
+              "name": "Flexi Mode"
+            },
+            {
+              "name": "9M"
+            },
+            {
+              "name": "Tecnologia di autopulizia"
+            },
+            {
+              "name": "Tipo di forno"
+            },
+            {
+              "name": "Guide forno"
+            },
+            {
+              "name": "Girarrosto a motore"
+            },
+            {
+              "name": "Sistema di pulizia integrato"
+            },
+            {
+              "name": "Volume utilizzabile (l)"
+            },
+            {
+              "name": "Opzioni di programmazione tempo"
+            },
+            {
+              "name": "Consumo di energia Termoventilato (kWh)"
+            },
+            {
+              "name": "Programmatore tempo"
+            },
+            {
+              "name": "Consumo di energia convenzionale (kWh)"
+            },
+            {
+              "name": "Cavità XXL 73 lt"
+            },
+            {
+              "name": "Pulizia Pirolitica"
+            },
+            {
+              "name": "Cook3"
+            },
+            {
+              "name": "Cook4"
+            },
+            {
+              "name": "8 funzioni principali"
+            },
+            {
+              "name": "Ready2cook"
+            },
+            {
+              "name": "Classe Energetica A+"
+            },
+            {
+              "name": "Classe energetica"
+            },
+            {
+              "name": "Assisted Display"
+            },
+            {
+              "name": "Cool Door"
+            },
+            {
+              "name": "Controllo elettronico della temperatura"
+            },
+            {
+              "name": "Forced Air"
+            },
+            {
+              "name": "Guide Telescopiche"
+            },
+            {
+              "name": "SoftClosing"
+            },
+            {
+              "name": "Estetica WCollection"
+            },
+            {
+              "name": "SteamSense"
+            },
+            {
+              "name": "Smart clean"
+            },
+            {
+              "name": "16 funzioni principali"
+            },
+            {
+              "name": "Estetica Urban"
+            },
+            {
+              "name": "Cavità standard"
+            },
+            {
+              "name": "5 funzioni principali"
+            },
+            {
+              "name": "Classe Energetica A"
+            },
+            {
+              "name": "Estetica Absolute"
+            },
+            {
+              "name": "Manopole Push-Push"
+            },
+            {
+              "name": "BakeSense"
+            },
+            {
+              "name": "Sonda cottura"
+            },
+            {
+              "name": "Sonda Multisense"
+            },
+            {
+              "name": "6thSenseLive App"
+            },
+            {
+              "name": "MySmartDisplay"
+            },
+            {
+              "name": "Easy to Clean"
+            },
+            {
+              "name": "iXelium"
+            },
+            {
+              "name": "SmartDisplay"
+            },
+            {
+              "name": "SteamSense+"
+            },
+            {
+              "name": "Schermo LCD con informazioni grafiche"
+            },
+            {
+              "name": "Cavità piccola"
+            },
+            {
+              "name": "Funzione scongelamento"
+            },
+            {
+              "name": "Funzione riscaldamento"
+            },
+            {
+              "name": "Sous Vide cooking functions"
+            },
+            {
+              "name": "6TH SENSE Technology"
+            },
+            {
+              "name": "Ventilato + Vapore"
+            },
+            {
+              "name": "Maniglia integrata"
+            },
+            {
+              "name": "Finitura Black Fiber"
+            },
+            {
+              "name": "Metodo di cottura ventilata"
+            },
+            {
+              "name": "Potenza massima del microonde (W)"
+            },
+            {
+              "name": "Metodo di cottura grill"
+            },
+            {
+              "name": "Potenza del Grill (W)"
+            },
+            {
+              "name": "Tipo di cottura"
+            },
+            {
+              "name": "Metodo di cottura convenzionale"
+            },
+            {
+              "name": "Orologio"
+            },
+            {
+              "name": "Diametro della tavola girevole (mm)"
+            },
+            {
+              "name": "Piatto rotante"
+            },
+            {
+              "name": "Teglia"
+            },
+            {
+              "name": "Tipo di grill"
+            },
+            {
+              "name": "Grill grid"
+            },
+            {
+              "name": "Plate cover"
+            },
+            {
+              "name": "Blocco bambini"
+            },
+            {
+              "name": "Capienza (l)"
+            },
+            {
+              "name": "Apertura della porta"
+            },
+            {
+              "name": "Timer elettronico"
+            },
+            {
+              "name": "Modalità di apertura della porta"
+            },
+            {
+              "name": "Profondità con porta aperta a 90 gradi (cm)"
+            },
+            {
+              "name": "cookbook"
+            },
+            {
+              "name": "BreadDefrost"
+            },
+            {
+              "name": "Dual Crisp"
+            },
+            {
+              "name": "ForcedAir"
+            },
+            {
+              "name": "Preriscaldamento veloce"
+            },
+            {
+              "name": "JetDefrost"
+            },
+            {
+              "name": "Reheat&Defrost"
+            },
+            {
+              "name": "Steam"
+            },
+            {
+              "name": "Design all'avanguardia"
+            },
+            {
+              "name": "3DTechnology"
+            },
+            {
+              "name": "Funzione pronto"
+            },
+            {
+              "name": "Preferiti"
+            },
+            {
+              "name": "Jet Start"
+            },
+            {
+              "name": "Grill al Quarzo"
+            },
+            {
+              "name": "Blocco piatto rotante"
+            },
+            {
+              "name": "Capacità 31 litri"
+            },
+            {
+              "name": "Crisp"
+            },
+            {
+              "name": "Grill"
+            },
+            {
+              "name": "Capacità 40 litri"
+            },
+            {
+              "name": "MAX"
+            },
+            {
+              "name": "Abbinamento perfetto"
+            },
+            {
+              "name": "Jet Menu"
+            },
+            {
+              "name": "Mantenimento temperatura"
+            },
+            {
+              "name": "Auto Clean"
+            },
+            {
+              "name": "ChefMenu"
+            },
+            {
+              "name": "Crispfry"
+            },
+            {
+              "name": "Auto Cook"
+            },
+            {
+              "name": "Full Flat - Senza piatto girevole"
+            },
+            {
+              "name": "Porta Trasparente"
+            },
+            {
+              "name": "Capacità 22 litri"
+            },
+            {
+              "name": "DoughRising"
+            },
+            {
+              "name": "Jet grill"
+            },
+            {
+              "name": "Precision Bake"
+            },
+            {
+              "name": "Funzione Yogurt"
+            },
+            {
+              "name": "XXL display"
+            },
+            {
+              "name": "Dual Steam"
+            },
+            {
+              "name": "Steam&Boil"
+            },
+            {
+              "name": "AssistedDisplay"
+            },
+            {
+              "name": "Cerniere Soft Closing"
+            },
+            {
+              "name": "Pasta e Riso"
+            },
+            {
+              "name": "Riso&Pasta"
+            },
+            {
+              "name": "Anti-impronta"
+            },
+            {
+              "name": "MySmart Display"
+            },
+            {
+              "name": "Gratinatura"
+            },
+            {
+              "name": "Jet air"
+            },
+            {
+              "name": "Riscaldamento rapido bevanda"
+            },
+            {
+              "name": "Magic Clean"
+            },
+            {
+              "name": "Sensore peso"
+            },
+            {
+              "name": "Capacità (l)"
+            },
+            {
+              "name": "Colour"
+            },
+            {
+              "name": "Dati nominali di collegamento elettrico (W)"
+            },
+            {
+              "name": "Capienza serbatoio dell'acqua"
+            },
+            {
+              "name": "Illuminazione"
+            },
+            {
+              "name": "Unità di preparazione removibile"
+            },
+            {
+              "name": "Capienza contenitore del caffè"
+            },
+            {
+              "name": "Contenitore dei fondi di caffè"
+            },
+            {
+              "name": "Erogazione acqua calda"
+            },
+            {
+              "name": "Dimensioni porzione"
+            },
+            {
+              "name": "Beccuccio a vapore"
+            },
+            {
+              "name": "Ingresso acqua"
+            },
+            {
+              "name": "Larghezza del prodotto (cm)"
+            },
+            {
+              "name": "Profondità del prodotto (cm)"
+            },
+            {
+              "name": "Altezza del prodotto imballato (cm)"
+            },
+            {
+              "name": "Profondità prodotto imballato (cm)"
+            },
+            {
+              "name": "Larghezza del prodotto imballato (cm)"
+            },
+            {
+              "name": "Altezza del prodotto (cm)"
+            },
+            {
+              "name": "Maximum number of espresso cups"
+            },
+            {
+              "name": "Meccanismo di apertura a pressione"
+            },
+            {
+              "name": "Anti - impronta"
+            },
+            {
+              "name": "Controllo meccanico della temperatura"
+            },
+            {
+              "name": "Range di temperatura: 40-70 (C°)"
+            },
+            {
+              "name": "Tecnologia iXelium"
+            },
+            {
+              "name": "Tipo di cassetto"
+            },
+            {
+              "name": "Capienza serbatoio dell'acqua (l)"
+            },
+            {
+              "name": "Coffee system"
+            },
+            {
+              "name": "Prepara due tazze alla volta"
+            },
+            {
+              "name": "Funzione Standby"
+            },
+            {
+              "name": "Sistema pre-brew"
+            },
+            {
+              "name": "Sistema caffè"
+            },
+            {
+              "name": "Sistema pre-grid"
+            },
+            {
+              "name": "Posizione dei comandi"
+            },
+            {
+              "name": "Tipo di piano cottura"
+            },
+            {
+              "name": "Numero di bruciatori"
+            },
+            {
+              "name": "COL_MAIN"
+            },
+            {
+              "name": "POSITIONS"
+            },
+            {
+              "name": "Z_TECH_TYPE"
+            },
+            {
+              "name": "Indicatore accensione"
+            },
+            {
+              "name": "Interruttore principale acceso/spento"
+            },
+            {
+              "name": "Tipo di dispositivo di sicurezza per il gas"
+            },
+            {
+              "name": "Tipo di accensione"
+            },
+            {
+              "name": "Numero di piastre radianti"
+            },
+            {
+              "name": "Numero di piastre a induzione"
+            },
+            {
+              "name": "Numero di zone cottura elettriche"
+            },
+            {
+              "name": "Numero di bruciatori a gas"
+            },
+            {
+              "name": "Sorgente energetica utilizzata"
+            },
+            {
+              "name": "Dati nominali collegamento gas (W)"
+            },
+            {
+              "name": "Numero di scaldavivande elettrici"
+            },
+            {
+              "name": "Tipo di griglie"
+            },
+            {
+              "name": "Numero di piastre alogene"
+            },
+            {
+              "name": "Indicatore di calore residuo"
+            },
+            {
+              "name": "Numero di piastre elettriche"
+            },
+            {
+              "name": "Timer"
+            },
+            {
+              "name": "Indicatore “Power on”"
+            },
+            {
+              "name": "GAS_SAFETY_TYPE"
+            },
+            {
+              "name": "RADIANT_PLATES_NUMBER"
+            },
+            {
+              "name": "ELECTRIC_ZONES_NUMBER"
+            },
+            {
+              "name": "Posizione del pannello di controllo"
+            },
+            {
+              "name": "WARMING_ZONES_NUMBER"
+            },
+            {
+              "name": "ELECTRIC_PLATES_NUMBER"
+            },
+            {
+              "name": "WIDTH_NICHE_SIZE_MIN"
+            },
+            {
+              "name": "Larghezza"
+            },
+            {
+              "name": "Larghezza massima della nicchia"
+            },
+            {
+              "name": "Profondità del prodotto"
+            },
+            {
+              "name": "Profondità della nicchia"
+            },
+            {
+              "name": "Altezza del prodotto"
+            },
+            {
+              "name": "Bollitura extra rapida"
+            },
+            {
+              "name": "Comandi frontali"
+            },
+            {
+              "name": "Acciaio Inox"
+            },
+            {
+              "name": "Potenza massima 3500W"
+            },
+            {
+              "name": "4 bruciatori a gas"
+            },
+            {
+              "name": "EasyReplace"
+            },
+            {
+              "name": "5 bruciatori a gas"
+            },
+            {
+              "name": "Cottura flessibile"
+            },
+            {
+              "name": "Fondere"
+            },
+            {
+              "name": "Sobbollire"
+            },
+            {
+              "name": "Induzione"
+            },
+            {
+              "name": "Booster"
+            },
+            {
+              "name": "FlexiCook"
+            },
+            {
+              "name": "Comandi a sfioramento"
+            },
+            {
+              "name": "Facile da pulire"
+            },
+            {
+              "name": "Bruciatori Super Efficienti"
+            },
+            {
+              "name": "Potenza massima 4000W"
+            },
+            {
+              "name": "Double zone G0"
+            },
+            {
+              "name": "ECO BOOSTER"
+            },
+            {
+              "name": "Mantenere in caldo"
+            },
+            {
+              "name": "Moka"
+            },
+            {
+              "name": "Grigliare"
+            },
+            {
+              "name": "EasyDisplay"
+            },
+            {
+              "name": "FlexiMax"
+            },
+            {
+              "name": "Regolatore di potenza"
+            },
+            {
+              "name": "SmartSense"
+            },
+            {
+              "name": "Chef Control"
+            },
+            {
+              "name": "Frittura"
+            },
+            {
+              "name": "Installazione a Filo"
+            },
+            {
+              "name": "SmartSense Premium"
+            },
+            {
+              "name": "AssistedTextDisplay"
+            },
+            {
+              "name": "FlexiFull"
+            },
+            {
+              "name": "Bruciatori a filo"
+            },
+            {
+              "name": "Griglie in ghisa a tutta larghezza"
+            },
+            {
+              "name": "PreciseFlame"
+            },
+            {
+              "name": "Funzioni Automatiche 6° Senso"
+            },
+            {
+              "name": "Booster 3Kw"
+            },
+            {
+              "name": "Accesso diretto con i comandi"
+            },
+            {
+              "name": "Accesso diretto con i cursori"
+            },
+            {
+              "name": "Zona cottura mista"
+            },
+            {
+              "name": "FlexiSide"
+            },
+            {
+              "name": "Mappatura diretta"
+            },
+            {
+              "name": "MultiLevel Flame"
+            },
+            {
+              "name": "FlexiFlame"
+            },
+            {
+              "name": "Potenza massima 5000W"
+            },
+            {
+              "name": "Coperti"
+            },
+            {
+              "name": "Numero di coperti"
+            },
+            {
+              "name": "Lavaggio su un solo cesto"
+            },
+            {
+              "name": "Lunghezza tubo entrata (cm)"
+            },
+            {
+              "name": "Spia luminosa \"Brillantante\""
+            },
+            {
+              "name": "Cesto superiore regolabile"
+            },
+            {
+              "name": "Presenza del porta-posate"
+            },
+            {
+              "name": "Cesto con maniglia"
+            },
+            {
+              "name": "Lunghezza tubo uscita (cm)"
+            },
+            {
+              "name": "Porta-coltelli"
+            },
+            {
+              "name": "Spia luminosa \"Sale\""
+            },
+            {
+              "name": "Numero massimo di coperti"
+            },
+            {
+              "name": "Auto sensor 50-65 (Atlantic sensor)"
+            },
+            {
+              "name": "Vetro"
+            },
+            {
+              "name": "Programma Vapore"
+            },
+            {
+              "name": "Tablet program 60 alternating"
+            },
+            {
+              "name": "Mezzo carico permanente"
+            },
+            {
+              "name": "Normale"
+            },
+            {
+              "name": "Auto Fast"
+            },
+            {
+              "name": "Mezzo carico distribuito"
+            },
+            {
+              "name": "Auto Normal"
+            },
+            {
+              "name": "Powerclean"
+            },
+            {
+              "name": "Sensor intensive 60-70"
+            },
+            {
+              "name": "Sensor Outsource"
+            },
+            {
+              "name": "Quotidiano 50"
+            },
+            {
+              "name": "Duo Wash"
+            },
+            {
+              "name": "Quotidiano 55°"
+            },
+            {
+              "name": "Proclean"
+            },
+            {
+              "name": "Sensor 40-70 (Atlantic sensor)"
+            },
+            {
+              "name": "Sensor one touch 40-70"
+            },
+            {
+              "name": "Lavaggio a mano"
+            },
+            {
+              "name": "UltraIntensive"
+            },
+            {
+              "name": "Intensivo 70°"
+            },
+            {
+              "name": "Sensor normal 60-70 (APL standard)"
+            },
+            {
+              "name": "Sani rinse"
+            },
+            {
+              "name": "Tablet program 60 permanent"
+            },
+            {
+              "name": "Intensivo 65°"
+            },
+            {
+              "name": "1 hour Wash & Dry"
+            },
+            {
+              "name": "Autosensor 50-65"
+            },
+            {
+              "name": "Ciclo Extra"
+            },
+            {
+              "name": "Express"
+            },
+            {
+              "name": "Rapido"
+            },
+            {
+              "name": "1 Ora"
+            },
+            {
+              "name": "Trio Wash"
+            },
+            {
+              "name": "Bio Eco 50"
+            },
+            {
+              "name": "Self Clean"
+            },
+            {
+              "name": "Notturno"
+            },
+            {
+              "name": "Eco"
+            },
+            {
+              "name": "Fast everyday 60 + 3h delay"
+            },
+            {
+              "name": "Baby Care"
+            },
+            {
+              "name": "Smart Daily"
+            },
+            {
+              "name": "Sensor intensive 60-70 (APL)"
+            },
+            {
+              "name": "Disponibilità del programma breve"
+            },
+            {
+              "name": "Prelavaggio"
+            },
+            {
+              "name": "Quotidiano 60"
+            },
+            {
+              "name": "Autosensor 50-65 + 3h delay"
+            },
+            {
+              "name": "Quotidiano 65°"
+            },
+            {
+              "name": "Eco 50"
+            },
+            {
+              "name": "Auto Intensive"
+            },
+            {
+              "name": "Sensor intensive 60-70 + Aquasteam"
+            },
+            {
+              "name": "Fast 55"
+            },
+            {
+              "name": "Eco 55°"
+            },
+            {
+              "name": "Sensor one touch 40-70 + Aquasteam"
+            },
+            {
+              "name": "Sanificazione"
+            },
+            {
+              "name": "Sensor normal 40-55 (APL standard)"
+            },
+            {
+              "name": "Quotidiano 60 + 3h delay"
+            },
+            {
+              "name": "Silenzioso"
+            },
+            {
+              "name": "Aquasteam"
+            },
+            {
+              "name": "Fast Everyday 60°"
+            },
+            {
+              "name": "Eco green"
+            },
+            {
+              "name": "Sensor normal 40-55"
+            },
+            {
+              "name": "Dual Wash"
+            },
+            {
+              "name": "Sensor PLP2"
+            },
+            {
+              "name": "Temperatura massima dell'acqua in entrata (°C)"
+            },
+            {
+              "name": "Consumo d'acqua (l)"
+            },
+            {
+              "name": "Performance di lavaggio"
+            },
+            {
+              "name": "Performance di asciugatura"
+            },
+            {
+              "name": "Numero di programmi"
+            },
+            {
+              "name": "Energy Efficiency Class (Regulation (EU) 2017/1369)"
+            },
+            {
+              "name": "Airborne acoustical noise emissions"
+            },
+            {
+              "name": "Energy Consumption for 100 cycles Eco Programme"
+            },
+            {
+              "name": "14 coperti"
+            },
+            {
+              "name": "Extra Space"
+            },
+            {
+              "name": "Flexi Space"
+            },
+            {
+              "name": "Terzo Cesto"
+            },
+            {
+              "name": "Cestello superiore removibile"
+            },
+            {
+              "name": "EcoFriendly"
+            },
+            {
+              "name": "Opzione mezzo carico"
+            },
+            {
+              "name": "Power Clean Pro"
+            },
+            {
+              "name": "Silenziosa"
+            },
+            {
+              "name": "10 programmi"
+            },
+            {
+              "name": "Display digitale"
+            },
+            {
+              "name": "Segnale acustico di fine ciclo"
+            },
+            {
+              "name": "OverFlow"
+            },
+            {
+              "name": "Opzioni di lavaggio flessibili"
+            },
+            {
+              "name": "Griglie abbattibili"
+            },
+            {
+              "name": "Collegamento acqua calda"
+            },
+            {
+              "name": "Programma intensivo"
+            },
+            {
+              "name": "Spia luminosa"
+            },
+            {
+              "name": "Multizona"
+            },
+            {
+              "name": "NaturalDry"
+            },
+            {
+              "name": "Programma rapido"
+            },
+            {
+              "name": "Interni in acciaio inossidabile"
+            },
+            {
+              "name": "Opzione Tabs \"All in one\""
+            },
+            {
+              "name": "Cestello superiore regolabile"
+            },
+            {
+              "name": "13 coperti"
+            },
+            {
+              "name": "6 programmi"
+            },
+            {
+              "name": "8 programmi"
+            },
+            {
+              "name": "Glass Care"
+            },
+            {
+              "name": "11 Programmi"
+            },
+            {
+              "name": "Cerniere Sliding"
+            },
+            {
+              "name": "Terzo Cesto flessibile"
+            },
+            {
+              "name": "Classe Energetica B"
+            },
+            {
+              "name": "Luci interne LED"
+            },
+            {
+              "name": "Display touch"
+            },
+            {
+              "name": "Programma Disinfezione"
+            },
+            {
+              "name": "Top removibile"
+            },
+            {
+              "name": "10 coperti"
+            },
+            {
+              "name": "Consumo acqua 9lt"
+            },
+            {
+              "name": "Aspirazione massima"
+            },
+            {
+              "name": "Colore del corpo"
+            },
+            {
+              "name": "Filtro lavabile"
+            },
+            {
+              "name": "Numero velocità"
+            },
+            {
+              "name": "Pannellabile"
+            },
+            {
+              "name": "Materiale del filtro sporco"
+            },
+            {
+              "name": "Tipo di lampade"
+            },
+            {
+              "name": "Pilotaggio a distanza"
+            },
+            {
+              "name": "Punti luce"
+            },
+            {
+              "name": "Tipo di struttura"
+            },
+            {
+              "name": "Regolazione luminosità"
+            },
+            {
+              "name": "Filtro grassi"
+            },
+            {
+              "name": "Potenza sonora alla velocità max. (2010/30/CE)"
+            },
+            {
+              "name": "Capacità massima di aspirazione (m3/h)"
+            },
+            {
+              "name": "Classe luminosità"
+            },
+            {
+              "name": "Performance"
+            },
+            {
+              "name": "Classe di efficienza filtraggio grasso"
+            },
+            {
+              "name": "Fluid Dynamic Efficiency class"
+            },
+            {
+              "name": "Output di ricircolo con sovralimentazione"
+            },
+            {
+              "name": "Massimo output con aria di ricircolo (m3/h)"
+            },
+            {
+              "name": "Deflettore di flusso di non ritorno"
+            },
+            {
+              "name": "Massima estrazione in output dell'aria (m3/h)"
+            },
+            {
+              "name": "Altezza del prodotto senza camino (mm)"
+            },
+            {
+              "name": "Efficienza energetica"
+            },
+            {
+              "name": "3 Velocità"
+            },
+            {
+              "name": "Installazione flessibile"
+            },
+            {
+              "name": "Filtro antigrassi"
+            },
+            {
+              "name": "Interfaccia touch"
+            },
+            {
+              "name": "2 luci"
+            },
+            {
+              "name": "Design in vetro"
+            },
+            {
+              "name": "Aspirazione perimetrale"
+            },
+            {
+              "name": "Filtro ai carboni attivi"
+            },
+            {
+              "name": "Comandi analogici"
+            },
+            {
+              "name": "Cappa a parete"
+            },
+            {
+              "name": "Luce a LED ambiente"
+            },
+            {
+              "name": "CookSense"
+            },
+            {
+              "name": "ZenMode"
+            },
+            {
+              "name": "Design Compatto"
+            },
+            {
+              "name": "DimmerLight"
+            },
+            {
+              "name": "Light Sense"
+            },
+            {
+              "name": "NightLight"
+            },
+            {
+              "name": "Strip LED Light"
+            },
+            {
+              "name": "Absolute beauty"
+            },
+            {
+              "name": "4 velocità"
+            },
+            {
+              "name": "6th Sense Absolute"
+            },
+            {
+              "name": "Motore ad alta efficienza"
+            },
+            {
+              "name": "Classe Energetica D"
+            },
+            {
+              "name": "Gruppo incasso"
+            },
+            {
+              "name": "Cappa totalmente integrata"
+            },
+            {
+              "name": "Classe Energetica C"
+            },
+            {
+              "name": "Selettore centrale"
+            },
+            {
+              "name": "Capacità di lavaggio (kg)"
+            },
+            {
+              "name": "Velocità centrifuga (giri al minuto)"
+            },
+            {
+              "name": "Capacità di asciugatura (kg)"
+            },
+            {
+              "name": "Rumorosità centrifuga (dB(A) re 1 pW)"
+            },
+            {
+              "name": "Classe di efficienza energetica ciclo di lavaggio/asciugatura"
+            },
+            {
+              "name": "Consumo di energia annuo totale (solo lavaggio, 200 cicli a pieno carico) (kWh)"
+            },
+            {
+              "name": "Consumo di acqua del ciclo completo di lavaggio e asciugatura in litri per ciclo"
+            },
+            {
+              "name": "Rumorosità lavaggio (dB(A) re 1 pW)"
+            },
+            {
+              "name": "Piano removibile"
+            },
+            {
+              "name": "Rotazione alternativa"
+            },
+            {
+              "name": "Consumo di acqua annuo totale (solo lavaggio, 200 cicli a pieno carico) (l)"
+            },
+            {
+              "name": "Esclusione centrifuga"
+            },
+            {
+              "name": "Capacità massima in kg in un ciclo di lavaggio/asciugatura"
+            },
+            {
+              "name": "Capacità massima in kg in un ciclo di lavaggio"
+            },
+            {
+              "name": "Capacità di asciugatura 6 Kg"
+            },
+            {
+              "name": "Capacità di carico 9 Kg"
+            },
+            {
+              "name": "Solo Asciugatura"
+            },
+            {
+              "name": "Opzioni asciugatura"
+            },
+            {
+              "name": "Wash&Dry"
+            },
+            {
+              "name": "Capacità di carico 10 Kg"
+            },
+            {
+              "name": "Capacità di asciugatura 7 Kg"
+            },
+            {
+              "name": "Classe Energetica E"
+            },
+            {
+              "name": "1600 giri al minuto"
+            },
+            {
+              "name": "Risciacquo intensivo"
+            },
+            {
+              "name": "SteamCare"
+            },
+            {
+              "name": "safety-data-sheet"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "search-result-layout.desktop": {
+    "title": "[SEARCH PAGE] - TOP - Search Result",
+    "children": [
+      // "plp-structured-data",
+      "breadcrumb.search",
+      "toggle-layout#CarouselPLP",
+      "flex-layout.row#searchtitle",
+      "flex-layout.row#result"
+      // "analytics#plp"
+    ],
+    "props": {
+      "pagination": "show-more",
+      "preventRouteChange": true,
+      "mobileLayout": {
+        "mode1": "small",
+        "mode2": "normal"
+      }
+    }
+  },
+  "flex-layout.row#searchbread": {
+    "children": [
+      "breadcrumb.search"
+    ],
+    "props": {
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true,
+      "blockClass": "breadCustom"
+    }
+  },
+  "link#home": {
+    "props": {
+      "href": "/",
+      "label": "Strona główna",
+      "blockClass": "breadLink"
+    }
+  },
+  "image#arrowBread": {
+    "title": "image - arrow bread",
+    "props": {
+      "src": "assets/arrowIconBread.svg"
+    }
+  },
+  "image#arrowBreadDown": {
+    "title": "image - arrow bread down",
+    "props": {
+      "src": "assets/arrowIconBreadDown.svg"
+    }
+  },
+  "image#arrowBreadUp": {
+    "title": "image - arrow bread up",
+    "props": {
+      "src": "assets/arrowIconBreadUp.svg"
+    }
+  },
+  "link#dep": {
+    "props": {
+      "href": "#",
+      "label": "DEPARTMENT",
+      "blockClass": [
+        "breadLink",
+        "dep"
+      ]
+    }
+  },
+  "link#cat": {
+    "props": {
+      "href": "/dep/cat",
+      "label": "CATEGORY",
+      "blockClass": "breadLink"
+    }
+  },
+  "flex-layout.row#searchtitle": {
+    "title": "[SEARCH PAGE] - TOP - Title Search Result",
+    "children": [
+      "rich-text#category"
+    ]
+  },
+  "rich-text#category": {
+    "props": {
+      "text": "Category",
+      "blockClass": "titleSearchPage"
+    }
+  },
+  "flex-layout.row#result": {
+    "children": [
+      "flex-layout.col#filter",
+      "flex-layout.col#content"
+    ],
+    "props": {
+      "preventHorizontalStretch": true,
+      "fullWidth": true,
+      "blockClass": "paddingSearch"
+    }
+  },
+  "flex-layout.row#resultCustom": {
+    "children": [
+      "flex-layout.col#filter",
+      "flex-layout.col#contentCustom"
+    ],
+    "props": {
+      "preventHorizontalStretch": true,
+      "fullWidth": true,
+      "blockClass": "paddingSearch"
+    }
+  },
+  "flex-layout.col#filter": {
+    "children": [
+      "filter-navigator.v3#seoCompliant"
+    ],
+    "props": {
+      "blockClass": "filterCol"
+    }
+  },
+  "filter-navigator.v3#seoCompliant": {
+    "props": {
+      "filtersTitleHtmlTag": "span"
+    }
+  },
+  "flex-layout.col#content": {
+    "children": [
+      "flex-layout.row#searchinfo",
+      "flex-layout.row#fetchprevious",
+      "flex-layout.row#products",
+      "flex-layout.row#fetchmore",
+      "flex-layout.row#space",
+      "toggle-layout#textSEO"
+    ],
+    "props": {
+      "width": "grow",
+      "preventVerticalStretch": true
+    }
+  },
+  "flex-layout.col#contentCustom": {
+    "children": [
+      "flex-layout.row#searchinfo",
+      "flex-layout.row#fetchprevious",
+      "flex-layout.row#products",
+      "flex-layout.row#fetchmore",
+      "flex-layout.row#space",
+      "toggle-layout#textSEOCustom"
+    ],
+    "props": {
+      "width": "grow",
+      "preventVerticalStretch": true
+    }
+  },
+  "flex-layout.row#searchinfo": {
+    "children": [
+      "flex-layout.col#productCount",
+      "flex-layout.col#orderby"
+    ]
+  },
+  "flex-layout.col#productCount": {
+    "children": [
+      "search-products-count-per-page"
+    ],
+    "props": {
+      "blockClass": "productCountCol"
+    }
+  },
+  "flex-layout.col#orderby": {
+    "children": [
+      "order-by.v2"
+    ],
+    "props": {
+      "blockClass": "orderByCol"
+    }
+  },
+  "flex-layout.row#fetchprevious": {
+    "props": {
+      "marginBottom": 3
+    },
+    "children": [
+      "search-fetch-previous"
+    ]
+  },
+  "flex-layout.row#fetchmore": {
+    "props": {
+      "marginTop": 3
+    },
+    "children": [
+      "search-fetch-more"
+    ]
+  },
+  "flex-layout.row#products": {
+    "children": [
+      "search-content"
+    ]
+  },
+  "flex-layout.row#productsDep": {
+    "children": [
+      "search-content"
+    ],
+    "props": {
+      "blockClass": "paddingSearch"
+    }
+  },
+  "search-content": {
+    "blocks": [
+      "gallery",
+      "not-found"
+    ]
+  },
+  "search-content#mobile": {
+    "blocks": [
+      "gallery#mobile",
+      "not-found"
+    ]
+  },
+  "search-result-layout.mobile#Dep": {
+    "children": [
+      "breadcrumb-custom",
+      "toggle-layout#CarouselPLP",
+      "flex-layout.row#searchinfomobile",
+      "breadcrumb.search",
+      "flex-layout.row#searchtitleDep",
+      "flex-layout.row#productCountMobile",
+      "flex-layout.row#contentmobile",
+      "flex-layout.row#fetchmore",
+      "flex-layout.row#space"
+      // "analytics#plp"
+    ],
+    "props": {
+      "pagination": "show-more",
+      "preventRouteChange": true,
+      "mobileLayout": {
+        "mode1": "small",
+        "mode2": "normal"
+      }
+    }
+  },
+  "toggle-layout#bannerAdvantageForYou": {
+    "title": "[MOBILE][TOGGLE-LAYOUT] - BOTTOM - Advantage For You",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "flex-layout.row#bannerAdvantageForYou"
+    ]
+  },
+  "flex-layout.row#bannerAdvantageForYou": {
+    "props": {
+      "blockClass": "bannerAdvantageForYouRow"
+    },
+    "children": [
+      "rich-text#smallTitleAdvantageForYou",
+      "rich-text#bigTitleAdvantageForYou",
+      "flex-layout.row#firstRowAdvantageForYou",
+      "flex-layout.row#firstRowAdvantageForYou2",
+      "flex-layout.row#firstRowAdvantageForYou3"
+    ]
+  },
+  "rich-text#smallTitleAdvantageForYou": {
+    "props": {
+      "text": "Exclusive online",
+      "blockClass": "smallTitleAdvantageForYou"
+    }
+  },
+  "rich-text#bigTitleAdvantageForYou": {
+    "props": {
+      "text": "These advantages you get only online with us",
+      "blockClass": "bigTitleAdvantageForYou"
+    }
+  },
+  "flex-layout.row#firstRowAdvantageForYou": {
+    "props": {
+      "blockClass": "firstRowAdvantageForYou"
+    },
+    "children": [
+      "image#firstImageAdvantageForYou",
+      "rich-text#firstTextAdvantageForYou"
+    ]
+  },
+  "flex-layout.row#firstRowAdvantageForYou2": {
+    "props": {
+      "blockClass": [
+        "firstRowAdvantageForYou",
+        "rowReverse"
+      ]
+    },
+    "children": [
+      "image#firstImageAdvantageForYou",
+      "rich-text#firstTextAdvantageForYou"
+    ]
+  },
+  "flex-layout.row#firstRowAdvantageForYou3": {
+    "props": {
+      "blockClass": "firstRowAdvantageForYou"
+    },
+    "children": [
+      "image#firstImageAdvantageForYou",
+      "rich-text#firstTextAdvantageForYou"
+    ]
+  },
+  "image#firstImageAdvantageForYou": {
+    "props": {
+      "src": "assets/placeholders/placeholder-image-square.jpg",
+      "blockClass": "ImageAdvantageForYou",
+      "height": "70px"
+    }
+  },
+  "rich-text#firstTextAdvantageForYou": {
+    "props": {
+      "text": "Consegna al piano gratuita. Scegli tu dove e quando ricevere i tuoi ordini.",
+      "blockClass": "TextAdvantageForYou"
+    }
+  },
+  "search-result-layout.mobile": {
+    "title": "[SEARCH PAGE] - TOP - Search Result",
+    "children": [
+      "breadcrumb-custom",
+      "toggle-layout#CarouselPLP",
+      "toggle-layout#filterSubCategories-PLPCustom",
+      "flex-layout.row#searchtitle",
+      "toggle-layout#bannerAdvantageForYou",
+      "flex-layout.row#searchinfomobile",
+      "flex-layout.row#productCountMobile",
+      "flex-layout.row#contentmobile",
+      "flex-layout.row#fetchmore",
+      "flex-layout.row#space",
+      "toggle-layout#textSEO",
+      "product-comparison-drawer"
+      // "analytics#plp"
+    ],
+    "props": {
+      "pagination": "show-more",
+      "preventRouteChange": true,
+      "mobileLayout": {
+        "mode1": "small",
+        "mode2": "normal"
+      },
+      "hiddenFacets": {
+        "specificationFilters": {
+          "hiddenFilters": [
+            {
+              "name": "new-energy-label"
+            },
+            {
+              "name": "product-information-sheet"
+            },
+            {
+              "name": "use-care"
+            },
+            {
+              "name": "health-safety-environmental"
+            },
+            {
+              "name": "nel-data-sheet"
+            },
+            {
+              "name": "daily-reference-guide"
+            },
+            {
+              "name": "energy-label"
+            },
+            {
+              "name": "product-fiche"
+            },
+            {
+              "name": "installation-instructions"
+            },
+            {
+              "name": "instruction-for-use"
+            },
+            {
+              "name": "product-data-sheet"
+            },
+            {
+              "name": "program-chart"
+            },
+            {
+              "name": "Total unit net capacity (l)"
+            },
+            {
+              "name": "Tipo di installazione"
+            },
+            {
+              "name": "Classe Energetica"
+            },
+            {
+              "name": "Colore"
+            },
+            {
+              "name": "Capacità netta totale (l)"
+            },
+            {
+              "name": "Tipo di costruzione"
+            },
+            {
+              "name": "EnergyLogo_description"
+            },
+            {
+              "name": "EnergyLogo_image"
+            },
+            {
+              "name": "Colore principale"
+            },
+            {
+              "name": "Porta pannellabile"
+            },
+            {
+              "name": "Sezione termometro frigorifero"
+            },
+            {
+              "name": "Somma del volume degli scomparti congelati"
+            },
+            {
+              "name": "Tipo"
+            },
+            {
+              "name": "Numero di zone temperatura"
+            },
+            {
+              "name": "Sistema No Frost"
+            },
+            {
+              "name": "Volume totale del prodotto"
+            },
+            {
+              "name": "Numero di cassetti nel freezer"
+            },
+            {
+              "name": "sistema di drenaggio dell'acqua"
+            },
+            {
+              "name": "Ripiani per bottiglie"
+            },
+            {
+              "name": "Numero di ripiani regolabili nel compartimento frigorifero"
+            },
+            {
+              "name": "Piedini regolabili"
+            },
+            {
+              "name": "Processo di scongelamento comparto freezer"
+            },
+            {
+              "name": "Sezione termometro freezer"
+            },
+            {
+              "name": "Numero di ripiani nel compartimento frigorifero"
+            },
+            {
+              "name": "Segnale di allarme/guasto"
+            },
+            {
+              "name": "Macchina del ghiaccio automatica motorizzata"
+            },
+            {
+              "name": "Lunghezza del cavo di alimentazione elettrica (cm)"
+            },
+            {
+              "name": "Indicatore porta aperta del congelatore"
+            },
+            {
+              "name": "Capacità di congelamento (Sezione 4-Stelle)"
+            },
+            {
+              "name": "Codice EAN"
+            },
+            {
+              "name": "Processo di scongelamento comparto frigorifero"
+            },
+            {
+              "name": "Somma del volume degli scomparti refrigerazione"
+            },
+            {
+              "name": "Tipo di controlli"
+            },
+            {
+              "name": "Numero di sportelli nel freezer"
+            },
+            {
+              "name": "Dati nominali collegamento elettrico (W)"
+            },
+            {
+              "name": "Da incasso / a libera installazione"
+            },
+            {
+              "name": "Corrente (A)"
+            },
+            {
+              "name": "Altezza massima della nicchia (cm)"
+            },
+            {
+              "name": "Emissioni di rumore aereo"
+            },
+            {
+              "name": "Capacità lorda del congelatore"
+            },
+            {
+              "name": "Cerniera porta"
+            },
+            {
+              "name": "Interruttore luce interno"
+            },
+            {
+              "name": "Numero di compartimenti"
+            },
+            {
+              "name": "Porta bloccabile"
+            },
+            {
+              "name": "Consumo medio annuale di energia in chilowattora per anno (kWh/a)"
+            },
+            {
+              "name": "Funzione congelamento rapido"
+            },
+            {
+              "name": "Funzione raffreddamento veloce"
+            },
+            {
+              "name": "Capacità di conservazione in caso di assenza corrente (h)"
+            },
+            {
+              "name": "Stelle"
+            },
+            {
+              "name": "Classe di efficienza energetica"
+            },
+            {
+              "name": "Interruttore congelamento rapido"
+            },
+            {
+              "name": "Numero di compressori"
+            },
+            {
+              "name": "Display temperatura del frigorifero"
+            },
+            {
+              "name": "Indicatore porta aperta"
+            },
+            {
+              "name": "Consumo di energia annuale (KWh/annum)"
+            },
+            {
+              "name": "Segnalazione guasti / Malfunzionamenti"
+            },
+            {
+              "name": "Capacità di bottiglie da 75 cl"
+            },
+            {
+              "name": "Capacità lorda totale apparecchio (l)"
+            },
+            {
+              "name": "Numero di ripiani"
+            },
+            {
+              "name": "Tipo di controllo"
+            },
+            {
+              "name": "Consumo di energia (KWh/giorno)"
+            },
+            {
+              "name": "Numero di ripiani regolabili"
+            },
+            {
+              "name": "Capacità lorda del frigorifero (L)"
+            },
+            {
+              "name": "Larghezza (cm)"
+            },
+            {
+              "name": "Larghezza massima della nicchia (cm)"
+            },
+            {
+              "name": "Profondità (cm)"
+            },
+            {
+              "name": "Profondità della nicchia (cm)"
+            },
+            {
+              "name": "Larghezza minima della nicchia (cm)"
+            },
+            {
+              "name": "Altezza minima della nicchia (cm)"
+            },
+            {
+              "name": "Altezza (cm)"
+            },
+            {
+              "name": "Altezza massima della nicchia"
+            },
+            {
+              "name": "Altezza minima della nicchia"
+            },
+            {
+              "name": "Balconcino portabottiglie"
+            },
+            {
+              "name": "Capacità fino a 250 litri"
+            },
+            {
+              "name": "Space Management"
+            },
+            {
+              "name": "Ripiani in vetro"
+            },
+            {
+              "name": "Porta Reversibile"
+            },
+            {
+              "name": "Classe Energetica: F"
+            },
+            {
+              "name": "Fresh Box"
+            },
+            {
+              "name": "Illuminazione a LED"
+            },
+            {
+              "name": "Porta a filo"
+            },
+            {
+              "name": "Capacità 115 - 185 litri"
+            },
+            {
+              "name": "Autosbrinamento"
+            },
+            {
+              "name": "Scomparto congelatore"
+            },
+            {
+              "name": "Capacità 380 - 430 litri"
+            },
+            {
+              "name": "Secondo scomparto frutta e verdura"
+            },
+            {
+              "name": "Anti-impronte"
+            },
+            {
+              "name": "NoFrost"
+            },
+            {
+              "name": "Classe energetica E"
+            },
+            {
+              "name": "Tecnologia 6° Senso"
+            },
+            {
+              "name": "Activ0°"
+            },
+            {
+              "name": "Sistema di controllo elettronico"
+            },
+            {
+              "name": "Fast Freezing"
+            },
+            {
+              "name": "Fresh Box+"
+            },
+            {
+              "name": "Total NoFrost"
+            },
+            {
+              "name": "Ripiano bottiglie"
+            },
+            {
+              "name": "Separatore bottiglie"
+            },
+            {
+              "name": "Capacità superiore a 350 litri"
+            },
+            {
+              "name": "Separatore"
+            },
+            {
+              "name": "Balconcino porta-formaggi"
+            },
+            {
+              "name": "Filtro antibatterico Microban"
+            },
+            {
+              "name": "Ventilazione"
+            },
+            {
+              "name": "Risparmio Energia"
+            },
+            {
+              "name": "Modalità vacanza"
+            },
+            {
+              "name": "Fast Cooling"
+            },
+            {
+              "name": "FreshControl"
+            },
+            {
+              "name": "Installazione semplice"
+            },
+            {
+              "name": "Capacità oltre 550 litri"
+            },
+            {
+              "name": "Balconcino per piccoli oggetti"
+            },
+            {
+              "name": "Dual No Frost"
+            },
+            {
+              "name": "FreshBox 0°"
+            },
+            {
+              "name": "Cassetto con guide"
+            },
+            {
+              "name": "Distributore d'acqua con filtro"
+            },
+            {
+              "name": "Capacità 450 - 500 litri"
+            },
+            {
+              "name": "Display Touch"
+            },
+            {
+              "name": "Allarme temperatura"
+            },
+            {
+              "name": "Classe Energetica: D"
+            },
+            {
+              "name": "Capacità 220-250 litri"
+            },
+            {
+              "name": "Capacità 250 - 290 litri"
+            },
+            {
+              "name": "Everest"
+            },
+            {
+              "name": "Metal Multi Flow"
+            },
+            {
+              "name": "Freeze Control"
+            },
+            {
+              "name": "Illuminazione interna"
+            },
+            {
+              "name": "Ripiani in rovere"
+            },
+            {
+              "name": "Classe Energetica G"
+            },
+            {
+              "name": "Capacità 36 bottiglie"
+            },
+            {
+              "name": "Flushline"
+            },
+            {
+              "name": "4 ripiani"
+            },
+            {
+              "name": "Anti UV"
+            },
+            {
+              "name": "Capacità 560 - 600 litri"
+            },
+            {
+              "name": "6TH SENSE Freeze Lock"
+            },
+            {
+              "name": "6TH SENSE Fresh Lock"
+            },
+            {
+              "name": "6th sense Live"
+            },
+            {
+              "name": "CONNECTIVITY"
+            },
+            {
+              "name": "Convertible Space"
+            },
+            {
+              "name": "FlexiFreeze"
+            },
+            {
+              "name": "Fabbricatore ghiaccio"
+            },
+            {
+              "name": "In-door Ice"
+            },
+            {
+              "name": "Numero di zone di temperatura"
+            },
+            {
+              "name": "Pure control"
+            },
+            {
+              "name": "Triple No Frost technology"
+            },
+            {
+              "name": "Capacità 340 - 380 litri"
+            },
+            {
+              "name": "Ripiano estraibile"
+            },
+            {
+              "name": "Easy access tray"
+            },
+            {
+              "name": "Display esterno"
+            },
+            {
+              "name": "6th Sense Control"
+            },
+            {
+              "name": "Capacità 310 - 340 litri"
+            },
+            {
+              "name": "Divisore porta"
+            },
+            {
+              "name": "Flexi Shelf"
+            },
+            {
+              "name": "Design WCollection"
+            },
+            {
+              "name": "Compressore Inverter"
+            },
+            {
+              "name": "6th Sense Precision Control"
+            },
+            {
+              "name": "Fast Freeze Pad"
+            },
+            {
+              "name": "Fresh Pad"
+            },
+            {
+              "name": "Illuminazione laterale a LED"
+            },
+            {
+              "name": "Ripiano portabottiglie premium"
+            },
+            {
+              "name": "37 dB(A)"
+            },
+            {
+              "name": "Classe energetica C"
+            },
+            {
+              "name": "StopFrost"
+            },
+            {
+              "name": "LessFrost"
+            },
+            {
+              "name": "35 dB(A)"
+            },
+            {
+              "name": "Separatore per cassetto congelatore"
+            },
+            {
+              "name": "Capacità 185 - 245 litri"
+            },
+            {
+              "name": "Balconcino secondario"
+            },
+            {
+              "name": "Capacità 290 - 310 litri"
+            },
+            {
+              "name": "Capacità 310 - 350 litri"
+            },
+            {
+              "name": "Separatore per ripiani"
+            },
+            {
+              "name": "34dB(A)"
+            },
+            {
+              "name": "Zen Technology"
+            },
+            {
+              "name": "Capacità 175 - 220 litri"
+            },
+            {
+              "name": "SETMO"
+            },
+            {
+              "name": "Capacità 245- 310 litri"
+            },
+            {
+              "name": "constructionType"
+            },
+            {
+              "name": "field5"
+            },
+            {
+              "name": "sellable"
+            },
+            {
+              "name": "fewPiecesThreshold"
+            },
+            {
+              "name": "minimumQuantityThreshold"
+            },
+            {
+              "name": "showPrice"
+            },
+            {
+              "name": "isDiscontinued"
+            },
+            {
+              "name": "productType"
+            },
+            {
+              "name": "extendedWarranty"
+            },
+            {
+              "name": "CommercialCode_field"
+            },
+            {
+              "name": "Delicati"
+            },
+            {
+              "name": "Key lock"
+            },
+            {
+              "name": "Quick Dry Sintetici"
+            },
+            {
+              "name": "My option"
+            },
+            {
+              "name": "90'"
+            },
+            {
+              "name": "Low/High Heat"
+            },
+            {
+              "name": "My program"
+            },
+            {
+              "name": "Extra Dry cotone"
+            },
+            {
+              "name": "Tappeti"
+            },
+            {
+              "name": "100'"
+            },
+            {
+              "name": "Camicie sintetiche"
+            },
+            {
+              "name": "Less Creased"
+            },
+            {
+              "name": "Piumini"
+            },
+            {
+              "name": "Misti"
+            },
+            {
+              "name": "120'"
+            },
+            {
+              "name": "Camicie"
+            },
+            {
+              "name": "Microfibra"
+            },
+            {
+              "name": "Capi in vera piuma"
+            },
+            {
+              "name": "Less Fluff"
+            },
+            {
+              "name": "Ciclo rapido 35'"
+            },
+            {
+              "name": "140'"
+            },
+            {
+              "name": "Programma Sport leggero"
+            },
+            {
+              "name": "Ciclo rapido 45'"
+            },
+            {
+              "name": "160'"
+            },
+            {
+              "name": "Programma Gym Kit"
+            },
+            {
+              "name": "Heat&Enjoy"
+            },
+            {
+              "name": "150'"
+            },
+            {
+              "name": "Pre Care"
+            },
+            {
+              "name": "Crease Care"
+            },
+            {
+              "name": "Scarpe sportive"
+            },
+            {
+              "name": "Quick Dry Cotone"
+            },
+            {
+              "name": "Tempo massimo partenza ritardata (h)"
+            },
+            {
+              "name": "Cotton Hanger"
+            },
+            {
+              "name": "Risparmio energetico"
+            },
+            {
+              "name": "Carico ridotto"
+            },
+            {
+              "name": "Fast&Eco Cotone"
+            },
+            {
+              "name": "Ready to Iron"
+            },
+            {
+              "name": "Jeans"
+            },
+            {
+              "name": "Light Dry camicie"
+            },
+            {
+              "name": "Additional reversing"
+            },
+            {
+              "name": "Cuddly Toys"
+            },
+            {
+              "name": "Seta"
+            },
+            {
+              "name": "Bed linen"
+            },
+            {
+              "name": "Crease Relax"
+            },
+            {
+              "name": "Camicie in cotone"
+            },
+            {
+              "name": "Cupoboard Dry sintetici"
+            },
+            {
+              "name": "Speed 15"
+            },
+            {
+              "name": "Programma Quick Dry"
+            },
+            {
+              "name": "Baby & Delicates"
+            },
+            {
+              "name": "Fitness"
+            },
+            {
+              "name": "Iron Dry cotone"
+            },
+            {
+              "name": "Fast&Eco Sintetici"
+            },
+            {
+              "name": "70'"
+            },
+            {
+              "name": "Fast Iron"
+            },
+            {
+              "name": "Funzioni di partenza ritardata"
+            },
+            {
+              "name": "Selettore tempo asciugatura"
+            },
+            {
+              "name": "45'"
+            },
+            {
+              "name": "Iron Dry sintetici"
+            },
+            {
+              "name": "High Heat"
+            },
+            {
+              "name": "Regolazione della temperatura di asciugatura"
+            },
+            {
+              "name": "Turbo Dry"
+            },
+            {
+              "name": "Off"
+            },
+            {
+              "name": "Selezione durata asciugatura"
+            },
+            {
+              "name": "Programma durata asciugatura"
+            },
+            {
+              "name": "Eco Time"
+            },
+            {
+              "name": "Programma Sport intensivo"
+            },
+            {
+              "name": "Nero e colori scuri"
+            },
+            {
+              "name": "80'"
+            },
+            {
+              "name": "Funzione anti-piega"
+            },
+            {
+              "name": "Ciclo Baby"
+            },
+            {
+              "name": "Anti Allergy"
+            },
+            {
+              "name": "Regolazione dei livelli di asciugatura"
+            },
+            {
+              "name": "Activewear"
+            },
+            {
+              "name": "Lingerie"
+            },
+            {
+              "name": "Extra Care"
+            },
+            {
+              "name": "Sintetici"
+            },
+            {
+              "name": "Cotone"
+            },
+            {
+              "name": "Programma Easy Ironing"
+            },
+            {
+              "name": "20'"
+            },
+            {
+              "name": "Fast&Eco Camicie"
+            },
+            {
+              "name": "Segnale acustico"
+            },
+            {
+              "name": "30'"
+            },
+            {
+              "name": "Grande carico/Piumoni"
+            },
+            {
+              "name": "Pulsante ON-OFF"
+            },
+            {
+              "name": "40'"
+            },
+            {
+              "name": "Quick dry"
+            },
+            {
+              "name": "Programma Cotone standard"
+            },
+            {
+              "name": "Sport Kit"
+            },
+            {
+              "name": "Refresh"
+            },
+            {
+              "name": "60'"
+            },
+            {
+              "name": "Avvio/Pausa"
+            },
+            {
+              "name": "PRE-IRON"
+            },
+            {
+              "name": "Bed and Bath"
+            },
+            {
+              "name": "Fast Iron cotone"
+            },
+            {
+              "name": "Spia fine ciclo"
+            },
+            {
+              "name": "Colore porta"
+            },
+            {
+              "name": "Spia di blocco filtro"
+            },
+            {
+              "name": "Peso (kg)"
+            },
+            {
+              "name": "Capacità in asciugatura (kg)"
+            },
+            {
+              "name": "Piano rimovibile"
+            },
+            {
+              "name": "Spia serbatoio pieno"
+            },
+            {
+              "name": "PIedini regolabili"
+            },
+            {
+              "name": "Lunghezza del cavo elettrico (cm)"
+            },
+            {
+              "name": "Tipo di Display"
+            },
+            {
+              "name": "Inversione rotazione cestello"
+            },
+            {
+              "name": "Tubo di sfiato"
+            },
+            {
+              "name": "Efficienza della condensazione"
+            },
+            {
+              "name": "Volume del cestello (l)"
+            },
+            {
+              "name": "Tipo di carico"
+            },
+            {
+              "name": "Tempo standard del programma cotone a pieno carico"
+            },
+            {
+              "name": "Dati nominali di collegamento (W)"
+            },
+            {
+              "name": "Corrente elettrica (A)"
+            },
+            {
+              "name": "Consumo annuale di energia"
+            },
+            {
+              "name": "Silenziosità (dBA)"
+            },
+            {
+              "name": "Peso lordo (kg)"
+            },
+            {
+              "name": "Capacità 8kg"
+            },
+            {
+              "name": "Finitura del cestello"
+            },
+            {
+              "name": "Classe energetica A+"
+            },
+            {
+              "name": "Super silenziosa"
+            },
+            {
+              "name": "Livello di asciugatura regolabile"
+            },
+            {
+              "name": "Programma grandi capi"
+            },
+            {
+              "name": "Easy Cleaning"
+            },
+            {
+              "name": "FreshCare+"
+            },
+            {
+              "name": "Pompa di calore"
+            },
+            {
+              "name": "Programma jeans"
+            },
+            {
+              "name": "Programma seta"
+            },
+            {
+              "name": "Programma Sport"
+            },
+            {
+              "name": "Partenza ritardata"
+            },
+            {
+              "name": "Classe energetica A+++"
+            },
+            {
+              "name": "Risparmio Energetico"
+            },
+            {
+              "name": "Motore SenseInverter"
+            },
+            {
+              "name": "Classe energetica A++"
+            },
+            {
+              "name": "Woolmark Blue"
+            },
+            {
+              "name": "Tecnologia 6° SENSO"
+            },
+            {
+              "name": "SoftMove"
+            },
+            {
+              "name": "Design Premium"
+            },
+            {
+              "name": "Interfaccia utente intuitiva"
+            },
+            {
+              "name": "Tecnologia 6° SENSO 3Dry"
+            },
+            {
+              "name": "Opzione luce cestello"
+            },
+            {
+              "name": "Ecomonitor"
+            },
+            {
+              "name": "Asciugatura delicata"
+            },
+            {
+              "name": "Design avanzato"
+            },
+            {
+              "name": "Capacità 9kg"
+            },
+            {
+              "name": "Capacità (kg)"
+            },
+            {
+              "name": "Tipo di asciugatura"
+            },
+            {
+              "name": "Funzione antiodore"
+            },
+            {
+              "name": "Centrifuga + scarico acqua"
+            },
+            {
+              "name": "Rapido 30'"
+            },
+            {
+              "name": "Sport"
+            },
+            {
+              "name": "Lana 40°"
+            },
+            {
+              "name": "Gym Kit"
+            },
+            {
+              "name": "20°C"
+            },
+            {
+              "name": "Eco 40-60"
+            },
+            {
+              "name": "Lana"
+            },
+            {
+              "name": "Tessuti misti 40°"
+            },
+            {
+              "name": "Tessuti misti 30°"
+            },
+            {
+              "name": "Seta 30°"
+            },
+            {
+              "name": "Sintetico 30°"
+            },
+            {
+              "name": "Risciacquo + Centrifuga"
+            },
+            {
+              "name": "Cotone 40°"
+            },
+            {
+              "name": "Cotone 60°"
+            },
+            {
+              "name": "Piumoni"
+            },
+            {
+              "name": "Push & Wash"
+            },
+            {
+              "name": "Ruote"
+            },
+            {
+              "name": "Capacità massima in kg"
+            },
+            {
+              "name": "Capienza (kg)"
+            },
+            {
+              "name": "Water plus"
+            },
+            {
+              "name": "Entrata acqua calda e fredda ?"
+            },
+            {
+              "name": "Velocità di rotazione in giri al minuto del programma eco 40-60 a capacità nominale"
+            },
+            {
+              "name": "Removable worktop"
+            },
+            {
+              "name": "Funzione lavaggio a freddo"
+            },
+            {
+              "name": "Consumo di acqua del programma eco in litri per ciclo"
+            },
+            {
+              "name": "Tempo massimo di partenza ritardata (h)"
+            },
+            {
+              "name": "Funzione di scelta della temperatura"
+            },
+            {
+              "name": "Opzioni velocità centrifuga"
+            },
+            {
+              "name": "Consumo energetico ponderato in kWh per 100 cicli di lavaggio del programma eco 40-60"
+            },
+            {
+              "name": "Classe di efficienza di asciugatura con centrifuga del programma eco 40-60"
+            },
+            {
+              "name": "Classe di efficienza di asciugatura con centrifuga"
+            },
+            {
+              "name": "Consumo energetico annuale (kWh/anno)"
+            },
+            {
+              "name": "Rumorosità lavaggio  (dB(A) re 1 pW)"
+            },
+            {
+              "name": "Consumo d'acqua annuo (l/anno)"
+            },
+            {
+              "name": "Rumorosità centrifuga  (dB(A) re 1 pW)"
+            },
+            {
+              "name": "Velocità di rotazione massima (giri/min)"
+            },
+            {
+              "name": "Classe Energetica: A"
+            },
+            {
+              "name": "Isolamento acustico"
+            },
+            {
+              "name": "ZENTechnology"
+            },
+            {
+              "name": "1400 giri al minuto"
+            },
+            {
+              "name": "Programma Bambini"
+            },
+            {
+              "name": "Blocco di sicurezza bambini"
+            },
+            {
+              "name": "Luce cestello"
+            },
+            {
+              "name": "PrecisionClean"
+            },
+            {
+              "name": "Indicatore di avanzamento programma"
+            },
+            {
+              "name": "Programma lana"
+            },
+            {
+              "name": "Programma Rapido"
+            },
+            {
+              "name": "Opzione rapido"
+            },
+            {
+              "name": "Indicazione tempo residuo"
+            },
+            {
+              "name": "Programmi speciali"
+            },
+            {
+              "name": "Igiene Vapore"
+            },
+            {
+              "name": "Refresh Vapore"
+            },
+            {
+              "name": "Sistema Acquastop"
+            },
+            {
+              "name": "Sistema di protezione per rubinetto chiuso"
+            },
+            {
+              "name": "WaterSave"
+            },
+            {
+              "name": "Classe energetica B"
+            },
+            {
+              "name": "La più silenziosa"
+            },
+            {
+              "name": "Capacità 8 Kg"
+            },
+            {
+              "name": "Bio Stains"
+            },
+            {
+              "name": "Fine ciclo"
+            },
+            {
+              "name": "Raccomandazioni di dosaggio"
+            },
+            {
+              "name": "Fresh Care"
+            },
+            {
+              "name": "Programma antipiega"
+            },
+            {
+              "name": "Capacità 9 Kg"
+            },
+            {
+              "name": "Lavaggio rapido"
+            },
+            {
+              "name": "Classe Energetica: C"
+            },
+            {
+              "name": "Motore inverter"
+            },
+            {
+              "name": "Programma colori"
+            },
+            {
+              "name": "Giornaliero"
+            },
+            {
+              "name": "1200 giri al minuto"
+            },
+            {
+              "name": "Livello di sporco"
+            },
+            {
+              "name": "Capacità 6 Kg"
+            },
+            {
+              "name": "Drum Up"
+            },
+            {
+              "name": "Sportello ad apertura rallentata"
+            },
+            {
+              "name": "Capacità 7 Kg"
+            },
+            {
+              "name": "Capacità 6,5 Kg"
+            },
+            {
+              "name": "Tipo di prodotto"
+            },
+            {
+              "name": "Classe energetica (freddo)"
+            },
+            {
+              "name": "Tipo di sistema"
+            },
+            {
+              "name": "Classe energetica (caldo)"
+            },
+            {
+              "name": "Colore principale del prodotto"
+            },
+            {
+              "name": "Altezza dell'unità esterna (cm)"
+            },
+            {
+              "name": "Profondità dell'unità esterna (cm)"
+            },
+            {
+              "name": "Ampiezza dell'unità esterna (cm)"
+            },
+            {
+              "name": "Ampiezza dell'unità interna (cm)"
+            },
+            {
+              "name": "Profondità dell'unità interna (cm)"
+            },
+            {
+              "name": "Altezza dell'unità interna (cm)"
+            },
+            {
+              "name": "Connettività"
+            },
+            {
+              "name": "Tipo di interfaccia"
+            },
+            {
+              "name": "Gas refrigerante"
+            },
+            {
+              "name": "Funzione deumidificazione"
+            },
+            {
+              "name": "Peso netto (kg)"
+            },
+            {
+              "name": "Filtro Hepa"
+            },
+            {
+              "name": "BTU"
+            },
+            {
+              "name": "Frequenza (Hz)"
+            },
+            {
+              "name": "Classe energetica (riscaldamento)"
+            },
+            {
+              "name": "Livello IDU di pressione sonora - Velocità media del ventilatore"
+            },
+            {
+              "name": "Livello ODU di pressione sonora"
+            },
+            {
+              "name": "Livello IDU di pressione sonora - Modalità silenzioso"
+            },
+            {
+              "name": "Classe energetica (raffreddamento)"
+            },
+            {
+              "name": "Livello IDU di pressione sonora - Velocità bassa del ventilatore"
+            },
+            {
+              "name": "Livello IDU di pressione sonora - Velocità jet del ventilatore"
+            },
+            {
+              "name": "Intervallo di temperatura di funzionamento per il raffreddamento - In esterno"
+            },
+            {
+              "name": "Intervallo di temperatura di funzionamento per il riscaldamento - In esterno"
+            },
+            {
+              "name": "Potenza (V)"
+            },
+            {
+              "name": "Potenza riscaldante (W)"
+            },
+            {
+              "name": "Livello IDU di pressione sonora - Velocità massima del ventilatore"
+            },
+            {
+              "name": "Potenza refrigerante (W)"
+            },
+            {
+              "name": "Tipo di interfaccia d'uso"
+            },
+            {
+              "name": "12000 BTU"
+            },
+            {
+              "name": "Filtro aria HEPA"
+            },
+            {
+              "name": "Design"
+            },
+            {
+              "name": "TELECOMANDO"
+            },
+            {
+              "name": "Interfaccia Utente"
+            },
+            {
+              "name": "Classe energetica di raffreddamento A+++"
+            },
+            {
+              "name": "MODALITA' ECO ENERGY"
+            },
+            {
+              "name": "Nuovo Gas R32"
+            },
+            {
+              "name": "4D XPERT"
+            },
+            {
+              "name": "6° SENSO COMFORT ZONE"
+            },
+            {
+              "name": "ATTORNO A TE"
+            },
+            {
+              "name": "JET FUNCTION"
+            },
+            {
+              "name": "Nuova funzione notturna"
+            },
+            {
+              "name": "REVERSIBILE"
+            },
+            {
+              "name": "MODALITA' SILENZIOSA"
+            },
+            {
+              "name": "Controllo Vocale"
+            },
+            {
+              "name": "9000 BTU"
+            },
+            {
+              "name": "Filtro aria ai carboni attivi"
+            },
+            {
+              "name": "Classe energetica di raffreddamento A++"
+            },
+            {
+              "name": "Riscaldamento in classe energetica A+"
+            },
+            {
+              "name": "TECNOLOGIA 6° SENSO"
+            },
+            {
+              "name": "18000 BTU"
+            },
+            {
+              "name": "Design compatto"
+            },
+            {
+              "name": "Classe energetica di raffreddamento A+"
+            },
+            {
+              "name": "Nuovo Gas R290"
+            },
+            {
+              "name": "NUOVA MODALITA' SILENZIOSA"
+            },
+            {
+              "name": "Classe energetica di raffreddamento A"
+            },
+            {
+              "name": "20000 BTU"
+            },
+            {
+              "name": "24000 BTU"
+            },
+            {
+              "name": "Serbatoio dell'acqua da 6,5 litri"
+            },
+            {
+              "name": "Filtrazione a doppio strato"
+            },
+            {
+              "name": "Gas Ecologico"
+            },
+            {
+              "name": "Indicatore a LED"
+            },
+            {
+              "name": "Programma lavaggio"
+            },
+            {
+              "name": "Azione di sbrinamento"
+            },
+            {
+              "name": "Numero di cassetti/cesti"
+            },
+            {
+              "name": "Temperatura regolabile"
+            },
+            {
+              "name": "Sistema di scarico dell'acqua"
+            },
+            {
+              "name": "4 cassetti"
+            },
+            {
+              "name": "Cassetti trasparenti"
+            },
+            {
+              "name": "Allarmi / Avvisi"
+            },
+            {
+              "name": "Eco Night"
+            },
+            {
+              "name": "Comandi elettronici"
+            },
+            {
+              "name": "FastFreeze"
+            },
+            {
+              "name": "Sistema NoFrost"
+            },
+            {
+              "name": "5 cassetti"
+            },
+            {
+              "name": "Porta reversibile"
+            },
+            {
+              "name": "Ice maker"
+            },
+            {
+              "name": "Sottobase"
+            },
+            {
+              "name": "2 cassetti"
+            },
+            {
+              "name": "3 cassetti"
+            },
+            {
+              "name": "Dimensioni compatte"
+            },
+            {
+              "name": "1 cestello"
+            },
+            {
+              "name": "Cavità XXL"
+            },
+            {
+              "name": "Funzione blocco"
+            },
+            {
+              "name": "4 cestelli"
+            },
+            {
+              "name": "Bilanciatura coperchio"
+            },
+            {
+              "name": "Easy to move"
+            },
+            {
+              "name": "SpaceMax"
+            },
+            {
+              "name": "TurboFreeze"
+            },
+            {
+              "name": "3 cestelli"
+            },
+            {
+              "name": "Frost Out"
+            },
+            {
+              "name": "2 cestelli"
+            },
+            {
+              "name": "Flexi Mode"
+            },
+            {
+              "name": "9M"
+            },
+            {
+              "name": "Tecnologia di autopulizia"
+            },
+            {
+              "name": "Tipo di forno"
+            },
+            {
+              "name": "Guide forno"
+            },
+            {
+              "name": "Girarrosto a motore"
+            },
+            {
+              "name": "Sistema di pulizia integrato"
+            },
+            {
+              "name": "Volume utilizzabile (l)"
+            },
+            {
+              "name": "Opzioni di programmazione tempo"
+            },
+            {
+              "name": "Consumo di energia Termoventilato (kWh)"
+            },
+            {
+              "name": "Programmatore tempo"
+            },
+            {
+              "name": "Consumo di energia convenzionale (kWh)"
+            },
+            {
+              "name": "Cavità XXL 73 lt"
+            },
+            {
+              "name": "Pulizia Pirolitica"
+            },
+            {
+              "name": "Cook3"
+            },
+            {
+              "name": "Cook4"
+            },
+            {
+              "name": "8 funzioni principali"
+            },
+            {
+              "name": "Ready2cook"
+            },
+            {
+              "name": "Classe Energetica A+"
+            },
+            {
+              "name": "Classe energetica"
+            },
+            {
+              "name": "Assisted Display"
+            },
+            {
+              "name": "Cool Door"
+            },
+            {
+              "name": "Controllo elettronico della temperatura"
+            },
+            {
+              "name": "Forced Air"
+            },
+            {
+              "name": "Guide Telescopiche"
+            },
+            {
+              "name": "SoftClosing"
+            },
+            {
+              "name": "Estetica WCollection"
+            },
+            {
+              "name": "SteamSense"
+            },
+            {
+              "name": "Smart clean"
+            },
+            {
+              "name": "16 funzioni principali"
+            },
+            {
+              "name": "Estetica Urban"
+            },
+            {
+              "name": "Cavità standard"
+            },
+            {
+              "name": "5 funzioni principali"
+            },
+            {
+              "name": "Classe Energetica A"
+            },
+            {
+              "name": "Estetica Absolute"
+            },
+            {
+              "name": "Manopole Push-Push"
+            },
+            {
+              "name": "BakeSense"
+            },
+            {
+              "name": "Sonda cottura"
+            },
+            {
+              "name": "Sonda Multisense"
+            },
+            {
+              "name": "6thSenseLive App"
+            },
+            {
+              "name": "MySmartDisplay"
+            },
+            {
+              "name": "Easy to Clean"
+            },
+            {
+              "name": "iXelium"
+            },
+            {
+              "name": "SmartDisplay"
+            },
+            {
+              "name": "SteamSense+"
+            },
+            {
+              "name": "Schermo LCD con informazioni grafiche"
+            },
+            {
+              "name": "Cavità piccola"
+            },
+            {
+              "name": "Funzione scongelamento"
+            },
+            {
+              "name": "Funzione riscaldamento"
+            },
+            {
+              "name": "Sous Vide cooking functions"
+            },
+            {
+              "name": "6TH SENSE Technology"
+            },
+            {
+              "name": "Ventilato + Vapore"
+            },
+            {
+              "name": "Maniglia integrata"
+            },
+            {
+              "name": "Finitura Black Fiber"
+            },
+            {
+              "name": "Metodo di cottura ventilata"
+            },
+            {
+              "name": "Potenza massima del microonde (W)"
+            },
+            {
+              "name": "Metodo di cottura grill"
+            },
+            {
+              "name": "Potenza del Grill (W)"
+            },
+            {
+              "name": "Tipo di cottura"
+            },
+            {
+              "name": "Metodo di cottura convenzionale"
+            },
+            {
+              "name": "Orologio"
+            },
+            {
+              "name": "Diametro della tavola girevole (mm)"
+            },
+            {
+              "name": "Piatto rotante"
+            },
+            {
+              "name": "Teglia"
+            },
+            {
+              "name": "Tipo di grill"
+            },
+            {
+              "name": "Grill grid"
+            },
+            {
+              "name": "Plate cover"
+            },
+            {
+              "name": "Blocco bambini"
+            },
+            {
+              "name": "Capienza (l)"
+            },
+            {
+              "name": "Apertura della porta"
+            },
+            {
+              "name": "Timer elettronico"
+            },
+            {
+              "name": "Modalità di apertura della porta"
+            },
+            {
+              "name": "Profondità con porta aperta a 90 gradi (cm)"
+            },
+            {
+              "name": "cookbook"
+            },
+            {
+              "name": "BreadDefrost"
+            },
+            {
+              "name": "Dual Crisp"
+            },
+            {
+              "name": "ForcedAir"
+            },
+            {
+              "name": "Preriscaldamento veloce"
+            },
+            {
+              "name": "JetDefrost"
+            },
+            {
+              "name": "Reheat&Defrost"
+            },
+            {
+              "name": "Steam"
+            },
+            {
+              "name": "Design all'avanguardia"
+            },
+            {
+              "name": "3DTechnology"
+            },
+            {
+              "name": "Funzione pronto"
+            },
+            {
+              "name": "Preferiti"
+            },
+            {
+              "name": "Jet Start"
+            },
+            {
+              "name": "Grill al Quarzo"
+            },
+            {
+              "name": "Blocco piatto rotante"
+            },
+            {
+              "name": "Capacità 31 litri"
+            },
+            {
+              "name": "Crisp"
+            },
+            {
+              "name": "Grill"
+            },
+            {
+              "name": "Capacità 40 litri"
+            },
+            {
+              "name": "MAX"
+            },
+            {
+              "name": "Abbinamento perfetto"
+            },
+            {
+              "name": "Jet Menu"
+            },
+            {
+              "name": "Mantenimento temperatura"
+            },
+            {
+              "name": "Auto Clean"
+            },
+            {
+              "name": "ChefMenu"
+            },
+            {
+              "name": "Crispfry"
+            },
+            {
+              "name": "Auto Cook"
+            },
+            {
+              "name": "Full Flat - Senza piatto girevole"
+            },
+            {
+              "name": "Porta Trasparente"
+            },
+            {
+              "name": "Capacità 22 litri"
+            },
+            {
+              "name": "DoughRising"
+            },
+            {
+              "name": "Jet grill"
+            },
+            {
+              "name": "Precision Bake"
+            },
+            {
+              "name": "Funzione Yogurt"
+            },
+            {
+              "name": "XXL display"
+            },
+            {
+              "name": "Dual Steam"
+            },
+            {
+              "name": "Steam&Boil"
+            },
+            {
+              "name": "AssistedDisplay"
+            },
+            {
+              "name": "Cerniere Soft Closing"
+            },
+            {
+              "name": "Pasta e Riso"
+            },
+            {
+              "name": "Riso&Pasta"
+            },
+            {
+              "name": "Anti-impronta"
+            },
+            {
+              "name": "MySmart Display"
+            },
+            {
+              "name": "Gratinatura"
+            },
+            {
+              "name": "Jet air"
+            },
+            {
+              "name": "Riscaldamento rapido bevanda"
+            },
+            {
+              "name": "Magic Clean"
+            },
+            {
+              "name": "Sensore peso"
+            },
+            {
+              "name": "Capacità (l)"
+            },
+            {
+              "name": "Colour"
+            },
+            {
+              "name": "Dati nominali di collegamento elettrico (W)"
+            },
+            {
+              "name": "Capienza serbatoio dell'acqua"
+            },
+            {
+              "name": "Illuminazione"
+            },
+            {
+              "name": "Unità di preparazione removibile"
+            },
+            {
+              "name": "Capienza contenitore del caffè"
+            },
+            {
+              "name": "Contenitore dei fondi di caffè"
+            },
+            {
+              "name": "Erogazione acqua calda"
+            },
+            {
+              "name": "Dimensioni porzione"
+            },
+            {
+              "name": "Beccuccio a vapore"
+            },
+            {
+              "name": "Ingresso acqua"
+            },
+            {
+              "name": "Larghezza del prodotto (cm)"
+            },
+            {
+              "name": "Profondità del prodotto (cm)"
+            },
+            {
+              "name": "Altezza del prodotto imballato (cm)"
+            },
+            {
+              "name": "Profondità prodotto imballato (cm)"
+            },
+            {
+              "name": "Larghezza del prodotto imballato (cm)"
+            },
+            {
+              "name": "Altezza del prodotto (cm)"
+            },
+            {
+              "name": "Maximum number of espresso cups"
+            },
+            {
+              "name": "Meccanismo di apertura a pressione"
+            },
+            {
+              "name": "Anti - impronta"
+            },
+            {
+              "name": "Controllo meccanico della temperatura"
+            },
+            {
+              "name": "Range di temperatura: 40-70 (C°)"
+            },
+            {
+              "name": "Tecnologia iXelium"
+            },
+            {
+              "name": "Tipo di cassetto"
+            },
+            {
+              "name": "Capienza serbatoio dell'acqua (l)"
+            },
+            {
+              "name": "Coffee system"
+            },
+            {
+              "name": "Prepara due tazze alla volta"
+            },
+            {
+              "name": "Funzione Standby"
+            },
+            {
+              "name": "Sistema pre-brew"
+            },
+            {
+              "name": "Sistema caffè"
+            },
+            {
+              "name": "Sistema pre-grid"
+            },
+            {
+              "name": "Posizione dei comandi"
+            },
+            {
+              "name": "Tipo di piano cottura"
+            },
+            {
+              "name": "Numero di bruciatori"
+            },
+            {
+              "name": "COL_MAIN"
+            },
+            {
+              "name": "POSITIONS"
+            },
+            {
+              "name": "Z_TECH_TYPE"
+            },
+            {
+              "name": "Indicatore accensione"
+            },
+            {
+              "name": "Interruttore principale acceso/spento"
+            },
+            {
+              "name": "Tipo di dispositivo di sicurezza per il gas"
+            },
+            {
+              "name": "Tipo di accensione"
+            },
+            {
+              "name": "Numero di piastre radianti"
+            },
+            {
+              "name": "Numero di piastre a induzione"
+            },
+            {
+              "name": "Numero di zone cottura elettriche"
+            },
+            {
+              "name": "Numero di bruciatori a gas"
+            },
+            {
+              "name": "Sorgente energetica utilizzata"
+            },
+            {
+              "name": "Dati nominali collegamento gas (W)"
+            },
+            {
+              "name": "Numero di scaldavivande elettrici"
+            },
+            {
+              "name": "Tipo di griglie"
+            },
+            {
+              "name": "Numero di piastre alogene"
+            },
+            {
+              "name": "Indicatore di calore residuo"
+            },
+            {
+              "name": "Numero di piastre elettriche"
+            },
+            {
+              "name": "Timer"
+            },
+            {
+              "name": "Indicatore “Power on”"
+            },
+            {
+              "name": "GAS_SAFETY_TYPE"
+            },
+            {
+              "name": "RADIANT_PLATES_NUMBER"
+            },
+            {
+              "name": "ELECTRIC_ZONES_NUMBER"
+            },
+            {
+              "name": "Posizione del pannello di controllo"
+            },
+            {
+              "name": "WARMING_ZONES_NUMBER"
+            },
+            {
+              "name": "ELECTRIC_PLATES_NUMBER"
+            },
+            {
+              "name": "WIDTH_NICHE_SIZE_MIN"
+            },
+            {
+              "name": "Larghezza"
+            },
+            {
+              "name": "Larghezza massima della nicchia"
+            },
+            {
+              "name": "Profondità del prodotto"
+            },
+            {
+              "name": "Profondità della nicchia"
+            },
+            {
+              "name": "Altezza del prodotto"
+            },
+            {
+              "name": "Bollitura extra rapida"
+            },
+            {
+              "name": "Comandi frontali"
+            },
+            {
+              "name": "Acciaio Inox"
+            },
+            {
+              "name": "Potenza massima 3500W"
+            },
+            {
+              "name": "4 bruciatori a gas"
+            },
+            {
+              "name": "EasyReplace"
+            },
+            {
+              "name": "5 bruciatori a gas"
+            },
+            {
+              "name": "Cottura flessibile"
+            },
+            {
+              "name": "Fondere"
+            },
+            {
+              "name": "Sobbollire"
+            },
+            {
+              "name": "Induzione"
+            },
+            {
+              "name": "Booster"
+            },
+            {
+              "name": "FlexiCook"
+            },
+            {
+              "name": "Comandi a sfioramento"
+            },
+            {
+              "name": "Facile da pulire"
+            },
+            {
+              "name": "Bruciatori Super Efficienti"
+            },
+            {
+              "name": "Potenza massima 4000W"
+            },
+            {
+              "name": "Double zone G0"
+            },
+            {
+              "name": "ECO BOOSTER"
+            },
+            {
+              "name": "Mantenere in caldo"
+            },
+            {
+              "name": "Moka"
+            },
+            {
+              "name": "Grigliare"
+            },
+            {
+              "name": "EasyDisplay"
+            },
+            {
+              "name": "FlexiMax"
+            },
+            {
+              "name": "Regolatore di potenza"
+            },
+            {
+              "name": "SmartSense"
+            },
+            {
+              "name": "Chef Control"
+            },
+            {
+              "name": "Frittura"
+            },
+            {
+              "name": "Installazione a Filo"
+            },
+            {
+              "name": "SmartSense Premium"
+            },
+            {
+              "name": "AssistedTextDisplay"
+            },
+            {
+              "name": "FlexiFull"
+            },
+            {
+              "name": "Bruciatori a filo"
+            },
+            {
+              "name": "Griglie in ghisa a tutta larghezza"
+            },
+            {
+              "name": "PreciseFlame"
+            },
+            {
+              "name": "Funzioni Automatiche 6° Senso"
+            },
+            {
+              "name": "Booster 3Kw"
+            },
+            {
+              "name": "Accesso diretto con i comandi"
+            },
+            {
+              "name": "Accesso diretto con i cursori"
+            },
+            {
+              "name": "Zona cottura mista"
+            },
+            {
+              "name": "FlexiSide"
+            },
+            {
+              "name": "Mappatura diretta"
+            },
+            {
+              "name": "MultiLevel Flame"
+            },
+            {
+              "name": "FlexiFlame"
+            },
+            {
+              "name": "Potenza massima 5000W"
+            },
+            {
+              "name": "Coperti"
+            },
+            {
+              "name": "Numero di coperti"
+            },
+            {
+              "name": "Lavaggio su un solo cesto"
+            },
+            {
+              "name": "Lunghezza tubo entrata (cm)"
+            },
+            {
+              "name": "Spia luminosa \"Brillantante\""
+            },
+            {
+              "name": "Cesto superiore regolabile"
+            },
+            {
+              "name": "Presenza del porta-posate"
+            },
+            {
+              "name": "Cesto con maniglia"
+            },
+            {
+              "name": "Lunghezza tubo uscita (cm)"
+            },
+            {
+              "name": "Porta-coltelli"
+            },
+            {
+              "name": "Spia luminosa \"Sale\""
+            },
+            {
+              "name": "Numero massimo di coperti"
+            },
+            {
+              "name": "Auto sensor 50-65 (Atlantic sensor)"
+            },
+            {
+              "name": "Vetro"
+            },
+            {
+              "name": "Programma Vapore"
+            },
+            {
+              "name": "Tablet program 60 alternating"
+            },
+            {
+              "name": "Mezzo carico permanente"
+            },
+            {
+              "name": "Normale"
+            },
+            {
+              "name": "Auto Fast"
+            },
+            {
+              "name": "Mezzo carico distribuito"
+            },
+            {
+              "name": "Auto Normal"
+            },
+            {
+              "name": "Powerclean"
+            },
+            {
+              "name": "Sensor intensive 60-70"
+            },
+            {
+              "name": "Sensor Outsource"
+            },
+            {
+              "name": "Quotidiano 50"
+            },
+            {
+              "name": "Duo Wash"
+            },
+            {
+              "name": "Quotidiano 55°"
+            },
+            {
+              "name": "Proclean"
+            },
+            {
+              "name": "Sensor 40-70 (Atlantic sensor)"
+            },
+            {
+              "name": "Sensor one touch 40-70"
+            },
+            {
+              "name": "Lavaggio a mano"
+            },
+            {
+              "name": "UltraIntensive"
+            },
+            {
+              "name": "Intensivo 70°"
+            },
+            {
+              "name": "Sensor normal 60-70 (APL standard)"
+            },
+            {
+              "name": "Sani rinse"
+            },
+            {
+              "name": "Tablet program 60 permanent"
+            },
+            {
+              "name": "Intensivo 65°"
+            },
+            {
+              "name": "1 hour Wash & Dry"
+            },
+            {
+              "name": "Autosensor 50-65"
+            },
+            {
+              "name": "Ciclo Extra"
+            },
+            {
+              "name": "Express"
+            },
+            {
+              "name": "Rapido"
+            },
+            {
+              "name": "1 Ora"
+            },
+            {
+              "name": "Trio Wash"
+            },
+            {
+              "name": "Bio Eco 50"
+            },
+            {
+              "name": "Self Clean"
+            },
+            {
+              "name": "Notturno"
+            },
+            {
+              "name": "Eco"
+            },
+            {
+              "name": "Fast everyday 60 + 3h delay"
+            },
+            {
+              "name": "Baby Care"
+            },
+            {
+              "name": "Smart Daily"
+            },
+            {
+              "name": "Sensor intensive 60-70 (APL)"
+            },
+            {
+              "name": "Disponibilità del programma breve"
+            },
+            {
+              "name": "Prelavaggio"
+            },
+            {
+              "name": "Quotidiano 60"
+            },
+            {
+              "name": "Autosensor 50-65 + 3h delay"
+            },
+            {
+              "name": "Quotidiano 65°"
+            },
+            {
+              "name": "Eco 50"
+            },
+            {
+              "name": "Auto Intensive"
+            },
+            {
+              "name": "Sensor intensive 60-70 + Aquasteam"
+            },
+            {
+              "name": "Fast 55"
+            },
+            {
+              "name": "Eco 55°"
+            },
+            {
+              "name": "Sensor one touch 40-70 + Aquasteam"
+            },
+            {
+              "name": "Sanificazione"
+            },
+            {
+              "name": "Sensor normal 40-55 (APL standard)"
+            },
+            {
+              "name": "Quotidiano 60 + 3h delay"
+            },
+            {
+              "name": "Silenzioso"
+            },
+            {
+              "name": "Aquasteam"
+            },
+            {
+              "name": "Fast Everyday 60°"
+            },
+            {
+              "name": "Eco green"
+            },
+            {
+              "name": "Sensor normal 40-55"
+            },
+            {
+              "name": "Dual Wash"
+            },
+            {
+              "name": "Sensor PLP2"
+            },
+            {
+              "name": "Temperatura massima dell'acqua in entrata (°C)"
+            },
+            {
+              "name": "Consumo d'acqua (l)"
+            },
+            {
+              "name": "Performance di lavaggio"
+            },
+            {
+              "name": "Performance di asciugatura"
+            },
+            {
+              "name": "Numero di programmi"
+            },
+            {
+              "name": "Energy Efficiency Class (Regulation (EU) 2017/1369)"
+            },
+            {
+              "name": "Airborne acoustical noise emissions"
+            },
+            {
+              "name": "Energy Consumption for 100 cycles Eco Programme"
+            },
+            {
+              "name": "14 coperti"
+            },
+            {
+              "name": "Extra Space"
+            },
+            {
+              "name": "Flexi Space"
+            },
+            {
+              "name": "Terzo Cesto"
+            },
+            {
+              "name": "Cestello superiore removibile"
+            },
+            {
+              "name": "EcoFriendly"
+            },
+            {
+              "name": "Opzione mezzo carico"
+            },
+            {
+              "name": "Power Clean Pro"
+            },
+            {
+              "name": "Silenziosa"
+            },
+            {
+              "name": "10 programmi"
+            },
+            {
+              "name": "Display digitale"
+            },
+            {
+              "name": "Segnale acustico di fine ciclo"
+            },
+            {
+              "name": "OverFlow"
+            },
+            {
+              "name": "Opzioni di lavaggio flessibili"
+            },
+            {
+              "name": "Griglie abbattibili"
+            },
+            {
+              "name": "Collegamento acqua calda"
+            },
+            {
+              "name": "Programma intensivo"
+            },
+            {
+              "name": "Spia luminosa"
+            },
+            {
+              "name": "Multizona"
+            },
+            {
+              "name": "NaturalDry"
+            },
+            {
+              "name": "Programma rapido"
+            },
+            {
+              "name": "Interni in acciaio inossidabile"
+            },
+            {
+              "name": "Opzione Tabs \"All in one\""
+            },
+            {
+              "name": "Cestello superiore regolabile"
+            },
+            {
+              "name": "13 coperti"
+            },
+            {
+              "name": "6 programmi"
+            },
+            {
+              "name": "8 programmi"
+            },
+            {
+              "name": "Glass Care"
+            },
+            {
+              "name": "11 Programmi"
+            },
+            {
+              "name": "Cerniere Sliding"
+            },
+            {
+              "name": "Terzo Cesto flessibile"
+            },
+            {
+              "name": "Classe Energetica B"
+            },
+            {
+              "name": "Luci interne LED"
+            },
+            {
+              "name": "Display touch"
+            },
+            {
+              "name": "Programma Disinfezione"
+            },
+            {
+              "name": "Top removibile"
+            },
+            {
+              "name": "10 coperti"
+            },
+            {
+              "name": "Consumo acqua 9lt"
+            },
+            {
+              "name": "Aspirazione massima"
+            },
+            {
+              "name": "Colore del corpo"
+            },
+            {
+              "name": "Filtro lavabile"
+            },
+            {
+              "name": "Numero velocità"
+            },
+            {
+              "name": "Pannellabile"
+            },
+            {
+              "name": "Materiale del filtro sporco"
+            },
+            {
+              "name": "Tipo di lampade"
+            },
+            {
+              "name": "Pilotaggio a distanza"
+            },
+            {
+              "name": "Punti luce"
+            },
+            {
+              "name": "Tipo di struttura"
+            },
+            {
+              "name": "Regolazione luminosità"
+            },
+            {
+              "name": "Filtro grassi"
+            },
+            {
+              "name": "Potenza sonora alla velocità max. (2010/30/CE)"
+            },
+            {
+              "name": "Capacità massima di aspirazione (m3/h)"
+            },
+            {
+              "name": "Classe luminosità"
+            },
+            {
+              "name": "Performance"
+            },
+            {
+              "name": "Classe di efficienza filtraggio grasso"
+            },
+            {
+              "name": "Fluid Dynamic Efficiency class"
+            },
+            {
+              "name": "Output di ricircolo con sovralimentazione"
+            },
+            {
+              "name": "Massimo output con aria di ricircolo (m3/h)"
+            },
+            {
+              "name": "Deflettore di flusso di non ritorno"
+            },
+            {
+              "name": "Massima estrazione in output dell'aria (m3/h)"
+            },
+            {
+              "name": "Altezza del prodotto senza camino (mm)"
+            },
+            {
+              "name": "Efficienza energetica"
+            },
+            {
+              "name": "3 Velocità"
+            },
+            {
+              "name": "Installazione flessibile"
+            },
+            {
+              "name": "Filtro antigrassi"
+            },
+            {
+              "name": "Interfaccia touch"
+            },
+            {
+              "name": "2 luci"
+            },
+            {
+              "name": "Design in vetro"
+            },
+            {
+              "name": "Aspirazione perimetrale"
+            },
+            {
+              "name": "Filtro ai carboni attivi"
+            },
+            {
+              "name": "Comandi analogici"
+            },
+            {
+              "name": "Cappa a parete"
+            },
+            {
+              "name": "Luce a LED ambiente"
+            },
+            {
+              "name": "CookSense"
+            },
+            {
+              "name": "ZenMode"
+            },
+            {
+              "name": "Design Compatto"
+            },
+            {
+              "name": "DimmerLight"
+            },
+            {
+              "name": "Light Sense"
+            },
+            {
+              "name": "NightLight"
+            },
+            {
+              "name": "Strip LED Light"
+            },
+            {
+              "name": "Absolute beauty"
+            },
+            {
+              "name": "4 velocità"
+            },
+            {
+              "name": "6th Sense Absolute"
+            },
+            {
+              "name": "Motore ad alta efficienza"
+            },
+            {
+              "name": "Classe Energetica D"
+            },
+            {
+              "name": "Gruppo incasso"
+            },
+            {
+              "name": "Cappa totalmente integrata"
+            },
+            {
+              "name": "Classe Energetica C"
+            },
+            {
+              "name": "Selettore centrale"
+            },
+            {
+              "name": "Capacità di lavaggio (kg)"
+            },
+            {
+              "name": "Velocità centrifuga (giri al minuto)"
+            },
+            {
+              "name": "Capacità di asciugatura (kg)"
+            },
+            {
+              "name": "Rumorosità centrifuga (dB(A) re 1 pW)"
+            },
+            {
+              "name": "Classe di efficienza energetica ciclo di lavaggio/asciugatura"
+            },
+            {
+              "name": "Consumo di energia annuo totale (solo lavaggio, 200 cicli a pieno carico) (kWh)"
+            },
+            {
+              "name": "Consumo di acqua del ciclo completo di lavaggio e asciugatura in litri per ciclo"
+            },
+            {
+              "name": "Rumorosità lavaggio (dB(A) re 1 pW)"
+            },
+            {
+              "name": "Piano removibile"
+            },
+            {
+              "name": "Rotazione alternativa"
+            },
+            {
+              "name": "Consumo di acqua annuo totale (solo lavaggio, 200 cicli a pieno carico) (l)"
+            },
+            {
+              "name": "Esclusione centrifuga"
+            },
+            {
+              "name": "Capacità massima in kg in un ciclo di lavaggio/asciugatura"
+            },
+            {
+              "name": "Capacità massima in kg in un ciclo di lavaggio"
+            },
+            {
+              "name": "Capacità di asciugatura 6 Kg"
+            },
+            {
+              "name": "Capacità di carico 9 Kg"
+            },
+            {
+              "name": "Solo Asciugatura"
+            },
+            {
+              "name": "Opzioni asciugatura"
+            },
+            {
+              "name": "Wash&Dry"
+            },
+            {
+              "name": "Capacità di carico 10 Kg"
+            },
+            {
+              "name": "Capacità di asciugatura 7 Kg"
+            },
+            {
+              "name": "Classe Energetica E"
+            },
+            {
+              "name": "1600 giri al minuto"
+            },
+            {
+              "name": "Risciacquo intensivo"
+            },
+            {
+              "name": "SteamCare"
+            },
+            {
+              "name": "safety-data-sheet"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "flex-layout.row#contentmobile": {
+    "children": [
+      "search-content#mobile"
+    ],
+    "props": {
+      "preserveLayoutOnMobile": true,
+      "blockClass": "contentResult"
+    }
+  },
+  "flex-layout.row#searchinfomobile": {
+    "children": [
+      "flex-layout.col#filterMobile",
+      "flex-layout.col#orderByMobile"
+    ],
+    "props": {
+      "preserveLayoutOnMobile": true,
+      "colGap": 5,
+      "colSizing": "equal",
+      "fullWidth": true
+    }
+  },
+  "flex-layout.col#orderByMobile": {
+    "children": [
+      "order-by.v2"
+    ],
+    "props": {
+      "blockClass": "orderByMobileCol"
+    }
+  },
+  "flex-layout.row#productCountMobile": {
+    "children": [
+      "search-products-count-per-page"
+    ],
+    "props": {
+      "blockClass": "productCountMobileRow"
+    }
+  },
+  "filter-navigator.v3#custom": {
+    "title": "[FILTERS] - MID - Filters",
+    "blocks": [
+      "sidebar-close-button"
+    ]
+  },
+  "flex-layout.col#filterMobile": {
+    "children": [
+      "filter-navigator.v3#custom"
+    ],
+    "props": {
+      "blockClass": "filterMobileCol",
+      "marginRight": 2
+    }
+  },
+  "flex-layout.col#switcherMobile": {
+    "children": [
+      "search-layout-switcher"
+    ],
+    "props": {
+      "blockClass": "switcherMobileCol"
+    }
+  },
+  "search-not-found-layout": {
+    "children": [
+      "flex-layout.row#notfound",
+      "not-found" //"analytics"
+    ]
+  },
+  "flex-layout.row#notfound": {
+    "children": [
+      "rich-text#not-found-pageS",
+      "rich-text#buttonNotFoundS",
+      "image#404S"
+    ],
+    "props": {
+      "blockClass": [
+        "flexDisplay",
+        "flexColDir",
+        "center"
+      ]
+    }
+  },
+  "rich-text#not-found-pageS": {
+    "props": {
+      "text": "Wybrana strona nie istnieje",
+      "textAlignment": "center",
+      "blockClass": [
+        "notFound",
+        "center"
+      ]
+    }
+  },
+  "rich-text#buttonNotFoundS": {
+    "props": {
+      "text": "[ Wróć na stronę główną ](/)",
+      "blockClass": [
+        "buttonCard",
+        "linkNotFound",
+        "center"
+      ]
+    }
+  },
+  "image#404S": {
+    "props": {
+      "src": "assets/placeholders/placeholder-ultrawide.png",
+      "blockClass": "center"
+    }
+  },
+  "gallery": {
+    "blocks": [
+      "product-summary.shelf.product-comparison#search"
+    ]
+  },
+  "gallery#mobile": {
+    "blocks": [
+      "product-summary.shelf.product-comparison#searchMobile"
+    ]
+  },
+  "not-found": {
+    "props": {
+      "text": "404 page -- search page category"
+    }
+  },
+  "link#chat": {
+    "props": {
+      "href": "#chat",
+      "blockClass": [
+        "cardLinkBottom",
+        "fixedChat",
+        "top90"
+      ]
+    },
+    "children": [
+      "flex-layout.row#chatSvg2"
+    ]
+  },
+  "flex-layout.row#chatSvg2": {
+    "props": {
+      "width": "30px"
+    },
+    "children": [
+      "image#chat2"
+    ]
+  },
+  "image#chat2": {
+    "props": {
+      "blockClass": [
+        "supportoCardIcon"
+      ],
+      "src": "assets/supporto/chatFilled.svg"
+    }
+  }
+}

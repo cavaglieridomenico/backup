@@ -1,0 +1,172 @@
+.paper--quickview {
+  min-width: 320px;
+  max-width: 96rem;
+}
+
+.headerContainer--quickview {
+  border: none;
+  position: absolute;
+  right: 0;
+}
+
+.actionsContainer--quickview {
+  height: 100%;
+  width: 100%;
+  transition: box-shadow 150ms ease-in-out, border-top 150ms ease-in-out;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: transparent;
+  box-shadow: -4px 0px 27px -12px transparent;
+}
+
+.triggerContainer--wtbTrigger {
+  width: 100%;
+}
+
+.actionsContentWrapper {
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #aaa;
+  padding-top: 1.5rem;
+}
+
+.contentContainer--quickviewContent {
+  padding: 2.5rem 0 2.5rem 2rem;
+  overflow-x: hidden;
+}
+
+.triggerContainer--quickview {
+  padding: 0.75rem;
+}
+
+.triggerContainer {
+  outline: none;
+}
+
+.actionsContainer--quickview:not(.actionsContainerEndOfContent--quickview) {
+  border-top-color: rgb(238, 238, 238);
+  box-shadow: -4px 0px 27px -12px rgba(0, 0, 0, 0.64);
+}
+
+.actionsContainer--quickview:not(.actionsContainerEndOfContent--quickview) .actionsContentWrapper {
+  border-top-color: transparent;
+}
+
+.closeButton {
+  padding-right: 1rem;
+}
+
+.closeButtonContainer--wtbModal .closeButton {
+  padding-right: 0;
+  margin-right: -1.5rem;
+}
+
+.closeButton--buttonCloseVideo {
+  display: flex;
+  align-self: flex-end;
+  padding-right: 3rem;
+  background-color: #ffff;
+  border: none;
+  position: relative;
+  top: -2.3rem;
+}
+
+.paper--product-gifts {
+  padding: 1.5rem;
+}
+
+.paper--video {
+  width: 100%;
+  height: 100%;
+}
+
+.headerContainer {
+  border: none;
+}
+
+.paper--modalQRContainer {
+  max-width: 280px;
+  padding: 0 1rem 1rem;
+}
+
+.paperScrollContent {
+  padding: 0 2rem 2rem 2rem;
+}
+
+.paper--ricetteBarbieriModal {
+  width: 50%;
+  height: 60%;
+}
+/* COMPARISON FORM - MODAL */
+.triggerContainer--comparisonForm {
+  background-color: #007d69;
+  min-width: 16rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.125rem;
+  cursor: pointer;
+}
+.modal--comparisonForm {
+  z-index: 99999 !important;
+}
+/* ---------Delivery at cost start----------- */
+.triggerContainer--deliveryCostTrigger {
+  opacity: 1 !important;
+}
+.headerContainer--deliveryCostHeader {
+  display: flex;
+  align-items: flex-end;
+}
+/* ---------Delivery at cost end----------- */
+
+/* Media Queries */
+@media screen and (min-width: 40em) {
+  .paper--quickview {
+    height: 260px;
+    width: 580px;
+  }
+
+  .actionsContainer--quickview {
+    padding: 0 2rem 2rem 2rem;
+  }
+}
+
+@media screen and (min-width: 50em) {
+  .paper--quickview {
+    height: 450px;
+    width: 900px;
+  }
+}
+
+@media screen and (min-width: 75em) {
+  .paper--quickview {
+    width: calc(100% - 4rem);
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 82em) {
+  .actionsContainer--quickview {
+    padding: 0 2.5rem 2.5rem 2.5rem;
+  }
+}
+@media screen and (max-width: 640px) {
+  .paper--ricetteBarbieriModal {
+    width: 100%;
+    height: 60%;
+    padding: 0 1rem 1rem 1rem;
+    margin: 1rem;
+  }
+  /* COMPARISON FORM */
+  .paper--comparisonForm {
+    padding: 0;
+    margin: 1rem;
+  }
+}
+@media screen and (max-width: 40em) {
+  .triggerContainer--deliveryCostTrigger {
+    display: block !important;
+  }
+}

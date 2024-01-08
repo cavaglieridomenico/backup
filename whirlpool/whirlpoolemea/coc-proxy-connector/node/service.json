@@ -1,0 +1,26 @@
+{
+  "memory": 256,
+  "ttl": 60,
+  "timeout": 60,
+  "minReplicas": 2,
+  "maxReplicas": 16,
+  "workers": 4,
+  "routes": {
+    "worldpay": {
+      "path": "/_v/private/coc-proxy-connector/worldpay",
+      "public": true
+    },
+    "ping": {
+      "path": "/_v/private/coc-proxy-connector/ping",
+      "public": true
+    }
+  },
+  "events": {
+    "onAppInstalled": {
+      "sender": "apps",
+      "keys": [
+        "setup"
+      ]
+    }
+  }
+}

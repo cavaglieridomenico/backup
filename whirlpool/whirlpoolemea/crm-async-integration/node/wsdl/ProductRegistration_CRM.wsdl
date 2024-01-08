@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions targetNamespace="urn:sap-com:document:sap:soap:functions:mc-style" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsoap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="urn:sap-com:document:sap:soap:functions:mc-style" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:n1="urn:sap-com:document:sap:rfc:functions">
+ <wsdl:documentation>
+  <sidl:sidl xmlns:sidl="http://www.sap.com/2007/03/sidl"/>
+ </wsdl:documentation>
+ <wsp:UsingPolicy wsdl:required="true"/>
+ <wsp:Policy wsu:Id="IF_IF_Z_ES_PRD_REGISTRATION">
+  <sapsession:Session xmlns:sapsession="http://www.sap.com/webas/630/soap/features/session/">
+   <sapsession:enableSession>false</sapsession:enableSession>
+  </sapsession:Session>
+ </wsp:Policy>
+ <wsp:Policy wsu:Id="OP_IF_OP_ZEsPrdRegistration">
+  <sapblock:enableBlocking xmlns:sapblock="http://www.sap.com/NW05/soap/features/blocking/">true</sapblock:enableBlocking>
+  <sapcomhnd:enableCommit xmlns:sapcomhnd="http://www.sap.com/NW05/soap/features/commit/">false</sapcomhnd:enableCommit>
+  <saptrhnw05:required xmlns:saptrhnw05="http://www.sap.com/NW05/soap/features/transaction/">no</saptrhnw05:required>
+  <saprmnw05:enableWSRM xmlns:saprmnw05="http://www.sap.com/NW05/soap/features/wsrm/">false</saprmnw05:enableWSRM>
+ </wsp:Policy>
+ <wsdl:types>
+  <xsd:schema attributeFormDefault="qualified" targetNamespace="urn:sap-com:document:sap:rfc:functions">
+   <xsd:simpleType name="char1">
+    <xsd:restriction base="xsd:string">
+     <xsd:maxLength value="1"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="char10">
+    <xsd:restriction base="xsd:string">
+     <xsd:maxLength value="10"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="char12">
+    <xsd:restriction base="xsd:string">
+     <xsd:maxLength value="12"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="char18">
+    <xsd:restriction base="xsd:string">
+     <xsd:maxLength value="18"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="char2">
+    <xsd:restriction base="xsd:string">
+     <xsd:maxLength value="2"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="char20">
+    <xsd:restriction base="xsd:string">
+     <xsd:maxLength value="20"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="char220">
+    <xsd:restriction base="xsd:string">
+     <xsd:maxLength value="220"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="char241">
+    <xsd:restriction base="xsd:string">
+     <xsd:maxLength value="241"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="char25">
+    <xsd:restriction base="xsd:string">
+     <xsd:maxLength value="25"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="char3">
+    <xsd:restriction base="xsd:string">
+     <xsd:maxLength value="3"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="char30">
+    <xsd:restriction base="xsd:string">
+     <xsd:maxLength value="30"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="char32">
+    <xsd:restriction base="xsd:string">
+     <xsd:maxLength value="32"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="char4">
+    <xsd:restriction base="xsd:string">
+     <xsd:maxLength value="4"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="char40">
+    <xsd:restriction base="xsd:string">
+     <xsd:maxLength value="40"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="char50">
+    <xsd:restriction base="xsd:string">
+     <xsd:maxLength value="50"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="char60">
+    <xsd:restriction base="xsd:string">
+     <xsd:maxLength value="60"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="char8">
+    <xsd:restriction base="xsd:string">
+     <xsd:maxLength value="8"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="cuky5">
+    <xsd:restriction base="xsd:string">
+     <xsd:maxLength value="5"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="curr7.2">
+    <xsd:restriction base="xsd:decimal">
+     <xsd:totalDigits value="7"/>
+     <xsd:fractionDigits value="2"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="numeric3">
+    <xsd:restriction base="xsd:string">
+     <xsd:maxLength value="3"/>
+     <xsd:pattern value="\d*"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="numeric6">
+    <xsd:restriction base="xsd:string">
+     <xsd:maxLength value="6"/>
+     <xsd:pattern value="\d*"/>
+    </xsd:restriction>
+   </xsd:simpleType>
+  </xsd:schema>
+  <xsd:schema attributeFormDefault="qualified" targetNamespace="urn:sap-com:document:sap:soap:functions:mc-style" xmlns:n0="urn:sap-com:document:sap:rfc:functions">
+   <xsd:import namespace="urn:sap-com:document:sap:rfc:functions"/>
+   <xsd:complexType name="ZzprrAddressData">
+    <xsd:sequence>
+     <xsd:element name="Country" type="n0:char3"/> <!-- Country code Example for Austria  IvCountry = AT Note. UpperCase -->
+     <xsd:element name="City" type="n0:char40"/>
+     <xsd:element name="City2" type="n0:char40"/>
+     <xsd:element name="PostlCod1" type="n0:char10"/>
+     <xsd:element name="Street" type="n0:char60"/>
+     <xsd:element name="HouseNo" type="n0:char10"/>
+     <xsd:element name="StrSuppl1" type="n0:char40"/>
+     <xsd:element name="StrSuppl2" type="n0:char40"/>
+     <xsd:element name="StrSuppl3" type="n0:char40"/>
+     <xsd:element name="Telephone" type="n0:char30"/>
+     <xsd:element name="Office" type="n0:char30"/>  <!-- should be with out country codes +39 number example 0980731893 -->
+     <xsd:element name="Mobile" type="n0:char30"/>  <!-- should be with out country codes +39 number example 0980731893 -->
+     <xsd:element name="EMail" type="n0:char241"/>
+    </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="ZzisbCentralPerson">
+    <xsd:sequence>
+     <xsd:element name="PartnerId" type="n0:char10"/> <!-- Leave it blank -->
+     <xsd:element name="TitleKey" type="n0:char4"/> <!-- Title of consumer details in document below  -->
+     <xsd:element name="Firstname" type="n0:char40"/>
+     <xsd:element name="Middlename" type="n0:char40"/>
+     <xsd:element name="Lastname" type="n0:char40"/>
+     <xsd:element name="Partnerlanguage" type="n0:char2"/> <!-- Correspondence Language of Consumer upper case Example IT for italian -->
+     <xsd:element name="Contactallowance" type="n0:char1"/>  <!-- Always value 3 should be -->
+     <xsd:element name="Partnerexternal" type="n0:char20"/> <!-- Leave it blank -->
+     <xsd:element name="Dataorigintype" type="n0:char4"/> <!--  Always value OREG should be -->
+    </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="ZzprrApplianceData">
+    <xsd:sequence>
+     <xsd:element name="ProductId" type="n0:char40"/>
+     <xsd:element name="CrmPurchaseDate" type="n0:char8"/>
+     <xsd:element name="RefProduct" type="n0:char40"/>
+     <xsd:element name="Zz0010" type="n0:char3"/>
+     <xsd:element name="Zz0011" type="n0:char2"/>
+     <xsd:element name="Zz0012" type="n0:char3"/>
+     <xsd:element name="Zz0013" type="n0:char40"/>
+     <xsd:element name="Zz0014" type="n0:char12"/>
+     <xsd:element name="Zz0017" type="n0:curr7.2"/>
+     <xsd:element name="Zz0018" type="n0:cuky5"/>
+     <xsd:element name="Zz0019" type="n0:char30"/>
+     <xsd:element name="Zz0020" type="n0:char10"/>
+     <xsd:element name="Zzextwr" type="n0:char1"/>
+     <xsd:element name="Zztptown" type="n0:char25"/>
+     <xsd:element name="ContractProduct" type="n0:char40"/>
+    </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="ZzisbMktInfo">
+    <xsd:sequence>
+     <xsd:element name="AttSet" type="n0:char18"/>
+     <xsd:element name="AttName" type="n0:char30"/>
+     <xsd:element name="AttValue" type="n0:char30"/>
+    </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="Bapiret2">
+    <xsd:sequence>
+     <xsd:element name="Type" type="n0:char1"/>
+     <xsd:element name="Id" type="n0:char20"/>
+     <xsd:element name="Number" type="n0:numeric3"/>
+     <xsd:element name="Message" type="n0:char220"/>
+     <xsd:element name="LogNo" type="n0:char20"/>
+     <xsd:element name="LogMsgNo" type="n0:numeric6"/>
+     <xsd:element name="MessageV1" type="n0:char50"/>
+     <xsd:element name="MessageV2" type="n0:char50"/>
+     <xsd:element name="MessageV3" type="n0:char50"/>
+     <xsd:element name="MessageV4" type="n0:char50"/>
+     <xsd:element name="Parameter" type="n0:char32"/>
+     <xsd:element name="Row" type="xsd:int"/>
+     <xsd:element name="Field" type="n0:char30"/>
+     <xsd:element name="System" type="n0:char10"/>
+    </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="ZzisbOtherData">
+    <xsd:sequence>
+     <xsd:element name="DealerId" type="n0:char10"/>
+     <xsd:element name="ObjectId" type="n0:char10"/>
+     <xsd:element name="OtherInfo" type="n0:char50"/>
+    </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="ZzprrApplianceDataT">
+    <xsd:sequence>
+     <xsd:element name="item" type="tns:ZzprrApplianceData" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="ZzisbMktInfoT">
+    <xsd:sequence>
+     <xsd:element name="item" type="tns:ZzisbMktInfo" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="Bapiret2Tab">
+    <xsd:sequence>
+     <xsd:element name="item" type="tns:Bapiret2" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+   </xsd:complexType>
+   <xsd:element name="ZEsPrdRegistration">
+    <xsd:complexType>
+     <xsd:sequence>
+      <xsd:element name="CsAddressData" type="tns:ZzprrAddressData"/>
+      <xsd:element name="CsPersonData" type="tns:ZzisbCentralPerson"/>
+      <xsd:element name="CtApplianceData" type="tns:ZzprrApplianceDataT" minOccurs="0"/>
+      <xsd:element name="CtMktData" type="tns:ZzisbMktInfoT" minOccurs="0"/>
+      <xsd:element name="CtReturn" type="tns:Bapiret2Tab" minOccurs="0"/>
+      <xsd:element name="IsOtherData" type="tns:ZzisbOtherData" minOccurs="0"/>
+     </xsd:sequence>
+    </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="ZEsPrdRegistrationResponse">
+    <xsd:complexType>
+     <xsd:sequence>
+      <xsd:element name="CsAddressData" type="tns:ZzprrAddressData"/>
+      <xsd:element name="CsPersonData" type="tns:ZzisbCentralPerson"/>
+      <xsd:element name="CtApplianceData" type="tns:ZzprrApplianceDataT"/>
+      <xsd:element name="CtMktData" type="tns:ZzisbMktInfoT"/>
+      <xsd:element name="CtReturn" type="tns:Bapiret2Tab"/>
+     </xsd:sequence>
+    </xsd:complexType>
+   </xsd:element>
+  </xsd:schema>
+ </wsdl:types>
+ <wsdl:message name="ZEsPrdRegistration">
+  <wsdl:part name="parameters" element="tns:ZEsPrdRegistration"/>
+ </wsdl:message>
+ <wsdl:message name="ZEsPrdRegistrationResponse">
+  <wsdl:part name="parameter" element="tns:ZEsPrdRegistrationResponse"/>
+ </wsdl:message>
+ <wsdl:portType name="Z_ES_PRD_REGISTRATION">
+  <wsp:Policy>
+   <wsp:PolicyReference URI="#IF_IF_Z_ES_PRD_REGISTRATION"/>
+  </wsp:Policy>
+  <wsdl:operation name="ZEsPrdRegistration">
+   <wsp:Policy>
+    <wsp:PolicyReference URI="#OP_IF_OP_ZEsPrdRegistration"/>
+   </wsp:Policy>
+   <wsdl:input message="tns:ZEsPrdRegistration"/>
+   <wsdl:output message="tns:ZEsPrdRegistrationResponse"/>
+  </wsdl:operation>
+ </wsdl:portType>
+</wsdl:definitions>

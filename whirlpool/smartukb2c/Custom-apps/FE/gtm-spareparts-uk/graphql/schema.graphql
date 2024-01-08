@@ -1,0 +1,13 @@
+type Query {
+    product: Product
+}
+type Product {
+    specificationGroups: SpecificationGroups
+}
+type SpecificationGroups {
+    specifications: Specifications
+}
+type Specifications {
+    name: String
+    value: [String]
+}

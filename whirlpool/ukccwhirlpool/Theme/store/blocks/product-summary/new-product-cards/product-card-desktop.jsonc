@@ -1,0 +1,133 @@
+{
+  "product-summary.shelf#product-card": {
+    "title": "[PRODUCT CARD] - Desktop Product Card",
+    "children": [
+      "responsive-layout.desktop#product-card",
+      "responsive-layout.mobile#product-card"
+    ],
+    "props": {
+      "blockClass": "productCardUkcc"
+    }
+  },
+  /*------------------- RESPONSIVE LAYOUTS ------------------*/
+  "responsive-layout.desktop#product-card": {
+    "children": [
+      "flex-layout.row#promotionsBadge",
+      "flex-layout.row#productBrand",
+      "flex-layout.row#productImageRoundelsAndQuickview",
+      "flex-layout.row#commercialCode",
+      "flex-layout.row#productName",
+      "flex-layout.row#revoo",
+      //"experimental__visibility-layout#keyFeatures",
+      "flex-layout.row#productEnergyLabelAndPrice",
+      "flex-layout.row#leadtimeAndYoureko",
+      "flex-layout.row#addToCart",
+      "flex-layout.row#compareAndWishlist"
+    ]
+  },
+  "responsive-layout.mobile#product-card": {
+    "children": [
+      "flex-layout.row#promotionsBadge",
+      "flex-layout.row#productBrand",
+      "flex-layout.row#productImageAndPrice",
+      "flex-layout.row#productName",
+      "flex-layout.row#commercialAndLeadtime",
+      "flex-layout.row#revooAndYoureko",
+      //"experimental__visibility-layout#keyFeatures",
+      "flex-layout.row#roundelsLogos"
+    ]
+  },
+  /*------------------- RESPONSIVE LAYOUTS ------------------*/
+  "flex-layout.row#productImageRoundelsAndQuickview": {
+    "title": "[ROW] - Product Image, roundels and quickview row",
+    "children": [
+      "flex-layout.col#productRoundels",
+      "flex-layout.col#productImageDesktop",
+      "flex-layout.col#productQuickview"
+    ],
+    "props": {
+      "blockClass": "productImageRoundelsAndQuickview",
+      "preserveLayoutOnMobile": true
+    }
+  },
+  // ROUNDELS LOGOS DESKTOP
+  "flex-layout.col#productRoundels": {
+    "title": "[COL] - Roundels col",
+    "children": [
+      "product-logos"
+      // "image#roundelsPlaceholder",
+      // "image#roundelsPlaceholder",
+      // "image#roundelsPlaceholder"
+    ],
+    "props": {
+      "blockClass": "roundelsLogosCol",
+      "width": "20%"
+    }
+  },
+  // PRODUCT IMAGE DESKTOP
+  "flex-layout.col#productImageDesktop": {
+    "title": "[COL] - Product Image",
+    "children": ["product-summary-image#shelfPLp"],
+    "props": {
+      "blockClass": "productImageCol",
+      "width": "60%"
+    }
+  },
+  // QUICKVIEW
+  "flex-layout.col#productQuickview": {
+    "title": "[COL] - Product Quickview",
+    "children": [
+      //"modal-trigger#quickview"
+    ],
+    "props": {
+      "blockClass": "productQuickview",
+      "width": "20%"
+    }
+  },
+  //ENERGY LABEL AND PRICE
+  "flex-layout.row#productEnergyLabelAndPrice": {
+    "title": "[ROW] - Product Image and price",
+    "children": [
+      "flex-layout.col#energyAndPds",
+      "flex-layout.col#price-compare"
+    ],
+    "props": {
+      "blockClass": "productEnergyLabelAndPriceRow",
+      "colSizing": "auto",
+      "preserveLayoutOnMobile": true
+    }
+  },
+  //LEADTIME AND YOUREKO
+  "flex-layout.row#leadtimeAndYoureko": {
+    "title": "[ROW] - LeadTime and Youreko row",
+    "children": ["flex-layout.col#leadTime", "flex-layout.col#youreko"],
+    "props": {
+      "blockClass": "leadtimeAndYourekoRow",
+      "preserveLayoutOnMobile": true,
+      "colSizing": "auto"
+    }
+  },
+  //ADD TO CART
+  "flex-layout.row#addToCart": {
+    "title": "[ROW] - Add To Cart row",
+    "children": ["add-to-cart-custom#productCardNew"],
+    "props": {
+      "blockClass": "addToCartRow",
+      "preserveLayoutOnMobile": true
+    }
+  },
+  "add-to-cart-custom#productCardNew": {
+    "title": "[BUTTON] - Add to Cart",
+    "props": {
+      "text": "View Product",
+      "onClickBehavior": "go-to-product-page"
+    }
+  },
+  //COMPARE AND WISHLIST
+  "flex-layout.row#compareAndWishlist": {
+    "props": {
+      "blockClass": "buttons-BuyCompareWishlist"
+    },
+    "children": ["flex-layout.row#buttons-compareWishlist"]
+  }
+}

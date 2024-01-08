@@ -1,0 +1,105 @@
+{
+  "product-summary.shelf#hpslider": {
+    "children": [
+      "responsive-layout.desktop#caroselliLanding",
+      "responsive-layout.mobile#caroselliLanding"
+    ],
+    "props": {
+      "blockClass": "productOfDay"
+    }
+  },
+  "responsive-layout.desktop#caroselliLanding": {
+    "children": [
+      "product-summary-image#shelf",
+      "product-summary-name#hpslider",
+      // "flex-layout.row#hpslider",
+      // "add-to-cart-custom#hpslider"
+      "flex-layout.row#productPriceDay",
+      "rich-text#fakeAddToCart"
+      // "add-to-cart-custom"
+    ]
+  },
+  "flex-layout.row#productPriceDay": {
+    "children": [
+      // "product-list-price#day",
+      "product-price-frcc#productOfDay"
+      // "product-selling-price#day"
+    ],
+    "props": {
+      "blockClass": ["productPrice", "productPriceDay"],
+      "width": "50%"
+    }
+  },
+  "product-price-frcc#productOfDay": {
+    "props": {
+      "showStar": false
+    }
+  },
+  "product-list-price#day": {
+    "props": {
+      "blockClass": ["summary", "day"]
+    }
+  },
+  "product-selling-price#day": {
+    "props": {
+      "blockClass": ["summary", "day"],
+      "message": "{sellingPriceValue}"
+    }
+  },
+  "rich-text#fakeAddToCart": {
+    "props": {
+      "text": "Découvrir",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": "fakeAddToCart"
+    }
+  },
+  "responsive-layout.mobile#caroselliLanding": {
+    "children": [
+      // "flex-layout.row#highlights",
+      // "condition-layout.product#productBrand",
+      "stack-layout#plpAspect",
+      // "flex-layout.row#garantieLogo",
+      // "flex-layout.row#commercialAndName",
+      "flex-layout.row#productName",
+      "flex-layout.row#productPriceDay",
+      "rich-text#fakeAddToCart"
+      // "flex-layout.row#energyAndPrice",
+      // "flex-layout.row#pricePlp",
+      // "flex-layout.row#product-specification-group",
+      // "flex-layout.row#buttons-WishlistOnly"
+    ]
+  },
+  "rich-text#productOfTheDay": {
+    "props": {
+      "text": "Produit du jour",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": "productOfDay"
+    }
+  },
+  "product-summary-name#hpslider": {
+    "props": {
+      "blockClass": "productOfDay",
+      "tag": "div"
+    }
+  },
+  "flex-layout.row#hpslider": {
+    "children": ["product-selling-price#hpslider"],
+    "props": {
+      "blockClass": "productOfDayPriceContainer"
+    }
+  },
+  "product-selling-price#hpslider": {
+    "props": {
+      "blockClass": "productOfDayPrice"
+    }
+  },
+  "add-to-cart-custom#hpslider": {
+    "props": {
+      "onClickBehavior": "go-to-product-page",
+      "text": "Купить",
+      "blockClass": "productOfDayBtn"
+    }
+  }
+}

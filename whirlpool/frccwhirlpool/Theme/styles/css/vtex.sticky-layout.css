@@ -1,0 +1,49 @@
+.wrapper--notificationHeaderMobileRow {
+  min-width: 100%;
+}
+.wrapper--stickyCardBottom {
+  position: absolute !important;
+  bottom: 0;
+  width: 100%;
+}
+
+.container--notificationHeaderMobileRow {
+  background-color: #231f20;
+  font-weight: bold;
+  font-size: 9px;
+}
+.container--mobileSearchbar {
+  top: 0 !important;
+  background-color: #fff;
+  padding: 1rem 0;
+}
+.wrapper--mobileSearchbar {
+  margin-bottom: 1rem;
+  height: auto !important;
+}
+.container--notificationHeaderMobileRow {
+  position: relative;
+}
+.container--stickyButton {
+  z-index: 998;
+}
+
+@media only screen and (min-width: 601px) {
+  .container--stickyButtons {
+    display: none;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .container--stickyButtons {
+    display: flex;
+    justify-content: center;
+    bottom: 100px !important;
+    padding: 0rem 1rem;
+    position: fixed;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .wrapper--stickyCardBottom {
+    display: none;
+  }
+}

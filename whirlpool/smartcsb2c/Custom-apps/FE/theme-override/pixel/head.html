@@ -1,0 +1,15 @@
+<script> 
+(function () {
+  var brand = document.location.href.includes("indesit.ch") ? "indesit" : (document.location.href.includes("bauknecht.ch") ? "bauknecht" : "whirlpool");
+  var env = document.location.href.includes("smartcsb2cqa") ? "-qa" : "";
+
+  setTimeout( () => {
+    document.body.classList.add(""+brand+"-theme");
+  }, 0) 
+  var styleTag  = document.createElement('link');
+  styleTag.rel  = 'stylesheet';
+  styleTag.type = 'text/css';
+  styleTag.href = "/arquivos/" + brand + env + ".css";
+  ( document.getElementsByTagName("head")[0] || document.documentElement ).appendChild( styleTag );
+})() 
+</script>

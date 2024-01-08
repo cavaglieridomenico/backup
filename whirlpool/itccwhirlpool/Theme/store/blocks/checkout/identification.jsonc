@@ -1,0 +1,116 @@
+{
+  /* This is the interface of the profile Identification,
+  whatever you put as blocks will be rendered on /identification */
+  "store.checkout.identification": {
+    "parent": {
+      "header": "header#cart",
+      "footer": "footer#cart"
+    },
+    "blocks": ["checkout-container#identification"]
+  },
+  "header#empty": {
+    "blocks": ["header-layout.desktop#empty", "header-layout.mobile#empty"]
+  },
+  "header-layout.desktop#empty": {
+    "children": []
+  },
+  "header-layout.mobile#empty": {
+    "children": []
+  },
+  "footer#empty": {
+    "blocks": ["footer-layout.desktop#empty", "footer-layout.mobile#empty"]
+  },
+  "footer-layout.desktop#empty": {
+    "children": []
+  },
+  "footer-layout.mobile#empty": {
+    "children": []
+  },
+  "checkout-container#identification": {
+    "children": ["flex-layout.row#identification"]
+  },
+  "flex-layout.row#identification": {
+    "children": ["flex-layout.col#identification"],
+    "props": {
+      "blockClass": "identificationWrapper",
+      "preserveLayoutOnMobile": true,
+      "width": "100%",
+      "fullWidth": true
+    }
+  },
+  "flex-layout.col#identification": {
+    "children": ["checkout-identification"],
+    "props": {
+      "blockClass": "identificationWrapper",
+      "width": "100%"
+    }
+  },
+  "checkout-identification": {
+    "children": [
+      "flex-layout.row#identification-login",
+      "flex-layout.row#identification-spacer",
+      "flex-layout.row#identification-proceed-button"
+    ]
+  },
+  "flex-layout.row#identification-login": {
+    "children": [
+      "rich-text#identification-title",
+      "login-content#identification"
+    ],
+    "props": {
+      "blockClass": "identification-login",
+      "preserveLayoutOnMobile": true,
+      "width": "100%",
+      "fullWidth": true,
+      "preventHorizontalStretch": true
+    }
+  },
+  "rich-text#identification-title": {
+    "props": {
+      "text": "### Login or Register",
+      "blockClass": "identification-title"
+    }
+  },
+  "flex-layout.row#identification-spacer": {
+    "children": [
+      "flex-layout.col#space-line",
+      "flex-layout.col#space-or",
+      "flex-layout.col#space-line"
+    ],
+    "props": {
+      "blockClass": "identification-spacer"
+    }
+  },
+  "flex-layout.col#space-or": {
+    "children": ["rich-text#or"],
+    "props": {
+      "blockClass": "or-text",
+      "width": "50%"
+    }
+  },
+  "rich-text#or": {
+    "props": {
+      "text": "or",
+      "blockClass": "or-text"
+    }
+  },
+  "flex-layout.col#space-line": {
+    "children": [],
+    "props": {
+      "blockClass": "space-line",
+      "width": "25%"
+    }
+  },
+  "flex-layout.row#identification-proceed-button": {
+    "children": ["proceed-without-registration-button"],
+    "props": {
+      "blockClass": "identification-login",
+      "preserveLayoutOnMobile": true,
+      "width": "100%",
+      "fullWidth": true
+    }
+  },
+  "login-content#identification": {
+    "props": {}
+  }
+}

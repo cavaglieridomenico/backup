@@ -1,0 +1,276 @@
+{
+  "store.custom#brandLandingPage": {
+    "blocks": [
+      "experimental__visibility-layout#toggleBrandLandinPageTopBanner",
+      "flex-layout.row#blpMainContainer"
+    ]
+  },
+  /* ----------FIRST BANNER-------------- */
+  "experimental__visibility-layout#toggleBrandLandinPageTopBanner": {
+    "title": "[TOGGLE] - TOP - Toggle First Banner",
+    "props": {
+      "visible": true
+    },
+    "children": ["info-card#brandLandinPageTopBanner"]
+  },
+  "info-card#brandLandinPageTopBanner": {
+    "title": "[BANNER] - TOP - First Banner",
+    "props": {
+      "isFullModeStyle": true,
+      "callToActionMode": "none",
+      "textPosition": "center",
+      "imageUrl": "/arquivos/banner-kitchenaid.jpg",
+      "headline": "![](/arquivos/logo-kitchenaid.png)",
+      "blockClass": "brandLandinPageTopBanner",
+      "textMode": "rich-text"
+    }
+  },
+  /* ------------------------ */
+
+  /* ----------MAIN CONTAINER--------------- */
+  "flex-layout.row#blpMainContainer": {
+    "title": "[ROW] - TOP - ROW Main Container",
+    "children": ["flex-layout.col#blpMainContainer"],
+    "props": { "blockClass": "blpMainContainerRow" }
+  },
+  "flex-layout.col#blpMainContainer": {
+    "title": "[COL] - TOP -COL Main Container",
+    "children": [
+      "experimental__visibility-layout#toggleBlpHalfBanner",
+      "experimental__visibility-layout#toggleBlpEditorialBanner",
+      "experimental__visibility-layout#toggleBlpHalfBanner2",
+      "experimental__visibility-layout#toggleBlpHorizontalBanner",
+      "experimental__visibility-layout#toggleBlpTitleBrandBoxes",
+      "experimental__visibility-layout#toggleBlpBrandBoxesX2",
+      "experimental__visibility-layout#toggleBlpBrandBoxesX3"
+    ],
+    "props": { "blockClass": "blpMainContainerCol" }
+  },
+  /* --------------------- */
+  /* -----------HALF BANNER-------------- */
+  "experimental__visibility-layout#toggleBlpHalfBanner": {
+    "title": "[TOGGLE] - TOP - Toggle Half Banner",
+    "props": {
+      "visible": true
+    },
+    "children": ["info-card#blpHalfBanner"]
+  },
+  "info-card#blpHalfBanner": {
+    "title": "[BANNER] - TOP - Half Banner",
+    "props": {
+      "isFullModeStyle": false,
+      "textPosition": "left",
+      "imageUrl": "/arquivos/half-image-kitchenaid.png",
+      "headline": "## Benvenuto nello spazio Kitchen Aid!",
+      "subhead": "Da 100 anni i prodotti KitchenAid rappresentano un mix perfetto di performance professionali, qualità artigianale e design iconico.",
+      "callToActionMode": "button",
+      "callToActionText": "Scopri di più",
+      "blockClass": "blpHalfBanner",
+      "textMode": "rich-text"
+    }
+  },
+  /* ---------------------- */
+
+  /* ----------EDITORIAL BANNER--------------- */
+  "experimental__visibility-layout#toggleBlpEditorialBanner": {
+    "title": "[TOGGLE] - MID - Toggle Editorial Banner",
+    "props": {
+      "visible": true
+    },
+    "children": ["info-card#blpEditorialBanner"]
+  },
+  "info-card#blpEditorialBanner": {
+    "title": "[BANNER] - MID - Horzontal Banner",
+    "props": {
+      "isFullModeStyle": true,
+      "callToActionMode": "button",
+      "callToActionText": "Scopri di più",
+      "textPosition": "left",
+      "imageUrl": "/arquivos/brand-discover-whirlpool.jpg",
+      "blockClass": "blpHorizontalBanner"
+    }
+  },
+  /* ------------------------- */
+  /* ----------HALF BANNER 2--------------- */
+  "experimental__visibility-layout#toggleBlpHalfBanner2": {
+    "title": "[TOGGLE] - TOP - Toggle Half Banner2",
+    "props": {
+      "visible": true
+    },
+    "children": ["info-card#blpHalfBanner2"]
+  },
+  "info-card#blpHalfBanner2": {
+    "title": "[BANNER] - TOP - Half Banner 2",
+    "props": {
+      "isFullModeStyle": false,
+      "textPosition": "right",
+      "imageUrl": "/arquivos/half-image-kitchenaid2.png",
+      "headline": "## Il tuo partner ideale!",
+      "subhead": "Tutti i prodotti KitchenAid sono stati disegnati e prodotti in collaborazione con chef professionali. Il risultato di questa collaborazione è una gamma di prodotti dalle caratteristiche e performance superiori.",
+      "callToActionMode": "button",
+      "callToActionText": "Scopri di più",
+      "blockClass": ["blpHalfBanner", "zeroMarginTop"],
+      "textMode": "rich-text"
+    }
+  },
+  /* ------------------------- */
+  /* ----------HORIZONTAL BANNER--------------- */
+  "experimental__visibility-layout#toggleBlpHorizontalBanner": {
+    "title": "[TOGGLE] - MID - Toggle Horizontal Banner",
+    "props": {
+      "visible": true
+    },
+    "children": ["info-card#blpHorizontalBanner"]
+  },
+  "info-card#blpHorizontalBanner": {
+    "title": "[BANNER] - MID - Horzontal Banner",
+    "props": {
+      "isFullModeStyle": true,
+      "textPosition": "left",
+      "imageUrl": "/arquivos/brand-discover-whirlpool.jpg",
+      "headline": "# Forni Whirlpool",
+      "subhead": "## Cucinare senza sforzi",
+      "callToActionMode": "button",
+      "callToActionText": "Scopri tutti i prodotti",
+      "blockClass": "blpHorizontalBanner",
+      "textMode": "rich-text"
+    }
+  },
+  /* ----------------------- */
+  /* ----------TITLE BRAND BOXES--------------- */
+  "experimental__visibility-layout#toggleBlpTitleBrandBoxes": {
+    "title": "[TOGGLE] - MID - Toggle Title Brand Boxes",
+    "props": {
+      "visible": true
+    },
+    "children": ["rich-text#blpTitleBrandBoxes"]
+  },
+  "rich-text#blpTitleBrandBoxes": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "left",
+      "text": "## Scopri le nostre marche",
+      "blockClass": "TitleBrandBoxes"
+    }
+  },
+  /* ------------------------ */
+  /* ----------BRAND BOXES x2--------------- */
+  "experimental__visibility-layout#toggleBlpBrandBoxesX2": {
+    "title": "[TOGGLE] - MID - Toggle Brand Boxes X2",
+    "props": {
+      "visible": true
+    },
+    "children": ["slider-layout#BlpBrandBoxesX2"]
+  },
+  "slider-layout#BlpBrandBoxesX2": {
+    "title": "[SLIDER] - MID - SLIDER Brand Boxes X2",
+    "props": {
+      "itemsPerPage": {
+        "desktop": 2,
+        "tablet": 2,
+        "phone": 1
+      },
+      "infinite": true,
+      "showNavigationArrows": "mobileOnly",
+      "blockClass": "sliderBrandBox"
+    },
+    "children": ["info-card#blpBrandBox1", "info-card#blpBrandBox2"]
+  },
+
+  "info-card#blpBrandBox1": {
+    "title": "[INFO-CARD] - MID - Brand Box 1",
+    "props": {
+      "isFullModeStyle": true,
+      "textPosition": "left",
+      "imageUrl": "/arquivos/brand-indesit-half.png",
+      "headline": "![](/arquivos/logo-indesit.png)",
+      "callToActionMode": "button",
+      "callToActionText": "Scopri il marchio",
+      "blockClass": "BrandBox",
+      "textMode": "rich-text"
+    }
+  },
+  "info-card#blpBrandBox2": {
+    "title": "[INFO-CARD] - MID - Brand Box 2",
+    "props": {
+      "isFullModeStyle": true,
+      "textPosition": "left",
+      "imageUrl": "/arquivos/brand-hotpoint-half.png",
+      "headline": "![](/arquivos/logo-hotpoint.png)",
+      "callToActionMode": "button",
+      "callToActionText": "Scopri il marchio",
+      "blockClass": "BrandBox",
+      "textMode": "rich-text"
+    }
+  },
+
+  /* ------------------------- */
+  /* ----------BRAND BOXES x3--------------- */
+  "experimental__visibility-layout#toggleBlpBrandBoxesX3": {
+    "title": "[TOGGLE] - MID - Toggle Brand Boxes X3",
+    "props": {
+      "visible": true
+    },
+    "children": ["slider-layout#BlpBrandBoxesX3"]
+  },
+  "slider-layout#BlpBrandBoxesX3": {
+    "title": "[SLIDER] - MID - SLIDER Brand Boxes X3",
+    "props": {
+      "itemsPerPage": {
+        "desktop": 3,
+        "tablet": 3,
+        "phone": 1
+      },
+      "infinite": true,
+      "showNavigationArrows": "mobileOnly",
+      "blockClass": "sliderBrandBox"
+    },
+    "children": [
+      "info-card#blpBrandBox3",
+      "info-card#blpBrandBox4",
+      "info-card#blpBrandBox5"
+    ]
+  },
+
+  "info-card#blpBrandBox3": {
+    "title": "[INFO-CARD] - MID - Brand Box 3",
+    "props": {
+      "isFullModeStyle": true,
+      "textPosition": "left",
+      "imageUrl": "/arquivos/brand-indesit-half.png",
+      "headline": "![](/arquivos/logo-indesit.png)",
+      "callToActionMode": "button",
+      "callToActionText": "Scopri il marchio",
+      "blockClass": "BrandBox",
+      "textMode": "rich-text"
+    }
+  },
+  "info-card#blpBrandBox4": {
+    "title": "[INFO-CARD] - MID - Brand Box 4",
+    "props": {
+      "isFullModeStyle": true,
+      "textPosition": "left",
+      "imageUrl": "/arquivos/brand-whirlpool-half.png",
+      "headline": "![](/arquivos/logo-whirlpool.png)",
+      "callToActionMode": "button",
+      "callToActionText": "Scopri il marchio",
+      "blockClass": "BrandBox",
+      "textMode": "rich-text"
+    }
+  },
+  "info-card#blpBrandBox5": {
+    "title": "[INFO-CARD] - MID - Brand Box 5",
+    "props": {
+      "isFullModeStyle": true,
+      "textPosition": "left",
+      "imageUrl": "/arquivos/brand-kitchenaid-half.jpg",
+      "headline": "![](/arquivos/logo-kitchenaid.png)",
+      "callToActionMode": "button",
+      "callToActionText": "Scopri il marchio",
+      "blockClass": "BrandBox",
+      "textMode": "rich-text"
+    }
+  }
+
+  /* ------------------------- */
+}

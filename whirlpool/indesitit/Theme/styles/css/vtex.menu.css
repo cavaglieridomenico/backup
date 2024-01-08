@@ -1,0 +1,344 @@
+/* ------------- HEADER ----------------------- */
+
+.styledLinkContent {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: #43525a;
+}
+
+.styledLinkContent:hover {
+  color: #005c92;
+}
+
+.styledLinkContent--label-header-item {
+  margin-bottom: 0 !important;
+  margin-top: 60px !important;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+  justify-content: center;
+}
+
+:global(.vtex-menu-2-x-styledLinkContainer) {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.menuItem--label-header-item {
+  height: fit-content;
+  width: 88px;
+}
+
+@media screen and (min-width: 1024px) {
+  .menuContainerNav {
+    width: 878px;
+  }
+}
+
+:global(.vtex-menu-2-x-menuContainer) {
+  justify-content: space-between;
+}
+
+/* :global(.vtex-flex-layout-0-x-flexRowContent--header-container-row) .items-stretch:nth-child(even) {
+  width: 922px;
+} */
+
+/* ------------- FOOTER ----------------------- */
+
+.menuContainerNav--footerMenu {
+  margin: 57px 105px 0 0;
+  width: auto;
+}
+
+.styledLinkContent--footer-item {
+  padding-right: 80px;
+  color: #0090d0;
+  font-family: "Roboto-Medium";
+  font-weight: 500 !important;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.04em;
+  /* transition: color 200ms ease-in-out; */
+}
+
+/* ------------- SUBMENU ----------------------- */
+
+.submenu--menu {
+  padding: 2.25rem 0 0 0;
+  background: #f8fbfd;
+  backdrop-filter: blur(20px);
+  /* margin-top: 25px; */
+  height: 606px;
+}
+
+.submenuWrapper--menu {
+  display: block !important;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  height: 0px;
+  /*deve essere 0*/
+  padding: 0;
+  margin: 0;
+  border: none;
+  transition: all 325ms cubic-bezier(0, 0.7, 0.2, 0.97);
+}
+
+.submenuWrapper--menu--isOpen.dn {
+  display: block !important;
+}
+
+.submenuWrapper--menu--isOpen {
+  margin-top: 25px;
+  height: 100vh;
+  z-index: 10;
+  opacity: 1;
+  visibility: visible;
+  /* transform: translate(-60px, 0, 0, 0); */
+  transition: all 325ms cubic-bezier(0, 0.7, 0.2, 0.97);
+  /*  box-shadow: 8px 1000px 0px 1000px rgba(0, 144, 208, 0.1); */
+  backdrop-filter: blur(6px);
+  background-color: rgba(0, 144, 208, 0.2);
+}
+
+/* ------------- MENU IN THE SUBMENU ----------------------- */
+
+.menuContainerNav--menu-style {
+  display: flex;
+  justify-content: center;
+  margin-top: 62px;
+  width: auto !important;
+}
+
+.menuItem--link-Menu-title {
+  margin-bottom: 40px;
+}
+
+.styledLinkContent--link-Menu-title {
+  font-size: 32px;
+  font-family: "Roboto-Light";
+  font-weight: 500;
+  line-height: 40px;
+  color: #004d80;
+  cursor: default;
+}
+
+.styledLinkContent--linkMenu {
+  font-family: "Roboto";
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 26px;
+  color: #0090d0;
+  margin-bottom: 27px;
+  pointer-events: cursor !important; /*modificato togliere*/
+}
+
+.menuContainer--icons-container {
+  margin-left: 10px;
+}
+
+/* Styled label menù open mobile */
+
+.styledLinkContent--mobileMenu {
+  font-family: "Roboto-Light";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 40px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #ffffff;
+  justify-content: flex-start;
+  user-select: none;
+  display: flex;
+}
+
+.styledLinkContent--mobileMenu:hover {
+  color: #ffffff;
+}
+
+/* Style for #DoItTogether label inside the menu */
+
+:global(.vtex-menu-2-x-styledLinkContent--do-it-together) {
+  font-family: "Roboto-Light";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 40px;
+  text-align: center;
+  color: #8ed8f5 !important;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+
+:global(.vtex-menu-2-x-accordionIcon--mobileMenu--isClosed) {
+  width: 0;
+  height: 0;
+}
+
+:global(.vtex-menu-2-x-accordionIcon--mobileMenu--isClosed)::after {
+  color: white;
+}
+
+:global(.vtex-menu-2-x-styledLinkContainer--mobileMenu) {
+  margin-bottom: 40px;
+}
+
+/* Styling sub categories menu mobile */
+
+:global(.vtex-menu-2-x-styledLinkContent--terzoLivello) {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #76d1f5;
+}
+
+:global(.vtex-menu-2-x-styledLinkContainer--terzoLivello) {
+  margin-bottom: 24px;
+}
+
+:global(.vtex-menu-2-x-submenuAccordion) {
+  padding-left: 0 !important;
+  padding-bottom: 16px;
+}
+
+:global(.vtex-menu-2-x-accordionIcon--First--isClosed) {
+  user-select: none;
+  color: transparent;
+  margin: 0 !important;
+  width: 0 !important;
+  position: relative;
+}
+
+:global(.vtex-menu-2-x-accordionIcon--First--isClosed)::after {
+  content: url(assets/arrow-icon-down.svg);
+  position: absolute;
+  left: 8px;
+}
+
+:global(.vtex-menu-2-x-accordionIcon--First--isOpen) {
+  color: #189bd5;
+  user-select: none;
+  margin: 0 !important;
+  width: 50px !important;
+  text-align: center;
+  position: relative;
+}
+
+:global(.vtex-menu-2-x-accordionIcon--First--isOpen)::after {
+  content: url(assets/arrow-icon-up.svg);
+  position: absolute;
+  left: 8px;
+}
+
+/* MENU ANIMATION MOBILE */
+
+@keyframes example {
+  0% {
+    display: none;
+    background-color: transparent;
+    left: -100px;
+    top: 0px;
+    opacity: 0;
+  }
+
+  5% {
+    background-color: transparent;
+    left: 0px;
+    top: 0px;
+    opacity: 1;
+  }
+
+  100% {
+    background-color: transparent;
+    left: 0px;
+    top: 0px;
+    opacity: 1;
+  }
+}
+
+:global(.vtex-store-drawer-0-x-opened--menu-opened-mobile)
+  .menuItem--animation-laundry {
+  animation-fill-mode: forwards;
+  background-color: transparent;
+  position: relative;
+  animation-name: example;
+  animation-duration: 5s;
+  animation-delay: 0.1s;
+  opacity: 0;
+}
+
+:global(.vtex-store-drawer-0-x-opened--menu-opened-mobile)
+  .menuItem--animation-cooking {
+  animation-fill-mode: forwards;
+  background-color: transparent;
+  position: relative;
+  animation-name: example;
+  animation-duration: 5s;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+:global(.vtex-store-drawer-0-x-opened--menu-opened-mobile)
+  .menuItem--animation-cooling {
+  animation-fill-mode: forwards;
+  background-color: transparent;
+  position: relative;
+  animation-name: example;
+  animation-duration: 5s;
+  animation-delay: 0.3s;
+  opacity: 0;
+}
+
+:global(.vtex-store-drawer-0-x-opened--menu-opened-mobile)
+  .menuItem--animation-dishwashing {
+  animation-fill-mode: forwards;
+  background-color: transparent;
+  position: relative;
+  animation-name: example;
+  animation-duration: 5s;
+  animation-delay: 0.4s;
+  opacity: 0;
+}
+
+:global(.vtex-store-drawer-0-x-opened--menu-opened-mobile)
+  .menuItem--animation-spareParts {
+  animation-fill-mode: forwards;
+  background-color: transparent;
+  position: relative;
+  animation-name: example;
+  animation-duration: 5s;
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+
+:global(.vtex-store-drawer-0-x-opened--menu-opened-mobile)
+  .menuItem--animation-support {
+  animation-fill-mode: forwards;
+  background-color: transparent;
+  position: relative;
+  animation-name: example;
+  animation-duration: 5s;
+  animation-delay: 0.6s;
+  opacity: 0;
+}
+
+:global(.vtex-store-drawer-0-x-opened--menu-opened-mobile)
+  .menuItem--animation-doittogether {
+  animation-fill-mode: forwards;
+  background-color: transparent;
+  position: relative;
+  animation-name: example;
+  animation-duration: 5s;
+  animation-delay: 0.6s;
+  opacity: 0;
+}

@@ -1,0 +1,194 @@
+{
+  "name": "sfmc-integration",
+  "vendor": "smartukb2c",
+  "version": "0.0.19",
+  "title": "sfmc Integration",
+  "description": "sfmc Integration",
+  "categories": [],
+  "dependencies": {},
+  "builders": {
+    "node": "6.x",
+    "docs": "0.x"
+  },
+  "scripts": {
+    "prereleasy": "bash lint.sh"
+  },
+  "credentialType": "absolute",
+  "policies": [
+    {
+      "name": "colossus-fire-event"
+    },
+    {
+      "name": "colossus-write-logs"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.vtexcommercestable.com.br",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "portal.vtexcommercestable.com.br",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "mcw785xyskn2jrl9kbr-hjtx1w88.auth.marketingcloudapis.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "mcw785xyskn2jrl9kbr-hjtx1w88.rest.marketingcloudapis.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "ADMIN_DS"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "api.vtex.com",
+        "path": "/dataentities/*"
+      }
+    }
+  ],
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema",
+  "settingsSchema": {
+    "title": "sfmcIntegration",
+    "type": "object",
+    "properties": {
+      "endpointAUTH": {
+        "title": "URL Auth",
+        "type": "string"
+      },
+      "endpointPRODUCT": {
+        "title": "URL Product",
+        "type": "string"
+      },
+      "endpointEMAIL": {
+        "title": "URL Email",
+        "type": "string"
+      },
+      "CONFIRMATION_APIEVENT_WHIRLPOOL": {
+        "title": "Whirlpool APIEvent Key Confirmation",
+        "type": "string"
+      },
+      "CONFIRMATION_APIEVENT_BAUKNECHT": {
+        "title": "Bauknecht APIEvent Key Confirmation",
+        "type": "string"
+      },
+      "CONFIRMATION_APIEVENT_INDESIT": {
+        "title": "Indesit APIEvent Key Confirmation",
+        "type": "string"
+      },
+      "CONFIRMATION_APIEVENT_HOTPOINT": {
+        "title": "Hotpoint APIEvent Key Confirmation",
+        "type": "string"
+      },
+      "CANCELLATION_APIEVENT_WHIRLPOOL": {
+        "title": "Whirlpool APIEvent Key Cancellation",
+        "type": "string"
+      },
+      "CANCELLATION_APIEVENT_BAUKNECHT": {
+        "title": "Bauknecht APIEvent Key Cancellation",
+        "type": "string"
+      },
+      "CANCELLATION_APIEVENT_INDESIT": {
+        "title": "Indesit APIEvent Key Cancellation",
+        "type": "string"
+      },
+      "CANCELLATION_APIEVENT_HOTPOINT": {
+        "title": "Hotpoint APIEvent Key Cancellation",
+        "type": "string"
+      },
+      "ORDER_WHIRLPOOL_KEY": {
+        "title": "Whirlpool Order detail Key",
+        "type": "string"
+      },
+      "ORDER_BAUKNECHT_KEY": {
+        "title": "Bauknecht Order detail Key",
+        "type": "string"
+      },
+      "ORDER_INDESIT_KEY": {
+        "title": "Indesit Order detail Key",
+        "type": "string"
+      },
+      "ORDER_HOTPOINT_KEY": {
+        "title": "Hotpoint Order detail Key",
+        "type": "string"
+      },
+      "BACK_IN_STOCK_APIEVENT_WHIRLPOOL": {
+        "title": "Whirlpool APIEvent Key Back In Stock",
+        "type": "string"
+      },
+      "BACK_IN_STOCK_APIEVENT_BAUKNECHT": {
+        "title": "Bauknecht APIEvent Key Back In Stock",
+        "type": "string"
+      },
+      "BACK_IN_STOCK_APIEVENT_INDESIT": {
+        "title": "Indesit APIEvent Key Back In Stock",
+        "type": "string"
+      },
+      "BACK_IN_STOCK_APIEVENT_HOTPOINT": {
+        "title": "Hotpoint APIEvent Key Back In Stock",
+        "type": "string"
+      },
+      "granttype": {
+        "title": "GrantType",
+        "type": "string"
+      },
+      "WHIRLPOOL_CLIENT_ID": {
+        "title": "Whirlool Client ID",
+        "type": "string"
+      },
+      "WHIRLPOOL_CLIENT_SECRET": {
+        "title": "Whirlool Client Secret",
+        "type": "string"
+      },
+      "BAUKNECHT_CLIENT_ID": {
+        "title": "Bauknecht Client ID",
+        "type": "string"
+      },
+      "BAUKNECHT_CLIENT_SECRET": {
+        "title": "Bauknecht Client Secret",
+        "type": "string"
+      },
+      "INDESIT_CLIENT_ID": {
+        "title": "Indesit Client ID",
+        "type": "string"
+      },
+      "INDESIT_CLIENT_SECRET": {
+        "title": "Indesit Client Secret",
+        "type": "string"
+      },
+      "HOTPOINT_CLIENT_ID": {
+        "title": "Hotpoint Client ID",
+        "type": "string"
+      },
+      "HOTPOINT_CLIENT_SECRET": {
+        "title": "Hotpoint Client Secret",
+        "type": "string"
+      },
+      "XVTEXUseHttps": {
+        "title": "XVTEXUseHttps",
+        "type": "string"
+      },
+      "XVTEXAPIAppKey": {
+        "title": "XVTEXAPIAppKey",
+        "type": "string"
+      },
+      "XVTEXAPIAppToken": {
+        "title": "XVTEXAPIAppToken",
+        "type": "string"
+      }
+    }
+  }
+}

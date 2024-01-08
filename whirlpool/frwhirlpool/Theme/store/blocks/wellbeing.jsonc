@@ -1,0 +1,187 @@
+{
+  "store.custom#wellbeing": {
+    "blocks": [
+      "head-json-component",
+      // "breadcrumb#wellbeing",
+      "breadcrumb-two-levels",
+      "info-card#wellbeingBannerOnTop",
+      "flex-layout.row#halfSpace",
+      "rich-text#titleCategories",
+      "flex-layout.row#halfSpace",
+      "flex-layout.row#categories",
+      "flex-layout.row#halfSpace",
+      "analytics-wrapper#second-info-card",
+      "flex-layout.row#halfSpace",
+      "flex-layout.row#wellbeing",
+      "flex-layout.row#newsletter-row"
+    ]
+  },
+  "breadcrumb#wellbeing": {
+    "props": {
+      "categories": [
+        "/bien-être"
+      ],
+      "showOnMobile": true,
+      "blockClass": "wellbeing"
+    }
+  },
+  "info-card#wellbeingBannerOnTop": {
+    "title": "Prima info-card",
+    "props": {
+      "id": "info-card-wellbeing",
+      "textPosition": "left",
+      "imageUrl": "assets/contattaci_750x750.jpg",
+      "headline": "Dal lunedì al venerdì dalle 10 alle 18",
+      "subhead": "Domande sui prodotti? Scopri la nuova Live Chat attiva in tutte le pagine di categoria e di prodotto. Un team di trainer ed esperti di prodotto risponde in tempo reale a dubbi e richieste.",
+      "callToActionText": "SCOPRI di PIÙ",
+      "callToActionUrl": "#",
+      "blockClass": "wellbeingFirstBanner",
+      "textAlignment": "left"
+    }
+  },
+  "rich-text#titleCategories": {
+    "title": "Titolo sezione categoria",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Title introducing categories",
+      "blockClass": "wellbeingTitle"
+    }
+  },
+  "flex-layout.row#categories": {
+    "title": "Sezione categoria",
+    "props": {
+      "blockClass": "categories-row"
+    },
+    "children": [
+      "custom-category#categories"
+    ]
+  },
+  "custom-category#categories": {
+    "props": {
+      "isArticles": false,
+      "categories": [
+        {
+          "categoryName": "Recipes",
+          "categoryLink": "/wellbeing-category",
+          "imageLink": "https://images.unsplash.com/photo-1610128361323-6e941c97f023?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=389&q=80"
+        },
+        {
+          "categoryName": "Recipes",
+          "categoryLink": "/wellbeing-category",
+          "imageLink": "https://images.unsplash.com/photo-1610128361323-6e941c97f023?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=389&q=80"
+        },
+        {
+          "categoryName": "Recipes",
+          "categoryLink": "/wellbeing-category",
+          "imageLink": "https://images.unsplash.com/photo-1610128361323-6e941c97f023?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=389&q=80"
+        },
+        {
+          "categoryName": "Recipes",
+          "categoryLink": "/wellbeing-category",
+          "imageLink": "https://images.unsplash.com/photo-1610128361323-6e941c97f023?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=389&q=80"
+        }
+      ]
+    }
+  },
+  "analytics-wrapper#second-info-card": {
+    "title": "Seconda info-card (AnalyticsWrapper)",
+    "props": {
+      "isSlider": true,
+      "propsAnalytics": {
+        "analyticsProperties": "provide",
+        "nameEvent": "wellBeing_discoverMore",
+        "name": "promo",
+        "data": [
+          {
+            "title": "href",
+            "value": "/prova"
+          }
+        ]
+      }
+    },
+    "children": [
+      "info-card#wellbeingSecondBanner"
+    ]
+  },
+  "info-card#wellbeingSecondBanner": {
+    "props": {
+      "id": "banner-grid-home",
+      "isFullModeStyle": false,
+      "imageUrl": "assets/grid6.jpg",
+      "headline": "Nuova asciugatrice Whirlpool FreshCare+",
+      "subhead": "100% Freschezza, anche se dimentichi il bucato",
+      "textMode": "HTML",
+      "callToActionText": "SCOPRI di PIÙ",
+      "callToActionUrl": "/prova",
+      "textAlignment": "left",
+      "blockClass": "wellbeingSecondBanner",
+      "textPosition": "left"
+    }
+  },
+  "flex-layout.row#wellbeing": {
+    "title": "Sezione articolo",
+    "props": {
+      "blockClass": "articlesSection"
+    },
+    "children": [
+      "flex-layout.col#articlesSection"
+    ]
+  },
+  "flex-layout.col#articlesSection": {
+    "props": {
+      "blockClass": "articles-col",
+      "horizontalAlign": "center"
+    },
+    "children": [
+      "flex-layout.row#halfSpace",
+      "rich-text#titleArticles",
+      "flex-layout.row#halfSpace",
+      "custom-category#latestArticles",
+      "flex-layout.row#halfSpace"
+    ]
+  },
+  "rich-text#titleArticles": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Latest Articles",
+      "blockClass": "wellbeingTitle"
+    }
+  },
+  "custom-category#latestArticles": {
+    "props": {
+      "isArticles": true,
+      "articles": [
+        {
+          "articleCategory": "Inspiring Tips",
+          "articleTitle": "Titolo di prova del primo articolo",
+          "articleLink": "/wellbeing-article",
+          "articleTime": "7",
+          "imageLink": "https://images.unsplash.com/photo-1649185884993-16fac666380e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+        },
+        {
+          "articleCategory": "Inspiring Tips",
+          "articleTitle": "Titolo di prova del primo articolo",
+          "articleLink": "/wellbeing-article",
+          "articleTime": "7",
+          "imageLink": "https://images.unsplash.com/photo-1649185884993-16fac666380e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+        },
+        {
+          "articleCategory": "Inspiring Tips",
+          "articleTitle": "Titolo di prova del primo articolo",
+          "articleLink": "/wellbeing-article",
+          "articleTime": "7",
+          "imageLink": "https://images.unsplash.com/photo-1649185884993-16fac666380e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+        },
+        {
+          "articleCategory": "Inspiring Tips",
+          "articleTitle": "Titolo di prova del primo articolo",
+          "articleLink": "/wellbeing-article",
+          "articleTime": "7",
+          "imageLink": "https://images.unsplash.com/photo-1649185884993-16fac666380e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "vendor": "whirlpoolemea",
+  "name": "oms-export",
+  "version": "0.2.6",
+  "title": "OMS export",
+  "description": "OMS export",
+  "builders": {
+    "admin": "0.x",
+    "react": "3.x",
+    "messages": "1.x",
+    "docs": "0.x",
+    "node": "6.x"
+  },
+  "dependencies": {
+    "vtex.styleguide": "9.x"
+  },
+  "registries": [
+    "smartcheckout"
+  ],
+  "policies": [
+    {
+      "name": "ADMIN_DS"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.myvtex.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.vtexcommercestable.com.br",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "api.vtex.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "portal.vtexcommercestable.com.br",
+        "path": "*"
+      }
+    },
+    {
+      "name": "colossus-fire-event"
+    },
+    {
+      "name": "colossus-write-logs"
+    },
+    {
+      "name": "OMSViewer"
+    },
+    {
+      "name": "ListOrders"
+    },
+    {
+      "name": "LogisticsAdmin"
+    }
+  ],
+  "settingsSchema": {
+    "title": "OMS export",
+    "type": "object",
+    "properties": {
+      "tradePolicyToStore": {
+        "title": "Map \"trade policy\" --> \"store ref\"",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "tp": {
+              "title": "Trade policy ID",
+              "type": "string"
+            },
+            "storeRef": {
+              "title": "Store Ref",
+              "type": "string"
+            }
+          }
+        }
+      },
+      "vipEntity": {
+        "title": "VIP - MD Entity",
+        "type": "string",
+        "default": "PA"
+      },
+      "addServices": {
+        "title": "Additional Services",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "ids": {
+              "title": "Ids (comma separated)",
+              "type": "string"
+            },
+            "name": {
+              "title": "Name",
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "billingOptions": {
+    "termsURL": "https://compliance.vtex.com/gdpr/policies/vtex-privacy-policy",
+    "support": {
+      "url": "https://support.vtex.com/hc/requests"
+    },
+    "free": true
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

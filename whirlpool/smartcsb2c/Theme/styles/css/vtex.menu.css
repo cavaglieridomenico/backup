@@ -1,0 +1,119 @@
+.styledLinkContent {
+    width: 450px;
+}
+
+.styledLinkContent:hover {
+    color: #deb01a;
+}
+
+.styledLinkContainer {
+    border-bottom: 1px solid #d5d5d5;
+}
+
+.styledLinkContainer--dropdownRowMenu {
+    border-bottom: none;
+}
+/* This is the dropdown icon modification css */
+:global(.vtex-dropdown__arrow) {
+    width: 40px;
+    background-color: #deb01a;
+    color: white;
+    padding-left: 10px;
+}
+
+:global(.vtex-dropdown__button) {
+    padding: 0 0 0 10px;
+}
+
+.menuItem {
+    display: flex;
+    height: 40px;
+    margin-bottom: 5px;
+}
+
+.submenuWapper {
+    border: none;
+}
+
+.styledLinkContainer {
+    display: flex;
+}
+.menuContainer .styledLinkContainer::after {
+    content: ">";
+    font-size: 19px;
+    transform: rotate(90deg);
+    transition: 0.2s;
+    padding-right: 10px;
+    color: #deb01a;
+    width: 10px;
+    height: 10px;
+    margin-top: 10px;
+}
+ 
+
+.menuItem:hover .styledLinkContainer::after {
+    transform: rotate(0deg);
+    margin: 0 4px 1px 0;
+}
+
+.submenu .styledLinkContainer::after {
+    display: none;
+}
+
+.submenuContainer {
+    position: absolute;
+    top: 1px;
+    left: 520px;
+    border: none;
+}
+
+.submenuContainer .styledLinkContainer {
+    margin-bottom: 8px;
+}
+
+:global(.vtex-toast-container) {
+    top: 0 !important;
+    left: 40% !important;
+    height: fit-content;
+}
+
+:global(.vtex-toast) {
+    background: #deb01a;
+    color: white;
+}
+
+.menuItem--top-menu {
+    width: 100px !important;
+}
+
+.styledLinkContainer--top-menu {
+    border-bottom: none;
+}
+
+.styledLink--top-menu {
+    display: flex;
+    padding-top: 12px;
+}
+
+.styledLinkContent--top-menu {
+    width: 100% !important;
+}
+@media only screen and (max-width: 1024px)
+{
+    .styledLinkContainer, .styledLink, .styledLinkContent {
+        width: 100%;
+    }  
+
+    .menuItem:hover .styledLinkContainer::after { 
+        margin-top: 10px;
+        transform: none; 
+    } 
+
+    .menuItem--mobileMenuItem {
+        width: 100%;
+    }
+
+    .styledLink--mobileMenuItem {
+        padding-top: 10px;
+    }
+}  

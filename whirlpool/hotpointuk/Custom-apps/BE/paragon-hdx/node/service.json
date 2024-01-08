@@ -1,0 +1,38 @@
+{
+  "memory": 256,
+  "ttl": 10,
+  "timeout": 180,
+  "minReplicas": 2,
+  "maxReplicas": 4,
+  "workers": 1,
+  "events": {
+    "newOrder": {
+      "sender": "vtex.orders-broadcast",
+      "topics": [
+        "order-created"
+      ]
+    }
+  },
+  "routes": {
+    "ping": {
+      "path": "/app/hdx/ping",
+      "public": true
+    },
+    "deliverySlots": {
+      "path": "/app/hdx/delivery/slots/:orderformid",
+      "public": true
+    },
+    "getServerStatus": {
+      "path": "/app/hdx/status",
+      "public": true
+    },
+    "uploadDeliveryData": {
+      "path": "/app/hdx/delivery/data",
+      "public": true
+    },
+    "slotReservation": {
+      "path": "/app/hdx/delivery/:orderId",
+      "public": true
+    }
+  }
+}

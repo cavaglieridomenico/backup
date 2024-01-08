@@ -1,0 +1,106 @@
+{
+  "name": "crm-sync",
+  "vendor": "smartcsb2c",
+  "version": "0.0.10",
+  "title": "SAP CRM Syncer",
+  "description": "A custom app that bridges the VTex platform with the SAP CRM",
+  "categories": [],
+  "dependencies": {},
+  "builders": {
+    "node": "6.x",
+    "docs": "0.x"
+  },
+  "scripts": {},
+  "credentialType": "absolute",
+  "policies": [
+    {
+      "name": "ADMIN_DS"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "api.vtex.com",
+        "path": "/dataentities/*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "webservicesq.cert.whirlpool.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "webservices.cert.whirlpool.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "smartcsb2cqa.vtexcommercestable.com.br",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "smartcsb2c.vtexcommercestable.com.br",
+        "path": "*"
+      }
+    },
+    {
+      "name": "colossus-fire-event"
+    },
+    {
+      "name": "colossus-write-logs"
+    }
+  ],
+  "settingsSchema": {
+    "title": "SAP CRM Syncer",
+    "type": "object",
+    "properties": {
+      "productionMode": {
+        "title": "Production mode",
+        "description": "Whether you want to use the production endpoints for the CRM webservice or not.",
+        "type": "string",
+        "default": "top",
+        "enum": [
+          "true",
+          "false"
+        ],
+        "enumNames": [
+          "true",
+          "false"
+        ]
+      },
+      "crmPassword": {
+        "title": "SAP CRM webservice password",
+        "type": "string"
+      },
+      "pingUrl": {
+        "title": "SAP CRM Ping endpoint URL",
+        "type": "string"
+      },
+      "createConsumerUrl": {
+        "title": "SAP CRM Create Consumer endpoint URL",
+        "type": "string"
+      },
+      "displayConsumerUrl": {
+        "title": "SAP CRM Display Consumer endpoint URL",
+        "type": "string"
+      },
+      "vtexAppKey": {
+        "title": "VTEX app key for API calls",
+        "type": "string"
+      },
+      "vtexAppToken": {
+        "title": "VTEX app token for API calls",
+        "type": "string"
+      }
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

@@ -1,0 +1,391 @@
+/* ---------------------- MOBILE ---------------------------- */
+{
+  "flex-layout.row#product-main-mobile-discontinued": {
+    "children": ["flex-layout.col#product-main-discontinued"]
+  },
+  "flex-layout.col#product-main-discontinued": {
+    "props": {
+      "blockClass": [],
+      "preserveLayoutOnMobile": true
+    },
+    "children": ["flex-layout.col#single-col-discontinued"]
+  },
+  "flex-layout.row#breadcrumbPdp-discontinued": {
+    "props": {
+      "blockClass": "breadcrumb-pdp-mobile"
+    },
+    "children": ["breadcrumb#bd-mobilepdp-discontinued"]
+  },
+  "breadcrumb#bd-mobilepdp-discontinued": {
+    "props": {
+      "showOnMobile": true,
+      "blockClass": "breadcrumb-pdp-mobile"
+    }
+  },
+  "flex-layout.row#button3dRow-discontinued": {
+    "props": {
+      "width": "50%",
+      "blockClass": "button3dPdpMobileBack"
+    },
+    "children": [
+      //"button3DAndAr#pdpMobile-discontinued"
+    ]
+  },
+  "button3DAndAr#pdpMobile-discontinued": {},
+  "flex-layout.col#single-col-discontinued": {
+    "props": {
+      "blockClass": "product-desc-info",
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "flex-layout.row#breadcrumbPdp-discontinued",
+      "flex-layout.row#product-image-mobile-discontinued",
+      "flex-layout.row#button3dRow-discontinued",
+      "flex-layout.row#info-mobile-discontinued",
+      "flex-layout.col#customized-mobile-pdp-discontinued",
+      "flex-layout.row#measures-mobile-discontinued",
+      "flex-layout.row#accordion-specification-discontinued"
+    ]
+  },
+  "product-reccomandation-carousel-new#pdp-mobile-discontinued": {},
+  "flex-layout.row#product-reccomandation-carousel-mobile-new-discontinued": {
+    "props": {
+      "blockClass": "product-reccomandation-carousel-mobile-new-style"
+    },
+    "children": ["product-reccomandation-carousel-new#pdp-mobile-discontinued"]
+  },
+  /* ---------------------- PRODUCT IMAGE MOBILE ----------------------------  */
+  "flex-layout.row#product-image-mobile-discontinued": {
+    "props": {
+      "blockClass": "image-row-mobile"
+    },
+    "children": [
+      "flex-layout.col#energy-class-icon-pdp-mobile-discontinued",
+      "flex-layout.col#product-image-mobile-discontinued",
+      "flex-layout.col#share-button-mobile-pdp-discontinued"
+    ]
+  },
+  "flex-layout.col#product-image-mobile-discontinued": {
+    "children": ["stack-layout#imagesPDP-mobile-discontinued"]
+  },
+  "stack-layout#imagesPDP-mobile-discontinued": {
+    "children": ["video-player-thron-pdp#mobile-discontinued"]
+  },
+  "video-player-thron-pdp#mobile-discontinued": {
+    "props": {
+      "aspectRatio": {
+        "desktop": "auto",
+        "phone": "1:1"
+      },
+      "showNavigationArrows": false,
+      "showPaginationDots": true,
+      /* "zoomMode": "disabled", */ //TODO DA FIXARE
+      "contentType": "all",
+      "blockClass": "productPage-mobile"
+    }
+  },
+  "flex-layout.col#energy-class-icon-pdp-mobile-discontinued": {
+    "props": {
+      "blockClass": "energy-class-icon-pdp-mobile"
+    },
+    "children": [
+      "image-from-specification#EnergyClassPdpMobile-discontinued",
+      "reevoo-badge#pdp-discontinued"
+    ]
+  },
+  "image-from-specification#EnergyClassPdpMobile-discontinued": {
+    "props": {
+      /*  "blockClass": "energyClassBtnPlpMobile", */
+      "specificationName": "EnergyLogo_image",
+      "imageLink": "Specification.energy-label",
+      "labelWithHref": true,
+      "target": "_blank"
+    }
+  },
+  "reevoo-badge#pdp-discontinued": {},
+  "flex-layout.col#share-button-mobile-pdp-discontinued": {
+    "props": {
+      "blockClass": "share-btn-mobile-style"
+    },
+    "children": ["share-button#mobile-pdp-discontinued"]
+  },
+  "share-button#mobile-pdp-discontinued": {},
+  /* ---------------------- PRODUCT INFO MOBILE ----------------------------  */
+  "flex-layout.row#info-mobile-discontinued": {
+    "props": {
+      "blockClass": "info-mobile"
+    },
+    "children": ["flex-layout.col#single-col-background-discontinued"]
+  },
+  "flex-layout.col#single-col-background-discontinued": {
+    "children": [
+      "flex-layout.row#descriptionCode",
+      "flex-layout.row#product-name-discontinued",
+      "flex-layout.row#description-discontinued",
+      "flex-layout.row#button-layer-1-mobile-discontinued",
+      /* "flex-layout.row#bottomRow-mobile-energy-saving-pdp-discontinued", */
+      "flex-layout.row#out-of-catalog-mobile-discontinued",
+      "flex-layout.row#button-layer-2-mobile-discontinued"
+    ]
+  },
+  /* ---------------------- PRODUCT ENERGY CLASS & STORE LOCATOR MOBILE ----------------------------  */
+  "flex-layout.row#button-layer-1-mobile-discontinued": {
+    "props": {
+      "blockClass": "button-layer-1-mobile"
+    },
+    "children": [
+      "condition-layout.product#etichetta-image-pre-new-mobile-discontinued"
+      /* "flex-layout.col#store-locator-button#store-col-mobile-discontinued" */
+    ]
+  },
+  "condition-layout.product#etichetta-image-pre-new-mobile-discontinued": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "EnergiaLogo"
+          }
+        },
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "label-energie-nouvelle"
+          }
+        }
+      ],
+      "matchType": "any",
+      "Then": "flex-layout.col#energy-class-new-pdp-mobile-discontinued",
+      "Else": "condition-layout.product#etichetta-image-pre-old-mobile-discontinued"
+    }
+  },
+  "condition-layout.product#etichetta-image-pre-old-mobile-discontinued": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "energy-label"
+          }
+        }
+      ],
+      "Then": "flex-layout.col#energy-class-old-pdp-mobile-discontinued"
+    }
+  },
+  "flex-layout.col#energy-class-old-pdp-mobile-discontinued": {
+    "children": ["link.product#energyClassNewLinkTab-old-mobile-discontinued"]
+  },
+  "flex-layout.col#energy-class-new-pdp-mobile-discontinued": {
+    "children": ["link.product#energyClassNewLinkTab-new-mobile-discontinued"]
+  },
+  "link.product#energyClassNewLinkTab-old-mobile-discontinued": {
+    "props": {
+      "href": "{specificationGroups.Document.specifications.energy-label}",
+      "blockClass": "tabPDP",
+      "target": "_blank",
+      "escapeLinkRegex": "[%+]"
+    },
+    "children": [
+      "image-from-specification#EtichettaEnergetica-mobile-discontinued",
+      "rich-text#energy-class-btn-mobile-discontinued"
+    ]
+  },
+  "link.product#energyClassNewLinkTab-new-mobile-discontinued": {
+    "props": {
+      "href": "{specificationGroups.Document.specifications.new-energy-label}",
+      "blockClass": "tabPDP",
+      "target": "_blank",
+      "escapeLinkRegex": "[%+]"
+    },
+    "children": [
+      "image-from-specification#EtichettaEnergetica-mobile-discontinued",
+      "rich-text#energy-class-btn-mobile-discontinued"
+    ]
+  },
+  "image-from-specification#EtichettaEnergetica-mobile-discontinued": {
+    "props": {
+      "blockClass": "energy-class-icon-style",
+      "specificationName": "EnergyLogo_image",
+      "imageLink": "Specification.EnergyLogo_image",
+      "labelWithHref": true,
+      "target": "_blank"
+    }
+  },
+  "rich-text#energy-class-btn-mobile-discontinued": {
+    "props": {
+      "blockClass": "energy-class-btn",
+      "text": "Energy class"
+    }
+  },
+  "flex-layout.col#store-locator-button#store-col-mobile-discontinued": {
+    "props": {
+      "blockClass": "store-locator-button-style"
+    },
+    "children": ["button-store-locator#button-mobile-discontinued"]
+  },
+  "flex-layout.row#store-locator-after-revoo-mobile-container-discontinued": {
+    "props": {
+      "blockClass": "store-locator-button-style-container-after-revoo"
+    },
+    "children": ["button-store-locator#button-mobile-after-revoo-discontinued"]
+  },
+  "button-store-locator#button-mobile-discontinued": {
+    "props": {
+      "href": "/gdzie-kupic",
+      "hasTargetBlank": false
+    }
+  },
+  "button-store-locator#button-mobile-after-revoo-discontinued": {
+    "props": {
+      "href": "/gdzie-kupic",
+      "hasTargetBlank": false
+    }
+  },
+  "flex-layout.row#bottomRow-mobile-energy-saving-pdp-discontinued": {
+    "props": {
+      "blockClass": "energy-saving-pdp-mobile"
+    }
+  },
+  /* ---------------------- BUTTON LAYER 2 ---------------------------- */
+  "flex-layout.row#button-layer-2-mobile-discontinued": {
+    "props": {
+      "blockClass": "button-layer-2-style"
+    },
+    "children": ["flex-layout.col#buy-online-btn-mobile-discontinued"]
+  },
+  "flex-layout.col#buy-online-btn-mobile-discontinued": {
+    "props": {
+      "blockClass": "buy-online-btn-style"
+    },
+    "children": ["button-primary#buy-online-mobile-discontinued"]
+  },
+  "button-primary#buy-online-mobile-discontinued": {
+    "props": {
+      "width": "100%",
+      "isButton": false,
+      "text": "Buy similar",
+      "blockClass": "discontinued",
+      "isDiscontinued": true
+    }
+  },
+  /* ---------------------- BUTTON LAYER 3 ---------------------------- */
+  "flex-layout.row#out-of-catalog-mobile-discontinued": {
+    "props": {
+      "blockClass": "out-of-catalog-style"
+    },
+    "children": [
+      "rich-text#out-of-catalog-mobile"
+      /*  "flex-layout.col#compare-button-discontinued" */
+    ]
+  },
+  "rich-text#out-of-catalog-mobile": {
+    "props": {
+      "blockClass": "out-of-catalog-style",
+      "text": "Out of catalog"
+    }
+  },
+  "flex-layout.col#customized-mobile-pdp-discontinued": {
+    "props": {
+      "blockClass": "customized-mobile-pdp-discontinued",
+      "width": "100%"
+    },
+    "children": ["condition-layout.product#customizedMT-mobile-discontinued"]
+  },
+  /* ---------------------- COMPARE COL ---------------------------- */
+  "flex-layout.col#compare-button-discontinued": {
+    "props": {
+      "width": "100%",
+      "blockClass": "compare-col-style"
+    },
+    "children": ["product-comparison-block.selector"]
+  },
+  /* ---------------------- Condition MT COL  ---------------------------- */
+  "condition-layout.product#customizedMT-mobile-discontinued": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "customizedMT"
+          }
+        }
+      ],
+      "Then": "flex-layout.row#customizedMT-mobile-discontinued",
+      "Else": "flex-layout.col#features-pdp-mobile-discontinued"
+    }
+  },
+  "flex-layout.row#customizedMT-mobile-discontinued": {
+    "children": ["customizedMT-mobile-pdp#discontinued"]
+  },
+  "customizedMT-mobile-pdp#discontinued": {
+    "props": {
+      "url": "assets/menu-images/cookers_mp.mp4",
+      "filter": {
+        "specificationGroups": ["RatingGroupAttrLogo"],
+        "type": "show"
+      }
+    }
+  },
+  /* ---------------------- FEATURES COL ---------------------------- */
+  "flex-layout.col#features-pdp-mobile-discontinued": {
+    "props": {
+      "width": "100%",
+      "blockClass": "features-col-style"
+    },
+    "children": ["flex-layout.row#features-container"]
+  },
+  /* ---------------------- BUTTON LAYER 4 ---------------------------- */
+  "flex-layout.row#button-layer-4-mobile-discontinued": {
+    "props": {
+      "blockClass": ""
+    },
+    "children": ["reevoo-badge-mobile#discontinued"]
+  },
+  "reevoo-badge-mobile#discontinued": {},
+  /* ---------------------- PRODUCT MEASURES MOBILE ----------------------------  */
+  "flex-layout.row#measures-mobile-discontinued": {
+    "props": {},
+    "children": ["flex-layout.col#measure-mobile-discontinued"]
+  },
+  "flex-layout.col#measure-mobile-discontinued": {
+    "props": {
+      "blockClass": "measure-col-style-mobile"
+    },
+    "children": [
+      "rich-text#measures-text-mobile-discontinued",
+      "product-specification-group#minimal-discontinued"
+    ]
+  },
+  "rich-text#measures-text-mobile-discontinued": {
+    "props": {
+      "text": "Measurements",
+      "textPosition": "Left",
+      "blockClass": "measure-text-style-mobile"
+    }
+  },
+  /* -------------------------- CUSTOMER REVIEWS ---------------------------*/
+  "rich-text#costumer-reviews-mobile-discontinued": {
+    "props": {
+      "text": "Customer reviews",
+      "blockClass": "costumer-reviews-text-style-mobile"
+    }
+  },
+  /* ---------------------- MODAL REVIEW ----------------------------  */
+  "flex-layout.row#modal-review-mobile-discontinued": {
+    "children": ["modal-review#pdp-mobile-discontinued"]
+  },
+  "modal-review#pdp-mobile-discontinued": {},
+  /* ---------------------- PRODUCT REVIEW ----------------------------  */
+  "flex-layout.row#product-review-container-mobile-discontinued": {
+    "props": {
+      "blockClass": "product-review-container-style"
+    },
+    "children": ["product-review"]
+  },
+  "product-carousel-new#slider-bottom-pdp-mobile-discontinued": {
+    "props": {
+      "collectionID": "140",
+      "isBottomCarousel": true
+    }
+  }
+}

@@ -1,0 +1,437 @@
+{
+  "store.custom#manuals": {
+    "blocks": [
+      "responsive-layout.desktop#manuals-main-desktop",
+      "responsive-layout.mobile#manuals-main-mobile"
+    ]
+  },
+  "responsive-layout.desktop#manuals-main-desktop": {
+    "children": ["flex-layout.row#maxi-container-manuals"]
+  },
+  // MAIN
+  "flex-layout.row#maxi-container-manuals": {
+    "children": ["flex-layout.col#maxi-container-manuals"]
+  },
+  "flex-layout.col#maxi-container-manuals": {
+    "children": [
+      "breadcrumb-custom#manuals-desktop",
+      "flex-layout.row#manuals-title-container",
+      "flex-layout.row#manuals-app",
+      "flex-layout.row#manuals-desc-container",
+      "flex-layout.row#assistance-carousel",
+      "flex-layout.col#product-code-container",
+      "flex-layout.row#find-product-code"
+      // "analytics#manuals"
+      /* "flex-layout.row#manuals-contact-us-support-main-desktop" */
+    ],
+    "props": {
+      "blockClass": "maxi-container-manuals"
+    }
+  },
+  // BREADCRUMB-desktop
+  "breadcrumb-custom#manuals-desktop": {
+    "props": {
+      /* "blockClass": "containerBreadcrumbs", */
+      "firstPage": "Home",
+      "previousPage": "Pomoc",
+      "currentPage": "Instrukcje"
+    }
+  },
+  /* ---------------------- TITLE ROW  ---------------------------- */
+  "flex-layout.row#manuals-title-container": {
+    "props": {
+      "blockClass": "manuals-title-container-style"
+    },
+    "children": ["rich-text#manuals-text"]
+  },
+  "rich-text#manuals-text": {
+    "props": {
+      "blockClass": "manuals-text-style",
+      "text": "Pobierz instrukcje obsługi"
+    }
+  },
+  /* ---------------------- DESC ROW  ---------------------------- */
+  "flex-layout.row#manuals-desc-container": {
+    "props": {
+      "blockClass": "manuals-desc-container-style"
+    },
+    "children": ["rich-text#manuals-desc"]
+  },
+  "rich-text#manuals-desc": {
+    "props": {
+      "blockClass": "manuals-desc-style",
+      "text": "Nie możesz znaleźć instrukcji użytkowania i konserwacji swojego urządzenia? Wpisz poniżej numer seryjny lub kod 12NC, aby znaleźć instrukcje obsługi produktów Indesit. Instrukcja obsługi pomoże Ci w pełni wykorzystać możliwości Twojego urządzenia i dostarczyć ważnych informacji na temat części i akcesoriów. Pobranie oficjalnej instrukcji Indesit z naszej strony internetowej jest również wygodnym sposobem na uzyskanie kopii zapasowej na wypadek zaginięcia oryginalnego dokumentu. Wpisz pierwsze 5 znaków w pasku wyszukiwania , pojawi się rozwijana lista powiązanych kodów."
+    }
+  },
+  /* ---------------------- MANUALS APP  ---------------------------- */
+  "flex-layout.row#manuals-app": {
+    "props": {
+      "blockClass": "manuals-app-container"
+    },
+    "children": ["flex-layout.col#manuals-app"]
+  },
+  "flex-layout.col#manuals-app": {
+    "children": [
+      "rich-text#insert-code",
+      "embedded-manuals",
+      /* "modal-trigger#modal-manuals" */
+      "manuals-find-code"
+    ],
+    "props": {
+      "blockClass": "manuals-modal"
+    }
+  },
+  "rich-text#insert-code": {
+    "props": {
+      "blockClass": "commercial-code-title",
+      "text": "Wpisz kod handlowy lub kod 12NC"
+    }
+  },
+  "embedded-manuals": {},
+  "flex-layout.row#manuals-carousel": {
+    "props": {
+      "blockClass": "store-locator-container"
+    },
+    "children": ["flex-layout.col#manuals-carousel"]
+  },
+  "flex-layout.col#manuals-carousel": {
+    "children": ["flex-layout.row#manuals-contact-us-support-main-desktop"]
+  },
+  /* CONTACT US DESKTOP */
+  "flex-layout.row#manuals-contact-us-support-main-desktop": {
+    "props": {
+      "blockClass": "contact-us-support-main-desktop"
+    },
+    "children": ["flex-layout.col#contact-us-support-main-desktop"]
+  },
+  "flex-layout.col#manuals-contact-us-support-main-desktop": {
+    "props": {
+      "blockClass": "contact-us-support-main-desktop"
+    },
+    "children": [
+      "flex-layout.row#contact-us",
+      "flex-layout.row#cu-mini-card-desktop"
+    ]
+  },
+  "flex-layout.row#manuals-contact-us": {
+    "props": {
+      "blockClass": "contact-us"
+    },
+    "children": ["flex-layout.col#contact-us"]
+  },
+  "flex-layout.col#manuals-contact-us": {
+    "props": {
+      "blockClass": "contact-us"
+    },
+    "children": [
+      "flex-layout.row#cu-title-container-desktop",
+      "flex-layout.row#cu-desc-container-desktop"
+    ]
+  },
+  "flex-layout.row#manuals-cu-title-container-desktop": {
+    "props": {
+      "blockClass": "cu-title-container-desktop"
+    },
+    "children": ["rich-text#cu-title-desktop"]
+  },
+  "rich-text#manuals-cu-title-desktop": {
+    "props": {
+      "text": "Hai bisogno di aiuto? Contattateci.",
+      "blockClass": "cu-title-desktop"
+    }
+  },
+  "flex-layout.row#manuals-cu-desc-container-desktop": {
+    "props": {
+      "blockClass": "cu-desc-container-desktop"
+    },
+    "children": ["rich-text#cu-desc-desktop"]
+  },
+  "rich-text#manuals-cu-desc-desktop": {
+    "props": {
+      "text": "Se non hai trovato una soluzione con i nostri servizi, mettiti in contatto con il nostro servizio clienti.",
+      "blockClass": "cu-desc-desktop"
+    }
+  },
+  /* "responsive-layout.mobile#manuals-main-mobile": {
+    "children": [
+      "breadcrumb-custom#manuals-mobile",
+      "flex-layout.row#manuals-title-mobile",
+      "flex-layout.row#manuals-app-mobile",
+      "flex-layout.row#assistance-carousel-mobile"
+      "flex-layout.col#product-code-container-mobile",
+      "flex-layout.row#find-product-code"
+    ]
+  }*/
+  // BREADCRUMBS MOBILE
+  "breadcrumb-custom#manuals-mobile": {
+    "props": {
+      /* "blockClass": "containerBreadcrumbs", */
+      "firstPage": "Home",
+      "currentPage": "Manuali"
+    }
+  },
+  /* ---------------------- CAROUSEL  ---------------------------- */
+  "flex-layout.row#assistance-carousel": {
+    "props": {
+      "blockClass": "manuals-carousel"
+    },
+    "children": ["manuals-carousel"]
+  },
+  /* ---------------------- BOTTOM CONTAINER  ---------------------------- */
+  "manuals-carousel": {},
+  "flex-layout.row#find-product-code": {
+    "children": [
+      "flex-layout.col#left-product-code",
+      "flex-layout.col#right-product-code"
+    ],
+    "props": {
+      "blockClass": "find-product-code"
+    }
+  },
+  /* ---------------------- TITLE  ---------------------------- */
+  "flex-layout.col#product-code-container": {
+    "children": ["rich-text#product-code-title"],
+    "props": {
+      "blockClass": "product-code-container"
+    }
+  },
+  "rich-text#product-code-title": {
+    "props": {
+      "text": "Tutaj znajdziesz kod produktu",
+      "blockClass": "product-code-title"
+    }
+  },
+  /* ---------------------- LEFT SIDE  ---------------------------- */
+  "flex-layout.col#left-product-code": {
+    "children": ["rich-text#left-product-code", "image#left-product-code"],
+    "props": {
+      "blockClass": "left-child-product-code"
+    }
+  },
+  "rich-text#left-product-code": {
+    "props": {
+      "blockClass": "left-desc-product-code",
+      "text": "Numery modeli składają się z zestawu liter i cyfr i mogą zawierać znaki takie jak ukośnik (/) lub myślnik (-)."
+    }
+  },
+  "image#left-product-code": {
+    "props": {
+      "blockClass": "card-image-manual-desktop",
+      "src": "assets/code-manual-modal.png"
+    }
+  },
+  /* ---------------------- LEFT SIDE  ---------------------------- */
+  "flex-layout.col#right-product-code": {
+    "children": [
+      "rich-text#text-manuals",
+      "rich-text#right-product-code",
+      "manuals-dropdown#right-product-code"
+    ],
+    "props": {
+      "blockClass": "right-child-product-code"
+    }
+  },
+  "rich-text#right-product-code": {
+    "props": {
+      "blockClass": "right-desc-product-code",
+      "text": "Numer modelu znajdziesz na naklejce lub tabliczce znamionowej. Może znajdować się z przodu, z tyłu lub wewnątrz urządzenia."
+    }
+  },
+  "rich-text#text-manuals": {
+    "props": {
+      "text": "A",
+      "blockClass": "text-none-protection-plans",
+      "htmlId": "znajde-kod"
+    }
+  },
+  "manuals-dropdown#right-product-code": {},
+  /*--- NEW MOBILE ---*/
+  "responsive-layout.mobile#manuals-main-mobile": {
+    "children": ["flex-layout.row#maxi-container-manuals-mobile"]
+  },
+  "flex-layout.row#maxi-container-manuals-mobile": {
+    "children": ["flex-layout.col#maxi-container-manuals-mobile"]
+  },
+  "flex-layout.col#maxi-container-manuals-mobile": {
+    "children": [
+      "breadcrumb-custom#manuals-desktop",
+      "flex-layout.row#manuals-title-container-mobile",
+      "flex-layout.row#manuals-app-container-mobile",
+      "flex-layout.row#manuals-desc-container-mobile",
+      "flex-layout.row#assistance-carousel-mobile",
+      "flex-layout.col#product-code-container-mobile",
+      "flex-layout.row#find-product-code-mobile"
+    ],
+    "props": {
+      "blockClass": "maxi-container-manuals"
+    }
+  },
+  /* ---------------------- TITLE ROW  ---------------------------- */
+  "flex-layout.row#manuals-title-container-mobile": {
+    "props": {
+      "blockClass": "manuals-title-container-style"
+    },
+    "children": ["rich-text#manuals-text-mobile"]
+  },
+  "rich-text#manuals-text-mobile": {
+    "props": {
+      "blockClass": "manuals-text-style",
+      "text": "Pobierz instrukcje obsługi"
+    }
+  },
+  /* ---------------------- DESC ROW  ---------------------------- */
+  "flex-layout.row#manuals-desc-container-mobile": {
+    "props": {
+      "blockClass": "manuals-desc-container-style"
+    },
+    "children": ["rich-text#manuals-desc"]
+  },
+  "rich-text#manuals-desc-mobile": {
+    "props": {
+      "blockClass": "manuals-desc-style",
+      "text": "Nie możesz znaleźć instrukcji użytkowania i konserwacji swojego urządzenia? Wpisz poniżej numer seryjny lub kod 12NC, aby znaleźć instrukcje obsługi produktów Indesit. Instrukcja obsługi pomoże Ci w pełni wykorzystać możliwości Twojego urządzenia i dostarczyć ważnych informacji na temat części i akcesoriów. Pobranie oficjalnej instrukcji Indesit z naszej strony internetowej jest również wygodnym sposobem na uzyskanie kopii zapasowej na wypadek zaginięcia oryginalnego dokumentu. Wpisz pierwsze 5 znaków w pasku wyszukiwania , pojawi się rozwijana lista powiązanych kodów."
+    }
+  },
+  /* ---------------------- MANUALS APP MOBILE  ---------------------------- */
+  "flex-layout.row#manuals-app-container-mobile": {
+    "props": {
+      "blockClass": "manuals-app-container"
+    },
+    "children": ["flex-layout.col#manuals-app-mobile"]
+  },
+  "flex-layout.col#manuals-app-mobile": {
+    "children": [
+      /* "rich-text#insert-code",
+      "embedded-manuals",
+      "modal-trigger#modal-manuals-mobile" */
+      "manuals-find-code"
+    ]
+  },
+  /*----------------------- CAROUSEL MOBILE --------------------------------------*/
+  "flex-layout.row#assistance-carousel-mobile": {
+    "props": {
+      "blockClass": "manuals-carousel"
+    },
+    "children": ["manuals-carousel"]
+  },
+  /*----------------------- PRODUCT CODE MOBILE ----------------------------------*/
+  "flex-layout.col#product-code-container-mobile": {
+    "children": ["rich-text#product-code-title-mobile"],
+    "props": {
+      "blockClass": "product-code-container"
+    }
+  },
+  "rich-text#product-code-title-mobile": {
+    "props": {
+      "text": "Tutaj znajdziesz kod produktu",
+      "blockClass": "product-code-title"
+    }
+  },
+  /*----------------------- BOTTOM -------------------------------*/
+  "flex-layout.row#find-product-code-mobile": {
+    "children": [
+      "flex-layout.col#left-product-code",
+      "flex-layout.col#right-product-code"
+    ],
+    "props": {
+      "blockClass": "find-product-code"
+    }
+  },
+  "modal-trigger#modal-manuals": {
+    "props": {
+      "blockClass": "trigger-link-where-I-can-find"
+    },
+    "children": ["find-code#modal-manuals", "modal-layout#manuals-code"]
+  },
+  "find-code#modal-manuals": {
+    "props": {
+      "text": "Gdzie znajdę kod?"
+    }
+  },
+  /* "rich-text#modal-manuals": {
+    "props": {
+      "blockClass": "modal-manuals-text",
+      "text": "Gdzie znajdę kod?"
+    }
+  }, */
+  "modal-layout#manuals-code": {
+    "props": {
+      "blockClass": "modal-layout-manuals-code"
+    },
+    "children": [
+      "modal-actions.close#close-manuals-modal",
+      "flex-layout.col#modal-manuals"
+    ]
+  },
+  "flex-layout.col#modal-manuals": {
+    "props": {
+      "blockClass": "modal-manuals-code-container"
+    },
+    "children": ["modal-manual#modal-manual-code"]
+  },
+  "modal-manual#modal-manual-code": {
+    "props": {
+      "pathImage": "assets/code-manual-modal.png"
+    }
+  },
+  "modal-actions.close#close-manuals-modal": {
+    "props": {
+      "label": "",
+      "blockClass": "close-modal-button-manuals-code"
+    }
+  },
+  "modal-trigger#modal-manuals-mobile": {
+    "props": {
+      "blockClass": "trigger-link-where-i-can-find-mobile"
+    },
+    "children": [
+      "find-code#modal-manuals-mobile",
+      "modal-layout#manuals-code-mobile"
+    ]
+  },
+  "find-code#modal-manuals-mobile": {
+    "props": {
+      "text": "Gdzie znajdę kod?"
+    }
+  },
+  "manuals-find-code": {
+    "props": {
+      "src": "../pomoc/instrukcje#znajde-kod",
+      "text": "Gdzie mogę znaleść kod?​​​​​​​",
+      "labelGa": "Where can I find the code?",
+      "blockClass": "modal-manuals-text-mobile"
+    }
+  },
+  /* "rich-text#modal-manuals-mobile": {
+    "props": {
+      "blockClass": "modal-manuals-text-mobile",
+      "text": "Gdzie znajdę kod?"
+    }
+  }, */
+  "modal-layout#manuals-code-mobile": {
+    "props": {
+      "blockClass": "modal-layout-manuals-code-mobile"
+    },
+    "children": [
+      "modal-actions.close#close-manuals-modal-mobile",
+      "flex-layout.col#modal-manuals-mobile"
+    ]
+  },
+  "modal-actions.close#close-manuals-modal-mobile": {
+    "props": {
+      "label": "",
+      "blockClass": "close-modal-button-manuals-code-mobile"
+    }
+  },
+  "flex-layout.col#modal-manuals-mobile": {
+    "props": {
+      "blockClass": "modal-manuals-code-container-mobile"
+    },
+    "children": ["modal-manual#modal-manual-code-mobile"]
+  },
+  "modal-manual#modal-manual-code-mobile": {
+    "props": {
+      "pathImage": "assets/code-manual-modal.png"
+    }
+  }
+}

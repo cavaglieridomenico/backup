@@ -1,0 +1,54 @@
+{
+	"store.custom#unsellable-products": {
+		"blocks": [
+			"symmetric-pdp-title",
+			"responsive-layout.desktop#unsellable-products",
+			"responsive-layout.mobile#unsellable-products",
+			// PART BEFORE FOOTER
+			"experimental__visibility-layout#support-box-title",
+			"experimental__visibility-layout#support-box",
+			"flex-layout.row#newsletter-row"
+		]
+	},
+	"responsive-layout.desktop#unsellable-products": {
+		"children": [
+			"breadcrumb-pdp-unsellable",
+			"out-of-stock-products#unsellable-desktop"
+		]
+	},
+	"responsive-layout.mobile#unsellable-products": {
+		"children": [
+			"breadcrumb-pdp-unsellable",
+			"out-of-stock-products#unsellable-mobile"
+		]
+	},
+	"out-of-stock-products#unsellable-desktop": {
+		"children": [
+			"symmetric-pdp-title",
+			"condition-layout.product#product-page-is-accessories",
+			// "flex-layout.row#product-name",
+			"flex-layout.row#product-main",
+			"flex-layout.row#description",
+			"product-description.flixmedia",
+			"__fold__.experimentalLazyAssets",
+			"condition-layout.product#isAccessorioIntestazioneTab",
+			"condition-layout.product#isAccessorioTab",
+			"condition-layout.product#similars",
+			"condition-layout.product#suggestions"
+		]
+	},
+	"out-of-stock-products#unsellable-mobile": {
+		"children": [
+			"symmetric-pdp-title",
+			"breadcrumb-pdp-unsellable",
+			"condition-layout.product#product-page-is-accessories",
+			"flex-layout.row#product-main-mobile",
+			"product-description.flixmedia",
+			"__fold__.experimentalLazyAssets",
+			"condition-layout.product#isAccessorioIntestazioneTab",
+			"condition-layout.product#isAccessorioTab",
+			"condition-layout.product#similars",
+			"condition-layout.product#suggestions"
+		]
+	}
+}

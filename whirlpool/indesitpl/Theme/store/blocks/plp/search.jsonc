@@ -1,0 +1,278 @@
+{
+  "store.search": {
+    "blocks": [
+      "search-result-layout"
+      // "analytics#plp"
+      // "analytics#error"
+    ],
+    "props": {
+      "blockClass": "search-result-layout-background",
+      "context": {
+        "orderByField": "OrderByScoreDESC",
+        "hideUnavailableItems": false,
+        "maxItemsPerPage": 9,
+        "skusFilter": "ALL",
+        "simulationBehavior": "default"
+      }
+    }
+  },
+  "store.search#brand": {
+    "blocks": ["search-result-layout"],
+    "props": {
+      "context": {
+        "orderByField": "OrderByScoreDESC",
+        "hideUnavailableItems": false,
+        "maxItemsPerPage": 9,
+        "skusFilter": "ALL",
+        "simulationBehavior": "default"
+      }
+    }
+  },
+  "store.search#department": {
+    "blocks": ["search-result-layout"],
+    "props": {
+      "context": {
+        "orderByField": "OrderByScoreDESC",
+        "hideUnavailableItems": false,
+        "maxItemsPerPage": 9,
+        "skusFilter": "ALL",
+        "simulationBehavior": "default"
+      }
+    }
+  },
+  "store.search#category": {
+    "blocks": ["search-result-layout"],
+    "props": {
+      "context": {
+        "orderByField": "OrderByScoreDESC",
+        "hideUnavailableItems": false,
+        "maxItemsPerPage": 9,
+        "skusFilter": "ALL",
+        "simulationBehavior": "default"
+      }
+    }
+  },
+  "store.search#subcategory": {
+    "blocks": ["search-result-layout"],
+    "props": {
+      "context": {
+        "orderByField": "OrderByScoreDESC",
+        "hideUnavailableItems": false,
+        "maxItemsPerPage": 9,
+        "skusFilter": "ALL",
+        "simulationBehavior": "default"
+      }
+    }
+  },
+  "search-result-layout": {
+    "blocks": [
+      "search-result-layout.desktop#search-page",
+      "search-result-layout.mobile#mobile-search-page",
+      "search-not-found-layout"
+    ]
+  },
+  "search-result-layout.desktop#search-page": {
+    "children": [
+      "hreflang-plp-component",
+      "flex-layout.row#searchbread",
+      // "analytics#plp",
+      "condition-layout-search#plp-seo-title-cookers",
+      "condition-layout-search#plp-seo-title-hobs",
+      "condition-layout-search#plp-seo-title-hoods",
+      "condition-layout-search#plp-seo-title-coffee",
+      "condition-layout-search#plp-seo-title-ovens",
+      "condition-layout-search#plp-seo-title-microwaves",
+      "condition-layout-search#plp-seo-title-fridges",
+      "condition-layout-search#plp-seo-title-freezers",
+      "condition-layout-search#plp-seo-title-dishwashing",
+      "condition-layout-search#plp-seo-title-dryers",
+      "condition-layout-search#plp-seo-title-washer-dryers",
+      "condition-layout-search#plp-seo-title-washing-machines",
+      "list-context.product-list#top-carousel-plp",
+      "flex-layout.row#result",
+      "flex-layout.row#fetchmore",
+      "list-context.product-list#bottom-carousel-plp",
+      "condition-layout-search#plp-banner-hobs",
+      "condition-layout-search#plp-banner-dishwashing",
+      "condition-layout-search#plp-banner-dryers",
+      "condition-layout-search#plp-banner-washer-dryers",
+      "condition-layout-search#plp-banner-washing-machines",
+      "condition-layout-search#plp-banner-fridges",
+      "condition-layout-search#plp-banner-ovens",
+      /* "condition-layout-search#plp-seo-cookers",
+      "condition-layout-search#plp-seo-hobs",
+      "condition-layout-search#plp-seo-hoods",
+      "condition-layout-search#plp-seo-microwaves",
+      "condition-layout-search#plp-seo-ovens",
+      "condition-layout-search#plp-seo-fridges",
+      "condition-layout-search#plp-seo-freezers",
+      "condition-layout-search#plp-seo-dishwashing",
+      "condition-layout-search#plp-seo-dryers",
+      "condition-layout-search#plp-seo-washer-dryers",
+      "condition-layout-search#plp-seo-washing-machines" */
+      "condition-layout-banner"
+    ],
+    "props": {
+      "preventRouteChange": false,
+      "defaultGalleryLayout": "list",
+      "blockClass": "searchPlpStyle"
+    }
+  },
+  "condition-layout-banner": {},
+  "search-result-layout.mobile#mobile-search-page": {
+    "children": [
+      "hreflang-plp-component",
+      "flex-layout.row#searchbread-mobile",
+      // "analytics#plp",
+      "condition-layout-search#plp-seo-title-cookers",
+      "condition-layout-search#plp-seo-title-hobs",
+      "condition-layout-search#plp-seo-title-hoods",
+      "condition-layout-search#plp-seo-title-coffee",
+      "condition-layout-search#plp-seo-title-microwaves",
+      "condition-layout-search#plp-seo-title-ovens",
+      "condition-layout-search#plp-seo-title-fridges",
+      "condition-layout-search#plp-seo-title-freezers",
+      "condition-layout-search#plp-seo-title-dishwashing",
+      "condition-layout-search#plp-seo-title-dryers",
+      "condition-layout-search#plp-seo-title-washer-dryers",
+      "condition-layout-search#plp-seo-title-washing-machines",
+      "list-context.product-list#top-carousel-plp-mobile",
+      "flex-layout.row#result-mobile",
+      "flex-layout.row#fetchmore-mobile",
+      "list-context.product-list#bottom-carousel-plp-mobile",
+      "condition-layout-search#plp-banner-hobs",
+      "condition-layout-search#plp-banner-dishwashing",
+      "condition-layout-search#plp-banner-dryers",
+      "condition-layout-search#plp-banner-washer-dryers",
+      "condition-layout-search#plp-banner-washing-machines",
+      "condition-layout-search#plp-banner-fridges",
+      "condition-layout-search#plp-banner-ovens",
+      /* "condition-layout-search#plp-seo-cookers",
+      "condition-layout-search#plp-seo-hobs",
+      "condition-layout-search#plp-seo-hoods",
+      "condition-layout-search#plp-seo-microwaves",
+      "condition-layout-search#plp-seo-ovens",
+      "condition-layout-search#plp-seo-fridges",
+      "condition-layout-search#plp-seo-freezers",
+      "condition-layout-search#plp-seo-dishwashing",
+      "condition-layout-search#plp-seo-dryers",
+      "condition-layout-search#plp-seo-washer-dryers",
+      "condition-layout-search#plp-seo-washing-machines" */
+      "condition-layout-banner"
+    ],
+    "props": {
+      "preventRouteChange": false,
+      "defaultGalleryLayout": "list"
+    }
+  },
+  "search-not-found-layout": {
+    "children": ["flex-layout.row#not-found-container"]
+  },
+  "flex-layout.row#not-found-container": {
+    "children": ["flex-layout.col#not-found-container"],
+    "props": {
+      "blockClass": "not-found-container"
+    }
+  },
+  "flex-layout.col#not-found-container": {
+    "props": {
+      "blockClass": "not-found-container"
+    },
+    "children": [
+      "flex-layout.row#product-not-found-container",
+      /* components in home page */
+      "flex-layout.row#home-page-layer-1-mobile",
+      "flex-layout.row#home-page-layer-2-mobile",
+      "flex-layout.row#home-page-layer-3-mobile",
+      "flex-layout.row#images-card"
+    ]
+  },
+  /* PRODUCT NOT FOUND */
+  "flex-layout.row#product-not-found-container": {
+    "props": {
+      "blockClass": "product-not-found-container"
+    },
+    "children": ["flex-layout.col#product-not-found-container"]
+  },
+  "flex-layout.col#product-not-found-container": {
+    "props": {
+      "blockClass": "product-not-found-container"
+    },
+    "children": [
+      "rich-text#product-not-found-title",
+      "rich-text#product-not-found-description"
+    ]
+  },
+  "rich-text#product-not-found-title": {
+    "props": {
+      "text": "Ups…",
+      "blockClass": "product-not-found-title"
+    }
+  },
+  "rich-text#product-not-found-description": {
+    "props": {
+      "blockClass": "product-not-found-description",
+      "text": "Produkt nie znaleziony. Może zainteresuje Cię to..."
+    }
+  },
+  /* ERROR 404 */
+  "flex-layout.row#404-container": {
+    "props": {
+      "blockClass": "404-container"
+    },
+    "children": [
+      "flex-layout.col#404-image-container",
+      "flex-layout.col#404-description-container"
+    ]
+  },
+  /*-----------------IMAGE 404---------------------*/
+  "flex-layout.col#404-image-container": {
+    "props": {
+      "blockClass": "404-image-container"
+    },
+    "children": ["image#404S", "image#404-mobile"]
+  },
+  "image#404S": {
+    "props": {
+      "src": "assets/404.png",
+      "blockClass": "image404"
+    }
+  },
+  "image#404-mobile": {
+    "props": {
+      "src": "assets/404-mobile.png",
+      "blockClass": "image404-mobile"
+    }
+  },
+  /*------------------BACK TO HOMEPAGE-------------*/
+  "flex-layout.col#404-description-container": {
+    "children": [
+      "rich-text#404-page-title",
+      "rich-text#404-page-description",
+      "rich-text#buttonNotFound"
+    ],
+    "props": {
+      "blockClass": ["404-description-container"]
+    }
+  },
+  "rich-text#404-page-title": {
+    "props": {
+      "text": "Ups…",
+      "textAlignment": "center",
+      "blockClass": ["404-title"]
+    }
+  },
+  "rich-text#404-page-description": {
+    "props": {
+      "text": "Nie możemy znaleźć strony, której szukasz. Nie martw się, szybko przekierujemy Cię na stronę główną.",
+      "textAlignment": "center",
+      "blockClass": ["404-description"]
+    }
+  },
+  "rich-text#buttonNotFound": {
+    "props": {
+      "text": "[ Powrót do strony głównej ](/)",
+      "blockClass": ["404-button"]
+    }
+  }
+}

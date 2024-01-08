@@ -1,0 +1,28 @@
+query getSLServices($brand:String!, $country:String!, $locale:String!, $country_id:String!, $province:String!, $region:String!, $city:String!) {
+    getSLServices(brand: $brand, country: $country, locale: $locale, country_id: $country_id, province: $province, region: $region, city: $city) @context(provider:"whirlpoolemea.service-locator-api-locations") { 
+        locations{
+            count
+            results{
+                id
+                name
+                address
+                addressOriginal
+                addressGoogle
+                phone
+                zip
+                email
+                googlePlaceId
+                filters
+                collections
+                type
+                icon
+                info
+                lat
+                lng
+                distance
+                useEmail
+                parent_label
+            }
+        }
+    }
+}

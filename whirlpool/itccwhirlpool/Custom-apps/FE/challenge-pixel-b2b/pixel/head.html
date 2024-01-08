@@ -1,0 +1,260 @@
+<!-- THIS SOLUTION WORKS ALSO FOR INTERNAL ROUTING CHANGE -->
+<!-- HIDING FILTERS BASED ON TRADE POLICIES -->
+<script type="text/javascript">
+  ; (function () {
+    var pushState = history.pushState
+    var replaceState = history.replaceState
+
+    history.pushState = function () {
+      pushState.apply(history, arguments)
+      window.dispatchEvent(new Event('pushstate'))
+      window.dispatchEvent(new Event('locationchange'))
+    }
+
+    history.replaceState = function () {
+      replaceState.apply(history, arguments)
+      window.dispatchEvent(new Event('replacestate'))
+      window.dispatchEvent(new Event('locationchange'))
+    }
+
+    window.addEventListener('popstate', function () {
+      window.dispatchEvent(new Event('locationchange'))
+    })
+  })()
+
+  // UKCC Solution
+  // const hideFacets = () => {
+  //   const url = window?.location?.href
+  //   // const url = window?.location?.hostname
+  //   if (url.includes('epp')) {
+  //     // HIDE other Facets
+  //     waitForEl(
+  //       '.vtex-search-result-3-x-filter__container--stockavailabilityff',
+  //       function () {
+  //         $(
+  //           '.vtex-search-result-3-x-filter__container--stockavailabilityff'
+  //         ).css('display', 'none')
+  //         $(
+  //           '.vtex-search-result-3-x-filter__container--stockavailabilityvip'
+  //         ).css('display', 'none')
+  //       }
+  //     )
+
+  // HIDE out of stock Facet UKCC Solution
+  //   waitForEl('.vtex-search-result-3-x-filterItem--out-of-stock', function () {
+  //     $(
+  //       '.vtex-search-result-3-x-filterItem--out-of-stock'
+  //     ).css('display', 'none')
+  //     /* $(
+  //       '.vtex-search-result-3-x-accordionFilterContainer--disponibilite-en-vip'
+  //     ).css('display', 'none') */
+  //   })
+
+  //   // TRANSLATE Facet
+  //   waitForEl('.vtex-search-result-3-x-filter__container--stockavailabilityepp', function () {
+  //     let translated = "Stock Availability"
+  //     let element = document.querySelector('.vtex-search-result-3-x-filter__container--stockavailabilityepp').firstElementChild.firstElementChild.firstElementChild.firstElementChild
+  //     element.innerHTML = translated
+  //   })
+
+  // } else if (url.includes('ff')) {
+
+  // HIDE other Facets UKCC Solution
+  // waitForEl(
+  //   '.vtex-search-result-3-x-filter__container--stockavailabilityepp',
+  //   function () {
+  //     $(
+  //       '.vtex-search-result-3-x-filter__container--stockavailabilityepp'
+  //     ).css('display', 'none')
+  //     $(
+  //       '.vtex-search-result-3-x-filter__container--stockavailabilityvip'
+  //     ).css('display', 'none')
+  //   }
+  // )
+
+  // HIDE out of stock Facet UKCC Solution
+  // waitForEl('.vtex-search-result-3-x-filterItem--out-of-stock', function () {
+  //   $(
+  //     '.vtex-search-result-3-x-filterItem--out-of-stock'
+  //   ).css('display', 'none')
+  //   /* $(
+  //     '.vtex-search-result-3-x-accordionFilterContainer--disponibilite-en-vip'
+  //   ).css('display', 'none') */
+  // })
+
+  // // TRANSLATE Facet
+  // waitForEl('.vtex-search-result-3-x-filter__container--stockavailabilityff', function () {
+  //   let translated = "Stock Status"
+  //   let element = document.querySelector('.vtex-search-result-3-x-filter__container--stockavailabilityff').firstElementChild.firstElementChild.firstElementChild.firstElementChild
+  //   element.innerHTML = translated
+  // })
+
+  // } else if (url.includes('vip')) {
+
+  // HIDE other Facets UKCC Solution
+  // waitForEl(
+  //   '.vtex-search-result-3-x-filter__container--stockavailabilityff',
+  //   function () {
+  //     $(
+  //       '.vtex-search-result-3-x-filter__container--stockavailabilityff'
+  //     ).css('display', 'none')
+  //     $(
+  //       '.vtex-search-result-3-x-filter__container--stockavailabilityepp'
+  //     ).css('display', 'none')
+  //     $('.vtex-search-result-3-x-filter__container--priceRange').css(
+  //       'display',
+  //       'none'
+  //     )
+  //   }
+  // )
+
+  // // HIDE out of stock Facet UKCC Solution
+  // waitForEl('.vtex-search-result-3-x-filterItem--out-of-stock', function () {
+  //   $(
+  //     '.vtex-search-result-3-x-filterItem--out-of-stock'
+  //   ).css('display', 'none')
+  //   /* $(
+  //     '.vtex-search-result-3-x-accordionFilterContainer--disponibilite-en-vip'
+  //   ).css('display', 'none') */
+  // })
+
+  // // TRANSLATE Facet
+  // waitForEl('.vtex-search-result-3-x-filter__container--stockavailabilityvip', function () {
+  //   let translated = "Available Stock"
+  //   let element = document.querySelector('.vtex-search-result-3-x-filter__container--stockavailabilityvip').firstElementChild.firstElementChild.firstElementChild.firstElementChild
+  //   element.innerHTML = translated
+  // })
+  //   }
+  // }
+
+  const manageLoginChecks = () => {
+    const urlsToBeSkipped = JSON.parse(
+      decodeURIComponent('{{settings.urlsToBeSkipped}}')
+    )
+    const production = window.__RUNTIME__.production
+    const isQa = window.__RUNTIME__.account.includes("qa");
+    let tradePolicyWs;
+    if (isQa) {
+      tradePolicyWs = window?.location?.href.includes("epp")
+        ? "testepp123.whirlpoolgroup.it"
+        : window?.location?.href.includes("ff")
+          ? "testff123.whirlpoolgroup.it"
+          : "testvip123.whirlpoolgroup.it";
+    } else {
+      tradePolicyWs = window?.location?.href.includes("epp")
+        ? "epp.whirlpoolgroup.it"
+        : window?.location?.href.includes("ff")
+          ? "ff.whirlpoolgroup.it"
+          : "vip.whirlpoolgroup.it";
+    }
+    const HOST = !production || window.location?.hostname?.includes("myvtex.com") ? `?host=${tradePolicyWs}` : "";
+
+    if (
+      !urlsToBeSkipped.includes(window.location.pathname.toLocaleLowerCase())
+    ) {
+      //Check if the user is a VIP user
+      if (window?.location?.href?.includes('vip')) {
+        //Check if VIP user is authorized to be a guest
+        fetch('/_v/api/account/isVIPAuthorized' + HOST, { method: 'GET' })
+          .then((res) => Promise.resolve({ error: res.ok ? false : true }))
+          .then((response) => {
+            if (response.error) {
+              console.log('VIP IS NOT AUTHORIZED AS GUEST')
+              window.location.href = '/login'
+            }
+          })
+        console.log('VIP IS AUTHORIZED AS GUEST')
+      } else {
+        //The following code will be applied for all non VIP users
+        if (window.location.pathname == '/') {
+          const isJustLogged = sessionStorage.getItem('justLoggedIn')
+          if (isJustLogged) {
+            if (isJustLogged == 'true') {
+              window.sessionStorage.setItem('justLoggedIn', 'false')
+              window.location.reload()
+            }
+          }
+        }
+
+        const isLogged = sessionStorage.getItem('loggedIn')
+        //Check if the Session Storage item is present
+        if (isLogged) {
+          //Check if the user is not logged-in
+          if (isLogged == 'false') {
+            window.location.href = '/login'
+          }
+        } else {
+          //If no Session Storage item is found do the fetch to get the user's login status
+
+          const options = {
+            method: 'GET',
+            credentials: 'same-origin',
+            cache: 'no-cache',
+          }
+          fetch('/api/vtexid/pub/authenticated/user', options)
+            .then((response) =>
+              response.ok ? response.json() : Promise.resolve(null)
+            )
+            .then((res) => {
+              if (res == null) {
+                window.sessionStorage.setItem('loggedIn', 'false')
+                window.location.href = '/login'
+              } else {
+                window.sessionStorage.setItem('loggedIn', 'true')
+              }
+            })
+        }
+      }
+    }
+  }
+
+  const dispatchMyaccountEvents = () => {
+    const url = window?.location?.href
+    //dispatchEvent when you change profile info 
+    if (url.includes('/profile/edit')) {
+      waitForEl(
+        '.vtex-profile-form-3-x-profileContainer',
+        function () {
+          //dispatchEvent
+          const buttons = document.querySelectorAll(".vtex-profile-form-3-x-profileContainer button[type='submit']");
+          const submit = buttons[0]
+          submit.addEventListener('click', function () {
+            //define details event
+            let details = {}
+            const inputs = document.querySelectorAll(".vtex-profile-form-3-x-profileContainer input")
+            inputs.forEach((input) => {
+              details[input.name] = input.value
+            })
+
+            document.dispatchEvent(new CustomEvent("onchangeprofileinfo", { detail: details }))
+          })
+        }
+      )
+    }
+  }
+  window.addEventListener('locationchange', function () {
+    manageLoginChecks()
+    dispatchMyaccountEvents()
+    // setTimeout(() => {
+    //   hideFacets()
+    // }, 3000)
+  })
+  // window.addEventListener('DOMContentLoaded', function () {
+  //   hideFacets()
+  // })
+
+  // var waitForEl = function (selector, callback) {
+  //   if (jQuery(selector).is(':visible') || jQuery(selector).length > 0) {
+  //     callback()
+  //   } else {
+  //     setTimeout(function () {
+  //       waitForEl(selector, callback)
+  //     }, 100)
+  //   }
+  // }
+</script>
+
+<!-- THIS SOLUTION WORKS ONLY FOR SINGLE ACCESSES OR PAGE REFRESH -->
+<script type="text/javascript">
+  manageLoginChecks()
+</script>

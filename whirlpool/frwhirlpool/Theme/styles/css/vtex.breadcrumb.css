@@ -1,0 +1,72 @@
+:global(.vtex-breadcrumb-1-x-link--wellbeing--1) {
+  position: relative;
+  top: 1px;
+}
+
+.container {
+  position: relative;
+  margin-left: 3.125rem;
+  padding-top: 0;
+}
+.homeLink::before {
+  content: "Accueil";
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 0.25rem 0.5rem 1.25rem;
+}
+.homeLink .homeIcon {
+  visibility: hidden;
+  height: 10px;
+}
+.link {
+  font-family: "myriadLight";
+  font-weight: 300;
+  font-size: 0.8rem;
+  line-height: 1.2;
+  text-decoration: none;
+  color: #505050;
+}
+.term {
+  text-decoration: none;
+}
+.link:hover,
+.link:focus {
+  color: #fdc100;
+}
+.link:focus {
+  border-color: #fdc100;
+}
+.container--breadPP {
+  margin-top: 0.5rem;
+}
+.arrow:last-child {
+  pointer-events: none;
+}
+.container--wellbeing {
+  position: relative;
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+  margin-left: 3rem !important;
+  padding-top: 0.45rem;
+}
+.container--prOrderBreadcrumb {
+  margin-top: 0.5rem !important;
+  margin-left: 0 !important;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 1040px) {
+  /* .container {
+    display: none;
+  } */
+  .container--wellbeing {
+    display: block;
+  }
+}
+@media only screen and (min-width: 1040px) {
+  .container {
+    margin-left: 0;
+  }
+}

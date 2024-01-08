@@ -1,0 +1,12 @@
+query($page: Int, $pageSize: Int, $keyword: String) {
+	searchFaq(page: $page, pageSize: $pageSize, keyword: $keyword) {
+		id
+		url
+		metaTitle
+		metaDescription
+		answer
+		featuredFrom
+		group
+		category
+	}
+}

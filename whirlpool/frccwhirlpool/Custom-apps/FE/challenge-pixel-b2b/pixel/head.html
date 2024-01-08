@@ -1,0 +1,136 @@
+<!-- THIS SOLUTION WORKS ALSO FOR INTERNAL ROUTING CHANGE -->
+<!-- HIDING FILTERS BASED ON TRADE POLICIES -->
+<script type="text/javascript">
+  ; (function () {
+    var pushState = history.pushState;
+    var replaceState = history.replaceState;
+
+    history.pushState = function () {
+      pushState.apply(history, arguments);
+      window.dispatchEvent(new Event('pushstate'));
+      window.dispatchEvent(new Event('locationchange'));
+    };
+
+    history.replaceState = function () {
+      replaceState.apply(history, arguments);
+      window.dispatchEvent(new Event('replacestate'));
+      window.dispatchEvent(new Event('locationchange'));
+    };
+
+    window.addEventListener('popstate', function () {
+      window.dispatchEvent(new Event('locationchange'))
+    });
+  })();
+
+  const hideFacets = () => {
+    const url = window?.location?.href
+    // const url = window?.location?.hostname
+    if (url.includes("epp")) {
+        waitForEl('.vtex-search-result-3-x-filter__container--disponibilite-en-ff', function () {
+        $(".vtex-search-result-3-x-filter__container--disponibilite-en-ff").css( "display", "none" )
+        $(".vtex-search-result-3-x-filter__container--disponibilite-en-vip").css( "display", "none" )
+      })
+      waitForEl('.vtex-search-result-3-x-accordionFilter', function () {
+        $(".vtex-search-result-3-x-accordionFilterContainer--disponibilite-en-ff").css( "display", "none" )
+        $(".vtex-search-result-3-x-accordionFilterContainer--disponibilite-en-vip").css( "display", "none" )
+      })
+
+    }
+    else if (url.includes("ff")) {
+      waitForEl('.vtex-search-result-3-x-filter__container--disponibilite-en-epp', function () {
+        $(".vtex-search-result-3-x-filter__container--disponibilite-en-epp").css( "display", "none" )
+        $(".vtex-search-result-3-x-filter__container--disponibilite-en-vip").css( "display", "none" )
+      })
+      waitForEl('.vtex-search-result-3-x-accordionFilter', function () {
+        $(".vtex-search-result-3-x-accordionFilterContainer--disponibilite-en-epp").css( "display", "none" )
+        $(".vtex-search-result-3-x-accordionFilterContainer--disponibilite-en-vip").css( "display", "none" )
+      })
+    }
+    else if (url.includes("vip")) {
+      waitForEl('.vtex-search-result-3-x-filter__container--disponibilite-en-ff', function () {
+        $(".vtex-search-result-3-x-filter__container--disponibilite-en-ff").css( "display", "none" )
+        $(".vtex-search-result-3-x-filter__container--disponibilite-en-epp").css( "display", "none" )
+        // $(".vtex-search-result-3-x-filter__container--priceRange").css( "display", "none" )
+      })
+      waitForEl('.vtex-search-result-3-x-accordionFilter', function () {
+        $(".vtex-search-result-3-x-accordionFilterContainer--disponibilite-en-ff").css( "display", "none" )
+        $(".vtex-search-result-3-x-accordionFilterContainer--disponibilite-en-epp").css( "display", "none" )
+        // $(".vtex-search-result-3-x-accordionFilterContainer--gammes-de-prix").css( "display", "none" )
+      })
+    }
+  }
+
+  const manageLoginChecks = () => {
+    const urlsToBeSkipped = JSON.parse(
+      decodeURIComponent('{{settings.urlsToBeSkipped}}')
+    )
+
+    if (
+      !urlsToBeSkipped.includes(window.location.pathname.toLocaleLowerCase())
+    ) {
+      //The following code will be applied for all non VIP users
+      if (window.location.pathname == '/') {
+        const isJustLogged = sessionStorage.getItem('justLoggedIn')
+        if (isJustLogged) {
+          if (isJustLogged == 'true') {
+            window.sessionStorage.setItem('justLoggedIn', 'false')
+            window.location.reload()
+          }
+        }
+      }
+
+      const isLogged = sessionStorage.getItem('loggedIn')
+      //Check if the Session Storage item is present
+      if (isLogged) {
+        //Check if the user is not logged-in
+        if (isLogged == 'false' && !window.location.href.includes('/login')) {
+          window.location.href = '/login'
+        }
+      } else {
+        //If no Session Storage item is found do the fetch to get the user's login status
+
+        const options = {
+          method: 'GET',
+          credentials: 'same-origin',
+          cache: 'no-cache',
+        }
+        fetch('/api/vtexid/pub/authenticated/user', options)
+          .then((response) =>
+            response.ok ? response.json() : Promise.resolve(null)
+          )
+          .then((res) => {
+            if (res == null) {
+              window.sessionStorage.setItem('loggedIn', 'false')
+              window.location.href = '/login'
+            } else {
+              window.sessionStorage.setItem('loggedIn', 'true')
+            }
+          })
+      }
+    }
+  }
+
+  window.addEventListener('locationchange', function () {
+    manageLoginChecks()
+    setTimeout(() => {
+      hideFacets();
+    }, 3000);
+  })
+  window.addEventListener('DOMContentLoaded', function () {
+    hideFacets();
+  });
+
+  var waitForEl = function (selector, callback) {
+    if (jQuery(selector).is(":visible") || jQuery(selector).length > 0) {
+      callback()
+    } else {
+      setTimeout(function () {
+        waitForEl(selector, callback)
+      }, 100)
+    }
+  }
+  </script>
+
+  <script type="text/javascript">
+    manageLoginChecks()
+  </script>

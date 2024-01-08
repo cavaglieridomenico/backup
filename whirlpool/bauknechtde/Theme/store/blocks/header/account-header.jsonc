@@ -1,0 +1,123 @@
+{
+  "disclosure-layout#account": {
+    "props": {
+      "blockClass": "header"
+    },
+    "children": ["disclosure-trigger#imageAccount", "disclosure-content#login"]
+  },
+  "disclosure-trigger#imageAccount": {
+    "children": ["image#imageAccount"]
+  },
+  "image#imageAccount": {
+    "props": {
+      "width": "24px",
+      "src": "assets/icons/account-icon.svg"
+    }
+  },
+  "disclosure-content#login": {
+    "children": ["flex-layout.row#login"]
+  },
+  "flex-layout.row#login": {
+    "props": {
+      "fullWidth": true
+    },
+    "children": ["login-content#default"]
+  },
+  "overlay-trigger#account": {
+    "props": {
+      "blockClass": "flex"
+    },
+    "children": ["image#Account", "overlay-layout"]
+  },
+  "image#Account": {
+    "props": {
+      "src": "assets/icons/account-icon.svg"
+    }
+  },
+  "overlay-layout": {
+    "props": {
+      "blockClass": "positionOverlay"
+    },
+    "children": ["login-content#default"]
+  },
+  "drawer#login": {
+    "props": {
+      "slideDirection": "rightToLeft",
+      "blockClass": "account"
+    },
+    "blocks": ["drawer-trigger#imageAccount"],
+    "children": ["login#drawer"]
+  },
+  "drawer-trigger#imageAccount": {
+    "children": ["image#imageAccount"]
+  },
+
+  "vtex.menu@2.x:menu#account": {
+    "props": {
+      "orientation": "vertical"
+    },
+    "children": ["menu-item#Accedi", "menu-item#Registrati"]
+  },
+  "menu-item#Accedi": {
+    "props": {
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/login",
+        "noFollow": false,
+        "tagTitle": "Accedi",
+        "text": "Accedi"
+      },
+      "blockClass": ["mobileMenu"]
+    }
+  },
+  "menu-item#Registrati": {
+    "props": {
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/login",
+        "noFollow": false,
+        "tagTitle": "Registrati",
+        "text": "Registrati"
+      },
+      "blockClass": ["mobileMenu"]
+    }
+  },
+  "login#drawer": {
+    "props": {
+      "iconLabel": "Accedi / Registrati",
+      "blockClass": "drawer"
+    }
+  },
+  "login-content#drawer": {
+    "props": {
+      "isInitialScreenOptionOnly": false,
+      "defaultOption": 1,
+      "showPasswordVerificationIntoTooltip": true,
+      "blockClass": "drawer"
+    }
+  },
+  "image#modificaDatiMyAccount": {
+    "props": {
+      "width": "24px",
+      "src": "assets/icons/edit-icon.svg"
+    }
+  },
+  "image#openEyePasswordMyAccount": {
+    "props": {
+      "width": "24px",
+      "src": "assets/icons/eye-open.svg"
+    }
+  },
+  "image#closedEyePasswordMyAccount": {
+    "props": {
+      "width": "24px",
+      "src": "assets/icons/eye-close.svg"
+    }
+  }
+}

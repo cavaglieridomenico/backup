@@ -1,0 +1,192 @@
+{
+  "vendor": "whirlpoolemea",
+  "name": "product-comparison-form",
+  "version": "0.0.1",
+  "title": "Product Comparison Form",
+  "description": "Component used to render a form in the product comparison page",
+  "builders": {
+    "react": "3.x",
+    "messages": "1.x",
+    "store": "0.x",
+    "docs": "0.x"
+  },
+  "dependencies": {
+    "vtex.styleguide": "9.x",
+    "vtex.css-handles": "0.x",
+    "vtex.product-comparison": "0.x",
+    "vtex.device-detector": "0.x",
+    "vtex.pixel-manager": "1.x",
+    "vtex.store-graphql": "2.x",
+    "vtex.apps-graphql": "2.x",
+    "vtex.rich-text": "0.x"
+  },
+  "registries": [
+    "smartcheckout"
+  ],
+  "billingOptions": {
+    "termsURL": "https://compliance.vtex.com/gdpr/policies/vtex-privacy-policy",
+    "support": {
+      "url": "https://support.vtex.com/hc/requests"
+    },
+    "free": true
+  },
+  "policies": [],
+  "settingsSchema": {
+    "title": "Product Comparison Form",
+    "type": "object",
+    "properties": {
+      "userSessionApi": {
+        "title": "User Session Api (GET)",
+        "description": "Set endpoint for the API call used to retrieve user session info, this is useful to know if user is logged in (i.e write something like this: /_v/wrapper/api/user/newsletteroptin).",
+        "type": "object",
+        "properties": {
+          "endpoint": {
+            "title": "Endpoint",
+            "description": "Set the endpoint of the Api call",
+            "type": "string"
+          }
+        }
+      },
+      "newsletterSubscribeApi": {
+        "title": "Newsletter Subscribe Api (POST)",
+        "description": "Set endpoint and body (if you want to change it) for the API call that subscribe user to newsletter and create an account for it in VTEX (i.e write something like this: /_v/wrapper/api/user?userId=true).",
+        "type": "object",
+        "properties": {
+          "endpoint": {
+            "title": "Endpoint",
+            "description": "Set the endpoint of the Api call",
+            "type": "string"
+          },
+          "bodyKeys": {
+            "title": "Body Keys",
+            "description": "Set the body keys of the Api call",
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "title": "Name key",
+                    "description": "Set the key for 'name' value in the body of the API call",
+                    "type": "string"
+                  },
+                  "surname": {
+                    "title": "Surname key",
+                    "description": "Set the key for 'surname' value in the body of the API call",
+                    "type": "string"
+                  },
+                  "email": {
+                    "title": "Email key",
+                    "description": "Set the key for 'email' value in the body of the API call",
+                    "type": "string"
+                  },
+                  "campaign": {
+                    "title": "Campaign key",
+                    "description": "Set the key for 'campaign' value in the body of the API call",
+                    "type": "string"
+                  },
+                  "optin": {
+                    "title": "Optin key",
+                    "description": "Set the key for 'optin' value in the body of the API call",
+                    "type": "string"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      "userInfoApi": {
+        "title": "User Info Api (GET)",
+        "description": "Set endpoint for the API call used to retrieve user info basing on user email (i.e write something like this: /_v/wrapper/api/user/email/userinfo?email=).",
+        "type": "object",
+        "properties": {
+          "endpoint": {
+            "title": "Endpoint",
+            "description": "Set the endpoint of the Api call",
+            "type": "string"
+          }
+        }
+      },
+      "newsletterOptinApi": {
+        "title": "Newsletter Subscribe Api (PATCH)",
+        "description": "Set endpoint for the API call that set 'isNewsletterOptin' to true to user that has already an account in VTEX (i.e write something like this: /_v/wrapper/api/user/newsletteroptin).",
+        "type": "object",
+        "properties": {
+          "endpoint": {
+            "title": "Endpoint",
+            "description": "Set the endpoint of the Api call",
+            "type": "string"
+          },
+          "bodyKeys": {
+            "title": "Body Keys",
+            "description": "Set the body keys of the Api call",
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "optin": {
+                    "title": "Optin",
+                    "description": "Set the key for 'optin' value in the body of the API call (usually is 'isNewsletterOptin').",
+                    "type": "string"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      "comparisonSubscribeApi": {
+        "title": "Comparison Subscribe Api (POST)",
+        "description": "Set endpoint and body (if you want to change it) for the API call that subscribe user to comparison and send it email with comparison (i.e write something like this: /app/sfmc/productsComparison).",
+        "type": "object",
+        "properties": {
+          "endpoint": {
+            "title": "Endpoint",
+            "description": "Set the endpoint of the Api call",
+            "type": "string"
+          },
+          "bodyKeys": {
+            "title": "Body Keys",
+            "description": "Set the body keys of the Api call",
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "firstName": {
+                    "title": "First Name",
+                    "description": "Set the key for 'firstName' value in the body of the API call.",
+                    "type": "string"
+                  },
+                  "lastName": {
+                    "title": "Last Name",
+                    "description": "Set the key for 'lastName' value in the body of the API call.",
+                    "type": "string"
+                  },
+                  "email": {
+                    "title": "Email",
+                    "description": "Set the key for 'email' value in the body of the API call.",
+                    "type": "string"
+                  },
+                  "skuIds": {
+                    "title": "Sku Ids",
+                    "description": "Set the key for 'skuIds' value in the body of the API call.",
+                    "type": "string"
+                  },
+                  "specificationsAvoided": {
+                    "title": "Specifications Avoided",
+                    "description": "Set the key for 'specificationsAvoided' value in the body of the API call.",
+                    "type": "string"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

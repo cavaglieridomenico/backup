@@ -1,0 +1,86 @@
+{
+    "product-summary.shelf#plp": {
+      "children": [
+        "stack-layout#plpAspect",
+        "flex-layout.row#productMiddle",
+        "flex-layout.row#priceAndButton" 
+      ] 
+    }, 
+    "stack-layout#plpAspect": { 
+      "props": { 
+        "blockClass": "searchImage"
+      },
+      "children": [
+        "product-summary-image#shelfPLp",
+        "flex-layout.row#badge" 
+      ]  
+    },
+    "product-summary-image#shelfPLp": {
+      "props": {
+        "showBadge": false,
+        "aspectRatio": "1:1"
+      }
+    },
+    "flex-layout.row#productMiddle": {
+      "props": {
+        "blockClass": "productMiddleRow"
+      },
+      "children": ["flex-layout.col#productMiddle"]
+    },
+    "flex-layout.col#productMiddle": {
+      "children": ["product-summary-name", "product-identifier.product","flex-layout.row#availabilityRow" ]
+    }, 
+    "flex-layout.row#availabilityRow" : {
+      "props": {
+        "blockClass": "availabilityRow"
+      },
+      "children": [ "product-availability-custom","countdown.warning"]
+    },
+    "add-to-cart-button#plp":{ 
+      "props":{
+        "text":"Voeg toe aan winkelwagen",
+        "blockClass": "buyButtonProducts"
+      }
+    },
+    "flex-layout.row#badge":{
+      "props":{
+        "blockClass":"badgePlp"
+      },
+      "children":[
+        "vtex.product-highlights@2.x:product-highlights#collection",
+        "vtex.product-highlights@2.x:product-highlights#promotionPLp"
+      ]
+    },
+    "flex-layout.row#priceAndButton": {
+        "props": {
+            "blockClass": "priceAndButton"
+        },
+        "children": [
+            "product-selling-price#plp",
+            "add-to-cart-button-custom"
+        ]
+    }, 
+    "product-selling-price#plp": {
+      "props": { 
+        "blockClass": "summary",
+        "message": "{sellingPriceWithTax}"
+      }
+    },
+    "vtex.product-highlights@2.x:product-highlights#promotionPLp": {
+      "props": {
+        "type": "promotion"
+      },
+      "children": ["product-highlight-wrapper#Plp"]
+    },
+    "product-highlight-wrapper#Plp": {
+      "props": {
+        "blockClass": "promotion"
+      },
+      "children": ["product-highlight-text#Plp"]
+    },
+    "product-highlight-text#Plp": {
+      "props": {
+        "message": "{highlightName}"
+      }
+    }
+  }

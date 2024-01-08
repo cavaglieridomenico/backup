@@ -1,0 +1,43 @@
+{
+  "responsive-layout.mobile#trouble-shooting-mobile": {
+    "children": ["flex-layout.row#trouble-shooting-container-maxi-mobile"]
+  },
+  "flex-layout.row#trouble-shooting-container-maxi-mobile": {
+    "children": ["flex-layout.col#trouble-shooting-container-maxi-mobile"],
+    "props": {
+      "blockClass": "trouble-shooting-container-maxi-mobile"
+    }
+  },
+  /* MAXI CONTAINER OF ALL ELEMENT IN THE PAGE */
+  "flex-layout.col#trouble-shooting-container-maxi-mobile": {
+    "children": [
+      "breadcrumb-custom#trouble-shooting-mobile",
+      "rich-text#trouble-shooting-title-mobile",
+      "rich-text#trouble-shooting-desc-mobile",
+      "trouble-shooting-page#mobile"
+    ],
+    "props": {
+      "blockClass": "trouble-shooting-container-maxi-mobile"
+    }
+  },
+  /* BREADCRUMB SUPPORT */
+  "breadcrumb-custom#trouble-shooting-mobile": {
+    "props": {
+      /* "blockClass": "containerBreadcrumbs", */
+      "currentPage": "Problemi e soluzioni"
+    }
+  },
+  "rich-text#trouble-shooting-title-mobile": {
+    "props": {
+      "text": "Qui potrai trovare i nostri suggerimenti per risolvere i problemi del tuo elettrodomestico.",
+      "blockClass": "ts-title-mobile"
+    }
+  },
+  "rich-text#trouble-shooting-desc-mobile": {
+    "props": {
+      "text": "In pochi click tuttle le soluzioni ai semplici problemi di funzionamento e i suggerimenti per la manutenzione di lavatrici, lavastoviglie, frigoriferi, forni e piani cottura. Ti aiutiamo a riparare il tuo elettrodomestico Indesit con l'assistenza tecnica online.",
+      "blockClass": "ts-desc-mobile"
+    }
+  },
+  "trouble-shooting-page#mobile": {}
+}

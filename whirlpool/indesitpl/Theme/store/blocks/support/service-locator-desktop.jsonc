@@ -1,0 +1,75 @@
+{
+  "store.custom#service-locator": {
+    "blocks": [
+      // "analytics#service-locator",
+      "responsive-layout.desktop#service-locator-desk",
+      "responsive-layout.mobile#service-locator-mobile"
+    ]
+  },
+  "store.custom#service-locator_up": {
+    "blocks": [
+      "responsive-layout.desktop#service-locator-desk",
+      "responsive-layout.mobile#service-locator-mobile"
+    ]
+  },
+  "responsive-layout.desktop#service-locator-desk": {
+    "children": [
+      "breadcrumb-custom#service-locator",
+      "flex-layout.row#description-container-maxi-desktop",
+      "flex-layout.row#map-container-maxi-desktop"
+    ]
+  },
+  /* BREADCRUMB */
+  "breadcrumb-custom#service-locator": {
+    "props": {
+      /* "blockClass": "containerBreadcrumbs", */
+      "firstPage": "Home",
+      "previousPage": "Pomoc",
+      "previousPath": "/pomoc",
+      "currentPage": "Lokalizacje technika"
+    }
+  },
+  /* PAGE DESCRIPTION */
+  "flex-layout.row#description-container-maxi-desktop": {
+    "children": ["flex-layout.col#description-container-maxi-desktop"],
+    "props": {
+      "blockClass": "description-container-maxi-desktop"
+    }
+  },
+  "flex-layout.col#description-container-maxi-desktop": {
+    "children": [
+      "rich-text#description-title-desktop",
+      "rich-text#description-desc-desktop"
+    ],
+    "props": {
+      "blockClass": "description-container-maxi-desktop"
+    }
+  },
+  "rich-text#description-title-desktop": {
+    "props": {
+      "text": "Wyszukiwarka autoryzowanych serwisów",
+      "blockClass": "description-title-desktop"
+    }
+  },
+  "rich-text#description-desc-desktop": {
+    "props": {
+      "text": "Zadzwoń do naszego Centrum Przyjmowania Zleceń lub skontaktuj się z jednym z naszych \nAutoryzowanych Serwisów i zaplanuj spotkanie z technikiem. Jak znaleźć Autoryzowany Serwis?\n Wprowadź nazwę miejscowości lub kod pocztowy i sprawdź lokalizację Autoryzowanych\n Serwisów znajdujących się najbliżej Twojego miejsca zamieszkania",
+      "blockClass": "description-desc-desktop"
+    }
+  },
+  /* SERVICE LOCATOR MAP CONTAINER */
+  "flex-layout.row#map-container-maxi-desktop": {
+    "children": ["flex-layout.col#map-container-maxi-desktop"],
+    "props": {
+      "blockClass": "map-container-maxi-desktop"
+    }
+  },
+  /* MAXI CONTAINER OF ALL ELEMENT IN THE PAGE */
+  "flex-layout.col#map-container-maxi-desktop": {
+    "children": ["embedded-service-locator"],
+    "props": {
+      "blockClass": "map-container-maxi-desktop"
+    }
+  },
+  "embedded-service-locator#desktop-embed": {}
+}

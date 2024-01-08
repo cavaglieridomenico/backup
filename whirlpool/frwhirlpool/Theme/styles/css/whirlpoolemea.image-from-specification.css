@@ -1,0 +1,62 @@
+.container {
+  align-items: center;
+  display: flex;
+}
+.labelLink:hover {
+  color: #edb112;
+}
+.image {
+  object-fit: contain;
+  vertical-align: middle;
+  width: auto;
+}
+.label {
+  color: #505050;
+  font-family: "myriadLight";
+  font-weight: 400;
+  font-size: 0.7rem;
+  line-height: 1.3125rem;
+  margin: auto 0 auto 0.5rem;
+  text-decoration: underline;
+  width: auto;
+}
+.labelLink {
+  width: auto;
+  margin: auto 0.5rem auto 0;
+  font-family: "myriadLight";
+  font-weight: 400;
+  font-size: 0.7rem;
+  line-height: 1.3125rem;
+  color: #505050;
+  text-decoration: none;
+}
+.labelLink:hover {
+  color: #edb112;
+}
+:global(.vtex-flex-layout-0-x-flexRowContent--stockAndEtichetteBundlesCard) .image {
+  max-height: 1.75rem;
+}
+@media only screen and (min-width: 769px) {
+  /* .container .link:first-child {
+    margin-right: 0.5rem;
+  } */
+  .container:first-child {
+    margin-right: 0.5rem;
+  }
+  :global(.vtex-flex-layout-0-x-flexRowContent--stockAndEtichetteBundlesCard) .container {
+    margin-right: 0;
+  }
+}
+@media only screen and (max-width: 668px) {
+  .image {
+    width: 80%;
+  }
+  :global(.vtex-flex-layout-0-x-flexRowContent--stockAndEtichetteBundlesCard) .image {
+    width: 100%;
+  }
+}
+
+.image {
+  width: 55px;
+  height: 32px;
+}

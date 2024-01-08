@@ -1,0 +1,267 @@
+//--------------- ForniW11 Page -----------------
+{
+  "store.custom#piani-ad-induzione": {
+    "children": [
+      "flex-layout.row#bread-theme4",
+      "vtex.menu@2.x:menu#collectionLinks",
+      "experimental__visibility-layout#heroBannerAnto",
+      "toggle-layout#chatWidget",
+      ////"analytics",
+      "__fold__.experimentalLazyAssets",
+      "experimental__visibility-layout#bannerTestoReverse",
+      "experimental__visibility-layout#videoPiani",
+      "experimental__visibility-layout#bannerTesto90",
+      "experimental__visibility-layout#BnnrPostillaWCollectionFrigo4PorteBottom1",
+      "experimental__visibility-layout#BnnrPostillaWCollectionFrigo4PorteBottom21",
+      "experimental__visibility-layout#BnnrPostillaWCollectionFrigo4PorteBottom12",
+      "experimental__visibility-layout#titleBannerSupreme",
+      "shelf.relatedProducts#suggestions-w-piani-ad-induzione",
+      "flex-layout.row#halfSpace",
+      "list-context.image-list#4porte",
+      "slider-layout#photo4porte",
+      "responsive-layout.mobile#caroselloProdottiPianiInduzione",
+      "responsive-layout.desktop#caroselloProdottiPianiInduzione",
+      "newsletter-popup#footer"
+    ]
+  },
+  "responsive-layout.mobile#caroselloProdottiPianiInduzione": {
+    "children": [
+      "experimental__visibility-layout#caroselloProdottiPianiInduzioneMobile"
+    ]
+  },
+  "responsive-layout.desktop#caroselloProdottiPianiInduzione": {
+    "children": [
+      "experimental__visibility-layout#caroselloProdottiPianiInduzioneDesktop"
+    ]
+  },
+  "experimental__visibility-layout#caroselloProdottiPianiInduzioneMobile": {
+    "props": {
+      "visible": false
+    },
+    "children": [
+      "list-context.product-list#caroselloProdottiPianiInduzioneMobile"
+    ]
+  },
+  "experimental__visibility-layout#caroselloProdottiPianiInduzioneDesktop": {
+    "props": {
+      "visible": false
+    },
+    "children": [
+      "list-context.product-list#caroselloProdottiPianiInduzioneDesktop"
+    ]
+  },
+  "list-context.product-list#caroselloProdottiPianiInduzioneMobile": {
+    "blocks": ["product-summary.shelf#caroselliLanding"],
+    "children": ["slider-layout#innovazione"],
+    "props": {
+      "collection": "150",
+      "productList": {
+        "maxItems": 10,
+        "itemsPerPage": 5,
+        "minItemsPerPage": 1,
+        "scroll": "BY_PAGE",
+        "arrows": true,
+        "titleText": "Non sai da dove iniziare? Scopri i prodotti Whirlpool più venduti"
+      }
+    }
+  },
+  "list-context.product-list#caroselloProdottiPianiInduzioneDesktop": {
+    "blocks": ["product-summary.shelf#caroselliLanding"],
+    "children": ["slider-layout#caroselloProdottiPianiInduzioneDesktop"],
+    "props": {
+      "collection": "150",
+      "productList": {
+        "maxItems": 10,
+        "itemsPerPage": 5,
+        "minItemsPerPage": 1,
+        "scroll": "BY_PAGE",
+        "arrows": true,
+        "titleText": "Non sai da dove iniziare? Scopri i prodotti Whirlpool più venduti"
+      }
+    }
+  },
+  "slider-layout#caroselloProdottiPianiInduzioneMobile": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 5,
+        "tablet": 2,
+        "phone": 1
+      },
+      "infinite": true,
+      "fullWidth": true,
+      "blockClass": "shelWCollectionfMobile",
+      "showPaginationDots": "never",
+      "showNavigationArrows": "never"
+    }
+  },
+  "slider-layout#caroselloProdottiPianiInduzioneDesktop": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 5,
+        "tablet": 2,
+        "phone": 1
+      },
+      "infinite": true,
+      "fullWidth": false,
+      "blockClass": "shelf"
+    }
+  },
+  "breadcrumb#piani-ad-induzione": {
+    "props": {
+      "categories": [
+        "w-collection",
+        "w-collection/cottura",
+        "w-collection/cottura/piani-ad-induzione"
+      ],
+      "showOnMobile": false
+    }
+  },
+  "experimental__visibility-layout#videoPiani": {
+    "props": {
+      "visible": true
+    },
+    "children": ["video#piani-a-induzione"]
+  },
+  // "experimental__visibility-layout#titleBannerSupreme":{
+  //   "props":{
+  //     "visible":true
+  //   },
+  //   "children":["flex-layout.row#titleBannerSupreme"]
+  // },
+  // "flex-layout.row#titleBannerSupreme": {
+  //   "props": {
+  //     "preventHorizontalStretch": false,
+  //     "blockClass": ["halfBannerWithPostilla4PorteTop","supreme"]
+  //   },
+  //   "children": [
+  //     "flex-layout.col#leftPartPostillaWCollection4PorteTop",
+  //     "flex-layout.col#titleBannerSupreme"
+  //   ]
+  // },
+  // "flex-layout.col#titleBannerSupreme": {
+  //   "props": {
+  //     "width": "50%",
+  //     "blockClass": "columnPostilla"
+  //   },
+  //   "children": [
+  //     "experimental__visibility-layout#logoBannerTop",
+  //     "rich-text#titleBannerSupreme",
+  //     "rich-text#BannTitleWCollection4Porte",
+  //     "rich-text#BannDescWCollection4Porte",
+  //     "experimental__visibility-layout#ButtonBannerWithPostilla",
+  //     "rich-text#BannPostillaWCollection4Porte"
+  //   ]
+  // },
+  "experimental__visibility-layout#bannerTestoReverse": {
+    "props": {
+      "visible": true
+    },
+    "children": ["flex-layout.row#bannerTestoReverse"]
+  },
+  "flex-layout.row#bannerTestoReverse": {
+    "props": {
+      "blockClass": ["bannerTesto", "width100"]
+    },
+    "children": [
+      "experimental__visibility-layout#titleBannerTesto",
+      "experimental__visibility-layout#DescBannerTesto",
+      "experimental__visibility-layout#ImageBannerTesto"
+    ]
+  },
+  "video#piani-a-induzione": {
+    "props": {
+      "poster": "https://assets.wpsandwatch.com/storage/images/3/3/1/9/12079133-4-ita-IT/CoverVIDEO.webp",
+      "loop": false,
+      "visible": true,
+      "autoPlay": false,
+      "muted": true,
+      "src": "https://youtu.be/G49YT2EpHVk",
+      "blockClass": "videoCottura"
+    }
+  },
+  "info-card#heroBannerpiani-ad-induzione": {
+    "props": {
+      "id": "hero-banner-w-collection",
+      "callToActionMode": "none",
+      "isFullModeStyle": false,
+      "textPosition": "left",
+      "imageUrl": "https://assets.wpsandwatch.com/storage/images/_aliases/original_compressed/6/2/1/0/12240126-1-ita-IT/HeroD.webp",
+      "headline": "W Collection - Piani Cottura a Induzione",
+      "subhead": "Connessi con la cottura intelligente 6° SENSO",
+      "blockClass": ["heroBanner", "heroBannerWCollection"],
+      "textAlignment": "left"
+    }
+  },
+  "info-card#Sperimenta": {
+    "props": {
+      "id": "hero-banner-w-collection-Sperimenta",
+      "callToActionMode": "none",
+      "isFullModeStyle": true,
+      "textPosition": "center",
+      "imageUrl": "",
+      "headline": "Sperimenta la nuova esperienza di cottura interattiva",
+      "subhead": "I sensori intelligenti 6° SENSO controllano e regolano il livello di potenza per cucinare senza bruciare o far attaccare i cibi, garantendo risultati sempre impeccabili. Lasciatevi ispirare dalla perfezione e sperimentate un modo completamente nuovo di cucinare..",
+      "blockClass": ["halfBannerReverse", "contain"],
+      "textAlignment": "center"
+    }
+  },
+  "info-card#Smartsense": {
+    "props": {
+      "id": "hero-banner-w-collection",
+      "callToActionMode": "none",
+      "isFullModeStyle": false,
+      "textPosition": "left",
+      "imageUrl": "https://assets.wpsandwatch.com/storage/images/_aliases/original_compressed/5/5/2/0/12240255-2-ita-IT/SMARTSENSED.webp",
+      "headline": "Smartsense",
+      "subhead": "Facile da usare grazie a video, immagini e un'app di facile utilizzo, la tecnologia 6° SENSO offre una guida step by step con fino a 100 ricette per un'esperienza di cottura coinvolgente.",
+      "blockClass": ["halfBanner", "contain", "smallBanner"],
+      "textAlignment": "left"
+    }
+  },
+  "info-card#FlexiFull": {
+    "props": {
+      "id": "hero-banner-w-collection",
+      "callToActionMode": "none",
+      "isFullModeStyle": false,
+      "textPosition": "left",
+      "imageUrl": "https://assets.wpsandwatch.com/storage/images/_aliases/original_compressed/1/8/1/0/12240181-2-ita-IT/FlexifullD.webp",
+      "headline": "FlexiFull",
+      "subhead": "FlexiFull consente l'utilizzo di pentole e padelle di diverso tipo forme e dimensioni per potersi muovere liberamente sulla superficie completamente flessibile. Grazie alla libertà di FlexiFull, è possibile utilizzare la stessa temperatura su tutto il piano di cottura. La temperatura è distribuita uniformemente per risparmiare tempo ed energia. La rivoluzione della cottura inizia da qui.",
+      "blockClass": ["halfBannerReverse", "contain", "smallBanner"],
+      "textAlignment": "left"
+    }
+  },
+  "info-card#MySmartDisplay": {
+    "props": {
+      "id": "hero-banner-w-collection",
+      "callToActionMode": "none",
+      "isFullModeStyle": false,
+      "textPosition": "left",
+      "imageUrl": "https://assets.wpsandwatch.com/storage/images/_aliases/original_compressed/3/1/3/9/12109313-2-ita-IT/Odour_D.webp",
+      "headline": "MySmartDisplay",
+      "subhead": "Disponibile sui piani cottura W11, il MySmartDisplay TFT da 4,5 guida ogni volta i consumatori verso risultati perfetti. Selezionando semplicemente una delle tante combinazioni di cottura, MySmartDisplay fornisce assistenza passo dopo passo in tempo reale. L'interfaccia intuitiva ed essenziale di MySmartDisplay ti consente di scegliere tra varie categorie di cibi e metodi di cottura per ottenere sempre grandi risultati in modo intelligente.",
+      "blockClass": ["halfBanner", "contain", "smallBanner"],
+      "textAlignment": "left"
+    }
+  },
+  "shelf.relatedProducts#suggestions-w-piani-ad-induzione": {
+    "blocks": ["product-summary.shelf"],
+    "props": {
+      "collection": "151",
+      "productList": {
+        "maxItems": 10,
+        "itemsPerPage": 3,
+        "minItemsPerPage": 1,
+        "scroll": "BY_PAGE",
+        "arrows": true,
+        "titleText": "Non sai da dove iniziare? Scopri i prodotti Whirlpool più venduti"
+      },
+      "blockClass": ["margin3125", "slideMargin", "slide20width"]
+    }
+  }
+  //------------------------------
+  // "flex-layout.row#App6SENSO"
+  //------------------------------
+  //---recommended products ------
+  //------------------------------
+}

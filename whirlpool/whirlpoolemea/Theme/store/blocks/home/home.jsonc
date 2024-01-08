@@ -1,0 +1,2094 @@
+{
+  "store.home": {
+    "blocks": [
+      "responsive-layout.desktop#hpDesktop",
+      "responsive-layout.mobile#hpMobile"
+    ]
+  },
+  "responsive-layout.desktop#hpDesktop": {
+    "children": [
+      // "toggle-layout#blackFridayHome",
+      "toggle-layout#bannerWithPostillaNewHome",
+      "toggle-layout#promoSlider",
+      "toggle-layout#homeTitle",
+      "toggle-layout#mobileMenuCategoryHome",
+      "toggle-layout#carouselCollectionHome1",
+      "toggle-layout#bannerWithPostilla3",
+      "toggle-layout#bannerWithPostilla2",
+      // "analytics#home",
+      "__fold__",
+      "flex-layout.row#halfSpace",
+      // "toggle-layout#carouselCollectionHome2",
+      // "toggle-layout#carouselCollectionHome3",
+      // "flex-layout.row#halfSpace",
+      // "toggle-layout#heroBannerHome",
+      // "toggle-layout#halfBannerHomeWithPostilla",
+      // "flex-layout.row#halfSpace",
+      // "toggle-layout#gridHome",
+      // "toggle-layout#bannerNewHome",
+      // "flex-layout.row#halfSpace",
+      "toggle-layout#TechnologyDesign",
+      "toggle-layout#bannerSliderHome",
+
+      "toggle-layout#supp",
+      "toggle-layout#textSEOHome"
+    ]
+  },
+  "responsive-layout.mobile#hpMobile": {
+    "children": [
+      "toggle-layout#bannerArrowDots",
+      "analytics#home",
+      "toggle-layout#carouselCollectionHomeMobile",
+      "toggle-layout#carouselCollectionHomeMobile2",
+      "flex-layout.row#halfSpace",
+      "toggle-layout#homeTitleMobile",
+      "toggle-layout#mobileMenuCategoryHome",
+      "toggle-layout#bannerAdvantageForYou",
+      "flex-layout.row#halfSpace",
+      "toggle-layout#bannerHpButton1",
+      "toggle-layout#bannerHpButton2",
+      "toggle-layout#textSEOHome"
+    ]
+  },
+  "toggle-layout#carouselCollectionNewHome1": {
+    "props": {
+      "visible": true
+    },
+    "children": ["list-context.product-list#carouselCollectionNewHome1"]
+  },
+  "list-context.product-list#carouselCollectionNewHome1": {
+    "blocks": ["product-summary.shelf#caroselliLanding"],
+    "children": ["slider-layout#carouselCollectionNewHome"],
+    "props": {
+      "collection": "138",
+      "productList": {
+        "maxItems": 10,
+        "itemsPerPage": 5,
+        "minItemsPerPage": 1,
+        "scroll": "BY_PAGE",
+        "arrows": true,
+        "titleText": "Non sai da dove iniziare? Scopri i prodotti Whirlpool più venduti"
+      }
+    }
+  },
+  "slider-layout#carouselCollectionNewHome": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 5,
+        "tablet": 2,
+        "phone": 1
+      },
+      "showNavigationArrows": "desktopOnly",
+      "showPaginationDots": "mobileOnly",
+      "infinite": true,
+      "fullWidth": false,
+      "blockClass": "shelf"
+    }
+  },
+  "toggle-layout#bannerArrowDots": {
+    "title": "first HP slider",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "list-context.image-list#bannerArrowsDots",
+      "flex-layout.row#halfSpace"
+    ]
+  },
+  "list-context.image-list#bannerArrowsDots": {
+    "children": ["slider-layout#bannerArrowsDots"],
+    "props": {
+      "images": [
+        {
+          "image": "https://assets.wpsandwatch.com/storage/images/_aliases/original_compressed/0/7/7/1/12071770-1-ita-IT/Gallery1_D.jpg"
+        },
+        {
+          "image": "https://assets.wpsandwatch.com/storage/images/_aliases/original_compressed/4/8/9/1/12071984-1-ita-IT/Gallery2_D.jpg",
+          "description": "something something"
+        },
+        {
+          "image": "https://assets.wpsandwatch.com/storage/images/_aliases/original_compressed/0/0/9/3/12073900-1-ita-IT/Gallery3_D.jpg",
+          "description": "something something"
+        }
+      ]
+    }
+  },
+  "slider-layout#bannerArrowsDots": {
+    "title": "first HP slider layout",
+    "props": {
+      "blockClass": "sliderWBannerArrowsDots",
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "autoplay": {
+        "timeout": "3000",
+        "stopOnHover": "false"
+      },
+      "infinite": true,
+      "fullWidtht": false,
+      "showPaginationDots": "desktopOnly",
+      "showNavigationArrows": "mobileOnly"
+    }
+  },
+  "slider-layout#bannerHomeNs": {
+    "props": {
+      "blockClass": "sliderBannerHome",
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "autoplay": {
+        "timeout": "3000",
+        "stopOnHover": "false"
+      },
+      "infinite": true,
+      "fullWidtht": false,
+      "showPaginationDots": "never"
+    },
+    "children": [
+      "toggle-layout#bannerWithPostillaNewHome",
+      "toggle-layout#bannerWithPostillaHome2",
+      "toggle-layout#bannerWithPostillaHome3"
+    ]
+  },
+  "toggle-layout#bannerWithPostillaNewHome": {
+    "props": {
+      "visible": true
+    },
+    // "children": ["analytics-wrapper.promotion#promoBannerView"]
+    "children": ["flex-layout.row#bannerWithPostillaNewHome"]
+  },
+  "analytics-wrapper.promotion#promoBannerView": {
+    "props": {
+      "propsAnalytics": {
+        "id": "",
+        "name": "",
+        "position": "",
+        "creative": ""
+      }
+    },
+    "children": ["flex-layout.row#bannerWithPostillaNewHome"]
+  },
+  // carousel home 1
+  "toggle-layout#carouselCollectionHomeMobile": {
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "rich-text#raccomandati",
+      "list-context.product-list#carouselCollectionHomeMobile"
+    ]
+  },
+  "rich-text#raccomandati": {
+    "props": {
+      "textAlignment": "RIGHT",
+      "textPosition": "LEFT",
+      "text": "Produits recommandés >",
+      "blockClass": "textMoreProduct"
+    }
+  },
+  "list-context.product-list#carouselCollectionHomeMobile": {
+    "blocks": ["product-summary.shelf#caroselliLanding"],
+    "children": ["slider-layout#carouselCollectionHomeMobile"],
+    "props": {
+      "collection": "138",
+      "productList": {
+        "maxItems": 10,
+        "itemsPerPage": 5,
+        "minItemsPerPage": 1,
+        "scroll": "BY_PAGE",
+        "arrows": true,
+        "titleText": "Non sai da dove iniziare? Scopri i prodotti Whirlpool più venduti"
+      }
+    }
+  },
+  "slider-layout#carouselCollectionHomeMobile": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 5,
+        "tablet": 2,
+        "phone": 1
+      },
+      "infinite": true,
+      "fullWidth": true,
+      "blockClass": "shelfMobile",
+      "showPaginationDots": "never",
+      "showNavigationArrows": "never"
+    }
+  },
+
+  // carousel home 2
+  "toggle-layout#carouselCollectionHomeMobile2": {
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "rich-text#ventes",
+      "list-context.product-list#carouselCollectionHomeMobile2"
+    ]
+  },
+  "rich-text#ventes": {
+    "props": {
+      "textAlignment": "RIGHT",
+      "textPosition": "LEFT",
+      "text": "Meilleurs ventes >",
+      "blockClass": "textMoreProduct"
+    }
+  },
+  "list-context.product-list#carouselCollectionHomeMobile2": {
+    "blocks": ["product-summary.shelf#caroselliLanding"],
+    "children": ["slider-layout#carouselCollectionHomeMobile2"],
+    "props": {
+      "collection": "286",
+      "productList": {
+        "maxItems": 10,
+        "itemsPerPage": 5,
+        "minItemsPerPage": 1,
+        "scroll": "BY_PAGE",
+        "arrows": true,
+        "titleText": "Non sai da dove iniziare? Scopri i prodotti Whirlpool più venduti"
+      }
+    }
+  },
+  "slider-layout#carouselCollectionHomeMobile2": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 5,
+        "tablet": 2,
+        "phone": 1
+      },
+      "infinite": true,
+      "fullWidth": true,
+      "blockClass": "shelfMobile",
+      "showPaginationDots": "never",
+      "showNavigationArrows": "never"
+    }
+  },
+  // slider 1
+  "toggle-layout#bannerHpButton1": {
+    "props": {
+      "visible": true
+    },
+    "children": ["slider-layout#bannerHpButton", "flex-layout.row#halfSpace"]
+  },
+  "slider-layout#bannerHpButton": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 3,
+        "tablet": 3,
+        "phone": 1
+      },
+      "infinite": false,
+      "showNavigationArrows": "never",
+      "showPaginationDots": "mobileOnly",
+      "autoplay": {
+        "timeout": 5000,
+        "stopOnHover": false
+      },
+      "blockClass": ["carousel", "dotsMedium"]
+    },
+    "children": [
+      "link#bannerBottomHP1",
+      "link#bannerBottomHP2",
+      "link#bannerBottomHP3"
+    ]
+  },
+  "link#bannerBottomHP1": {
+    "props": {
+      "blockClass": "bannerBottomPLP",
+      "href": "#"
+    },
+    "children": [
+      "image#bannerBottomPLP",
+      "flex-layout.row#bannerBottomPLPTexts"
+    ]
+  },
+  "link#bannerBottomHP2": {
+    "props": {
+      "blockClass": "bannerBottomPLP",
+      "href": "#"
+    },
+    "children": [
+      "image#bannerBottomPLP",
+      "flex-layout.row#bannerBottomPLPTexts"
+    ]
+  },
+  "link#bannerBottomHP3": {
+    "props": {
+      "blockClass": "bannerBottomPLP",
+      "href": "#"
+    },
+    "children": [
+      "image#bannerBottomPLP",
+      "flex-layout.row#bannerBottomPLPTexts"
+    ]
+  },
+  "flex-layout.row#bannerBottomPLPTexts": {
+    "props": {
+      "blockClass": "bannerBottomPLPTexts"
+    },
+    "children": ["flex-layout.row#BiggerTitles", "flex-layout.row#MoreAbout"]
+  },
+  "flex-layout.row#BiggerTitles": {
+    "props": {
+      "blockClass": "BiggerTitles"
+    },
+    "children": [
+      "rich-text#firstTitleBannerPLP",
+      "rich-text#secondTitleBannerPLP"
+    ]
+  },
+  "flex-layout.row#MoreAbout": {
+    "props": {
+      "blockClass": "MoreAbout"
+    },
+    "children": ["rich-text#buttonMoreAboutPLP"]
+  },
+  "rich-text#firstTitleBannerPLP": {
+    "props": {
+      "text": "Toploaders",
+      "blockClass": "firstTitleBannerPLP"
+    }
+  },
+  "rich-text#secondTitleBannerPLP": {
+    "props": {
+      "text": "Online exclusive items",
+      "blockClass": "secondTitleBannerPL"
+    }
+  },
+  "rich-text#buttonMoreAboutPLP": {
+    "props": {
+      "text": "more about >",
+      "blockClass": "buttonMoreAboutPLP"
+    }
+  },
+  "image#bannerBottomPLP": {
+    "props": {
+      "src": "assets/placeholders/image-placeholder-16-9.png",
+      "blockClass": "imageBannerBottomPLP"
+    }
+  },
+  // slider 2
+  "toggle-layout#bannerHpButton2": {
+    "props": {
+      "visible": true
+    },
+    "children": ["slider-layout#bannerHpButton2"]
+  },
+  "slider-layout#bannerHpButton2": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 3,
+        "tablet": 3,
+        "phone": 1
+      },
+      "infinite": false,
+      "showNavigationArrows": "never",
+      "showPaginationDots": "mobileOnly",
+      "autoplay": {
+        "timeout": 5000,
+        "stopOnHover": false
+      },
+      "blockClass": ["carousel", "dotsMedium"]
+    },
+    "children": [
+      "link#bannerBottomHP1",
+      "link#bannerBottomHP2",
+      "link#bannerBottomHP3"
+    ]
+  },
+  "toggle-layout#blackFridayHome": {
+    "props": {
+      "visible": true
+    },
+    "children": ["flex-layout.row#blackFridayHome", "flex-layout.row#halfSpace"]
+  },
+  "flex-layout.row#blackFridayHome": {
+    "children": [
+      "image#whirlpool-logo-black-friday1",
+      "flex-layout.col#black-friday-titlemain"
+      // "black-friday-app"
+    ],
+    "props": {
+      "blockClass": "blackFridayContainer"
+    }
+  },
+  "image#whirlpool-logo-black-friday1": {
+    "props": {
+      "src": "https://frwhirlpool.vtexassets.com/arquivos/black-friday-logo-2.png",
+      "maxWidth": 100,
+      "blockClass": "blackFridayLogo"
+    }
+  },
+  "flex-layout.col#black-friday-titlemain": {
+    "children": ["rich-text#black-friday-title-main1"],
+    "props": {
+      "blockClass": "blackFridayTitleContainer"
+    }
+  },
+  "rich-text#black-friday-title-main1": {
+    "props": {
+      "text": "# BLACK <span class=\"vtex-rich-text-0-x-paragraph--blackFridayTitleMainPostilla\">DU 25 AU 29 NOVEMBRE 2021<span><span class=\"vtex-rich-text-0-x-paragraph--blackFridayTitleMain2\">FRIDAY *</span>",
+      "textAlignment": "LEFT",
+      "textPosition": "LEFT",
+      "blockClass": ["blackFridayTitleMain1"]
+    }
+  },
+  "flex-layout.col#leftPartPostillaNewHome": {
+    "props": {
+      "width": "40%",
+      "preventVerticalStretch": true,
+      "blockClass": ["columnPostilla", "columnPostillaBottom"]
+    },
+    "children": [
+      "rich-text#BannTitle",
+      "rich-text#BannDesc",
+      "toggle-layout#ButtonBannerWithPostilla",
+      "rich-text#BannPostilla"
+    ]
+  },
+  "toggle-layout#videoHome": {
+    "props": {
+      "visible": true
+    },
+    "children": ["stack-layout#video"]
+  },
+  "toggle-layout#homeTitle": {
+    "props": {
+      "visible": true
+    },
+    "children": ["rich-text#homeTitle1"]
+  },
+  "toggle-layout#homeTitleMobile": {
+    "props": {
+      "visible": true
+    },
+    "children": ["rich-text#homeTitle1Mobile"]
+  },
+  "rich-text#homeTitle1": {
+    "props": {
+      "text": "# Électroménager Whirlpool",
+      "blockClass": ["smallerh1"]
+    }
+  },
+  "rich-text#homeTitle1Mobile": {
+    "props": {
+      "textAlignment": "RIGHT",
+      "textPosition": "LEFT",
+      "text": "Électroménager Whirlpool >",
+      "blockClass": ["textMoreProduct"]
+    }
+  },
+  "toggle-layout#bannerSliderHome": {
+    "props": {
+      "visible": true
+    },
+    "children": ["slider-layout#bannerHome"]
+  },
+  "slider-layout#bannerHome": {
+    "props": {
+      "totalItems": 2,
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "autoplay": {
+        "timeout": 3000,
+        "stopOnHover": false
+      },
+      "infinite": true,
+      "showPaginationDots": "mobileOnly",
+      "showNavigationArrows": "desktopOnly",
+      "blockClass": "imageCarousel"
+    },
+    "children": ["toggle-layout#bannerNewHome", "toggle-layout#bannerNewHome2"]
+  },
+  "toggle-layout#bannerNewHome": {
+    "children": ["flex-layout.row#bannerNewHome"]
+  },
+  "toggle-layout#bannerNewHome2": {
+    "children": ["flex-layout.row#bannerNewHome"]
+  },
+  "flex-layout.row#bannerNewHome": {
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": [
+        "columnPostillaBannerAntonio",
+        "bgColorAntonioHero2",
+        "bannerNewHomepage"
+      ]
+    },
+    "children": [
+      "flex-layout.col#leftPartbannerNewHome",
+      "flex-layout.col#rightPartbannerNewHome"
+    ]
+  },
+  "flex-layout.col#leftPartbannerNewHome": {
+    "props": {
+      "width": "50%",
+      "preventVerticalStretch": true,
+      "blockClass": ["columnPostilla", "columnPostillaBottom"]
+    },
+    "children": [
+      "rich-text#BanntitleParag2",
+      "rich-text#BannDesc",
+      "toggle-layout#pricesBannerHome",
+      "toggle-layout#ButtonBannerWithPostillaNew",
+      "toggle-layout#warrantyLogo",
+      "rich-text#BannPostillaSlider"
+    ]
+  },
+  "rich-text#BannPostillaSlider": {
+    "props": {
+      "text": "*Considerando la capacità dello spazio convertibile impostato a 4 ° C.",
+      "blockClass": ["postillaBannerPostilla", "anchorPostilla"]
+    }
+  },
+  "toggle-layout#pricesBannerHome": {
+    "props": {
+      "visible": true
+    },
+    "children": ["flex-layout.row#pricesBannerHome"]
+  },
+  "flex-layout.row#pricesBannerHome": {
+    "props": {
+      "width": "100%",
+      "preventVerticalStretch": true,
+      "blockClass": ["pricesBannerHome"]
+    },
+    "children": ["flex-layout.col#prices", "flex-layout.col#postillaHP"]
+  },
+  "flex-layout.col#prices": {
+    "props": {
+      "width": "40%",
+      "preventVerticalStretch": true,
+      "blockClass": [""]
+    },
+    "children": ["rich-text#BannListPrice", "rich-text#BannPrice"]
+  },
+  "flex-layout.col#postillaHP": {
+    "props": {
+      "width": "60%",
+      "preventVerticalStretch": true,
+      "blockClass": ["descBannerPostillaHP"]
+    },
+    "children": ["rich-text#BannDesc2"]
+  },
+  "rich-text#BannDesc2": {
+    "props": {
+      "text": "*Descrizione",
+      "blockClass": "descBannerPostillaHP"
+    }
+  },
+  "toggle-layout#ButtonBannerWithPostillaNew": {
+    "props": {
+      "visible": true
+    },
+    "children": ["link#ButtonBannNew"]
+  },
+  "link#ButtonBannNew": {
+    "props": {
+      "label": "TESTO BOTTONE",
+      "href": "#",
+      "displayMode": "button",
+      "blockClass": ["postillaButton", "noMargin"]
+    }
+  },
+  "toggle-layout#warrantyLogo": {
+    "props": {
+      "visible": true
+    },
+    "children": ["flex-layout.row#warrantyLogo"]
+  },
+  "flex-layout.row#warrantyLogo": {
+    "props": {
+      "preventVerticalStretch": true,
+      "blockClass": ["warrantyLogo"]
+    },
+    "children": ["image#warranty5yearsPLP2"]
+  },
+  "image#warranty5yearsPLP2": {
+    "props": {
+      "src": "assets/warranty5yearsNew.png",
+      "maxHeight": 60,
+      "blockClass": ["garantieLogo", "maxHeightWarranty"]
+    }
+  },
+  "rich-text#BanntitleParag2": {
+    "props": {
+      "text": "# Titolo",
+      "blockClass": "titlePBannerPostillaNewHP"
+    }
+  },
+  "rich-text#BannListPrice": {
+    "props": {
+      "text": "799 €",
+      "blockClass": "NewHPListPrice"
+    }
+  },
+  "rich-text#BannPrice": {
+    "props": {
+      "text": "699 €",
+      "blockClass": "NewHPPrice"
+    }
+  },
+  "flex-layout.col#rightPartbannerNewHome": {
+    "props": {
+      "width": "50%",
+      "blockClass": ["columnPostillaImage", "columnPostillaImageHomeBanner"]
+    },
+    "children": ["image#bannerPostilla2"]
+  },
+  "image#bannerPostilla2": {
+    "props": {
+      "src": "assets/placeholders/image-placeholder-16-9.png",
+      "blockClass": ["imagePostillaBanner2"]
+    }
+  },
+  "toggle-layout#bannerWithPostillaHome2": {
+    "props": {
+      "visible": true
+    },
+    "children": ["flex-layout.row#bannerWithPostillaHome"]
+  },
+  "toggle-layout#bannerWithPostillaHome3": {
+    "props": {
+      "visible": true
+    },
+    "children": ["flex-layout.row#bannerWithPostillaHome"]
+  },
+  "toggle-layout#bannerWithPostillaHome4": {
+    "props": {
+      "visible": true
+    },
+    "children": ["flex-layout.row#bannerWithPostillaHome"]
+  },
+  "toggle-layout#bannerWithPostillaHome5": {
+    "props": {
+      "visible": true
+    },
+    "children": ["flex-layout.row#bannerWithPostillaNewHome"]
+  },
+  "flex-layout.row#bannerWithPostillaNewHome": {
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": ["columnPostillaBannerAntonio", "bgColorAntonioHero"]
+    },
+    "children": [
+      "flex-layout.col#leftPartPostillaNewHome",
+      "flex-layout.col#rightPartPostilla"
+    ]
+  },
+  "toggle-layout#bannerWithPostilla2": {
+    "props": {
+      "visible": true
+    },
+    "children": ["flex-layout.row#bannerWithPostilla2"]
+  },
+  "toggle-layout#bannerWithPostilla3": {
+    "props": {
+      "visible": true
+    },
+    "children": ["flex-layout.row#bannerWithPostilla3"]
+  },
+  "flex-layout.row#bannerWithPostilla2": {
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": [
+        "columnPostillaBannerAntonio",
+        "bgColorAntonioHero",
+        "noMarginBottom",
+        "bannerWithPostillaMobile2"
+      ]
+    },
+    "children": [
+      "flex-layout.col#leftPartPostilla2",
+      "flex-layout.col#rightPartPostilla"
+    ]
+  },
+  "flex-layout.row#bannerWithPostilla3": {
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": [
+        "columnPostillaBannerAntonio",
+        "bgColorAntonioHero",
+        "noMarginBottom",
+        "bannerWithPostillaMobile3",
+        "marginTopDesktop"
+      ]
+    },
+    "children": [
+      "flex-layout.col#rightPartPostilla",
+      "flex-layout.col#leftPartPostilla3"
+    ]
+  },
+  "flex-layout.col#leftPartPostilla2": {
+    "props": {
+      "width": "40%",
+      "preventVerticalStretch": true,
+      "blockClass": ["columnPostilla", "columnPostillaBottom"]
+    },
+    "children": [
+      "rich-text#BannTitle",
+      "rich-text#BannDesc",
+      "toggle-layout#ButtonBannerWithPostilla"
+    ]
+  },
+  "rich-text#BannPostilla3": {
+    "props": {
+      "text": "*Considerando la capacità dello spazio convertibile impostato a 4 ° C.",
+      "blockClass": [
+        "postillaBannerPostilla",
+        "anchorPostilla",
+        "bannPostilla3"
+      ]
+    }
+  },
+  "toggle-layout#ButtonBannerWithPostilla3": {
+    "props": {
+      "visible": true
+    },
+    // "children": ["flex-layout.row#promoBanner"]
+    "children": ["link#ButtonBann3"]
+    //   "children": ["analytics-wrapper#promoBanner"]
+  },
+  "flex-layout.row#promoBanner": {
+    "props": {
+      "blockClass": "linkPromoBanner"
+    },
+    "children": ["rich-text-custom#promoBanner"]
+  },
+  "rich-text-custom#promoBanner": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "<a href=\"#\" class=\"lh-copy vtex-rich-text-0-x-paragraph vtex-rich-text-0-x-paragraph--remove-link-styles lh-copy vtex-rich-text-0-x-paragraph vtex-rich-text-0-x-paragraph vtex-rich-text-0-x-paragraph--custom vtex-rich-text-0-x-paragraph--customPromoBannerLink\">DOWIEDZ SIĘ WIĘCEJ</a>",
+      "blockClass": "linkPromoBanner"
+    }
+  },
+  "link#ButtonBann3": {
+    "props": {
+      "label": "TESTO BOTT",
+      "href": "#",
+      "displayMode": "button",
+      "blockClass": ["postillaButton", "buttonBann3"]
+    }
+  },
+  "flex-layout.col#leftPartPostilla3": {
+    "props": {
+      "width": "40%",
+      "preventVerticalStretch": true,
+      "blockClass": ["columnPostilla", "columnPostillaBottom"]
+    },
+    "children": [
+      "rich-text#BannTitle",
+      "rich-text#BannDesc",
+      "toggle-layout#ButtonBannerWithPostilla3",
+      "rich-text#BannPostilla3"
+    ]
+  },
+  "toggle-layout#heroBannerHome": {
+    "props": {
+      "visible": true
+    },
+    "children": ["info-card#heroBanner1", "flex-layout.row#space"]
+  },
+  "toggle-layout#halfBannerHomeWithPostilla": {
+    "props": {
+      "visible": true
+    },
+    "children": ["info-card#half3WithPostilla", "info-card#half4"]
+  },
+  "toggle-layout#halfBannerHome": {
+    "props": {
+      "visible": true
+    },
+    "children": ["info-card#half3", "info-card#half4"]
+  },
+  "info-card#half3WithPostilla": {
+    "props": {
+      "id": "half-banner-seconf",
+      "isFullModeStyle": false,
+      "imageUrl": "assets/placeholders/placeholder-image-square.jpg",
+      "headline": "Everest Serie400",
+      "subhead": "La più grande rivoluzione nel mondo del built-in.",
+      "callToActionText": "En savoir plus",
+      "callToActionUrl": "#",
+      "blockClass": ["halfBannerReverse", "bannerWithPostilla"],
+      "textAlignment": "left"
+    }
+  },
+  "toggle-layout#gridHome": {
+    "props": {
+      "visible": true
+    },
+    "children": ["rich-text#Technology"]
+  },
+  "toggle-layout#contattaciHome": {
+    "props": {
+      "visible": true
+    },
+    "children": ["info-card#contattaci", "flex-layout.row#space"]
+  },
+  "link#bannerHome2": {
+    "props": {
+      "href": "#",
+      "blockClass": "bannerLinkWrapper"
+    },
+    "children": ["image#bannerHome"]
+  },
+  "image#bannerHome": {
+    "props": {
+      "src": "https://storecomponents.vteximg.com.br/arquivos/banner-infocard2.png",
+      "maxHeight": 650,
+      "blockClass": "imageHomeBanner"
+    }
+  },
+  "toggle-layout#promoSlider": {
+    "props": {
+      "visible": true
+    },
+    "children": ["slider-layout#promo", "flex-layout.row#space"]
+  },
+  "toggle-layout#bannerLastBanner": {
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "info-card#lastHalf",
+      "info-card#lastHalfReverse",
+      "flex-layout.row#space"
+    ]
+  },
+  "toggle-layout#supp": {
+    "props": {
+      "visible": true
+    },
+    "children": ["slider-layout#linkCards"]
+  },
+
+  "info-card#heroBanner1": {
+    "props": {
+      "id": "hero-banner-main",
+      "isFullModeStyle": false,
+      "textPosition": "left",
+      "imageUrl": "assets/placeholders/placeholder-image-square.jpg",
+      "headline": "Supreme Care",
+      "subhead": "La lavatrice più silenziosa",
+      "callToActionText": "En savoir plus",
+      "callToActionUrl": "/whirlpool-supreme-8415-8-kg-la-lavatrice-piu-silenziosa/p",
+      "blockClass": "heroBanner",
+      "textAlignment": "left"
+    }
+  },
+  "info-card#half4": {
+    "props": {
+      "id": "half-banner-first",
+      "isFullModeStyle": false,
+      "imageUrl": "assets/placeholders/placeholder-image-square.jpg",
+      "headline": "W Collection",
+      "subhead": "Capi Freschi fino a 6 ore dopo la fine del ciclo di lavaggio. Fresh Care permette di tenere fresca la biancheria anche se non è possibile scaricarla alla fine del ciclo grazie a movimenti periodici del cestello.",
+      "callToActionText": "En savoir plus",
+      "callToActionUrl": "/wcollection",
+      "blockClass": "halfBanner",
+      "textAlignment": "left"
+    }
+  },
+  "info-card#half2": {
+    "props": {
+      "id": "half-banner-seconf",
+      "isFullModeStyle": false,
+      "imageUrl": "assets/placeholders/placeholder-image-square.jpg",
+      "headline": "Everest Serie400",
+      "subhead": "La più grande rivoluzione nel mondo del built-in.",
+      "callToActionText": "En savoir plus",
+      "callToActionUrl": "#",
+      "blockClass": "halfBannerReverse",
+      "textAlignment": "left"
+    }
+  },
+  "info-card#half3": {
+    "props": {
+      "id": "half-banner-seconf",
+      "isFullModeStyle": false,
+      "imageUrl": "assets/placeholders/placeholder-image-square.jpg",
+      "headline": "Everest Serie400",
+      "subhead": "La più grande rivoluzione nel mondo del built-in.",
+      "callToActionText": "En savoir plus",
+      "callToActionUrl": "#",
+      "blockClass": "halfBannerReverse",
+      "textAlignment": "left"
+    }
+  },
+  "flex-layout.row#space": {
+    "props": {
+      "blockClass": "rowSpace"
+    }
+  },
+  "rich-text#Technology": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Technology & Design",
+      "blockClass": "textHome"
+    }
+  },
+  "flex-layout.row#grid": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "gridHomePage"
+    },
+    "children": [
+      "flex-layout.row#firstCard",
+      "flex-layout.row#secondCard",
+      "flex-layout.row#thirdCard"
+    ]
+  },
+  "flex-layout.col#left": {
+    "props": {
+      "blockClass": "grid"
+    },
+    "children": ["flex-layout.row#firstCard", "flex-layout.row#fourthCard"]
+  },
+  "flex-layout.row#firstCard": {
+    "props": {
+      "fullWidth": true
+    },
+    "children": ["info-card#Grid1"]
+  },
+  "flex-layout.row#fourthCard": {
+    "props": {
+      "fullWidth": true
+    },
+    "children": ["info-card#Grid4"]
+  },
+  "flex-layout.col#middle": {
+    "props": {
+      "blockClass": "grid"
+    },
+    "children": ["flex-layout.row#secondCard", "flex-layout.row#fifthCard"]
+  },
+  "flex-layout.row#secondCard": {
+    "props": {
+      "blockClass": "gridRow",
+      "fullWidth": true
+    },
+    "children": ["info-card#Grid2"]
+  },
+  "flex-layout.row#fifthCard": {
+    "props": {
+      "fullWidth": true
+    },
+    "children": ["info-card#Grid5"]
+  },
+
+  "flex-layout.col#right": {
+    "props": {
+      "blockClass": "grid"
+    },
+    "children": ["flex-layout.row#thirdCard", "flex-layout.row#sixthCard"]
+  },
+  "flex-layout.row#thirdCard": {
+    "props": {
+      "blockClass": "gridRow",
+      "fullWidth": true
+    },
+    "children": ["info-card#Grid3three"]
+  },
+  "flex-layout.row#sixthCard": {
+    "props": {
+      "fullWidth": true
+    },
+    "children": ["info-card#Grid6"]
+  },
+
+  "info-card#Grid1": {
+    "props": {
+      "htmlId": "primo",
+      "id": "banner-grid-home",
+      "isFullModeStyle": false,
+      "imageUrl": "assets/placeholders/placeholder-image-square.jpg",
+      "headline": "Fours Absolute",
+      "subhead": "Cuisinez facilement et de manière interactive",
+      "callToActionText": "Odkryj",
+      "callToActionUrl": "#",
+      "blockClass": ["gridHome"],
+      "textAlignment": "left"
+    }
+  },
+  "info-card#Grid2": {
+    "props": {
+      "id": "banner-grid-home",
+      "isFullModeStyle": false,
+      "imageUrl": "assets/placeholders/placeholder-image-square.jpg",
+      "headline": "Micro-ondes Supreme Chef",
+      "subhead": "La haute cuisine à la maison.",
+      "callToActionText": "Odkryj",
+      "callToActionUrl": "#",
+      "blockClass": "gridHome",
+      "textAlignment": "left"
+    }
+  },
+  "info-card#Grid3three": {
+    "props": {
+      "id": "banner-grid-home",
+      "isFullModeStyle": false,
+      "imageUrl": "assets/placeholders/placeholder-image-square.jpg",
+      "headline": "Réfrigérateur W Collection W7 Total No Frost",
+      "subhead": "Vos fruits et légumes restent frais jusqu'à 15.",
+      "callToActionText": "Odkryj",
+      "callToActionUrl": "#",
+      "blockClass": ["gridHome", "gridHome3"],
+      "textAlignment": "left"
+    }
+  },
+  "info-card#Grid4": {
+    "props": {
+      "id": "banner-grid-home",
+      "isFullModeStyle": false,
+      "imageUrl": "assets/placeholders/image-placeholder-16-9.png",
+      "headline": "Table induction flexizone",
+      "subhead": "Une cuisson intuitive et du temps pour vous.",
+      "callToActionText": "Odkryj",
+      "callToActionUrl": "#",
+      "blockClass": "gridHome",
+      "textAlignment": "left"
+    }
+  },
+  "info-card#Grid5": {
+    "props": {
+      "id": "banner-grid-home",
+      "isFullModeStyle": false,
+      "imageUrl": "assets/placeholders/placeholder-image-square.jpg",
+      "headline": "Supreme Clean 60 cm",
+      "subhead": "Performances de lavage et flexibilité exceptionnelles.",
+      "callToActionText": "Odkryj",
+      "callToActionUrl": "#",
+      "blockClass": "gridHome",
+      "textAlignment": "left"
+    }
+  },
+  "info-card#Grid6": {
+    "props": {
+      "id": "banner-grid-home",
+      "isFullModeStyle": false,
+      "imageUrl": "assets/placeholders/image-placeholder-16-9.png",
+      "headline": "Les nouvelles classes d’efficacité énergétiques",
+      "subhead": "Nouvelles étiquettes énergétiques à partir du 1er Mars 2021",
+      "callToActionText": "Odkryj",
+      "callToActionUrl": "#",
+      "blockClass": "gridHome",
+      "textAlignment": "left"
+    }
+  },
+  "info-card#contattaci": {
+    "props": {
+      "id": "half-banner-first",
+      "isFullModeStyle": false,
+      "imageUrl": "assets/placeholders/placeholder-image-square.jpg",
+      "headline": "Dal lunedì al venerdì dalle 10 alle 18",
+      "subhead": "Domande sui prodotti? Scopri la nuova Live Chat attiva in tutte le pagine di categoria e di prodotto. Un team di trainer ed esperti di prodotto risponde in tempo reale a dubbi e richieste.",
+      "callToActionText": "En savoir plus",
+      "callToActionUrl": "#",
+      "blockClass": "contactHome",
+      "textAlignment": "left"
+    }
+  },
+  "rich-text#promo": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Promozioni",
+      "blockClass": "textHomePromo"
+    }
+  },
+
+  "slider-layout#promo": {
+    "props": {
+      "totalItems": 3,
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "showNavigationArrows": "desktopOnly",
+      "autoplay": {
+        "timeout": 5000,
+        "stopOnHover": false
+      },
+      "blockClass": "carousel"
+    },
+    "children": [
+      "flex-layout.row#promoCard1",
+      "flex-layout.row#promoCard2",
+      "flex-layout.row#promoCard3"
+    ]
+  },
+  "flex-layout.row#promoCard1": {
+    "props": {
+      "blockClass": ["promoBanner", "promoBannerMobile"]
+    },
+    "children": ["flex-layout.col#promoCard1", "flex-layout.col#promoCardText1"]
+  },
+  "flex-layout.row#promoCard2": {
+    "props": {
+      "blockClass": ["promoBanner", "promoBannerMobile"]
+    },
+    "children": ["flex-layout.col#promoCard2", "flex-layout.col#promoCardText2"]
+  },
+  "flex-layout.row#promoCard3": {
+    "props": {
+      "blockClass": ["promoBanner", "promoBannerMobile"]
+    },
+    "children": ["flex-layout.col#promoCard3", "flex-layout.col#promoCardText3"]
+  },
+  "flex-layout.col#promoCard1": {
+    "children": ["image#promoCardImg2"]
+  },
+  "image#promoCardImg1": {
+    "props": {
+      "src": "assets/placeholders/placeholder-image-square.jpg",
+      "blockClass": "promoBanner"
+    }
+  },
+  "flex-layout.col#promoCard2": {
+    "children": ["image#promoCardImg2"]
+  },
+  "image#promoCardImg2": {
+    "props": {
+      "src": "assets/placeholders/placeholder-image-square.jpg",
+      "blockClass": "promoBanner"
+    }
+  },
+  "flex-layout.col#promoCard3": {
+    "children": ["image#promoCardImg3"]
+  },
+  "image#promoCardImg3": {
+    "props": {
+      "src": "assets/placeholders/placeholder-image-square.jpg",
+      "blockClass": "promoBanner"
+    }
+  },
+  "flex-layout.col#promoCardText1": {
+    "props": {
+      "blockClass": "promoBanner"
+    },
+    "children": [
+      "rich-text#titlePromoCard1",
+      "rich-text#subtitlePromoCard1",
+      "rich-text#buttonPromoCard1",
+      "rich-text#postillaPromoCard1"
+    ]
+  },
+  "flex-layout.col#promoCardText2": {
+    "props": {
+      "blockClass": "promoBanner"
+    },
+    "children": [
+      "rich-text#titlePromoCard2",
+      "rich-text#subtitlePromoCard2",
+      "rich-text#buttonPromoCard2",
+      "rich-text#postillaPromoCard2"
+    ]
+  },
+  "flex-layout.col#promoCardText3": {
+    "props": {
+      "blockClass": "promoBanner"
+    },
+    "children": [
+      "rich-text#titlePromoCard3",
+      "rich-text#subtitlePromoCard3",
+      "rich-text#buttonPromoCard3",
+      "rich-text#postillaPromoCard3"
+    ]
+  },
+  "rich-text#titlePromoCard1": {
+    "props": {
+      "blockClass": ["titleCard"],
+      "textAlignment": "left",
+      "text": "De savoureuses recettes pour votre micro-ondes"
+    }
+  },
+  "rich-text#subtitlePromoCard1": {
+    "props": {
+      "blockClass": "subtitleCard",
+      "textAlignment": "left",
+      "text": "Le chef Luca Natalini a concocté 10 recettes spécifiques à cuisiner au micro-ondes: de l'entrée au dessert."
+    }
+  },
+  "rich-text#buttonPromoCard1": {
+    "props": {
+      "blockClass": "buttonCard",
+      "textAlignment": "left",
+      "text": "Odkryj"
+    }
+  },
+  "rich-text#postillaPromoCard1": {
+    "props": {
+      "blockClass": "postilla",
+      "textAlignment": "left",
+      "text": "*Operazione a premi valida per acquisti dal 1/07/2020 al 31/12/2020."
+    }
+  },
+  "rich-text#titlePromoCard2": {
+    "props": {
+      "blockClass": ["titleCard"],
+      "textAlignment": "left",
+      "text": "Des résultats professionnels. Au quotidien."
+    }
+  },
+  "rich-text#subtitlePromoCard2": {
+    "props": {
+      "blockClass": "subtitleCard",
+      "textAlignment": "left",
+      "text": "Wpro est la seule marque qui propose des accessoires spécialement conçus pour apporter des résultats professionnels et adaptables à toutes les marques d’appareils électroménagers."
+    }
+  },
+  "rich-text#buttonPromoCard2": {
+    "props": {
+      "blockClass": "buttonCard",
+      "textAlignment": "left",
+      "text": "Odkryj"
+    }
+  },
+  "rich-text#postillaPromoCard2": {
+    "props": {
+      "blockClass": "postilla",
+      "textAlignment": "left",
+      "text": "*Operazione a premi valida per acquisti dal 1/07/2020 al 31/12/2020."
+    }
+  },
+  "rich-text#titlePromoCard3": {
+    "props": {
+      "blockClass": ["titleCard"],
+      "textAlignment": "left",
+      "text": "Choisissez et composez votre pack cuisine équipée !"
+    }
+  },
+  "rich-text#subtitlePromoCard3": {
+    "props": {
+      "blockClass": "subtitleCard",
+      "textAlignment": "left",
+      "text": "Bénéficiez de 10% de remises à partir de 2 produits achetés*, de la livraison gratuite et de notre service d'installation."
+    }
+  },
+  "rich-text#buttonPromoCard3": {
+    "props": {
+      "blockClass": "buttonCard",
+      "textAlignment": "left",
+      "text": "Odkryj"
+    }
+  },
+  "rich-text#postillaPromoCard3": {
+    "props": {
+      "blockClass": "postilla",
+      "textAlignment": "left",
+      "text": "*Mention légale: la remise s’applique sur les produits encastrables (four, plaque, hotte, micro-ondes, lave-vaisselle) et dans la limite d’un produit par catégorie."
+    }
+  },
+  "slider-layout#leftSlider": {
+    "props": {
+      "totalItems": 1,
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "showNavigationArrows": "desktopOnly",
+      "autoplay": {
+        "timeout": 5000,
+        "stopOnHover": false
+      },
+      "blockClass": "carousel"
+    },
+    "children": ["flex-layout.row#leftSlider1"]
+  },
+  "info-card#lastHalf": {
+    "props": {
+      "id": "half-banner-seconf",
+      "isFullModeStyle": false,
+      "imageUrl": "assets/placeholders/placeholder-image-square.jpg",
+      "headline": "Deliziose ricette, semplici da realizzare",
+      "subhead": "Scopri tutte le possibilità dei tuoi elettrodomestici",
+      "callToActionText": "En savoir plus",
+      "callToActionUrl": "#",
+      "blockClass": "halfBannerReverse",
+      "textAlignment": "left"
+    }
+  },
+  "info-card#lastHalfReverse": {
+    "props": {
+      "id": "half-banner-first",
+      "isFullModeStyle": false,
+      "imageUrl": "assets/placeholders/placeholder-image-square.jpg",
+      "headline": "Deliziose ricette, semplici da realizzare",
+      "subhead": "Scopri tutte le possibilità dei tuoi elettrodomestici",
+      "callToActionText": "En savoir plus",
+      "callToActionUrl": "#",
+      "blockClass": "halfBanner",
+      "textAlignment": "left"
+    }
+  },
+  "slider-layout#linkCards": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 4,
+        "tablet": 3,
+        "phone": 1
+      },
+      "infinite": false,
+      "showNavigationArrows": "never",
+      "autoplay": {
+        "timeout": 5000,
+        "stopOnHover": false
+      },
+      "blockClass": ["carousel", "cardsSupp"]
+    },
+    "children": [
+      "flex-layout.row#linkCard1",
+      "flex-layout.row#linkCard3",
+      "flex-layout.row#linkCard5"
+      // "flex-layout.row#linkCard2"
+    ]
+  },
+  "flex-layout.row#linkCard1": {
+    "props": {
+      "blockClass": "linkCards"
+    },
+    "children": ["link#card1"]
+  },
+  "link#card1": {
+    "props": {
+      "blockClass": "linkCards",
+      "href": "/services/telecharger-un-mode-d-emploi"
+    },
+    "children": [
+      "image#logoLinkCard1",
+      "rich-text#TitleLinkCard1",
+      "rich-text#SubTitleLinkCard1",
+      "rich-text#ButtonLinkCard1"
+    ]
+  },
+  "image#logoLinkCard1": {
+    "props": {
+      "blockClass": "linkCards",
+      "width": "2.6875rem",
+      "src": "assets/bannerHeader/icon1.svg"
+    }
+  },
+  "rich-text#TitleLinkCard1": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Services exclusifs",
+      "blockClass": "linkCardsTitle"
+    }
+  },
+  "rich-text#SubTitleLinkCard1": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Livraison gratuite \n Installation gratuite \n Reprise de l'ancien appareil",
+      "blockClass": "linkCardsSubTitle"
+    }
+  },
+  "rich-text#ButtonLinkCard1": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "En savoir plus",
+      "blockClass": "linkCardsButton"
+    }
+  },
+
+  "flex-layout.row#linkCard2": {
+    "props": {
+      "blockClass": "linkCards"
+    },
+    "children": ["link#card2"]
+  },
+  "analytics-wrapper#ButtonLinkCard2": {
+    "props": {
+      "propsAnalytics": {
+        "analyticsProperties": "provide",
+        "nameEvent": "productRegistration",
+        "name": "",
+        "nameView": "",
+        "data": [],
+        "isView": false
+      }
+    },
+    "children": ["rich-text#ButtonLinkCard2"]
+  },
+  "link#card2": {
+    "props": {
+      "blockClass": "linkCards",
+      "href": "#"
+    },
+    "children": [
+      "image#logoLinkCard2",
+      "rich-text#TitleLinkCard2",
+      "rich-text#SubTitleLinkCard2",
+      "analytics-wrapper#ButtonLinkCard2"
+    ]
+  },
+  "image#logoLinkCard2": {
+    "props": {
+      "blockClass": "linkCards",
+      "width": "2.6875rem",
+      "src": "assets/linkCards/clienti.svg"
+    }
+  },
+  "rich-text#TitleLinkCard2": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "<a href=\"https://register-appliance.com/whirlpool/RegistroPorMarca?country=PL&language=pl\" target=\"_blank\" class=\"vtex-rich-text-0-x-paragraph--remove-link-styles vtex-rich-text-0-x-paragraph--car-link-restore-styles\"> registra il tuo prodotto</a>",
+      "blockClass": "linkCardsTitle"
+    }
+  },
+  "rich-text#SubTitleLinkCard2": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Goditi un servizio più veloce. Ricevi consulenza da esperti e ottieni offerte esclusive.",
+      "blockClass": "linkCardsSubTitle"
+    }
+  },
+  "rich-text#ButtonLinkCard2": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "<a href=\"https://register-appliance.com/whirlpool/RegistroPorMarca?country=PL&language=pl\" target=\"_blank\" class=\"lh-copy vtex-rich-text-0-x-paragraph vtex-rich-text-0-x-paragraph--remove-link-styles lh-copy vtex-rich-text-0-x-paragraph vtex-rich-text-0-x-paragraph--linkCardsButton  vtex-rich-text-0-x-paragraph--custom\"> registralo ora</a>",
+      "blockClass": "linkCardsButton"
+    }
+  },
+  "flex-layout.row#linkCard3": {
+    "props": {
+      "blockClass": "linkCards"
+    },
+    "children": ["link#card3-2"]
+  },
+  "link#card3-2": {
+    "props": {
+      "blockClass": "linkCards",
+      "href": "tel:09.69.39.1234"
+    },
+    "children": [
+      "image#logoLinkCard3",
+      "rich-text#TitleLinkCard3",
+      "rich-text#SubTitleLinkCard3",
+      "rich-text#ButtonLinkCard3",
+      "rich-text#postillaLinkCard3"
+    ]
+  },
+  "image#logoLinkCard3": {
+    "props": {
+      "blockClass": "linkCards",
+      "width": "2.6875rem",
+      "src": "assets/linkCards/clienti.svg"
+    }
+  },
+  "rich-text#TitleLinkCard3": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Besoin d’assistance ?",
+      "blockClass": "linkCardsTitle"
+    }
+  },
+  "rich-text#SubTitleLinkCard3": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": " Du lundi au vendredi de 9h à 19h \nSamedi de 9h à 17h* \n Service consommateur \n [09.69.39.1234](tel:09.69.39.1234)",
+      "blockClass": "linkCardsSubTitle"
+    }
+  },
+  "rich-text#ButtonLinkCard3": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "contactez-nous",
+      "blockClass": "linkCardsButton"
+    }
+  },
+  "rich-text#postillaLinkCard3": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "*Prix d'un appel local, non surtaxé",
+      "blockClass": ["linkCardsSubTitle", "linkCardsSubTitleNoHeight"]
+    }
+  },
+  "flex-layout.row#linkCard5": {
+    "props": {
+      "blockClass": "linkCards"
+    },
+    "children": ["link#card5"]
+  },
+  "link#card5": {
+    "props": {
+      "blockClass": "linkCards",
+      "href": "tel:09.69.37.6140"
+    },
+    "children": [
+      "image#logoLinkCard5",
+      "rich-text#TitleLinkCard5",
+      "rich-text#SubTitleLinkCard5",
+      "rich-text#ButtonLinkCard5",
+      "rich-text#postillaLinkCard5"
+    ]
+  },
+  "image#logoLinkCard5": {
+    "props": {
+      "blockClass": "linkCards",
+      "width": "2.6875rem",
+      "src": "assets/linkCards/clienti.svg"
+    }
+  },
+  "rich-text#TitleLinkCard5": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Information Achat E-Shop?",
+      "blockClass": "linkCardsTitle"
+    }
+  },
+  "rich-text#SubTitleLinkCard5": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": " Du lundi au vendredi de 9h à 19h \nSamedi de 9h à 17h* \n Assistance boutique en ligne \n [09.69.37.6140](tel:09.69.37.6140)",
+      "blockClass": "linkCardsSubTitle"
+    }
+  },
+  "rich-text#ButtonLinkCard5": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Contactez-nous",
+      "blockClass": "linkCardsButton"
+    }
+  },
+  "rich-text#postillaLinkCard5": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "*Prix d'un appel local, non surtaxé",
+      "blockClass": ["linkCardsSubTitle", "linkCardsSubTitleNoHeight"]
+    }
+  },
+  "flex-layout.row#linkCard4": {
+    "props": {
+      "blockClass": "linkCards"
+    },
+    "children": ["link#card4"]
+  },
+  "link#card4": {
+    "props": {
+      "blockClass": "linkCards",
+      "href": "#"
+    },
+    "children": [
+      "image#logoLinkCard4",
+      "rich-text#TitleLinkCard4",
+      "rich-text#SubTitleLinkCard4",
+      "rich-text#ButtonLinkCard4"
+    ]
+  },
+  "image#logoLinkCard4": {
+    "props": {
+      "blockClass": "linkCards",
+      "width": "2.6875rem",
+      "src": "assets/linkCards/clienti.svg"
+    }
+  },
+  "rich-text#TitleLinkCard4": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Contacter un conseiller",
+      "blockClass": "linkCardsTitle"
+    }
+  },
+  "rich-text#SubTitleLinkCard4": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Whirlpool Live Chat è disponibile dal Lunedì al Venerdì ore 9.00 - 18.00",
+      "blockClass": "linkCardsSubTitle"
+    }
+  },
+  "rich-text#ButtonLinkCard4": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "apri chat",
+      "blockClass": "linkCardsButton"
+    }
+  },
+  "list-context.product-list#suggestions-w-home": {
+    "blocks": ["product-summary.shelf"],
+    "children": ["slider-layout#innovazione"],
+    "props": {
+      "collection": "154"
+    }
+  },
+  "list-context.product-list#suggestions-home": {
+    "blocks": ["product-summary.shelf"],
+    "children": ["slider-layout#innovazione"],
+    "props": {
+      "collection": "154"
+    }
+  },
+  "list-context.product-list#suggestions-home2": {
+    "blocks": ["product-summary.shelf"],
+    "children": ["slider-layout#innovazione"],
+    "props": {
+      "collection": "154"
+    }
+  },
+  "list-context.product-list#suggestions-home3": {
+    "blocks": ["product-summary.shelf"],
+    "children": ["slider-layout#innovazione"],
+    "props": {
+      "collection": "154"
+    }
+  },
+
+  "flex-layout.row#leftSlider1": {
+    "props": {
+      "blockClass": ["promoBanner", "promoBannerHomepage"]
+    },
+    "children": [
+      "flex-layout.col#leftSliderText1",
+      "flex-layout.col#leftSliderimageCard1"
+    ]
+  },
+  "flex-layout.col#leftSliderimageCard1": {
+    "children": ["image#leftSliderpersonalizedcard1"]
+  },
+  "image#leftSliderpersonalizedcard1": {
+    "props": {
+      "src": "assets/placeholders/placeholder-image-square.jpg",
+      "blockClass": "promoBanner"
+    }
+  },
+  "flex-layout.col#leftSliderText1": {
+    "props": {
+      "blockClass": "promoBanner"
+    },
+    "children": [
+      "rich-text#leftSliderRange1",
+      "rich-text#leftSliderTitle1",
+      "rich-text#leftSliderSubtitle1",
+      "rich-text#leftSliderbutton1",
+      "rich-text#leftSliderPostilla1"
+    ]
+  },
+  "rich-text#leftSliderRange1": {
+    "props": {
+      "blockClass": "range",
+      "textAlignment": "left",
+      "text": "Dal 16 Settembre al 31 Dicembre 2020"
+    }
+  },
+  "rich-text#leftSliderTitle1": {
+    "props": {
+      "blockClass": "titleCard",
+      "textAlignment": "left",
+      "text": "Whirlpool ti regala fino a 200€\ndi SPESA"
+    }
+  },
+  "rich-text#leftSliderSubtitle1": {
+    "props": {
+      "blockClass": "subtitleCard",
+      "textAlignment": "left",
+      "text": "Con l’acquisto di un frigorifero Whirlpool ricevi in regalo un buono spesa da utilizzare nel supermercato che preferisci.*"
+    }
+  },
+  "rich-text#leftSliderbutton1": {
+    "props": {
+      "blockClass": "buttonCard",
+      "textAlignment": "left",
+      "text": "registrati ora"
+    }
+  },
+  "rich-text#leftSliderPostilla1": {
+    "props": {
+      "blockClass": "postilla",
+      "textAlignment": "left",
+      "text": "*Operazione a premi valida per acquisti dal 16/09/2020 al 31/12/2020."
+    }
+  },
+  "toggle-layout#mobileMenuCategoryHome": {
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "responsive-layout.desktop#menuCategoryHome",
+      "responsive-layout.tablet#menuCategoryHome",
+      "responsive-layout.phone#menuCategoryHome"
+    ]
+  },
+  "responsive-layout.desktop#menuCategoryHome": {
+    "children": ["flex-layout.row#menuImagesHome"]
+  },
+  "responsive-layout.tablet#menuCategoryHome": {
+    "children": ["flex-layout.row#menuImagesHome"]
+  },
+  "responsive-layout.phone#menuCategoryHome": {
+    "children": [
+      "slider-layout#homeCategoryProduct",
+      "flex-layout.row#halfSpace"
+    ]
+  },
+  "slider-layout#homeCategoryProduct": {
+    "props": {
+      "itemsPerPage": {
+        "phone": 3
+      },
+      "infinite": true,
+      "showNavigationArrows": "never",
+      "blockClass": "categorySliderHome"
+    },
+    "children": [
+      "link#menuImg1",
+      "link#menuImg2",
+      "link#menuImg3",
+      "link#menuImg4",
+      "link#menuImg5"
+    ]
+  },
+  "flex-layout.row#menuImagesHome": {
+    "children": [
+      "flex-layout.col#firstImagesHome",
+      "flex-layout.col#secondImagesHome",
+      "flex-layout.col#thirdImagesHome",
+      "flex-layout.col#fourthImagesHome",
+      "flex-layout.col#fifthImagesHome"
+    ],
+    "props": {
+      "blockClass": "bannerGradient"
+    }
+  },
+  "flex-layout.col#firstImagesHome": {
+    "children": ["link#menuImg1"],
+    "props": {
+      "blockClass": "firstColMenuImagesHome"
+    }
+  },
+  "flex-layout.col#secondImagesHome": {
+    "children": ["link#menuImg2"],
+    "props": {
+      "blockClass": "firstColwMenuImagesHome"
+    }
+  },
+  "flex-layout.col#thirdImagesHome": {
+    "children": ["link#menuImg3"],
+    "props": {
+      "blockClass": "firstColMenuImagesHome"
+    }
+  },
+  "flex-layout.col#fourthImagesHome": {
+    "children": ["link#menuImg4"],
+    "props": {
+      "blockClass": "firstColwMenuImagesHome"
+    }
+  },
+  "flex-layout.col#fifthImagesHome": {
+    "children": ["link#menuImg5"],
+    "props": {
+      "blockClass": "firstColMenuImagesHome"
+    }
+  },
+
+  "link#menuImg1": {
+    "children": ["image#menuImg1", "link#menuImg1-anchor"],
+    "props": {
+      "href": "/produits/lavage",
+      "blockClass": "cardImageMenu"
+    }
+  },
+
+  "link#menuImg1-anchor": {
+    "children": ["rich-text#menuImgTitle1"],
+    "props": {
+      "href": "/produits/lavage",
+      "blockClass": "cardImageMenu"
+    }
+  },
+  "link#menuImg2": {
+    "children": ["image#menuImg2", "link#menuImg2-anchor"],
+    "props": {
+      "href": "/produits/cuisson",
+      "blockClass": "cardImageMenu"
+    }
+  },
+
+  "link#menuImg2-anchor": {
+    "children": ["rich-text#menuImgTitle2"],
+    "props": {
+      "href": "/produits/cuisson",
+      "blockClass": "cardImageMenu"
+    }
+  },
+  "link#menuImg3": {
+    "children": ["image#menuImg3", "link#menuImg3-anchor"],
+    "props": {
+      "href": "/produits/froid",
+      "blockClass": "cardImageMenu"
+    }
+  },
+
+  "link#menuImg3-anchor": {
+    "children": ["rich-text#menuImgTitle3"],
+    "props": {
+      "href": "/produits/froid",
+      "blockClass": "cardImageMenu"
+    }
+  },
+  "link#menuImg4": {
+    "children": ["image#menuImg4", "link#menuImg4-anchor"],
+    "props": {
+      "href": "/produits/lave-vaisselle/lave-vaisselle",
+      "blockClass": "cardImageMenu"
+    }
+  },
+
+  "link#menuImg4-anchor": {
+    "children": ["rich-text#menuImgTitle4"],
+    "props": {
+      "href": "/produits/lave-vaisselle/lave-vaisselle",
+      "blockClass": "cardImageMenu"
+    }
+  },
+  "link#menuImg5": {
+    "children": ["image#menuImg5", "link#menuImg5-anchor"],
+    "props": {
+      "href": "/accessoires",
+      "blockClass": "cardImageMenu"
+    }
+  },
+
+  "link#menuImg5-anchor": {
+    "children": ["rich-text#menuImgTitle5"],
+    "props": {
+      "href": "/produits/accessoires",
+      "blockClass": "cardImageMenu"
+    }
+  },
+  "image#menuImg1": {
+    "props": {
+      "src": "https://frwhirlpool.myvtex.com/assets/vtex.file-manager-graphql/images/bd554ac8-b593-4985-bc9f-3891e54a7cf0___4fa8530a73a1cb08aa9ac5c388a43beb.png",
+      "blockClass": "imageMenuHome"
+    }
+  },
+  "image#menuImg2": {
+    "props": {
+      "src": "https://frwhirlpool.vtexassets.com/assets/vtex.file-manager-graphql/images/269296e6-4ed3-4e2d-aee4-32ec861b5fe9___e3eb9c7323649b1c8ddeb74286b33e67.png",
+      "blockClass": "imageMenuHome"
+    }
+  },
+  "image#menuImg3": {
+    "props": {
+      "src": "https://frwhirlpool.vtexassets.com/assets/vtex.file-manager-graphql/images/1e225d2b-305e-4f47-9d31-81bf2b2af351___4f230c78e3cc4a736f903a5fd9d945a5.png",
+      "blockClass": "imageMenuHome"
+    }
+  },
+  "image#menuImg4": {
+    "props": {
+      "src": "https://frwhirlpool.vtexassets.com/assets/vtex.file-manager-graphql/images/3f3fd907-28e6-4329-9e0d-551629813da3___03496701d0f81d27d256c2198d64ccfe.png",
+      "blockClass": "imageMenuHome"
+    }
+  },
+  "image#menuImg5": {
+    "props": {
+      "src": "https://frwhirlpool.vtexassets.com/assets/vtex.file-manager-graphql/images/8723269a-4bd8-4b70-b319-17b8fbe79d56___09b3e3031f767e4354f695814f6ef3f5.png",
+      "blockClass": "imageMenuHome"
+    }
+  },
+  "rich-text#menuImgTitle1": {
+    "props": {
+      "text": "Lavage",
+      "blockClass": "menu-desc-paragraph"
+    }
+  },
+  "rich-text#menuImgTitle2": {
+    "props": {
+      "text": "Cuisson",
+      "blockClass": "menu-desc-paragraph"
+    }
+  },
+  "rich-text#menuImgTitle3": {
+    "props": {
+      "text": "Froid",
+      "blockClass": "menu-desc-paragraph"
+    }
+  },
+  "rich-text#menuImgTitle4": {
+    "props": {
+      "text": "Lave-vaisselle",
+      "blockClass": "menu-desc-paragraph"
+    }
+  },
+  "rich-text#menuImgTitle5": {
+    "props": {
+      "text": "Accessoires",
+      "blockClass": "menu-desc-paragraph"
+    }
+  },
+  "toggle-layout#TechnologyDesign": {
+    "props": {
+      "visible": true
+    },
+    "children": ["flex-layout.row#TechnologyDesignContainer"]
+  },
+  "flex-layout.row#TechnologyDesignContainer": {
+    "props": {
+      "blockClass": ["TechnologyDesignContainer"]
+    },
+    "children": [
+      "rich-text#TechnologyDesignTitle",
+      "flex-layout.row#TechnologyDesignContainerRow1",
+      "flex-layout.row#TechnologyDesignContainerRow2"
+    ]
+  },
+  "rich-text#TechnologyDesignTitle": {
+    "props": {
+      "text": "# Technology and Design",
+      "blockClass": "TechnologyDesignTitle"
+    }
+  },
+  "flex-layout.row#TechnologyDesignContainerRow1": {
+    "props": {
+      "blockClass": "TechnologyDesignContainerRow"
+    },
+    "children": [
+      "flex-layout.row#technologyDesignHigh1",
+      "flex-layout.row#technologyDesignLow1",
+      "flex-layout.row#technologyDesignHigh2"
+    ]
+  },
+  "flex-layout.row#TechnologyDesignContainerRow2": {
+    "props": {
+      "blockClass": "TechnologyDesignContainerRow"
+    },
+    "children": [
+      "flex-layout.row#technologyDesignHigh3",
+      "flex-layout.row#technologyDesignLow2",
+      "flex-layout.row#technologyDesignHigh4"
+    ]
+  },
+  "flex-layout.row#technologyDesignHigh1": {
+    "props": {
+      "blockClass": "technologyDesignHigh"
+    },
+    "children": ["flex-layout.col#technologyDesignHigh"]
+  },
+  "flex-layout.row#technologyDesignHigh2": {
+    "props": {
+      "blockClass": "technologyDesignHigh"
+    },
+    "children": ["flex-layout.col#technologyDesignHigh"]
+  },
+  "flex-layout.row#technologyDesignHigh3": {
+    "props": {
+      "blockClass": "technologyDesignHigh"
+    },
+    "children": ["flex-layout.col#technologyDesignHigh"]
+  },
+  "flex-layout.row#technologyDesignHigh4": {
+    "props": {
+      "blockClass": "technologyDesignHigh"
+    },
+    "children": ["flex-layout.col#technologyDesignHigh"]
+  },
+  "flex-layout.row#technologyDesignLow1": {
+    "props": {
+      "blockClass": ["technologyDesignHigh"]
+    },
+    "children": ["flex-layout.col#technologyDesignLow"]
+  },
+  "flex-layout.row#technologyDesignLow2": {
+    "props": {
+      "blockClass": ["technologyDesignHigh", "technologyDesignLow2"]
+    },
+    "children": ["flex-layout.col#technologyDesignLow"]
+  },
+  "flex-layout.col#technologyDesignLow": {
+    "props": {
+      "blockClass": ["technologyDesignHigh"]
+    },
+    "children": [
+      "image#technologyDesignLow1",
+      "rich-text#technologyDesignHigh1Title",
+      "rich-text#technologyDesignHigh1SubTitle",
+      "link#technologyDesignHigh1Button"
+    ]
+  },
+  "flex-layout.col#technologyDesignHigh": {
+    "props": {
+      "blockClass": ["technologyDesignHigh"]
+    },
+    "children": [
+      "image#technologyDesignHigh1",
+      "rich-text#technologyDesignHigh1Title",
+      "rich-text#technologyDesignHigh1SubTitle",
+      "link#technologyDesignHigh1Button"
+    ]
+  },
+  "image#technologyDesignHigh1": {
+    "props": {
+      "blockClass": "imageHigh",
+      "src": "assets/placeholders/image-placeholder-16-9.png"
+    }
+  },
+  "image#technologyDesignLow1": {
+    "props": {
+      "blockClass": ["imageHigh", "imageLow"],
+      "src": "assets/placeholders/image-placeholder-16-9.png"
+    }
+  },
+  "rich-text#technologyDesignHigh1Title": {
+    "props": {
+      "text": "## Services exclusifs",
+      "blockClass": "technologyDesignHigh1Title"
+    }
+  },
+  "rich-text#technologyDesignHigh1SubTitle": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Livraison gratuite Installation gratuite Reprise de l'ancien appareil",
+      "blockClass": "technologyDesignHigh1SubTitle"
+    }
+  },
+  "link#technologyDesignHigh1Button": {
+    "props": {
+      "label": "TESTO BOTTONE",
+      "href": "#",
+      "displayMode": "button",
+      "blockClass": ["technologyDesignHigh1Button"]
+    }
+  },
+  "toggle-layout#textSEOHome": {
+    "children": ["rich-text#seoHome"],
+    "props": {
+      "blockClass": "paddingSearch"
+    }
+  },
+  "rich-text#seoHome": {
+    "props": {
+      "text": "## Forni Whirlpool \n Il forno da incasso costituisce un elemento imprescindibile per uno spazio moderno dedicato alla cucina, e Whirlpool propone una linea ricca di modelli e soluzioni pensati per venire incontro a ogni necessità: Forni a vapore e tradizionali completi di tutte le più avanzate funzioni di cottura, studiati per garantirti le performance di cui hai bisogno per qualsiasi ricetta.\n Con la nostra gamma di forni a vapore puoi preparare piatti deliziosi: scopri la combinazione di cottura tradizionale e a vapore, cucina piatti sani e deliziosi, preservando tutte le proprietà organolettiche degli ingredienti. Dai dolci e le torte agli arrosti di carne, dai piatti di pesce fino al pane fatto in casa; le numerose funzioni ti permettono di scegliere sempre il programma di cottura più adatto a ogni ricetta. \n Lasciati stupire dalla tecnologia 6° Senso dei forni multifunzione di Whirlpool: le ricette pre-programmate regolano autonomamente il riscaldamento e la durata del ciclo, mentre la lampada alogena interna è studiata per assicurarti la migliore illuminazione riducendo allo stesso tempo il consumo energetico. Immancabili le funzioni di pre-riscaldamento e la tecnologia autopulente pirolitica, pensate per farti risparmiare tempo: la prima consente di raggiungere velocemente la temperatura desiderata, mentre la seconda ti viene incontro nella pulizia dello spazio interno, aiutandoti a rimuovere anche i residui e lo sporco più ostinato. \n La massima praticità incontra il design accattivante e moderno: i forni a incasso di Whirlpool si integrano facilmente in ogni ambiente, completando il [piano cottura per la cucina](https://www.whirlpool.it/prodotti/cottura/piani-cottura)  e sposandosi alla perfezione con le linee dell’arredo contemporaneo. I colori vanno dall’elegante nero al brillante acciaio, con una gamma di proposte e combinazioni che ti permette di trovare con facilità quello più adatto ai tuoi gusti estetici. Scopri i forni Whirlpool sul catalogo online: scegli il meglio per la tua casa.",
+      "blockClass": ["seoText", "seoTextHome"]
+    }
+  }
+}

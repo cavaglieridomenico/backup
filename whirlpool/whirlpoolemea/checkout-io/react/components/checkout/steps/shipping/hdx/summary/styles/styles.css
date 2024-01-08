@@ -1,0 +1,95 @@
+
+.shippingSummaryDelivery {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	padding-top: 0.75rem;
+}
+
+.shippingSummaryLabel {
+	color: #727273;
+}
+.shippingSelectedDelivery{
+  padding: 0 !important;
+  border: none !important;
+  margin-top: 10px !important;
+  margin-bottom: 0 !important;
+}
+.selectedDeliveries{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+.selectedDeliveryProduct{
+	font-size: 0.675rem;
+	max-width: 200px;
+    margin-top: 1px;
+	margin-bottom: 5px;
+	color: #727273;
+	border-bottom: 1px solid #e3e4e6;
+	padding-bottom: 10px ;
+}
+.selectedDeliveryWrapper{
+	padding: 5px;
+	cursor: pointer;
+	width: 100%;
+	border: 1px solid #e3e4e6;
+	border-radius: 6px;
+	margin-top: 5px;
+	padding: 10px;
+	position: relative;
+}
+.selectedDeliveryTitle{
+	font-size: 0.875rem;
+	font-weight: 600;
+	display: block;
+	width: 100%;
+	color: #727273;
+}
+.selectedDeliveryTitle::after{
+	content: '';
+    position: absolute;
+    right:  10px;
+    top: 15px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #727273;
+    clear: both;
+	transform: rotate(270deg);
+}
+.selectedDeliveryTitleClicked::after{
+	transform: rotate(360deg);
+}
+.selectedDeliveryItemsWrapper{
+	display: flex;
+	align-items: flex-start;
+	padding: 10px;
+}
+.selectedDeliveryItemsTitle{
+  font-size: 0.775rem;
+  min-width: 50px;
+  font-weight: 600;
+  color: #727273;
+}
+.selectedDeliveryProductLeadTime{
+	font-weight: 600;
+}
+.selectedDeliveryItems{
+	display: flex;
+	flex-direction: column;
+}
+.selectedDeliveryItemPrice{
+	font-size: 0.675rem;
+	max-width: 200px;
+	margin-left: 10px;
+    margin-top: 1px;
+	color: #727273;
+}
+@media only screen and (max-width: 768px) {
+    .selectedDeliveryTitle{
+        max-width: 90%;
+    }
+}

@@ -1,0 +1,935 @@
+{
+  "store.home": {
+    "blocks": [
+      "hreflang-home-component",
+      //"experimental__visibility-layout#sliderHome",
+      "experimental__visibility-layout#sliderBannerHome",
+      "flex-layout.row#halfSpace",
+      "rich-text#titleHomepageH1",
+      "experimental__visibility-layout#menuImagesHome",
+      "__fold__.experimentalLazyAssets",
+      "flex-layout.row#mainHomepageRow",
+      "experimental__visibility-layout#newsletterBox",
+      "flex-layout.row#halfSpace",
+      "experimental__visibility-layout#carouselCollectionHome1Title",
+      "experimental__visibility-layout#supp",
+      "experimental__visibility-layout#homeSeoTextToggle"
+      //
+    ]
+  },
+  /*-------------------------INFO CARD LIST----------------------------------*/
+  "experimental__visibility-layout#sliderBannerHome": {
+    "title": "Toggle Layout - Slider Banner Home",
+    "children": ["analytics-wrapper#slider-top-home"]
+  },
+  "analytics-wrapper#slider-top-home": {
+    "title": "Analtics Wrapper Slider Top",
+    "props": {
+      "isHpSlider": true,
+      "propsAnalytics": {
+        "analyticsProperties": "provide",
+        "nameEvent": "slider_click",
+        "name": "sliderClick",
+        // "analyticsProperties": "provide",
+        // "nameEvent": "redeemAPromo",
+        // "name": "promo",
+        "data": [{}]
+      }
+    },
+    "children": ["list-context.info-card-list#homeBannersTop"]
+  },
+  /*---------------------FIRST BANNER SLIDER----------------------------------*/
+  "experimental__visibility-layout#sliderHome": {
+    "title": "[experimental__visibility-layout] - TOP - Slider Home",
+    "children": [
+      "responsive-layout.desktop#sliderHome",
+      "responsive-layout.mobile#sliderHome"
+    ]
+  },
+  "responsive-layout.desktop#sliderHome": {
+    "title": "[DESKTOP] - TOP - Slider Home",
+    "children": ["analytics-wrapper#slider-top"]
+  },
+  "responsive-layout.mobile#sliderHome": {
+    "title": "[MOBILE] - TOP - Slider Home",
+    "children": ["slider-layout#sliderHome"]
+  },
+  "analytics-wrapper#slider-top": {
+    "title": "Analtics Wrapper Slider Top",
+    "props": {
+      "isSlider": true
+      // "propsAnalytics": {
+      //   "analyticsProperties": "provide",
+      //   "nameEvent": "redeemAPromo",
+      //   "name": "promo",
+      //   "data": [
+      //     {}
+      //   ]
+      // }
+    },
+    "children": ["slider-layout#sliderHome"]
+  },
+  "slider-layout#sliderHome": {
+    "title": "[SLIDER] - TOP - Slider Home",
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "showNavigationArrows": "always",
+      "autoplay": {
+        "timeout": 5000,
+        "stopOnHover": false
+      },
+      "slideTransition": {
+        "speed": 500,
+        "delay": 0,
+        "timing": ""
+      },
+      "blockClass": ["carousel", "sliderHome"]
+    },
+    "children": [
+      "experimental__visibility-layout#bannerWithPostillaSlide",
+      //"experimental__visibility-layout#bannerWithPostillaSlide2",
+      //"experimental__visibility-layout#bannerWithPostillaSlide3",
+      "experimental__visibility-layout#bannerWithPostillaSlide8",
+      "experimental__visibility-layout#bannerWithPostillaSlide9",
+      "experimental__visibility-layout#bannerWithPostillaSlide10",
+      //"experimental__visibility-layout#bannerWithPostillaSlide4",
+      "experimental__visibility-layout#bannerWithPostillaSlide5",
+      "experimental__visibility-layout#bannerWithPostillaSlide6",
+      "experimental__visibility-layout#bannerWithPostillaSlide7"
+    ]
+  },
+  /*-------------------------------------------------------*/
+  /*------------------------CATEGORIES CAROUSEL-------------------------------*/
+  "experimental__visibility-layout#menuImagesHome": {
+    "title": "[EXPERIMENTAL-VISIBILITY] - TOP - Categories Menu",
+    "props": {
+      "visible": true
+    },
+    "children": ["flex-layout.row#menuImagesHome"]
+  },
+  "flex-layout.row#menuImagesHome": {
+    "title": "[ROW] - TOP - Categories Menu",
+    "children": [
+      "flex-layout.row#firstRowMenuImagesHome",
+      "flex-layout.row#secondRowMenuImagesHome",
+      "flex-layout.row#thirdRowMenuImagesHome"
+    ],
+    "props": {
+      "blockClass": "bannerGradient"
+    }
+  },
+  "flex-layout.row#firstRowMenuImagesHome": {
+    "title": "[ROW] - TOP - First two categories",
+    "children": [
+      "flex-layout.col#firstImagesHome",
+      "flex-layout.col#secondImagesHome"
+    ],
+    "props": {
+      "blockClass": "firstRowMenuImagesHome"
+    }
+  },
+  "flex-layout.col#firstImagesHome": {
+    "title": "[COL] - TOP - First category",
+    "children": ["link#washingmachinesImg"],
+    "props": {
+      "blockClass": "firstColMenuImagesHome"
+    }
+  },
+  "flex-layout.col#secondImagesHome": {
+    "title": "[COL] - TOP - Second category",
+    "children": ["link#tumbleDryersImg"],
+    "props": {
+      "blockClass": "firstColwMenuImagesHome"
+    }
+  },
+  "flex-layout.row#secondRowMenuImagesHome": {
+    "title": "[ROW] - TOP - Second two categories",
+    "children": [
+      "flex-layout.col#thirdImagesHome",
+      "flex-layout.col#fourthImagesHome"
+    ],
+    "props": {
+      "blockClass": "firstRowMenuImagesHome"
+    }
+  },
+  "flex-layout.col#thirdImagesHome": {
+    "title": "[COL] - TOP - Third category",
+    "children": ["link#fridgeFreezersImg"],
+    "props": {
+      "blockClass": "firstColMenuImagesHome"
+    }
+  },
+  "flex-layout.col#fourthImagesHome": {
+    "title": "[COL] - TOP - Fourth category",
+    "children": ["link#ovensImg"],
+    "props": {
+      "blockClass": "firstColwMenuImagesHome"
+    }
+  },
+  "flex-layout.row#thirdRowMenuImagesHome": {
+    "title": "[ROW] - TOP - Third two categories",
+    "children": [
+      "flex-layout.col#fifthImagesHome",
+      "flex-layout.col#sixthImagesHome"
+    ],
+    "props": {
+      "blockClass": "firstRowMenuImagesHome"
+    }
+  },
+  "flex-layout.col#fifthImagesHome": {
+    "title": "[COL] - TOP - Fifth category",
+    "children": ["link#cookersImg"],
+    "props": {
+      "blockClass": "firstColMenuImagesHome"
+    }
+  },
+  "flex-layout.col#sixthImagesHome": {
+    "title": "[COL] - TOP - Sixth category",
+    "children": ["link#othersImg"],
+    "props": {
+      "blockClass": "firstColwMenuImagesHome"
+    }
+  },
+  "link#washingmachinesImg": {
+    "title": "[LINK] - TOP - Category Link",
+    "children": ["image#washingmachines", "rich-text#TitleWashingmachines"],
+    "props": {
+      "href": "#",
+      "blockClass": "cardImageMenu"
+    }
+  },
+  "image#washingmachines": {
+    "title": "[IMAGE] - TOP - Category Image",
+    "props": {
+      "src": "assets/ph-square.jpg",
+      "blockClass": "imageMenuHome"
+    }
+  },
+  "rich-text#TitleWashingmachines": {
+    "title": "[TEXT] - TOP - Category text",
+    "props": {
+      "text": "Washing machines",
+      "blockClass": "menu-desc-paragraph"
+    }
+  },
+  "link#tumbleDryersImg": {
+    "title": "[LINK] - TOP - Second category",
+    "children": ["image#washingmachines", "rich-text#TitleWashingmachines"],
+    "props": {
+      "href": "#",
+      "blockClass": "cardImageMenu"
+    }
+  },
+  "link#fridgeFreezersImg": {
+    "title": "[LINK] - TOP - Third category",
+    "children": ["image#washingmachines", "rich-text#TitleWashingmachines"],
+    "props": {
+      "href": "#",
+      "blockClass": "cardImageMenu"
+    }
+  },
+  "link#ovensImg": {
+    "title": "[LINK] - TOP - Fourth category",
+    "children": ["image#washingmachines", "rich-text#TitleWashingmachines"],
+    "props": {
+      "href": "#",
+      "blockClass": "cardImageMenu"
+    }
+  },
+  "link#cookersImg": {
+    "title": "[LINK] - TOP - Fifth category",
+    "children": ["image#washingmachines", "rich-text#TitleWashingmachines"],
+    "props": {
+      "href": "#",
+      "blockClass": "cardImageMenu"
+    }
+  },
+  "link#othersImg": {
+    "title": "[LINK] - TOP - Sixth category",
+    "children": ["image#washingmachines", "rich-text#TitleWashingmachines"],
+    "props": {
+      "href": "#",
+      "blockClass": "cardImageMenu"
+    }
+  },
+  /*-------------------------------------------------------*/
+  /*-------------------------MAIN HOMEPAGE COLUMN------------------------------*/
+  "flex-layout.row#mainHomepageRow": {
+    "title": "[ROW] - MID - Main Contents",
+    "children": ["flex-layout.col#mainHomepageCol"],
+    "props": {
+      "blockClass": "mainHomepageRow"
+    }
+  },
+  "flex-layout.col#mainHomepageCol": {
+    "title": "[COL] - MID - Main Contents",
+    "children": [
+      "experimental__visibility-layout#banner-warranty-10",
+      "experimental__visibility-layout#homeTabs",
+      "experimental__visibility-layout#sliderHomeMid"
+    ],
+    "props": {
+      "blockClass": "mainHomepageCol"
+    }
+  },
+  /*-------------------------------------------------------*/
+  /*-----------------------BANNER 10 YEARS WARRANTY--------------------------------*/
+  "experimental__visibility-layout#banner-warranty-10": {
+    "title": "[TOGGLE_VISIBILITY] - MID - Banner 10 yers warranty",
+    "props": {
+      "visible": true
+    },
+    "children": ["flex-layout.row#banner-warranty-10Row"]
+  },
+  "responsive-layout.desktop#banner-warranty-10": {
+    "title": "[DESKTOP] - MID - Banner 10 years warranty",
+    "children": ["flex-layout.row#banner-warranty-10Row"]
+  },
+  "flex-layout.row#banner-warranty-10Row": {
+    "title": "[ROW] - MID - Banner 10 yers warranty",
+    "children": ["flex-layout.row#banner-warranty-10"],
+    "props": {
+      "blockClass": "banner-warranty-10Row"
+    }
+  },
+  /*-------------------------------------------------------*/
+  /*-----------------------TAB PRODUCTS COLLECTION--------------------------------*/
+  "experimental__visibility-layout#homeTabs": {
+    "title": "[TOGGLE_VISIBILITY] - MID - Products tab",
+    "props": {
+      "visible": true
+    },
+    "children": ["tab-layout#homeTabs"]
+  },
+  "tab-layout#homeTabs": {
+    "title": "[TAB-LAYOUT] - MID - Products tab",
+    "children": ["tab-list#homeTabs", "tab-content#homeTabs"],
+    "props": {
+      "blockClass": "homeTabLayoutProducts"
+    }
+  },
+  "tab-list#homeTabs": {
+    "title": "[TAB-LIST] - MID - Products tab",
+    "children": [
+      "responsive-layout.desktop#tabListBox",
+      "responsive-layout.mobile#tabListBoxSlider"
+    ],
+    "props": {
+      "blockClass": ["tabList", "homeTabLayoutProducts"]
+    }
+  },
+  "responsive-layout.desktop#tabListBox": {
+    "title": "[DESKTOP] - MID - Products tab",
+    "children": ["tab-list.item#1", "tab-list.item#2", "tab-list.item#3"]
+  },
+  "responsive-layout.mobile#tabListBoxSlider": {
+    "title": "[MOBILE] - MID - Products tab",
+    "children": ["slider-layout#tabListSlider"]
+  },
+  "tab-list.item#1": {
+    "title": "[TAB-LIST] - MID - First tab item",
+    "props": {
+      "tabId": "1",
+      "label": "Products our customers love",
+      "blockClass": ["tabItem", "tabItemHomeProducts"],
+      "defaultActiveTab": true
+    }
+  },
+  "tab-list.item#2": {
+    "title": "[TAB-LIST] - MID - Second tab item",
+    "props": {
+      "tabId": "2",
+      "label": "Best sellers",
+      "blockClass": ["tabItem", "tabItemHomeProducts"]
+    }
+  },
+  "tab-list.item#3": {
+    "title": "[TAB-LIST] - MID - Third tab item",
+    "props": {
+      "tabId": "3",
+      "label": "Top eco products",
+      "blockClass": ["tabItem", "tabItemHomeProducts"]
+    }
+  },
+  "tab-content#homeTabs": {
+    "title": "[TAB-CONTENT] - MID - Tab contents",
+    "children": [
+      "tab-content.item#1",
+      "tab-content.item#2",
+      "tab-content.item#3"
+    ]
+  },
+  "tab-content.item#1": {
+    "title": "[TAB-CONTENT] - MID - First tab content",
+    "children": ["list-context.product-list#slider1"],
+    "props": {
+      "tabId": "1"
+    }
+  },
+  "tab-content.item#2": {
+    "title": "[TAB-CONTENT] - MID - Second tab content",
+    "children": ["list-context.product-list#slider2"],
+    "props": {
+      "tabId": "2"
+    }
+  },
+  "tab-content.item#3": {
+    "title": "[TAB-CONTENT] - MID - Third tab content",
+    "children": ["list-context.product-list#slider3"],
+    "props": {
+      "tabId": "3"
+    }
+  },
+  "list-context.product-list#slider1": {
+    "title": "[PRODUCT-LIST] - MID - First tab products list",
+    "blocks": [
+      "product-summary.shelf.product-comparison#bauknechtPLP-carousel-no-comparison-button"
+      /* "product-summary.shelf.product-comparison#bauknechtPLP-carousel-small" */
+    ],
+    "children": ["slider-layout#innovazioneHome2"],
+    "props": {
+      "collection": "137"
+    }
+  },
+  "list-context.product-list#slider2": {
+    "title": "[PRODUCT-LIST] - MID - Second tab products list",
+    "blocks": [
+      "product-summary.shelf.product-comparison#bauknechtPLP-carousel-no-comparison-button"
+      /* "product-summary.shelf.product-comparison#bauknechtPLP-carousel-small" */
+    ],
+    "children": ["slider-layout#innovazioneHome2"],
+    "props": {
+      "collection": "137"
+    }
+  },
+  "list-context.product-list#slider3": {
+    "title": "[PRODUCT-LIST] - MID - Third tab products list",
+    "blocks": [
+      "product-summary.shelf.product-comparison#bauknechtPLP-carousel-no-comparison-button"
+      /* "product-summary.shelf.product-comparison#bauknechtPLP-carousel-small" */
+    ],
+    "children": ["slider-layout#innovazioneHome2"],
+    "props": {
+      "collection": "137"
+    }
+  },
+  "slider-layout#tabListSlider": {
+    "title": "[SLIDER] - MID - Tab products slider",
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 2,
+        "phone": 2
+      },
+      "infinite": false,
+      "showPaginationDots": false,
+      "showNavigationArrows": "mobileOnly",
+      "blockClass": ["carousel", "sliderHome"]
+    },
+    "children": ["tab-list.item#1", "tab-list.item#2", "tab-list.item#3"]
+  },
+  "slider-layout#innovazioneHome2": {
+    "title": "[SLIDER] - MID - Tab products slider",
+    "props": {
+      "itemsPerPage": {
+        "desktop": 3,
+        "tablet": 3,
+        "phone": 1
+      },
+      "showNavigationArrows": "desktopOnly",
+      "infinite": true,
+      "fullWidth": true,
+      "blockClass": "shelf"
+    }
+  },
+  /*-------------------------------------------------------*/
+  /*---------------------SECOND BANNER SLIDER----------------------------------*/
+  "experimental__visibility-layout#sliderHomeMid": {
+    "title": "[EXPERIMENTAL-VISIBILITY] - MID - Second Slider Home",
+    "children": [
+      "responsive-layout.desktop#sliderHomeMid",
+      "responsive-layout.mobile#sliderHomeMid"
+    ]
+  },
+  "responsive-layout.desktop#sliderHomeMid": {
+    "title": "[DESKTOP] - MID - Second Slider Home",
+    "children": ["analytics-wrapper#sliderHomeMid"]
+  },
+  "responsive-layout.mobile#sliderHomeMid": {
+    "title": "[MOBILE] - MID - Second Slider Home",
+    "children": ["analytics-wrapper#sliderHomeMid"]
+  },
+  "analytics-wrapper#sliderHomeMid": {
+    "title": "Analtics Wrapper Slider Home mid",
+    "props": {
+      "isHpSlider": true,
+      "propsAnalytics": {
+        "analyticsProperties": "provide",
+        "nameEvent": "slider_click",
+        "name": "sliderClick",
+        // "analyticsProperties": "provide",
+        // "nameEvent": "redeemAPromo",
+        // "name": "promo",
+        "data": [{}]
+      }
+    },
+    "children": ["slider-layout#sliderHomeMid"]
+  },
+  "slider-layout#sliderHomeMid": {
+    "title": "[SLIDER] - MID - Second Slider Home",
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": false,
+      "showNavigationArrows": "desktopOnly",
+      "autoplay": {
+        "timeout": 5000,
+        "stopOnHover": false
+      },
+      "slideTransition": {
+        "speed": 500,
+        "delay": 0,
+        "timing": ""
+      },
+      "blockClass": ["carousel", "sliderHome", "sliderHomeMid"],
+      "fullWidth": false
+    },
+    "children": [
+      "experimental__visibility-layout#bannerWithPostillaSlideMid",
+      "experimental__visibility-layout#bannerWithPostillaSlide2Mid",
+      "experimental__visibility-layout#bannerWithPostillaSlide3Mid",
+      "experimental__visibility-layout#bannerWithPostillaSlide4Mid",
+      "experimental__visibility-layout#bannerWithPostillaSlide5Mid",
+      "experimental__visibility-layout#bannerWithPostillaSlide6Mid"
+    ]
+  },
+  /*-------------------------------------------------------*/
+  /*---------------------NEWSLETTER BOX----------------------------------*/
+  "experimental__visibility-layout#newsletterBox": {
+    "title": "[EXPERIMENTAL-VISIBILITY] - BOTTOM - Newsletter Box",
+    "props": {
+      "visible": true
+    },
+    "children": ["flex-layout.row#newsletterBoxRow"]
+  },
+  "flex-layout.row#newsletterBoxRow": {
+    "title": "[ROW] - BOTTOM - Newsletter Box",
+    "children": [
+      "image#newsletterBoxBackground",
+      "flex-layout.col#newsletterBoxRow"
+    ],
+    "props": {
+      "blockClass": "newsletterBoxRow"
+    }
+  },
+  "image#newsletterBoxBackground": {
+    "title": "[IMAGE] - BOTTOM - Newsletter Box Background",
+    "props": {
+      "src": "assets/ph-wide.png",
+      "blockClass": "newsletterBoxBackground"
+    }
+  },
+  "flex-layout.col#newsletterBoxRow": {
+    "title": "[COL] - BOTTOM - Newsletter Box Contents",
+    "children": [
+      "rich-text#newsletterBoxText",
+      "rich-text#newsletterBoxTitle",
+      "link#newsletterLinkButton"
+    ],
+    "props": {
+      "blockClass": "newsletterBoxCol"
+    }
+  },
+  "rich-text#newsletterBoxText": {
+    "title": "[TEXT] - BOTTOM - Newsletter Box Title",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Bauknecht Newsletter abonnieren und 20 € Gutschein für den Bauknecht Shop erhalten",
+      "blockClass": "newsletterBoxText"
+    }
+  },
+  "rich-text#newsletterBoxTitle": {
+    "title": "[TEXT] - BOTTOM - Newsletter Box Subtitle",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "JETZT ANMELDEN",
+      "blockClass": ["newsletterBoxText", "newsletterBoxTitle"]
+    }
+  },
+  "link#newsletterLinkButton": {
+    "title": "[LINK] - BOTTOM - Newsletter Box Button Link",
+    "props": {
+      "href": "/",
+      "blockClass": "newsletterLinkButton"
+    },
+    "children": ["rich-text#newsletterButtonText", "image#newsletterButtonLogo"]
+  },
+  "rich-text#newsletterButtonText": {
+    "title": "[TEXT] - BOTTOM - Newsletter Box Button Link Text",
+    "props": {
+      "text": "Newsletter abonnieren",
+      "blockClass": ["newsletterButtonText"]
+    }
+  },
+  "image#newsletterButtonLogo": {
+    "title": "[IMAGE] - BOTTOM - Newsletter Box Button Link Image",
+    "props": {
+      "src": "/arquivos/newsletter-icon.svg",
+      "blockClass": "newsletterButtonLogo"
+    }
+  },
+  /*-------------------------------------------------------*/
+  /*------------------------SUPPORT SLIDER-------------------------------*/
+  "experimental__visibility-layout#carouselCollectionHome1Title": {
+    "title": "[EXPERIMENTAL-VISIBILITY] - BOTTOM - Support cards slider Title",
+    "props": {
+      "visible": true
+    },
+    "children": ["rich-text#carouselCollectionHome1Title"]
+  },
+  "rich-text#carouselCollectionHome1Title": {
+    "title": "[TEXT] - BOTTOM - Support cards slider Title text",
+    "props": {
+      "text": "# titolo carosello 1",
+      "blockClass": "titleSearchPage"
+    }
+  },
+  "experimental__visibility-layout#supp": {
+    "title": "[EXPERIMENTAL-VISIBILITY] - BOTTOM - Support cards slider",
+    "props": {
+      "visible": true
+    },
+    "children": ["slider-layout#linkCards", "rich-text#labelUnderCards"]
+  },
+  "slider-layout#linkCards": {
+    "title": "[SLIDER] - BOTTOM - Support cards slider",
+    "props": {
+      "itemsPerPage": {
+        "desktop": 4,
+        "tablet": 4,
+        "phone": 1
+      },
+      "infinite": false,
+      "showNavigationArrows": "never",
+      "autoplay": {
+        "timeout": 5000,
+        "stopOnHover": false
+      },
+      "blockClass": ["carousel", "cardsSupp"]
+    },
+    "children": [
+      // "flex-layout.row#linkCard1",
+      "flex-layout.row#linkCard2",
+      "flex-layout.row#linkCard3",
+      "flex-layout.row#linkCard4"
+    ]
+  },
+  "flex-layout.row#linkCard1": {
+    "title": "[ROW] - BOTTOM - Old First Support card",
+    "props": {
+      "blockClass": "linkCards"
+    },
+    "children": ["link#card1"]
+  },
+  "link#card1": {
+    "title": "[LINK] - BOTTOM - Old First Support card",
+    "props": {
+      "blockClass": "linkCards",
+      "href": "https://bauknechtde.myvtex.com/kundencenter/kontakt"
+    },
+    "children": [
+      "image#logoLinkCard1",
+      "rich-text#TitleLinkCard1",
+      "rich-text#SubTitleLinkCard1",
+      "rich-text#ButtonLinkCard1"
+    ]
+  },
+  "image#logoLinkCard1": {
+    "title": "[IMAGE] - BOTTOM - Old First Support card Image",
+    "props": {
+      "blockClass": "linkCards",
+      "width": "2.6875rem",
+      "src": "assets/icons/manuale.svg"
+    }
+  },
+  "rich-text#TitleLinkCard1": {
+    "title": "[TEXT] - BOTTOM - Old First Support card Text title",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "E-mail",
+      "blockClass": "linkCardsTitle"
+    }
+  },
+  "rich-text#SubTitleLinkCard1": {
+    "title": "[TEXT] - BOTTOM - Old First Support card Image description",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Schreiben Sie an die Bauknecht Kundenbetreuung",
+      "blockClass": "linkCardsSubTitle"
+    }
+  },
+  "rich-text#ButtonLinkCard1": {
+    "title": "[TEXT] - BOTTOM - Old First Support card Image Button",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "E-mail",
+      "blockClass": "linkCardsButton"
+    }
+  },
+  "flex-layout.row#linkCard2": {
+    "title": "[ROW] - BOTTOM - First Support card",
+    "props": {
+      "blockClass": "linkCards"
+    },
+    "children": ["link#card2"]
+  },
+  "link#card2": {
+    "title": "[LINK] - BOTTOM - First Support card",
+    "props": {
+      "blockClass": "linkCards",
+      "href": "https://api.whatsapp.com/send?phone=491712286337",
+      "target": "_blank",
+      "linkId": "service_whatsapp_1"
+    },
+    "children": [
+      "image#logoLinkCard2",
+      "rich-text#TitleLinkCard2",
+      "rich-text#SubTitleLinkCard2",
+      "link#ButtonLinkCard2"
+    ]
+  },
+  "image#logoLinkCard2": {
+    "title": "[IMAGE] - BOTTOM - First Support card Image",
+    "props": {
+      "blockClass": "linkCards",
+      "width": "2.6875rem",
+      "src": "assets/icons/registra.svg"
+    }
+  },
+  "rich-text#TitleLinkCard2": {
+    "title": "[TEXT] - BOTTOM - First Support card Text title",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Whatsapp",
+      "blockClass": "linkCardsTitle"
+    }
+  },
+  "rich-text#SubTitleLinkCard2": {
+    "title": "[TEXT] - BOTTOM - First Support card Image description",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Unsere Mitarbeiter unterstützen Sie gerne online<br/>Montag - Freitag 8:00 - 20:00 Uhr*<br/>Samstag 8:00 - 16:00 Uhr",
+      "blockClass": "linkCardsSubTitle"
+    }
+  },
+  "link#ButtonLinkCard2": {
+    "title": "[LINK] - BOTTOM - First Support card Image Button",
+    "props": {
+      "href": "https://api.whatsapp.com/send?phone=491712286337",
+      "target": "_blank",
+      "linkId": "service_whatsapp_2"
+    },
+    "children": ["rich-text#ButtonLinkCard2"]
+  },
+  "rich-text#ButtonLinkCard2": {
+    "title": "[TEXT] - BOTTOM - First Support card Image Button",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "WHATSAPP",
+      "blockClass": "linkCardsButton"
+    }
+  },
+  "flex-layout.row#linkCard3": {
+    "title": "[ROW] - BOTTOM - Second Support card",
+    "props": {
+      "blockClass": "linkCards"
+    },
+    "children": ["link#card3"]
+  },
+  "link#card3": {
+    "title": "[LINK] - BOTTOM - Second Support card",
+    "props": {
+      "blockClass": "linkCards",
+      "href": "tel:07118888900"
+    },
+    "children": [
+      "image#logoLinkCard3",
+      "rich-text#TitleLinkCard3",
+      "rich-text#SubTitleLinkCard3",
+      "rich-text#ButtonLinkCard3"
+    ]
+  },
+  "image#logoLinkCard3": {
+    "title": "[IMAGE] - BOTTOM - Second Support card Image",
+    "props": {
+      "blockClass": "linkCards",
+      "width": "2.6875rem",
+      "src": "assets/icons/clienti.svg"
+    }
+  },
+  "rich-text#TitleLinkCard3": {
+    "title": "[TEXT] - BOTTOM - Second Support card Text title",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Kundenservice<br/>0711 8888 900**",
+      "blockClass": "linkCardsTitle"
+    }
+  },
+  "rich-text#SubTitleLinkCard3": {
+    "title": "[TEXT] - BOTTOM - Second Support card Image description",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "deutschlandweite Telefonnummer<br/>Montag - Freitag 08:00 - 17:00 Uhr<br/>Samstag 08:00 - 16:00 Uhr",
+      "blockClass": "linkCardsSubTitle"
+    }
+  },
+  "rich-text#ButtonLinkCard3": {
+    "title": "[TEXT] - BOTTOM - Second Support card Image Button",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "KONTAKTIEREN",
+      "blockClass": "linkCardsButton"
+    }
+  },
+  "flex-layout.row#linkCard4": {
+    "title": "[ROW] - BOTTOM - Third Support card",
+    "props": {
+      "blockClass": "linkCards"
+    },
+    "children": ["link#card4"]
+  },
+  "link#card4": {
+    "title": "[LINK] - BOTTOM - Third Support card",
+    "props": {
+      "blockClass": "linkCards",
+      "href": "https://bauknechtde.myvtex.com/#chat",
+      "linkId": "service_onlinechat_1"
+    },
+    "children": [
+      "image#logoLinkCard4",
+      "rich-text#TitleLinkCard4",
+      "rich-text#SubTitleLinkCard4",
+      "chatbot-button-wrapper#homeChatButton"
+    ]
+  },
+  "image#logoLinkCard4": {
+    "title": "[IMAGE] - BOTTOM - Third Support card Image",
+    "props": {
+      "blockClass": "linkCards",
+      "width": "2.6875rem",
+      "src": "assets/icons/operatore.svg"
+    }
+  },
+  "rich-text#TitleLinkCard4": {
+    "title": "[TEXT] - BOTTOM - Third Support card Text title",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Chat",
+      "blockClass": "linkCardsTitle"
+    }
+  },
+  "rich-text#SubTitleLinkCard4": {
+    "title": "[TEXT] - BOTTOM - Third Support card Image description",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Unsere Mitarbeiter unterstützen Sie gerne online<br/>Montag - Freitag 8:00 - 18:00 Uhr*",
+      "blockClass": "linkCardsSubTitle"
+    }
+  },
+  "chatbot-button-wrapper#homeChatButton": {
+    "children": ["rich-text#ButtonLinkCard4"]
+  },
+  "rich-text#ButtonLinkCard4": {
+    "title": "[TEXT] - BOTTOM - Third Support card Image Button",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "CHAT ÖFFNEN",
+      "blockClass": "linkCardsButton"
+    }
+  },
+  "rich-text#labelUnderCards": {
+    "props": {
+      "text": "Nicht an Feiertagen ** Anrufertarif aus dem dt. Fest- und Mobilfunknetz providerabhängig",
+      "blockClass": "labelUnderCards"
+    }
+  },
+  /*-------------------------------------------------------*/
+  /*------------------------CHAT WIDGET-------------------------------*/
+  "experimental__visibility-layout#chatWidget": {
+    "title": "[EXPERIMENTAL-VISIBILITY] - Chat Widget",
+    "props": {
+      "renderChildren": false
+    },
+    "children": ["link#chatWidget"]
+  },
+  "link#chatWidget": {
+    "title": "[LINK] - Chat Widget",
+    "props": {
+      "href": "#chat",
+      "target": "_self",
+      "blockClass": ["cardLinkBottom", "fixedChat", "top90"]
+    },
+    "children": ["flex-layout.row#chatSvg2"]
+  },
+  "flex-layout.row#chatSvg2": {
+    "title": "[ROW] - Chat Widget Image",
+    "props": {
+      "width": "30px"
+      // "blockClass": "SupportoItem"
+    },
+    "children": ["image#chat2"]
+  },
+  "image#chat2": {
+    "title": "[IMAGE] - Chat Widget Image",
+    "props": {
+      "blockClass": ["supportoCardIcon"],
+      "src": "assets/icons/chatFilled.svg"
+    }
+  },
+  /*-------------------------------------------------------*/
+  /*---------------------SEO TEXT----------------------------------*/
+  "experimental__visibility-layout#homeSeoTextToggle": {
+    "title": "[EXPERIMENTAL-VISIBILITY] - BOTTOM - SEO Text Container",
+    "props": {
+      "visible": true
+    },
+    "children": ["rich-text#homeSeoText"]
+  },
+  "rich-text#homeSeoText": {
+    "title": "[TEXT] - BOTTOM - SEO Text",
+    "props": {
+      "text": "SEO text",
+      "blockClass": "homeSeoText"
+    }
+  },
+  "rich-text#titleHomepageH1": {
+    "props": {
+      "text": "# Bauknecht Hausgeräte",
+      "blockClass": "titleHomepageH1"
+    }
+  }
+  /*---------------------------------------------------*/
+  /*------------------------END HOMEPAGE-------------------------------*/
+}

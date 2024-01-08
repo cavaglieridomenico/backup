@@ -1,0 +1,60 @@
+{
+  "store.custom#newsletter-page": {
+    "blocks": [
+      "flex-layout.row#top-newsletter-page",
+      "flex-layout.row#description-newsletter-page",
+      "newletter-form#landingpage"
+    ]
+  },
+  "flex-layout.row#top-newsletter-page": {
+    "props": {
+      "blockClass": "TopNewsletter-page"
+    },
+    "children": ["rich-text#Title-newsletter-page"]
+  },
+  "rich-text#Title-newsletter-page": {
+    "props": {
+      "blockClass": "titleNewsletterPage",
+      "text": "text test",
+      "textPosition": "LEFT"
+    }
+  },
+  "flex-layout.row#description-newsletter-page": {
+    "title": "[Row] Copy Text of Newsletter",
+    "props": {
+      "blockClass": "descriptionNewsletterPage"
+    },
+    "children": ["flex-layout.col#descriptionCol-newsletter-page"]
+  },
+  "flex-layout.col#descriptionCol-newsletter-page": {
+    "title": "[Col] Copy Text of Newsletter",
+    "props": {
+      "blockClass": "descriptionNewsletterPage"
+    },
+    "children": [
+      "rich-text#descriptionHeader-newsletter-page",
+      "rich-text#descriptionParagraph-newsletter"
+    ]
+  },
+  "rich-text#descriptionHeader-newsletter-page": {
+    "title": "[Text] Copy Header of Newsletter",
+    "props": {
+      "blockClass": "descriptionNewsletterPage",
+      "text": "#### Bauknecht Newsletter abonnieren und 5 % Rabattgutschein für den Bauknecht Shop erhalten (Nicht gültig für den TKL M11 82).",
+      "textPosition": "LEFT"
+    }
+  },
+  "rich-text#descriptionParagraph-newsletter": {
+    "title": "[Text] Copy Paragraph of Newsletter",
+    "props": {
+      "blockClass": "descriptionNewsletterPage",
+      "text": "Zusätzlich können Sie eine Mikrowelle MW 421 SL gewinnen. Laden Sie einfach einen Freund zum Bauknecht Newsletter ein und schon sind sie beide im Lostopf. Bitte beachten Sie unsere [Teilnahmebedingungen](https://image.email.bauknecht.com/lib/fe3011717d64047d731275/m/1/24ecd0bb-50f1-4a7b-a545-bf9edfef4e5b.pdf).\nAußerdem profitieren Sie von exklusiven Angeboten, Rabatten, Tipps und Tricks, sowie Innovationen, die Ihnen helfen werden, Ihren Alltag noch einfacher zu gestalten.",
+      "textPosition": "LEFT"
+    }
+  },
+  "newletter-form#landingpage": {
+    "props": {
+      "isLandingPage": true
+    }
+  }
+}

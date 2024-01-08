@@ -1,0 +1,99 @@
+export const vtexCredentials: { [index: string]: { "X-VTEX-API-AppKey": string, "X-VTEX-API-AppToken": string } } = {
+  "itwhirlpoolqa": {
+    "X-VTEX-API-AppKey": 'vtexappkey-itwhirlpoolqa-SETTVR',
+    "X-VTEX-API-AppToken": 'IZQLNOEVVJGXTAQPMNBMQWOGJYLYVWHEEHMCHEBQAJYMMTBSCPLWNBILLJBPCFAYCBSLOOIHMKMGYBUPWTWGLKQDZARXCMNUJZJKAPENGDKCOBMJPLSJITNRKPMNXLFZ'
+  },
+  "itwhirlpool": {
+    "X-VTEX-API-AppKey": 'vtexappkey-itwhirlpool-YKHNOZ',
+    "X-VTEX-API-AppToken": 'SSUBFODAEAHOAJGTKHQCDKSPEGFFIOESKDESZSVSATMETJPLFSNZQFDHAEXYIYSQVPEWFNUSLXCKYOVUQUZPAFCEAWSUUXJBBVIEESFSYVOSDSJMICIOYCQQNAWIVAXO'
+  },
+  "ruwhirlpoolqa": {
+    "X-VTEX-API-AppKey": 'vtexappkey-ruwhirlpoolqa-AIHWUB',
+    "X-VTEX-API-AppToken": 'TIRFJIUDXGCJUZPCGOIOUUZOKQGEAOXOIVGWLRFORGCDBDTVPDRGMXDYJDVSBQCJINAYTTQOIUWORVMHXKOWXRCKRHMIWMMBDTVOCUBVMCXSBPHOQNVQBGMQLPHMHISW'
+  },
+  "ruwhirlpool": {
+    "X-VTEX-API-AppKey": 'vtexappkey-ruwhirlpool-ZRRZBV',
+    "X-VTEX-API-AppToken": 'MJSOJAPHHFPCSZQMAAVACENUEAXRMMSQUKLOZMGFDXQAJMQINYVRLWEIVYKICYVUMZIHOCNOTQXENNKRKPDORAEYGCSBBYCECWNKEJUKKGXVYAVIOSXNUGDLUJBLJMNU'
+  },
+  "frwhirlpoolqa": {
+    "X-VTEX-API-AppKey": 'vtexappkey-frwhirlpoolqa-GESKRY',
+    "X-VTEX-API-AppToken": 'QTGIQJQBQVBBZIABCRYNRSPSWJDCFLWSTUXVJXTSDSHTZTKBXXKACKRYDOLGGOWEYJHFLEREXFJZKVSDZBEIAWPJCYRVLNMOWCVQLEQSFFCXASNIVIHEKOECTYCMNWSK'
+  },
+  "frwhirlpool": {
+    "X-VTEX-API-AppKey": 'vtexappkey-frwhirlpool-GZCPNL',
+    "X-VTEX-API-AppToken": 'XLDJZIGVYFNRPXKIHRNGNSTFCNRNRWPFUPGNCSZTOUSTEJBYHBTCHQPFRYHMRSDBPHXZRXGORUSTAZBSLTGQDMXDZBVDLNBVRQEWLBGJUELNYWESXOAYMMYCKTAQCCDD'
+  },
+  "indesitukqa" : {
+    "X-VTEX-API-AppKey": 'vtexappkey-indesitukqa-YDMRFY',
+    "X-VTEX-API-AppToken": 'LNFGSFSXSKBNUWOXBOSMZDJRCSHTKBSYMKMKBWRPDBJKGMLZGOCUANCIDODZXZMRSCBJJDWFWCJXTYKPGINWYYYYHDHNSSRDOSSDKCPCRXYXEFOEDNTPMQSTEDBFVJME'
+  },
+  "indesituk" : {
+    "X-VTEX-API-AppKey": 'vtexappkey-indesituk-NWOYCS',
+    "X-VTEX-API-AppToken": 'HQAARXCUXEFWAULDXWDYXETZNIPAPJTGXWDGPKUGLKWBKUHDOQVHZJNDXBNJIBENKYYEREONCXNMHRPSALMYNLHOIZJNWLXJGJQLVDMJCIFCWBVFMVIXPFZZRKVRUAQR'
+  },
+  "hotpointit" : {
+    "X-VTEX-API-AppKey": 'vtexappkey-hotpointit-INZJFJ',
+    "X-VTEX-API-AppToken": 'QCABLVHTDVRXALJPDTOJRDILYSJXEGFCTAQFQTJNPKGGWKLBVNUPGYOMUPCSMKPWQODAVEYKJATGXCONGHBRLPVVMDLBQQBFVJQHHLGROKFFEHPSAOLEIYLATHNRTXTT'
+  },
+  "frccwhirlpool": {
+    "X-VTEX-API-AppKey": 'vtexappkey-frccwhirlpool-TLEGNP',
+    "X-VTEX-API-AppToken": 'PLCALEQQTDIREVQHZGGEHSFUCRXMCXZRERHFWAYBZQLDDOVNIUNXQHWWFIYUGDOWERNMOLLYHEEQGCQNWJEHKBBWVKZNCEUWCPZMBIZWJOPLDFQCSKYWYGMCPQQDLXVD'
+  },
+  "frccwhirlpoolqa": {
+    "X-VTEX-API-AppKey": 'vtexappkey-frccwhirlpoolqa-XVPFIN',
+    "X-VTEX-API-AppToken": 'PXFKJDNHAVUTNTJPGYQDRUWXDFCWNJQDNFJDZFPOUNICQLJCTVUAHGPVAIGDBQTQFQGIKFQAIBJELUGRVADSPQVGPNCRYMNETRWAFBRNFTSGXLKGBPIBNBBPUZSWDZBW'
+  },
+  "plwhirlpool": {
+    "X-VTEX-API-AppKey": 'vtexappkey-plwhirlpool-EROZAI',
+    "X-VTEX-API-AppToken": 'MMQXKOWAYMJKYZKTJCSAJJWSNGLLVFGERMBHQFESXOAYFPRJYPZQBDACQYJEDLESFETLXCDDYADVJYMYOBMGFPDOMZRRWZPLJHSBWFMVLWSBZESRMLQBZXMPAFZXLMGZ'
+  },
+  "plwhirlpoolqa": {
+    "X-VTEX-API-AppKey": 'vtexappkey-plwhirlpoolqa-YTJRWF',
+    "X-VTEX-API-AppToken": 'TLEHDDRPMIEFUYYDGTBCSOLEVNHYHJUKPWPXKWQKCCUVGKUBLVZKAMPFZALQWSHCNUQYIBTJCQZQTQXLSFMMKJJCGJYJKZNJUSHMUWSKBPHJNZMIDAYQFVRDKORYDJZC'
+  }
+}
+
+export const defaultCookie = "VtexIdclientAutCookie"
+
+export const sfmcMID = "7329181"
+export const sfmcApiKey = "eac75250-6b3b-11e9-a1aa-063c1e816f18"
+
+export const sapCodeToBillingType = {
+  "ZF2": {
+    "it-IT": "fattura",
+    "fr-FR": "facture",
+    "pl-PL": "faktura",
+  },
+  "ZRE": {
+    "it-IT": "credito",
+    "fr-FR": "avoir",
+    "pl-PL": "korekta-ilosciowa",
+  },
+  "ZG2": {
+    "it-IT": "credito",
+    "fr-FR": "avoir",
+    "pl-PL": "korekta-cenowa",
+  },
+  "ZL2": {
+    "it-IT": "debito",
+    "fr-FR": "débit",
+    "pl-PL": "korekta-cenowa",
+  },
+}
+
+export const localeMap = {
+  frwhirlpool: "fr-FR",
+  frwhirlpoolqa: "fr-FR",
+  frccwhirlpool: "fr-FR",
+  frccwhirlpoolqa: "fr-FR",
+  itwhirlpool: "it-IT",
+  itwhirlpoolqa: "it-IT",
+  hotpointit: "it-IT",
+  plwhirlpool: "pl-PL",
+  plwhirlpoolqa: "pl-PL"
+}
+
+export const currencyToSymbol = {
+  "EUR": "€",
+  "PLN": "zł"
+}

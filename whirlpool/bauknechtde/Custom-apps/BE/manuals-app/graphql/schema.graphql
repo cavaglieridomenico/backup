@@ -1,0 +1,16 @@
+
+input ManualSuggestionsQueryInput {
+  code: String!
+}
+
+input ManualDocumentsQueryInput {
+  code: String!
+  languages: [String]!
+}
+
+type Query {
+
+  queryManualSuggestions(query : ManualSuggestionsQueryInput): ManualSuggestionsOutput @cacheControl(maxAge: MEDIUM, scope: PUBLIC)
+  queryManualDocuments(query : ManualDocumentsQueryInput): ManualDocumentsOutput @cacheControl(maxAge: MEDIUM, scope: PUBLIC)
+
+}

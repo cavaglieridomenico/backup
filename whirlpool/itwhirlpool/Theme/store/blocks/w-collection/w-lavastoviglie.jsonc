@@ -1,0 +1,473 @@
+{
+  "store.custom#lavastoviglie": {
+    "children": [
+      "flex-layout.row#bread-theme",
+      "vtex.menu@2.x:menu#collectionLinks",
+      "experimental__visibility-layout#heroBannerAnto",
+      "toggle-layout#chatWidget",
+      ////"analytics",
+      "__fold__.experimentalLazyAssets",
+      "video#Lavastoviglie",
+      "experimental__visibility-layout#bannerTesto905",
+      "experimental__visibility-layout#heroBannerAnto2",
+      "experimental__visibility-layout#BnnrPostillaWCollectionWithImg",
+      "experimental__visibility-layout#bannerWithPostillaWcollectionViceversaImg",
+      "experimental__visibility-layout#BnnrPostillaWCollectionWithImg2",
+      "experimental__visibility-layout#BnnrPostillaWCollectionFrigo4PorteBottom21",
+      "experimental__visibility-layout#BnnrPostillaWCollectionWithImg3",
+      "experimental__visibility-layout#BnnrPostillaWCollectionFrigo4PorteBottom212",
+      "experimental__visibility-layout#CaruselTextBanner2",
+      "flex-layout.row#halfSpace",
+      "list-context.image-list#4porte",
+      "slider-layout#photo4porte",
+      "responsive-layout.mobile#caroselloProdottiLavastoviglie",
+      "responsive-layout.desktop#caroselloProdottiLavastoviglie",
+      "shelf.relatedProducts#suggestions-w-lavastoviglie",
+      "newsletter-popup#footer"
+    ]
+  },
+  "responsive-layout.mobile#caroselloProdottiLavastoviglie": {
+    "children": [
+      "experimental__visibility-layout#caroselloProdottiLavastoviglieMobile"
+    ]
+  },
+  "responsive-layout.desktop#caroselloProdottiLavastoviglie": {
+    "children": [
+      "experimental__visibility-layout#caroselloProdottiLavastoviglieDesktop"
+    ]
+  },
+  "experimental__visibility-layout#caroselloProdottiLavastoviglieMobile": {
+    "props": {
+      "visible": false
+    },
+    "children": [
+      "list-context.product-list#caroselloProdottiLavastoviglieMobile"
+    ]
+  },
+  "experimental__visibility-layout#caroselloProdottiLavastoviglieDesktop": {
+    "props": {
+      "visible": false
+    },
+    "children": [
+      "list-context.product-list#caroselloProdottiLavastoviglieDesktop"
+    ]
+  },
+  "list-context.product-list#caroselloProdottiLavastoviglieMobile": {
+    "blocks": ["product-summary.shelf#caroselliLanding"],
+    "children": ["slider-layout#innovazione"],
+    "props": {
+      "collection": "150",
+      "productList": {
+        "maxItems": 10,
+        "itemsPerPage": 5,
+        "minItemsPerPage": 1,
+        "scroll": "BY_PAGE",
+        "arrows": true,
+        "titleText": "Non sai da dove iniziare? Scopri i prodotti Whirlpool più venduti"
+      }
+    }
+  },
+  "list-context.product-list#caroselloProdottiLavastoviglieDesktop": {
+    "blocks": ["product-summary.shelf#caroselliLanding"],
+    "children": ["slider-layout#caroselloProdottiLavastoviglieDesktop"],
+    "props": {
+      "collection": "150",
+      "productList": {
+        "maxItems": 10,
+        "itemsPerPage": 5,
+        "minItemsPerPage": 1,
+        "scroll": "BY_PAGE",
+        "arrows": true,
+        "titleText": "Non sai da dove iniziare? Scopri i prodotti Whirlpool più venduti"
+      }
+    }
+  },
+  "slider-layout#caroselloProdottiLavastoviglieMobile": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 5,
+        "tablet": 2,
+        "phone": 1
+      },
+      "infinite": true,
+      "fullWidth": true,
+      "blockClass": "shelWCollectionfMobile",
+      "showPaginationDots": "never",
+      "showNavigationArrows": "never"
+    }
+  },
+  "slider-layout#caroselloProdottiLavastoviglieDesktop": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 5,
+        "tablet": 2,
+        "phone": 1
+      },
+      "infinite": true,
+      "fullWidth": false,
+      "blockClass": "shelf"
+    }
+  },
+  "breadcrumb#Lavastoviglie": {
+    "props": {
+      "categories": ["w-collection", "w-collection/Lavastoviglie"],
+      "showOnMobile": false
+    }
+  },
+  "experimental__visibility-layout#bannerTesto905": {
+    "props": {
+      "visible": true
+    },
+    "children": ["flex-layout.row#bannerTesto905"]
+  },
+  "flex-layout.row#bannerTesto905": {
+    "props": {
+      "blockClass": ["bannerTesto80", "width100"]
+    },
+    "children": [
+      "experimental__visibility-layout#ImageBannerTesto",
+      "experimental__visibility-layout#titleBannerTesto",
+      "experimental__visibility-layout#DescBannerTesto"
+    ]
+  },
+  "experimental__visibility-layout#bannerWithPostillaWcollectionViceversaImg": {
+    "props": {
+      "visible": true
+    },
+    "children": ["flex-layout.row#bannerWithPostillaWcollectionViceversaImg"]
+  },
+  "flex-layout.row#bannerWithPostillaWcollectionViceversaImg": {
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": [
+        "columnPostillaBannerAntonio",
+        "bgColorAntonioHero",
+        "width80",
+        "marginAutoContent",
+        "wcollectionBanner",
+        "column"
+      ]
+    },
+    "children": [
+      "flex-layout.col#rightPartPostillaWcollec",
+      "flex-layout.col#leftPartPostillaWcollecImg"
+    ]
+  },
+  "flex-layout.col#leftPartPostillaWcollecImg": {
+    "props": {
+      "width": "55%",
+      "preventVerticalStretch": true,
+      "blockClass": ["columnPostilla", "columnPostillaBottom"]
+    },
+    "children": [
+      "experimental__visibility-layout#logoBannerTop",
+      "rich-text#BannTitle",
+      "rich-text#BannDesc",
+      "experimental__visibility-layout#ButtonBannerWithPostillaWColl",
+      "rich-text#BannPostillaWColl"
+    ]
+  },
+  "experimental__visibility-layout#BnnrPostillaWCollectionWithImg3": {
+    "props": {
+      "visible": true
+    },
+    "children": ["flex-layout.row#BnnrPostillaWCollectionWithImg"]
+  },
+  "info-card#heroBannerLavastoviglie": {
+    "props": {
+      "id": "hero-banner-w-collection",
+      "callToActionMode": "none",
+      "isFullModeStyle": false,
+      "textPosition": "left",
+      "imageUrl": "https://assets.wpsandwatch.com/storage/images/_aliases/original_compressed/7/7/2/6/12086277-2-ita-IT/SupremeCleanW_Hero_WCollection_D.webp",
+      "headline": "SupremeClean",
+      "subhead": "Performance di lavaggio e flessibilità superiore",
+      "blockClass": ["heroBanner", "heroBannerWCollection"],
+      "textAlignment": "left"
+    }
+  },
+  "info-card#heroBannerProgettato": {
+    "props": {
+      "id": "hero-banner-w-collection",
+      "callToActionMode": "none",
+      "isFullModeStyle": false,
+      "textPosition": "left",
+      "imageUrl": "https://assets.wpsandwatch.com/storage/images/_aliases/original_compressed/7/9/2/6/12086297-2-ita-IT/SupremeCleanW_Large.webp",
+      "headline": "Progettato per stupirvi",
+      "subhead": "Design pulito e raffinato. Le nuove lavastoviglie Whirlpool sono realizzate con gusto, perché sappiamo che la bellezza è importante per voi. Gli elementi più raffinati e le funzioni intuitive sono avvolti in linee essenziali e ordinate.",
+      "blockClass": ["heroBanner", "heroBannerWCollection"],
+      "textAlignment": "left"
+    }
+  },
+  "video#Lavastoviglie": {
+    "props": {
+      "width": "50%",
+      "height": "600px",
+      "loop": false,
+      "autoPlay": false,
+      "muted": true,
+      "src": "https://youtu.be/uh3ghC5M48g",
+      "blockClass": "videoCottura"
+    }
+  },
+  "image#6senso": {
+    "props": {
+      "src": "assets/6senso-image.svg",
+      "maxHeight": 100,
+      "maxWidth": 100,
+      "title": "Il nero prende vita.",
+      "blockClass": "6sensoImage"
+    }
+  },
+  "info-card#RisultatiEccezionali": {
+    "props": {
+      "id": "hero-banner-w-collection",
+      "callToActionMode": "none",
+      "isFullModeStyle": true,
+      "textPosition": "center",
+      "imageUrl": "",
+      "headline": "Risultati eccezionali, fino al 50% più veloce",
+      "subhead": "Il programma di pulizia perfetto è quello che garantisce risultati sempre eccellenti, indipendentemente da ciò che si trova all'interno della lavastoviglie. Nelle nuove lavastoviglie Whirlpool, la tecnologia 6° SENSO rileva il livello di sporco e ottimizza le risorse, garantendo sempre un basso consumo di acqua e un consumo energetico altamente efficiente.",
+      "blockClass": ["halfBannerReverse", "contain"],
+      "textAlignment": "center"
+    }
+  },
+  "info-card#Progettato": {
+    "props": {
+      "id": "hero-banner-w-collection",
+      "callToActionMode": "none",
+      "isFullModeStyle": false,
+      "textPosition": "left",
+      "imageUrl": "https://assets.wpsandwatch.com/storage/images/_aliases/original_compressed/7/9/2/6/12086297-2-ita-IT/SupremeCleanW_Large.webp",
+      "headline": "Progettato per stupirvi",
+      "subhead": "Design pulito e raffinato. Le nuove lavastoviglie Whirlpool sono realizzate con gusto, perché sappiamo che la bellezza è importante per voi. Gli elementi più raffinati e le funzioni intuitive sono avvolti in linee essenziali e ordinate.",
+      "blockClass": ["halfBanner", "contain"],
+      "textAlignment": "left"
+    }
+  },
+  "info-card#Controllo": {
+    "props": {
+      "id": "hero-banner-w-collection",
+      "callToActionMode": "none",
+      "isFullModeStyle": false,
+      "textPosition": "left",
+      "imageUrl": "https://assets.wpsandwatch.com/storage/images/_aliases/original_compressed/3/4/3/6/12086343-3-ita-IT/SupremeCleanW_MainFeature_Effortless_D.webp",
+      "headline": "Controllo senza sforzo, a portata di mano",
+      "subhead": "Imposta facilmente tutti i programmi della tua lavastoviglie, grazie alla comoda interfaccia a pulsante full-touch. Lo schermo del display fornisce informazioni immediate e facilita la lettura delle funzioni disponibili.",
+      "blockClass": ["halfBannerReverse", "contain", "smallBanner"],
+      "textAlignment": "left"
+    }
+  },
+  "info-card#SupremeClean": {
+    "props": {
+      "id": "hero-banner-w-collection",
+      "callToActionMode": "none",
+      "isFullModeStyle": false,
+      "textPosition": "left",
+      "imageUrl": "https://assets.wpsandwatch.com/storage/images/_aliases/original_compressed/9/3/4/6/12086439-2-ita-IT/SupremeCleanW_HalfBanner_DesignInnovation_D.webp",
+      "headline": "SupremeClean",
+      "subhead": "W Collection combina un design puro, semplice e innovativo con un'anima altamente digitale e tecnologica, offrendo così una sensibile integrazione del prodotto nella vostra casa e nella vostra vita.",
+      "blockClass": ["halfBanner", "contain", "smallBanner"],
+      "textAlignment": "left"
+    }
+  },
+  "info-card#RProtezione": {
+    "props": {
+      "id": "hero-banner-w-collection",
+      "callToActionMode": "none",
+      "isFullModeStyle": false,
+      "textPosition": "left",
+      "imageUrl": "https://assets.wpsandwatch.com/storage/images/_aliases/original_compressed/3/7/3/6/12086373-1-ita-IT/SupremeCleanW_MainFeature_GlassProtection_D.webp",
+      "headline": "Protezione extra per i vostri calici",
+      "subhead": "Glass protect è un nuovo accessorio speciale progettato per mantenere i calici fermi e al sicuro all'interno del cestello inferiore della lavastoviglie, indipendentemente dalla loro altezza. O puoi anche rimuoverlo per avere più spazio per i tuoi piatti.",
+      "blockClass": ["halfBannerReverse", "contain", "smallBanner"],
+      "textAlignment": "left"
+    }
+  },
+  "info-card#Goditi": {
+    "props": {
+      "id": "hero-banner-w-collection",
+      "callToActionMode": "none",
+      "isFullModeStyle": false,
+      "textPosition": "left",
+      "imageUrl": "https://assets.wpsandwatch.com/storage/images/_aliases/original_compressed/9/9/4/6/12086499-1-ita-IT/SupremeCleanW_MainFeature_CristalClear_D.webp",
+      "headline": "Goditi l'illuminazione interna",
+      "subhead": "Le luci potenti del nuovo sistema di illuminazione a LED forniscono una chiara visuale di ciò che stai facendo e rendono il carico e lo scarico della lavastoviglie un gioco da ragazzi.",
+      "blockClass": ["halfBannerReverse", "contain", "smallBanner"],
+      "textAlignment": "left"
+    }
+  },
+  "info-card#spazio": {
+    "props": {
+      "id": "hero-banner-w-collection",
+      "callToActionMode": "none",
+      "isFullModeStyle": false,
+      "textPosition": "left",
+      "imageUrl": "https://assets.wpsandwatch.com/storage/images/_aliases/original_compressed/9/6/4/6/12086469-3-ita-IT/SupremeCleanW_MainFeature_MoreSpace_D.webp",
+      "headline": "Più spazio, risultati migliori",
+      "subhead": "Power Clean Pro offre fino al 30% di spazio extra*, in modo da poter inserire facilmente più piatti. I suoi potenti getti sono progettati per raggiungere ogni angolo e rimuovere lo sporco più difficile.",
+      "blockClass": ["halfBanner", "contain", "smallBanner"],
+      "textAlignment": "left"
+    }
+  },
+  "info-card#NaturalDry": {
+    "props": {
+      "id": "hero-banner-w-collection",
+      "callToActionMode": "none",
+      "isFullModeStyle": false,
+      "textPosition": "left",
+      "imageUrl": "https://assets.wpsandwatch.com/storage/images/_aliases/original_compressed/5/7/6/2/13052675-4-ita-IT/Naturaldry_D.webp",
+      "headline": "NaturalDry",
+      "subhead": "Al termine del ciclo di lavaggio, un algoritmo calcola quando la temperatura all'interno della macchina scende tra i 40°C ed i 50°C per attivare la tecnologia NaturalDry. La porta si apre automaticamente di 10cm per facilitare l'asciugatura delle stoviglie in maniera naturale, preservando il top della cucina.",
+      "blockClass": ["halfBannerReverse", "contain", "smallBanner"],
+      "textAlignment": "left"
+    }
+  },
+  "flex-layout.row#technologiaRow1": {
+    "children": ["rich-text#technologiaTextHeader"],
+    "props": {
+      "blockClass": "footerRowTechnologia",
+      // "paddingTop": 6,
+      // "paddingBottom": 3,
+      "paddingLeft": 2,
+      "paddingRight": 2
+    }
+  },
+  "flex-layout.row#technologiaRow2": {
+    "children": [
+      "flex-layout.col#technologiaCol1",
+      "flex-layout.col#technologiaCol2",
+      "flex-layout.col#technologiaCol3"
+    ],
+    "props": {
+      "blockClass": "footerRowTechnologia",
+      "paddingTop": 6,
+      "paddingBottom": 3
+    }
+  },
+  "rich-text#technologiaTextHeader": {
+    "props": {
+      "textPosition": "CENTER",
+      "textAlignment": "CENTER",
+      "text": "TECNOLOGIA",
+      "blockClass": "technologiaHeader0"
+    }
+  },
+  "flex-layout.col#technologiaCol1": {
+    "children": ["rich-text#technologia-text1", "rich-text#technologia-text2"],
+    "props": {
+      "blockClass": "technologiaHeader",
+      "paddingTop": 6,
+      "paddingBottom": 3
+    }
+  },
+  "rich-text#technologia-text1": {
+    "props": {
+      "textPosition": "CENTER",
+      "textAlignment": "CENTER",
+      "text": "Risparmio di risorse",
+      "blockClass": "technologiaHeader1"
+    }
+  },
+  "rich-text#technologia-text2": {
+    "props": {
+      "textPosition": "LEFT",
+      "textAlignment": "LEFT",
+      "text": "Risparmiare risorse senza compromettere le prestazioni. Le nuove lavastoviglie Whirlpool consumano solo 6 litri *di acqua per ciclo, 6 litri per un risultato di pulizia sempre perfetto.",
+      "blockClass": "technologiaHeader"
+    }
+  },
+  "flex-layout.col#technologiaCol2": {
+    "children": [
+      "rich-text#technologia-text3",
+      "rich-text#technologia-text3-bis",
+      "rich-text#technologia-text4",
+      "rich-text#technologia-text7",
+      "rich-text#technologia-text8"
+    ],
+    "props": {
+      "blockClass": "footerRow",
+      "paddingTop": 6,
+      "paddingBottom": 3
+    }
+  },
+  "rich-text#technologia-text3": {
+    "props": {
+      "textPosition": "CENTER",
+      "textAlignment": "CENTER",
+      "text": "Soluzioni di carico flessibili1",
+      "blockClass": "technologiaHeader1"
+    }
+  },
+  "rich-text#technologia-text3-bis": {
+    "props": {
+      "textPosition": "LEFT",
+      "textAlignment": "LEFT",
+      "text": "Soluzioni di carico flessibili fino a15 coperti. Per pulire a fondo tutto ciò di cui avete bisogno:",
+      "blockClass": "technologiaHeader"
+    }
+  },
+  "rich-text#technologia-text4": {
+    "props": {
+      "textPosition": "LEFT",
+      "textAlignment": "LEFT",
+      "text": "- grande flessibilità d'uso;",
+      "blockClass": "technologiaHeader"
+    }
+  },
+  "rich-text#technologia-text7": {
+    "props": {
+      "textPosition": "LEFT",
+      "textAlignment": "LEFT",
+      "text": "- personalizzabile in base alle diverse combinazioni di carico;",
+      "blockClass": "technologiaHeader"
+    }
+  },
+  "rich-text#technologia-text8": {
+    "props": {
+      "textPosition": "LEFT",
+      "textAlignment": "LEFT",
+      "text": "- moduli scorrevoli per caricare facilmente gli articoli più alti su scaffali superiori.",
+      "blockClass": "technologiaHeader"
+    }
+  },
+  "flex-layout.col#technologiaCol3": {
+    "children": ["rich-text#technologia-text5", "rich-text#technologia-text6"],
+    "props": {
+      "blockClass": "footerRow",
+      "paddingTop": 6,
+      "paddingBottom": 3
+    }
+  },
+  "rich-text#technologia-text5": {
+    "props": {
+      "textPosition": "CENTER",
+      "textAlignment": "LEFT",
+      "text": "Classe energetica A+++",
+      "blockClass": "technologiaHeader1"
+    }
+  },
+  "rich-text#technologia-text6": {
+    "props": {
+      "textPosition": "CENTER",
+      "textAlignment": "LEFT",
+      "text": "L'idromassaggio PowerDry assicura le massime prestazioni insieme al raggiungimento della classe energetica A+++",
+      "blockClass": "technologiaHeader"
+    }
+  },
+  "shelf.relatedProducts#suggestions-w-lavastoviglie": {
+    "blocks": ["product-summary.shelf"],
+    "props": {
+      "collection": "150",
+      "productList": {
+        "maxItems": 10,
+        "itemsPerPage": 3,
+        "minItemsPerPage": 1,
+        "scroll": "BY_PAGE",
+        "arrows": true,
+        "titleText": "Non sai da dove iniziare? Scopri i prodotti Whirlpool più venduti"
+      },
+      "blockClass": ["margin3125", "slideMargin", "slide20width"]
+    }
+  }
+}

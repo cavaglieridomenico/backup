@@ -1,0 +1,553 @@
+{
+  "store.custom#promotion-template": {
+    "blocks": [
+      "responsive-layout.desktop#promotion",
+      "responsive-layout.mobile#promotion-mobile"
+    ]
+  },
+  "responsive-layout.desktop#promotion": {
+    "children": ["flex-layout.row#promotion-maxi-container"],
+    "props": {
+      "blockClass": "promotion-style"
+    }
+  },
+  "flex-layout.row#promotion-maxi-container": {
+    "children": ["flex-layout.col#promotion-maxi-container"],
+    "props": {
+      "blockClass": "promotion-maxi-container"
+    }
+  },
+  "flex-layout.col#promotion-maxi-container": {
+    "children": [
+      //"analytics#landing-pages",
+      /* "breadcrumb#promotion-desktop", */
+      "breadcrumb-custom#promotion-desktop",
+      "flex-layout.row#promotion-intro-desktop",
+      "flex-layout.row#promotion-first-centered-title-desktop-container",
+      "flex-layout.row#promotion-first-carousel-desktop-container",
+      "flex-layout.row#promotion-second-centered-title-desktop-container",
+      "flex-layout.row#promotion-product-detail-card01-tl-desktop",
+      "flex-layout.row#promotion-product-detail-card-tr-desktop",
+      "flex-layout.row#promotion-third-centered-title-desktop-container",
+      "flex-layout.row#promotion-product-detail-noCard-tr-desktop",
+      "flex-layout.col#learn-more-button-container",
+      "flex-layout.row#promotion-cards-after-intro-desktop",
+      "flex-layout.row#promotion-banner-desktop",
+      "flex-layout.row#promotion-title-main-products-desktop",
+      "flex-layout.row#promotion-last-carousel-desktop-container"
+    ],
+    "props": {
+      "blockClass": "promotion-maxi-container-style"
+    }
+  },
+  //breadcrumb promotion
+  "breadcrumb#promotion-desktop": {
+    "props": {
+      "categories": ["/Home/", "Promotion"],
+      "showOnMobile": true,
+      "blockClass": "breadcrumb-landing-template-desktop"
+    }
+  },
+  "breadcrumb-custom#promotion-desktop": {
+    "props": {
+      /* "blockClass": "containerBreadcrumbs", */
+      "firstPage": "Home",
+      "currentPage": "promotion"
+    }
+  },
+  /* CUSTOM APP */
+
+  "flex-layout.col#learn-more-button-container": {
+    "children": ["button-learn-more#learn-more-button-desktop"],
+    "props": {
+      "blockClass": "learn-more-button"
+    }
+  },
+  "button-learn-more#learn-more-button-desktop": {},
+
+  /* INTRO TO PRODUCT */
+  "flex-layout.row#promotion-intro-desktop": {
+    "children": [
+      "flex-layout.col#promotion-intro-image-desktop-container",
+      "flex-layout.col#promotion-intro-desc-desktop-container"
+    ],
+    "props": {
+      "blockClass": "container-intro-landing-template-desktop"
+    }
+  },
+  "flex-layout.col#promotion-intro-image-desktop-container": {
+    "children": ["image#promotion-image-intro-desktop"],
+    "props": {
+      "blockClass": "promotion-intro-image-desktop-container-style"
+    }
+  },
+  "image#promotion-image-intro-desktop": {
+    "props": {
+      "blockClass": "landing-template-intro-desktop",
+      "src": "https://i.picsum.photos/id/1002/4312/2868.jpg?hmac=5LlLE-NY9oMnmIQp7ms6IfdvSUQOzP_O3DPMWmyNxwo"
+    }
+  },
+  "flex-layout.col#promotion-intro-desc-desktop-container": {
+    "children": [
+      "title-text#promotion-intro-desc-title",
+      "rich-text#promotion-intro-desc-description-desktop"
+    ],
+    "props": {
+      "blockClass": "intro-desc-desktop"
+    }
+  },
+  "title-text#promotion-intro-desc-title": {
+    "props": {
+      "title": "Promotion title lorem"
+    }
+  },
+  "rich-text#promotion-intro-desc-description-desktop": {
+    "props": {
+      "text": "Brief introduction of the promotion, if any context is there to be displayed(E.G. time span to accelerate urgency perception)",
+      "blockClass": "intro-landing-template-paragraph-desktop"
+    }
+  },
+  //first centered text after the intro
+  "flex-layout.row#promotion-first-centered-title-desktop-container": {
+    "children": [
+      "flex-layout.col#promotion-first-centered-title-desktop-container"
+    ],
+    "props": {
+      "blockClass": "promotion-first-centered-title-desktop-container-style"
+    }
+  },
+  "flex-layout.col#promotion-first-centered-title-desktop-container": {
+    "children": ["rich-text#promotion-first-centered-text"],
+    "props": {
+      "blockClass": "promotion-first-centered-title-desktop-container-style"
+    }
+  },
+  "rich-text#promotion-first-centered-text": {
+    "props": {
+      "text": "Products involved in the promotion",
+      "blockClass": "carousel-title-landing-template-desktop"
+    }
+  },
+  //first carousel
+  "flex-layout.row#promotion-first-carousel-desktop-container": {
+    "children": [
+      "product-carousel-landing-page-new#promotion-first-carousel-desktop"
+    ],
+    "props": {
+      "blockClass": "promotion-first-carousel-desktop-container-style"
+    }
+  },
+  "product-carousel-landing-page-new#promotion-first-carousel-desktop": {
+    "props": {
+      "collectionID": "137",
+      "isBottomCarousel": true
+    }
+  },
+  //second text title and description centered container
+  "flex-layout.row#promotion-second-centered-title-desktop-container": {
+    "props": {
+      "blockClass": "promotion-second-centered-title-desktop-container-style"
+    },
+    "children": [
+      "flex-layout.col#promotion-second-centered-title-desktop-container"
+    ]
+  },
+  "flex-layout.col#promotion-second-centered-title-desktop-container": {
+    "props": {
+      "blockClass": "promotion-second-centered-title-desktop-container-style"
+    },
+    "children": [
+      "flex-layout.row#promotion-second-centered-text-title-container",
+      "flex-layout.row#promotion-second-centered-text-description-container"
+    ]
+  },
+  "flex-layout.row#promotion-second-centered-text-title-container": {
+    "props": {
+      "blockClass": "promotion-title-and-description-title-container-style"
+    },
+    "children": ["rich-text#promotion-second-centered-text-title"]
+  },
+  "flex-layout.row#promotion-second-centered-text-description-container": {
+    "props": {
+      "blockClass": "promotion-title-and-description-description-container-style"
+    },
+    "children": ["rich-text#promotion-second-centered-text-description"]
+  },
+  "rich-text#promotion-second-centered-text-title": {
+    "props": {
+      "text": "Header of the description",
+      "blockClass": "promotion-title-and-description-title-style"
+    }
+  },
+  "rich-text#promotion-second-centered-text-description": {
+    "props": {
+      "text": "Brief introduction of the promotion, if any context is there to be displayed(E.G. time span to accelerate urgency perception)",
+      "blockClass": "promotion-title-and-description-description-style"
+    }
+  },
+  /* PRODUCT DETAIL CARD 01 WITH TEXT ON THE LEFT */
+  "flex-layout.row#promotion-product-detail-card01-tl-desktop": {
+    "children": ["flex-layout.col#promotion-product-detail-card01-tl-desktop"]
+  },
+  "flex-layout.col#promotion-product-detail-card01-tl-desktop": {
+    "children": [
+      "flex-layout.row#promotion-product-detail-card01-tl-container-desktop"
+    ]
+  },
+  "flex-layout.row#promotion-product-detail-card01-tl-container-desktop": {
+    "children": [
+      "flex-layout.col#promotion-product-detail-card01-tl-container-desc-desktop",
+      "flex-layout.col#promotion-product-detail-card01-tl-image-desktop"
+    ],
+    "props": {
+      "blockClass": "container-global-bordered-text-image-landing-template-desktop"
+    }
+  },
+  /* ------------------------------------ */
+  "flex-layout.col#promotion-product-detail-card01-tl-image-desktop": {
+    "children": ["image#promotion-product-detail-card01-tl-image-desktop"],
+    "props": {
+      "blockClass": "container-image-bordered-text-image-landing-template-desktop"
+    }
+  },
+  "image#promotion-product-detail-card01-tl-image-desktop": {
+    "props": {
+      "blockClass": "image-bordered-text-image-landing-template-desktop",
+      "src": "https://i.picsum.photos/id/1002/4312/2868.jpg?hmac=5LlLE-NY9oMnmIQp7ms6IfdvSUQOzP_O3DPMWmyNxwo"
+    }
+  },
+  /* ------------------------------------ */
+  "flex-layout.col#promotion-product-detail-card01-tl-container-desc-desktop": {
+    "children": [
+      "rich-text#promotion-product-detail-card01-tl-title-desktop",
+      "rich-text#promotion-product-detail-card01-tl-desc-desktop"
+    ],
+    "props": {
+      "blockClass": "container-text-bordered-text-image-landing-template-desktop"
+    }
+  },
+  "rich-text#promotion-product-detail-card01-tl-title-desktop": {
+    "props": {
+      "blockClass": "title-bordered-text-image-landing-template-desktop",
+      "text": "Header about the main characterstic"
+    }
+  },
+  "rich-text#promotion-product-detail-card01-tl-desc-desktop": {
+    "props": {
+      "blockClass": "description-bordered-text-image-landing-template-desktop",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt enim sit imperdiet id aenean nunc ut faucibus. Vitae ullamcorper turpis blandit semper at."
+    }
+  },
+  "rich-text#promotion-button-go-to-product-desktop": {
+    "props": {
+      "text": "[ GO TO PRODUCT/LINE ](/)",
+      "blockClass": ["button-go-to-product-desktop"]
+    }
+  },
+  /* PRODUCT DETAIL CARD WITH TEXT ON THE RIGHT */
+  "flex-layout.row#promotion-product-detail-card-tr-desktop": {
+    "props": {
+      "blockClass": "pl-product-detail-card-tr-desktop"
+    },
+    "children": ["flex-layout.col#promotion-product-detail-card-tr-desktop"]
+  },
+  "flex-layout.col#promotion-product-detail-card-tr-desktop": {
+    "props": {
+      "blockClass": "pl-product-detail-card-tr-desktop"
+    },
+    "children": [
+      "flex-layout.row#promotion-product-detail-card-tr-container-desktop"
+    ]
+  },
+  "flex-layout.row#promotion-product-detail-card-tr-container-desktop": {
+    "props": {
+      "blockClass": "container-global-bordered-text-image-landing-template-desktop"
+    },
+    "children": [
+      "flex-layout.col#promotion-product-detail-card-tr-image-desktop",
+      "flex-layout.col#promotion-product-detail-card-tr-container-desc-desktop"
+    ]
+  },
+  /* ------------------------------------ */
+  "flex-layout.col#promotion-product-detail-card-tr-image-desktop": {
+    "children": ["image#promotion-product-detail-card-tr-image-desktop"],
+    "props": {
+      "blockClass": "container-image-bordered-text-image-landing-template-desktop"
+    }
+  },
+  "image#promotion-product-detail-card-tr-image-desktop": {
+    "props": {
+      "blockClass": "image-bordered-text-image-landing-template-desktop",
+      "src": "https://i.picsum.photos/id/1002/4312/2868.jpg?hmac=5LlLE-NY9oMnmIQp7ms6IfdvSUQOzP_O3DPMWmyNxwo"
+    }
+  },
+  /* ------------------------------------ */
+  "flex-layout.col#promotion-product-detail-card-tr-container-desc-desktop": {
+    "children": [
+      "rich-text#promotion-product-detail-card-tr-title-desktop",
+      "rich-text#promotion-product-detail-card-tr-desc-desktop"
+    ],
+    "props": {
+      "blockClass": "container-text-bordered-text-image-landing-template-desktop"
+    }
+  },
+  "rich-text#promotion-product-detail-card-tr-title-desktop": {
+    "props": {
+      "blockClass": "title-bordered-text-image-landing-template-desktop",
+      "text": "Header about the main characterstic"
+    }
+  },
+  "rich-text#promotion-product-detail-card-tr-desc-desktop": {
+    "props": {
+      "blockClass": "description-bordered-text-image-landing-template-desktop",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt enim sit imperdiet id aenean nunc ut faucibus. Vitae ullamcorper turpis blandit semper at."
+    }
+  },
+  //third text centered with description
+  "flex-layout.row#promotion-third-centered-title-desktop-container": {
+    "props": {
+      "blockClass": "promotion-third-centered-title-desktop-container-style"
+    },
+    "children": [
+      "flex-layout.col#promotion-third-centered-title-desktop-container"
+    ]
+  },
+  "flex-layout.col#promotion-third-centered-title-desktop-container": {
+    "props": {
+      "blockClass": "promotion-third-centered-title-desktop-container-style"
+    },
+    "children": [
+      "flex-layout.row#promotion-third-centered-text-title-container",
+      "flex-layout.row#promotion-third-centered-text-description-container"
+    ]
+  },
+  "flex-layout.row#promotion-third-centered-text-title-container": {
+    "props": {
+      "blockClass": "promotion-title-and-description-title-container-style"
+    },
+    "children": ["rich-text#promotion-third-centered-text-title"]
+  },
+  "flex-layout.row#promotion-third-centered-text-description-container": {
+    "props": {
+      "blockClass": "promotion-title-and-description-description-container-style"
+    },
+    "children": ["rich-text#promotion-third-centered-text-description"]
+  },
+  "rich-text#promotion-third-centered-text-title": {
+    "props": {
+      "text": "Header of the description",
+      "blockClass": "promotion-title-and-description-title-style"
+    }
+  },
+  "rich-text#promotion-third-centered-text-description": {
+    "props": {
+      "text": "Brief introduction of the promotion, if any context is there to be displayed(E.G. time span to accelerate urgency perception)",
+      "blockClass": "promotion-title-and-description-description-style"
+    }
+  },
+  /* PRODUCT DETAIL NO CARD WITH TEXT ON THE RIGHT */
+  "flex-layout.row#promotion-product-detail-noCard-tr-desktop": {
+    "children": ["flex-layout.col#promotion-product-detail-noCard-tr-desktop"]
+  },
+  "flex-layout.col#promotion-product-detail-noCard-tr-desktop": {
+    "children": [
+      "flex-layout.row#promotion-product-detail-noCard-tr-container-desktop"
+    ]
+  },
+  "flex-layout.row#promotion-product-detail-noCard-tr-container-desktop": {
+    "children": [
+      "flex-layout.col#promotion-image-text-image-landing-template-desktop",
+      "flex-layout.col#promotion-product-detail-noCard-tr-container-desc-desktop"
+    ],
+    "props": {
+      "blockClass": "container-global-text-image-landing-template-desktop"
+    }
+  },
+  /* ------------------------------------ */
+  "flex-layout.col#promotion-image-text-image-landing-template-desktop": {
+    "children": ["image#promotion-image-text-image-landing-template-desktop"],
+    "props": {
+      "blockClass": "container-image-text-image-landing-template-desktop"
+    }
+  },
+  "image#promotion-image-text-image-landing-template-desktop": {
+    "props": {
+      "blockClass": "image-text-image-landing-template-desktop",
+      "src": "https://i.picsum.photos/id/1002/4312/2868.jpg?hmac=5LlLE-NY9oMnmIQp7ms6IfdvSUQOzP_O3DPMWmyNxwo"
+    }
+  },
+  /* ------------------------------------ */
+  "flex-layout.col#promotion-product-detail-noCard-tr-container-desc-desktop": {
+    "children": [
+      "rich-text#promotion-product-detail-noCard-tr-title-desktop",
+      "rich-text#promotion-product-detail-noCard-tr-desc-desktop"
+    ],
+    "props": {
+      "blockClass": "container-text-text-image-landing-template-desktop"
+    }
+  },
+  "rich-text#promotion-product-detail-noCard-tr-title-desktop": {
+    "props": {
+      "blockClass": "title-text-image-landing-template-desktop",
+      "text": "Header about the main characterstic"
+    }
+  },
+  "rich-text#promotion-product-detail-noCard-tr-desc-desktop": {
+    "props": {
+      "blockClass": "description-text-image-landing-template-desktop",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt enim sit imperdiet id aenean nunc ut faucibus. Vitae ullamcorper turpis blandit semper at."
+    }
+  },
+  /* CARDS AFTER THE INTRO OF THE PRODUCT */
+  "flex-layout.row#promotion-cards-after-intro-desktop": {
+    "children": [
+      "flex-layout.col#promotion-card-triple-customer-service-desktop",
+      "flex-layout.col#promotion-card-triple-extended-warranty-desktop",
+      "flex-layout.col#promotion-card-triple-expired-warranty-desktop"
+    ],
+    "props": {
+      "blockClass": "card-after-intro-desktop"
+    }
+  },
+  /* ------------------------------------ */
+  "flex-layout.col#promotion-card-triple-customer-service-desktop": {
+    "children": [
+      "flex-layout.row#promotion-pl-card-triple-container-landing-template-desktop"
+    ],
+    "props": {
+      "blockClass": "card-triple-customer-service-desktop"
+    }
+  },
+  "flex-layout.row#promotion-pl-card-triple-container-landing-template-desktop": {
+    "children": [
+      "rich-text#promotion-pl-card-triple-title-landing-template-desktop",
+      "rich-text#promotion-pl-card-triple-desc-landing-template-desktop"
+    ],
+    "props": {
+      "blockClass": "card-triple-container-landing-template-desktop"
+    }
+  },
+  "rich-text#promotion-pl-card-triple-title-landing-template-desktop": {
+    "props": {
+      "text": "Value name",
+      "blockClass": "card-triple-title-landing-template-desktop"
+    }
+  },
+  "rich-text#promotion-pl-card-triple-desc-landing-template-desktop": {
+    "props": {
+      "text": "If you have purchased the product less than two years ago, you can organize an appointment through our Consumer Service.",
+      "blockClass": "card-triple-desc-landing-template-desktop"
+    }
+  },
+  /* ------------------------------------ */
+  "flex-layout.col#promotion-card-triple-extended-warranty-desktop": {
+    "children": [
+      "flex-layout.row#promotion-pl1-card-triple-container-landing-template-desktop"
+    ],
+    "props": {
+      "blockClass": "card-triple-extended-warranty-desktop"
+    }
+  },
+  "flex-layout.row#promotion-pl1-card-triple-container-landing-template-desktop": {
+    "children": [
+      "rich-text#promotion-pl1-card-triple-title-landing-template-desktop",
+      "rich-text#promotion-pl1-card-triple-desc-landing-template-desktop"
+    ],
+    "props": {
+      "blockClass": "card-triple-container-landing-template-desktop"
+    }
+  },
+  "rich-text#promotion-pl1-card-triple-title-landing-template-desktop": {
+    "props": {
+      "text": "Value name",
+      "blockClass": "card-triple-title-landing-template-desktop"
+    }
+  },
+  "rich-text#promotion-pl1-card-triple-desc-landing-template-desktop": {
+    "props": {
+      "text": "If you have a valid extended warranty contract, you cna use our Repair & Care online booking portal.",
+      "blockClass": "card-triple-desc-landing-template-desktop"
+    }
+  },
+  /* ------------------------------------ */
+  "flex-layout.col#promotion-card-triple-expired-warranty-desktop": {
+    "children": [
+      "flex-layout.row#card-triple-container-landing-template-desktop"
+    ],
+    "props": {
+      "blockClass": "card-triple-expired-warranty-desktop"
+    }
+  },
+  "flex-layout.row#promotion-card-triple-container-landing-template-desktop": {
+    "children": [
+      "rich-text#promotion-card-triple-title-landing-template-desktop",
+      "rich-text#promotion-card-triple-desc-landing-template-desktop"
+    ],
+    "props": {
+      "blockClass": "card-triple-container-landing-template-desktop"
+    }
+  },
+  "rich-text#promotion-card-triple-title-landing-template-desktop": {
+    "props": {
+      "text": "Value name",
+      "blockClass": "card-triple-title-landing-template-desktop"
+    }
+  },
+  "rich-text#promotion-card-triple-desc-landing-template-desktop": {
+    "props": {
+      "text": "If your warranty has expired, don't worry! We can provide a tailored solution just for you. Discover the best offer.",
+      "blockClass": "card-triple-desc-landing-template-desktop"
+    }
+  },
+  /* CAROUSEL ? TODO CUSTOM APP : BANNER */
+  "flex-layout.row#promotion-banner-desktop": {
+    "children": ["flex-layout.col#pl-banner-desktop"]
+  },
+  "flex-layout.col#promotion-banner-desktop": {
+    "children": ["image#promotion-banner-desktop"],
+    "props": {
+      "blockClass": "large-image-container-landing-template-banner-desktop"
+    }
+  },
+  "image#promotion-banner-desktop": {
+    "props": {
+      "blockClass": "large-image-landing-template-banner-desktop",
+      "src": "https://i.picsum.photos/id/1002/4312/2868.jpg?hmac=5LlLE-NY9oMnmIQp7ms6IfdvSUQOzP_O3DPMWmyNxwo"
+    }
+  },
+  //carousel space
+
+  "rich-text#promotion-carousel-space": {
+    "props": {
+      "text": "Here is where we are going to put the hypothetic carousel"
+    }
+  },
+  //TITLE CAROUSEL
+  "flex-layout.row#promotion-title-main-products-desktop": {
+    "children": ["rich-text#promotion-title-main-products-desktop"],
+    "props": {
+      "blockClass": "pl-title-main-products-desktop"
+    }
+  },
+  "rich-text#promotion-title-main-products-desktop": {
+    "props": {
+      "blockClass": "carousel-title-landing-template-desktop",
+      "text": "Main products in the line introduce"
+    }
+  },
+  //last carousel
+  "flex-layout.row#promotion-last-carousel-desktop-container": {
+    "children": [
+      "product-carousel-landing-page-new#promotion-last-carousel-desktop"
+    ],
+    "props": {
+      "blockClass": "promotion-last-carousel-desktop-container-style"
+    }
+  },
+  "product-carousel-landing-page-new#promotion-last-carousel-desktop": {
+    "props": {
+      "collectionID": "137",
+      "isBottomCarousel": true
+    }
+  }
+}

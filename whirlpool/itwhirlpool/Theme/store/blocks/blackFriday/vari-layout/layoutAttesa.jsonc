@@ -1,0 +1,132 @@
+{
+  "store.custom#black-friday-attesa": {
+    "blocks": [
+      "responsive-layout.desktop#black-friday-attesa",
+      "responsive-layout.mobile#black-friday-attesa",
+      "newsletter-popup#footer"
+    ]
+  },
+  "responsive-layout.desktop#black-friday-attesa": {
+    "children": [
+      "timer-component#aspettando-black-friday-1",
+      "faq-layout#terza-promo"
+    ]
+  },
+  "responsive-layout.mobile#black-friday-attesa": {
+    "children": [
+      "timer-component#aspettando-black-friday-1",
+      "faq-layout#terza-promo",
+      "rich-text#newsletter-ancora"
+    ]
+  },
+  "timer-component#aspettando-black-friday-1": {
+    "props": {
+      "showDateFormat": true,
+      "targetDate": "2021-11-22",
+      "ore": "00",
+      "minuti": "00",
+      "secondi": "00",
+      "Head": "flex-layout.row#HeadBlackFridayBlackFriday1",
+      "Else": "flex-layout.row#ElseBlackFridayBlackFriday1"
+    },
+    "children": [
+      "flex-layout.row#scopriDiPiùAspettando"
+    ],
+    "title": "Timer attesa"
+  },
+  "flex-layout.row#HeadBlackFridayBlackFriday1": {
+    "props": {
+      "blockClass": "rowElseBlackFriday"
+    },
+    "children": [
+      "flex-layout.col#containerBlackFridayHeadBlackFriday1"
+    ]
+  },
+  "flex-layout.col#containerBlackFridayHeadBlackFriday1": {
+    "children": [
+      "experimental__visibility-layout#bannerAspettandoBlackFriday",
+      "flex-layout.row#halfSpace",
+      "rich-text#headAspettandoBlackFriday"
+    ]
+  },
+  "experimental__visibility-layout#bannerAspettandoBlackFriday": {
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "flex-layout.row#bannerAspettandoBlackFriday"
+    ]
+  },
+  "flex-layout.row#bannerAspettandoBlackFriday": {
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": "bannerPostilla"
+    },
+    "children": [
+      "flex-layout.col#rightPartTopInvertedAspettandoBlackFriday",
+      "flex-layout.col#leftPartTopInvertedAspettandoBlackFriday"
+    ]
+  },
+  "flex-layout.col#rightPartTopInvertedAspettandoBlackFriday": {
+    "props": {
+      "width": "50%",
+      "blockClass": "columnPostillaImage"
+    },
+    "children": [
+      "image#bannerTopImageInvertedAspettandoBlackFriday"
+    ]
+  },
+  "image#bannerTopImageInvertedAspettandoBlackFriday": {
+    "props": {
+      "src": "assets/postillaBanner/condizionatoreGoogle.jpg",
+      "blockClass": [
+        "cover",
+        "imagePostillaBanner"
+      ]
+    }
+  },
+  "flex-layout.col#leftPartTopInvertedAspettandoBlackFriday": {
+    "props": {
+      "width": "50%",
+      "preventVerticalStretch": true,
+      "blockClass": [
+        "columnPostilla",
+        "columnPostillaBottom"
+      ]
+    },
+    "children": [
+      "experimental__visibility-layout#TitleBannerTopBlackFriday1",
+      "experimental__visibility-layout#BannDescTopBlackFriday1"
+    ]
+  },
+  "rich-text#headAspettandoBlackFriday": {
+    "props": {
+      "text": "# <br>La promozione **Whirlpool Black Friday** sarà disponibile a breve.<br>Clicca il pulsante in basso per scoprire le altre offerte disponibili.",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": "titleHBannerPostilla"
+    }
+  },
+  "flex-layout.row#scopriDiPiùAspettando": {
+    "props": {
+      "preventHorizontalStretch": true,
+      "blockClass": [
+        "displayFlexContentCenter",
+        "margin2rem"
+      ]
+    },
+    "children": [
+      "rich-text#scopriDiPiùLinkBlackFridayAttesa"
+    ]
+  },
+  "rich-text#scopriDiPiùLinkBlackFridayAttesa": {
+    "props": {
+      "text": "[Vai](#newsletter)",
+      "blockClass": [
+        "scopriDiPiuLink",
+        "colorEdb112",
+        "buttonCard"
+      ]
+    }
+  }
+}

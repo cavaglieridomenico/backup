@@ -1,0 +1,161 @@
+<script>
+  const handleChatClick = () => {
+    window.postMessage({
+      eventName: 'vtex:ga4-supportChat',
+      data: {
+        chat_status: 'Chat Request (Available)',
+      },
+    })
+  }
+  const handleChatRequestClick = reason => {
+    window.postMessage({
+      eventName: 'vtex:ga4-chatSupport',
+      data: { chatRequest: reason, chatStatus: 'Chat Request (Available)' },
+    })
+  }
+</script>
+
+<!-- BEGIN LivePerson Monitor. -->
+<div class="Tertiary nirepair">
+  <div class="Tertiary_1 TertiaryVisible">
+    <div class="Tertiary_1_1">
+      <p class="nirepair">
+        How can we help you?
+        <img
+          class="no-absolute toggle_tertiary ion-close"
+          src="/arquivos/Close-chat-button-(White).png"
+        />
+      </p>
+    </div>
+  </div>
+
+  <div class="Tertiary_Chat D2C_Chat">
+    <div class="header">
+      <p>
+        How can we help you?<img
+          class="no-absolute toggle_tertiary ion-close"
+          src="/arquivos/Close-chat-button-(White).png"
+        />
+      </p>
+    </div>
+    <p>
+      <a
+        href="javascript:openchat( 'HOTPOINTBRANDSITEPRODUCTADVICE', 'Product advice' );"
+        onclick="handleChatRequestClick('Product Request Info')"
+      >
+        Product advice
+        <!-- <i class="ion-chevron-right overlay_takeover"></i> -->
+      </a>
+    </p>
+    <p>
+      <a
+        href="javascript:openchat( 'HOTPOINTBRANDSITEORDERQUERY', 'Help with an existing order' );"
+        onclick="handleChatRequestClick('Booking Update')"
+      >
+        Help with an existing order
+        <!-- <i class="ion-chevron-right overlay_takeover"></i> -->
+      </a>
+    </p>
+    <p>
+      <a
+        href="javascript:openchat( 'HOTPOINTBRANDSITEORDERQUERY', 'Cancel my order' );"
+        onclick="handleChatRequestClick('Cancel Booking')"
+      >
+        Cancel my order
+        <!-- <i class="ion-chevron-right overlay_takeover"></i> -->
+      </a>
+    </p>
+    <p>
+      <a
+        href="javascript:openchat( 'HOTPOINTBRANDSITE', 'Help with something else' );"
+        onclick="handleChatRequestClick('Assistance Issue')"
+      >
+        Help with something else
+        <!-- <i class="ion-chevron-right overlay_takeover"></i> -->
+      </a>
+    </p>
+  </div>
+
+  <div class="Tertiary_Chat Service_Chat" style="display: none">
+    <div class="header">
+      <p>
+        How can we help you?<img
+          class="no-absolute toggle_tertiary ion-close"
+          src="/arquivos/Close-chat-button-(White).png"
+        />
+      </p>
+    </div>
+    <p>
+      <a
+        href="/service/repair"
+        onclick="handleChatRequestClick('Booking repair')"
+      >
+        Booking a repair
+        <!-- <i class="ion-chevron-right overlay_takeover"></i> -->
+      </a>
+    </p>
+    <p>
+      <a
+        href="/service/appliance-manuals"
+        onclick="handleChatRequestClick('Manuals')"
+      >
+        Manuals
+        <!-- <i class="ion-chevron-right overlay_takeover"></i> -->
+      </a>
+    </p>
+    <p>
+      <a
+        href="/spare-parts"
+        onclick="handleChatRequestClick('Parts and accessories')"
+      >
+        Parts and accessories
+        <!-- <i class="ion-chevron-right overlay_takeover"></i> -->
+      </a>
+    </p>
+    <p>
+      <a href="/service/contact" onclick="handleChatRequestClick('Contacts')">
+        Contact us
+        <!-- <i class="ion-chevron-right overlay_takeover"></i> -->
+      </a>
+    </p>
+  </div>
+
+  <div class="Service_Chat Begin_Chat" style="display: none">
+    <a
+      href="javascript:openchat('GlobalChatSwitchboard','Chat live','service')"
+    >
+      <img
+        class="service_chat_now"
+        src="https://hotpointuk.vteximg.com.br/arquivos/service_chat_chat_now.png"
+      />
+    </a>
+    <a href="https://wa.me/447584475915">
+      <img
+        class="service_whatsapp"
+        src="https://hotpointuk.vteximg.com.br/arquivos/service_chat_whatsapp.png"
+      />
+    </a>
+  </div>
+
+  <div
+    class="TertiaryVisible livepersonstatusimage"
+    id="{{brand.livePersonDiv}}"
+    style="margin-top: 15px"
+  ></div>
+
+  <div class="can_i_help">
+    <p class="nirepair">How can we help?</p>
+  </div>
+
+  <a href="javascript:selectchat();" onclick="handleChatClick()"
+    ><img
+      class="toggle_tertiary"
+      src="/arquivos/hotpoint.live-chat-guy-green.png"
+  /></a>
+</div>
+<!-- END LivePerson Monitor. -->
+
+<script
+  id="genesys-cx-widget-script"
+  src="https://apps.mypurecloud.ie/widgets/9.0/widgets.min.js"
+></script>

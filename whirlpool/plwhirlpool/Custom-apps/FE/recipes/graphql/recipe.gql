@@ -1,0 +1,23 @@
+query ($query: RecipeInput) {
+  queryRecipes(query: $query) {
+    recipes {
+      id
+      name
+      type
+      category
+      preparationTime
+      cookTime
+      chefplusTime
+      supremeChefTime
+      imageDesktop
+      imageMobile
+      imageCard
+      description
+      mainIngredients
+      ingredients
+      steps
+      images
+      relatedRecipes
+    }
+  }
+}

@@ -1,0 +1,253 @@
+{
+  "store.custom#form-service-care-template": {
+    "blocks": [
+      "responsive-layout.desktop#contact-us-support-main-desktop",
+      "responsive-layout.mobile#contact-us-support-main-mobile"
+      // "analytics#support"
+    ]
+  },
+  "store.custom#form-service-care-template_up": {
+    "blocks": [
+      "responsive-layout.desktop#contact-us-support-main-desktop",
+      "responsive-layout.mobile#contact-us-support-main-mobile",
+      "form-service-care-template"
+    ]
+  },
+  "responsive-layout.desktop#contact-us-support-main-desktop": {
+    "children": [
+      "breadcrumb-custom#form-service",
+      "form-service-care-template",
+      "flex-layout.row#form-service-care-contact-us-support-main-desktop"
+    ]
+  },
+  "responsive-layout.mobile#contact-us-support-main-mobile": {
+    "children": [
+      "breadcrumb-custom#form-service-mobile",
+      "form-service-care-template",
+      "flex-layout.row#form-service-care-contact-us-support-main-mobile"
+    ]
+  },
+  /* BREADCRUMB */
+  "breadcrumb-custom#form-service": {
+    "props": {
+      /* "blockClass": "containerBreadcrumbs", */
+      "firstPage": "Home",
+      "previousPage": "Pomoc",
+      "previousPath": "/pomoc",
+      "currentPage": "Formularz kontaktowy"
+    }
+  },
+  /* BREADCRUMB MOBILE */
+  "breadcrumb-custom#form-service-mobile": {
+    "props": {
+      /* "blockClass": "containerBreadcrumbs", */
+      "currentPage": "Pomoc"
+    }
+  },
+  /* CONTACT US MOBILE VTEX-native + CUSTOMAPP */
+  "flex-layout.row#form-service-care-contact-us-support-main-mobile": {
+    "children": [
+      "flex-layout.row#form-service-care-contact-us-mobile"
+      // "contact-us-carousel-mobile"
+    ]
+  },
+  "flex-layout.row#form-service-care-carousel": {
+    "props": {
+      "blockClass": "contact-us"
+    },
+    "children": ["flex-layout.col#form-service-care-carousel"]
+  },
+  "flex-layout.col#form-service-care-carousel": {
+    "props": {
+      "blockClass": "contact-us"
+    },
+    "children": ["contact-us-carousel-mobile"]
+  },
+  "flex-layout.row#form-service-care-contact-us-mobile": {
+    "props": {
+      "blockClass": "contact-us"
+    },
+    "children": ["flex-layout.col#form-service-care-contact-us-mobile"]
+  },
+  "flex-layout.col#form-service-care-contact-us-mobile": {
+    "props": {
+      "blockClass": "contact-us"
+    },
+    "children": [
+      "flex-layout.row#form-service-care-cu-title-container-mobile",
+      "flex-layout.row#cu-desc-container-mobile"
+    ]
+  },
+  "flex-layout.row#form-service-care-cu-title-container-mobile": {
+    "props": {
+      "blockClass": "cu-title-container-mobile"
+    },
+    "children": ["rich-text#form-service-care-cu-title-mobile"]
+  },
+  "rich-text#form-service-care-cu-title-mobile": {
+    "props": {
+      "text": "Potrzebujesz pomocy? Skontaktuj się z nami",
+      "blockClass": "cu-title-mobile"
+    }
+  },
+  /* CONTACT US DESKTOP */
+  "flex-layout.row#form-service-care-contact-us-support-main-desktop": {
+    "props": {
+      "blockClass": "contact-us-support-main-desktop"
+    },
+    "children": ["flex-layout.col#contact-us-support-main-desktop"]
+  },
+  "flex-layout.col#form-service-care-contact-us-support-main-desktop": {
+    "props": {
+      "blockClass": "contact-us-support-main-desktop"
+    },
+    "children": [
+      "flex-layout.row#contact-us",
+      "flex-layout.row#cu-mini-card-desktop"
+    ]
+  },
+  "flex-layout.row#form-service-care-contact-us": {
+    "props": {
+      "blockClass": "contact-us"
+    },
+    "children": ["flex-layout.col#contact-us"]
+  },
+  "flex-layout.col#form-service-care-contact-us": {
+    "props": {
+      "blockClass": "contact-us"
+    },
+    "children": [
+      "flex-layout.row#cu-title-container-desktop",
+      "flex-layout.row#cu-desc-container-desktop"
+    ]
+  },
+  "flex-layout.row#form-service-care-cu-title-container-desktop": {
+    "props": {
+      "blockClass": "cu-title-container-desktop"
+    },
+    "children": ["rich-text#cu-title-desktop"]
+  },
+  "rich-text#form-service-care-cu-title-desktop": {
+    "props": {
+      "text": "Vous avez besoin d'aide ? Contactez nous",
+      "blockClass": "cu-title-desktop"
+    }
+  },
+  "flex-layout.row#form-service-care-cu-desc-container-desktop": {
+    "props": {
+      "blockClass": "cu-desc-container-desktop"
+    },
+    "children": ["rich-text#cu-desc-desktop"]
+  },
+  "rich-text#form-service-care-cu-desc-desktop": {
+    "props": {
+      "text": "Si vous n'avez pas trouvé de réponse en ligne, contactez notre service client.",
+      "blockClass": "cu-desc-desktop"
+    }
+  }
+  /* ------------------------------------ */
+  /*ciao"flex-layout.row#form-service-care-cu-mini-card-desktop": {
+    "props": {
+      "blockClass": "cu-mini-card-desktop",
+      "preventHorizontalStretch": "true"
+    },
+    "children": [
+      "flex-layout.col#cu-contact-form-desktop",
+      "flex-layout.col#cu-whatsapp-desktop",
+      "flex-layout.col#form-service-care-cu-online-chat-desktop",
+      "flex-layout.col#cu-phone-support-desktop"
+    ]
+  },
+  "flex-layout.col#form-service-care-cu-contact-form-desktop": {
+    "props": {
+      "width": "25%",
+      "blockClass": "cu-mini-card-desktop"
+    },
+    "children": [
+      "rich-text#cu-contact-form-title-desktop",
+      "rich-text#cu-contact-form-desc-desktop",
+      "rich-text#cu-contact-form-button-desktop"
+    ]
+  },
+  "rich-text#form-service-care-cu-contact-form-title-desktop": {
+    "props": {
+      "text": "Modulo di contatto",
+      "blockClass": "cu-mini-card-title-desktop"
+    }
+  },
+  "rich-text#form-service-care-cu-contact-form-desc-desktop": {
+    "props": {
+      "text": "Dal lunedì al venerdì, vi ricontatteremo entro 24 ore.",
+      "blockClass": "cu-mini-card-desc-desktop"
+    }
+  },
+  "rich-text#form-service-care-cu-contact-form-button-desktop": {
+    "props": {
+      //TODO EMBEDDED
+      "text": "[ Compilare il modulo ](/)",
+      "blockClass": ["cu-bordered-button-desktop"]
+    }
+  },
+  "flex-layout.col#form-service-care-cu-whatsapp-desktop": {
+    "props": {
+      "width": "25%",
+      "blockClass": "cu-mini-card-desktop"
+    },
+    "children": [
+      "rich-text#form-service-care-cu-whatsapp-title-desktop",
+      "rich-text#form-service-care-cu-whatsapp-desc-desktop",
+      "rich-text#form-service-care-cu-whatsapp-button-desktop"
+    ]
+  },
+  "rich-text#form-service-care-cu-whatsapp-title-desktop": {
+    "props": {
+      "text": "Whatsapp",
+      "blockClass": "cu-mini-card-title-desktop"
+    }
+  },
+  "rich-text#form-service-care-cu-whatsapp-desc-desktop": {
+    "props": {
+      "text": "Da lunedì a venerdì \n dalle 9:00 alle 18:00 ",
+      "blockClass": "cu-mini-card-desc-desktop"
+    }
+  },
+  "rich-text#form-service-care-cu-whatsapp-button-desktop": {
+    "props": {
+      //TODO EMBEDDED
+      "text": "[ Inviare WhatsApp ](/pomoc/Canale-Whatsapp)",
+      "blockClass": ["cu-bordered-button-desktop"]
+    }
+  },
+  /* ------------------------------------ */
+  /*ciao"flex-layout.col#form-service-care-cu-online-chat-desktop": {
+    "props": {
+      "width": "25%",
+      "blockClass": "cu-mini-card-desktop"
+    },
+    "children": [
+      "rich-text#form-service-care-cu-online-chat-title-desktop",
+      "rich-text#form-service-care-cu-online-chat-desc-desktop",
+      "rich-text#form-service-care-cu-online-chat-button-desktop"
+    ]
+  },
+  "rich-text#form-service-care-cu-online-chat-title-desktop": {
+    "props": {
+      "text": "Chat online",
+      "blockClass": "cu-mini-card-title-desktop"
+    }
+  },
+  "rich-text#form-service-care-cu-online-chat-desc-desktop": {
+    "props": {
+      "text": "Indesit Live Chat è disponibile \n dal lunedì al venerdì, dalle 9 alle 18.",
+      "blockClass": "cu-mini-card-desc-desktop"
+    }
+  },
+  "rich-text#form-service-care-cu-online-chat-button-desktop": {
+    "props": {
+      //TODO EMBEDDED
+      "text": "[ Chatta ora ](#genesys-chat)",
+      "blockClass": ["cu-bordered-button-desktop"]
+    }
+  }
+  /* ------------------------------------ */
+}

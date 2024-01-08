@@ -1,0 +1,1219 @@
+/*--------------FOR BETTER ORGANIZATION, EVERY SINGLE BLOCK HAS ITS OWN CHILDREN LOCATED BELOW --------------------*/
+/*-----------------------------------DESKTOP--------------------------------------*/
+{
+  //MAIN BLOCK DO IT TOGETHER
+  "store.custom#do-it-together": {
+    "blocks": [
+      //"analytics#do-it-together",
+      "responsive-layout.desktop#do-it-together",
+      "responsive-layout.mobile#do-it-together"
+    ]
+  },
+  "responsive-layout.desktop#do-it-together": {
+    "children": [
+      "flex-layout.row#do-it-together-maxi"
+    ]
+  },
+  /*  "responsive-layout.tablet#do-it-together-mobile": {
+    "children": [
+      "flex-layout.row#do-it-together-maxi-tablet"
+    ]
+  }, */
+  "responsive-layout.mobile#do-it-together": {
+    "children": [
+      "flex-layout.row#do-it-together-maxi-mobile"
+    ]
+  },
+  "flex-layout.row#do-it-together-maxi": {
+    "children": [
+      "flex-layout.col#do-it-together-maxi"
+    ],
+    "props": {
+      "blockClass": "image-live-together-container-maxi"
+    }
+  },
+  //MAXI COL THAT CONTAINS EVERY ROW OF THE PAGE START-------------------------------------------
+  "flex-layout.col#do-it-together-maxi": {
+    "children": [
+      "flex-layout.row#do-it-together-slider-desk",
+      //"flex-layout.row#image-live-together",
+      "flex-layout.row#change-your-life-title",
+      "flex-layout.row#change-your-life-description",
+      /* "flex-layout.row#second-carousel-row", */
+      "flex-layout.row#do-it-together",
+      "flex-layout.row#first-carousel-row",
+      /*  "product-carousel#first-carousel-dit" , */
+      "flex-layout.row#do-it-together-last-slide",
+      /* "do-it-together-last-slide", */
+      /*     "flex-layout.row#push-and-go",
+      "flex-layout.col#last-description",
+      "flex-layout.row#image-video", */
+      "flex-layout.row#second-carousel-row"
+      /* "product-carousel#first-carousel-dit" */
+    ],
+    "props": {
+      "blockClass": "do-it-together-maxi-style"
+    }
+  },
+  /* SLIDER */
+  "flex-layout.row#do-it-together-slider-desk": {
+    "children": [
+      "analytics-wrapper#do-it-together-slider"
+    ]
+  },
+  "analytics-wrapper#do-it-together-slider": {
+    "title": "Analtics Wrapper Slider Top",
+    "props": {
+      "isHpSlider": true,
+      "propsAnalytics": {
+        "analyticsProperties": "provide",
+        "nameEvent": "slider_click",
+        "name": "sliderClick",
+        // "analyticsProperties": "provide",
+        // "nameEvent": "redeemAPromo",
+        // "name": "promo",
+        "data": [
+          {}
+        ]
+      }
+    },
+    "children": [
+      "slider-layout#do-it-together"
+    ]
+  },
+  //"home-page-slider-desk": {},
+  "slider-layout#do-it-together": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "showNavigationArrows": "desktopOnly",
+      "showPaginationDots": "mobileOnly",
+      "blockClass": "carousel"
+    },
+    "children": [
+      // "flex-layout.row#slide-6",
+      "flex-layout.row#do-it-together-slide-1"
+    ]
+  },
+  /* --- SLIDE 1 --- */
+  "flex-layout.row#do-it-together-slide-1": {
+    "props": {
+      "blockClass": "home-slider"
+    },
+    "children": [
+      "flex-layout.row#do-it-together-image-container-slide-1",
+      "flex-layout.col#do-it-together-text-slide-1"
+    ]
+  },
+  "flex-layout.row#do-it-together-image-container-slide-1": {
+    "props": {
+      "blockClass": [
+        "image-container-slide",
+        "container-slide-1"
+      ]
+    }
+  },
+  "flex-layout.col#do-it-together-text-slide-1": {
+    "props": {
+      "blockClass": "text-slide"
+    },
+    "children": [
+      "rich-text#do-it-together-title-slide-1",
+      "rich-text#do-it-together-desc-slide-1"
+    ]
+  },
+  "rich-text#do-it-together-title-slide-1": {
+    "props": {
+      "text": "# Do it together",
+      "blockClass": "title-slide"
+    }
+  },
+  "rich-text#do-it-together-desc-slide-1": {
+    "props": {
+      "text": "Semplifica la tua vita quotidiana, con le **tecnologie Push&Go and Turn&Go**: con un solo tasto tutti in casa possono aiutare!",
+      "blockClass": "desc-slide"
+    }
+  },
+  /* SLIDER END */
+  "flex-layout.row#block-animation-carousel": {
+    "props": {
+      "blockClass": "block-animation-carousel-style"
+    },
+    "children": []
+  },
+  "flex-layout.row#do-it-together": {
+    "props": {
+      "blockClass": "do-it-together-style"
+    },
+    "children": [
+      "do-it-together"
+    ]
+  },
+  "flex-layout.row#block-animation-carousel-hidden": {
+    "props": {
+      "blockClass": "block-animation-carousel-hidden-style"
+    },
+    "children": []
+  },
+  "flex-layout.row#do-it-together-last-slide": {
+    "props": {
+      "blockClass": "do-it-together-last-slide-style"
+    },
+    "children": [
+      "do-it-together-last-slide"
+    ]
+  },
+  "do-it-together-last-slide": {},
+  "flex-layout.row#first-carousel-row": {
+    "props": {
+      "blockClass": "first-carousel-row-style"
+    },
+    "children": [
+      "product-carousel-new#first-carousel-dit"
+    ]
+  },
+  "flex-layout.row#second-carousel-row": {
+    "props": {
+      "blockClass": "second-carousel-row-style"
+    },
+    // Commented code to make work the theme
+    "children": [
+      "product-carousel-new#second-carousel-dit"
+    ]
+  },
+  "product-carousel-new#first-carousel-dit": {
+    "props": {
+      "collectionID": "148",
+      "isBottomCarousel": false,
+      "list": "campaign_page_impression_list"
+    }
+  },
+  "product-carousel-new#second-carousel-dit": {
+    "props": {
+      "collectionID": "147",
+      "isBottomCarousel": true,
+      "list": "campaign_page_impression_list"
+    }
+  },
+  "do-it-together": {},
+  "flex-layout.row#image-video": {
+    "props": {
+      "blockClass": "image-video"
+    },
+    "children": [
+      "flex-layout.col#image-video-container"
+    ]
+  },
+  "flex-layout.col#image-video-container": {
+    "props": {
+      "blockClass": "image-video-container-style"
+    },
+    "children": [
+      "image#family-video-hidden",
+      "modal-trigger#family-video"
+    ]
+  },
+  "image#family-video-hidden": {
+    "props": {
+      "blockClass": "family-video-hidden-style",
+      "src": "assets/Video-4.png"
+    }
+  },
+  /*--------------------------MODAL WITH EMBEDDED VIDEO INSIDE----------------------------------*/
+  "modal-trigger#family-video": {
+    "children": [
+      "image#family-video",
+      "modal-layout#family-video"
+    ],
+    "props": {
+      "blockClass": "family-video-container"
+    }
+  },
+  "modal-layout#family-video": {
+    "children": [
+      "video#family-video",
+      "modal-actions.close#modal-close-do-it-together"
+    ],
+    "props": {
+      "blockClass": "modal-layout-style"
+    }
+  },
+  "modal-actions.close#modal-close-do-it-together": {
+    "props": {
+      "blockClass": "close-modal-button-do-it-together"
+    }
+  },
+  "image#family-video": {
+    "props": {
+      "blockClass": "family-video-style",
+      "src": "assets/Video-4.png"
+    }
+  },
+  "video#family-video": {
+    "props": {
+      "width": "997px",
+      "height": "431px",
+      "loop": false,
+      "autoPlay": true,
+      "muted": false,
+      "src": "https://www.youtube.com/embed/t5d7VsRgdQ0",
+      "blockClass": "videoEl"
+    }
+  },
+  //MAXI COL THAT CONTAINS EVERY ROW OF THE PAGE END***************************************
+  //LETS LIVE TOGETHER START------------------------------------------------------------
+  "flex-layout.row#image-live-together": {
+    "props": {
+      "blockClass": "image-live-togheder-row-container"
+    },
+    "children": [
+      "flex-layout.col#left-image",
+      "flex-layout.col#live-together"
+    ]
+  },
+  "flex-layout.col#left-image": {
+    "props": {
+      "blockClass": "image-live-together-container"
+    },
+    "children": [
+      "image#live-together-image"
+    ]
+  },
+  "image#live-together-image": {
+    "props": {
+      "blockClass": "live-together-image-style",
+      "src": "assets/Indesit-Do-It-Together-Campaign-1-1.jpg"
+    }
+  },
+  "flex-layout.col#live-together": {
+    "props": {
+      "blockClass": "live-together-text"
+    },
+    "children": [
+      "flex-layout.row#live-together-title",
+      "flex-layout.row#live-together-description"
+    ]
+  },
+  "flex-layout.row#live-together-title": {
+    "props": {
+      "blockClass": "live-together-title-container"
+    },
+    "children": [
+      "rich-text#live-together-title"
+    ]
+  },
+  "rich-text#live-together-title": {
+    "props": {
+      "text": "# Do it together ",
+      "blockClass": "live-together-title-style"
+    }
+  },
+  "flex-layout.row#live-together-description": {
+    "props": {
+      "blockClass": "live-together-description-container"
+    },
+    "children": [
+      "rich-text#live-together-description"
+    ]
+  },
+  "rich-text#live-together-description": {
+    "props": {
+      "text": "Semplifica la tua vita quotidiana, con le **tecnologie Push&Go and Turn&Go**: con un solo tasto tutti in casa possono aiutare!",
+      "blockClass": "live-together-description-style"
+    }
+  },
+  // LETS LIVE TOGETHER END**********************************************
+  // CHANGE YOUR LIFE START---------------------------------------------------
+  "flex-layout.row#change-your-life-title": {
+    "props": {
+      "blockClass": "change-your-life-title-container"
+    },
+    "children": [
+      "rich-text#change-your-life-title"
+    ]
+  },
+  "rich-text#change-your-life-title": {
+    "props": {
+      "text": "## Sei pronto a cambiare la tua vita con un solo gesto?",
+      "blockClass": "change-your-life-title-style"
+    }
+  },
+  "flex-layout.row#change-your-life-description": {
+    "props": {
+      "blockClass": "change-your-life-description-container"
+    },
+    "children": [
+      "rich-text#change-your-life-description"
+    ]
+  },
+  "rich-text#change-your-life-description": {
+    "props": {
+      "text": "Scopri come, con gli **elettrodomestici Indesit**!",
+      "blockClass": "change-your-life-description-style"
+    }
+  },
+  // CHANGE YOUR LIFE END**********************************************
+  // PUSH AND GO START---------------------------------------------------
+  "flex-layout.row#push-and-go": {
+    "props": {
+      "blockClass": "push-and-go-container-maxi"
+    },
+    "children": [
+      "flex-layout.col#push-and-go-container"
+    ]
+  },
+  "flex-layout.col#push-and-go-container": {
+    "props": {
+      "blockClass": "push-and-go-container"
+    },
+    "children": [
+      "flex-layout.row#push-and-go-logo",
+      "flex-layout.row#push-and-go-description"
+    ]
+  },
+  "flex-layout.col#last-description": {
+    "props": {
+      "blockClass": "last-description-style"
+    },
+    "children": [
+      "flex-layout.row#last-description-text-row",
+      "flex-layout.row#last-button-do-it-row"
+    ]
+  },
+  "flex-layout.row#last-description-text-row": {
+    "props": {
+      "blockClass": "last-description-text-style"
+    },
+    "children": [
+      "rich-text#last-description-text"
+    ]
+  },
+  "flex-layout.row#last-button-do-it-row": {
+    "props": {
+      "blockClass": "last-button-do-it-style"
+    },
+    "children": [
+      "button-primary#last-button-do-it"
+    ]
+  },
+  "button-primary#last-button-do-it": {
+    "props": {
+      "text": "Scopri la gamma dei forni"
+    }
+  },
+  "flex-layout.row#push-and-go-logo": {
+    "props": {
+      "blockClass": "push-and-go-logo-container"
+    },
+    "children": [
+      "image#push-and-go-logo"
+    ]
+  },
+  "image#push-and-go-logo": {
+    "props": {
+      "blockClass": "push-and-go-logo-style",
+      "src": "assets/pushAndGoLogo.svg"
+    }
+  },
+  "flex-layout.row#push-and-go-description": {
+    "props": {
+      "blockClass": "push-and-go-description-container"
+    },
+    "children": [
+      "rich-text#push-and-go-description"
+    ]
+  },
+  "rich-text#push-and-go-description": {
+    "props": {
+      "text": "Basta un tasto per dare il buono esempio",
+      "blockClass": "push-and-go-description-style"
+    }
+  },
+  "rich-text#last-description-text": {
+    "props": {
+      "text": "Turn&Go - la soluzione di cottura più semplice. In **un solo giro**, il forno Aria di Indesit imposta automaticamente il tempo e la temperatura di cottura per oltre 100 ricette. Niente preriscaldamento, niente cene bruciate, solo semplici pasti in famiglia.",
+      "blockClass": "last-description-text-style"
+    }
+  },
+  // PUSH AND GO END**********************************************
+  /*-----------------------------------MOBILE--------------------------------------*/
+  "flex-layout.row#do-it-together-maxi-mobile": {
+    "children": [
+      "flex-layout.col#do-it-together-maxi-mobile"
+    ],
+    "props": {
+      "blockClass": "image-live-together-container-maxi-mobile"
+    }
+  },
+  //MAXI COL THAT CONTAINS EVERY ROW OF THE PAGE START-------------------------------------------
+  "flex-layout.col#do-it-together-maxi-mobile": {
+    "children": [
+      "flex-layout.row#do-it-together-slider-desk",
+      //"flex-layout.row#image-live-together-mobile",
+      //"flex-layout.row#live-together-mobile",
+      "flex-layout.row#push-and-go-mobile-good-example",
+      "flex-layout.row#image-good-example-mobile-container",
+      "flex-layout.row#last-description-mobile-good-example",
+      "flex-layout.row#push-and-go-mobile-time-together",
+      "flex-layout.row#image-time-together-mobile-container",
+      "flex-layout.row#last-description-mobile-time-together",
+      "flex-layout.row#push-and-go-mobile-hob-cooking",
+      "flex-layout.row#image-hob-cooking-mobile-container",
+      "flex-layout.row#last-description-mobile-hob-cooking",
+      "flex-layout.row#do-it-together-mobile-first",
+      "flex-layout.row#push-and-go-mobile-whole-family",
+      "flex-layout.row#image-whole-family-mobile-container",
+      "flex-layout.row#last-description-mobile-whole-family",
+      "flex-layout.row#do-it-together-mobile-second"
+    ],
+    "props": {
+      "blockClass": "do-it-together-maxi-mobile-style"
+    }
+  },
+  "flex-layout.row#do-it-together-mobile-first": {
+    "props": {
+      "blockClass": "do-it-together-mobile-first-mobile-style"
+    },
+    // Commented code to make work the theme
+    "children": [
+      "product-carousel-new#do-it-together-mobile-first"
+    ]
+  },
+  "flex-layout.row#do-it-together-mobile-second": {
+    "props": {
+      "blockClass": "do-it-together-mobile-second-mobile-style"
+    },
+    // Commented code to make work the theme
+    "children": [
+      "product-carousel-new#do-it-together-mobile-second"
+    ]
+  },
+  "product-carousel-new#do-it-together-mobile-first": {
+    "props": {
+      "collectionID": 148,
+      "isBottomCarousel": true,
+      "list": "campaign_page_impression_list"
+    }
+  },
+  "product-carousel-new#do-it-together-mobile-second": {
+    "props": {
+      "collectionID": 147,
+      "isBottomCarousel": true,
+      "list": "campaign_page_impression_list"
+    }
+  },
+  /*first image of the do it together, the one with the family*/
+  "flex-layout.row#image-live-together-mobile": {
+    "props": {
+      "blockClass": "image-live-togheder-row-container-mobile"
+    },
+    "children": [
+      "flex-layout.col#family-image-mobile"
+    ]
+  },
+  "flex-layout.col#family-image-mobile": {
+    "props": {
+      "blockClass": "family-image-mobile-container-mobile-col"
+    },
+    "children": [
+      "flex-layout.row#family-image-mobile"
+    ]
+  },
+  "flex-layout.row#family-image-mobile": {
+    "props": {
+      "blockClass": "image-live-together-container-mobile"
+    },
+    "children": [
+      "image#live-together-image-mobile"
+    ]
+  },
+  "image#live-together-image-mobile": {
+    "props": {
+      "blockClass": "live-together-image-style-mobile",
+      "src": "assets/Indesit-Do-It-Together-Campaign-1-1.jpg"
+    }
+  },
+  "flex-layout.row#live-together-mobile": {
+    "props": {
+      "blockClass": "image-live-togheder-row-container-mobile"
+    },
+    "children": [
+      "flex-layout.col#live-image-mobile"
+    ]
+  },
+  "flex-layout.col#live-image-mobile": {
+    "props": {
+      "blockClass": "live-image-mobile-container-col"
+    },
+    "children": [
+      "flex-layout.row#live-together-title-mobile",
+      "flex-layout.row#live-together-description-mobile",
+      "flex-layout.row#change-your-life-title-mobile",
+      "flex-layout.row#change-your-life-description-mobile"
+    ]
+  },
+  "flex-layout.row#live-together-title-mobile": {
+    "props": {
+      "blockClass": "live-together-title-container-mobile"
+    },
+    "children": [
+      "rich-text#live-together-title-mobile"
+    ]
+  },
+  "rich-text#live-together-title-mobile": {
+    "props": {
+      "text": "# Do it together",
+      "blockClass": "live-together-title-style-mobile"
+    }
+  },
+  "flex-layout.row#live-together-description-mobile": {
+    "props": {
+      "blockClass": "live-together-description-container-mobile"
+    },
+    "children": [
+      "rich-text#live-together-description-mobile"
+    ]
+  },
+  "rich-text#live-together-description-mobile": {
+    "props": {
+      "text": "Semplifica la tua vita quotidiana in un solo gesto, con le tecnologie **Push&Go** e **Turn&Go**: con un solo tasto tutti in casa possono aiutare! ",
+      "blockClass": "live-together-description-style-mobile"
+    }
+  },
+  // LETS LIVE TOGETHER END**********************************************
+  // CHANGE YOUR LIFE START---------------------------------------------------
+  "flex-layout.row#change-your-life-mobile": {
+    "props": {
+      "blockClass": "change-your-life-title-container-mobile"
+    },
+    "children": [
+      "flex-layout.col#change-your-life-container"
+    ]
+  },
+  "flex-layout.col#change-your-life-container": {
+    "props": {
+      "blockClass": "change-your-life-container-col"
+    },
+    "children": [
+      /*  "flex-layout.row#change-your-life-title-mobile",
+      "flex-layout.row#change-your-life-description-mobile" */
+    ]
+  },
+  "flex-layout.row#change-your-life-title-mobile": {
+    "props": {
+      "blockClass": "change-your-life-title-container-mobile"
+    },
+    "children": [
+      "rich-text#change-your-life-title-mobile"
+    ]
+  },
+  "rich-text#change-your-life-title-mobile": {
+    "props": {
+      "text": "## Sei pronto a cambiare vita con un solo gesto?",
+      "blockClass": "change-your-life-title-style-mobile"
+    }
+  },
+  "flex-layout.row#change-your-life-description-mobile": {
+    "props": {
+      "blockClass": "change-your-life-description-container-mobile"
+    },
+    "children": [
+      "rich-text#change-your-life-description-mobile"
+    ]
+  },
+  "rich-text#change-your-life-description-mobile": {
+    "props": {
+      "text": "Scopri come con gli elettrodomestici Indesit!",
+      "blockClass": "change-your-life-description-style-mobile"
+    }
+  },
+  // CHANGE YOUR LIFE END**********************************************
+  // PUSH AND GO START---------------------------------------------------
+  /*GOOD EXAMPLE PUSH AND GO OF THE MOBILE----------------------------------------------------------------------*/
+  "flex-layout.row#push-and-go-mobile-good-example": {
+    "props": {
+      "blockClass": "push-and-go-container-maxi-mobile-good-example"
+    },
+    "children": [
+      "flex-layout.col#push-and-go-mobile-good-example-container"
+    ]
+  },
+  "flex-layout.col#push-and-go-mobile-good-example-container": {
+    "props": {
+      "blockClass": "push-and-go-container-mobile-good-example"
+    },
+    "children": [
+      "flex-layout.row#push-and-go-logo-mobile-good-example",
+      "flex-layout.row#push-and-go-description-mobile-good-example"
+    ]
+  },
+  "flex-layout.row#push-and-go-logo-mobile-good-example": {
+    "props": {
+      "blockClass": "push-and-go-logo-container-mobile-good-example"
+    },
+    "children": [
+      "image#push-and-go-logo-mobile"
+    ]
+  },
+  "image#push-and-go-logo-mobile": {
+    "props": {
+      "blockClass": "push-and-go-logo-style-mobile",
+      "src": "assets/Turn_and_go.svg"
+    }
+  },
+  "flex-layout.row#push-and-go-description-mobile-good-example": {
+    "props": {
+      "blockClass": "push-and-go-description-container-mobile-good-example"
+    },
+    "children": [
+      "rich-text#push-and-go-description-mobile-good-example"
+    ]
+  },
+  "rich-text#push-and-go-description-mobile-good-example": {
+    "props": {
+      "text": "## Basta un tasto per dare il buon esempio",
+      "blockClass": "push-and-go-description-style-mobile-good-example"
+    }
+  },
+  "flex-layout.row#image-good-example-mobile-container": {
+    "props": {
+      "blockClass": "image-good-example-mobile-container-style"
+    },
+    "children": [
+      "flex-layout.col#image-good-example-mobile-container-col"
+    ]
+  },
+  "flex-layout.col#image-good-example-mobile-container-col": {
+    "props": {
+      "blockClass": "image-good-example-mobile-container-col"
+    },
+    "children": [
+      /* "image#good-example-mobile" */
+      "modal-trigger#good-example-mobile"
+    ]
+  },
+  /*--------------------------MODAL WITH EMBEDDED VIDEO INSIDE----------------------------------*/
+  "modal-trigger#good-example-mobile": {
+    "children": [
+      "image#good-example-mobile",
+      "modal-layout#good-example-mobile"
+    ]
+  },
+  "modal-layout#good-example-mobile": {
+    "children": [
+      "video-mobile-dit#good-example",
+      "modal-actions.close#good-example-mobile"
+    ]
+  },
+  "modal-actions.close#good-example-mobile": {
+    "props": {
+      "blockClass": "close-modal-button-do-it-together-mobile"
+    }
+  },
+  "image#good-example-mobile": {
+    "props": {
+      "blockClass": "good-example-mobile",
+      "src": "assets/Good-example.png"
+    }
+  },
+  /*   "video#good-example-mobile": {
+    "props": {
+      "width": "375px",
+      "height": "193px",
+      "loop": false,
+      "autoPlay": true,
+      "muted": false,
+      "src": "https://whirlpool-cdn.thron.com/shared/plugins/embed/current/whirlpool/vi-5ae35fcf-7a97-449f-b4c7-70d3ae0492a3/sckne7?filename=Indesit_LFLS_Laundry_15s_UK_20201116_v1.mp4",
+      "blockClass": "videoEl"
+    }
+  }, */
+  "video-mobile-dit#good-example": {
+    "props": {
+      "videoURL": "https://whirlpool-cdn.thron.com/delivery/public/video/whirlpool/57fec758-ce6b-4f01-b6d7-97c689fa85ae/sckne7/WEBHD/vi-5ae35fcf-7a97-449f-b4c7-70"
+    }
+  },
+  /*--------------------------MODAL WITH EMBEDDED VIDEO INSIDE END----------------------------------*/
+  "flex-layout.row#last-description-mobile-good-example": {
+    "props": {
+      "blockClass": "last-description-style-mobile-good-example"
+    },
+    "children": [
+      "flex-layout.col#last-description-mobile-good-example-container"
+    ]
+  },
+  "flex-layout.col#last-description-mobile-good-example-container": {
+    "props": {
+      "blockClass": "last-description-mobile-good-example-container"
+    },
+    "children": [
+      "flex-layout.row#last-description-text-row-mobile-good-example",
+      "flex-layout.row#last-button-do-it-row-mobile-good-example"
+    ]
+  },
+  "flex-layout.row#last-description-text-row-mobile-good-example": {
+    "props": {
+      "blockClass": "last-description-text-style-mobile-good-example"
+    },
+    "children": [
+      "rich-text#last-description-text-mobile-good-example"
+    ]
+  },
+  "rich-text#last-description-text-mobile-good-example": {
+    "props": {
+      "text": "Condividi le faccende domestiche con un solo click. Con gli **elettrodomestici Push&Go** tutti possono aiutare. Basta un veloce click e la tua Innex imposta e avvia subito, anche a macchina spenta, il programma di lavaggio. In soli 45 minuti avrai un bucato perfettamente pulito.",
+      "blockClass": "last-description-text-style-mobile-good-example"
+    }
+  },
+  "flex-layout.row#last-button-do-it-row-mobile-good-example": {
+    "props": {
+      "blockClass": "last-button-do-it-style-mobile-good-example"
+    },
+    "children": [
+      "button-primary#last-button-do-it-mobile-good-example"
+    ]
+  },
+  "button-primary#last-button-do-it-mobile-good-example": {
+    "props": {
+      "width": "100%",
+      "text": "Scopri la gamma Innex",
+      "href": "/prodotti/lavare/lavatrici"
+    }
+  },
+  /*SECOND PUSH AND GO OF THE MOBILE--------------------------------------------------------------*/
+  "flex-layout.row#push-and-go-mobile-time-together": {
+    "props": {
+      "blockClass": "push-and-go-container-maxi-mobile-time-together"
+    },
+    "children": [
+      "flex-layout.col#push-and-go-mobile-time-together-container"
+    ]
+  },
+  "flex-layout.col#push-and-go-mobile-time-together-container": {
+    "props": {
+      "blockClass": "push-and-go-container-mobile-time-together"
+    },
+    "children": [
+      "flex-layout.row#push-and-go-logo-mobile-time-together",
+      "flex-layout.row#push-and-go-description-mobile-time-together"
+    ]
+  },
+  "flex-layout.row#push-and-go-logo-mobile-time-together": {
+    "props": {
+      "blockClass": "push-and-go-logo-container-mobile-time-together"
+    },
+    "children": [
+      "image#push-and-go-logo-mobile"
+    ]
+  },
+  "flex-layout.row#push-and-go-description-mobile-time-together": {
+    "props": {
+      "blockClass": "push-and-go-description-container-mobile-time-together"
+    },
+    "children": [
+      "rich-text#push-and-go-description-mobile-time-together"
+    ]
+  },
+  "rich-text#push-and-go-description-mobile-time-together": {
+    "props": {
+      "text": "## Goditi il tempo insieme, in totale tranquillità",
+      "blockClass": "push-and-go-description-style-mobile-time-together"
+    }
+  },
+  "flex-layout.row#image-time-together-mobile-container": {
+    "props": {
+      "blockClass": "image-time-together-mobile-container-style"
+    },
+    "children": [
+      "flex-layout.col#image-time-together-mobile-container-col"
+    ]
+  },
+  "flex-layout.col#image-time-together-mobile-container-col": {
+    "props": {
+      "blockClass": "image-time-together-mobile-container-col"
+    },
+    "children": [
+      /* "image#time-together-mobile" */
+      "modal-trigger#time-together-mobile"
+    ]
+  },
+  /*--------------------------MODAL WITH EMBEDDED VIDEO INSIDE----------------------------------*/
+  "modal-trigger#time-together-mobile": {
+    "children": [
+      "image#time-together-mobile",
+      "modal-layout#time-together-mobile"
+    ]
+  },
+  "modal-layout#time-together-mobile": {
+    "children": [
+      "video-mobile-dit#time-together",
+      "modal-actions.close#time-together-mobile"
+    ]
+  },
+  "modal-actions.close#time-together-mobile": {
+    "props": {
+      "blockClass": "close-modal-button-do-it-together-mobile"
+    }
+  },
+  "image#time-together-mobile": {
+    "props": {
+      "blockClass": "time-together-mobile",
+      "src": "assets/Time-together.png"
+    }
+  },
+  /*  "video#time-together-mobile": {
+    "props": {
+      "width": "375px",
+      "height": "193px",
+      "loop": false,
+      "autoPlay": true,
+      "muted": false,
+      "src": "https://whirlpool-cdn.thron.com/shared/plugins/embed/current/whirlpool/vi-baf84f6a-a2db-48ef-9466-57ba4324a423/sckne7?filename=INDESIT_DIT_Y4_DW_15s_20201217.mp4",
+      "blockClass": "videoEl"
+    }
+  }, */
+  "video-mobile-dit#time-together": {
+    "props": {
+      "videoURL": "https://whirlpool-cdn.thron.com/delivery/public/video/whirlpool/bca502aa-607c-4a2b-8f65-b38b3be16497/sckne7/WEBHD/vi-baf84f6a-a2db-48ef-9466-57"
+    }
+  },
+  /*--------------------------MODAL WITH EMBEDDED VIDEO INSIDE END----------------------------------*/
+  "flex-layout.row#last-description-mobile-time-together": {
+    "props": {
+      "blockClass": "last-description-style-mobile-time-together"
+    },
+    "children": [
+      "flex-layout.col#last-description-mobile-time-together-container"
+    ]
+  },
+  "flex-layout.col#last-description-mobile-time-together-container": {
+    "props": {
+      "blockClass": "last-description-mobile-time-together-container"
+    },
+    "children": [
+      "flex-layout.row#last-description-text-row-mobile-time-together",
+      "flex-layout.row#last-button-do-it-row-mobile-time-together"
+    ]
+  },
+  "flex-layout.row#last-description-text-row-mobile-time-together": {
+    "props": {
+      "blockClass": "last-description-text-style-mobile-time-together"
+    },
+    "children": [
+      "rich-text#last-description-text-mobile-time-together"
+    ]
+  },
+  "rich-text#last-description-text-mobile-time-together": {
+    "props": {
+      "text": "**Risultati ottimali col minimo sforzo**, con Push&Go garantiscono stoviglie pulite e asciutte senza prelavaggio **con un solo tocco**. Il pulsante Push&Go avvia un ciclo giornaliero di 85 minuti, così intuitivo che tutti possono aiutare.",
+      "blockClass": "last-description-text-style-mobile-time-together"
+    }
+  },
+  "flex-layout.row#last-button-do-it-row-mobile-time-together": {
+    "props": {
+      "blockClass": "last-button-do-it-style-mobile-time-together"
+    },
+    "children": [
+      "button-primary#last-button-do-it-mobile-time-together"
+    ]
+  },
+  "button-primary#last-button-do-it-mobile-time-together": {
+    "props": {
+      "width": "100%",
+      "text": "Scopri le lavastoviglie",
+      "href": "/prodotti/lavare-i-piatti/lavastoviglie"
+    }
+  },
+  /* HOB COOKING PUSH AND GO OF THE MOBILE-------------------*/
+  "flex-layout.row#push-and-go-mobile-hob-cooking": {
+    "props": {
+      "blockClass": "push-and-go-container-maxi-mobile-hob-cooking"
+    },
+    "children": [
+      "flex-layout.col#push-and-go-mobile-hob-cooking-container"
+    ]
+  },
+  "flex-layout.col#push-and-go-mobile-hob-cooking-container": {
+    "props": {
+      "blockClass": "push-and-go-container-mobile-hob-cooking"
+    },
+    "children": [
+      "flex-layout.row#push-and-go-logo-mobile-hob-cooking",
+      "flex-layout.row#push-and-go-description-mobile-hob-cooking"
+    ]
+  },
+  "flex-layout.row#push-and-go-logo-mobile-hob-cooking": {
+    "props": {
+      "blockClass": "push-and-go-logo-container-mobile-hob-cooking"
+    },
+    "children": [
+      "image#push-and-go-logo-mobile"
+    ]
+  },
+  "flex-layout.row#push-and-go-description-mobile-hob-cooking": {
+    "props": {
+      "blockClass": "push-and-go-description-container-mobile-hob-cooking"
+    },
+    "children": [
+      "rich-text#push-and-go-description-mobile-hob-cooking"
+    ]
+  },
+  "rich-text#push-and-go-description-mobile-hob-cooking": {
+    "props": {
+      "text": "## La vita è servita con un solo tasto",
+      "blockClass": "push-and-go-description-style-mobile-hob-cooking"
+    }
+  },
+  "flex-layout.row#image-hob-cooking-mobile-container": {
+    "props": {
+      "blockClass": "image-hob-cooking-mobile-container-style"
+    },
+    "children": [
+      "flex-layout.col#image-hob-cooking-mobile-container-col"
+    ]
+  },
+  "flex-layout.col#image-hob-cooking-mobile-container-col": {
+    "props": {
+      "blockClass": "image-hob-cooking-mobile-container-col"
+    },
+    "children": [
+      /* "image#hob-cooking-mobile" */
+      "modal-trigger#hob-cooking-mobile"
+    ]
+  },
+  /*--------------------------MODAL WITH EMBEDDED VIDEO INSIDE----------------------------------*/
+  "modal-trigger#hob-cooking-mobile": {
+    "children": [
+      "image#hob-cooking-mobile",
+      "modal-layout#hob-cooking-mobile"
+    ]
+  },
+  "modal-layout#hob-cooking-mobile": {
+    "children": [
+      "video-mobile-dit#hob-cooking",
+      "modal-actions.close#hob-cooking-mobile"
+    ]
+  },
+  "modal-actions.close#hob-cooking-mobile": {
+    "props": {
+      "blockClass": "close-modal-button-do-it-together-mobile"
+    }
+  },
+  "image#hob-cooking-mobile": {
+    "props": {
+      "blockClass": "hob-cooking-mobile",
+      "src": "assets/Hob-cooking.png"
+    }
+  },
+  /* "video#hob-cooking-mobile": {
+    "props": {
+      "width": "375px",
+      "height": "193px",
+      "loop": false,
+      "autoPlay": true,
+      "muted": false,
+      "src": "https://whirlpool-cdn.thron.com/shared/plugins/embed/current/whirlpool/vi-edf8ab74-87d2-4af3-80ea-3c6809c55c86/sckne7?filename=Indesit_LFLS_Hob_Boiling_15s_UK_20201113.mp4",
+      "blockClass": "videoEl"
+    }
+  }, */
+  "video-mobile-dit#hob-cooking": {
+    "props": {
+      "videoURL": "https://whirlpool-cdn.thron.com/delivery/public/video/whirlpool/d0096f68-9a57-46b7-be25-ebe840c74774/sckne7/WEBHD/vi-edf8ab74-87d2-4af3-80ea-3c"
+    }
+  },
+  /*--------------------------MODAL WITH EMBEDDED VIDEO INSIDE END----------------------------------*/
+  "flex-layout.row#last-description-mobile-hob-cooking": {
+    "props": {
+      "blockClass": "last-description-style-mobile-hob-cooking"
+    },
+    "children": [
+      "flex-layout.col#last-description-mobile-hob-cooking-container"
+    ]
+  },
+  "flex-layout.col#last-description-mobile-hob-cooking-container": {
+    "props": {
+      "blockClass": "last-description-mobile-hob-cooking-container"
+    },
+    "children": [
+      "flex-layout.row#last-description-text-row-mobile-hob-cooking",
+      "flex-layout.row#last-button-do-it-row-mobile-hob-cooking"
+    ]
+  },
+  "flex-layout.row#last-description-text-row-mobile-hob-cooking": {
+    "props": {
+      "blockClass": "last-description-text-style-mobile-hob-cooking"
+    },
+    "children": [
+      "rich-text#last-description-text-mobile-hob-cooking"
+    ]
+  },
+  "rich-text#last-description-text-mobile-hob-cooking": {
+    "props": {
+      "text": "Imposta il **livello di potenza ideale** con un solo push. Un insieme di tre funzioni automatiche: Push&Boil, Push&Warm, Push&Moka, che offrono una **soluzione semplice per bollire, riscaldare e preparare un ottimo caffè moka** con il semplice tocco di un pulsante.",
+      "blockClass": "last-description-text-style-mobile-hob-cooking"
+    }
+  },
+  "flex-layout.row#last-button-do-it-row-mobile-hob-cooking": {
+    "props": {
+      "blockClass": "last-button-do-it-style-mobile-hob-cooking"
+    },
+    "children": [
+      "button-primary#last-button-do-it-mobile-hob-cooking"
+    ]
+  },
+  "button-primary#last-button-do-it-mobile-hob-cooking": {
+    "props": {
+      "width": "100%",
+      "text": "Scopri i piani cottura",
+      "href": "/prodotti/cucina/piani-cottura"
+    }
+  },
+  /* PUSH AND GO OF THE MOBILE-------------------*/
+  "flex-layout.row#push-and-go-mobile-whole-family": {
+    "props": {
+      "blockClass": "push-and-go-container-maxi-mobile-whole-family"
+    },
+    "children": [
+      "flex-layout.col#push-and-go-mobile-whole-family-container"
+    ]
+  },
+  "flex-layout.col#push-and-go-mobile-whole-family-container": {
+    "props": {
+      "blockClass": "push-and-go-container-mobile-whole-family"
+    },
+    "children": [
+      "flex-layout.row#push-and-go-logo-mobile-whole-family",
+      "flex-layout.row#push-and-go-description-mobile-whole-family"
+    ]
+  },
+  "flex-layout.row#push-and-go-logo-mobile-whole-family": {
+    "props": {
+      "blockClass": "push-and-go-logo-container-mobile-whole-family"
+    },
+    "children": [
+      "image#push-and-go-logo-mobile"
+    ]
+  },
+  "flex-layout.row#push-and-go-description-mobile-whole-family": {
+    "props": {
+      "blockClass": "push-and-go-description-container-mobile-whole-family"
+    },
+    "children": [
+      "rich-text#push-and-go-description-mobile-whole-family"
+    ]
+  },
+  "rich-text#push-and-go-description-mobile-whole-family": {
+    "props": {
+      "text": " ## Goditi piatti deliziosi pronti un solo un'ora",
+      "blockClass": "push-and-go-description-style-mobile-whole-family"
+    }
+  },
+  "flex-layout.row#image-whole-family-mobile-container": {
+    "props": {
+      "blockClass": "image-whole-family-mobile-container-style"
+    },
+    "children": [
+      "flex-layout.col#image-whole-family-mobile-container-col"
+    ]
+  },
+  "flex-layout.col#image-whole-family-mobile-container-col": {
+    "props": {
+      "blockClass": "image-whole-family-mobile-container-col"
+    },
+    "children": [
+      /* "image#whole-family-mobile" */
+      "modal-trigger#whole-family-mobile"
+    ]
+  },
+  /*--------------------------MODAL WITH EMBEDDED VIDEO INSIDE----------------------------------*/
+  "modal-trigger#whole-family-mobile": {
+    "children": [
+      "image#whole-family-mobile",
+      "modal-layout#whole-family-mobile"
+    ]
+  },
+  "modal-layout#whole-family-mobile": {
+    "children": [
+      /* "video#whole-family-mobile", */
+      "video-mobile-dit#whole-family",
+      "modal-actions.close#whole-family-mobile"
+    ]
+  },
+  "modal-actions.close#whole-family-mobile": {
+    "props": {
+      "blockClass": "close-modal-button-do-it-together-mobile"
+    }
+  },
+  "image#whole-family-mobile": {
+    "props": {
+      "blockClass": "whole-family-mobile",
+      "src": "assets/Whole-family.png"
+    }
+  },
+  /* "video#whole-family-mobile": {
+    "props": {
+      "width": "375px",
+      "height": "193px",
+      "loop": false,
+      "autoPlay": true,
+      "muted": false,
+      "src": "https://www.youtube.com/embed/t5d7VsRgdQ0",
+      "blockClass": "videoEl"
+    }
+  }, */
+  "video-mobile-dit#whole-family": {
+    "props": {
+      "videoURL": "https://whirlpool-cdn.thron.com/delivery/public/video/whirlpool/0c8d4ae6-8297-4072-bbe7-0ee0ef5e2d0b/sckne7/WEBHD/vi-e89ab86e-282d-49c6-abb4-75"
+    }
+  },
+  /*--------------------------MODAL WITH EMBEDDED VIDEO INSIDE END----------------------------------*/
+  "flex-layout.row#last-description-mobile-whole-family": {
+    "props": {
+      "blockClass": "last-description-style-mobile-whole-family"
+    },
+    "children": [
+      "flex-layout.col#last-description-mobile-whole-family-container"
+    ]
+  },
+  "flex-layout.col#last-description-mobile-whole-family-container": {
+    "props": {
+      "blockClass": "last-description-mobile-whole-family-container"
+    },
+    "children": [
+      "flex-layout.row#last-description-text-row-mobile-whole-family",
+      "flex-layout.row#last-button-do-it-row-mobile-whole-family"
+    ]
+  },
+  "flex-layout.row#last-description-text-row-mobile-whole-family": {
+    "props": {
+      "blockClass": "last-description-text-style-mobile-whole-family"
+    },
+    "children": [
+      "rich-text#last-description-text-mobile-whole-family"
+    ]
+  },
+  "rich-text#last-description-text-mobile-whole-family": {
+    "props": {
+      "text": "Turn & Go - la soluzione di cottura più semplice. In un solo giro, il forno Aria di Indesit imposta automaticamente il tempo e la temperatura di cottura per oltre 100 ricette. Niente preriscaldamento, niente cene bruciate, solo semplici pasti in famiglia.",
+      "blockClass": "last-description-text-style-mobile-whole-family"
+    }
+  },
+  "flex-layout.row#last-button-do-it-row-mobile-whole-family": {
+    "props": {
+      "blockClass": "last-button-do-it-style-mobile-whole-family"
+    },
+    "children": [
+      "button-primary#last-button-do-it-mobile-whole-family"
+    ]
+  },
+  "button-primary#last-button-do-it-mobile-whole-family": {
+    "props": {
+      "width": "100%",
+      "text": "Scopri la gamma Aria",
+      "href": "/prodotti/cucina/forni"
+    }
+  }
+}

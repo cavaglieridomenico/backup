@@ -1,0 +1,322 @@
+{
+  "product-summary.shelf": {
+    "children": [
+      "responsive-layout.desktop#summaryShelf",
+      "responsive-layout.mobile#summaryShelf"
+    ]
+  },
+  "responsive-layout.desktop#summaryShelf": {
+    "children": [
+      "flex-layout.row#collection-badges",
+      "product-summary-image#shelf",
+      "flex-layout.row#garantieLogo",
+      "vtex.store-components:product-name#summary",
+      "flex-layout.col#button-youreko-pdp-desk-container",
+      "flex-layout.row#plpPrice",
+      "flex-layout.row#energy-label-carousel",
+      "condition-layout.product#stockFewPiecesLabel",
+      "add-to-cart-custom#plp",
+      "add-to-list-btn"
+    ]
+  },
+  "responsive-layout.mobile#summaryShelf": {
+    "children": [
+      "flex-layout.row#collection-badges",
+      "flex-layout.row#imageAndPriceMobile",
+      "vtex.store-components:product-name#summary",
+      "flex-layout.row#commercialCodeMobile",
+      "flex-layout.row#stockFewPiecesLabelCard",
+      "flex-layout.row#WPROKeyMobile"
+    ]
+  },
+  "flex-layout.row#defaultShelfPrice": {
+    "children": [
+      "flex-layout.col#fillerCol",
+      "flex-layout.col#defaultShelfPrice"
+    ],
+    "props": {
+      "blockClass": "priceAndSpecsRowDefault"
+    }
+  },
+  "flex-layout.col#defaultShelfPrice": {
+    "children": ["condition-layout.product#showPriceUnavailableProd"],
+    "props": {
+      "blockClass": "priceCol"
+    }
+  },
+  "flex-layout.col#fillerCol": {
+    "props": {}
+  },
+  "vtex.store-components:product-name#summary": {
+    "props": {
+      "tag": "div",
+      "displayMode": "linkToProductPage",
+      "blockClass": "summaryName"
+    }
+  },
+  "flex-layout.col#button-youreko-pdp-desk-container": {
+    "props": {
+      "blockClass": "button-youreko-container"
+    },
+    "children": ["button-youreko"]
+  },
+  "product-summary.shelf#relatedAccessories": {
+    "children": [
+      "responsive-layout.desktop#relatedAccessories",
+      "responsive-layout.mobile#relatedAccessories"
+    ]
+  },
+  "product-summary.shelf#relatedAccessoriesModal":{
+    "children": [
+      //"responsive-layout.desktop#relatedAccessories",
+      "responsive-layout.mobile#relatedAccessoriesModal"
+    ]
+  },
+  "responsive-layout.desktop#relatedAccessories": {
+    "children": [
+      "condition-layout.product#stockFewPiecesLabel",
+      "product-summary-image#shelf",
+      "flex-layout.row#commercialCode",
+      "vtex.store-components:product-name#summary",
+      "flex-layout.col#pdpPriceModal",
+      "add-to-cart-custom#plp",
+      "add-to-list-btn"
+    ]
+  },
+  "responsive-layout.tablet#relatedAccessories": {
+    "children": [
+      "flex-layout.row#collection-badges",
+      "product-summary-image#shelf",
+      "flex-layout.row#commercialCode",
+      "vtex.store-components:product-name#summary",
+      "flex-layout.row#priceAndWPROKey",
+      "flex-layout.row#dimensioni",
+      "flex-layout.row#specifiche",
+      "condition-layout.product#stockFewPiecesLabel",
+      "add-to-cart-custom#plp",
+      "add-to-list-btn"
+    ]
+  },
+  "responsive-layout.mobile#relatedAccessories": {
+    "children": [
+      "flex-layout.row#collection-badges",
+      "flex-layout.row#imageAndPriceMobile",
+      "vtex.store-components:product-name#summary",
+      "flex-layout.row#commercialCodeMobile",
+      "flex-layout.row#stockFewPiecesLabelCard",
+      "flex-layout.row#WPROKeyMobile",
+      "flex-layout.row#WPROKeyMobile",
+      "add-to-cart-custom#plp"
+    ]
+  },
+  "responsive-layout.mobile#relatedAccessoriesModal": {
+    "children": [
+      "flex-layout.col#contentCardModalMobile",
+      "add-to-cart-custom#plp",
+      "add-to-list-btn"
+    ]
+  },
+  "flex-layout.col#contentCardModalMobile":{
+    "props":{
+      "blockClass":"contentCardModalMobile"
+    },
+    "children":[
+      "flex-layout.col#imageMobile",
+      "vtex.store-components:product-name#summary",
+      "flex-layout.row#commercialCodeMobile",
+      "flex-layout.col#plpPriceMobile"
+    ]
+  },
+  "stack-layout#head": {
+    "children": [
+      "product-summary-image#shelf",
+      "vtex.product-highlights@2.x:product-highlights#promotion"
+    ]
+  },
+  "vtex.product-highlights@2.x:product-highlights#promotion": {
+    "props": {
+      "type": "collection",
+      "blockClass": "promotionHigh"
+    },
+    "children": ["product-highlight-text#promotion"]
+  },
+  "product-highlight-text#promotion": {
+    "props": {
+      "message": "{highlightName}"
+    }
+  },
+  "product-highlight-text#promotionPLP": {
+    "props": {
+      "message": "{highlightName}",
+      "blockClass": ["PromotionBadgeYellow"]
+    }
+  },
+  "product-highlight-text#extraPromotionPLP": {
+    "props": {
+      "message": "{highlightName}",
+      "blockClass":  ["PromotionBadgeYellow", "extraBadgePLP"]
+    }
+  },
+  "vtex.product-highlights@2.x:product-highlights#promotionsPDP": {
+    "title": "PROMOTION BADGE PDP",
+    "props": {
+      "type": "promotion"
+    },
+    "children": ["product-highlight-text#promotionBadgeTextPDP"]
+  },
+  "vtex.product-highlights@2.x:product-highlights#badgePromoPLP": {
+    "title": "CASHBACK/PROMO BADGE PLP",
+    "props": {
+      "type": "collection",
+      "filter": {
+        "type": "show",
+        "highlightNames": [
+          "Collaboration Fairy",
+          "-400€ de remboursement différé",
+          "-200€ de remboursement différé",
+          "-150€ de remboursement différé",
+          "-100€ de remboursement différé",
+          "-80€ de remboursement différé",
+          "-70€ de remboursement différé",
+          "-60€ de remboursement différé",
+          "-50€ de remboursement différé",
+          "-40€ de remboursement différé",
+          "-30€ de remboursement différé",
+          "-20€ de remboursement différé",
+          // "80€ remboursés",
+          // "30€ remboursés",
+          // "40€ remboursés",
+          "100€ remboursés",
+          // "70€ remboursés",
+          // "20€ remboursés",
+          // "50€ remboursés",
+          // "60€ remboursés",
+          // "70€ remboursés",
+          // "100€ remboursés",
+          // "150€ remboursés",
+          // "200€ remboursés",
+          // "400€ remboursés",
+          "Soldes"
+        ]
+      },
+      "blockClass": "promotionBadge"
+    },
+    "children": ["product-highlight-text#promotionPLP"]
+  },
+  "vtex.product-highlights@2.x:product-highlights#extraBadgePromoPLP": {
+    "title": "EXTRA BADGE PLP",
+    "props": {
+      "type": "collection",
+      "blockClass": "promotionBadge",
+      "filter": {
+        "type": "show",
+        "highlightNames": []
+      }
+    },
+    "children": ["product-highlight-text#extraPromotionPLP"]
+  },
+  "vtex.product-highlights@2.x:product-highlights#badgePromoPDP": {
+    "title": "CASHBACK/PROMO BADGE PDP",
+    "props": {
+      "type": "collection",
+      "filter": {
+        "type": "show",
+        "highlightNames": [
+          "Collaboration Fairy",
+          "400€ remboursés",
+          "200€ remboursés",
+          "-150€ de remboursement différé",
+          "-100€ de remboursement différé",
+          "-80€ de remboursement différé",
+          "-70€ de remboursement différé",
+          "-60€ de remboursement différé",
+          "-50€ de remboursement différé",
+          "-40€ de remboursement différé",
+          "-30€ de remboursement différé",
+          "-20€ de remboursement différé",
+          // "80€ remboursés",
+          // "30€ remboursés",
+          // "40€ remboursés",
+          "100€ remboursés",
+          // "70€ remboursés",
+          // "20€ remboursés",
+          // "50€ remboursés",
+          // "60€ remboursés",
+          // "70€ remboursés",
+          // "100€ remboursés",
+          // "150€ remboursés",
+          // "200€ remboursés",
+          // "400€ remboursés",
+          "Soldes"
+        ]
+      },
+      "blockClass": "promotionBadge"
+    },
+    "children": ["product-highlight-text#promotionBadgeTextPDP"]
+  },
+  "vtex.product-highlights@2.x:product-highlights#extraBadgePromoPDP": {
+    "title": "EXTRA BADGE PDP",
+    "props": {
+      "type": "collection",
+      "blockClass": "promotionBadge",
+      "filter": {
+        "type": "show",
+        "highlightNames": []
+      }
+    },
+    "children": ["product-highlight-text#extraBadgeTextPDP"]
+  },
+  "product-highlight-text#promotionBadgeTextPDP": {
+    "props": {
+      "message": "{highlightName}",
+      "blockClass": ["PromotionBadgeYellowPDP"]
+    }
+  },
+  "product-highlight-text#extraBadgeTextPDP": {
+    "props": {
+      "message": "{highlightName}",
+      "blockClass":  ["PromotionBadgeYellowPDP"
+      // "extraBadge"
+      ]
+    }
+  },
+  "vtex.product-highlights@2.x:product-highlights#soldesBadge": {
+    "props": {
+      "type": "collection",
+      "filter": {
+        "type": "show",
+        "highlightNames": ["SOLDES - pre-filtered PLP - 12/01-08/02"]
+      },
+      "blockClass": "promotionHighBlackFriday"
+    },
+    "children": ["product-highlight-text#soldesBadge"]
+  },
+  "product-highlight-text#soldesBadge": {
+    "props": {
+      "message": "Soldes"
+    }
+  },
+  "vtex.product-highlights@2.x:product-highlights#Announcements": {
+    "props": {
+      "type": "collection",
+      "filter": {
+        "type": "show",
+        "highlightNames": ["Collection Nouveautés"]
+      },
+      "blockClass": "promotionHigh"
+    },
+    "children": ["product-highlight-text#Announcements"]
+  },
+  "product-highlight-text#Announcements": {
+    "props": {
+      "message": "Nouveauté",
+      "blockClass": ["greyText"]
+    }
+  },
+  "flex-layout.row#stockFewPiecesLabelCard": {
+    "children": ["condition-layout.product#stockFewPiecesLabel"],
+    "props": {
+      "blockClass": "availableBadgeCard"
+    }
+  }
+}

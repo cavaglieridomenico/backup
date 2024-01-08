@@ -1,0 +1,27 @@
+<script>
+    var brand = document.location.href.includes("indesit") ? "indesit" : "hotpoint";
+    if (brand == "hotpointuk") {
+      var _ictt = _ictt || [];
+      _ictt.push(['_setIgrp', '4682']); // Installation ID
+      _ictt.push(['_enableGAIntegration', { 'gua': true, 'ga': false }]);
+      _ictt.push(['_enableAutoDiscovery']);
+      _ictt.push(['_track']);
+      (function () {
+        var ict = document.createElement('script'); ict.type = 'text/javascript'; ict.async = true;
+        ict.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'ict.infinity-tracking.net/js/nas.v1.min.js';
+        var scr = document.getElementsByTagName('script')[0]; scr.parentNode.insertBefore(ict, scr);
+      })();
+    } else {
+      var _ictt = _ictt || [];
+      _ictt.push(['_setIgrp', '4688']); // Installation ID
+      _ictt.push(['_enableGAIntegration', { 'gua': true, 'ga': false }]);
+      _ictt.push(['_enableAutoDiscovery']);
+      _ictt.push(['_track']);
+      (function () {
+        var ict = document.createElement('script'); ict.type = 'text/javascript'; ict.async = true;
+        ict.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'ict.infinity-tracking.net/js/nas.v1.min.js';
+        var scr = document.getElementsByTagName('script')[0]; scr.parentNode.insertBefore(ict, scr);
+      })();
+    }
+
+</script>

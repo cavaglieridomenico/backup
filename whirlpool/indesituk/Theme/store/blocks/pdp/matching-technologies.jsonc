@@ -1,0 +1,60 @@
+/* ---------------------- ACCORDION FEATURES PDP ---------------------------- */
+{
+  /* TITLE */
+  "flex-layout.row#features-container": {
+    "props": {
+      "blockClass": "features-container-style"
+    },
+    "children": [
+      "flex-layout.col#features-title",
+      "flex-layout.col#accordion-container-features"
+    ]
+  },
+  "flex-layout.col#features-title": {
+    "props": {
+      "width": "100%",
+      "blockClass": "features-title-style"
+    },
+    "children": ["rich-text#features-title"]
+  },
+  "rich-text#features-title": {
+    "props": {
+      "blockClass": "features-text-style",
+      "text": "Advanced Technology"
+    }
+  },
+  "flex-layout.col#accordion-container-features": {
+    "props": {
+      "width": "100%"
+    },
+    "children": ["flex-layout.row#accordion-features"]
+  },
+  /* Flex Layout */
+  "flex-layout.row#accordion-features": {
+    "props": {
+      "blockClass": ""
+    },
+    "children": ["flex-layout.col#accordion-features"]
+  },
+  "flex-layout.col#accordion-features": {
+    "props": {
+      "blockClass": "accordion-features"
+    },
+    "children": ["disclosure-layout-group#group-accordion-features"]
+  },
+  /* disclosure Layout */
+  "disclosure-layout-group#group-accordion-features": {
+    "props": {
+      "blockClass": ""
+    },
+    "children": ["matching-technologies"]
+  },
+  "matching-technologies": {
+    "props": {
+      "filter": {
+        "specificationGroups": ["RatingGroupAttrLogo"],
+        "type": "show"
+      }
+    }
+  }
+}

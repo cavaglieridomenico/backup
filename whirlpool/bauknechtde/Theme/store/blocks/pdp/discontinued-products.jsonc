@@ -1,0 +1,202 @@
+{
+  "store.custom#discontinued-products": {
+    "blocks": [
+      "product-meta-handler",
+      "responsive-layout.mobile#discontinued-products",
+      "responsive-layout.desktop#discontinued-products"
+    ]
+  },
+  "responsive-layout.desktop#discontinued-products": {
+    "children": ["discontinued-products#desktop"]
+  },
+  "responsive-layout.mobile#discontinued-products": {
+    "children": ["discontinued-products#mobile"]
+  },
+  "discontinued-products#desktop": {
+    "children": [
+      "flex-layout.row#product-breadcrumb",
+      "flex-layout.row#product-main-Discontinued",
+      "responsive-layout.desktop#accordionProductDescandDetails",
+      "responsive-layout.tablet#accordionProductDescandDetails"
+    ]
+  },
+  "flex-layout.row#product-main-Discontinued": {
+    "props": {
+      "colGap": 7,
+      "rowGap": 7,
+      "marginTop": 4,
+      "marginBottom": 7,
+      "paddingTop": 7,
+      "paddingBottom": 7,
+      "blockClass": ["width1280Center", "mainRowPdp", "mainRowDiscontinuedPDP"],
+      "preserveLayoutOnMobile": false
+    },
+    "children": [
+      "flex-layout.col#product-image-disc",
+      "flex-layout.col#right-col-discontinued"
+    ]
+  },
+  "flex-layout.col#product-image-disc": {
+    "children": ["video-player-thron-pdp"] //product-image "video-player-thron-pdp"
+  },
+  "flex-layout.col#right-col-discontinued": {
+    "props": {
+      "blockClass": ["product-desc-info", "discontinuedProductDescInfo"],
+      "preventVerticalStretch": true,
+      "rowGap": 0
+    },
+    "children": [
+      "flex-layout.row#product-name",
+      "condition-layout.product#pdpDiscontinued",
+      "flex-layout.row#halfSpace",
+      "flex-layout.row#keyFeaturesBKPLP",
+      "condition-layout.product#formativa-FGAS",
+      "condition-layout.product#isAccessoriosku-selector",
+      //"condition-layout.product#isAccessoriominimal",
+      "flex-layout.col#partToShow"
+    ]
+  },
+  "flex-layout.row#productPreServizi-discontinued": {
+    "props": {
+      "blockClass": "preServizi"
+    },
+    "children": [
+      "condition-layout.product#etichetta-image-pre-discontinued",
+      "condition-layout.product#rating"
+    ]
+  },
+  "condition-layout.product#etichetta-image-pre-discontinued": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "energy-label"
+          }
+        }
+      ],
+      "Then": "flex-layout.row#old-label-pre-discontinued",
+      "Else": "flex-layout.row#new-label-pre-discontinued" //"image-from-specification#EtichettaEnergeticaNew"
+    }
+  },
+  "flex-layout.row#new-label-pre-discontinued": {
+    "children": [
+      "image-from-specification#EtichettaEnergeticaNew-pre-discontinued"
+    ]
+  },
+  "flex-layout.row#old-label-pre-discontinued": {
+    "children": [
+      "image-from-specification#EtichettaEnergetica-pre-discontinued"
+    ]
+  },
+  "image-from-specification#EtichettaEnergeticaNew-pre-discontinued": {
+    "props": {
+      "specificationName": "EnergyLogo_image",
+      "imageLink": "Specification.new-energy-label",
+      "labelWithHref": true,
+      "target": "_blank"
+    }
+  },
+  "image-from-specification#EtichettaEnergetica-pre-discontinued": {
+    "props": {
+      "specificationName": "EnergyLogo_image",
+      "imageLink": "Specification.energy-label",
+      "labelWithHref": true,
+      "target": "_blank"
+    }
+  },
+  "discontinued-products#mobile": {
+    "children": ["flex-layout.row#product-main-mobile-discontinued"]
+  },
+  "flex-layout.row#product-main-mobile-discontinued": {
+    "props": {
+      "colGap": 7,
+      "rowGap": 7,
+      "marginTop": 4,
+      "marginBottom": 7,
+      "paddingTop": 7,
+      "paddingBottom": 7,
+      "blockClass": ["width1280Center", "mainRowPDP"]
+    },
+    "children": ["flex-layout.col#product-main-discontinued"]
+  },
+  "flex-layout.col#product-main-discontinued": {
+    "props": {
+      "colGap": 7,
+      "rowGap": 7,
+      "marginTop": 4,
+      "marginBottom": 7,
+      "paddingTop": 7,
+      "paddingBottom": 7,
+      "blockClass": ["width1280Center", "mainRowPDP"],
+      "preserveLayoutOnMobile": true
+    },
+    "children": [
+      "condition-layout.product#isAvailableStickyMobile-discontinued",
+      "flex-layout.col#single-col-discontinued"
+    ]
+  },
+  "condition-layout.product#isAvailableStickyMobile-discontinued": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "DISPONIBILITÀ",
+            "value": "Whirlpool Online Shop"
+          }
+        }
+      ],
+      "Then": "condition-layout.product#sticky-discontinuedMobile-discontinued"
+    }
+  },
+  "condition-layout.product#sticky-discontinuedMobile-discontinued": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "showPrice",
+            "value": "true"
+          }
+        }
+      ],
+      "Then": "condition-layout.product#sticky-discontinued-with-priceMobile-discontinued"
+    }
+  },
+  "condition-layout.product#sticky-discontinued-with-priceMobile-discontinued": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "isDiscontinued",
+            "value": "false"
+          }
+        }
+      ],
+      "Then": "flex-layout.row#pdpSticky"
+    }
+  },
+  "flex-layout.col#single-col-discontinued": {
+    "props": {
+      "blockClass": "product-desc-info",
+      "preventVerticalStretch": true,
+      "rowGap": 0
+    },
+    "children": [
+      "flex-layout.row#productTypePDP",
+      "stack-layout#imagesPDP",
+      "flex-layout.row#discontinuedProductNameMobile",
+      "condition-layout.product#pdpDiscontinued",
+      "flex-layout.row#accordion-gift",
+      "flex-layout.row#discontinuedPartToShowMobile"
+    ]
+  },
+  "flex-layout.row#discontinuedProductNameMobile": {
+    "children": ["vtex.store-components:product-name"],
+    "props": {
+      "blockClass": "discontinuedProductNameMobile"
+    }
+  }
+}

@@ -1,0 +1,123 @@
+.buttonContainer {
+  display: flex;
+}
+
+.buttonContainer :global(.vtex-button__label) {
+  padding: 1rem !important;
+  cursor: pointer;
+}
+
+.buttonContainer :global(.vtex-button):hover {
+  background-color: #007d69;
+}
+
+.button__label {
+  padding: 0;
+}
+
+.addToCartIcon {
+  width: 3rem !important;
+  height: 3rem;
+}
+
+.buttonText {
+  font-family: "myriadBold";
+  font-size: 0.875rem;
+  text-transform: uppercase;
+}
+
+:global(.vtex-flex-layout-0-x-flexRowContent--infosAddToCart) .buttonContainer {
+  margin: 0;
+}
+
+:global(.vtex-slider-layout-0-x-slideChildrenContainer--comparison-page)
+  .buttonContainer {
+  margin-bottom: 2rem;
+}
+
+:global(.vtex-slider-layout-0-x-slideChildrenContainer--comparison-page)
+  .buttonContainer
+  :global(.vtex-button) {
+  position: absolute;
+  bottom: 0px;
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 600px) {
+  :global(.vtex-flex-layout-0-x-flexColChild--stickyRight)
+    .addToCartIconContainerSticky {
+    display: none;
+  }
+
+  .buttonText {
+    font-size: 1.3rem;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .flexRowContent--stickyContainer .stretchChildrenWidth:first-child {
+    width: 50% !important;
+  }
+
+  .flexRowContent--stickyContainer .stretchChildrenWidth:last-child {
+    width: 50% !important;
+  }
+
+  .flexRowContent--stickyImageProdotto .stretchChildrenWidth:first-child {
+    width: 10% !important;
+  }
+
+  .flexRowContent--stickyImageProdotto .stretchChildrenWidth:last-child {
+    width: 90% !important;
+  }
+
+  .flexColChild--stickyLeft {
+    height: auto !important;
+  }
+
+  .flexRowContent--stickyPDPMenu .stretchChildrenWidth:first-child {
+    width: auto !important;
+  }
+
+  .flexRowContent--stickyPDPMenu .stretchChildrenWidth:last-child {
+    width: auto !important;
+  }
+
+  .flexRowContent--stickyImageProdotto .stretchChildrenWidth:first-child {
+    /* display: none; */
+    background-color: aqua;
+  }
+
+  .buttonContainer :global(.vtex-button__label) {
+    padding: 1rem 0.5rem !important;
+  }
+
+  /* .stickyContainer {
+    background-color: #fdc100;
+  } */
+  /* :global(.vtex-flex-layout-0-x-flexRow--stickyContainer)
+    .buttonDataContainerPdp {
+    display: none;
+  } */
+  /* :global(.vtex-flex-layout-0-x-flexRow--stickyContainer)
+    .addToCartIconContainerSticky {
+    display: unset !important;
+  } */
+
+  :global(.vtex-button__label)
+    :not(.vtex-flex-layout-0-x-flexRow--stickyContainer)
+    .addToCartIconContainerSticky {
+    display: none;
+  }
+
+  /* :global(.vtex-flex-layout-0-x-flexColChild--product-desc-info)
+    .addToCartIconContainerSticky {
+    display: none;
+  } */
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  :global(.vtex-flex-layout-0-x-flexColChild--product-desc-info)
+    .addToCartIconContainerSticky {
+    display: none;
+  }
+}

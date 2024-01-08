@@ -1,0 +1,110 @@
+{
+  "my-account-link.wishlist-link": {
+    "title": "[LINK] - [MID] - My-Account Wishlist Menu Link",
+    "props": {
+      "label": "Favourite Products"
+    }
+  },
+  "my-account-page.wishlist-page": {
+    "title": "[PAGE] - [] - My-Account Wishlist Page",
+    "children": [
+      "link#backWishlist",
+      "flex-layout.row#top",
+      "list-context.wishlist"
+    ]
+  },
+  "store.wishlist": {
+    "blocks": [
+      "link#backWishlist",
+      "flex-layout.row#top",
+      "list-context.wishlist"
+    ]
+  },
+  "link#backWishlist": {
+    "title": "[LINK] - [TOP] - Wishlist Back to Profile Link",
+    "props": {
+      "href": "#/profile",
+      "label": "RETURN",
+      "blockClass": "backWishlist"
+    }
+  },
+  "flex-layout.row#top": {
+    "title": "[ROW] - [TOP] - Wishlist Title Container",
+    "children": ["flex-layout.col#title"]
+  },
+  "flex-layout.col#title": {
+    "title": "[COL] - [TOP] - Wishlist Title Container",
+    "children": ["rich-text#titleWhish"],
+    "props": {
+      "blockClass": "titleWishlist",
+      "preventVerticalStretch": true
+    }
+  },
+  "rich-text#titleWhish": {
+    "title": "[TEXT] - [TOP] - Wishlist Title Text",
+    "props": {
+      "text": "## Favourite Products",
+      "blockClass": "titleWishlist"
+    }
+  },
+  "list-context.wishlist": {
+    "title": "[CONTEXT] - [MID] - Wishlist Slider Context",
+    "blocks": ["product-summary.shelf#wishlist"],
+    "children": ["slider-layout-whl#wishlist"]
+  },
+  "product-summary.shelf#wishlist": {
+    "children": [
+      "flex-layout.row#wishlistButton",
+      "vtex.product-highlights@2.x:product-highlights#promotion",
+      "product-summary-image#shelf",
+      "flex-layout.row#commercialCode",
+      "vtex.store-components:product-name#summary",
+      "product-summary-space",
+      "flex-layout.row#selling-price-savings-no-comparison",
+      "flex-layout.row#leadTime",
+      "condition-layout.product#isAvailableButtonPlp",
+      "where-to-buy.button",
+      "flex-layout.row#ratingProductCard",
+      "condition-layout.product#etichetta-image"
+    ]
+  },
+  "flex-layout.row#wishlistButton": {
+    "title": "[Row] - [Mid] - Wishlist Carousel",
+    "props": {
+      "preserveLayoutOnMobile": true,
+      "horizontalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "blockClass": "wishlist"
+    },
+    "children": ["add-to-list-btn#myAccount", "rich-text#removeFromWishlist"]
+  },
+  "add-to-list-btn#myAccount": {
+    "title": "Add to List Button in My Account",
+    "props": {
+      "blockClass": ["wishlistButtonMyAccount"]
+    }
+  },
+  "rich-text#removeFromWishlist": {
+    "title": "[Text] - Remove from Wishlist",
+    "props": {
+      "text": "Remove",
+      "blockClass": "wishlist"
+    }
+  },
+  "slider-layout-whl#wishlist": {
+    "title": "[LAYOUT] - [MID] - Wishlist Slider",
+    "props": {
+      "itemsPerPage": {
+        "desktop": 4,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "fullWidth": false,
+      "blockClass": ["shelf","wishlistSlider"],
+      "showNavigationArrows": "desktopOnly",
+      "showPaginationDots": "mobileOnly"
+    }
+  }
+}

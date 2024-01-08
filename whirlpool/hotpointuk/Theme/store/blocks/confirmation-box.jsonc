@@ -1,0 +1,52 @@
+{
+  "flex-layout.row#confirmation-box-wrapper": {
+    "props": {
+      "blockClass": ["confirmation-box"]
+    },
+    "children": [
+      "flex-layout.col#confirmation-box"]
+  },
+  "flex-layout.col#confirmation-box": {
+    "props": {
+      "blockClass": ["confirmation-box-container"]
+    },
+    "children": [
+      "flex-layout.row#confirmation-box-subwrapper",
+      "rich-text#order-confirmation-box-message1",
+      "rich-text#order-confirmation-box-message2",
+      "rich-text#order-confirmation-box-message3"
+    ]
+  },
+  "flex-layout.row#confirmation-box-subwrapper": {
+    "children": [
+      "flex-layout.row#order-confirmation-box-title"
+    ]
+  },
+  "flex-layout.row#order-confirmation-box-title": {
+    "props": {
+      "blockClass": ["order-confirmation-box-text_styles"]
+    },
+    "children": ["op-order-number"]
+  },
+  "rich-text#order-confirmation-box-message1": {
+    "props": {
+      "text": "A breve riceverai una mail con il riepilogo dei dati del tuo acquisto.",
+      "textPosition": "CENTER",
+      "blockClass": ["order-confirmation-box-text_styles"]
+    }
+  },
+  "rich-text#order-confirmation-box-message2": {
+    "props": {
+      "text": "Non riesci a trovare la mail?",
+      "textPosition": "CENTER",
+      "blockClass": ["order-confirmation-box-text_styles"]
+    }
+  },
+  "rich-text#order-confirmation-box-message3": {
+    "props": {
+      "text": " Controlla la posta indesiderata e la cartella spam.",
+      "textPosition": "CENTER",
+      "blockClass": ["order-confirmation-box-text_styles"]
+    }
+  }
+}

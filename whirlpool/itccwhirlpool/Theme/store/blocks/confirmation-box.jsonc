@@ -1,0 +1,187 @@
+{
+  "flex-layout.row#confirmation-box-wrapper": {
+    "props": {
+      "blockClass": ["confirmation-box"]
+    },
+    "children": ["flex-layout.col#confirmation-box"]
+  },
+  "flex-layout.col#confirmation-box": {
+    "props": {
+      "blockClass": ["confirmation-box-container"]
+    },
+    "children": [
+      "flex-layout.row#confirmation-box-subwrapper",
+      "rich-text#order-confirmation-box-message1",
+      "rich-text#order-confirmation-box-message2",
+      "rich-text#order-confirmation-box-message3",
+      "flex-layout.col#support-information-need-help",
+      "flex-layout.col#support-information-appliances",
+      "flex-layout.col#support-information-green-number",
+      "flex-layout.col#support-information-wpro",
+      "flex-layout.col#support-information-contact-center",
+      "flex-layout.col#support-information-unique-number"
+    ]
+  },
+  "flex-layout.row#confirmation-box-subwrapper": {
+    "children": ["flex-layout.row#order-confirmation-box-title"]
+  },
+  "flex-layout.row#order-confirmation-box-title": {
+    "props": {
+      "blockClass": ["order-confirmation-box-text_styles"]
+    },
+    "children": ["op-order-number"]
+  },
+  "rich-text#order-confirmation-box-message1": {
+    "props": {
+      "text": "A breve riceverai una mail con il riepilogo dei dati del tuo acquisto.",
+      "textPosition": "CENTER",
+      "blockClass": ["order-confirmation-box-text_styles"]
+    }
+  },
+  "rich-text#order-confirmation-box-message2": {
+    "props": {
+      "text": "Non riesci a trovare la mail?",
+      "textPosition": "CENTER",
+      "blockClass": ["order-confirmation-box-text_styles"]
+    }
+  },
+  "rich-text#order-confirmation-box-message3": {
+    "props": {
+      "text": " Controlla la posta indesiderata e la cartella spam.",
+      "textPosition": "CENTER",
+      "blockClass": ["order-confirmation-box-text_styles"]
+    }
+  },
+  "flex-layout.col#support-information-need-help": {
+    "props": {
+      "blockClass": "support-information-need-help"
+    },
+    "children": ["rich-text#support-information-need-help-title"]
+  },
+  "rich-text#support-information-need-help-title": {
+    "props": {
+      "text": "Hai bisogno d'aiuto?",
+      "blockClass": "support-information-need-help-title"
+    }
+  },
+  "flex-layout.col#support-information-appliances": {
+    "props": {
+      "blockClass": "support-information-appliances"
+    },
+    "children": [
+      "rich-text#support-information-appliances-title",
+      "link#support-information-appliances-mail"
+    ]
+  },
+  "rich-text#support-information-appliances-title": {
+    "props": {
+      "text": "Elettrodomestici",
+      "blockClass": "support-information-appliances-title"
+    }
+  },
+  "link#support-information-appliances-mail": {
+    "props": {
+      "label": "directsalesonline@whirlpool.com",
+      "href": "mailto:directsalesonline@whirlpool.com",
+      "blockClass": "support-information-appliances-desc"
+    }
+  },
+  "flex-layout.col#support-information-green-number": {
+    "props": {
+      "blockClass": "support-information-green-number"
+    },
+    "children": [
+      "rich-text#green-number-title",
+      "link#green-number-phone",
+      "rich-text#green-number-hours"
+    ]
+  },
+  "rich-text#green-number-title": {
+    "props": {
+      "text": "Numero Verde Gratuito",
+      "blockClass": "green-number-title"
+    }
+  },
+  "link#green-number-phone": {
+    "props": {
+      "label": "800.140.004",
+      "href": "tel:800.140.004",
+      "blockClass": "green-number-phone"
+    }
+  },
+  "rich-text#green-number-hours": {
+    "props": {
+      "text": "Lun-Ven dalle 8:30-12.30 / 13.30-17.30",
+      "blockClass": "green-number-hour"
+    }
+  },
+  "flex-layout.col#support-information-wpro": {
+    "props": {
+      "blockClass": "wpro"
+    },
+    "children": ["rich-text#wpro-title", "link#wpro-mail"]
+  },
+  "rich-text#wpro-title": {
+    "props": {
+      "text": "Accessori WPRO",
+      "blockClass": "wpro-title"
+    }
+  },
+  "link#wpro-mail": {
+    "props": {
+      "label": "servizioclienti.whirlpool.it@whirlpool.com",
+      "href": "mailto:servizioclienti.whirlpool.it@whirlpool.com",
+      "blockClass": "wpro-mail"
+    }
+  },
+  "flex-layout.col#support-information-contact-center": {
+    "props": {
+      "blockClass": "contact-center"
+    },
+    "children": [
+      "rich-text#contact-center-title",
+      "rich-text#contact-center-desc"
+    ]
+  },
+  "rich-text#contact-center-title": {
+    "props": {
+      "blockClass": "contact-center-title",
+      "text": "Contact Center"
+    }
+  },
+  "rich-text#contact-center-desc": {
+    "props": {
+      "text": "Per richieste di assistenza ed estensioni di garanzia <br> Whirlpool - Hotpoint - Indesit",
+      "blockClass": "contact-center-desc"
+    }
+  },
+  "flex-layout.col#support-information-unique-number": {
+    "props": {
+      "blockClass": "unique-number"
+    },
+    "children": [
+      "rich-text#unique-number-title",
+      "link#unique-number-phone",
+      "rich-text#unique-number-postilla"
+    ]
+  },
+  "rich-text#unique-number-title": {
+    "props": {
+      "text": "Numero unico:",
+      "blockClass": "unique-number-title"
+    }
+  },
+  "link#unique-number-phone": {
+    "props": {
+      "label": "02.20.30*",
+      "href": "tel:022030",
+      "blockClass": "unique-number-phone"
+    }
+  },
+  "rich-text#unique-number-postilla": {
+    "props": {
+      "text": "*al costo di una chiamata a rete fissa secondo il piano tariffario previsto dal proprio operatore.<br>[Lun-Ven dalle 9:00 alle 18:00]",
+      "blockClass": "unique-number-postilla"
+    }
+  }
+}

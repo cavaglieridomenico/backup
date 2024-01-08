@@ -1,0 +1,27 @@
+{
+  "store.custom#catalog-page": {
+    "blocks": ["breadcrumb-two-levels#catalog", "flex-layout.row#catalog-container"]
+  },
+  "rich-text#catalog-title": {
+    "props": {
+      "text": "# Tutti i prodotti"
+    }
+  },
+  "flex-layout.col#catalog": {
+    "children": ["rich-text#catalog-title", "catalog-link"]
+  },
+  "flex-layout.row#catalog-container": {
+    "children": ["flex-layout.col#catalog"],
+    "props": {
+      "blockClass": "catalogContainer",
+      "fullWidth": true
+    }
+  },
+  "breadcrumb-two-levels#catalog": {
+    "props": {
+      "firstLevelName": "home",
+      "secondLevelName": " tutti i prodotti",
+      "showOnMobile": true
+    }
+  }
+}

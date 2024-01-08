@@ -1,0 +1,261 @@
+{
+    "memory": 256,
+    "ttl": 10,
+    "timeout": 60,
+    "minReplicas": 2,
+    "maxReplicas": 4,
+    "workers": 1,
+    "routes": {
+        "category": {
+            "path": "/v1/category/:categoryId",
+            "public": true
+        },
+        "createCategory": {
+            "path": "/v1/category",
+            "public": true
+        },
+
+        "products_id": {
+            "path": "/v1/products/:id",
+            "public": true
+        },
+        "products": {
+            "path": "/v1/products",
+            "public": true
+        },
+        "productStatus": {
+            "path": "/v1/productStatus/:productId",
+            "public": true
+        },
+        "substitute": {
+            "path": "/v1/substitute/:productJCode",
+            "public": true
+        },
+        
+        "productSpecification": {
+            "path": "/v1/productSpecification/:productId",
+            "public": true
+        },
+        "productSpecificationDelete": {
+            "path": "/v1/productSpecificationDelete/:productId/:specificationId",
+            "public": true
+        },
+        "productSpecificationUpdate": {
+            "path": "/v1/productSpecificationUpdate/:productId",
+            "public": true
+        },
+        "productSpecificationAppend": {
+            "path": "/v1/product-specification/append/:productId",
+            "public": true
+        },
+
+        "skuIds": {
+            "path": "/v1/skuIds",
+            "public": true
+        },
+        "sku": {
+            "path": "/v1/sku/:skuId",
+            "public": true
+        },
+        "skuProductId": {
+            "path": "/v1/skuByProductId/:productId",
+            "public": true
+        },
+        "skuCreate": {
+            "path": "/v1/skuCreate",
+            "public": true
+        },
+        "skuFile": {
+            "path": "/v1/skuFile/:skuId",
+            "public": true
+        },
+        "skuFileUpdate": {
+            "path": "/v1/skuFileUpdate/:skuId/:skuFileId",
+            "public": true
+        },
+        "getSkuComplementById": {
+            "path": "/v1/sku-complement/:skuId",
+            "public": true
+        },
+        "createSkuComplement": {
+            "path": "/v1/sku-complement",
+            "public": true
+        },
+
+
+        "specification": {
+            "path": "/v1/specification",
+            "public": true
+        },
+        "specificationField": {
+            "path": "/v1/specificationField",
+            "public": true
+        },
+        "specificationFieldValue": {
+            "path": "/v1/specificationFieldValue",
+            "public": true
+        },
+        "specificationGroup": {
+            "path": "/v1/specificationGroup",
+            "public": true
+        },
+        "updateSpecificationGroup": {
+            "path": "/v1/specificationGroup/:groupId",
+            "public": true
+        },
+        "specificationValue": {
+            "path": "/v1/specificationValue",
+            "public": true
+        },
+
+        "getDocument": {
+            "path": "/v1/document/:acronym/:documentId",
+            "public": true
+        },
+        "createDocument": {
+            "path": "/v1/document/:acronym",
+            "public": true
+        },
+        "getAllDocuments": {
+            "path": "/v1/document/:acronym/all",
+            "public": true
+        },
+        "getAllSchemas": {
+            "path": "/v1/schema/:acronym/all",
+            "public": true
+        },
+        "createSchema": {
+            "path": "/v1/schema/:acronym/:schemaName",
+            "public": true
+        },
+        "createVTableApp": {
+            "path": "/v1/document/vtable/:appName",
+            "public": true
+        },
+        "scrollDocuments": {
+            "path": "/v1/document/scroll/:dataEntityName",
+            "public": true
+        },
+
+        "familyGroups": {
+            "path": "/v1/family-group",
+            "public": true
+        },
+        "productByfamilyGroupAndCategory": {
+            "path": "/v1/product/:familyGroup",
+            "public": true
+        },
+
+        "search": {
+            "path": "/v1/search",
+            "public": true
+        },
+        "searchProductById": {
+            "path": "/v1/product",
+            "public": true
+        },
+        "searchProductBySpecification": {
+            "path": "/v1/search/specification",
+            "public": true
+        },
+        "searchProductByCollection": {
+            "path": "/v1/search/collection",
+            "public": true
+        },
+        "autocomplete": {
+            "path": "/v1/search/autocomplete",
+            "public": true
+        },
+        
+        "updateInventory": {
+            "path": "/v1/inventory/skus/:skuId/warehouses/:warehouseId",
+            "public": true
+        },
+        
+        "retrieveAttachment": {
+            "path": "/v1/retrieveAttachment/:acronym/:documentId/:field/:fileName",
+            "public": true
+        },
+        "saveAttachment": {
+            "path": "/v1/saveAttachment/:acronym/:documentId/:field",
+            "public": true
+        },
+        "scrollBom": {
+            "path": "/v1/bom/scroll/:productCode",
+            "public": true
+        },
+        "searchBom": {
+            "path": "/v1/bom/search/:productCode",
+            "public": true
+        },
+        "sparePartsBom": {
+            "path": "/v1/bom/spare-parts",
+            "public": true
+        },
+
+        "checkSparePart": {
+            "path": "/v1/check/spare/:jCode/product/:productCode",
+            "public": true
+        },
+
+        "getCollectionById": {
+            "path": "/v1/get-collection/:collectionId",
+            "public": true
+        },
+        "searchCollection": {
+            "path": "/v1/search-collection/:searchTerm",
+            "public": true
+        },
+        "getCollectionProducts": {
+            "path": "/v1/get-collection-products/:collectionId",
+            "public": true
+        },
+        "createCollection": {
+            "path": "/v1/create-collection",
+            "public": true
+        },
+        "updateCollection": {
+            "path": "/v1/update-collection/:collectionId",
+            "public": true
+        },
+
+        "registerUser": {
+            "path": "/v1/user",
+            "public": true
+        },
+        "getUserDocumentIdByEmail": {
+            "path": "/v1/user/id",
+            "public": true
+        },
+
+        "triggerToken": {
+            "path": "/v1/translation/trigger/token",
+            "public": true
+        },
+        "getToken": {
+            "path": "/v1/translation/token",
+            "public": true
+        },
+        "getCategoryTranslation": {
+            "path": "/v1/translation/category/:id/:language",
+            "public": true
+        },
+        "getProductTranslation": {
+            "path": "/v1/translation/product/:id/:language",
+            "public": true
+        },
+        "translateCategory": {
+            "path": "/v1/translation/category/:language",
+            "public": true
+        },
+        "translateProduct": {
+            "path": "/v1/translation/product/:language",
+            "public": true
+        },
+
+        "triggerBackInStockEmail": {
+            "path": "/v1/back-in-stock",
+            "public": true
+        }
+    }
+}

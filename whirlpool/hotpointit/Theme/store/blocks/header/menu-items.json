@@ -1,0 +1,1415 @@
+{
+  "menu-item#prodotti": {
+    "props": {
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Prodotti e Ricambi",
+        "text": "Prodotti e Ricambi"
+      },
+      "blockClass": [
+        "linkMenu"
+      ]
+    },
+    "blocks": [
+      "vtex.menu@2.x:submenu#prodotti"
+    ]
+  },
+  "menu-item#accessori": {
+    "props": {
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Accessori",
+        "text": "Accessori"
+      },
+      "blockClass": [
+        "menu",
+        "linkMenu"
+      ]
+    },
+    "blocks": [
+      "vtex.menu@2.x:submenu#moreAccessori"
+    ]
+  },
+  "menu-item#ricambi-originali": {
+    "props": {
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/assistenza/ricambi-originali",
+        "noFollow": false,
+        "tagTitle": "Ricambi",
+        "text": "Ricambi"
+      },
+      "blockClass": [
+        "menu",
+        "linkMenu"
+      ]
+    },
+    "blocks": [
+      "vtex.menu@2.x:submenu#moreRicambiOriginali"
+    ]
+  },
+  "menu-item#innovation": {
+    "props": {
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/innovazioni",
+        "noFollow": false,
+        "tagTitle": "Innovazioni",
+        "text": "Innovazioni"
+      },
+      "children": [
+        "flex-layout.col#menu",
+        "flex-layout.col#card"
+      ],
+      "blockClass": "linkMenu"
+    }
+  },
+  "menu-item#promozioni": {
+    "props": {
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/promozioni",
+        "noFollow": false,
+        "tagTitle": "Promozioni",
+        "text": "Promozioni"
+      },
+      "blockClass": "linkMenu"
+    }
+  },
+  "menu-item#ricette": {
+    "props": {
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/ricette",
+        "noFollow": false,
+        "tagTitle": "Ricette",
+        "text": "Ricette"
+      },
+      "blockClass": "linkMenu"
+    }
+  },
+  "menu-item#homelove": {
+    "props": {
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/the-feeling-of-home-love",
+        "noFollow": false,
+        "tagTitle": "Home Love",
+        "text": "Home Love"
+      },
+      "blockClass": "linkMenu"
+    }
+  },
+  "menu-item#supporto": {
+    "props": {
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/supporto",
+        "noFollow": false,
+        "tagTitle": "Supporto e Servizi",
+        "text": "Supporto e Servizi"
+      },
+      "blockClass": [
+        "linkMenu"
+      ]
+    },
+    "blocks": [
+      "vtex.menu@2.x:submenu#supporto"
+    ]
+  },
+  "vtex.menu@2.x:submenu#prodotti": {
+    "props": {
+      "width": "100%",
+      "blockClass": "menu"
+    },
+    "children": [
+      "flex-layout.row#menuPrimoLivello"
+    ]
+  },
+  "vtex.menu@2.x:submenu#supporto": {
+    "props": {
+      "width": "100%",
+      "blockClass": "menuSupporto"
+    },
+    "children": [
+      "flex-layout.row#supporto"
+    ]
+  },
+  "vtex.menu@2.x:submenu#promozioni": {
+    "props": {
+      "width": "100%",
+      "blockClass": "menuSupporto"
+    },
+    "children": [
+      "flex-layout.row#promozioni"
+    ]
+  },
+  "flex-layout.row#menuPrimoLivello": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "menuHeader"
+    },
+    "children": [
+      "flex-layout.col#menu",
+      "toggle-layout#prodotti"
+    ]
+  },
+  "toggle-layout#prodotti": {
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "flex-layout.col#card"
+    ]
+  },
+  "flex-layout.col#menu": {
+    "props": {
+      "fullWidth": true
+    },
+    "children": [
+      "vtex.menu@2.x:menu#submenuprodotti"
+    ]
+  },
+  "flex-layout.col#card": {
+    "props": {
+      "blockClass": "imageFirstLevel"
+    },
+    "children": [
+      "info-card#primoLivello"
+    ]
+  },
+  "info-card#primoLivello": {
+    "props": {
+      "id": "W-Collection",
+      "isFullModeStyle": false,
+      "textPosition": "left",
+      "imageUrl": "assets/mainmenu.jpg",
+      "headline": "W-Collection",
+      "subhead": "Scopri la collezione",
+      "callToActionText": "SOPRI DI PIU",
+      "callToActionUrl": "/sale/d",
+      "blockClass": "mainMenu",
+      "textAlignment": "LEFT"
+    }
+  },
+  "toggle-layout#lavaggio": {
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "flex-layout.col#menu-more-2"
+    ]
+  },
+  "info-card#lavaggioAsciugaturaPremium": {
+    "props": {
+      "id": "lavaggioAsciugaturaPremium",
+      "imageUrl": "assets/lavasciuga.jpg",
+      "headline": "Produtti premium",
+      "subhead": "Scopri la collezione",
+      "callToActionText": "SOPRI DI PIU",
+      "callToActionUrl": "/prodotti/lavaggio-e-asciugatura?map=category-1,category-2,producttype&page=2&query=/prodotti/lavaggio-e-asciugatura/premium&searchState",
+      "blockClass": "mainMenu"
+    }
+  },
+  "toggle-layout#refregirazionePremium": {
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "flex-layout.col#refregirazionePremium"
+    ]
+  },
+  "flex-layout.col#refregirazionePremium": {
+    "props": {
+      "blockClass": "imageSecondLevel"
+    },
+    "children": [
+      "info-card#refregirazionePremium"
+    ]
+  },
+  "info-card#refregirazionePremium": {
+    "props": {
+      "id": "refregirazionePremium",
+      "isFullModeStyle": false,
+      "textPosition": "left",
+      "imageUrl": "assets/frigo.jpg",
+      "headline": "Produtti premium",
+      "subhead": "Scopri la collezione",
+      "callToActionText": "SOPRI DI PIU",
+      "callToActionUrl": "/prodotti/refrigerazione?map=category-1,category-2,producttype&page=2&query=/prodotti/refrigerazione/premium&searchState",
+      "blockClass": "mainMenu",
+      "textAlignment": "LEFT"
+    }
+  },
+  "toggle-layout#cotturaPremium": {
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "flex-layout.col#cotturaPremium"
+    ]
+  },
+  "flex-layout.col#cotturaPremium": {
+    "props": {
+      "blockClass": "imageSecondLevel"
+    },
+    "children": [
+      "info-card#cotturaPremium"
+    ]
+  },
+  "info-card#cotturaPremium": {
+    "props": {
+      "id": "cotturaPremium",
+      "isFullModeStyle": false,
+      "textPosition": "left",
+      "imageUrl": "assets/piani_cottura.jpg",
+      "headline": "Produtti premium",
+      "subhead": "Scopri la collezione",
+      "callToActionText": "SOPRI DI PIU",
+      "callToActionUrl": "/prodotti/cottura?map=category-1,category-2,producttype&page=2&query=/prodotti/cottura/premium&searchState",
+      "blockClass": "mainMenu",
+      "textAlignment": "LEFT"
+    }
+  },
+  "toggle-layout#lavastovigliePremium": {
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "flex-layout.col#lavastovigliePremium"
+    ]
+  },
+  "flex-layout.col#lavastovigliePremium": {
+    "props": {
+      "blockClass": "imageSecondLevel"
+    },
+    "children": [
+      "info-card#lavastovigliePremium"
+    ]
+  },
+  "info-card#lavastovigliePremium": {
+    "props": {
+      "id": "lavastovigliePremium",
+      "isFullModeStyle": false,
+      "textPosition": "left",
+      "imageUrl": "assets/Lavastoviglie.jpg",
+      "headline": "Produtti premium",
+      "subhead": "Scopri la collezione",
+      "callToActionText": "SOPRI DI PIU",
+      "callToActionUrl": "/prodotti/lavastoviglie?map=category-1,category-2,producttype&page=2&query=/prodotti/lavastoviglie/premium&searchState",
+      "blockClass": "mainMenu",
+      "textAlignment": "LEFT"
+    }
+  },
+  "toggle-layout#condizionatoriPremium": {
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "flex-layout.col#condizionatoriPremium"
+    ]
+  },
+  "flex-layout.col#condizionatoriPremium": {
+    "props": {
+      "blockClass": "imageSecondLevel"
+    },
+    "children": [
+      "info-card#condizionatoriPremium"
+    ]
+  },
+  "info-card#condizionatoriPremium": {
+    "props": {
+      "id": "condizionatoriPremium",
+      "isFullModeStyle": false,
+      "textPosition": "left",
+      "imageUrl": "assets/Aria.jpg",
+      "headline": "Produtti premium",
+      "subhead": "Scopri la collezione",
+      "callToActionText": "SOPRI DI PIU",
+      "callToActionUrl": "/prodotti/condizionatori?map=category-1,category-2,producttype&page=2&query=/prodotti/condizionatori/premium&searchState",
+      "blockClass": "mainMenu",
+      "textAlignment": "LEFT"
+    }
+  },
+  "toggle-layout#altri-prodottiPremium": {
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "flex-layout.col#altri-prodottiPremium"
+    ]
+  },
+  "flex-layout.col#altri-prodottiPremium": {
+    "props": {
+      "blockClass": "imageSecondLevel"
+    },
+    "children": [
+      "info-card#altri-prodottiPremium"
+    ]
+  },
+  "info-card#altri-prodottiPremium": {
+    "props": {
+      "id": "altri-prodottiPremium",
+      "isFullModeStyle": false,
+      "textPosition": "left",
+      "imageUrl": "assets/Altri.jpg",
+      "headline": "Produtti premium",
+      "subhead": "Scopri la collezione",
+      "callToActionText": "SOPRI DI PIU",
+      "callToActionUrl": "/prodotti/altri-prodotti?map=category-1,category-2,producttype&page=2&query=/prodotti/altri-prodotti/premium&searchState",
+      "blockClass": "mainMenu",
+      "textAlignment": "LEFT"
+    }
+  },
+  "toggle-layout#accessoriPremium": {
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "flex-layout.col#accessoriPremium"
+    ]
+  },
+  "flex-layout.col#accessoriPremium": {
+    "props": {
+      "blockClass": [
+        "imageSecondLevel",
+        "imageSecondLevelAccessori"
+      ]
+    },
+    "children": [
+      "info-card#accessoriPremium"
+    ]
+  },
+  "info-card#accessoriPremium": {
+    "props": {
+      "id": "accessoriPremium",
+      "isFullModeStyle": false,
+      "textPosition": "left",
+      "imageUrl": "assets/accessoriHeader.jpg",
+      "headline": "Produtti premium",
+      "subhead": "Scopri la collezione",
+      "callToActionText": "SOPRI DI PIU",
+      "callToActionUrl": "/prodotti/accessori?map=category-1,category-2,producttype&page=2&query=/prodotti/accessori/premium&searchState",
+      "blockClass": "mainMenu",
+      "textAlignment": "LEFT"
+    }
+  },
+  "toggle-layout#ricambiPremium": {
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "flex-layout.col#ricambiPremium"
+    ]
+  },
+  "flex-layout.col#ricambiPremium": {
+    "props": {
+      "blockClass": [
+        "imageSecondLevel",
+        "imageSecondLevelricambi"
+      ]
+    },
+    "children": [
+      "info-card#ricambiPremium"
+    ]
+  },
+  "info-card#ricambiPremium": {
+    "props": {
+      "id": "ricambiPremium",
+      "isFullModeStyle": false,
+      "textPosition": "left",
+      "imageUrl": "assets/ricambiOriginaliMenuHeader.jpg",
+      "headline": "Ricambi",
+      "subhead": "Scopri la collezione",
+      "callToActionText": "SOPRI DI PIU",
+      "callToActionUrl": "/assistenza/ricambi-originali",
+      "blockClass": "mainMenu",
+      "textAlignment": "LEFT"
+    }
+  },
+  "vtex.menu@2.x:menu#submenuprodotti": {
+    "props": {
+      "orientation": "vertical"
+    },
+    "children": [
+      "menu-item#lavaggio",
+      "menu-item#refrigerazione",
+      "menu-item#cottura",
+      "menu-item#lavastoviglie",
+      "menu-item#accessori",
+      "menu-item#ricambi-originali"
+    ]
+  },
+  "menu-item#lavaggio": {
+    "props": {
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "lavaggio-asciugatura",
+        "text": "Lavaggio e Asciugatura"
+      },
+      "blockClass": [
+        "menu",
+        "linkMenu"
+      ]
+    },
+    "blocks": [
+      "vtex.menu@2.x:submenu#more"
+    ]
+  },
+  "menu-item#refrigerazione": {
+    "props": {
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "refrigerazione",
+        "text": "Refrigerazione"
+      },
+      "blockClass": [
+        "menu",
+        "linkMenu"
+      ]
+    },
+    "blocks": [
+      "vtex.menu@2.x:submenu#moreRefrigerazione"
+    ]
+  },
+  "menu-item#cottura": {
+    "props": {
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Cottura",
+        "text": "Cottura"
+      },
+      "blockClass": [
+        "menu",
+        "linkMenu"
+      ]
+    },
+    "blocks": [
+      "vtex.menu@2.x:submenu#moreCottura"
+    ]
+  },
+  "menu-item#lavastoviglie": {
+    "props": {
+      "type": "category",
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 30,
+        "text": "Lavastoviglie"
+      },
+      "blockClass": [
+        "menu",
+        "linkMenu"
+      ]
+    },
+    "blocks": [
+      "vtex.menu@2.x:submenu#moreLavastoviglie"
+    ]
+  },
+  "menu-item#aria-condizionata": {
+    "props": {
+      "type": "category",
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 31,
+        "text": "Aria condizionata"
+      },
+      "blockClass": [
+        "menu",
+        "linkMenu"
+      ]
+    },
+    "blocks": [
+      "vtex.menu@2.x:submenu#moreAria"
+    ]
+  },
+  "menu-item#altri-prodotti": {
+    "props": {
+      "type": "category",
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 29,
+        "text": "Altri prodotti"
+      },
+      "blockClass": [
+        "menu",
+        "linkMenu"
+      ]
+    },
+    "blocks": [
+      "vtex.menu@2.x:submenu#moreAltri"
+    ]
+  },
+  "vtex.menu@2.x:submenu#more": {
+    "props": {
+      "width": "100%",
+      "blockClass": "menuSecondoLivello"
+    },
+    "children": [
+      "flex-layout.row#menu-more"
+    ]
+  },
+  "vtex.menu@2.x:submenu#moreAccessori": {
+    "props": {
+      "width": "100%",
+      "blockClass": "menuSecondoLivello"
+    },
+    "children": [
+      "flex-layout.row#menu-moreAccessori"
+    ]
+  },
+  "flex-layout.row#menu-moreAccessori": {
+    "children": [
+      "flex-layout.col#menu-more-1Accessori",
+      "toggle-layout#accessoriPremium"
+    ]
+  },
+  "flex-layout.col#menu-more-1Accessori": {
+    "children": [
+      "vtex.menu@2.x:menu#moreAccessori"
+    ]
+  },
+  "vtex.menu@2.x:menu#moreAccessori": {
+    "props": {
+      "orientation": "vertical"
+    },
+    "children": [
+      "menu-item#AccessoriLavaggio",
+      "menu-item#AccessoriRefrigerazione",
+      "menu-item#AccessoriCottura",
+      "menu-item#AccessoriLavastoviglie",
+      "menu-item#AccessoriPiccoliElettrodomestici"
+    ]
+  },
+  "menu-item#AccessoriLavaggio": {
+    "props": {
+      "type": "category",
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 11,
+        "text": "Lavaggio e asciugatura"
+      },
+      "blockClass": [
+        "itemSecondoLivello",
+        "linkMenu"
+      ]
+    }
+  },
+  "image#AccessoriLavaggio": {
+    "props": {
+      "blockClass": [
+        "imageSecond",
+        "AccessoriLavaggio"
+      ],
+      "src": "assets/accessoriHeader.jpg"
+    }
+  },
+  "menu-item#AccessoriRefrigerazione": {
+    "props": {
+      "type": "category",
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 12,
+        "text": "Refrigerazione"
+      },
+      "blockClass": [
+        "itemSecondoLivello",
+        "linkMenu"
+      ]
+    }
+  },
+  "image#AccessoriRefrigerazione": {
+    "props": {
+      "blockClass": [
+        "imageSecond",
+        "AccessoriRefrigerazione"
+      ],
+      "src": "assets/accessoriHeader.jpg"
+    }
+  },
+  "menu-item#AccessoriCottura": {
+    "props": {
+      "type": "category",
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 13,
+        "text": "Cottura"
+      },
+      "blockClass": [
+        "itemSecondoLivello",
+        "linkMenu"
+      ]
+    }
+  },
+  "image#AccessoriCottura": {
+    "props": {
+      "blockClass": [
+        "imageSecond",
+        "AccessoriCottura"
+      ],
+      "src": "assets/accessoriHeader.jpg"
+    }
+  },
+  "menu-item#AccessoriLavastoviglie": {
+    "props": {
+      "type": "category",
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 14,
+        "text": "Lavastoviglie"
+      },
+      "blockClass": [
+        "itemSecondoLivello",
+        "linkMenu"
+      ]
+    }
+  },
+  "image#AccessoriLavastoviglie": {
+    "props": {
+      "blockClass": [
+        "imageSecond",
+        "AccessoriLavastoviglie"
+      ],
+      "src": "assets/accessoriHeader.jpg"
+    }
+  },
+  "menu-item#AccessoriAriaCondizionata": {
+    "props": {
+      "type": "category",
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 15,
+        "text": "Aria condizionata"
+      },
+      "blockClass": [
+        "itemSecondoLivello",
+        "linkMenu"
+      ]
+    }
+  },
+  "image#AccessoriAriaCondizionata": {
+    "props": {
+      "blockClass": [
+        "imageSecond",
+        "AccessoriAriaCondizionata"
+      ],
+      "src": "assets/accessoriHeader.jpg"
+    }
+  },
+  "menu-item#AccessoriPiccoliElettrodomestici": {
+    "props": {
+      "type": "category",
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 16,
+        "text": "Piccoli elettrodomestici"
+      },
+      "blockClass": [
+        "itemSecondoLivello",
+        "linkMenu"
+      ]
+    },
+    "children": []
+  },
+  "image#AccessoriPiccoliElettrodomestici": {
+    "props": {
+      "blockClass": [
+        "imageSecond",
+        "AccessoriPiccoliElettrodomestici"
+      ],
+      "src": "assets/accessoriHeader.jpg"
+    }
+  },
+  "flex-layout.row#menu-more": {
+    "children": [
+      "flex-layout.col#menu-more-1",
+      "toggle-layout#lavaggio"
+    ]
+  },
+  "flex-layout.col#menu-more-1": {
+    "props": {
+      "blockClass": "menu2"
+    },
+    "children": [
+      "vtex.menu@2.x:menu#more"
+    ]
+  },
+  "flex-layout.col#menu-more-2": {
+    "props": {
+      "width": "grow"
+    },
+    "children": [
+      "flex-layout.col#lavaggioAsciugaturaPremium"
+    ]
+  },
+  "flex-layout.col#lavaggioAsciugaturaPremium": {
+    "props": {
+      "blockClass": "imageSecondLevel"
+    },
+    "children": [
+      "info-card#lavaggioAsciugaturaPremium"
+    ]
+  },
+  "vtex.menu@2.x:menu#more": {
+    "props": {
+      "orientation": "vertical"
+    },
+    "children": [
+      "menu-item#lavatrici",
+      "menu-item#asciugatrici",
+      "menu-item#lavasciuga"
+    ]
+  },
+  "menu-item#lavatrici": {
+    "props": {
+      "type": "category",
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 19,
+        "text": "Lavatrici"
+      },
+      "blockClass": [
+        "itemSecondoLivello",
+        "linkMenu"
+      ]
+    },
+    "children": []
+  },
+  "image#lavatrici": {
+    "props": {
+      "blockClass": [
+        "imageSecond",
+        "lavatriciCss"
+      ],
+      "src": "assets/lavaggio.jpg"
+    }
+  },
+  "menu-item#asciugatrici": {
+    "props": {
+      "type": "category",
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 20,
+        "text": "Asciugatrici"
+      },
+      "blockClass": [
+        "itemSecondoLivello",
+        "linkMenu"
+      ]
+    },
+    "children": []
+  },
+  "image#asciuga": {
+    "props": {
+      "blockClass": [
+        "imageSecond",
+        "asciugatriciCss"
+      ],
+      "src": "assets/asciugatrici.jpg"
+    }
+  },
+  "menu-item#lavasciuga": {
+    "props": {
+      "type": "category",
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 21,
+        "text": "Lavasciuga"
+      },
+      "blockClass": [
+        "itemSecondoLivello",
+        "linkMenu"
+      ]
+    },
+    "children": []
+  },
+  "image#lavasciuga": {
+    "props": {
+      "blockClass": [
+        "imageSecond",
+        "lavasciugaCss"
+      ],
+      "src": "assets/lavasciuga.jpg"
+    }
+  },
+  "vtex.menu@2.x:submenu#moreRefrigerazione": {
+    "props": {
+      "width": "100%",
+      "blockClass": "menuSecondoLivello"
+    },
+    "children": [
+      "flex-layout.row#menu-moreRefrigerazione"
+    ]
+  },
+  "flex-layout.row#menu-moreRefrigerazione": {
+    "children": [
+      "flex-layout.col#menu-more-1Refrigerazione",
+      "toggle-layout#refrigerazione"
+    ]
+  },
+  "toggle-layout#refrigerazione": {
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "flex-layout.col#menu-more-refrigerazione"
+    ]
+  },
+  "flex-layout.col#menu-more-refrigerazione": {
+    "props": {
+      "width": "grow"
+    },
+    "children": [
+      "flex-layout.col#refrigerazionePremium"
+    ]
+  },
+  "flex-layout.col#refrigerazionePremium": {
+    "props": {
+      "blockClass": "imageSecondLevel"
+    },
+    "children": [
+      "info-card#refregirazionePremium"
+    ]
+  },
+  "flex-layout.col#menu-more-1Refrigerazione": {
+    "children": [
+      "vtex.menu@2.x:menu#moreRefrigerazione"
+    ]
+  },
+  "flex-layout.col#menu-more-2Refrigerazione": {
+    "children": [
+      "image#Refrigerazione"
+    ]
+  },
+  "vtex.menu@2.x:menu#moreRefrigerazione": {
+    "props": {
+      "orientation": "vertical"
+    },
+    "children": [
+      "menu-item#frigoriferi-combinati-doppia-porta",
+      "menu-item#frigoriferi-monoporta",
+      "menu-item#congelatori",
+      "menu-item#cantinette-vino"
+    ]
+  },
+  "image#Refrigerazione": {
+    "props": {
+      "blockClass": "imageMenu",
+      "src": "assets/frigo.jpg"
+    }
+  },
+  "menu-item#frigoriferi-combinati-doppia-porta": {
+    "props": {
+      "type": "category",
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 67,
+        "text": "Frigoriferi combinati e doppia porta"
+      },
+      "blockClass": [
+        "itemSecondoLivello",
+        "linkMenu"
+      ]
+    }
+  },
+  "menu-item#frigoriferi-monoporta": {
+    "props": {
+      "type": "category",
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 22,
+        "text": "Frigoriferi monoporta"
+      },
+      "blockClass": [
+        "itemSecondoLivello",
+        "linkMenu"
+      ]
+    }
+  },
+  "menu-item#cantinette-vino": {
+    "props": {
+      "type": "category",
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 68,
+        "text": "Cantinette vino"
+      },
+      "blockClass": [
+        "itemSecondoLivello",
+        "linkMenu"
+      ]
+    }
+  },
+  "menu-item#frigoriferi": {
+    "props": {
+      "type": "category",
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 22,
+        "text": "Frigoriferi"
+      },
+      "blockClass": [
+        "itemSecondoLivello",
+        "linkMenu"
+      ]
+    },
+    "children": []
+  },
+  "image#frigoriferi": {
+    "props": {
+      "blockClass": [
+        "imageSecond",
+        "frigoriferiCss"
+      ],
+      "src": "assets/frigo.jpg"
+    }
+  },
+  "menu-item#congelatori": {
+    "props": {
+      "type": "category",
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 23,
+        "text": "Congelatori"
+      },
+      "blockClass": [
+        "itemSecondoLivello",
+        "linkMenu"
+      ]
+    },
+    "children": [
+      "toggle-layout#refregirazionePremium"
+    ]
+  },
+  "menu-item#combinati": {
+    "props": {
+      "type": "category",
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 22,
+        "text": "Combinati"
+      },
+      "blockClass": [
+        "itemSecondoLivello",
+        "linkMenu"
+      ]
+    },
+    "children": [
+      "toggle-layout#refregirazionePremium"
+    ]
+  },
+  "image#congelatori": {
+    "props": {
+      "blockClass": [
+        "imageSecond",
+        "congelatoriCss"
+      ],
+      "src": "assets/congelatori.jpg"
+    }
+  },
+  "vtex.menu@2.x:submenu#moreCottura": {
+    "props": {
+      "width": "100%",
+      "blockClass": "menuSecondoLivello"
+    },
+    "children": [
+      "flex-layout.row#menu-moreCottura"
+    ]
+  },
+  "flex-layout.row#menu-moreCottura": {
+    "children": [
+      "flex-layout.col#menu-more-1Cottura",
+      "toggle-layout#cottura"
+    ]
+  },
+  "toggle-layout#cottura": {
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "flex-layout.col#menu-more-2Cottura"
+    ]
+  },
+  "flex-layout.col#menu-more-1Cottura": {
+    "children": [
+      "vtex.menu@2.x:menu#moreCottura"
+    ]
+  },
+  "flex-layout.col#menu-more-2Cottura": {
+    "children": [
+      "toggle-layout#cotturaPremium"
+    ]
+  },
+  "vtex.menu@2.x:menu#moreCottura": {
+    "props": {
+      "orientation": "vertical"
+    },
+    "children": [
+      "menu-item#forni",
+      "menu-item#forni-a-microonde",
+      "menu-item#piani-cottura",
+      "menu-item#cappe",
+      "menu-item#cucine",
+      "menu-item#elettrodomestici-compatti"
+    ]
+  },
+  "image#Cottura": {
+    "props": {
+      "blockClass": "imageMenu",
+      "src": "assets/cottura.jpg"
+    }
+  },
+  "menu-item#forni": {
+    "props": {
+      "type": "category",
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 24,
+        "text": "Forni"
+      },
+      "blockClass": [
+        "itemSecondoLivello",
+        "linkMenu"
+      ]
+    }
+  },
+  "image#forni": {
+    "props": {
+      "blockClass": [
+        "imageSecond",
+        "forniCss"
+      ],
+      "src": "assets/cottura.jpg"
+    }
+  },
+  "menu-item#forni-a-microonde": {
+    "props": {
+      "type": "category",
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 25,
+        "text": "Forni a microonde"
+      },
+      "blockClass": [
+        "itemSecondoLivello",
+        "linkMenu"
+      ]
+    }
+  },
+  "image#forni-a-microonde": {
+    "props": {
+      "blockClass": [
+        "imageSecond",
+        "forniMicroondeCss"
+      ],
+      "src": "assets/forni_a_microonde.jpg"
+    }
+  },
+  "menu-item#piani-cottura": {
+    "props": {
+      "type": "category",
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 26,
+        "text": "Piani cottura"
+      },
+      "blockClass": [
+        "itemSecondoLivello",
+        "linkMenu"
+      ]
+    }
+  },
+  "image#piani_cottura": {
+    "props": {
+      "blockClass": [
+        "imageSecond",
+        "pianiCotturaCss"
+      ],
+      "src": "assets/piani_cottura.jpg"
+    }
+  },
+  "menu-item#cappe": {
+    "props": {
+      "type": "category",
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 27,
+        "text": "Cappe"
+      },
+      "blockClass": [
+        "itemSecondoLivello",
+        "linkMenu"
+      ]
+    }
+  },
+  "menu-item#cucine": {
+    "props": {
+      "type": "category",
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 28,
+        "text": "Cucine"
+      },
+      "blockClass": [
+        "itemSecondoLivello",
+        "linkMenu"
+      ]
+    }
+  },
+  "menu-item#elettrodomestici-compatti": {
+    "props": {
+      "type": "category",
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 29,
+        "text": "Altri Prodotti"
+      },
+      "blockClass": [
+        "itemSecondoLivello",
+        "linkMenu"
+      ]
+    }
+  },
+  "image#cappe": {
+    "props": {
+      "blockClass": [
+        "imageSecond",
+        "cappeCss"
+      ],
+      "src": "assets/cappe.jpg"
+    }
+  },
+  "vtex.menu@2.x:submenu#moreLavastoviglie": {
+    "props": {
+      "width": "100%",
+      "blockClass": "menuSecondoLivello"
+    },
+    "children": [
+      "flex-layout.row#menu-moreLavastoviglie"
+    ]
+  },
+  "flex-layout.row#menu-moreLavastoviglie": {
+    "children": [
+      "flex-layout.col#menu-more-1Lavastoviglie",
+      "toggle-layout#lavastovigliePremium"
+    ]
+  },
+  "flex-layout.col#menu-more-1Lavastoviglie": {
+    "children": [
+      "vtex.menu@2.x:menu#moreLavastoviglie"
+    ]
+  },
+  "flex-layout.col#menu-more-2Lavastoviglie": {
+    "children": [
+      "image#Lavastoviglie"
+    ]
+  },
+  "vtex.menu@2.x:menu#moreLavastoviglie": {
+    "props": {
+      "orientation": "vertical"
+    },
+    "children": [
+      "menu-item#lavastoviglie-ad-incasso",
+      "menu-item#lavastoviglie-a-libera-installazione"
+    ]
+  },
+  "menu-item#lavastoviglie-ad-incasso": {
+    "props": {
+      "type": "category",
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 69,
+        "text": "Lavastoviglie ad incasso"
+      },
+      "blockClass": [
+        "itemSecondoLivello",
+        "linkMenu"
+      ]
+    }
+  },
+  "menu-item#lavastoviglie-a-libera-installazione": {
+    "props": {
+      "type": "category",
+      "highlight": false,
+      "itemProps": {
+        "categoryId": 70,
+        "text": "Lavastoviglie a libera installazione"
+      },
+      "blockClass": [
+        "itemSecondoLivello",
+        "linkMenu"
+      ]
+    }
+  },
+  "image#Lavastoviglie": {
+    "props": {
+      "blockClass": [
+        "imageMenu",
+        "senzaCategoria"
+      ],
+      "src": "assets/Lavastoviglie.jpg"
+    }
+  },
+  "vtex.menu@2.x:submenu#moreAria": {
+    "props": {
+      "width": "100%",
+      "blockClass": "menuSecondoLivello"
+    },
+    "children": [
+      "flex-layout.row#menu-moreAria"
+    ]
+  },
+  "flex-layout.row#menu-moreAria": {
+    "children": [
+      "flex-layout.col#menu-more-1Aria",
+      "toggle-layout#condizionatoriPremium"
+    ]
+  },
+  "flex-layout.col#menu-more-1Aria": {
+    "children": [
+      "vtex.menu@2.x:menu#moreAria"
+    ]
+  },
+  "flex-layout.col#menu-more-2Aria": {
+    "children": [
+      "image#Aria"
+    ]
+  },
+  "vtex.menu@2.x:menu#moreAria": {
+    "props": {
+      "orientation": "vertical"
+    },
+    "children": []
+  },
+  "image#Aria": {
+    "props": {
+      "blockClass": [
+        "imageMenu",
+        "senzaCategoria"
+      ],
+      "src": "assets/Aria.jpg"
+    }
+  },
+  "vtex.menu@2.x:submenu#moreAltri": {
+    "props": {
+      "width": "100%",
+      "blockClass": "menuSecondoLivello"
+    },
+    "children": [
+      "flex-layout.row#menu-moreAltri"
+    ]
+  },
+  "flex-layout.row#menu-moreAltri": {
+    "children": [
+      "flex-layout.col#menu-more-1Altri",
+      "toggle-layout#altri-prodottiPremium"
+    ]
+  },
+  "flex-layout.col#menu-more-1Altri": {
+    "children": [
+      "vtex.menu@2.x:menu#moreAltri"
+    ]
+  },
+  "flex-layout.col#menu-more-2Altri": {
+    "children": [
+      "image#Altri"
+    ]
+  },
+  "vtex.menu@2.x:menu#moreAltri": {
+    "props": {
+      "orientation": "vertical"
+    },
+    "children": []
+  },
+  "image#Altri": {
+    "props": {
+      "blockClass": [
+        "imageMenu",
+        "senzaCategoria"
+      ],
+      "src": "assets/Altri.jpg"
+    }
+  },
+  "vtex.menu@2.x:submenu#moreRicambiOriginali": {
+    "props": {
+      "width": "100%",
+      "blockClass": "menuSecondoLivello"
+    },
+    "children": [
+      "flex-layout.row#menu-moreRicambiOriginali"
+    ]
+  },
+  "flex-layout.row#menu-moreRicambiOriginali": {
+    "children": [
+      "flex-layout.col#menu-more-1RicambiOriginali",
+      "toggle-layout#ricambiPremium"
+    ]
+  },
+  "flex-layout.col#menu-more-1RicambiOriginali": {
+    "children": [
+      "vtex.menu@2.x:menu#moreRicambiOriginali"
+    ]
+  },
+  "flex-layout.col#menu-more-2RicambiOriginali": {
+    "children": [
+      "image#RicambiOriginaliMenuHeader"
+    ]
+  },
+  "vtex.menu@2.x:menu#moreRicambiOriginali": {
+    "props": {
+      "orientation": "vertical"
+    },
+    "children": []
+  },
+  "image#RicambiOriginaliMenuHeader": {
+    "props": {
+      "blockClass": [
+        "imageMenu",
+        "senzaCategoria"
+      ],
+      "src": "assets/ricambiOriginaliMenuHeader.jpg"
+    }
+  }
+}

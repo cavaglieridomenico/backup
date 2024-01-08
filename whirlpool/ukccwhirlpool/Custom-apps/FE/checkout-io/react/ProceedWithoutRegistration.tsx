@@ -1,0 +1,3 @@
+import ProceedWithoutRegistration from './components/Identification/ProceedWithoutRegistration'
+
+export default ProceedWithoutRegistration

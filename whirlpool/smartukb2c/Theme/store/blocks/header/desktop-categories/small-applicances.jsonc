@@ -1,0 +1,155 @@
+{
+    "menu-item#small-appliances" : {
+        "props": {
+          "id": "menu-item-small-appliances",
+          "orientation": "horizontal",
+          "type": "custom",
+          "highlight": false,
+          "blockClass" : "first-level-category",
+          "itemProps": {
+            "type": "internal",
+            "href": "#",
+            "noFollow": false,
+            "tagTitle": "Small Appliances",
+            "text": "Small Appliances"
+          }
+        },
+        "blocks": [ "vtex.menu@2.x:submenu#small-appliances" ]
+      },
+    
+      "vtex.menu@2.x:submenu#small-appliances" : {
+        "props": {
+          "orientation": "vertical",
+          "placement":"left"
+        },
+        "children": [ 
+          "menu-item#cofee-machines"
+        ]
+      },
+
+      /**** BEGIN cofee-machines ****/
+
+      "menu-item#cofee-machines" : {
+        "props": {
+            "placement": "right",
+            "type": "custom",
+            "highlight": false,
+            "itemProps": {
+              "type": "internal",
+              "noFollow": false,
+              "tagTitle": "Coffee Machine",
+              "text": "Hotpoint Coffee Machine Parts",
+              "href": "/spare-parts/small-appliances/coffee-machine" 
+
+            }
+          },
+          "blocks": [
+            "vtex.menu@2.x:submenu#cofee-machines"
+          ]
+      }, 
+      
+      "vtex.menu@2.x:submenu#cofee-machines" : {
+        "props": {
+            "orientation": "vertical",
+            "placement":"right"
+          },
+          "children": [
+            "menu-item#cm_basket_trays_and_shelves",
+            "menu-item#cm_panels",
+            "menu-item#cm_electrics",
+            "menu-item#cm_modules_and_boards",
+            "menu-item#cm_gaskets_and_seals",
+            "menu-item#all-coffee-machines"
+          ]
+      },
+
+      "menu-item#cm_basket_trays_and_shelves" : {
+        "props": {
+            "type": "custom",
+            "blockClass": "dropdownRowMenu",
+            "highlight": false,
+            "itemProps": {
+              "type": "internal",
+              "noFollow": false,
+              "tagTitle": "Coffee Machine Basket trays and Shelves",
+              "text": "Coffee Machine Basket trays and Shelves",
+              "href": "/spare-parts/small-appliances/coffee-machine/basket-trays-and-shelves" 
+            }
+          }
+      },
+
+      "menu-item#cm_panels": {
+        "props": {
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "noFollow": false,
+            "tagTitle": "Coffee Machine Panels",
+            "text": "Coffee Machine Panels",
+            "href": "/spare-parts/small-appliances/coffee-machine/panels" 
+          }
+        }
+      },
+
+      "menu-item#cm_electrics": {
+        "props": {
+          "type": "custom",
+          "blockClass": "dropdownRowMenu",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "noFollow": false,
+            "tagTitle": "Coffee Machine Electrics",
+            "text": "Coffee Machine Electrics",
+            "href": "/spare-parts/small-appliances/coffee-machine/electrics" 
+          }
+        }
+      },
+
+      "menu-item#cm_modules_and_boards": {
+        "props": {
+          "type": "custom",
+          "blockClass": "dropdownRowMenu",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "noFollow": false,
+            "tagTitle": "Coffee Machine Modules and Boards",
+            "text": "Coffee Machine Modules and Boards",
+            "href": "/spare-parts/small-appliances/coffee-machine/modules-and-boards" 
+          }
+        }
+      },
+
+      "menu-item#cm_gaskets_and_seals": {
+        "props": {
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "noFollow": false,
+            "tagTitle": "Coffee Machine Gaskets And Seals",
+            "text": "Coffee Machine Gaskets And Seals",
+            "href": "/spare-parts/small-appliances/coffee-machine/gaskets-and-seals" 
+          }
+        }
+      },
+
+      "menu-item#all-coffee-machines" : {
+        "props": {
+            "placement": "right",
+            "type": "custom",
+            "highlight": false,
+            "itemProps": {
+              "type": "internal",
+              "noFollow": false,
+              "tagTitle": "Coffee Machines", 
+              "text": "See All Coffee Machine Parts",
+              "href": "/spare-parts/small-appliances/coffee-machine" 
+            }
+          }
+      }
+
+      /**** END cofee-machines ****/
+}

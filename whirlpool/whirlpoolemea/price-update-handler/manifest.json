@@ -1,0 +1,131 @@
+{
+  "name": "price-update-handler",
+  "vendor": "whirlpoolemea",
+  "version": "0.0.3",
+  "title": "Price Update Event Handler",
+  "description": "Event handler that looks at updateSku and triggers a new GCPs endpoint in case the price is updated",
+  "dependencies": {},
+  "builders": {
+    "node": "6.x",
+    "docs": "0.x"
+  },
+  "scripts": {
+    "prereleasy": "bash lint.sh"
+  },
+  "credentialType": "absolute",
+  "policies": [
+    {
+      "name": "colossus-fire-event"
+    },
+    {
+      "name": "OMSViewer"
+    },
+    {
+      "name": "ADMIN_DS"
+    },
+    {
+      "name": "colossus-write-logs"
+    },
+    {
+      "name": "read_prices"
+    },
+    {
+      "name": "vbase-read-write"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "api.vtex.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "cross-vtex-price-propagation-akdisufsqa-ey.a.run.app",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "portal.vtexcommercestable.com.br",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "accounts.google.com/o/oauth2/auth",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "oauth2.googleapis.com/token",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "www.googleapis.com",
+        "path": "*"
+      }
+    }
+  ],
+  "settingsSchema": {
+    "title": "Price Update Event Handler",
+    "type": "object",
+    "properties": {
+      "target": {
+        "title": "Target Audience",
+        "type": "string"
+      },
+      "gcpPrivateKey": {
+        "title": "GCP - Private key",
+        "type": "string"
+      },
+      "gcpHost": {
+        "title": "GCP - Host",
+        "type": "string"
+      },
+      "gcpProjectId": {
+        "title": "GCP - Project id",
+        "type": "string"
+      },
+      "gcpClientEmail": {
+        "title": "GCP - Client email",
+        "type": "string"
+      },
+      "country": {
+        "title": "Country",
+        "type": "string"
+      },
+      "clusterMapping": {
+        "title": "Cluster-sales channel mapping",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "salesChannel": {
+              "title": "Sales channel ID",
+              "type": "string"
+            },
+            "cluster": {
+              "title": "Price cluster",
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "billingOptions": {
+    "type": "free",
+    "termsURL": "https://compliance.vtex.com/gdpr/policies/vtex-privacy-policy",
+    "free": true
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

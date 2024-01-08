@@ -1,0 +1,70 @@
+.optinCheckboxDiv :global(.vtex-checkbox__label) {
+  text-align: justify;
+}
+/*----------- NEW UI --------------*/
+.loginFormWrapper :global(.vtex-styleguide-9-x-input),
+.submitButton,
+.registrationRouteButton {
+  font-family: "openSans";
+}
+.submitButton {
+  background-color: #0d436b;
+  border: 1.5px solid #0d436b;
+}
+.submitButton:hover {
+  background-color: transparent;
+  color: #0d436b;
+}
+.registrationRouteButton,
+.optinLabelLink,
+.backToLoginText,
+.arrowBackIcon {
+  color: #0d436b;
+}
+.optinLabelLink {
+  text-decoration: underline;
+}
+.registrationFormContainer {
+  background-color: transparent;
+}
+.loaderForm {
+  background: linear-gradient(to right, #0d436b 10%, rgba(237, 177, 18, 0) 42%);
+}
+.loaderForm::before {
+  background: #0d436b;
+}
+.submitRegistrationButton {
+  font-weight: 500;
+}
+.backToLoginButton {
+  background-color: transparent;
+  border: none;
+  color: #0d436b;
+}
+.registrationModalTitle {
+  color: #0d436b;
+  font-family: "nunitoRegular";
+}
+
+.loginFormWrapper :global(.vtex-input__error), .loginFormFetchError  {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-weight: 700;
+}
+
+.loginFormWrapper :global(.vtex-input__error), .errorText  {
+  margin-left: 5px;
+  font-size: 13px;
+}
+/*-------------------------*/
+@media only screen and (max-width: 640px) {
+  .tooltipIcon {
+    width: 1.125rem;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .registrationModalTitleContainer {
+    margin-top: 2.5rem;
+  }
+}

@@ -1,0 +1,174 @@
+{
+    "store.custom#maintenance": {
+      "children": [
+          "flex-layout.row#maintenance"
+      ]
+    },
+    "flex-layout.row#maintenance":{
+        "props":{
+            "blockClass": "maintenance"
+        },
+        "children":["flex-layout.col#maintenanceText", "flex-layout.row#maintenanceImage"]
+    },
+    "flex-layout.col#maintenanceText":{
+        "children":[
+            "rich-text#maintenanceTitle",
+            "rich-text#underMaintenanceTitle",
+            "rich-text#maintenanceContactUS",
+            "flex-layout.row#maintenanceText",
+            "flex-layout.row#iconSocial"
+        ],
+        "props":{
+            "blockClass": "maintenanceText"
+        }
+    },
+    "rich-text#maintenanceTitle":{
+        "props":{
+            "text": "# Przepraszamy, obecnie trwają prace serwisowe.",
+            "blockClass": "maintenanceTitle"
+        }
+    },
+    "rich-text#underMaintenanceTitle":{
+        "props":{
+            "text": "Strona wkrótce będzie dostępna.",
+            "blockClass": "underMaintenanceTitle"
+        }
+    },
+    "rich-text#maintenanceContactUS":{
+        "props":{
+            "text": "Spróbuj ponownie później lub skontaktuj się z nami:",
+            "blockClass":"maintenanceContactUS"
+        }
+    },
+    "flex-layout.row#maintenanceText": {
+        "props": {
+          "blockClass": "maintenanceText"
+        },
+        "children":[
+            "link#maintenancePhone",
+            "link#maintenanceMail"
+        ]
+    },
+    "link#maintenancePhone":{
+        "props":{
+            "href": "tel:801900666",
+            "blockClass": "maintenancePhone"
+        },
+        "children":["flex-layout.row#maintenancePhone"]
+    },
+    "link#maintenanceMail":{
+        "props":{
+            "href": "mailto:sklep@whirlpool.com",
+            "blockClass": "maintenanceMail"
+        },
+        "children":["flex-layout.row#maintenanceMail"]
+    },
+    "flex-layout.row#maintenancePhone":{
+        "props": {
+            "blockClass": "maintenancePhone"
+        },
+        "children":[
+            "flex-layout.col#iconMaintenanceIconPhone",
+            "flex-layout.col#maintenancePhone"
+        ]
+    },
+    "flex-layout.row#maintenanceMail":{
+        "props":{
+            "blockClass": "maintenanceMail"
+        },
+        "children":[
+            "flex-layout.col#iconMaintenanceIconMail",
+            "flex-layout.col#maintenanceMail"
+        ]
+    },
+    "flex-layout.col#iconMaintenanceIconPhone":{
+        "props":{
+            "blockClass": "iconMaintenanceIconPhone"
+        },
+        "children":["image#iconMaintenanceIconPhone"]
+    },
+    "image#iconMaintenanceIconPhone": {
+        "props": {
+            "src": "assets/supporto/benefitplus.svg",
+            "blockClass": "iconMaintenanceIconPhone",
+            "height": "1.5rem"
+        }
+    },
+    "flex-layout.col#iconMaintenanceIconMail":{
+        "props":{
+            "blockClass": "iconMaintenanceIconMail"
+        },
+        "children":["image#iconMaintenanceIconMail"]
+    },
+    "image#iconMaintenanceIconMail": {
+        "props": {
+            "src": "assets/supporto/benefitplus.svg",
+            "blockClass": "iconMaintenanceIconMail",
+            "height": "1.5rem"
+        }
+    },
+    "flex-layout.col#maintenancePhone":{
+        "children":["rich-text#maintenanceTextPhone"]
+    },
+    "flex-layout.col#maintenanceMail":{
+        "children":["rich-text#maintenanceTextMail"]
+    },
+    "rich-text#maintenanceTextPhone": {
+        "props":{
+            "text": "801 900 666 (Poniedziałek-Piątek 8:00 - 18:00)"
+        }
+    },
+    "rich-text#maintenanceTextMail": {
+        "props":{
+            "text": "sklep@whirlpool.com",
+            "blockClass": "maintenanceTextMail"
+        }
+    },
+    "flex-layout.row#iconSocial": {
+        "props":{
+            "blockClass": "iconSocialMaintenance"
+        },
+        "children":["social-networks#maintenance"]
+    },
+    "social-networks#maintenance": {
+        "props": {
+            "socialNetworks": [
+                {
+                "name": "Facebook",
+                "url": "https://www.facebook.com/WhirlpoolFrance/",
+                "target": "_blank"
+                },
+                {
+                "name": "Facebook",
+                "url": "https://www.facebook.com/WhirlpoolFrance/",
+                "target": "_blank"
+                },
+                {
+                "name": "Facebook",
+                "url": "https://www.facebook.com/WhirlpoolFrance/",
+                "target": "_blank"
+                },
+                {
+                "name": "Facebook",
+                "url": "https://www.facebook.com/WhirlpoolFrance/",
+                "target": "_blank"
+                },
+                {
+                "name": "Youtube",
+                "url": "https://www.youtube.com/channel/UCpetnUbr2OmQEs_vdtbUwBA",
+                "target": "_blank"
+                }
+            ]
+        }
+    },
+    "flex-layout.row#maintenanceImage":{
+        "children":["image#maintenanceImage"]
+    },
+    "image#maintenanceImage":{
+        "props": {
+            "src": "assets/placeholders/placeholder-vertical.jpg",
+            "blockClass": []
+          }
+    }
+}
+  

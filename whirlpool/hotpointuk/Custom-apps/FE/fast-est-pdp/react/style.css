@@ -1,0 +1,74 @@
+.container {
+  width: 50%;
+}
+.container :global(.vtex-input-prefix__group) {
+  border: none;
+}
+.container :global(.vtex-styleguide-9-x-input) {
+  width: 70%;
+  margin-right: 5%;
+  border: 0.125rem solid #f9f9f9;
+  border-radius: 0.25rem;
+}
+.container :global(.vtex-styleguide-9-x-input):hover {
+  border-color: #cacbcc;
+}
+.container :global(.vtex-button) {
+  width: 75%;
+  background-color: #b24c24;
+  color: white;
+  border-color: #b24c24;
+}
+.container :global(.vtex-button):hover {
+  background-color: rgba(237, 177, 18, 0.8);
+}
+.container :global(.vtex-button__label) {
+  padding: unset;
+}
+.error {
+  opacity: .8;
+  margin: auto;
+  width: 50%;
+  color: #3f3f40;
+  font-size: 1rem;
+  font-family: "hotpointRegular";
+}
+.success {
+  width: 80%;
+  margin: auto;
+  color: #3f3f40;
+  font-size: 1rem;
+  font-family: "hotpointRegular";
+}
+.fastEstForm{
+    margin-bottom: 2rem;
+    display: flex;
+}
+.subTitle{
+  color: #3f3f40;
+  font-size: .7rem;
+  font-family: "hotpointRegular";
+}
+.containerSuccess{
+  opacity: .8;
+  width: 50%;
+  display: flex;
+}
+.deliveryImage{
+  margin: auto;
+}
+
+@media only screen and (max-width:600px){
+  .fastEstForm{
+    flex-direction: column;
+  }
+  .container{
+    width: 100%;
+  }
+  .containerSuccess{
+    width: 100%;
+  }
+  .error{
+    width: 100%;
+  }
+}

@@ -1,0 +1,284 @@
+{
+  /*HEAD*/
+  "flex-layout.row#ContainerScontiExtraBlackFriday1": {
+    "props": {},
+    "children": ["flex-layout.col#head-sconti-extraBlackFriday1"]
+  },
+  "flex-layout.col#head-sconti-extraBlackFriday1": {
+    "children": [
+      "flex-layout.row#dataScontiExtraBlackFriday1",
+      "flex-layout.row#titleScontiExtraBlackFriday1",
+      "flex-layout.row#bannerWithPostillaHomeHeadScontiFortiBlackFriday1"
+    ]
+  },
+  "flex-layout.row#dataScontiExtraBlackFriday1": {
+    "children": ["rich-text#dataScontiExtraBlackFriday1"]
+  },
+
+  "flex-layout.row#titleScontiExtraBlackFriday1": {
+    "props": {
+      "preventHorizontalStretch": true,
+      "blockClass": "marginButton1Rem"
+    },
+    "children": [
+      "rich-text#titleBlackFridayBlackFriday1",
+      "rich-text#titleScontiExtraBlackFriday1"
+    ]
+  },
+
+  "flex-layout.row#bannerWithPostillaHomeHeadScontiFortiBlackFriday1": {
+    "children": [
+      "experimental__visibility-layout#bannerTopInvertedBlackFriday1"
+    ]
+  },
+  /*BANNER*/
+  "experimental__visibility-layout#bannerTopInvertedBlackFriday1": {
+    "props": {
+      "visible": true
+    },
+    "children": ["flex-layout.row#bannerTopInvertedBlackFriday1"]
+  },
+  "flex-layout.row#bannerTopInvertedBlackFriday1": {
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": "bannerPostilla"
+    },
+    "children": [
+      "flex-layout.col#rightPartTopInvertedBlackFriday1",
+      "flex-layout.col#leftPartTopInvertedBlackFriday1"
+    ]
+  },
+  "flex-layout.col#rightPartTopInvertedBlackFriday1": {
+    "props": {
+      "width": "50%",
+      "blockClass": "columnPostillaImage"
+    },
+    "children": ["image#bannerTopImageInvertedBlackFriday1"]
+  },
+  "image#bannerTopImageInvertedBlackFriday1": {
+    "props": {
+      "src": "assets/BlackFriday1.png",
+      "blockClass": ["cover", "imagePostillaBanner"]
+    }
+  },
+  "flex-layout.col#leftPartTopInvertedBlackFriday1": {
+    "props": {
+      "width": "50%",
+      "preventVerticalStretch": true,
+      "blockClass": ["columnPostilla", "columnPostillaBottom"]
+    },
+    "children": [
+      "experimental__visibility-layout#TitleBannerTopBlackFriday1",
+      "experimental__visibility-layout#BannDescTopBlackFriday1",
+      "experimental__visibility-layout#ButtonBannerTopBlackFriday1"
+    ]
+  },
+  "experimental__visibility-layout#TitleBannerTopBlackFriday1": {
+    "props": {
+      "visible": true
+    },
+    "children": ["rich-text#BannTitleTopBlackFriday1"]
+  },
+  "experimental__visibility-layout#BannDescTopBlackFriday1": {
+    "props": {
+      "visible": true
+    },
+    "children": ["rich-text#BannDescTopBlackFriday1"]
+  },
+  "experimental__visibility-layout#ButtonBannerTopBlackFriday1": {
+    "props": {
+      "visible": true
+    },
+    "children": ["link#ButtonBannTopBlackFriday1"]
+  },
+  "rich-text#BannTitleTopBlackFriday1": {
+    "props": {
+      "text": "# Aggiungi i tuoi prodotti preferiti e risparmia sull’acquisto.",
+      "blockClass": "titleHBannerPostilla"
+    }
+  },
+
+  "rich-text#BannDescTopBlackFriday1": {
+    "props": {
+      "text": "Ottieni uno sconto del 10% su un singolo prodotto e del 20% su due elettrodomestici.",
+      "blockClass": "descBannerPostilla"
+    }
+  },
+  "link#ButtonBannTopBlackFriday1": {
+    "props": {
+      "label": "SCOPRI I PRODOTTI",
+      "href": "https://www.whirlpool.it/promozioni/whirlpool-black-friday/sconti-extra",
+      "displayMode": "button",
+      "blockClass": "postillaButton"
+    }
+  },
+  /**/
+  "rich-text#dataScontiExtraBlackFriday1": {
+    "props": {
+      "text": "Dal 22 al 25 novembre",
+      "blockClass": "durata"
+    }
+  },
+  "rich-text#titleBlackFridayBlackFriday1": {
+    "props": {
+      "text": "",
+      "blockClass": ["title-blackFriday", "marginRightDot3", "noMarginTop"]
+    }
+  },
+  "rich-text#titleScontiExtraBlackFriday1": {
+    "props": {
+      "text": "### SCONTI EXTRA FINO AL 20%",
+
+      "blockClass": ["title-section-blackFriday", "noMarginTop"]
+    }
+  },
+  /*Collection*/
+  "experimental__visibility-layout#carouselCollectionBlackFriday1": {
+    "props": {
+      "visible": true
+    },
+    "children": ["list-context.product-list#carouselCollectionBlackFriday1"]
+  },
+  "list-context.product-list#carouselCollectionBlackFriday1": {
+    "blocks": ["product-summary.shelf#caroselliLanding"],
+    "children": ["slider-layout-whl#carouselCollectionHome"],
+    "props": {
+      "collection": "290",
+      "productList": {
+        "maxItems": 10,
+        "itemsPerPage": 5,
+        "minItemsPerPage": 1,
+        "scroll": "BY_PAGE",
+        "arrows": true,
+        "titleText": "Non sai da dove iniziare? Scopri i prodotti Whirlpool più venduti"
+      }
+    }
+  },
+  /*Else*/
+  "flex-layout.row#ElseBlackFridayBlackFriday1": {
+    "props": {
+      "blockClass": "rowElseBlackFriday"
+    },
+    "children": ["flex-layout.col#containerBlackFridayElseBlackFriday1"]
+  },
+  "flex-layout.col#containerBlackFridayElseBlackFriday1": {
+    "children": [
+      "flex-layout.row#titleScontiExtraElseBlackFriday1",
+      "image#bannerImageBlackFridayPromozioneTerminata2"
+    ]
+  },
+  "flex-layout.row#ElseBlackFridayBlackFriday1-mobile": {
+    "props": {
+      "blockClass": "rowElseBlackFriday"
+    },
+    "children": ["flex-layout.col#containerBlackFridayElseBlackFriday1-mobile"]
+  },
+  "flex-layout.col#containerBlackFridayElseBlackFriday1-mobile": {
+    "children": [
+      "flex-layout.row#titleScontiExtraElseBlackFriday1",
+      "image#bannerImageBlackFridayPromozioneTerminata2-mobile"
+    ]
+  },
+  "flex-layout.row#titleScontiExtraElseBlackFriday1": {
+    "props": {
+      "preventHorizontalStretch": true,
+      "blockClass": ["marginButton1Rem", "richTextBFelse"]
+    },
+    "children": [
+      "rich-text#titleBlackFridayElseBlackFriday1",
+      "rich-text#titleScontiExtraElseBlackFriday1"
+    ]
+  },
+  "rich-text#titleBlackFridayElseBlackFriday1": {
+    "props": {
+      "text": "Black Friday -",
+      "blockClass": ["title-blackFriday", "marginRightDot3", "noMarginTop"]
+    },
+    "title": "Titolo Black Friday a scadenza"
+  },
+  "rich-text#titleScontiExtraElseBlackFriday1": {
+    "props": {
+      "text": "### SCONTI EXTRA FINO AL 20%",
+      "blockClass": ["title-section-blackFriday", "noMarginTop"]
+    },
+    "title": "Titolo Black Friday in grassetto a scadenza"
+  },
+  "info-card#elseBannerBlackFridayBlackFriday1": {
+    "props": {
+      "id": "info-card-example",
+      "isFullModeStyle": true,
+      "textPosition": "left",
+      "imageUrl": "assets/placeholder.png",
+      "callToActionText": "SCOPRI I PRODOTTI",
+      "callToActionUrl": "/",
+      "blockClass": ["info-card-example", "elseBFInfoCard"],
+      "textAlignment": "center"
+    },
+    "title": "Card mostrata a termine promozione"
+  },
+  /*Scopri di più*/
+  "flex-layout.row#scopriDiPiùBlackFriday1": {
+    "props": {
+      "preventHorizontalStretch": true,
+      "blockClass": ["displayFlexContentCenter", "margin2rem"]
+    },
+    "children": [
+      "rich-text#scopriDiPiùTextBlackFriday1",
+      "rich-text#scopriDiPiùLinkBlackFriday1"
+    ]
+  },
+  "rich-text#scopriDiPiùTextBlackFriday1": {
+    "props": {
+      "text": "Le sorprese non finiscono qui",
+      "blockClass": "scopriDiPiuText"
+    }
+  },
+  "rich-text#scopriDiPiùLinkBlackFriday1": {
+    "props": {
+      "text": "[Scopri i prodotti](https://www.whirlpool.it/promozioni/whirlpool-black-friday/sconti-extra)",
+      "blockClass": ["scopriDiPiuLink", "colorEdb112", "buttonCard"]
+    }
+  },
+  /*Mobile*/
+  "info-card#headBlackFridayMobileBlackFriday1": {
+    "props": {
+      "id": "info-card-example",
+      "isFullModeStyle": true,
+      "textPosition": "left",
+      "imageUrl": "assets/BlackFriday1mobile.png",
+      "callToActionText": "SCOPRI DI PIU",
+      "callToActionUrl": "/",
+      "blockClass": ["info-card-example", "headBlackFriday"],
+      "textAlignment": "center"
+    },
+    "title": "Card mostrata a termine promozione"
+  },
+  "flex-layout.row#HeadBlackFridayMobileBlackFriday1": {
+    "props": {
+      "blockClass": "rowElseBlackFriday"
+    },
+    "children": ["flex-layout.col#HeadBlackFridayMobileBlackFriday1"]
+  },
+  "flex-layout.col#HeadBlackFridayMobileBlackFriday1": {
+    "children": [
+      "flex-layout.row#titleScontiExtraHeadMobileBlackFriday1",
+      "info-card#headBlackFridayMobileBlackFriday1"
+    ]
+  },
+  "flex-layout.row#titleScontiExtraHeadMobileBlackFriday1": {
+    "props": {
+      "preventHorizontalStretch": true,
+      "blockClass": "marginButton1Rem"
+    },
+    "children": ["rich-text#titleBlackFridayHeadMobileBlackFriday1"]
+  },
+  "rich-text#titleBlackFridayHeadMobileBlackFriday1": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "### SCONTI EXTRA FINO AL 20%",
+      "blockClass": ["title-blackFriday", "marginRightDot3", "noMarginTop"]
+    },
+    "title": "Titolo Black Friday card - Mobile"
+  }
+}

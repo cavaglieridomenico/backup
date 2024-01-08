@@ -1,0 +1,154 @@
+.serviceTitle {
+	display: flex;
+	align-items: center;
+}
+.whirlClub {
+	margin-left: 0.6rem;
+	height: 1.2rem;
+	margin-bottom: -4px;
+}
+.serviziAggiuntiviTable {
+	background-color: #f9f9f9;
+	border-bottom: 1px solid #edb112;
+	width: 100%;
+	font-size: 1rem;
+	margin: 1rem 0 2.5rem 0;
+	height: auto;
+	overflow: visible;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	padding: 1.75rem 2.5rem;
+}
+
+.servAggRow {
+	display: flex;
+	flex-direction: column;
+	padding: 0.875rem 0;
+	position: relative;
+}
+
+.servAggRow:not(:last-child) {
+	border-bottom: 1px solid #d0d3d4;
+}
+.servOptions {
+	display: flex;
+	justify-content: space-between;
+	padding-right: 1rem;
+}
+.servOptionsDiscount {
+	display: flex;
+	justify-content: space-between;
+	padding-right: 2rem;
+}
+.freeLabel {
+	color: #edb112;
+	font-size: 0.875rem;
+	font-family: 'myriadSemibold';
+	margin-left: 1rem;
+	min-width: 5em;
+	display: flex;
+	justify-content: flex-end;
+}
+.labelPrice {
+	color: #505050;
+	font-size: 0.875rem;
+	font-family: 'myriadSemibold';
+	margin-left: 1rem;
+	display: flex;
+	flex-direction: row;
+}
+.servOptions {
+	flex-wrap: nowrap;
+	white-space: pre;
+}
+.servicePriceContainer {
+	display: flex;
+	min-width: 6em;
+	justify-content: flex-end;
+}
+.theoreticalValue {
+	width: 100%;
+}
+.theoreticalValue .currencyContainer {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	color: #d0d3d4;
+	font-size: 0.8rem;
+	margin-right: 0.5rem;
+	text-decoration: line-through;
+	font-family: 'myriadLight', Times, serif;
+}
+
+.skeletonWrapper {
+	width: 100%;
+}
+.skeleton {
+	--base-color: #ebebeb;
+	--highlight-color: #c0c0c0;
+	--animation-duration: 1.5s;
+	--animation-direction: normal;
+	--pseudo-element-display: block; /* Enable animation */
+	background-color: var(--base-color);
+	width: 100%;
+	border-radius: 0.5rem;
+	display: inline-flex;
+	line-height: 1;
+	position: relative;
+	overflow: hidden;
+	z-index: 1; /* Necessary for overflow: hidden to work correctly in Safari */
+}
+
+.skeleton::after {
+	content: ' ';
+	display: var(--pseudo-element-display);
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 100%;
+	padding: auto;
+	background-repeat: no-repeat;
+	background-image: linear-gradient(
+		90deg,
+		var(--base-color),
+		var(--highlight-color),
+		var(--base-color)
+	);
+	transform: translateX(-100%);
+
+	animation-name: skeleton;
+	animation-direction: var(--animation-direction);
+	animation-duration: var(--animation-duration);
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+}
+
+@keyframes skeleton {
+	100% {
+		transform: translateX(100%);
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.serviziAggiuntiviTable {
+		padding: 1.5rem 1.3rem;
+	}
+	.serviziAggiuntiviTable {
+		font-size: 0.875rem;
+	}
+	.serviceName {
+		white-space: pre-wrap;
+	}
+	.freeLabel,
+	.servicePriceContainer {
+		margin: auto;
+		margin-right: 0;
+		min-width: 4.5rem;
+	}
+	.theoreticalValue {
+		padding-right: 0.5rem;
+		margin: auto;
+	}
+}

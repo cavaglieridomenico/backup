@@ -1,0 +1,279 @@
+{
+  "name": "crm-async-integration",
+  "vendor": "bauknechtde",
+  "version": "1.0.19",
+  "title": "CRM async connector",
+  "description": "A custom app that bridges Vtex with SAP CRM",
+  "categories": [],
+  "dependencies": {},
+  "builders": {
+    "node": "6.x",
+    "docs": "0.x"
+  },
+  "scripts": {},
+  "credentialType": "absolute",
+  "policies": [
+    {
+      "name": "ADMIN_DS"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "api.vtex.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "webservicesq.cert.whirlpool.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "webservices.cert.whirlpool.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "emeaservicesq.cert.whirlpool.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "emeaservices.cert.whirlpool.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.myvtex.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.vtexcommercestable.com.br",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "portal.vtexcommercestable.com.br",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "d2c-fr-crm-async-flow-dot-go-whr-emea-digital-d2c-mdw.ey.r.appspot.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "d2c-fr-crm-async-flow-dot-whr-emea-digital-d2c.ew.r.appspot.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "d2c-pl-crm-async-flow-dot-go-whr-emea-digital-d2c-mdw.ey.r.appspot.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "d2c-pl-crm-async-flow-dot-whr-emea-digital-d2c.ew.r.appspot.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "bk-de-crm-async-flow-dot-go-whr-emea-digital-d2c-mdw.ey.r.appspot.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "bk-de-crm-async-flow-dot-whr-emea-digital-d2c.ew.r.appspot.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "accounts.google.com/o/oauth2/auth",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "oauth2.googleapis.com/token",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "www.googleapis.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "OMSViewer"
+    },
+    {
+      "name": "colossus-fire-event"
+    },
+    {
+      "name": "colossus-write-logs"
+    }
+  ],
+  "settingsSchema": {
+    "title": "CRM connector",
+    "type": "object",
+    "properties": {
+      "crmEnvironment": {
+        "title": "CRM - Environment",
+        "type": "string",
+        "enum": [
+          "production",
+          "quality"
+        ]
+      },
+      "useSapPo": {
+        "title": "SAP PO",
+        "type": "boolean"
+      },
+      "doubleOptin": {
+        "title": "Double Optin",
+        "type": "boolean"
+      },
+      "checkoutAsGuest": {
+        "title": "Checkout as Guest",
+        "type": "boolean"
+      },
+      "newsletterAsGuest": {
+        "title": "Newsletter as Guest",
+        "type": "boolean"
+      },
+      "crmPassword": {
+        "title": "CRM - Password",
+        "type": "string"
+      },
+      "attrOptin": {
+        "title": "CRM - Optin attribute (comma separated)",
+        "type": "string"
+      },
+      "attrSourceCampaign": {
+        "title": "CRM - Source campaign attribute (comma separated)",
+        "type": "string"
+      },
+      "allowedStates": {
+        "title": "CRM - Allowed states (comma separated)",
+        "type": "string"
+      },
+      "crmRecoverPlan": {
+        "title": "CRM - Recover plan",
+        "type": "boolean"
+      },
+      "crmRecoverPlanStartDate": {
+        "title": "CRM - Recover plan - Start date (yyyy-mm-dd)",
+        "type": "string"
+      },
+      "gcpHost": {
+        "title": "GCP - Host",
+        "type": "string"
+      },
+      "gcpProjectId": {
+        "title": "GCP - Project id",
+        "type": "string"
+      },
+      "gcpClientEmail": {
+        "title": "GCP - Client email",
+        "type": "string"
+      },
+      "gcpPrivateKey": {
+        "title": "GCP - Private key",
+        "type": "string"
+      },
+      "gcpTargetAudience": {
+        "title": "GCP - Target audience",
+        "type": "string"
+      },
+      "gcpBrand": {
+        "title": "GCP - Brand",
+        "type": "string"
+      },
+      "gcpCountry": {
+        "title": "GCP - Country",
+        "type": "string"
+      },
+      "enabledAPICredentials": {
+        "title": "Vtex - Enabled API credentials",
+        "type": "string"
+      },
+      "MDKey": {
+        "title": "Vtex - MD key",
+        "type": "string"
+      },
+      "enabledMDKeyHash": {
+        "title": "Vtex - Enabled MD key (hash)",
+        "type": "string"
+      },
+      "defaultLocale": {
+        "title": "Vtex - Locale / Country (2 chars, example: FR)",
+        "type": "string"
+      },
+      "localTimeLocale": {
+        "title": "Vtex - Locale time - Locale (5 chars, example: fr-fr)",
+        "type": "string"
+      },
+      "localTimeZone": {
+        "title": "Vtex - Locale time - Zone (example: Europe/Rome)",
+        "type": "string"
+      },
+      "webIdPrefix": {
+        "title": "Vtex - WebId: prefix (5 chars)",
+        "type": "string"
+      },
+      "maxNumOfDigitsForPhone": {
+        "title": "Vtex - Phone number: maximum length",
+        "type": "number"
+      },
+      "authCookie": {
+        "title": "Vtex - Authentication cookie",
+        "type": "string"
+      },
+      "eppLoginUrl": {
+        "title": "EPP - Login url",
+        "type": "string"
+      },
+      "ffLoginUrl": {
+        "title": "FF - Login url",
+        "type": "string"
+      },
+      "vipLoginUrl": {
+        "title": "VIP - Login url",
+        "type": "string"
+      }
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

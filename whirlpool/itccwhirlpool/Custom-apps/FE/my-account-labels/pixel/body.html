@@ -1,0 +1,36 @@
+<script defer>
+  // const backButtonPath = ".vtex-button.bw1.ba.fw5.v-mid.relative.pa0.br2.bn.nr2.nl2.pointer.bg-transparent.b--transparent.c-action-primary.hover-b--transparent.hover-bg-action-secondary.hover-b--action-secondary.t-action div span"
+  // const backButtons = document.querySelectorAll(backButtonPath)
+  // const backButton = document.querySelector(backButtonPath)
+  // const outterButtonPath = ".vtex-button.bw1.ba.fw5.v-mid.relative.pa0.br2.bn.nr2.nl2.pointer.bg-transparent.b--transparent.c-action-primary.hover-b--transparent.hover-bg-action-secondary.hover-b--action-secondary.t-action"
+  // const outterButtons = document.querySelectorAll(outterButtonPath)
+  // setInterval(() => {
+  //     if (backButton.length > 0 && backButton.innerHTML !== "Powrót") {
+  //         for (let i = 0; i <= backButtons.length; i++) {
+  //             backButtons[i].innerHTML = 'Powrót';
+  //             backButtons[i].style.fontSize = '1rem';
+  //             outterButtons[i].style.color = "#fdc100";
+  //         }
+  //     } else {
+  //         return;
+  //     }
+  // }, 100);
+  setInterval(() => {
+      if (document.querySelectorAll(".vtex-my-orders-app-3-x-orderProductQuantity.pr3").length > 0 && document.querySelector(".vtex-my-orders-app-3-x-orderProductQuantity.pr3").innerHTML.includes("un")) {
+          for (let i = 0; i <= document.querySelectorAll(".vtex-my-orders-app-3-x-orderProductQuantity.pr3").length; i++) {
+              // const splitUnit = document.querySelectorAll(".vtex-my-orders-app-3-x-orderProductQuantity.pr3")[i].innerHTML.split(" ");
+              document.querySelectorAll(".vtex-my-orders-app-3-x-orderProductQuantity.pr3")[i].innerHTML = `par produit`;
+          }
+      } else {
+          return
+      }
+  }, 100);
+  // setInterval(() => {
+  //     if (document.querySelectorAll(".vtex-my-orders-app-3-x-productQuantity").length > 0 && document.querySelector(".vtex-my-orders-app-3-x-productQuantity").innerHTML.includes("un")) {
+  //         const splitUnitDetail = document.querySelector(".vtex-my-orders-app-3-x-productQuantity").innerHTML.split(" ");
+  //         document.querySelector(".vtex-my-orders-app-3-x-productQuantity").innerHTML = `${splitUnitDetail[0]} шт`;
+  //     } else {
+  //         return
+  //     }
+  // }, 100);
+</script>

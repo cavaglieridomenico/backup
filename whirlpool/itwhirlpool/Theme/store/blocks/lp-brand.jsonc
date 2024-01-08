@@ -1,0 +1,275 @@
+{
+  "store.custom#lp-brand": {
+    "children": [
+      "flex-layout.row#bread-theme",
+      "experimental__visibility-layout#bannerTopLpInverted",
+      "toggle-layout#chatWidget",
+      ////"analytics",
+      "__fold__.experimentalLazyAssets",
+      "flex-layout.row#halfSpace",
+      "experimental__visibility-layout#titleLpBrand",
+      "experimental__visibility-layout#buttonLpBrand",
+      "experimental__visibility-layout#postillaLpBrand",
+      "flex-layout.row#halfSpace",
+      "experimental__visibility-layout#bannerTopLp",
+      "flex-layout.row#spaceLp",
+      "experimental__visibility-layout#bannerTopLpInverted2",
+      "flex-layout.row#halfSpace",
+      "experimental__visibility-layout#lpBrand",
+      "newsletter-popup#footer"
+    ]
+  },
+  "experimental__visibility-layout#bannerTopLp": {
+    "props": {
+      "visible": true
+    },
+    "children": ["flex-layout.row#bannerTopLp"]
+  },
+  "flex-layout.row#bannerTopLp": {
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": ["bannerPostilla", "bannerLP"]
+    },
+    "children": [
+      "flex-layout.col#leftPartTopLP",
+      "flex-layout.col#rightPartTopLP"
+    ]
+  },
+  "experimental__visibility-layout#bannerTopLpInverted": {
+    "props": {
+      "visible": true
+    },
+    "children": ["flex-layout.row#bannerTopLpInverted"]
+  },
+  "flex-layout.row#bannerTopLpInverted": {
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": ["bannerPostilla", "bannerLP"]
+    },
+    "children": [
+      "flex-layout.col#rightPartTopLP",
+      "flex-layout.col#leftPartTopLP"
+    ]
+  },
+  "experimental__visibility-layout#bannerTopLpInverted2": {
+    "props": {
+      "visible": true
+    },
+    "children": ["flex-layout.row#bannerTopLpInverted"]
+  },
+  "flex-layout.col#leftPartTopLP": {
+    "props": {
+      "width": "40%",
+      "preventVerticalStretch": true,
+      "blockClass": [
+        "columnPostilla",
+        "columnPostillaBottom",
+        "maxHeightUnset",
+        "flexStartMobile"
+      ]
+    },
+    "children": [
+      "experimental__visibility-layout#logoBannerTopLP",
+      "experimental__visibility-layout#TitleBannerTopLP",
+      "experimental__visibility-layout#BannDescTopLP",
+      "experimental__visibility-layout#ButtonBannerTopLP",
+      "rich-text#bannerTopPostillaLP"
+    ]
+  },
+  "experimental__visibility-layout#logoBannerTopLP": {
+    "props": {
+      "visible": false
+    },
+    "children": ["image#LogoBannerTopLP"]
+  },
+  "experimental__visibility-layout#logoBannerTop2LP": {
+    "props": {
+      "visible": false
+    },
+    "children": ["image#LogoBannerTop2LP"]
+  },
+  "experimental__visibility-layout#TitleBannerTopLP": {
+    "props": {
+      "visible": true
+    },
+    "children": ["rich-text#BannTitleTopLP"]
+  },
+  "experimental__visibility-layout#BannDescTopLP": {
+    "props": {
+      "visible": true
+    },
+    "children": ["rich-text#BannDescTopLP"]
+  },
+  "experimental__visibility-layout#ButtonBannerTopLP": {
+    "props": {
+      "visible": false
+    },
+    "children": ["link#ButtonBannTopLP"]
+  },
+  "experimental__visibility-layout#bannerTopPostillaLP": {
+    "props": {
+      "visible": true
+    },
+    "children": ["rich-text#bannerTopPostillaLP"]
+  },
+  "image#LogoBannerTopLP": {
+    "props": {
+      "src": "assets/postillaBanner/logoGoogle.jpg",
+      "width": "5rem",
+      "blockClass": "marginBottom"
+    }
+  },
+  "image#LogoBannerTop2LP": {
+    "props": {
+      "src": "assets/postillaBanner/logoGoogle.jpg",
+      "width": "5rem",
+      "blockClass": "marginBottom"
+    }
+  },
+  "flex-layout.col#rightPartTopLP": {
+    "props": {
+      "width": "60%",
+      "blockClass": ["columnPostillaImage", "displayFlexMobile"]
+    },
+    "children": ["image#bannerTopImageLP"]
+  },
+  "rich-text#BannTitleTopLP": {
+    "props": {
+      "text": "# **FRESCHEZZA AL 100%** ANCHE SE DIMENTICHI IL BUCATO",
+      "blockClass": ["titleHBannerPostilla", "lpTitle"]
+    }
+  },
+  "rich-text#BannDescTopLP": {
+    "props": {
+      "text": "**FRESHCARE+**\nBucato fresco per ore dopo la fine del ciclo\n\nSvuotare la lavatrice molte ore dopo la fine del ciclo e **trovare la biancheria morbida e fresca** è una realtà, grazie all'esclusiva funzione FRESHCARE+.\n**Cosa succede al termine del lavaggio?**\nIl ciclo **FRESHCARE+** mantiene la biancheria **fresca fino a 6 ore**, grazie all'azione del vapore che previene la proliferaione delle principali fonti di odore.",
+      "blockClass": ["descBannerPostilla", "marginBottomMobile", "lpDesc"]
+    }
+  },
+  "link#ButtonBannTopLP": {
+    "props": {
+      "label": "TESTO BOTTONE",
+      "href": "#",
+      "displayMode": "button",
+      "blockClass": "postillaButton"
+    }
+  },
+  "rich-text#bannerTopPostillaLP": {
+    "props": {
+      "text": "*Considerando la capacità dello spazio convertibile impostato a 4°C.",
+      "blockClass": ["postillaBannerPostilla", "lpPostilla"]
+    }
+  },
+  "image#bannerTopImageLP": {
+    "props": {
+      "src": "assets/lavafreshcare.png",
+      "blockClass": ["imagePostillaBanner", "lpImage"]
+    }
+  },
+  "rich-text#buttonLpTemplate": {
+    "props": {
+      "text": "[ registrati ](/)",
+      "blockClass": [
+        "buttonCard",
+        "ricambiOriginaliButton",
+        "center",
+        "textAlignCenter",
+        "buttonLpRich"
+      ],
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER"
+    }
+  },
+  "rich-text#titleLpTemplate": {
+    "props": {
+      "text": "## **WHIRLPOOL TI REGALA IL PULITO**",
+      "blockClass": ["center", "textAlignCenter", "titleLpRich"],
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER"
+    }
+  },
+  "rich-text#descMinLp": {
+    "props": {
+      "text": "• Operazione a premi valida dal 15/04 al 15/07/2021. Regolamento su [ www.promozioniwhirlpool.it ](http://www.promozioniwhirlpool.it)",
+      "blockClass": ["center", "textAlignCenter", "descLpRich"],
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER"
+    }
+  },
+  "experimental__visibility-layout#titleLpBrand": {
+    "props": {
+      "visible": true
+    },
+    "children": ["rich-text#titleLpTemplate"]
+  },
+  "experimental__visibility-layout#buttonLpBrand": {
+    "props": {
+      "visible": true
+    },
+    "children": ["rich-text#buttonLpTemplate"]
+  },
+  "experimental__visibility-layout#postillaLpBrand": {
+    "props": {
+      "visible": true
+    },
+    "children": ["rich-text#descMinLp"]
+  },
+  "flex-layout.row#spaceLp": {
+    "props": {
+      "blockClass": ["rowSpace", "1remMobile"]
+    }
+  },
+  "experimental__visibility-layout#lpBrand": {
+    "props": {
+      "visible": true
+    },
+    "children": ["list-context.product-list#lpBrand"]
+  },
+  "list-context.product-list#lpBrand": {
+    "blocks": ["product-summary.shelf"],
+    "children": ["slider-layout#lpBrand"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC",
+      "maxItems": 5
+    }
+  },
+  "slider-layout#lpBrand": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 5,
+        "tablet": 3,
+        "phone": 1
+      },
+      "showNavigationArrows": "never",
+      "infinite": true,
+      "fullWidth": false,
+      "blockClass": "shelf"
+    }
+  },
+  //1342
+  "list-context.image-list#main-carousel-images": {
+    "children": ["slider-layout#carousel-images"],
+    "props": {
+      "height": 370,
+      "images": [
+        {
+          "image": "assets/bannerProva.jpg",
+          "description": "something something"
+        }
+      ]
+    }
+  },
+
+  "slider-layout#carousel-images": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "showNavigationArrows": "desktopOnly",
+      "showPaginationDots": "desktopOnly",
+      "blockClass": ["carousel", "carouselHp", "mainCarouselHP"]
+    }
+  }
+}

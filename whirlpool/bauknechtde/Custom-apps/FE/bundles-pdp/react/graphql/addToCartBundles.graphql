@@ -1,0 +1,19 @@
+mutation addToCartBundles(
+  $items: [ItemInput]
+  $marketingData: MarketingDataInput
+  $allowedOutdatedData: [String!]
+) {
+  addToCart(
+    items: $items
+    marketingData: $marketingData
+    allowedOutdatedData: $allowedOutdatedData
+  ) {
+    id
+    items {
+      id
+      name
+      price
+    }
+    value
+  }
+}

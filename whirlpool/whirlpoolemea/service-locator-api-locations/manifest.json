@@ -1,0 +1,74 @@
+{
+  "vendor": "whirlpoolemea",
+  "name": "service-locator-api-locations",
+  "version": "1.2.0",
+  "title": "service-locator-api-locations",
+  "description": "service-locator-api-locations component",
+  "defaultLocale": "it-IT",
+  "builders": {
+    "messages": "1.x",
+    "node": "6.x",
+    "graphql": "1.x",
+    "store": "0.x",
+    "react": "3.x"
+  },
+  "policies": [
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "api.d2c.service-locator.wpsandwatch.com",
+        "path": "*"
+      }
+    }
+  ],
+  "dependencies": {
+    "vtex.styleguide": "9.x",
+    "vtex.css-handles": "0.x",
+    "vtex.apps-graphql": "3.x"
+  },
+  "billingOptions": {
+    "termsURL": "https://compliance.vtex.com/gdpr/policies/vtex-privacy-policy",
+    "support": {
+      "url": "https://support.vtex.com/hc/requests"
+    },
+    "free": true
+  },
+  "settingsSchema": {
+    "title": "Service Locator API Locations",
+    "type": "object",
+    "access": "public",
+    "properties": {
+      "citiesWithCustomHelmet": {
+        "title": "Cities with custom helmet",
+        "description": "Enter the cities for which you want to add custom meta helmet tag",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "cityName": {
+              "title": "City Name",
+              "type": "string"
+            },
+            "metaTags": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "metaTagName": {
+                    "title": "Meta Tag Name",
+                    "type": "string"
+                  },
+                  "metaTagContent": {
+                    "title": "Meta Tag Content",
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

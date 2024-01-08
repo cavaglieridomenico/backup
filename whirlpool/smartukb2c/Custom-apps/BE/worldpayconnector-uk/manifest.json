@@ -1,0 +1,219 @@
+{
+  "name": "worldpay-connector",
+  "vendor": "smartukb2c",
+  "version": "0.0.6",
+  "title": "Worldpay",
+  "description": "Worldpay connector",
+  "mustUpdateAt": "2021-05-27",
+  "categories": [],
+  "dependencies": {},
+  "builders": {
+    "node": "6.x",
+    "docs": "0.x"
+  },
+  "credentialType": "absolute",
+  "policies": [
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "secure-test.worldpay.com",
+        "path": "/jsp/merchant/xml/paymentService.jsp"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "secure.worldpay.com",
+        "path": "/jsp/merchant/xml/paymentService.jsp"
+      }
+    },
+    {
+      "name": "ADMIN_DS"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "api.vtex.com",
+        "path": "/dataentities/*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.vtexpayments.com.br",
+        "path": "/api/*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "heimdall.vtexpayments.com.br",
+        "path": "/api/*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "portal.vtexcommercestable.com.br",
+        "path": "/api/oms/pvt/orders/*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "cert-xipayapi.paymetric.com",
+        "path": "/api/oms/pvt/orders/*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "xipayapi.paymetric.com",
+        "path": "/api/oms/pvt/orders/*"
+      }
+    },
+    {
+      "name": "colossus-fire-event"
+    },
+    {
+      "name": "colossus-write-logs"
+    },
+    {
+      "name": "vbase-read-write"
+    }
+  ],
+  "settingsSchema": {
+    "title": "Worldpay",
+    "type": "object",
+    "properties": {
+      "wpUrl": {
+        "title": "API Url Worldpay",
+        "type": "string"
+      },
+      "merchantCode": {
+        "title": "Merchant Code Worldpay",
+        "type": "string"
+      },
+      "installationID": {
+        "title": "Installation ID Worldpay",
+        "type": "string"
+      },
+      "wpusername": {
+        "title": "Username Worldpay",
+        "type": "string"
+      },
+      "wppassword": {
+        "title": "Password Worldpay",
+        "type": "string"
+      },
+      "paymentAppName": {
+        "title": "Payment App Name",
+        "type": "string"
+      },
+      "wpVersion": {
+        "title": "Worldpay API version",
+        "type": "string"
+      },
+      "xipayUrl": {
+        "title": "XiPay URL",
+        "type": "string"
+      },
+      "xipayUsername": {
+        "title": "XiPay Username",
+        "type": "string"
+      },
+      "xipayPassword": {
+        "title": "XiPay Password",
+        "type": "string"
+      },
+      "xipayMerchantid": {
+        "title": "XiPay Merchant ID",
+        "type": "string"
+      },
+      "sapmid": {
+        "title": "SAP Merchant ID",
+        "type": "string"
+      },
+      "sapgl": {
+        "title": "SAP GL Account",
+        "type": "string"
+      },
+      "xipayAmericanXpress": {
+        "title": "XiPay American Express code",
+        "type": "string",
+        "default": "WAMX"
+      },
+      "xipayDiscover": {
+        "title": "XiPay Discover code",
+        "type": "string",
+        "default": "WDIS"
+      },
+      "xipayMaestro": {
+        "title": "XiPay Maestro code",
+        "type": "string",
+        "default": "WMAE"
+      },
+      "xipayMasterpass": {
+        "title": "XiPay Masterpass code",
+        "type": "string",
+        "default": "WMC"
+      },
+      "xipayVisa": {
+        "title": "XiPay Visa code",
+        "type": "string",
+        "default": "WVIS"
+      },
+      "xipayVisaCredit": {
+        "title": "XiPay Visa Credit code",
+        "type": "string",
+        "default": "WVIS"
+      },
+      "xipayVisaDebit": {
+        "title": "XiPay Visa Debit code",
+        "type": "string",
+        "default": "WVIS"
+      },
+      "xipayVisaCommercialCredit": {
+        "title": "XiPay Visa Commercial Credit code",
+        "type": "string",
+        "default": "WVIS"
+      },
+      "xipayVisaCommercialDebit": {
+        "title": "XiPay Visa Commercial Debit code",
+        "type": "string",
+        "default": "WVIS"
+      },
+      "xipayVisaElectron": {
+        "title": "XiPay Visa Electron code",
+        "type": "string",
+        "default": "WVIS"
+      },
+      "xipayECMC": {
+        "title": "XiPay ECMC code",
+        "type": "string",
+        "default": "WMC"
+      },
+      "xipayECMCCredit": {
+        "title": "XiPay ECMC Credit code",
+        "type": "string",
+        "default": "WMC"
+      },
+      "xipayECMCDebit": {
+        "title": "XiPay ECMC Debit code",
+        "type": "string",
+        "default": "WMC"
+      },
+      "xipayECMCCommercialCredit": {
+        "title": "XiPay ECMC Commercial Credit code",
+        "type": "string",
+        "default": "WMC"
+      },
+      "xipayECMCCommercialDebit": {
+        "title": "XiPay ECMC Commercial Debit code",
+        "type": "string",
+        "default": "WMC"
+      }
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

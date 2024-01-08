@@ -1,0 +1,177 @@
+type Review {
+  Limit: Int
+  Offset: Int
+  TotalResults: Int
+  Results: [Results]
+  Includes: Include
+}
+
+type Include {
+  Products: [Products]
+  Comments: [Comment]
+  AllProducts: [AllProducts]
+}
+
+type AllProducts {
+  ProductId: String
+  Name: String
+}
+
+type Comment {
+  Id: String
+  CID: String
+  ReviewId: String
+  AuthorId: String
+  ContentLocale: String
+  IsFeatured: Boolean
+  TotalInappropriateFeedbackCount: Int
+  TotalFeedbackCount: Int
+  TotalNegativeFeedbackCount: Int
+  TotalPositiveFeedbackCount: Int
+  ModerationStatus: String
+  SubmissionId: String
+  SubmissionTime: String
+  CommentText: String
+  UserNickname: String
+  BadgesOrder: [String]
+  Badges: [BadgeObject]
+  UserLocation: String
+  IsSyndicated: Boolean
+  Title: String
+  ProductId: String
+}
+
+type BadgeObject {
+  ContentType: String
+  Id: String
+  BadgeType: String
+}
+
+type Products {
+  ReviewStatistics: ReviewStatistics
+}
+
+type ReviewStatistics {
+  TotalReviewCount: Int
+  AverageOverallRating: Float
+  RatingDistribution: [RatingDistribution]
+  AverageLocalRating: Float
+  IncentivizedReviewCount: Int
+  LocalRatingDistribution: [RatingDistribution]
+  SecondaryRatingsAverages: [SecondaryRatingsAverage]
+}
+
+type SecondaryRatingsAverage {
+  AverageRating: Float
+  Id: String
+  ValueRange: Int
+  MinLabel: String
+  DisplayType: String
+  MaxLabel: String
+  Label: String
+}
+
+type RatingDistribution {
+  RatingValue: Int
+  Count: Int
+}
+
+type Results {
+  Id: String
+  Rating: Int
+  TotalCommentCount: Int
+  IsRatingsOnly: Boolean
+  TotalFeedbackCount: Int
+  IsRecommended: Boolean
+  SecondaryRatingsOrder: [String]
+  TotalNegativeFeedbackCount: Int
+  TotalPositiveFeedbackCount: Int
+  UserNickname: String
+  UserLocation: String
+  SubmissionTime: String
+  IsSyndicated: String
+  Title: String
+  ReviewText: String
+  SecondaryRatings: [SecondaryRating]
+  ContextDataValues: ContextDataValues
+  TagDimensions: TagDimensions
+  Photos: [Photo]
+  ClientResponses: [ClientResponse]
+  ProductId: String
+  BadgesOrder:[String]
+  SyndicationSource: SyndicationSourceType
+}
+
+type SyndicationSourceType {
+  ClientId: String
+  ContentLink: String
+  LogoImageUrl: String
+  Name: String
+}
+
+type BadgesType {
+  incentivizedReview: IncentivizedReviewType
+}
+type IncentivizedReviewType{
+  BadgeType: String
+  ContentType: String
+  Id: String
+}
+type ClientResponse {
+  Department: String
+  Response: String
+  ResponseType: String
+  ResponseSource: String
+  Name: String
+  Date: String
+}
+
+type Photo {
+  Sizes: ImageSize
+}
+
+type ImageSize {
+  normal: Image
+  thumbnail: Image
+}
+
+type Image {
+  Url: String
+}
+
+type TagDimensions {
+  Pros: Pros
+  Cons: Cons
+}
+type Pros {
+  Values: [String]
+  Id: String
+  Label: String
+}
+type Cons {
+  Values: [String]
+  Id: String
+  Label: String
+}
+
+type SecondaryRating {
+  Value: Int
+  Id: String
+  ValueRange: Int
+  ValueLabel: String
+  MinLabel: String
+  Label: String
+  DisplayType: String
+  MaxLabel: String
+}
+
+type ContextDataValues {
+  Age: ContextDataFields
+  Gender: ContextDataFields
+}
+type ContextDataFields {
+  Value: String
+  Id: String
+  ValueLabel: String
+  DimensionLabel: String
+}

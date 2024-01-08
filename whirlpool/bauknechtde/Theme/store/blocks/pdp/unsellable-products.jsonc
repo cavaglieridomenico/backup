@@ -1,0 +1,248 @@
+{
+  "store.custom#unsellable-products": {
+    "blocks": [
+      "product-meta-handler",
+      "responsive-layout.mobile#unsellable-products",
+      "responsive-layout.desktop#unsellable-products"
+    ]
+  },
+  // "product-meta-handler":{},
+  "unsellable-products": {
+    "children": [
+      "flex-layout.row#product-name"
+      // "stack-layout#imagesPDP"
+    ]
+  },
+  "responsive-layout.desktop#unsellable-products": {
+    "children": ["unsellable-products#desktop"]
+  },
+  "responsive-layout.mobile#unsellable-products": {
+    "children": ["unsellable-products#mobile"]
+  },
+  "unsellable-products#desktop": {
+    "children": [
+      "flex-layout.row#product-breadcrumb",
+      "flex-layout.row#product-name",
+      //"flex-layout.row#product-main",
+      "flex-layout.row#product-main-unsellable",
+      "condition-layout.product#banner0",
+      "condition-layout.product#banner1",
+      // "flex-layout.row#fastEst",
+      "condition-layout.product#warranty",
+      "condition-layout.product#bannerPromoWithBadge1",
+      "condition-layout.product#bannerPromoWithBadgeSoddisfatti",
+      "condition-layout.product#bannerPromoWithBadge3",
+      "condition-layout.product#bannerPromoWithBadge4",
+      "condition-layout.product#bannerPromo193",
+      "condition-layout.product#bannerPromoFairy",
+      "condition-layout.product#isAccessorioIntestazioneTab",
+      "condition-layout.product#isAccessorioTab",
+      "condition-layout.product#similars",
+      "condition-layout.product#suggestions",
+      "condition-layout.product#showtogether",
+      "product-comparison-drawer"
+      //"analytics#pdp"
+    ]
+  },
+  "flex-layout.row#product-main-unsellable": {
+    "props": {
+      "colGap": 7,
+      "rowGap": 7,
+      "marginTop": 4,
+      "marginBottom": 7,
+      "paddingTop": 7,
+      "paddingBottom": 7,
+      "blockClass": ["width1280Center", "mainRowPDP"],
+      "preserveLayoutOnMobile": false
+    },
+    "children": [
+      "flex-layout.col#product-image-unsellable",
+      "flex-layout.col#right-col-unsellable"
+    ]
+  },
+  "flex-layout.col#product-image-unsellable": {
+    "children": ["video-player-thron-pdp"] //product-image "video-player-thron-pdp"
+  },
+  "flex-layout.col#right-col-unsellable": {
+    "props": {
+      "blockClass": "product-desc-info",
+      "preventVerticalStretch": true,
+      "rowGap": 0
+    },
+    "children": [
+      "condition-layout.product#discontinued",
+      "flex-layout.row#productPreServizi",
+      "condition-layout.product#servizi",
+      "condition-layout.product#formativa-FGAS",
+      "condition-layout.product#message",
+      "condition-layout.product#isAccessoriosku-selector",
+      //"condition-layout.product#isAccessoriominimal",
+      // "condition-layout.product#isAvailableSticky",
+      "condition-layout.product#sticky-sellable",
+      "condition-layout.product#showPricePDPSaving",
+      "condition-layout.product#showPricePDPSelling",
+      "flex-layout.row#price-out-of-stock",
+      // "promo-date",
+      "condition-layout.product#ivaPDP",
+      "condition-layout.product#availabilitySubscriber",
+      "condition-layout.product#isDiscontinuedPDP",
+      "flex-layout.col#partToShow",
+      "responsive-layout.desktop#accordionProductDescandDetails",
+      "responsive-layout.tablet#accordionProductDescandDetails",
+      "condition-layout.product#isAccessorioWPROKey"
+    ]
+  },
+  "flex-layout.row#productPreServizi-unsellable": {
+    "props": {
+      "blockClass": "preServizi"
+    },
+    "children": [
+      "condition-layout.product#etichetta-image-pre-unsellable",
+      "condition-layout.product#rating"
+    ]
+  },
+  "condition-layout.product#etichetta-image-pre-unsellable": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "energy-label"
+          }
+        }
+      ],
+      "Then": "flex-layout.row#old-label-pre-unsellable",
+      "Else": "flex-layout.row#new-label-pre-unsellable" //"image-from-specification#EtichettaEnergeticaNew"
+    }
+  },
+  "flex-layout.row#new-label-pre-unsellable": {
+    "children": [
+      "image-from-specification#EtichettaEnergeticaNew-pre-unsellable"
+    ]
+  },
+  "flex-layout.row#old-label-pre-unsellable": {
+    "children": ["image-from-specification#EtichettaEnergetica-pre-unsellable"]
+  },
+  "image-from-specification#EtichettaEnergeticaNew-pre-unsellable": {
+    "props": {
+      "specificationName": "EnergyLogo_image",
+      "imageLink": "Specification.new-energy-label",
+      "labelWithHref": true,
+      "target": "_blank"
+    }
+  },
+  "image-from-specification#EtichettaEnergetica-pre-unsellable": {
+    "props": {
+      "specificationName": "EnergyLogo_image",
+      "imageLink": "Specification.energy-label",
+      "labelWithHref": true,
+      "target": "_blank"
+    }
+  },
+  "unsellable-products#mobile": {
+    "children": ["flex-layout.row#product-main-mobile-unsellable"]
+  },
+  "flex-layout.row#product-main-mobile-unsellable": {
+    "props": {
+      "colGap": 7,
+      "rowGap": 7,
+      "marginTop": 4,
+      "marginBottom": 7,
+      "paddingTop": 7,
+      "paddingBottom": 7,
+      "blockClass": ["width1280Center", "mainRowPDP"]
+    },
+    "children": ["flex-layout.col#product-main-unsellable"]
+  },
+  "flex-layout.col#product-main-unsellable": {
+    "props": {
+      "colGap": 7,
+      "rowGap": 7,
+      "marginTop": 4,
+      "marginBottom": 7,
+      "paddingTop": 7,
+      "paddingBottom": 7,
+      "blockClass": ["width1280Center", "mainRowPDP"],
+      "preserveLayoutOnMobile": true
+    },
+    "children": [
+      "condition-layout.product#isAvailableStickyMobile-unsellable",
+      "flex-layout.col#single-col-unsellable"
+    ]
+  },
+  "condition-layout.product#isAvailableStickyMobile-unsellable": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "DISPONIBILITÀ",
+            "value": "Whirlpool Online Shop"
+          }
+        }
+      ],
+      "Then": "condition-layout.product#sticky-discontinuedMobile-unsellable"
+    }
+  },
+  "condition-layout.product#sticky-discontinuedMobile-unsellable": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "showPrice",
+            "value": "true"
+          }
+        }
+      ],
+      "Then": "condition-layout.product#sticky-discontinued-with-priceMobile-unsellable"
+    }
+  },
+  "condition-layout.product#sticky-discontinued-with-priceMobile-unsellable": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "isDiscontinued",
+            "value": "false"
+          }
+        }
+      ],
+      "Then": "flex-layout.row#pdpSticky"
+    }
+  },
+  "flex-layout.col#single-col-unsellable": {
+    "props": {
+      "blockClass": "product-desc-info",
+      "preventVerticalStretch": true,
+      "rowGap": 0
+    },
+    "children": [
+      "condition-layout.product#discontinued",
+      "flex-layout.row#productTypePDP",
+      "stack-layout#imagesPDP",
+      // "flex-layout.col#3D",
+      "flex-layout.row#descriptionCodeMobile",
+      "flex-layout.row#product-name",
+      "flex-layout.row#specificationsRowMobile",
+      "condition-layout.product#priceMobileShowOOS",
+      "condition-layout.product#showPricePDPSellingMobile",
+      "condition-layout.product#isAccessorioWPROKey",
+      "flex-layout.row#productPreServiziMobile",
+      //"condition-layout.product#isAvailableSticky", // da cambiar
+      "flex-layout.row#wishListCompare",
+      //"condition-layout.product#isAvailableSticky",
+      "condition-layout.product#isDiscontinuedPDP",
+      "condition-layout.product#servizi",
+      "condition-layout.product#premium-banner",
+      "condition-layout.product#formativa-FGAS",
+      "condition-layout.product#isAccessoriosku-selector",
+      //"condition-layout.product#isAccessoriominimal",
+      "condition-layout.product#availabilitySubscriber",
+      // "flex-layout.row#compareLikeButtons",
+      "flex-layout.row#accordion-gift",
+      "flex-layout.col#partToShowMobile"
+    ]
+  }
+}

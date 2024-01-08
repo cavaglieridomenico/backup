@@ -1,0 +1,53 @@
+{
+  "store.custom#reso-prodotto": {
+    "blocks": [
+      // "breadcrumb#resoProdotto",
+      "flex-layout.row#spaceSmall",
+      "flex-layout.row#resoProdottoText",
+      "flex-layout.row#halfSpace",
+      "flex-layout.row#customFormReso"
+      // "newsletter-popup#footer"
+      //"analytics"
+    ]
+  },
+  "flex-layout.row#customFormReso": {
+    "props": {
+      "blockClass": "CustomFormRow"
+    },
+    "children": ["custom-form"]
+  },
+  // "breadcrumb#resoProdotto": {
+  //   "props": {
+  //     "categories": [
+  //       "/supporto/",
+  //       "/supporto/diritto di recesso/",
+  //       "diritto di recesso/reso prodotto"
+  //     ],
+  //     "showOnMobile": false
+  //   }
+  // },
+
+  "flex-layout.row#resoProdottoText": {
+    "props": {
+      "blockClass": ["container", "center"]
+    },
+    "children": ["flex-layout.col#resoProdottoText"]
+  },
+
+  "flex-layout.col#resoProdottoText": {
+    "props": {
+      "width": "80%",
+      "margin": "auto",
+      "blockClass": "marginAuto"
+    },
+    "children": ["rich-text#resoProdottoText"]
+  },
+  "rich-text#resoProdottoText": {
+    "props": {
+      "text": "# Modulo di recesso online Elettrodomestici \n\n\n ## Diritto di recesso \n\n\n Se hai cambiato idea puoi restituire il prodotto e ti sarà rimborsato il prezzo versato. \n La richiesta di recesso deve pervenire entro 14 giorni di calendario dalla ricezione dell'ordine e puoi inserirla direttamente online compilando il modulo di reso che trovi qui sotto.\n Per maggiori informazioni sulle Condizioni Generali di Acquisto, [clicca qui](https://epp.whirlpool.it/pages/termini-e-condizioni).",
+      "textAlignment": "left",
+      "textPosition": "LEFT",
+      "blockClass": "formText"
+    }
+  }
+}

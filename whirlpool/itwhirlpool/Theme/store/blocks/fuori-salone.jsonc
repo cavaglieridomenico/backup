@@ -1,0 +1,153 @@
+{
+    "store.custom#fuori-salone": {
+        "blocks": [
+            //"breadcrumb#fuori-salone",
+            "image#banner-fuori-salone",
+            "flex-layout.row#fuori-salone",
+            "newsletter-popup#footer"
+            //"change-helmet"
+        ]
+    },
+    "breadcrumb#fuori-salone": {
+        "props": {
+            "categories": [
+                "/Registrati subito per avere gli ultimi aggiornamenti/"
+            ],
+            "showOnMobile": true
+        }
+    },
+    "image#banner-fuori-salone": {
+        "props": {
+            "src": "assets/banner-title-with-image/bannerImageTitle.jpg",
+            "width": "100%",
+            "height": "100%"
+        }
+    },
+    "flex-layout.row#fuori-salone": {
+        "children": [
+            "rich-text#fuori-salone-title",
+            "rich-text#fuori-salone-subtitle",
+            "flex-layout.row#form"
+        ],
+        "props": {
+            "blockClass": "fuoriSalone"
+        }
+    },
+    "flex-layout.row#form": {
+        "children": [
+            "flex-layout.col#form"
+        ],
+        "props": {
+            "blockClass": "fuoriSaloneRowForm"
+        }
+    },
+    "flex-layout.col#form": {
+        "children": [
+            "form"
+        ],
+        "props": {
+            "blockClass": "fuoriSalone"
+        }
+    },
+    "form": {
+        "props": {
+            "entity": "RF",
+            "schema": "registrationForm"
+        },
+        "children": [
+            "form-input.text#firstName",
+            "form-input.text#lastName",
+            "form-input.text#email",
+            "form-input.text#campaign",
+            "rich-text#termsAndConditions",
+            "form-input.checkbox#agreement",
+            "form-submit"
+        ],
+        "blocks": [
+            "form-success"
+        ]
+    },
+    "form-success": {
+        "children": [
+            "rich-text#successSubmit"
+        ],
+        "props": {
+            "blockClass": "fuoriSaloneSuccessSubmit"
+        }
+    },
+    "rich-text#successSubmit": {
+        "props": {
+            "text": "Grazie per esserti registrato!",
+            "textAlignment": "CENTER",
+            "textPosition": "CENTER",
+            "blockClass": "fuoriSaloneSuccessMessage"
+        }
+    },
+    "form-input.text#firstName": {
+        "props": {
+            "pointer": "#/properties/Name",
+            "label": "Nome *"
+        }
+    },
+    "form-input.text#lastName": {
+        "props": {
+            "pointer": "#/properties/Surname",
+            "label": "Cognome *"
+        }
+    },
+    "form-input.text#email": {
+        "props": {
+            "pointer": "#/properties/Email",
+            "label": "Email *"
+        }
+    },
+    "form-input.text#campaign": {
+        "props": {
+            "pointer": "#/properties/Campaign",
+            "inputType": "hidden",
+            "value": "form_LP_fuorisalone22"
+        }
+    },
+    "form-input.checkbox#agreement": {
+        "props": {
+            "pointer": "#/properties/NewsLetterOptIn",
+            "label": "Acconsento al trattamento dei miei dati personali per permettere a Whirlpool Italia Srl di inviarmi newsletter/comunicazioni di marketing (in forma elettronica e non, anche tramite telefono, posta tradizionale, e-mail, SMS, notifiche push su siti di terze parti tra cui sulle piattaforme Facebook e Google) riguardanti prodotti e servizi di Whirlpool Italia Srl, anche da me acquistati o registrati, nonché di svolgere ricerche di mercato. Con la registrazione potrò usufruire di uno sconto del 5% valido sul primo acquisto effettuato entro 12 mesi dalla registrazione. Sconto cumulabile con le altre offerte in essere."
+        }
+    },
+    "form-submit": {
+        "props": {
+            "label": "Conferma",
+            "blockClass": "fuoriSalone"
+        }
+    },
+    "rich-text#termsAndConditions": {
+        "props": {
+            "text": "Ho compreso e prendo atto del contenuto dell’[informativa sulla privacy]( https://www.whirlpool.it/pagine/informativa-sulla-privacy) e:",
+            "textAlignment": "center",
+            "blockClass": [
+                "fuoriSalone"
+            ],
+            "textPosition": "LEFT"
+        }
+    },
+    "rich-text#fuori-salone-title": {
+        "props": {
+            "text": "Inserisci il titolo",
+            "textAlignment": "center",
+            "blockClass": [
+                "fuoriSaloneTitle"
+            ],
+            "textPosition": "CENTER"
+        }
+    },
+    "rich-text#fuori-salone-subtitle": {
+        "props": {
+            "text": "Sottotitolo",
+            "textAlignment": "center",
+            "blockClass": [
+                "fuoriSaloneSubtitle"
+            ],
+            "textPosition": "CENTER"
+        }
+    }
+}

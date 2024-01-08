@@ -1,0 +1,159 @@
+.receiverInput {
+	margin: 0.5rem 0;
+	width: 100%;
+	position: relative;
+}
+
+.deliverygroupContainer {
+	margin-top: 1rem;
+}
+.deliveryMethodLabel {
+  font-family: "openSans";
+  font-size: 0.75rem;
+  letter-spacing: 2.5px;
+  font-weight: 600;
+}
+.deliverygroupContainer :global(.vtex-radio) {
+	display: flex;
+	align-items: center;
+}
+
+.deliverygroupContainer :global(.vtex-radioGroup__radioLabel) {
+	background-color: white;
+	margin-bottom: 1rem;
+	border-radius: 0.4rem !important;
+	border-color: #eee;
+}
+
+.deliveryTypeContainer {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.deliveryNameContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.deliveryPriceContainer {
+	display: flex;
+	align-items: center;
+	padding: 0.8rem;
+}
+
+.deliveryType {
+	color: #333;
+}
+
+.deliveryDescription {
+	color: #999;
+}
+
+.deliveryPrice {
+	color: #999;
+}
+.deliveryButton {
+	margin-top: 1rem;
+	display: flex;
+	justify-content: center;
+	margin-bottom: -2rem;
+}
+.deliveryButton > button {
+	transition: all 0.3s ease;
+	border-radius: 11px;
+	width: 50%;
+}
+.deliverySlotsContainer {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.deliverySlot {
+  border: 1px solid #eee;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  flex-basis: 30%;
+  padding: 1rem;
+  border-radius: 0.25rem;
+}
+.deliverySlot:hover, .deliverySlot.selectedDeliverySlot {
+  border-color: #0d436b;
+  background-color: #eee;
+}
+.slotDate {
+  font-size: 1rem;
+  color: #333;
+  font-weight: bold;
+}
+.slotPrice, .deliverySelectLabel {
+  font-size: 1rem;
+  color: #999;
+  margin: 0;
+}
+.select {
+	height: 40px;
+	line-height: 40px;
+	max-height: initial;
+	display: inline-block;
+	padding: 0px 10px;
+	border-radius: 5px;
+	border: 1px solid #cbcbcb;
+	outline: initial;
+	font-family: "openSans", sans-serif;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	width: 100%;
+}
+.skeletonLoader {
+  width: 100%;
+  height: 220px;
+  border-radius: 0.25rem;
+  background: #eee;
+  background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
+  background-size: 200% 100%;
+  animation: 1.5s shine linear infinite;
+}
+.disabledForm {
+  pointer-events: none;
+}
+.errorContainer {
+  border-color: #0D436B;
+  padding: 0.75rem 1.25rem;
+  border-radius: 4px;
+  gap: 0.75rem;
+}
+.errorMessageLabel {
+  font-size: 0.75rem;
+}
+.popupContainer {
+  background-color: rgba(238,238,238,0.8);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 999;
+}
+.popup {
+  padding: 1.5rem 1.75rem;
+  background-color: #fff;
+  width: 400px;
+  max-width: 95%;
+  border-radius: 4px;
+}
+@keyframes shine {
+  to {
+    background-position-x: -200%;
+  }
+}

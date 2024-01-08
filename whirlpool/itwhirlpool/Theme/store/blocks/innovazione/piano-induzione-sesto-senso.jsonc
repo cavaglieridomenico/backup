@@ -1,0 +1,128 @@
+{
+  "store.custom#piano-induzione-sesto-senso": {
+    "children": [
+      "flex-layout.row#bread-theme",
+      "experimental__visibility-layout#heroBannerAnto",
+      "experimental__visibility-layout#videoHalf",
+      "toggle-layout#chatWidget",
+      ////"analytics",
+      "__fold__.experimentalLazyAssets",
+      "flex-layout.row#BnnrPostillaWCollectionFrigo4PorteBottom2",
+      "experimental__visibility-layout#bannerTesto90",
+      "experimental__visibility-layout#BannerTab",
+      "experimental__visibility-layout#richTextCentrale",
+      "experimental__visibility-layout#BannerTab2",
+      "experimental__visibility-layout#richTextCentrale2",
+      "experimental__visibility-layout#bannerClassicoImmSin70",
+      "flex-layout.row#space",
+      "experimental__visibility-layout#CaruselTextBanner",
+      "experimental__visibility-layout#CaruselTextBanner2",
+      "flex-layout.row#space",
+      "responsive-layout.mobile#caroselloProdottiSestoSenso",
+      "responsive-layout.desktop#caroselloProdottiSestoSenso",
+      "newsletter-popup#footer"
+    ]
+  },
+  "responsive-layout.mobile#caroselloProdottiSestoSenso": {
+    "children": [
+      "experimental__visibility-layout#caroselloProdottiSestoSensoMobile"
+    ]
+  },
+  "responsive-layout.desktop#caroselloProdottiSestoSenso": {
+    "children": [
+      "experimental__visibility-layout#caroselloProdottiSestoSensoDesktop"
+    ]
+  },
+  "experimental__visibility-layout#caroselloProdottiSestoSensoMobile": {
+    "props": {
+      "visible": false
+    },
+    "children": ["list-context.product-list#caroselloProdottiSestoSensoMobile"]
+  },
+  "experimental__visibility-layout#caroselloProdottiSestoSensoDesktop": {
+    "props": {
+      "visible": false
+    },
+    "children": ["list-context.product-list#caroselloProdottiSestoSensoDesktop"]
+  },
+  "list-context.product-list#caroselloProdottiSestoSensoMobile": {
+    "blocks": ["product-summary.shelf#caroselliLanding"],
+    "children": ["slider-layout#innovazione"],
+    "props": {
+      "collection": "150",
+      "productList": {
+        "maxItems": 10,
+        "itemsPerPage": 5,
+        "minItemsPerPage": 1,
+        "scroll": "BY_PAGE",
+        "arrows": true,
+        "titleText": "Non sai da dove iniziare? Scopri i prodotti Whirlpool più venduti"
+      }
+    }
+  },
+  "list-context.product-list#caroselloProdottiSestoSensoDesktop": {
+    "blocks": ["product-summary.shelf#caroselliLanding"],
+    "children": ["slider-layout#caroselloProdottiSestoSensoDesktop"],
+    "props": {
+      "collection": "150",
+      "productList": {
+        "maxItems": 10,
+        "itemsPerPage": 5,
+        "minItemsPerPage": 1,
+        "scroll": "BY_PAGE",
+        "arrows": true,
+        "titleText": "Non sai da dove iniziare? Scopri i prodotti Whirlpool più venduti"
+      }
+    }
+  },
+  "slider-layout#caroselloProdottiSestoSensoMobile": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 5,
+        "tablet": 2,
+        "phone": 1
+      },
+      "infinite": true,
+      "fullWidth": true,
+      "blockClass": "shelWCollectionfMobile",
+      "showPaginationDots": "never",
+      "showNavigationArrows": "never"
+    }
+  },
+  "slider-layout#caroselloProdottiSestoSensoDesktop": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 5,
+        "tablet": 2,
+        "phone": 1
+      },
+      "infinite": true,
+      "fullWidth": false,
+      "blockClass": "shelf"
+    }
+  },
+  "experimental__visibility-layout#richTextCentrale": {
+    "props": {
+      "visible": true
+    },
+    "children": ["flex-layout.row#space", "rich-text#percheWhirlpool"]
+  },
+  "experimental__visibility-layout#richTextCentrale2": {
+    "props": {
+      "visible": true
+    },
+    "children": ["flex-layout.row#space", "rich-text#percheWhirlpool"]
+  },
+  "experimental__visibility-layout#BannerTab2": {
+    "props": {
+      "visible": true
+    },
+    "children": ["tab-layout#BannerTab"]
+  },
+  "experimental__visibility-layout#CaruselTextBanner2": {
+    "props": {
+      "visible": true
+    },
+    "children": ["flex-layout.row#CaruselTextBanner"]
+  }
+}

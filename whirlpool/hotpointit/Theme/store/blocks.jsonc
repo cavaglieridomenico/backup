@@ -1,0 +1,188 @@
+/* Blocks can be defined both on the store/blocks.json file, and in any number of json
+ * files inside the store/blocks directory, with any arbitrary directory structure.
+ *
+ * Additionally, all blocks files can support comments, such as this one, if given the
+ * .jsonc file extension.
+ *
+ * The store/blocks.json file is intended for backwards compatibility, for miscellaneous
+ * blocks, or if the app is simple enough that it doesn't warrant splitting the file.
+ */
+{
+  "store.orderplaced": {
+    "blocks": [
+      "order-placed" //"analytics#purchase"
+    ]
+  },
+  "store.account": {
+    "blocks": [
+      "my-account"
+      //"analytics"
+    ],
+    "parent": {
+      "challenge": "challenge.profile"
+    }
+  },
+  "store.not-found#product": {
+    "children": [
+      "rich-text#not-found-page",
+      "rich-text#buttonNotFound",
+      "image#404",
+      "flex-layout.row#newsletter-row"
+      //"analytics#error"
+    ],
+    "props": {
+      "blockClass": [
+        "flexDisplay",
+        "flexColDir",
+        "center"
+      ]
+    }
+  },
+  "store.not-found#search": {
+    "children": [
+      "rich-text#not-found-page",
+      "rich-text#buttonNotFound",
+      "image#404",
+      "flex-layout.row#newsletter-row"
+      //"analytics#error"
+    ],
+    "props": {
+      "blockClass": [
+        "flexDisplay",
+        "flexColDir",
+        "center"
+      ]
+    }
+  },
+  "store.custom#teste": {
+    "children": [
+      "rich-text#not-found-page",
+      "rich-text#buttonNotFound",
+      "image#404"
+      //"analytics"
+    ],
+    "props": {
+      "blockClass": [
+        "flexDisplay",
+        "flexColDir",
+        "center"
+      ],
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER"
+    }
+  },
+  "rich-text#not-found-page": {
+    "props": {
+      "text": "Siamo spiacenti, nessun risultato",
+      "textAlignment": "center",
+      "blockClass": [
+        "notFound",
+        "center"
+      ],
+      "textPosition": "CENTER"
+    }
+  },
+  "rich-text#buttonNotFound": {
+    "props": {
+      "text": "[ ritorna alla homepage ](/)",
+      "blockClass": [
+        "buttonCard",
+        "linkNotFound",
+        "center"
+      ],
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER"
+    }
+  },
+  "image#404": {
+    "props": {
+      "src": "assets/404.jpg",
+      "blockClass": "center"
+    }
+  },
+  /* ----- NEWSLETTER BLOCKS ----- */
+  /* NEWSLETTER BUTTON */
+  "flex-layout.row#newsletter-row": {
+    "title": "[ROW BOTTOM] - Newsletter Row",
+    "children": [
+      "rich-text#newsletter-text",
+      "newsletter-button"
+    ],
+    "props": {
+      "blockClass": [
+        "newsletterRow"
+      ]
+    }
+  },
+  "rich-text#newsletter-text": {
+    "title": "Rich Text - Newsletter",
+    "props": {
+      "text": "#### Approfitta dei vantaggi del mondo Hotpoint",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": [
+        "newsletterText"
+      ]
+    }
+  },
+  "newsletter-button": {
+    "props": {
+      "linkUrl": "/newsletter"
+    }
+  },
+  /* NEWSLETTER AUTOMATIC POPUP */
+  "flex-layout.row#newsletter-automatic-popup": {
+    "title": "Row - Newsletter Automatic Popup",
+    "children": [
+      "newsletter-automatic-popup"
+    ]
+  },
+  "newsletter-automatic-popup": {
+    "props": {
+      "time": 10000
+    },
+    "children": [
+      "flex-layout.col#newsletter-form-automatic-popup"
+    ]
+  },
+  /* NEWSLETTER FORM FOR THE AUTOMATIC POPUP */
+  "flex-layout.col#newsletter-form-automatic-popup": {
+    "title": "COL - Newsletter Form Automatic Popup",
+    "children": [
+      "experimental__visibility-layout#image-newsletter-form",
+      "newsletter-form#automatic-popup"
+    ],
+    "props": {
+      "blockClass": "newsletterFormCol"
+    }
+  },
+  "newsletter-form#automatic-popup": {
+    "props": {
+      "title": "APPROFITTA DEI VANTAGGI",
+      "subtitles": [
+        {
+          "__editorItemTitle": "#### Iscriviti per ricevere offerte in anteprima, ricette, informazioni e consigli per l’utilizzo dei tuoi elettrodomestici."
+        }
+      ],
+      "checkboxes": [
+        {
+          "checkboxLabel": "Acconsento al trattamento dei miei dati personali per permettere a Whirlpool Italia Srl di inviarmi newsletter/comunicazioni di marketing (in forma elettronica e non, anche tramite telefono, posta tradizionale, e- mail, SMS, notifiche push su siti di terze parti tra cui sulle piattaforme Facebook e Google) riguardanti prodotti e servizi di Whirlpool italia Srl, anche da me acquistati o registrati, nonché di svolgere ricerche di mercato.",
+          "checkboxRequired": true,
+          "checkboxNewsletter": true,
+          "checkboxError": "Seleziona questa casella per continuare"
+        }
+      ],
+      "privacyPolicyTextArray": [
+        {
+          "__editorItemTitle": "Ho compreso e prendo atto del contenuto dell’[informativa sulla privacy](https://www.hotpoint.it/pagine/informativa-sulla-privacy) e:"
+        }
+      ],
+      "errorRequiredField": "Questo campo è obbligatorio",
+      "errorInvalidMail": "Inserisci un'email valida",
+      "shouldLogInErrorMessage": "La tua email risulta già registrata nei nostri sistemi. Puoi modificare le tue preferenze all'interno della pagina del MyAccount, accedendo al sito con le tue credenziali. Grazie",
+      "successMessage": "Grazie per esserti iscritto alla nostra newsletter!",
+      "registeredErrorMessage": "Sei già registrato!",
+      "pixelEventName": "newsletterAutomaticSubscription"
+    }
+  }
+}

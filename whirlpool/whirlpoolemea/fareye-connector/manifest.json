@@ -1,0 +1,313 @@
+{
+  "name": "fareye-connector",
+  "vendor": "whirlpoolemea",
+  "version": "0.1.6",
+  "title": "FarEye Connector",
+  "description": "App connecting Vtex with FarEye",
+  "categories": [],
+  "dependencies": {},
+  "builders": {
+    "node": "6.x",
+    "docs": "0.x"
+  },
+  "billingOptions": {
+    "termsURL": "https://compliance.vtex.com/gdpr/policies/vtex-privacy-policy",
+    "support": {
+      "url": "https://support.vtex.com/hc/requests"
+    },
+    "free": true
+  },
+  "scripts": {},
+  "credentialType": "absolute",
+  "policies": [
+    {
+      "name": "ADMIN_DS"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "api.vtex.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.myvtex.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.vtexcommercestable.com.br",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "portal.vtexcommercestable.com.br",
+        "path": "*"
+      }
+    },
+    {
+      "name": "colossus-fire-event"
+    },
+    {
+      "name": "ADMIN_DS"
+    },
+    {
+      "name": "AcessaTodosCarrinhos"
+    },
+    {
+      "name": "AcessaTodosPedidos"
+    },
+    {
+      "name": "OMSViewer"
+    },
+    {
+      "name": "vbase-read-write"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "api-staging.stagingfareyeconnect.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "api-uat.stagingfareyeconnect.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "api-uat.fareyeconnect.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "api-eu.fareyeconnect.com",
+        "path": "*"
+      }
+    }
+  ],
+  "settingsSchema": {
+    "title": "FarEye Connector",
+    "type": "object",
+    "properties": {
+      "Vtex_Settings": {
+        "title": "Vtex settings:",
+        "type": "object",
+        "properties": {
+          "Auth": {
+            "title": "Credentials",
+            "type": "object",
+            "properties": {
+              "Credential": {
+                "title": "Inbound AppKey:AppToken semicolon separated AppToken sha-512)",
+                "type": "string"
+              }
+            }
+          },
+          "Admin": {
+            "title": "Admin parameters",
+            "type": "object",
+            "properties": {
+              "FB_EntityName": {
+                "title": "FarEye Booking MasterData EntityName",
+                "type": "string",
+                "default": "FB"
+              },
+              "InStock_SpId": {
+                "title": "InStock shipping policy Id",
+                "type": "string"
+              },
+              "GasSpecs": {
+                "title": "Gas specification",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "Name": {
+                      "title": "Field name",
+                      "type": "string"
+                    },
+                    "Value": {
+                      "title": "Field value",
+                      "type": "string"
+                    }
+                  }
+                },
+                "default": [
+                  {
+                    "Name": "Tipo di piano cottura:",
+                    "Value": "Gas"
+                  },
+                  {
+                    "Name": "Tipo di piano cottura",
+                    "Value": "GAS"
+                  },
+                  {
+                    "Name": "Sorgente energetica utilizzata",
+                    "Value": "GAS"
+                  },
+                  {
+                    "Name": "Tipo di forno:",
+                    "Value": "Gas"
+                  },
+                  {
+                    "Name": "Tipo di forno",
+                    "Value": "GAS"
+                  }
+                ]
+              },
+              "SideBySide_Specs": {
+                "title": "Side-By-Side specification",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "Name": {
+                      "title": "Field name",
+                      "type": "string"
+                    },
+                    "Value": {
+                      "title": "Field value",
+                      "type": "string"
+                    }
+                  }
+                },
+                "default": [
+                  {
+                    "Name": "field5",
+                    "Value": "SideBySide"
+                  },
+                  {
+                    "Name": "Tipo di elettrodomestico:",
+                    "Value": "Side-by-Side"
+                  }
+                ]
+              },
+              "InstallationServiceIds": {
+                "title": "Installation service Ids (comma separated)",
+                "type": "string",
+                "default": "1,5,9,13,17"
+              },
+              "MarketPlace": {
+                "title": "MarketPlace settings",
+                "type": "object",
+                "properties": {
+                  "UserName": {
+                    "title": "UserName",
+                    "type": "string"
+                  },
+                  "Password": {
+                    "title": "Password",
+                    "type": "string"
+                  },
+                  "BasicHash": {
+                    "title": "Inbound credential hash (sha256)",
+                    "type": "string"
+                  },
+                  "MP_PrefixToIgnore": {
+                    "title": "Marketplace orderId prefix to be ignored (comma separated)",
+                    "type": "string"
+                  },
+                  "IsMarketplace": {
+                    "title": "Is Marketplace",
+                    "type": "boolean",
+                    "default": false
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "FarEye_Settings": {
+        "title": "FarEye settings:",
+        "type": "object",
+        "properties": {
+          "Country": {
+            "title": "Country's code (eg. IT)",
+            "type": "string",
+            "enum": [
+              "IT"
+            ]
+          },
+          "Host": {
+            "title": "Services Host",
+            "type": "string",
+            "default": "https://api-staging.stagingfareyeconnect.com"
+          },
+          "IsAuthEnabled": {
+            "title": "Bearer auth enabled",
+            "type": "boolean",
+            "default": false
+          },
+          "ClientId": {
+            "title": "Client id",
+            "type": "string"
+          },
+          "ClientSecret": {
+            "title": "Client secret",
+            "type": "string"
+          },
+          "StaticToken": {
+            "title": "Static token",
+            "type": "string",
+            "default": "3cd996f4-1bd3-4937-a9be-d72a6f4172fe"
+          },
+          "GetSlot_Endpoint": {
+            "title": "GetSlot service endpoint",
+            "type": "string",
+            "default": "/connector/v1/whirlpool/get-slot?countrycode=IT"
+          },
+          "ReserveSlot_Endpoint": {
+            "title": "ReserveSlo service endpoint",
+            "type": "string",
+            "default": "/connector/v1/whirlpool/confirm-slot?countrycode=IT"
+          },
+          "CancelSlot_Endpoint": {
+            "title": "CancelSlot service endpoint",
+            "type": "string",
+            "default": "/visibility/generic/v3/carrier/cancel-slot"
+          },
+          "Fulfillment_center": {
+            "title": "Whirlpool's warehouse Code (fulfillment_center)",
+            "type": "string",
+            "default": "ITALY"
+          },
+          "BookingDate_Delay": {
+            "title": "Delay of booking date (in days)",
+            "type": "number",
+            "default": 1
+          },
+          "TimeSlotEndDate_Delay": {
+            "title": "Delay of TimeSlot EndDate (in days)",
+            "type": "number",
+            "default": 15
+          },
+          "BookingExpire": {
+            "title": "Expire time of bookings (in hours)",
+            "type": "number",
+            "default": 2
+          },
+          "TimeSlotBlackList": {
+            "title": "TimeSlot black list hour range (comma separated)",
+            "type": "string",
+            "default": "08:00:00-18:00:59"
+          }
+        }
+      }
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

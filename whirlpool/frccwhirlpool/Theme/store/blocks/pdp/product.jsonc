@@ -1,0 +1,3150 @@
+{
+  //Commented breadcrumb for ticket RU-1023
+  "store.product.product-comparison": {
+    "children": [
+      "responsive-layout.desktop#product-header",
+      "responsive-layout.mobile#product-header",
+      "flex-layout.row#collection-badgesPDP",
+      "flex-layout.row#product-main-pdp",
+      "condition-layout.product#isAccessory-2",
+      "rich-text#hiddenContent",
+      "flex-layout.row#similarsCarousel",
+      "flex-layout.row#showtogetherCarousel",
+      "flex-layout.row#suggestionsCarousel",
+      "toggle-layout#salesforceCarousel",
+      "product-comparison-drawer"
+    ]
+    // "parent": {
+    //   "header": "header#pdp"
+    // }
+  },
+  "responsive-layout.desktop#product-header": {
+    "children": [
+      "flex-layout.row#breadcrumb-container",
+      "flex-layout.row#product-name-skuid",
+      "flex-layout.row#addToWish-Desktop"
+    ]
+  },
+  "flex-layout.row#product-name-skuid": {
+    "children": [
+      "flex-layout.col#title-col1",
+      "flex-layout.col#title-col2",
+      "flex-layout.col#title-col3"
+    ],
+    "props": {
+      "blockClass": "stileskuid"
+    }
+  },
+  "flex-layout.col#title-col1": {
+    "children": [
+      "vtex.store-components:product-name"
+    ],
+    "props": {
+      "width": "50%"
+    }
+  },
+  "flex-layout.col#title-col2": {
+    "children": [
+      // "flex-layout.row#stockAvailability"
+      "flex-layout.row#lead-time"
+    ],
+    "props": {
+      "width": "25%"
+    }
+  },
+  "flex-layout.col#title-col3": {
+    "children": [
+      "product-identifier.product#productSkuId"
+    ],
+    "props": {
+      "width": "25%"
+    }
+  },
+  "flex-layout.row#stockAvailability": {
+    "children": [
+      "condition-layout.product#stockAvailability"
+    ],
+    "props": {
+      "blockClass": "stockAvailability"
+    }
+  },
+  "condition-layout.product#stockAvailability": {
+    "title": " [CONDITION] isProductAvailable? inStock",
+    "props": {
+      "conditions": [
+        {
+          "subject": "isProductAvailable"
+        }
+      ],
+      "Then": "flex-layout.row#enStockLabel",
+      "Else": "flex-layout.row#notEnStockLabel"
+    }
+  },
+  "flex-layout.row#enStockLabel": {
+    "children": [
+      "image#enStock",
+      "rich-text#enStock"
+    ],
+    "props": {
+      "blockClass": "stockAvailability"
+    }
+  },
+  "image#enStock": {
+    "props": {
+      "src": "/arquivos/check-solid.svg",
+      "width": "14px",
+      "blockClass": "enStockImage"
+    }
+  },
+  "rich-text#enStock": {
+    "props": {
+      "text": "En stock",
+      "blockClass": "enStockLabel"
+    }
+  },
+  "flex-layout.row#notEnStockLabel": {
+    "children": [
+      "image#notEnStock",
+      "rich-text#notEnStock"
+    ],
+    "props": {
+      "blockClass": "stockAvailability"
+    }
+  },
+  "image#notEnStock": {
+    "props": {
+      "src": "/arquivos/times-solid.svg",
+      "width": "14px",
+      "blockClass": "enStockImage"
+    }
+  },
+  "rich-text#notEnStock": {
+    "props": {
+      "text": "Not en stock",
+      "blockClass": "enStockLabel"
+    }
+  },
+  "flex-layout.row#addToWish-Desktop": {
+    "children": [
+      // "flex-layout.row#buttons-compareWishlist"
+      "add-to-list-btn",
+      "product-comparison-block.selector#pdp"
+    ],
+    "props": {
+      "preventHorizontalStretch": true,
+      "blockClass": "addToWish-Desktop"
+    }
+  },
+  "product-comparison-block.selector#pdp": {
+    "props": {
+      "blockClass": [
+        "compareSearchPage",
+        "compareSearchPdp"
+      ]
+    }
+  },
+  "responsive-layout.mobile#product-header": {
+    "children": [
+      "flex-layout.row#product-name-mobile",
+      "flex-layout.row#stock-skuid-mobile",
+      "flex-layout.row#productPreServizi-discontinued",
+      "condition-layout.product#stickyAddToCart"
+    ]
+  },
+  "flex-layout.row#product-name-mobile": {
+    "props": {
+      "blockClass": "productNameMobile"
+    },
+    "children": [
+      "vtex.store-components:product-name"
+    ]
+  },
+  "flex-layout.row#stock-skuid-mobile": {
+    "children": [
+      // "flex-layout.col#title-col6",
+      // "flex-layout.col#title-col6",
+      "flex-layout.col#title-col7"
+    ],
+    "props": {
+      "preserveLayoutOnMobile": true,
+      "blockClass": "stileskuid"
+    }
+  },
+  "flex-layout.col#title-col6": {
+    "children": [
+      // "flex-layout.row#stockAvailability"
+      "flex-layout.row#lead-time"
+    ],
+    "props": {
+      "width": "auto"
+    }
+  },
+  "flex-layout.col#title-col7": {
+    "children": [
+      "product-identifier.product#productSkuId"
+    ],
+    "props": {
+      "width": "auto"
+    }
+  },
+  "product-identifier.product#productSkuId": {
+    "props": {
+      "idField": "skuReferenceId",
+      "blockClass": "borderLeft",
+      "product-identifier__label": "Test"
+    }
+  },
+  // #######------ start xSell ------#######
+  "condition-layout.product#hasAccessoryAssociationsNotStock": {
+    "title": " [CONDITION] isProductAvailable? showAddToCartInPdp",
+    "props": {
+      "conditions": [
+        {
+          "subject": "isProductAvailable"
+        }
+      ],
+      "Then": "condition-layout.product#hasAccessoryAssociations",
+      "Else": "flex-layout.row#buy-button"
+    }
+  },
+  "condition-layout.product#hasAccessoryAssociations": {
+    "title": " [CONDITION] hasAccessoryAssociations = true ? - xSell Modal",
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "hasAccessoryAssociations",
+            // "value": true
+            "value": "true"
+          }
+        }
+      ],
+      "Then": "condition-layout.binding#isEPP",
+      // "Then": "rich-text#testAssociations"
+      "Else": "flex-layout.row#buy-button"
+    }
+  },
+  "condition-layout.binding#isEPP": {
+    "title": " [CONDITION] isEpp = true ? hasAccessoriesInStockEpp",
+    "props": {
+      "conditions": [
+        {
+          "subject": "bindingId",
+          "arguments": {
+            "id": "1bbaf935-b5b4-48ae-80c0-346623d9c0c9"
+          }
+        }
+      ],
+      "Then": "condition-layout.product#hasAccessoriesEPP",
+      "Else": "condition-layout.binding#isFF"
+    }
+  },
+  "condition-layout.product#hasAccessoriesEPP": {
+    "title": " [CONDITION] accessoriesHaveStockEPP = true ? xSell Modal",
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "accessoriesHaveStockEPP",
+            "value": "true"
+          }
+        }
+      ],
+      // "Then": "sticky-layout#addToCart-button"
+      "Then": "modal-trigger#relatedAccessories",
+      "Else": "condition-layout.product#hasAccessoriesFF"
+    }
+  },
+  "condition-layout.binding#isFF": {
+    "title": " [CONDITION] isFF ? true - hasAccessoriesInStockFF",
+    "props": {
+      "conditions": [
+        {
+          "subject": "bindingId",
+          "arguments": {
+            "id": "b9f7bf3a-c865-4169-8950-4fbb8b55ec09"
+          }
+        }
+      ],
+      "Then": "condition-layout.product#hasAccessoriesFF",
+      "Else": "condition-layout.binding#isVIP"
+    }
+  },
+  "condition-layout.product#hasAccessoriesFF": {
+    "title": " [CONDITION] accessoriesHaveStockVIP = true ? xSell Modal",
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "accessoriesHaveStockFF",
+            "value": "true"
+          }
+        }
+      ],
+      "Then": "modal-trigger#relatedAccessories",
+      "Else": "condition-layout.product#hasAccessoriesVIP"
+    }
+  },
+  "condition-layout.binding#isVIP": {
+    "title": " [CONDITION] isVip ? true - hasAccessoriesInStockVip",
+    "props": {
+      "conditions": [
+        {
+          "subject": "bindingId",
+          "arguments": {
+            "id": "17564333-171d-4290-998d-276aae4a3ee5"
+          }
+        }
+      ],
+      "Then": "condition-layout.product#hasAccessoriesVIP",
+      "Else": "flex-layout.row#buy-button"
+    }
+  },
+  "condition-layout.product#hasAccessoriesVIP": {
+    "title": " [CONDITION] accessoriesHaveStockVIP = true ? xSell Modal",
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "accessoriesHaveStockVIP",
+            "value": "true"
+          }
+        }
+      ],
+      "Then": "modal-trigger#relatedAccessories",
+      "Else": "flex-layout.row#buy-button"
+    }
+  },
+  "rich-text#bindingFound": {
+    "props": {
+      "text": "binding found"
+    }
+  },
+  // #######------ finish xSell ------#######
+  // #######------ start relatedProducts ------#######
+  "toggle-layout#similars": {
+    "title": " [CONDITION] Toggle - Similar Items",
+    "children": [
+      "condition-layout.product#similars"
+    ]
+  },
+  "toggle-layout#suggestions": {
+    "title": " [CONDITION] Toggle - Suggestions",
+    "children": [
+      "condition-layout.product#suggestions"
+    ]
+  },
+  "toggle-layout#showtogheter": {
+    "title": " [CONDITION] Toggle - Show Togheter",
+    "children": [
+      "condition-layout.product#showtogheter"
+    ]
+  },
+  "condition-layout.product#similars": {
+    "title": " [CONDITION] isDiscontinued ? false - relatedAccessories: similars",
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "isDiscontinued",
+            "value": "false"
+          }
+        }
+      ],
+      "Then": "flex-layout.row#similarsCarousel"
+    }
+  },
+  "flex-layout.row#similarsCarousel": {
+    "children": [
+      "shelf.relatedProducts#similars"
+    ],
+    "props": {
+      "blockClass": "pdpCarousels"
+    }
+  },
+  "flex-layout.row#suggestionsCarousel": {
+    "children": [
+      "shelf.relatedProducts#suggestions"
+    ],
+    "props": {
+      "blockClass": "pdpCarousels"
+    }
+  },
+  "flex-layout.row#showtogetherCarousel": {
+    "children": [
+      "shelf.relatedProducts#showtogether"
+    ],
+    "props": {
+      "blockClass": "pdpCarousels"
+    }
+  },
+  "condition-layout.product#suggestions": {
+    "title": " [CONDITION] isDiscontinued ? false - relatedAccessories: suggestions",
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "isDiscontinued",
+            "value": "false"
+          }
+        }
+      ],
+      "Then": "flex-layout.row#suggestionsCarousel"
+    }
+  },
+  "condition-layout.product#showtogheter": {
+    "title": " [CONDITION] isDiscontinued = false ? - relatedAccessories: showTogheter",
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "isDiscontinued",
+            "value": "false"
+          }
+        }
+      ],
+      "Then": "flex-layout.row#showtogetherCarousel"
+    }
+  },
+  "shelf.relatedProducts#showtogether": {
+    "blocks": [
+      "product-summary.shelf"
+    ],
+    "props": {
+      "showPaginationDots": "never",
+      "recommendation": "accessories",
+      "productList": {
+        "maxItems": 10,
+        "itemsPerPage": 4,
+        "minItemsPerPage": 1,
+        "scroll": "BY_PAGE",
+        "arrows": true,
+        "showTitle": true,
+        "titleText": "Notre sélection pour compléter votre choix"
+      },
+      "blockClass": [
+        "margin18",
+        "slideMargin",
+        "slide20width",
+        "mobileNomargin"
+      ]
+    }
+  },
+  // #######------ finish relatedProducts ------#######
+  // #######------ start promotionBadgePdp ------#######
+  "flex-layout.row#product-highlights#promotion": {
+    "children": [
+      "vtex.product-highlights@2.x:product-highlights#promotion"
+    ]
+  },
+  "vtex.product-highlights@2.x:product-highlights#promotion": {
+    "props": {
+      "type": "promotion"
+    },
+    "children": [
+      "product-highlight-text#pdp"
+    ]
+  },
+  "product-highlight-text#pdp": {
+    "props": {
+      "message": "{highlightName}"
+    }
+  },
+  "flex-layout.row#highlightsPdp": {
+    "children": [
+      "vtex.product-highlights@2.x:product-highlights#collectionPdp"
+    ],
+    "props": {
+      "blockClass": "badgesWrapperPdp",
+      "fullWidth": false
+    }
+  },
+  "vtex.product-highlights@2.x:product-highlights#collectionPdp": {
+    "props": {
+      "type": "collection"
+    },
+    "children": [
+      "product-highlight-wrapper#collectionPdp"
+    ]
+  },
+  "product-highlight-wrapper#collectionPdp": {
+    "props": {
+      "blockClass": "collectionPdp"
+    },
+    "children": [
+      "product-highlight-text"
+    ]
+  },
+  "product-highlight-text": {
+    "props": {
+      "message": "{highlightName}"
+    }
+  },
+  "flex-layout.row#collection-badgesPDP": {
+    "title": " [CONDITION] badgesPDP",
+    "children": [
+      "flex-layout.col#soldes&promoBadgesPdp",
+      "flex-layout.col#rightPLPCardHigh"
+    ],
+    "props": {
+      "blockClass": "collectionBadgesPDP"
+    }
+  },
+  "flex-layout.col#soldes&promoBadgesPdp": {
+    "children": [
+      "flex-layout.col#leftPDPCardPromo",
+      "flex-layout.row#empty"
+    ],
+    "props": {
+      "blockClass": "promoBadgesPdp"
+    }
+  },
+  "flex-layout.col#leftPDPCardPromo": {
+    "children": [
+      "vtex.product-highlights@2.x:product-highlights#promotionsPDP"
+    ],
+    "props": {
+      "blockClass": [
+        "yellowBadgePDPCardPromo"
+      ],
+      "preserveLayoutOnMobile": false
+    }
+  },
+  "vtex.product-highlights@2.x:product-highlights#promotionsPDP": {
+    "props": {
+      "type": "promotion"
+    },
+    "children": [
+      "product-highlight-text#promotionBadgeTextPDP"
+    ]
+  },
+  "product-highlight-text#promotionBadgeTextPDP": {
+    "props": {
+      "message": "{highlightName}",
+      "blockClass": [
+        "PromotionBadgeYellowPDP"
+      ]
+    }
+  },
+  // #######------ finish promotionBadgePdp ------#######
+  // #######------ START mainPdp ------#######
+  "flex-layout.row#product-main-pdp": {
+    "props": {
+      "colGap": 3,
+      "rowGap": 5,
+      "marginTop": 4,
+      "marginBottom": 4,
+      "paddingTop": 5,
+      "paddingBottom": 5,
+      "blockClass": "mainRow",
+      "colSizing": "auto"
+    },
+    "children": [
+      "flex-layout.col#product-image",
+      "responsive-layout.desktop#product-side",
+      "responsive-layout.mobile#product-side"
+    ]
+  },
+  "flex-layout.col#product-image": {
+    "children": [
+      "flex-layout.row#product-image"
+    ],
+    "props": {
+      "width": "40%"
+    }
+  },
+  "flex-layout.row#product-image": {
+    "children": [
+      "video-player-thron-pdp"
+      // "product-images#pdp"
+    ]
+  },
+  "product-images#pdp": {
+    "props": {
+      "displayThumbnailsArrows": true,
+      "showPaginationDots": false,
+      "contentType": "images"
+    }
+  },
+  "video-player-thron-pdp": {
+    "props": {
+      "aspectRatio": {
+        "desktop": "auto",
+        "phone": "16:9"
+      },
+      "showPaginationDots": false,
+      "maxHeight": 400,
+      "blockClass": "productPage"
+    }
+  },
+  "responsive-layout.desktop#product-side": {
+    "children": [
+      "flex-layout.row#right-side"
+    ]
+  },
+  "responsive-layout.mobile#product-side": {
+    "children": [
+      "flex-layout.row#right-side-mobile"
+    ]
+  },
+  "flex-layout.row#right-side": {
+    "title": " [CONDITION] rightSide",
+    "props": {
+      "preventVerticalStretch": true,
+      "blockClass": "right-side"
+    },
+    "children": [
+      "flex-layout.col#left-col",
+      "flex-layout.col#right-col-containerpdp"
+    ]
+  },
+  "flex-layout.row#right-side-mobile": {
+    "props": {
+      "preventVerticalStretch": true,
+      "blockClass": "singleColumnMobilePdp"
+    },
+    "children": [
+      "flex-layout.col#right-col-containerpdp-mobile",
+      "flex-layout.col#left-col-mobile"
+    ]
+  },
+  "flex-layout.col#left-col": {
+    "children": [
+      "flex-layout.row#productPreServizi-discontinued",
+      "flex-layout.row#additional-services-pdp",
+      // "free-additional-services#pdp",
+      "flex-layout.row#main-description",
+      "flex-layout.row#specifications-title"
+    ],
+    "props": {
+      "width": "58%",
+      "paddingLeft": 5,
+      "blockClass": "leftColumnPdpDesktop"
+    }
+  },
+  "flex-layout.row#productPreServizi-discontinued": {
+    "props": {
+      "blockClass": "preServizi",
+      "preventHorizontalStretch": "true"
+    },
+    "children": [
+      "condition-layout.product#etichetta-image-pre-discontinued",
+      "condition-layout.product#schedaProdottoTabNew",
+      "condition-layout.product#schedaProdottoTabOld",
+      "condition-layout.product#isAccessorioEtichette2"
+    ]
+  },
+  "flex-layout.row#productPreServizi-image": {
+    "props": {
+      "blockClass": ["preServizi", "preServiziModal"],
+      "preventHorizontalStretch": "true"
+    },
+    "children": [
+      "condition-layout.product#etichetta-image-pre-discontinued"
+    ]
+  },
+  "condition-layout.product#etichetta-image-pre-discontinued": {
+    "title": " [CONDITION] energy-label ? subscriptionPrice",
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "energy-label"
+          }
+        }
+      ],
+      "Then": "flex-layout.row#old-label-pre-discontinued",
+      "Else": "flex-layout.row#new-label-pre-discontinued"
+    }
+  },
+  "flex-layout.row#new-label-pre-discontinued": {
+    "children": [
+      "image-from-specification#EtichettaEnergeticaNew-pre-discontinued"
+    ]
+  },
+  "flex-layout.row#old-label-pre-discontinued": {
+    "children": [
+      "image-from-specification#EtichettaEnergetica-pre-discontinued"
+    ]
+  },
+  "image-from-specification#EtichettaEnergeticaNew-pre-discontinued": {
+    "props": {
+      "specificationName": "EnergyLogo_image",
+      "imageLink": "Specification.new-energy-label",
+      "labelWithHref": true,
+      "target": "_blank"
+    }
+  },
+  "image-from-specification#EtichettaEnergetica-pre-discontinued": {
+    "props": {
+      "specificationName": "EnergyLogo_image",
+      "imageLink": "Specification.energy-label",
+      "labelWithHref": true,
+      "target": "_blank"
+    }
+  },
+  "flex-layout.row#additional-services-pdp": {
+    "props": {
+      "blockClass": "addServicesPdp"
+    },
+    "children": [
+      "additional-services-pdp"
+    ]
+  },
+  "flex-layout.col#left-col-mobile": {
+    "children": [
+      "additional-services-pdp",
+      "flex-layout.col#right-row-pdp-bottom",
+      "condition-layout.product#isDiscontinuedShippingSimulatorQuestion",
+      "condition-layout.product#isDiscontinuedShippingCustom",
+      "flex-layout.row#availability-subscriber-custom",
+      "flex-layout.row#main-description",
+      "condition-layout.product#isAccessoryMobile"
+    ],
+    "props": {
+      "width": "58%",
+      "paddingLeft": 5,
+      "blockClass": "singleColumnMobilePdpBottom"
+    }
+  },
+  "condition-layout.product#isAccessoryMobile": {
+    "title": " [CONDITION] constructionType = 'accessory' - specificationTable ",
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "constructionType",
+            "value": "Accessory"
+          }
+        }
+      ],
+      "Else": "flex-layout.row#specifications-title"
+    }
+  },
+  "flex-layout.row#main-description": {
+    "children": [
+      "frccwhirlpool.product-description:product-description#main"
+      // "product-description#main"
+    ],
+    "props": {
+      "blockClass": "main-description"
+    }
+  },
+  "flex-layout.col#right-col-containerpdp": {
+    "children": [
+      "flex-layout.col#right-col-pdp",
+      "flex-layout.col#right-col-pdp-bottom"
+    ],
+    "props": {
+      "width": "40%"
+    }
+  },
+  "flex-layout.col#right-col-containerpdp-mobile": {
+    "children": [
+      "flex-layout.col#right-col-pdp-mobile"
+    ],
+    "props": {
+      "width": "40%"
+    }
+  },
+  "frccwhirlpool.product-description:product-description#main": {
+    "props": {
+      "collapseContent": true,
+      "title": "Caractéristiques principales",
+      "blockClass": "mainDescr"
+    }
+  },
+  "flex-layout.col#right-col-pdp": {
+    "props": {
+      "preventVerticalStretch": true,
+      "rowGap": 0,
+      "blockClass": "rightBlock"
+    },
+    "children": [
+      "product-price-frcc#pdp",
+      "toggle-layout#aeroflotContainer",
+      "flex-layout.row#install",
+      "condition-layout.product#installments",
+      "flex-layout.col#alma",
+      "flex-layout.row#pdp-desktop-buttons",
+      // "sticky-layout#pdp-mobile-buttons",
+      "condition-layout.product#isDiscontinuedShippingSimulatorQuestion",
+      "condition-layout.product#isDiscontinuedShippingCustom"
+    ]
+  },
+  "product-price-frcc#pdp": {
+    "props": {
+      "isPdp": true
+    }
+  },
+  "flex-layout.col#right-row-pdp-bottom": {
+    "props": {
+      "preventVerticalStretch": true,
+      "rowGap": 0,
+      "blockClass": "rightBlockBottom"
+    },
+    "children": [
+      "toggle-layout#payementMethodsText",
+      "image#payment-methodsPdp"
+    ]
+  },
+  "flex-layout.col#right-col-pdp-bottom": {
+    "props": {
+      "preventVerticalStretch": true,
+      "rowGap": 0,
+      "blockClass": "rightBlockBottom"
+    },
+    "children": [
+      "toggle-layout#payementMethodsText",
+      "image#payment-methodsPdp",
+      "flex-layout.row#availability-subscriber-custom"
+    ]
+  },
+  "flex-layout.row#availability-subscriber-custom": {
+    "props": {
+      "preventVerticalStretch": true,
+      "blockClass": "availabilitySubscriberRow"
+    },
+    "children": [
+      "availability-subscriber-custom"
+    ]
+  },
+  "image#payment-methodsPdp": {
+    "props": {
+      "blockClass": [
+        "imagePayment",
+        "imagePaymentPdp"
+      ],
+      "horizontalAlign": "center",
+      "src": "https://frwhirlpool.vtexassets.com/arquivos/payment-methods-3.svg"
+    }
+  },
+  "toggle-layout#payementMethodsText": {
+    "title": " [CONDITION] payementMethodsText",
+    "children": [
+      "rich-text#payementMethodsText"
+    ]
+  },
+  "rich-text#payementMethodsText": {
+    "props": {
+      "text": "Payement Cards",
+      "blockClass": "payementMethodsText"
+    }
+  },
+  "flex-layout.col#right-col-pdp-mobile": {
+    "props": {
+      "preventVerticalStretch": true,
+      "rowGap": 0,
+      "blockClass": "rightBlock"
+    },
+    "children": [
+      "product-price-frcc#pdp",
+      "toggle-layout#aeroflotContainer",
+      "flex-layout.row#install",
+      "condition-layout.product#installments",
+      "flex-layout.col#alma",
+      "flex-layout.row#pdp-desktop-buttons"
+    ]
+  },
+  "condition-layout.product#zerofee": {
+    "title": " [CONDITION] ecofee = 0 ? - ecofeeStaticText",
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "ecofee",
+            "value": "0.00"
+          }
+        }
+      ],
+      "Then": "rich-text#ecofeeStaticText",
+      "Else": "flex-layout.col#deeCol"
+    }
+  },
+  "rich-text#ecofeeStaticText": {
+    "props": {
+      "text": "*Le prix comprend la TVA, la DEEE et les promotions",
+      "blockClass": "ivaPDP"
+    }
+  },
+  "flex-layout.col#deeCol": {
+    "children": [
+      "flex-layout.row#deeeRowFirst"
+    ]
+  },
+  "flex-layout.row#deeeRowFirst": {
+    "children": [
+      "rich-text#deeePre",
+      "product-specification-badges#ecofee",
+      "rich-text#deeeCurrency"
+    ],
+    "props": {
+      "blockClass": "summaryDeeeRow",
+      "colSizing": "auto",
+      "preserveLayoutOnMobile": true
+    }
+  },
+  "rich-text#deeePre": {
+    "props": {
+      // "blockClass": "deeeTextPre",
+      "text": "*Dont"
+    }
+  },
+  "product-specification-badges#ecofee": {
+    "props": {
+      "specificationGroupName": "allSpecifications",
+      "specificationsOptions": [
+        {
+          "specificationName": "ecofee",
+          "displayValue": "SPECIFICATION_VALUE"
+        }
+      ],
+      "blockClass": "ecoValue"
+    }
+  },
+  "rich-text#deeeCurrency": {
+    "props": {
+      // "blockClass": "deeeTextCurrency",
+      "text": "€ d'éco-part. DEEE"
+    }
+  },
+  // installments
+  "condition-layout.product#installments": {
+    "title": " [CONDITION] Installments_field ? installments",
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "Installments_field"
+          }
+        }
+      ],
+      "Then": "flex-layout.row#subscription_installments"
+    }
+  },
+  "flex-layout.row#subscription_installments": {
+    "children": [
+      "product-specification-group#subscriptionValueInstallments",
+      "flex-layout.row#tooltipinstallments"
+    ],
+    "props": {
+      "colSizing": "auto",
+      "preserveLayoutOnMobile": true,
+      "blockClass": [
+        "subscriptionInstallmentsRow",
+        "subscriptionInstallmentsRowMonth"
+      ]
+    }
+  },
+  "product-specification-group#subscriptionValueInstallments": {
+    "children": [
+      "product-specification#subscriptionInstallmentsValueCode"
+    ],
+    "props": {
+      "filter": {
+        "specificationGroups": [
+          "Installments"
+        ],
+        "type": "show"
+      }
+    }
+  },
+  "product-specification#subscriptionInstallmentsValueCode": {
+    "children": [
+      "product-specification-values#subscriptionInstallmentsValueField"
+    ]
+  },
+  "product-specification-values#subscriptionInstallmentsValueField": {
+    "children": [
+      "product-specification-text#subscriptionInstallmentsFieldValue"
+    ]
+  },
+  "product-specification-text#subscriptionInstallmentsFieldValue": {
+    "props": {
+      "message": "{specificationValue}",
+      "blockClass": "subscriptionText"
+    }
+  },
+  "flex-layout.row#tooltipinstallments": {
+    "children": [
+      "tooltip#subscriptionInstallments"
+    ],
+    "props": {
+      "blockClass": "subscriptionTooltip"
+    }
+  },
+  "tooltip#subscriptionInstallments": {
+    "blocks": [
+      "rich-text#tooltipSubscriptionInstallments"
+    ],
+    "props": {
+      "isOnLeft": true
+    }
+  },
+  "rich-text#tooltipSubscriptionInstallments": {
+    "props": {
+      "text": "Оформите рассрочку по карте “Халва” от 6 мес, 0% годовых \n \n [подробнее](https://help.vtex.com/en/faq/what-is-vtex-io)",
+      "blockClass": [
+        "withLink",
+        "testoTooltip"
+      ]
+    }
+  },
+  "condition-layout.product#condSubTitle": {
+    "title": " [CONDITION] MonthlyRate ? subscriptionPrice",
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "MonthlyRate"
+          }
+        }
+      ],
+      "Then": "flex-layout.row#subscription_price_per_month"
+    }
+  },
+  "flex-layout.row#pricePDP": {
+    "props": {
+      "colGap": 2,
+      "preserveLayoutOnMobile": true,
+      "preventHorizontalStretch": true,
+      "blockClass": "pricePlpItem"
+    },
+    "children": [
+      "product-selling-price#summaryPDP",
+      "product-list-price#summary"
+    ]
+  },
+  "flex-layout.row#pricePDP-mobile": {
+    "props": {
+      "colGap": 2,
+      "preserveLayoutOnMobile": true,
+      "preventHorizontalStretch": true,
+      "blockClass": "mobilePricePdpItem"
+    },
+    "children": [
+      "flex-layout.row#priceContainerPDP-mobile",
+      "add-to-list-btn"
+    ]
+  },
+  "flex-layout.row#priceContainerPDP-mobile": {
+    "props": {
+      "blockClass": "priceContainerPDP-mobile"
+    },
+    "children": [
+      "product-selling-price#summaryPDP",
+      "product-list-price#summary"
+    ]
+  },
+  "product-selling-price#summaryPDP": {
+    "props": {
+      "blockClass": "product-price"
+    }
+  },
+  "flex-layout.row#install": {
+    "children": [
+      "product-specification-group#codeInstall"
+    ]
+  },
+  "product-specification-group#codeInstall": {
+    "children": [
+      "product-specification#installment"
+    ],
+    "props": {
+      "filter": {
+        "specificationGroups": [
+          "Installments_new"
+        ],
+        "type": "show"
+      }
+    }
+  },
+  "product-specification#installment": {
+    "children": [
+      "product-specification-values#Codice"
+    ]
+  },
+  "product-specification-values#Codice": {
+    "children": [
+      "product-specification-text#valueCodice"
+    ]
+  },
+  "product-specification-text#valueCodice": {
+    "props": {
+      "message": "{specificationValue}",
+      "blockClass": "codiceProdotto"
+    }
+  },
+  "flex-layout.row#subscription_price_per_month": {
+    "children": [
+      "flex-layout.row#month-price-badge-row-pdp",
+      "flex-layout.row#tooltipsubscription"
+    ],
+    "props": {
+      "colSizing": "auto",
+      "preserveLayoutOnMobile": true,
+      "blockClass": [
+        "subscriptionRow",
+        "subscriptionRowMonth"
+      ]
+    }
+  },
+  "flex-layout.row#month-price-badge-row-pdp": {
+    "props": {
+      "fullWidth": true,
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "blockClass": "pdpSubBadges"
+    },
+    "children": [
+      "rich-text#prefixpdp",
+      "flex-layout.col#pdp-price",
+      "rich-text#currencypdp"
+    ]
+  },
+  "flex-layout.row#tooltipsubscription": {
+    "children": [
+      "tooltip#subscription"
+    ],
+    "props": {
+      "blockClass": "subscriptionTooltip"
+    }
+  },
+  "product-specification-group#subscriptionValue": {
+    "children": [
+      "product-specification#subscriptionValueCode"
+    ],
+    "props": {
+      "filter": {
+        "specificationGroups": [
+          "Leasing"
+        ],
+        "type": "show"
+      }
+    }
+  },
+  "product-specification#subscriptionValueCode": {
+    "children": [
+      "product-specification-values#subscriptionValueField"
+    ]
+  },
+  "product-specification-values#subscriptionValueField": {
+    "children": [
+      "product-specification-text#subscriptionFieldValue"
+    ]
+  },
+  "product-specification-text#subscriptionFieldValue": {
+    "props": {
+      "message": "{specificationValue}",
+      "blockClass": "subscriptionText"
+    }
+  },
+  "flex-layout.row#pdp-desktop-buttons": {
+    "children": [
+      "flex-layout.col#pdp-desktop-buttons"
+    ]
+  },
+  // DESKTOP buttons
+  "flex-layout.col#pdp-desktop-buttons": {
+    "props": {
+      "blockClass": "flexDesktopButtons"
+    },
+    "children": [
+      // "flex-layout.row#aeroflotContainer",
+      // "flex-layout.row#buy-button",
+      // "condition-layout.product#buy-button-modal-4"
+      // "modal-trigger#relatedAccessories"
+      // "modal-trigger#relatedAccessories"
+      "condition-layout.product#hasAccessoryAssociationsNotStock"
+    ]
+  },
+  "toggle-layout#aeroflotContainer": {
+    "title": " [TOGGLE] aeroflotToggle",
+    "children": [
+      "flex-layout.row#aeroflotContainer"
+    ]
+  },
+  "flex-layout.row#aeroflotContainer": {
+    "props": {
+      "blockClass": "aeroflotContainer"
+    },
+    "children": [
+      "flex-layout.row#aeroflotLogoContainer",
+      "rich-text#aeroflotText",
+      "tooltip#aeroflotTooltip"
+    ]
+  },
+  "flex-layout.row#aeroflotLogoContainer": {
+    "props": {
+      "blockClass": "aeroflotLogoContainer"
+    },
+    "children": [
+      "image#aeroflotLogo"
+    ]
+  },
+  "image#aeroflotLogo": {
+    "props": {
+      "src": "assets/aeroflot/aeroflotLogo.png",
+      "width": "120px"
+    }
+  },
+  "rich-text#aeroflotText": {
+    "props": {
+      "text": "Мили «‎Аэрофлот Бонус»‎ к начислению",
+      "blockClass": [
+        "aeroflotText"
+      ]
+    }
+  },
+  "tooltip#aeroflotTooltip": {
+    "blocks": [
+      "rich-text#aeroflotTooltipText"
+    ],
+    "props": {
+      "isOnLeft": true
+    }
+  },
+  "rich-text#aeroflotTooltipText": {
+    "props": {
+      "text": "\n \n [Узнать подробнее о программе «‎Аэрофлот Бонус»](https://www.whirlpoolgroup.ru/support/specialnye-predlozheniya)",
+      "blockClass": [
+        "withLink",
+        "testoTooltip"
+      ]
+    }
+  },
+  "condition-layout.product#buy-button-modal-4": {
+    "title": " [CONDITION] hasAccessoryAssociations = true? xSell Modal",
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments Modal": {
+            "name": "hasAccessoryAssociations",
+            "value": "true"
+          }
+        }
+      ],
+      "Then": "modal-trigger#relatedAccessories",
+      "Else": "flex-layout.row#buy-button"
+    }
+  },
+  "modal-trigger#relatedAccessories": {
+    "props": {
+      "blockClass": [
+        "modalPDP"
+      ]
+    },
+    "children": [
+      "analytics-wrapper-frcc#relatedAccessoriesClick",
+      "modal-layout#relatedAccessories"
+    ]
+  },
+  "modal-layout#relatedAccessories": {
+    "children": [
+      "analytics-wrapper-frcc#relatedAccessoriesClose",
+      "responsive-layout.desktop#relatedAccessoriesModal",
+      "responsive-layout.tablet#relatedAccessoriesModal",
+      "responsive-layout.phone#relatedAccessoriesModal"
+    ]
+  },
+  "responsive-layout.desktop#relatedAccessoriesModal":{
+    "children":[
+      "modal-content#relatedAccessoriesDesk"
+    ]
+  },
+  "responsive-layout.tablet#relatedAccessoriesModal":{
+    "children":[
+      "modal-content#relatedAccessories"
+    ]
+  },
+  "responsive-layout.phone#relatedAccessoriesModal":{
+    "children":[
+      "modal-content#relatedAccessories"
+    ]
+  },
+  "modal-content#relatedAccessoriesDesk": {
+    "props": {
+      "blockClass": "relatedAccessories"
+    },
+    "children": [
+      "flex-layout.col#product-summary-AddedModal",
+      "rich-text#modalAddPDP",
+      "rich-text#titleRelatedAccessories",
+      "shelf.relatedProducts#desk"      
+    ]
+  },
+  "flex-layout.row#product-image-AddedModal":{
+    "children":[
+      "product-image"
+    ],
+    "props":{
+      "width": "10%",
+      "blockClass":"productImageAddedModal"
+    }
+  },
+  "flex-layout.col#product-summary-AddedModal":{
+    "children":[
+      "rich-text#addedPdpModal",
+      "flex-layout.row#product-namePrice-AddedModal"
+    ],
+    "props":{
+      "blockClass":"summaryAddedModal"
+    }
+  },
+  "flex-layout.row#product-nameImageAddedModal":{
+    "children":[
+      "flex-layout.row#product-image-AddedModal",
+      "flex-layout.row#product-name-Modal"
+    ],
+    "props":{
+      "blockClass":"imageameAddedModal"
+    }
+  },
+  "flex-layout.row#product-namePrice-AddedModal":{
+    "children":[
+      "flex-layout.row#product-nameImageAddedModal",
+      "product-price-frcc#pdp"
+    ],
+    "props":{
+      "blockClass":"namePriceAddedModal"
+    }
+  },
+  "flex-layout.row#product-name-Modal": {
+    "children": [
+      "vtex.store-components:product-name",
+      "flex-layout.row#energyLabelReparabilityIndex"
+    ],
+    "props": {
+      "width":"90%",
+      "blockClass": ["stileskuidModal", "productEnergy"]
+    }
+  },
+  "flex-layout.row#energyLabelReparabilityIndex": {
+    "children": [
+      "flex-layout.row#productPreServizi-image",
+      "flex-layout.col#indexRepairability"
+    ],
+    "props": {
+      "blockClass": ["energyLabelReparabilityIndex"]
+    }
+  },
+  "shelf.relatedProducts#desk": {
+    "blocks": [
+      "product-summary.shelf.product-comparison#xsaleDesk"
+    ],
+    "props": {
+      "productList": {
+        "showTitle": false,
+        "gap": "ph3",
+        "minItemsPerPage": 1,
+        "itemsPerPage": 3
+      }
+    }
+  },
+  "rich-text#addedPdpModal":{
+    "props":{
+      "text": "Ajouté au panier",
+      "blockClass": "addedPanierPdp"
+    }
+  },
+  "rich-text#modalAddPDP": {
+    "props": {
+      "text": "<a class = \"vtex-rich-text-0-x-link--buttonGoToCartModalPanier\" href=\"/checkout/#/cart\">VOIR MON PANIER</a>",
+      "blockClass": [
+        "buttonCardPanier"
+      ],
+      "textPosition": "CENTER"
+    }
+  },
+  "product-summary.shelf.product-comparison#xsaleDesk": {
+    "children": [
+      "flex-layout.row#lead-time",
+      "condition-layout.product#productBrand",
+      "stack-layout#plpAspect",
+      "flex-layout.row#garantieLogo",
+      "flex-layout.row#commercialAndName",
+      "flex-layout.row#energyAndPriceModalPdp",
+      "flex-layout.row#buttons-WishlistOnly"
+    ],
+    "props": {
+      "blockClass": "productSummaryShelfPlp"
+    }
+  },
+  "flex-layout.row#energyAndPriceModalPdp": {
+    "children": [
+      "flex-layout.col#productPriceDesk"
+    ],
+    "props": {
+      "blockClass": ["priceModalPdp"]
+    }
+  },
+  "flex-layout.col#productPriceDesk": {
+    "children": [
+      "product-price-frcc"
+    ],
+    "props": {
+      "blockClass": "productPrice"
+    }
+  },
+  "analytics-wrapper-frcc#relatedAccessoriesClose": {
+    "props": {
+      "isPreventDefault": true,
+      "eventName": "popupInteraction",
+      "data": [
+        {
+          "title": "eventAction",
+          "value": "related-accessories-popup"
+        },
+        {
+          "title": "eventLabel",
+          "value": "close"
+        }
+      ]
+    },
+    "children": [
+      "modal-header#accessories"
+    ]
+  },
+  "modal-header#accessories": {
+    "props": {
+      "blockClass": "accessoriesPopup"
+    },
+    "children": []
+  },
+  "modal-content#relatedAccessories": {
+    "props": {
+      "blockClass": "relatedAccessories"
+    },
+    "children": [
+      "rich-text#addedPdpModal",
+      "rich-text#titleRelatedAccessories",
+      "shelf.relatedProducts#mobile"
+    ]
+  },
+  "shelf.relatedProducts#mobile": {
+    "blocks": ["product-summary.shelf.product-comparison#modalMobile"],
+    "props": {
+      "productList": {
+        "showTitle": false,
+        "gap": "ph3",
+        "minItemsPerPage": 1,
+        "itemsPerPage": 1
+      }
+    }
+  },
+  "product-summary.shelf.product-comparison#modalMobile": {
+    "children": [
+      //"flex-layout.row#collection-badges",
+      "flex-layout.col#cardModalMobile",
+      "rich-text#modalPDP"            
+    ],
+    "props": {
+      "blockClass": "productSummaryShelfPlp"
+    }
+  },
+  "flex-layout.col#cardModalMobile":{
+    "children":[
+      "condition-layout.product#productBrand",
+      "stack-layout#plpAspect",
+      "flex-layout.row#quickviewFra",
+      //"flex-layout.row#garantieLogo",
+      "flex-layout.row#productName",
+      "flex-layout.row#commercialCode",
+      "flex-layout.col#productPrice",
+      //"flex-layout.row#energyAndPrice",
+      "flex-layout.row#add-to-cart-row",
+      "flex-layout.row#buttons-Wishlist"
+    ],
+    "props":{
+      "blockClass":"cardModalMobile"
+    }
+  },
+  "rich-text#titleRelatedAccessories": {
+    "props": {
+      "text": "## Complétez votre achat avec les accessoires recommandés",
+      "textAlignment": "center",
+      "textPosition": "CENTER",
+      "blockClass": [
+        "titleModalPDP"
+      ]
+    }
+  },
+  "shelf.relatedProducts": {
+    "blocks": [
+      "product-summary.shelf.product-comparison#xsale"
+    ],
+    "props": {
+      "productList": {
+        "showTitle": false,
+        "gap": "ph3",
+        "minItemsPerPage": 1,
+        "itemsPerPage": 3
+      }
+    }
+  },
+  "product-summary.shelf.product-comparison#xsale": {
+    "children": [
+      "flex-layout.row#collection-badges",
+      "condition-layout.product#productBrand",
+      "stack-layout#plpAspect",
+      "flex-layout.row#quickviewFra",
+      "flex-layout.row#garantieLogo",
+      "flex-layout.row#commercialAndName",
+      "flex-layout.row#energyAndPrice",
+      // "flex-layout.row#pricePlp",
+      // "flex-layout.row#product-specification-group",
+      // "flex-layout.row#buttons-BuyCompareWishlist"
+      "flex-layout.row#buttons-WishlistOnly"
+      // "add-to-cart-custom#plp"
+    ],
+    "props": {
+      "blockClass": "productSummaryShelfPlp"
+    }
+  },
+  "rich-text#modalPDP": {
+    "props": {
+      "text": "<a class = \"vtex-rich-text-0-x-link--buttonGoToCartModal\" href=\"/checkout/#/cart\">Valider ma commande</a>",
+      "blockClass": [
+        "buttonCard",
+        "ricambiOriginaliButton",
+        "ricessiButton",
+        "buttonGoToCartModal"
+      ],
+      "textPosition": "CENTER"
+    }
+  },
+  "product-summary.shelf#relatedAccessories": {
+    "children": [
+      "responsive-layout.desktop#relatedAccessories",
+      "responsive-layout.mobile#relatedAccessories"
+    ]
+  },
+  "responsive-layout.desktop#relatedAccessories": {
+    "children": [
+      // "product-summary-image#shelf",
+      "flex-layout.col#relAccImageContainer",
+      "flex-layout.row#commercialCode",
+      "vtex.store-components:product-name#summary",
+      "flex-layout.row#priceAndNothing",
+      "condition-layout.product#alma",
+      "add-to-cart-custom#pdp",
+      "add-to-list-btn"
+    ]
+  },
+  "flex-layout.col#relAccImageContainer": {
+    "children": [
+      "product-summary-image#shelf"
+    ],
+    "props": {
+      "blockClass": "shelfImageContainer"
+    }
+  },
+  "responsive-layout.mobile#relatedAccessories": {
+    "children": [
+      "flex-layout.row#imageAndPriceMobile",
+      "vtex.store-components:product-name#summary",
+      "flex-layout.row#priceAndNothing",
+      "condition-layout.product#alma",
+      "add-to-cart-custom#pdp"
+    ]
+  },
+  "vtex.store-components:product-name#summary": {
+    "props": {
+      "tag": "div",
+      "displayMode": "linkToProductPage",
+      "blockClass": "summaryName"
+    }
+  },
+  "flex-layout.row#priceAndNothing": {
+    "children": [
+      "flex-layout.col#nothing",
+      "product-summary-price"
+    ],
+    "props": {
+      "blockClass": "relatedAccessoriesPriceRow"
+    }
+  },
+  "flex-layout.col#nothing": {
+    "props": {
+      "blockClass": "priceAndNothingCol"
+    }
+  },
+  "flex-layout.row#priceAndWPROKey": {
+    "children": [
+      "flex-layout.col#WPROkey",
+      "flex-layout.col#plpPrice"
+    ],
+    "props": {
+      "blockClass": "priceAndSpecsRow"
+    }
+  },
+  "flex-layout.col#plpPrice": {
+    "children": [
+      "condition-layout.product#pricePLP",
+      "condition-layout.product#isAccessorioEtichette"
+    ],
+    "props": {
+      "blockClass": [
+        "priceCol",
+        "plpPriceCol"
+      ]
+    }
+  },
+  "flex-layout.row#plpPrice": {
+    "children": [
+      "condition-layout.product#pricePLP"
+    ],
+    "props": {
+      "blockClass": "priceColPLP"
+    }
+  },
+  "condition-layout.product#pricePLP": {
+    "title": " [CONDITION] sellable = true ? Price",
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "sellable",
+            "value": "true"
+          }
+        }
+      ],
+      "Then": "flex-layout.col#priceAndPostilla"
+    }
+  },
+  "flex-layout.col#priceAndPostilla": {
+    "children": [
+      "product-summary-price"
+    ],
+    "props": {
+      "blockClass": ""
+    }
+  },
+  "rich-text#pricePostilla": {
+    "props": {
+      "text": " *Le prix comprend la TVA, la DEEE et les promotions",
+      "blockClass": "tvaPrix"
+    }
+  },
+  "flex-layout.col#WPROkey": {
+    "children": [
+      "product-specification-group#WPROkey"
+    ],
+    "props": {
+      "paddingLeft": 5,
+      "blockClass": "WPROkeyCol"
+    }
+  },
+  "product-specification-group#WPROkey": {
+    "children": [
+      "product-specification#WPROKey"
+    ],
+    "props": {
+      "filter": {
+        "specificationGroups": [
+          "SalesFeature"
+        ],
+        "type": "show"
+      }
+    }
+  },
+  "product-specification#WPROKey": {
+    "children": [
+      "product-specification-values#WPROKey"
+    ]
+  },
+  "product-specification-values#WPROKey": {
+    "children": [
+      "product-specification-text#WPROKeyvalue"
+    ]
+  },
+  "product-specification-text#WPROKeyvalue": {
+    "props": {
+      "message": "{specificationValue}",
+      "blockClass": [
+        "wProKeyValue"
+      ]
+    }
+  },
+  "flex-layout.row#buy-button": {
+    "props": {
+      // "marginTop": 4,
+      // "marginBottom": 7,
+      "blockClass": "AddToCArtPdp"
+    },
+    "children": [
+      "add-to-cart-custom#pdp"
+    ]
+  },
+  "analytics-wrapper-frcc#relatedAccessoriesClick": {
+    "props": {
+      "eventName": "popupInteraction",
+      "data": [
+        {
+          "title": "eventAction",
+          "value": "related-accessories-popup"
+        },
+        {
+          "title": "eventLabel",
+          "value": "view"
+        }
+      ]
+    },
+    "children": [
+      "flex-layout.row#buy-button#relatedAccessories"
+    ]
+  },
+  "flex-layout.row#buy-button#relatedAccessories": {
+    "props": {
+      "blockClass": "AddToCArtPdp"
+    },
+    "children": [
+      "analytics-wrapper-frcc#relatedAccessoriesView"
+    ]
+  },
+  "analytics-wrapper-frcc#relatedAccessoriesView": {
+    "props": {
+      "eventName": "popupInteraction",
+      "data": [
+        {
+          "title": "eventAction",
+          "value": "related-accessories-popup"
+        },
+        {
+          "title": "eventLabel",
+          "value": "click"
+        }
+      ]
+    },
+    "children": [
+      "add-to-cart-custom#pdp"
+    ]
+  },
+  // MOBILE buttons
+  "sticky-layout#pdp-mobile-buttons": {
+    "props": {
+      "blockClass": "stickyButtons",
+      "position": "bottom",
+      "verticalSpacing": 100
+    },
+    "children": [
+      "flex-layout.row#pdpButtonContainerSticky"
+    ]
+  },
+  "flex-layout.row#pdpButtonContainerSticky": {
+    "props": {
+      "blockClass": "rowContainerStickyButtons",
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.col#stickyBtnCart"
+    ]
+  },
+  "flex-layout.col#stickyBtnCart": {
+    "props": {
+      "blockClass": "AddToCArtStickyPdp"
+    },
+    "children": [
+      "add-to-cart-custom#pdp"
+    ]
+  },
+  "flex-layout.row#specifications-title": {
+    "children": [
+      "product-specification-group#table-pdp"
+    ]
+  },
+  "product-specification-group#table-pdp": {
+    "children": [
+      "flex-layout.row#spec-group-pdp"
+    ],
+    "props": {
+      "filter": {
+        "specificationGroups": [
+          "SalesFeature"
+        ],
+        "type": "show"
+      }
+    }
+  },
+  "flex-layout.row#spec-group-pdp": {
+    "props": {
+      "blockClass": "productSpecificationPdpGroup"
+    },
+    "children": [
+      "flex-layout.col#spec-group-pdp"
+    ]
+  },
+  "flex-layout.col#spec-group-pdp": {
+    "children": [
+      "product-specification#pdp"
+    ]
+  },
+  "flex-layout.row#spec-group-name-pdp": {
+    "props": {
+      "blockClass": "productSpecificationPdpGroupName"
+    },
+    "children": [
+      "product-specification-text#group-pdp"
+    ]
+  },
+  "product-specification#pdp": {
+    "children": [
+      "flex-layout.row#spec-item-pdp"
+    ]
+  },
+  "flex-layout.row#spec-item-pdp": {
+    "props": {
+      "blockClass": "productSpecificationPdp"
+    },
+    "children": [
+      // "flex-layout.col#spec-name-pdp", //TO BE REVERTED
+      "flex-layout.col#spec-value-pdp"
+    ]
+  },
+  "flex-layout.col#spec-name-pdp": {
+    "props": {
+      "blockClass": "productSpecificationPdpName",
+      "width": {
+        "mobile": "50%",
+        "desktop": "50%"
+      }
+    },
+    "children": [
+      "product-specification-text#specification-pdp"
+    ]
+  },
+  "flex-layout.col#spec-value-pdp": {
+    "props": {
+      "blockClass": "productSpecificationPdpValue"
+    },
+    "children": [
+      "product-specification-values#pdp"
+    ]
+  },
+  "product-specification-values#pdp": {
+    "children": [
+      "product-specification-text#value-pdp"
+    ]
+  },
+  "product-specification-text#group-pdp": {
+    "props": {
+      "message": "{groupName}",
+      "blockClass": "nameGroupSpec"
+    }
+  },
+  "product-specification-text#specification-pdp": {
+    "props": {
+      "message": "{specificationName}",
+      "blockClass": "fieldNameSpec"
+    }
+  },
+  "product-specification-text#value-pdp": {
+    "props": {
+      "message": "{specificationValue}",
+      "blockClass": "valueNameSpec"
+    }
+  },
+  // isAccessory
+  "condition-layout.product#isAccessory-2": {
+    "title": " [CONDITION] constructionType = 'accessory' - specifications Table",
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "constructionType",
+            "value": "Accessory"
+          }
+        }
+      ],
+      "Else": "flex-layout.row#tab-layout"
+    }
+  },
+  "flex-layout.row#tab-layout": {
+    "children": [
+      "tab-layout#home"
+    ]
+  },
+  "tab-layout#home": {
+    "children": [
+      "tab-list#home",
+      "tab-content#home"
+    ]
+  },
+  "tab-list#home": {
+    "children": [
+      "analytics-wrapper-frcc#tabListItemFeatures",
+      "analytics-wrapper-frcc#tabListItemCharacteristics"
+    ],
+    "props": {
+      "preserveLayoutOnMobile": true,
+      "blockClass": "pdpTab-container"
+    }
+  },
+  "analytics-wrapper-frcc#tabListItemFeatures": {
+    "props": {
+      "propsAnalytics": {
+        "analyticsProperties": "provide",
+        "nameEvent": "extra_info_interaction",
+        "name": "extraInfoInteraction",
+        "nameView": "",
+        "data": [
+          {
+            "title": "type",
+            "value": "detail tab fonctionnalités"
+          }
+        ],
+        "isView": false
+      }
+    },
+    "children": [
+      "tab-list.item#features"
+    ]
+  },
+  "analytics-wrapper-frcc#tabListItemCharacteristics": {
+    "props": {
+      "propsAnalytics": {
+        "analyticsProperties": "provide",
+        "nameEvent": "extra_info_interaction",
+        "name": "extraInfoInteraction",
+        "nameView": "",
+        "data": [
+          {
+            "title": "type",
+            "value": "detail tab caractéristiques"
+          }
+        ],
+        "isView": false
+      }
+    },
+    "children": [
+      "tab-list.item#technical"
+    ]
+  },
+  "condition-layout.product#subscriptionTabList": {
+    "title": " [CONDITION] MonthlyRate ? subscriptionTabList",
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "MonthlyRate"
+          }
+        }
+      ],
+      "Then": "tab-list.item#subscriptionTabList"
+    }
+  },
+  "tab-list.item#features": {
+    "props": {
+      "tabId": "features",
+      "label": "Fonctionnalités",
+      "defaultActiveTab": true,
+      "blockClass": [
+        "pdpTab",
+        "pdpTab--specialFeatures"
+      ]
+    }
+  },
+  "tab-list.item#technical": {
+    "props": {
+      "tabId": "technical",
+      "label": "Caractéristiques",
+      "blockClass": [
+        "pdpTab",
+        "pdpTab--techData",
+        "pdpTab--techData-2"
+      ]
+    }
+  },
+  "tab-list.item#subscriptionTabList": {
+    "props": {
+      "tabId": "subscription",
+      "label": "ABONNEMENT",
+      "blockClass": [
+        "pdpTab",
+        "pdpTab--subscription"
+      ]
+    }
+  },
+  "tab-content#home": {
+    "children": [
+      "tab-content.item#features",
+      "tab-content.item#technical",
+      "tab-content.item#subscription"
+      // "tab-content.item#reviews"
+    ]
+  },
+  // WPA CONDITON TECHNICAL DETAILS
+  "condition-layout.product#wpa-specifications": {
+    "title": " [CONDITION] productType = 'professional' - wpaTable",
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "productType",
+            "value": "professional"
+          }
+        }
+      ],
+      "Then": "product-specification-group#table-wpa",
+      "Else": "product-specification-group#table-standard"
+    }
+  },
+  "condition-layout.product#wpa-features": {
+    "title": " [CONDITION] productType = 'professional' - wpaFeatures",
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "productType",
+            "value": "professional"
+          }
+        }
+      ],
+      "Then": "product-specification-group#features-wpa",
+      "Else": "product-specification-group#features-standard"
+    }
+  },
+  "tab-content.item#features": {
+    "children": [
+      "condition-layout.product#wpa-features"
+    ],
+    "props": {
+      "tabId": "features"
+    }
+  },
+  "product-specification-group#features": {
+    "children": [
+      "flex-layout.col#technical-features"
+    ],
+    "props": {
+      "filter": {
+        "specificationGroups": [
+          "RatingGroupAttrLogo"
+        ],
+        "type": "show"
+      }
+    }
+  },
+  "product-specification-group#features-standard": {
+    "children": [
+      "flex-layout.col#technical-features"
+    ],
+    "props": {
+      "filter": {
+        "specificationGroups": [
+          "RatingGroupAttrLogo"
+        ],
+        "type": "show"
+      }
+    }
+  },
+  "product-specification-group#features-wpa": {
+    "children": [
+      "flex-layout.col#technical-features"
+    ],
+    "props": {
+      "filter": {
+        "specificationGroups": [
+          "Special Features"
+        ],
+        "type": "show"
+      }
+    }
+  },
+  "flex-layout.col#technical-features": {
+    "children": [
+      "product-specifications-with-images"
+    ],
+    "props": {
+      "blockClass": "productSpecificationFeatures"
+    }
+  },
+  "product-specification#features-tech": {
+    "children": [
+      "flex-layout.row#technical-features-title",
+      "flex-layout.row#technical-features-descr"
+    ]
+  },
+  "flex-layout.row#technical-features-title": {
+    "children": [
+      "product-specification-text#features-title"
+    ],
+    "props": {
+      "blockClass": "productSpecificationGroupNamePdp"
+    }
+  },
+  "flex-layout.row#technical-features-descr": {
+    "children": [
+      "product-specification-values#features-desc"
+    ]
+  },
+  "product-specification-text#features-title": {
+    "props": {
+      "message": "{specificationName}",
+      "blockClass": "fieldNameSpecTab"
+    }
+  },
+  "product-specification-values#features-desc": {
+    "children": [
+      "product-specification-text#features-desc"
+    ]
+  },
+  "product-specification-text#features-desc": {
+    "props": {
+      "message": "{specificationValue}",
+      "blockClass": "fieldNameSpec"
+    }
+  },
+  // technical specification
+  "tab-content.item#technical": {
+    "children": [
+      "flex-layout.row#spec"
+    ],
+    "props": {
+      "tabId": "technical"
+    }
+  },
+  "flex-layout.row#spec": {
+    "children": [
+      "flex-layout.col#spec_one",
+      "condition-layout.product#isProfessional"
+    ]
+  },
+  "flex-layout.col#spec_one": {
+    "children": [
+      "condition-layout.product#wpa-specifications"
+    ]
+  },
+  "condition-layout.product#isProfessional": {
+    "title": " [CONDITION] productType = professional ? pdfProfessional",
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "productType",
+            "value": "professional"
+          }
+        }
+      ],
+      "Then": "flex-layout.col#spec_pdf_professional",
+      "Else": "flex-layout.col#spec_pdf_standard"
+    }
+  },
+  // PRODUCT SPECIFICATIONS
+  "product-specification-group#documents": {
+    "children": [
+      "flex-layout.row#spec-group"
+    ],
+    "props": {
+      "filter": {
+        "specificationGroups": [
+          "Document"
+        ],
+        "type": "Show"
+      }
+    }
+  },
+  "tab-content.item#subscription": {
+    "children": [
+      "rich-text#subscription_title",
+      "flex-layout.row#subscription_price",
+      "flex-layout.row#subscription_info_title",
+      "rich-text#subscription_info",
+      "flex-layout.row#subscription_info_content",
+      "video#subscription_video"
+    ],
+    "props": {
+      "tabId": "subscription"
+    }
+  },
+  "rich-text#subscription_title": {
+    "props": {
+      "text": "Как работает подписка?",
+      "blockClass": "subscriptionTitle"
+    }
+  },
+  "flex-layout.row#subscription_info_title": {
+    "children": [
+      // "tooltip#tabSottoscrizione",
+      "rich-text#subscription_info_title"
+    ],
+    "props": {
+      "colSizing": "auto",
+      "blockClass": "middleTitle",
+      "preserveLayoutOnMobile": true
+    }
+  },
+  // "tooltip#tabSottoscrizione":{
+  //   "blocks":["rich-text#tooltipTabSottoscrizione"],
+  //   "props":{
+  //     "isOnLeft":true
+  //   }
+  // },
+  "rich-text#tooltipTabSottoscrizione": {
+    "props": {
+      "text": "При повторной подписке на новую модель прежняя остается у вас, при этом остаточную стоимость за нее выплачитвать не нужно! \n \n [подробнее](https://help.vtex.com/en/faq/what-is-vtex-io)",
+      "blockClass": [
+        "withLink",
+        "testoTooltip"
+      ]
+    }
+  },
+  "flex-layout.row#subscription_price": {
+    "children": [
+      "flex-layout.col#first_col",
+      "flex-layout.col#second_col",
+      "flex-layout.col#third_col",
+      "flex-layout.col#fourth_col"
+    ],
+    "props": {
+      "blockClass": [
+        "subscriptionRow",
+        "toSlide"
+      ]
+    }
+  },
+  "rich-text#subscription_info_title": {
+    "props": {
+      "text": "При повторной подписке на новую модель прежняя остается у вас, при этом остаточную стоимость за нее выплачитвать не нужно!",
+      "blockClass": "middleTitle"
+    }
+  },
+  "rich-text#subscription_info": {
+    "props": {
+      "text": "Как оформить?",
+      "blockClass": "subscriptionTitle"
+    }
+  },
+  "flex-layout.col#first_col": {
+    "children": [
+      "flex-layout.row#first_price",
+      "flex-layout.row#first_price_description"
+    ],
+    "props": {
+      "blockClass": [
+        "firstCol",
+        "subscriptionCol"
+      ],
+      "width": "25%"
+    }
+  },
+  "flex-layout.row#first_price_description": {
+    "children": [
+      "vtex.store-components:product-name#subscription"
+    ]
+  },
+  "vtex.store-components:product-name#subscription": {
+    "props": {
+      "blockClass": "subscription"
+    }
+  },
+  "flex-layout.row#first_price": {
+    "children": [
+      "flex-layout.col#product_image",
+      "flex-layout.col#price_text"
+    ],
+    "props": {
+      "blockClass": "firstPrice"
+    }
+  },
+  "flex-layout.col#product_image": {
+    "children": [
+      "product-image"
+    ],
+    "props": {
+      "blockClass": "firstPriceImage"
+    }
+  },
+  "flex-layout.col#price_text": {
+    "children": [
+      "rich-text#price_title",
+      "flex-layout.col#price_text_value"
+    ],
+    "props": {
+      "blockClass": "firstPriceTitle"
+    }
+  },
+  "rich-text#price_title": {
+    "props": {
+      "text": "ежемесячный платеж",
+      "blockClass": "paddingRight"
+    }
+  },
+  "flex-layout.col#price_text_value": {
+    "children": [
+      "print-specification#month-price-badge",
+      "rich-text#subscriptioncurrency"
+    ],
+    "props": {
+      "blockClass": [
+        "fullHeight",
+        "verticalCenter"
+      ]
+    }
+  },
+  // "product-specification-group#sub-price":{
+  //   "children":["product-specification#sub-price-val"],
+  //   "props":{
+  //     "filter":{
+  //       "specificationGroups":["Leasing_MonthlyRate"],
+  //       "type":"show",
+  //       "blockClass":"fullHeight"
+  //     }
+  //   }
+  // },
+  // "product-specification#sub-price-val":{
+  //   "children":["product-specification-values#sub-price-value"]
+  // },
+  // "product-specification-values#sub-price-value":{
+  //   "children":["product-specification-text#sub-price-text"]
+  // },
+  // "product-specification-text#sub-price-text": {
+  //   "props": {
+  //     "message": "{specificationValue}",
+  //     "blockClass": "priceSubscription"
+  //   }
+  // },
+  "rich-text#price_descr": {
+    "props": {
+      "text": "ежемесячный"
+    }
+  },
+  "flex-layout.col#second_col": {
+    "children": [
+      "flex-layout.row#second_col_content"
+    ],
+    "props": {
+      "blockClass": [
+        "secondCol",
+        "subscriptionCol"
+      ],
+      "width": "35%"
+    }
+  },
+  "flex-layout.row#second_col_content": {
+    "children": [
+      "flex-layout.col#calculation_first",
+      "flex-layout.col#calculation_second"
+    ],
+    "props": {
+      "preventVerticalStretch": true,
+      "blockClass": "fullHeight"
+    }
+  },
+  "flex-layout.col#calculation_first": {
+    "children": [
+      "flex-layout.row#row1",
+      "flex-layout.row#row2",
+      "flex-layout.row#row3"
+    ],
+    "props": {
+      "marginRight": 6,
+      "blockClass": "calculationFirstContent"
+    }
+  },
+  "flex-layout.row#row1": {
+    "children": [
+      "rich-text#title_col1"
+    ]
+  },
+  "flex-layout.row#row2": {
+    "children": [
+      "flex-layout.col#total_price"
+    ]
+  },
+  "flex-layout.col#total_price": {
+    "children": [
+      "print-specification#full-price",
+      "rich-text#subscriptioncurrency"
+    ],
+    "props": {
+      "blockClass": [
+        "fullHeight",
+        "verticalCenter"
+      ]
+    }
+  },
+  "rich-text#subscriptioncurrency": {
+    "props": {
+      "text": "₽",
+      "blockClass": "subscriptionCurrency"
+    }
+  },
+  "rich-text#subscriptioncurrencyFourthCol": {
+    "props": {
+      "text": "₽",
+      "blockClass": "leasingFourthColValue",
+      "font": "t-ruble"
+    }
+  },
+  // "product-specification-group#total-price":{
+  //   "children":["product-specification#total-price-val"],
+  //   "props":{
+  //     "filter":{
+  //       "specificationGroups":["Leasing_FullBundlePrice"],
+  //       "type":"show"
+  //     }
+  //   }
+  // },
+  // "product-specification#total-price-val":{
+  //   "children":["product-specification-values#total-price-value"]
+  // },
+  // "product-specification-values#total-price-value":{
+  //   "children":["product-specification-text#total-price-text"]
+  // },
+  // "product-specification-text#total-price-text": {
+  //   "props": {
+  //     "message": "{specificationValue}",
+  //     "blockClass": "priceSubscription"
+  //   }
+  // },
+  "flex-layout.row#row3": {
+    "children": [
+      "rich-text#desc_col1"
+    ]
+  },
+  "flex-layout.col#calculation_second": {
+    "children": [
+      "flex-layout.row#row4",
+      "flex-layout.row#row5",
+      "flex-layout.row#row6"
+    ],
+    "props": {
+      "marginLeft": 6,
+      "blockClass": "calculationSecondContent"
+    }
+  },
+  "flex-layout.row#row4": {
+    "children": [
+      "rich-text#title_col2"
+    ]
+  },
+  "flex-layout.row#row5": {
+    "children": [
+      "flex-layout.col#leasing"
+    ]
+  },
+  "flex-layout.col#leasing": {
+    "children": [
+      "print-specification#rv",
+      "rich-text#subscriptioncurrency"
+    ],
+    "props": {
+      "blockClass": [
+        "fullHeight",
+        "verticalCenter"
+      ]
+    }
+  },
+  "flex-layout.col#leasingFourthColValue": {
+    "children": [
+      "print-specification#rv",
+      "rich-text#subscriptioncurrencyFourthCol"
+    ],
+    "props": {
+      "blockClass": [
+        "fullHeight",
+        "verticalCenter",
+        "leasingFourthColValue"
+      ]
+    }
+  },
+  // "product-specification-group#leasing":{
+  //   "children":["product-specification#leasing-val"],
+  //   "props":{
+  //     "filter":{
+  //       "specificationGroups":["Leasing_RV"],
+  //       "type":"show"
+  //     }
+  //   }
+  // },
+  // "product-specification#leasing-val":{
+  //   "children":["product-specification-values#leasing-value"]
+  // },
+  // "product-specification-values#leasing-value":{
+  //   "children":["product-specification-text#leasing-text"]
+  // },
+  // "product-specification-text#leasing-text": {
+  //   "props": {
+  //     "message": "{specificationValue}",
+  //     "blockClass": ["priceSubscription", "minus"]
+  //   }
+  // },
+  "flex-layout.row#row6": {
+    "children": [
+      "rich-text#desc_col2"
+    ]
+  },
+  "rich-text#title_col1": {
+    "props": {
+      "text": "стоимость техники",
+      "blockClass": "paddingRight"
+    }
+  },
+  "rich-text#desc_col1": {
+    "props": {
+      "text": "с программой бесплатного ремонта на весь срок",
+      "blockClass": [
+        "paddingRight",
+        "secondColDesc"
+      ]
+    }
+  },
+  "rich-text#title_col2": {
+    "props": {
+      "text": "остаточная стоимость:",
+      "blockClass": "paddingRight"
+    }
+  },
+  "rich-text#desc_col2": {
+    "props": {
+      "text": "не надо выплачивать при обмене на новую модель",
+      "blockClass": [
+        "paddingRight",
+        "secondColDesc"
+      ]
+    }
+  },
+  "flex-layout.col#third_col": {
+    "children": [
+      "rich-text#price_month_title",
+      "rich-text#price_month_price",
+      "rich-text#price_month_desc"
+    ],
+    "props": {
+      "blockClass": [
+        "thirdCol",
+        "subscriptionCol"
+      ],
+      "width": "10%"
+    }
+  },
+  "rich-text#price_month_title": {
+    "props": {
+      "text": "количество платежей",
+      "blockClass": [
+        "paddingRight",
+        "thirdColText"
+      ]
+    }
+  },
+  "rich-text#price_month_price": {
+    "props": {
+      "text": "**48**",
+      "blockClass": "price"
+    }
+  },
+  "rich-text#price_month_desc": {
+    "props": {
+      "text": "месяцев",
+      "blockClass": [
+        "paddingRight",
+        "thirdColText"
+      ]
+    }
+  },
+  "flex-layout.col#fourth_col": {
+    "children": [
+      "rich-text#title_last",
+      "flex-layout.row#content_last"
+    ],
+    "props": {
+      "blockClass": [
+        "fourthCol",
+        "subscriptionCol"
+      ],
+      "width": "30%"
+    }
+  },
+  "rich-text#title_last": {
+    "props": {
+      "text": "после 48 платежей",
+      "blockClass": "stepTitle"
+    }
+  },
+  "flex-layout.row#content_last": {
+    "children": [
+      "flex-layout.col#content1",
+      "flex-layout.col#middle",
+      "flex-layout.col#content2"
+    ],
+    "props": {
+      "blockClass": "contentLast"
+    }
+  },
+  "flex-layout.col#content1": {
+    "children": [
+      "rich-text#last_block_title_1",
+      "rich-text#last_block_descr_1"
+    ]
+  },
+  "rich-text#last_block_title_1": {
+    "props": {
+      "text": "подписаться на новую модель",
+      "blockClass": [
+        "codiceProdotto",
+        "lastBlockTitle1"
+      ]
+    }
+  },
+  "rich-text#last_block_descr_1": {
+    "props": {
+      "text": "не выплачивая остаточную стоимость",
+      "blockClass": "testo12"
+    }
+  },
+  "flex-layout.col#middle": {
+    "children": [
+      "rich-text#middle"
+    ],
+    "props": {
+      "verticalAlign": "top",
+      "horizontalAlign": "center"
+    }
+  },
+  "rich-text#middle": {
+    "props": {
+      "text": "или",
+      "blockClass": "testo12"
+    }
+  },
+  "flex-layout.col#content2": {
+    "children": [
+      "flex-layout.row#rv",
+      "flex-layout.row#listItem2-sub"
+    ],
+    "props": {
+      "fullWidth": true
+    }
+  },
+  "flex-layout.row#rv": {
+    "children": [
+      "rich-text#rv",
+      "flex-layout.col#leasingFourthColValue"
+    ],
+    "props": {
+      "blockClass": "leasingFourthColContainer"
+    }
+  },
+  "rich-text#rv": {
+    "props": {
+      "text": "оставить себе, внеся",
+      "blockClass": "codiceProdotto"
+    }
+  },
+  "flex-layout.row#listItem2-sub": {
+    "children": [
+      "rich-text#listItem2-sub-title",
+      "flex-layout.row#listItem2-sub-price"
+    ],
+    "props": {
+      "blockClass": [
+        "listItem2-sub-container"
+      ]
+    }
+  },
+  "rich-text#listItem2-sub-title": {
+    "props": {
+      "text": "продолжив платить",
+      "blockClass": [
+        "list",
+        "testo12",
+        "listItem2-sub-text"
+      ]
+    }
+  },
+  "flex-layout.row#listItem2-sub-price": {
+    "children": [
+      "print-specification#month-price-badge-fourtCol",
+      "rich-text#listItem2-sub-price-value"
+    ],
+    "props": {
+      "blockClass": [
+        "listItem2-sub-price-container"
+      ]
+    }
+  },
+  "rich-text#listItem2-sub-price-value": {
+    "props": {
+      "text": "₽ / месяц",
+      "blockClass": [
+        "list",
+        "testo12",
+        "listItem2-sub-text"
+      ]
+    }
+  },
+  // "product-specification-group#RV_label": {
+  //   "children": ["product-specification#RV"],
+  //   "props":{
+  //     "filter":{
+  //       "specificationGroups":["Leasing_RV2"],
+  //       "type":"show"
+  //     }
+  //   }
+  // },
+  // "product-specification#RV": {
+  //   "children": ["product-specification-values#RV_label"]
+  // },
+  // "product-specification-values#RV_label": {
+  //   "children": ["product-specification-text#RV_value_label"]
+  // },
+  // "product-specification-text#RV_value_label": {
+  //   "props": {
+  //     "message": "{specificationValue}",
+  //     "blockClass": "codiceProdotto"
+  //   }
+  // },
+  "product-specification-group#Monthly_label": {
+    "children": [
+      "product-specification#monthly"
+    ],
+    "props": {
+      "filter": {
+        "specificationGroups": [
+          "Leasing_MonthlyRate2"
+        ],
+        "type": "show"
+      }
+    }
+  },
+  "product-specification#monthly": {
+    "children": [
+      "product-specification-values#monthly_label"
+    ]
+  },
+  "product-specification-values#monthly_label": {
+    "children": [
+      "product-specification-text#monthly_value_label"
+    ]
+  },
+  "product-specification-text#monthly_value_label": {
+    "props": {
+      "message": "{specificationValue}",
+      "blockClass": [
+        "codiceProdotto",
+        "list",
+        "monthlyRate2"
+      ]
+    }
+  },
+  "flex-layout.row#subscription_info_content": {
+    "children": [
+      "flex-layout.col#first_step",
+      "flex-layout.col#second_step",
+      "flex-layout.col#third_step",
+      "flex-layout.col#pdf_col"
+    ],
+    "props": {
+      "blockClass": [
+        "subscriptionRow",
+        "rowStep"
+      ]
+    }
+  },
+  "flex-layout.col#first_step": {
+    "children": [
+      "rich-text#title1",
+      "rich-text#subtitle1",
+      "rich-text#content1"
+    ],
+    "props": {
+      "blockClass": [
+        "firstCol",
+        "subscriptionCol"
+      ]
+    }
+  },
+  "rich-text#title1": {
+    "props": {
+      "text": "шаг 1",
+      "blockClass": "stepTitle"
+    }
+  },
+  "rich-text#subtitle1": {
+    "props": {
+      "text": "Выберите модель",
+      "blockClass": "stepSubtitle"
+    }
+  },
+  "rich-text#content1": {
+    "props": {
+      "text": "В каталоге есть фильтр «Подписка»"
+    }
+  },
+  "flex-layout.col#second_step": {
+    "children": [
+      "rich-text#title2",
+      "rich-text#subtitle2",
+      "rich-text#content2"
+    ],
+    "props": {
+      "blockClass": [
+        "firstColSubscription",
+        "subscriptionCol"
+      ]
+    }
+  },
+  "rich-text#title2": {
+    "props": {
+      "text": "шаг 2",
+      "blockClass": "stepTitle"
+    }
+  },
+  "rich-text#subtitle2": {
+    "props": {
+      "text": "Оформите короткую заявку",
+      "blockClass": "stepSubtitle"
+    }
+  },
+  "rich-text#content2": {
+    "props": {
+      "text": "Подготовьте паспорт или его скан и подпишите договор онлайн"
+    }
+  },
+  "flex-layout.col#third_step": {
+    "children": [
+      "rich-text#title3",
+      "rich-text#subtitle3",
+      "rich-text#content3"
+    ],
+    "props": {
+      "blockClass": [
+        "firstColSubscription",
+        "subscriptionCol"
+      ]
+    }
+  },
+  "rich-text#title3": {
+    "props": {
+      "text": "шаг 3",
+      "blockClass": "stepTitle"
+    }
+  },
+  "rich-text#subtitle3": {
+    "props": {
+      "text": "Укажите адрес доставки",
+      "blockClass": "stepSubtitle"
+    }
+  },
+  "rich-text#content3": {
+    "props": {
+      "text": "При получении товара покажите паспорт"
+    }
+  },
+  "flex-layout.col#pdf_col": {
+    "children": [
+      "rich-text#pdf_title",
+      "link#pdf"
+    ],
+    "props": {
+      "blockClass": [
+        "pdfCol",
+        "subscriptionCol"
+      ]
+    }
+  },
+  "rich-text#pdf_title": {
+    "props": {
+      "text": "**PDF Documentation:**"
+    }
+  },
+  "link#pdf": {
+    "props": {
+      "label": "Пример договора подписки",
+      "href": "https://static-sl.insales.ru/files/1/4848/12522224/original/%D0%9F%D0%A4_%D0%92%D0%B8%D1%80%D0%BB%D0%BF%D1%83%D0%BB_%D1%81%D1%82%D0%B8%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D0%BC%D0%B0%D1%88%D0%B8%D0%BD%D0%B0.pdf",
+      "blockClass": "pdfLink",
+      "target": "_blank",
+      "isAnalyticsEvent": true,
+      "analyticsEventName": "pdfDownload"
+    }
+  },
+  "video#subscription_video": {
+    "props": {
+      "width": "100%",
+      "height": "100%",
+      "loop": false,
+      "autoPlay": false,
+      "muted": false,
+      "src": "https://www.youtube.com/watch?v=FOVBaXsvfyw",
+      "blockClass": ""
+    }
+  },
+  "toggle-layout#salesforceCarousel": {
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "flex-layout.row#carousel-salesforceTitle",
+      "flex-layout.row#carousel-salesforce"
+    ]
+  },
+  "flex-layout.row#carousel-salesforceTitle": {
+    "children": [
+      "rich-text#carousel-salesforceTitle"
+    ]
+  },
+  "rich-text#carousel-salesforceTitle": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Découvrez d'autres articles similaires",
+      "blockClass": [
+        "textHome",
+        "pdpNsMobile"
+      ]
+    }
+  },
+  "flex-layout.row#carousel-salesforce": {
+    "children": [
+      "carousel-salesforce"
+    ],
+    "props": {
+      "blockClass": [
+        "carouselSalesforce"
+      ]
+    }
+  },
+  "carousel-salesforce": {
+    "blocks": [
+      "product-summary.shelf"
+    ],
+    "children": [
+      "slider-layout#carousel-salesforce"
+    ]
+  },
+  "slider-layout#carousel-salesforce": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 3,
+        "tablet": 2,
+        "phone": 1
+      },
+      "infinite": true,
+      "showNavigationArrows": "mobileOnly",
+      "showPaginationDots": "never",
+      "fullWidth": false,
+      "blockClass": [
+        "shelf",
+        "masterSlider",
+        "salesforceMobile"
+      ]
+    }
+  },
+  "shelf.relatedProducts#suggestions": {
+    "blocks": [
+      "product-summary.shelf"
+    ],
+    "props": {
+      "recommendation": "suggestions",
+      "productList": {
+        "showPaginationDots": "never",
+        "maxIte                                                                                                                                       ms": 10,
+        "itemsPerPage": 3,
+        "minItemsPerPage": 1,
+        "scroll": "BY_PAGE",
+        "arrows": true,
+        "titleText": "Vous pourriez aussi être intéressé par"
+      },
+      "blockClass": [
+        "margin18",
+        "slideMargin",
+        "slide20width",
+        "mobileNomargin"
+      ]
+    }
+  },
+  "shelf.relatedProducts#similars": {
+    "blocks": [
+      "product-summary.shelf"
+    ],
+    "props": {
+      "recommendation": "similars",
+      "productList": {
+        "maxItems": 10,
+        "itemsPerPage": 3,
+        "minItemsPerPage": 1,
+        "scroll": "BY_PAGE",
+        "arrows": true,
+        "titleText": "Accessoires et produits d'entretien recommandés"
+      },
+      "blockClass": [
+        "margin18",
+        "slideMargin",
+        "slide20width",
+        "mobileNomargin"
+      ]
+    }
+  },
+  "rich-text#hiddenContent": {
+    "props": {
+      "htmlId": "discoverMore",
+      "text": "a",
+      "id": "anchor",
+      "blockClass": [
+        "hiddenContent"
+      ]
+    }
+  },
+  "tooltip#subscription": {
+    "blocks": [
+      "rich-text#tooltipSubscription"
+    ],
+    "props": {
+      "isOnLeft": true
+    }
+  },
+  "rich-text#tooltipSubscription": {
+    "props": {
+      //old link: [подробнее](https://help.vtex.com/en/faq/what-is-vtex-io)
+      "text": "Подпишитесь на технику и меняйте ее \n каждые 4 года! \n \n 1 товар = 1 договор подписки \n 0 руб - первый платеж \n 4 года срок договора \n \n Решайте - оставить себе или с выгодой подписаться на новую модель \n \n ",
+      "blockClass": [
+        "withLink",
+        "testoTooltip"
+      ]
+    }
+  },
+  "print-specification#month-price": {
+    "props": {
+      "blockClass": "specificationValue",
+      "specificationToPrint": [
+        {
+          "specGroup": "Leasing",
+          "specAttribute": "MonthlyRate"
+        }
+      ],
+      "aggregate": false
+    }
+  },
+  "print-specification#month-price-badge": {
+    "props": {
+      "blockClass": "subscriptionText",
+      "specificationToPrint": [
+        {
+          "specGroup": "Leasing",
+          "specAttribute": "MonthlyRate"
+        }
+      ],
+      "aggregate": false
+    }
+  },
+  "print-specification#month-price-badge-fourtCol": {
+    "props": {
+      "specificationToPrint": [
+        {
+          "specGroup": "Leasing",
+          "specAttribute": "MonthlyRate"
+        }
+      ],
+      "aggregate": false
+    }
+  },
+  "print-specification#full-price": {
+    "props": {
+      "blockClass": "specificationValue",
+      "specificationToPrint": [
+        {
+          "specGroup": "Leasing",
+          "specAttribute": "FullBundlePrice"
+        }
+      ],
+      "aggregate": false
+    }
+  },
+  "print-specification#rv": {
+    "props": {
+      "blockClass": "specificationValue",
+      "specificationToPrint": [
+        {
+          "specGroup": "Leasing",
+          "specAttribute": "RV"
+        }
+      ],
+      "aggregate": false
+    }
+  },
+  "condition-layout.product#isDiscontinuedShippingSimulatorQuestion": {
+    "title": "[CONDITION] isDiscontinued = true ? - shippingSim",
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "isDiscontinued",
+            "value": "true"
+          }
+        }
+      ],
+      "Then": null,
+      "Else": "flex-layout.row#shippingSimulatorQuestion"
+    }
+  },
+  "condition-layout.product#isDiscontinuedShippingCustom": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "isDiscontinued",
+            "value": "true"
+          }
+        }
+      ],
+      "Then": null,
+      "Else": "shipping-custom-pdp"
+    }
+  },
+  "flex-layout.row#shippingSimulatorQuestion": {
+    "children": [
+      "rich-text#shippingSimulatorQuestion"
+    ],
+    "props": {
+      "blockClass": "shippingSimulatorQuestion"
+    }
+  },
+  "rich-text#shippingSimulatorQuestion": {
+    "props": {
+      "text": "Vérifier si votre code postal de livraison est couvert pour l’installation:",
+      "blockClass": "shippingSimulatorQuestion"
+    }
+  },
+  "condition-layout.product#alma": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "sellable",
+            "value": "true"
+          }
+        }
+      ],
+      "Then": "flex-layout.col#alma",
+      "Else": "flex-layout.row#halfSpace"
+    }
+  },
+  "flex-layout.col#alma": {
+    "children": [
+      "alma"
+    ]
+  }
+}

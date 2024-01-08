@@ -1,0 +1,64 @@
+.filterLabelsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-right: 3.125rem;
+    border-radius: 0.25rem;
+    padding-left: 4em;
+    margin-bottom: 1rem;
+}
+.filterLabel:hover{
+  background-color: #40a08c;
+}
+.filterLabelsContainer:empty {
+    margin: 0;
+}
+.filterLabel {
+  text-decoration: unset;
+  color: #fff;
+  border-color: #007d69;
+  background-color: #007d69;
+  padding: 0.25rem 0.625rem;
+  margin-left: 0.75rem;
+  font-weight: 400;
+  width: max-content;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 15px;
+}
+.showMore {
+    text-decoration: underline;
+    color: #007d69;
+    cursor: pointer;
+    margin-left: 1rem;
+    margin-top: 15px;
+    margin-bottom: 0px;
+}
+.hideFilterLabel:nth-child(n+8) {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .filterLabelsContainer {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 25px;
+        margin-left: 0 ;
+        align-items: center;
+        max-width: 55rem;
+    }
+    .filterLabel{
+      margin-right: 0.5rem;
+      margin-top: 0.5rem;
+    }
+    .filterLabelsContainer {
+      justify-content: center;
+      padding-left: 0;
+     } 
+    .showMore {
+      color: #007d69;
+      margin-left: .75rem;
+      margin-right:  .5rem;
+    }
+}

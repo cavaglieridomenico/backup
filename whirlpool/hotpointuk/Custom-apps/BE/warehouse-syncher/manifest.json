@@ -1,0 +1,239 @@
+{
+  "name": "warehouse-syncher",
+  "vendor": "hotpointuk",
+  "version": "0.0.7",
+  "title": "Warehouse syncher - Vtex x CNET",
+  "description": "Warehouse syncher - Vtex x CNET",
+  "categories": [],
+  "dependencies": {},
+  "builders": {
+    "node": "6.x",
+    "docs": "0.x"
+  },
+  "scripts": {},
+  "credentialType": "absolute",
+  "policies": [
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "emeaservicesq.cert.whirlpool.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "emeaservices.cert.whirlpool.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "portal.vtexcommercestable.com.br",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "api.vtex.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.vtexcommercestable.com.br",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.myvtex.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "ADMIN_DS"
+    },
+    {
+      "name": "AcessaTodosPedidos"
+    },
+    {
+      "name": "OMSViewer"
+    },
+    {
+      "name": "LogisticsAdmin"
+    },
+    {
+      "name": "colossus-fire-event"
+    },
+    {
+      "name": "colossus-write-logs"
+    },
+    {
+      "name": "vbase-read-write"
+    }
+  ],
+  "settingsSchema": {
+    "title": "Warehouse Syncher - Vtex x CNET",
+    "type": "object",
+    "properties": {
+      "sappo": {
+        "title": "SAP PO Settings",
+        "type": "object",
+        "properties": {
+          "environment": {
+            "title": "Environment",
+            "type": "string",
+            "enum": [
+              "production",
+              "quality"
+            ],
+            "default": "quality"
+          },
+          "password": {
+            "title": "Password",
+            "type": "string"
+          },
+          "sid": {
+            "title": "SID",
+            "type": "string"
+          },
+          "notificationThreshold": {
+            "title": "Notification Threshold",
+            "type": "number",
+            "default": 3
+          },
+          "enableNotification": {
+            "title": "Enable Notification",
+            "type": "boolean"
+          }
+        }
+      },
+      "vtex": {
+        "title": "Vtex Settings",
+        "type": "object",
+        "properties": {
+          "isMP": {
+            "title": "Is Marketplace",
+            "type": "boolean"
+          },
+          "switchWarehouse": {
+            "title": "Enable Warehouse Switch",
+            "type": "boolean"
+          },
+          "allowedCredentials": {
+            "title": "Allowed Credentials (semicolon separated)",
+            "type": "string"
+          },
+          "categories": {
+            "title": "Categories",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "keyword": {
+                  "title": "Internal Keyword",
+                  "type": "string"
+                },
+                "id": {
+                  "title": "Id",
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "inStockWarehouse": {
+            "title": "Warehouse In Stock - Id",
+            "type": "string",
+            "default": "1"
+          },
+          "outOfStockWarehouse": {
+            "title": "Warehouse Out Of Stock - Id",
+            "type": "string",
+            "default": "999"
+          },
+          "shippingPolicyInStockMDA": {
+            "title": "MDA - Shipping Policy In Stock - Type",
+            "type": "string",
+            "default": "Scheduled"
+          },
+          "resDefaultZipCode": {
+            "title": "Fake Reservations - Default Zip Code",
+            "type": "string",
+            "default": "75010"
+          },
+          "resDefaultCountry": {
+            "title": "Fake Reservations - Default Country",
+            "type": "string",
+            "default": "GBR"
+          },
+          "resExpiration": {
+            "title": "Fake Reservations - Expiration TTL (hh:mm:ss)",
+            "type": "string",
+            "default": "00:30:00"
+          },
+          "stockAvailability": {
+            "title": "Stock Availability",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "salesChannel": {
+                  "title": "Sales Channel Id",
+                  "type": "string"
+                },
+                "specificationName": {
+                  "title": "Specification Name",
+                  "type": "string"
+                },
+                "specificationValue": {
+                  "title": "Specification Value (pattern: instock:outofStock)",
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "mp": {
+            "title": "Marketplace - Outbound Notification - Credentials & Settings",
+            "type": "object",
+            "properties": {
+              "accountName": {
+                "title": "Account Name",
+                "type": "string",
+                "default": "ukccwhirlpool"
+              },
+              "username": {
+                "title": "Authentication - Username",
+                "type": "string",
+                "default": "vtex"
+              },
+              "psw": {
+                "title": "Authentication - Password",
+                "type": "string"
+              },
+              "realm": {
+                "title": "Authentication - Realm",
+                "type": "string",
+                "default": "ukccwhirlpool.myvtex.com"
+              },
+              "hashAlgorithm": {
+                "title": "Authentication - Hash Algorithm",
+                "type": "string",
+                "default": "SHA-512-256"
+              },
+              "enableNotification": {
+                "title": "Enable Notification",
+                "type": "boolean"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

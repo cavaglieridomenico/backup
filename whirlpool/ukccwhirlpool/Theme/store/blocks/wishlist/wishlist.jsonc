@@ -1,0 +1,112 @@
+{
+  "my-account-link.wishlist-link": {
+    "props": {
+      "label": "Wishlist"
+    }
+  },
+  "my-account-page.wishlist-page": {
+    "children": ["flex-layout.row#top", "list-context.wishlist"]
+  },
+  "store.wishlist": {
+    "blocks": ["flex-layout.row#top", "list-context.wishlist"]
+  },
+  "flex-layout.row#top": {
+    "children": ["flex-layout.col#wishlistTitle"],
+    "props": {
+      "blockClass": "wishlistContainer"
+    }
+  },
+  "flex-layout.col#wishlistTitle": {
+    "children": [
+      "go-to-profile-button",
+      // "myaccount-button",
+      "rich-text#wishlistTitle"
+    ],
+    "props": {
+      "blockClass": "titleWishlist",
+      "preventVerticalStretch": true
+    }
+  },
+  "go-to-profile-button": {
+    "props": {
+      "label": "Back",
+      "customBackLink": "/"
+    }
+  },
+  // "myaccount-button": {
+  //   "props": {
+  //     "path": "/",
+  //     "name": "Profile",
+  //     "blockClass": "wishListReturnLink"
+  //     // "location": "window"
+  //   }
+  // },
+  "rich-text#wishlistTitle": {
+    "props": {
+      "text": "### Wishlist",
+      "blockClass": "titleWishlistText"
+    }
+  },
+  "list-context.wishlist": {
+    "blocks": ["product-summary.shelf#product-card-wishlist"],
+    "children": ["slider-layout#wishlist"]
+  },
+  "product-summary.shelf#product-card-wishlist": {
+    "title": "[PRODUCT CARD] - Desktop Product Card",
+    "children": [
+      "responsive-layout.desktop#product-card-wishlist",
+      "responsive-layout.mobile#product-card"
+    ],
+    "props": {
+      "blockClass": "productCardUkcc"
+    }
+  },
+  "responsive-layout.desktop#product-card-wishlist": {
+    "children": [
+      "flex-layout.row#promotionsBadge",
+      "flex-layout.row#productBrand",
+      "flex-layout.row#productImageRoundelsAndQuickview",
+      "flex-layout.row#commercialCode",
+      "flex-layout.row#productName",
+      "flex-layout.row#revoo",
+      "experimental__visibility-layout#keyFeatures",
+      "flex-layout.row#productEnergyLabelAndPrice",
+      "flex-layout.row#leadtimeAndYoureko",
+      "flex-layout.row#addToCart",
+      "flex-layout.row#compareAndWishlist-wishlist"
+    ]
+  },
+  "flex-layout.row#compareAndWishlist-wishlist": {
+    "props": {
+      "blockClass": "buttons-BuyCompareWishlist"
+    },
+    "children": ["flex-layout.row#buttons-compareWishlist-wishlist"]
+  },
+  "flex-layout.row#buttons-compareWishlist-wishlist": {
+    "props": {
+      "blockClass": [
+        "buttons-compareWishlist",
+        "buttons-compareWishlist-wishlist"
+      ],
+      "colSizing": "auto"
+    },
+    "children": [
+      // "condition-layout.product#isAccessorioComparisonButton",
+      "add-to-list-btn"
+    ]
+  },
+  "slider-layout#wishlist": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 3,
+        "tablet": 3,
+        "phone": 1
+      },
+      "showNavigationArrows": "desktopOnly",
+      "showPaginationDots": "never",
+      "infinite": false,
+      "fullWidth": true,
+      "blockClass": "wishlistSliderContainer"
+    }
+  }
+}

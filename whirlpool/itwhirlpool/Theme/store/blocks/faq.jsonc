@@ -1,0 +1,43 @@
+{
+  "store.custom#faq": {
+    "blocks": [
+      "breadcrumb#faq",
+      "flex-layout.row#faq",
+      "domande-frequenti",
+      "flex-layout.row#halfSpace",
+      "experimental__visibility-layout#supp",
+      "experimental__visibility-layout#newsletterFooter"
+      ////"analytics"
+    ]
+  },
+  "breadcrumb#faq": {
+    "props": {
+      "categories": ["/Domande Frequenti/"],
+      "showOnMobile": false
+    }
+  },
+  "flex-layout.row#faq": {
+    "props": {
+      "blockClass": "faq-title"
+    },
+    "children": ["flex-layout.col#faq"]
+  },
+
+  "flex-layout.col#faq": {
+    "children": ["rich-text#faq"]
+  },
+  "rich-text#faq": {
+    "props": {
+      "text": "# Domande Frequenti",
+      "textAlignment": "LEFT",
+      "textPosition": "LEFT",
+      "blockClass": "faq-title"
+    }
+  },
+  "experimental__visibility-layout#newsletterFooter": {
+    "props": {
+      "visible": true
+    },
+    "children": ["newsletter-popup#footer"]
+  }
+}

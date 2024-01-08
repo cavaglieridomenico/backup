@@ -1,0 +1,138 @@
+{
+  "slider-layout#banner-carousel": {
+    "title": "[LAYOUT] - [TOP] - Slider Below Header",
+    "props": {
+      "itemsPerPage": {
+        "desktop": 4,
+        "tablet": 4,
+        "phone": 1
+      },
+      "infinite": false,
+      "autoplay": {
+        "timeout": 3000
+      },
+      "showNavigationArrows": "never",
+      "showPaginationDots": "never",
+      "blockClass": "bannerHeaderContainer"
+    },
+    "children": [
+      "flex-layout.row#prima",
+      "flex-layout.row#seconda",
+      "flex-layout.row#terza",
+      "flex-layout.row#quarta"
+    ]
+  },
+
+  "flex-layout.row#prima": {
+    "title": "[ROW] - [TOP] - Element 1 Container Below Header",
+    "props": {
+      "blockClass": ["bannerheader", "BorderCenterElements"],
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true,
+      "horizontalAlign": "center",
+      "colSizing": "auto"
+    },
+    "children": ["image#logoBannerHeader1", "rich-text#BannerHeaderText1"]
+  },
+  "image#logoBannerHeader1": {
+    "title": "[IMAGE] - [TOP] - Element 1 Image Below Header",
+    "props": {
+      "src": "assets/icons/consegna.svg",
+      "width": "24px",
+      "blockClass": "sliderBanner"
+    }
+  },
+  "rich-text#BannerHeaderText1": {
+    "title": "[TEXT] - [TOP] - Element 1 Text Below Header",
+    "props": {
+      "text": "[Kostenlose Lieferung zum Verwendungsort](/free-delivery-to-installation-site)",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": ["bannerheader", "noLinkEffect"]
+    }
+  },
+  "flex-layout.row#seconda": {
+    "title": "[ROW] - [TOP] - Element 2 Container Below Header",
+    "props": {
+      "blockClass": ["bannerheader", "BorderCenterElements"],
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true,
+      "horizontalAlign": "center",
+      "colSizing": "auto"
+    },
+    "children": ["image#logoBannerHeader2", "rich-text#BannerHeaderText2"]
+  },
+  "image#logoBannerHeader2": {
+    "title": "[IMAGE] - [TOP] - Element 2 Image Below Header",
+    "props": {
+      "src": "assets/icons/heart-icon-black.svg",
+      "width": "20px",
+      "blockClass": "sliderBanner"
+    }
+  },
+  "rich-text#BannerHeaderText2": {
+    "title": "[TEXT] - [TOP] - Element 2 Text Below Header",
+    "props": {
+      "text": "[Gratis Altgerätemitnahme](/take-old-device-free-of-charge)",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": ["bannerheader"]
+    }
+  },
+  "flex-layout.row#terza": {
+    "title": "[ROW] - [TOP] - Element 3 Container Below Header",
+    "props": {
+      "blockClass": ["bannerheader", "BorderCenterElements"],
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true,
+      "horizontalAlign": "center",
+      "colSizing": "auto"
+    },
+    "children": ["image#logoBannerHeader3", "rich-text#BannerHeaderText3"]
+  },
+  "image#logoBannerHeader3": {
+    "title": "[IMAGE] - [TOP] - Element 3 Image Below Header",
+    "props": {
+      "src": "assets/icons/protezione.svg",
+      "width": "24px",
+      "blockClass": "sliderBanner"
+    }
+  },
+  "rich-text#BannerHeaderText3": {
+    "title": "[TEXT] - [TOP] - Element 3 Text Below Header",
+    "props": {
+      "text": "[10 Jahre Ersatzteilgarantie](/10-years-spare-parts-guarantee)",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": "bannerheader"
+    }
+  },
+  "flex-layout.row#quarta": {
+    "title": "[ROW] - [TOP] - Element 4 Container Below Header",
+    "props": {
+      "blockClass": "bannerheader",
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true,
+      "horizontalAlign": "center",
+      "colSizing": "auto"
+    },
+    "children": ["image#logoBannerHeader4", "rich-text#BannerHeaderText4"]
+  },
+  "image#logoBannerHeader4": {
+    "title": "[IMAGE] - [TOP] - Element 4 Image Below Header",
+    "props": {
+      "src": "assets/icons/email.svg",
+      "width": "20px",
+      "blockClass": "sliderBanner"
+    }
+  },
+  "rich-text#BannerHeaderText4": {
+    "title": "[TEXT] - [TOP] - Element 4 Text Below Header",
+    "props": {
+      "text": "[20 € Newsletter Rabatt](/subscribe-newsletter)",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": "bannerheader"
+    }
+  }
+}

@@ -1,0 +1,729 @@
+{
+  "product-summary.shelf": {
+    "children": [
+      "stack-layout#head",
+      "product-list-price#summary",
+      "flex-layout.row#selling-price-savings"
+    ],
+    "props": {
+      "blockClass": "single-product-shelf"
+    }
+  },
+  "product-rating-inline.bazaarvoice#test": {},
+  "stack-layout#head": {
+    "children": ["condition-layout.product#card-new-or-not"]
+  },
+  "condition-layout.product#card-new-or-not": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "isNew"
+          }
+        }
+      ],
+      "Then": "flex-layout.row#product-card-new-product",
+      "Else": "flex-layout.row#container-card"
+    }
+  },
+  "flex-layout.row#container-card": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "rowContainer"
+    },
+    "children": [
+      "flex-layout.col#left-container",
+      "flex-layout.col#right-container"
+    ]
+  },
+  "flex-layout.col#left-container": {
+    "props": {
+      "width": "50%",
+      "blockClass": "left-container"
+    },
+    "children": ["flex-layout.row#product"]
+  },
+  "flex-layout.row#product": {
+    "props": {
+      "width": "100%",
+      "blockClass": "product-left-col"
+    },
+    "children": [
+      "flex-layout.col#energyContainer",
+      "flex-layout.col#imageContainer",
+      "flex-layout.col#shareContainer"
+    ]
+  },
+  "flex-layout.col#energyContainer": {
+    "props": {
+      "blockClass": "energy-container"
+    },
+    "children": [
+      "image-from-specification#EnergyClassLeftCol"
+      /* "reevoo-badge#plp" */
+    ]
+  },
+  "flex-layout.col#imageContainer": {
+    "props": {
+      "width": "10",
+      "blockClass": "image-container"
+    },
+    "children": ["product-summary-image#shelf"]
+  },
+  "flex-layout.col#shareContainer": {
+    "props": {
+      "width": "10",
+      "blockClass": "share-container"
+    },
+    "children": ["share-button-plp#plpDesktop"]
+  },
+  "reevoo-badge#plp": {},
+  "share-button#pdpDesktop": {},
+  "share-button-plp#plpDesktop": {},
+  "share-button-plp#plpMobile": {},
+  "flex-layout.col#right-container": {
+    "props": {
+      "width": "auto",
+      "blockClass": "right-container"
+    },
+    "children": [
+      "product-specification-badges",
+      "flex-layout.row#product-code", //prima row della colonna di destra della card plp
+      "flex-layout.col#product-name-fiche-container", //seconda + terza row della colonna di destra della card plp
+      "flex-layout.row#energy" //quarta row della colonna di destra della card plp
+    ]
+  },
+  "product-specification-badges": {
+    "props": {
+      "specificationGroupName": "allSpecifications",
+      "displayValue": "SPECIFICATION_NAME",
+      "specificationName": "On Sale",
+      "visibleWhen": "True"
+    }
+  },
+  "flex-layout.row#product-code": {
+    "props": {
+      "width": "100%",
+      "blockClass": "product-code"
+    },
+    "children": ["product-identifier.product#card-code"]
+  },
+  /* ------------------------------------ PRODUCT FICHE ------------------------------- */
+  "flex-layout.col#product-name-fiche-container": {
+    "props": {
+      "blockClass": "product-and-fiche-wrapper"
+    },
+    "children": [
+      "flex-layout.row#right-product-description",
+      "flex-layout.row#right-product-fiche"
+    ]
+  },
+  "flex-layout.row#right-product-description": {
+    "props": {
+      "width": "100%",
+      "blockClass": "product-description"
+    },
+    "children": ["product-summary-name"]
+  },
+  /* Condition */
+  "flex-layout.row#right-product-fiche": {
+    "props": {
+      "width": "100%",
+      "blockClass": "product-row-see-product"
+    },
+    "children": [
+      /* "product-fiche", */ "condition-layout.product#schedaProdottoTab",
+      "flex-layout.col#right-bazaar"
+    ]
+  },
+  "flex-layout.col#right-bazaar": {
+    "props": {
+      "blockClass": "right-bazaar-style"
+    },
+    "children": ["product-rating-inline.bazaarvoice#test"]
+  },
+  "product-fiche": {
+    "props": {
+      "hasTargetBlank": true,
+      "filter": {
+        "specificationGroups": ["Document.product-information-sheet"],
+        "type": "show"
+      }
+    }
+  },
+  "condition-layout.product#schedaProdottoTab": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "product-information-sheet"
+          }
+        }
+      ],
+      "Then": "link-custom.product#schedaProdottoTab",
+      "Else": "condition-layout.product#schedaFiche"
+    }
+  },
+  "condition-layout.product#schedaFiche": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "product-fiche"
+          }
+        }
+      ],
+      "Then": "link-custom.product#schedaProdottoFiche"
+    }
+  },
+  "link-custom.product#schedaProdottoTab": {
+    "props": {
+      "href": "{specificationGroups.Document.specifications.product-information-sheet}",
+      "target": "_blank",
+      "escapeLinkRegex": "[%+]"
+    },
+    "children": ["rich-text#productFicheDesk"]
+  },
+  "link-custom.product#schedaProdottoFiche": {
+    "props": {
+      "href": "{specificationGroups.Document.specifications.product-fiche}",
+      "target": "_blank",
+      "escapeLinkRegex": "[%+]"
+    },
+    "children": ["rich-text#productFicheDesk"]
+  },
+  /* Text */
+  "rich-text#productFicheDesk": {
+    "props": {
+      "text": "Voir la fiche produit",
+      "blockClass": "card-link"
+    }
+  },
+  /* --------------------------------------------------------------- */
+  "flex-layout.row#energy": {
+    "props": {
+      "width": "100%",
+      "blockClass": "product-energy-class"
+    },
+    "children": [
+      "flex-layout.col#energyClass",
+      "flex-layout.col#discoverMoreCol"
+    ]
+  },
+  "button-youreko": {},
+  "flex-layout.row#locator-discover": {
+    "props": {
+      "width": "100%",
+      "blockClass": "product-discover-more"
+    },
+    "children": [
+      "flex-layout.col#storeLocatorCol",
+      "flex-layout.col#discoverMoreCol"
+    ]
+  },
+  "flex-layout.col#energyClass": {
+    "props": {
+      "width": "45%",
+      "blockClass": "product-energy-class"
+    },
+    "children": [
+      "condition-layout.product#etichetta-image-pre-new-plp",
+      /* "condition-layout.product#riparabilita-image-pre-new-plp", */
+      "flex-layout.col#store-locator-button"
+    ]
+  },
+  "flex-layout.col#buttonYoureko": {
+    "props": {
+      "width": "70%",
+      "blockClass": "button-youreko-plp-desk-container"
+    },
+    "children": ["button-youreko"]
+  },
+  "condition-layout.product#riparabilita-image-pre-new-plp": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "notation-table"
+          }
+        }
+      ],
+      "Then": "repairability-button#button"
+    }
+  },
+  "repairability-button#button": {
+    "props": {
+      "href": "{specificationGroups.Document.specifications.notation-table}",
+      "imagePath": "{specificationGroups.Document.specifications.repairability-index}",
+      "target": "_blank",
+      "escapeLinkRegex": "[%+]"
+    }
+  },
+  "condition-layout.product#etichetta-image-pre-new-plp": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "new-energy-label"
+          }
+        },
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "label-energie-nouvelle"
+          }
+        }
+      ],
+      "matchType": "any",
+      "Then": "energy-class-cms#button-new",
+      "Else": "condition-layout.product#button-old"
+    }
+  },
+  "rich-text#prova": {
+    "props": {
+      "text": "Prova"
+    }
+  },
+  "condition-layout.product#button-old": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "energy-label"
+          }
+        }
+      ],
+      "Then": "energy-class-cms#button-old"
+    }
+  },
+  "energy-class-cms#button-new": {
+    "props": {
+      "href": "{specificationGroups.Document.specifications.new-energy-label}",
+      "imagePath": "{specificationGroups.EnergyLogo.specifications.EnergyLogo_image}",
+      "target": "_blank",
+      "escapeLinkRegex": "[%+]"
+    }
+  },
+  "energy-class-cms#button-old": {
+    "props": {
+      "href": "{specificationGroups.Document.specifications.energy-label}",
+      "imagePath": "{specificationGroups.EnergyLogo.specifications.EnergyLogo_image}",
+      "target": "_blank",
+      "escapeLinkRegex": "[%+]"
+    }
+  },
+  /* ENERGY CLASS CONDITION CUSTOM MOBILE*/
+  "condition-layout.product#etichetta-image-old-mobile": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "energy-label"
+          }
+        }
+      ],
+      "Then": "energy-class-cms#button-old-mobile",
+      "Else": "condition-layout.product#etichetta-image-new-mobile"
+    }
+  },
+  "condition-layout.product#etichetta-image-new-mobile": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "label-energie-nouvelle"
+          }
+        }
+      ],
+      "Then": "energy-class-cms#button-new-mobile"
+    }
+  },
+  "energy-class-cms#button-new-mobile": {
+    "props": {
+      "href": "{specificationGroups.Document.specifications.new-energy-label}",
+      "imagePath": "{specificationGroups.EnergyLogo.specifications.EnergyLogo_image}",
+      "target": "_blank",
+      "escapeLinkRegex": "[%+]"
+    }
+  },
+  "energy-class-cms#button-old-mobile": {
+    "props": {
+      "href": "{specificationGroups.Document.specifications.energy-label}",
+      "imagePath": "{specificationGroups.EnergyLogo.specifications.EnergyLogo_image}",
+      "target": "_blank",
+      "escapeLinkRegex": "[%+]"
+    }
+  },
+  /* ------------------------------------------------------------------- */
+  "flex-layout.col#energySaving": {
+    "props": {
+      "width": "100%",
+      "blockClass": "product-discover-more"
+    },
+    "children": ["condition-layout.product#etichetta-image-pre-new-plp"]
+  },
+  "flex-layout.col#discoverMoreCol": {
+    "props": {
+      "width": "55%",
+      "blockClass": "discoverMore-container"
+    },
+    "children": [
+      "condition-layout.product#riparabilita-image-pre-new-plp",
+      "button-primary#DiscoverMorePlp"
+    ]
+  },
+  "flex-layout.col#storeLocatorCol": {
+    "props": {
+      "width": "50%",
+      "blockClass": "storeLocator-container"
+    },
+    "children": ["button-store-locator#StoreLocatorPlp"]
+  },
+  "vtex.product-highlights@2.x:product-highlights#promotion": {
+    "props": {
+      "type": "promotion",
+      "blockClass": "promotionHigh"
+    },
+    "children": ["product-highlight-text#promotion"]
+  },
+  "product-highlight-text#promotion": {
+    "props": {
+      "message": "{highlightName}"
+    }
+  },
+  "image#example": {
+    "props": {
+      "width": "25%",
+      "src": "https://storecomponents.vteximg.com.br/arquivos/box.png",
+      "maxHeight": 24
+    }
+  },
+  "image#share-buttonPlpDesktop": {
+    "props": {
+      "width": "25%",
+      "src": "assets/share.svg",
+      "maxHeight": 24,
+      "blockClass": "share-logo-desktop"
+    }
+  },
+  "image#share-buttonPlpMobile": {
+    "props": {
+      "width": "25%",
+      "src": "assets/share.svg",
+      "maxHeight": 24,
+      "blockClass": "share-logo-mobile"
+    }
+  },
+  "product-identifier.product#card-code": {
+    "props": {
+      "idField": "skuReferenceId",
+      "label": "hide",
+      "blockClass": "card-code"
+    }
+  },
+  //---------------------PARTE MOBILE-----------------------
+  "product-summary.shelf#mobile": {
+    "children": ["stack-layout#head-mobile"]
+  },
+  "stack-layout#head-mobile": {
+    "children": ["flex-layout.col#mobile"],
+    "props": {
+      "blockClass": "stack-layout-mobile"
+    }
+  },
+  "flex-layout.col#mobile": {
+    "props": {
+      "blockClass": "card-plp-mobile"
+    },
+    "children": ["flex-layout.row#top-mobile", "flex-layout.row#bottom-mobile"]
+  },
+  "flex-layout.row#top-mobile": {
+    "props": {
+      "blockClass": "topRow-mobile"
+    },
+    "children": [
+      "flex-layout.col#mobile-energy-badge",
+      "flex-layout.col#mobile-product-image",
+      "flex-layout.col#mobile-share-button"
+    ]
+  },
+  "flex-layout.col#mobile-energy-badge": {
+    "props": {
+      "width": "25%",
+      "blockClass": "column-left-plp-mobile"
+    },
+    "children": [
+      "flex-layout.row#energy-badge-mobile",
+      "flex-layout.row#reevoo-value-mobile"
+    ]
+  },
+  "flex-layout.row#energy-badge-mobile": {
+    "props": {
+      "blockClass": "energy-badge-mobile-style"
+    },
+    "children": ["image-from-specification#EnergyClassMobile"]
+  },
+  "flex-layout.row#reevoo-value-mobile": {
+    "props": {
+      "blockClass": "reevoo-value-mobile-style"
+    },
+    "children": [
+      /* "reevoo-badge#plp-mobile" */
+    ]
+  },
+  /* ---------------------------------- REEVOO --------------------------------- */
+  "reevoo-badge#plp-mobile": {},
+  "flex-layout.col#mobile-product-image": {
+    "props": {
+      "width": "50%",
+      "blockClass": "image-product"
+    },
+    "children": ["product-summary-image#shelfMobile"]
+  },
+  "flex-layout.col#mobile-share-button": {
+    "props": {
+      "width": "25%",
+      "blockClass": "column-right-plp-mobile"
+    },
+    "children": ["share-button-plp#plpMobile"]
+  },
+  "flex-layout.row#bottom-mobile": {
+    "props": {
+      "blockClass": "bottomRow-mobile"
+    },
+    "children": ["flex-layout.col#bottom-mobile-descr"]
+  },
+  "flex-layout.col#bottom-mobile-descr": {
+    "props": {
+      "blockClass": "bottomCol-mobile-descr"
+    },
+    "children": [
+      "flex-layout.row#bottomRow-mobile-product-code",
+      "flex-layout.row#bottomRow-mobile-description",
+      "flex-layout.row#bottomRow-mobile-product-fiche-reviews",
+      "flex-layout.row#bottomRow-mobile-energy-saving",
+      "flex-layout.row#bottomRow-mobile-discover-more"
+    ]
+  },
+  "flex-layout.row#bottomRow-mobile-product-code": {
+    "props": {
+      "blockClass": "bottomRow-mobile-product-code"
+    },
+    "children": ["product-identifier.product#card-code"]
+  },
+  "flex-layout.row#bottomRow-mobile-description": {
+    "props": {
+      "blockClass": "bottomRow-mobile-description"
+    },
+    "children": ["product-summary-name"]
+  },
+  /* product fiche mobile */
+  "flex-layout.row#bottomRow-mobile-product-fiche-reviews": {
+    "children": [
+      "flex-layout.row#bottomRow-mobile-product-fiche",
+      "flex-layout.row#bottomRow-mobile-reviews"
+    ],
+    "props": {
+      "blockClass": "bottomRow-mobile-product-fiche-reviews"
+    }
+  },
+  "flex-layout.row#bottomRow-mobile-reviews": {
+    "props": {
+      "blockClass": "bottomRow-mobile-reviews"
+    },
+    "children": ["product-rating-summary.bazaarvoice#prova"]
+  },
+  "flex-layout.row#bottomRow-mobile-product-fiche": {
+    "props": {
+      "blockClass": "bottomRow-mobile-product-fiche"
+    },
+    "children": [
+      /* "product-fiche", */ "condition-layout.product#schedaProdottoTab"
+    ]
+  },
+  "flex-layout.row#bottomRow-mobile-locator-energy": {
+    "props": {
+      "blockClass": "bottomRow-mobile-locator-energy"
+    },
+    "children": [
+      "flex-layout.col#bottomRow-mobile-energy",
+      "flex-layout.col#bottomRow-mobile-locator"
+    ]
+  },
+  "flex-layout.col#bottomRow-mobile-energy": {
+    "props": {
+      "blockClass": "energy-class-col"
+    },
+    "children": ["condition-layout.product#etichetta-image-old-mobile"]
+  },
+  "flex-layout.col#bottomRow-mobile-locator": {
+    "props": {
+      "blockClass": "store-locator-col"
+    },
+    "children": ["button-store-locator#StoreLocatorPlp"]
+  },
+  "button-store-locator#StoreLocatorPlp": {
+    "props": {
+      "href": "/trouver-un-revendeur",
+      "hasTargetBlank": false
+    }
+  },
+  "button-store-locator#StoreLocatorPlpNew": {
+    "props": {
+      "href": "/trouver-un-revendeur",
+      "hasTargetBlank": false
+    }
+  },
+  "flex-layout.row#bottomRow-mobile-energy-saving": {
+    "props": {
+      "blockClass": "bottomRow-mobile-energy-saving"
+    },
+    "children": [
+      "condition-layout.product#etichetta-image-pre-new-plp-new-product",
+      "condition-layout.product#riparabilita-image-pre-new-plp",
+      "flex-layout.row#store-locator-button#store-col-mobile"
+    ]
+  },
+  "flex-layout.row#store-locator-button#store-col-mobile": {
+    "props": {
+      "blockClass": "store-locator-button-plp-mobile"
+    },
+    "children": ["flex-layout.col#store-locator-button#store-col-mobile"]
+  },
+  "flex-layout.row#bottomRow-mobile-discover-more": {
+    "props": {
+      "blockClass": "bottomRow-mobile-discover-more"
+    },
+    "children": ["button-primary#DiscoverMorePlpMobile"]
+  },
+  //---------------------button card plp mobile-------------------------
+  "link.product#energyClassBtnPlpMobile": {
+    "props": {
+      "href": "{specificationGroups.Document.specifications.new-energy-label}",
+      "blockClass": "btnPlpEnergyClassMobile",
+      "target": "_blank",
+      "escapeLinkRegex": "[%+]"
+    },
+    "children": [
+      "image-from-specification#EnergyClassMobile",
+      "rich-text#btnEnergyPlpMobile"
+    ]
+  },
+  "link.product#energyClassBtnPlpMobileOld": {
+    "props": {
+      "href": "{specificationGroups.Document.specifications.energy-label}",
+      "blockClass": "btnPlpEnergyClassMobile",
+      "target": "_blank",
+      "escapeLinkRegex": "[%+]"
+    },
+    "children": [
+      "image-from-specification#EnergyClassMobile",
+      "rich-text#btnEnergyPlpMobile"
+    ]
+  },
+  "link.product#energyClassBtnNewPlp": {
+    "props": {
+      "href": "{specificationGroups.Document.specifications.new-energy-label}",
+      "blockClass": "btnPlpEnergyClass",
+      "target": "_blank",
+      "escapeLinkRegex": "[%+]"
+    },
+    "children": [
+      "image-from-specification#EnergyClass",
+      "rich-text#btnEnergyPlp"
+    ]
+  },
+  "link.product#energyClassBtnOldPlp": {
+    "props": {
+      "href": "{specificationGroups.Document.specifications.energy-label}",
+      "blockClass": "btnPlpEnergyClass",
+      "target": "_blank",
+      "escapeLinkRegex": "[%+]"
+    },
+    "children": [
+      "image-from-specification#EnergyClass",
+      "rich-text#btnEnergyPlp"
+    ]
+  },
+  "link.product#energyClassBtnPlpNew": {
+    "props": {
+      "href": "{specificationGroups.Document.specifications.energy-label}",
+      "blockClass": "btnPlpEnergyClass",
+      "target": "_blank",
+      "escapeLinkRegex": "[%+]"
+    },
+    "children": [
+      "image-from-specification#EnergyClass",
+      "rich-text#btnEnergyPlp"
+    ]
+  },
+  "image-from-specification#EnergyClass": {
+    "props": {
+      "blockClass": "energyClassBtnPlp",
+      "specificationName": "EnergyLogo_image",
+      "imageLink": "Specification.energy-label",
+      "labelWithHref": true,
+      "target": "_blank"
+    }
+  },
+  "image-from-specification#EnergyClassLeftCol": {
+    "props": {
+      "blockClass": "energyClassPlpLeftCol",
+      "specificationName": "EnergyLogo_image",
+      "imageLink": "Specification.energy-label",
+      "labelWithHref": true,
+      "target": "_blank"
+    }
+  },
+  "rich-text#btnEnergyPlp": {
+    "props": {
+      "blockClass": "EnergyClassPlp",
+      "text": "Classe énergétique"
+    }
+  },
+  "image-from-specification#EnergyClassMobile": {
+    "props": {
+      "blockClass": "energyClassBtnPlpMobile",
+      "specificationName": "EnergyLogo_image",
+      "imageLink": "Specification.energy-label",
+      "labelWithHref": true,
+      "target": "_blank"
+    }
+  },
+  "rich-text#btnEnergyPlpMobile": {
+    "props": {
+      "blockClass": "EnergyClassPlpMobile",
+      "text": "Classe énergétique"
+    }
+  },
+  "button-primary#DiscoverMorePlp": {
+    "props": {
+      "text": "En savoir plus",
+      "href": "",
+      "isButton": true
+    }
+  },
+  "button-primary#DiscoverMorePlpNew": {
+    "props": {
+      "text": "En savoir plus",
+      "href": "",
+      "isButton": true
+    }
+  },
+  "button-primary#DiscoverMorePlpMobile": {
+    "props": {
+      "text": "En savoir plus",
+      "href": "",
+      "isButton": true,
+      "width": "100%"
+    }
+  }
+}

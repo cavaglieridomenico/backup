@@ -1,0 +1,528 @@
+{
+  "flex-layout.row#tabPdp": {
+    "title": "Tab PDP",
+    "props": {
+      "blockClass": "containerRowTab"
+    },
+    "children": ["flex-layout.col#tabPdpContent"]
+  },
+  "flex-layout.col#tabPdpContent": {
+    "title": "Tabs PDP Content",
+    "props": {
+      "blockClass": "contentTabPdp"
+    },
+    "children": [
+      "vtex.menu@2.x:menu#pdpTab",
+      "experimental__visibility-layout#Caratt-principali",
+      "experimental__visibility-layout#bannerClassicoImmSin80Tab",
+      "experimental__visibility-layout#editorialBanner",
+      // "rich-text#tecnologia",
+      // "product-specifications-with-images",
+      "responsive-layout.desktop#accordion-dettagli-tecnici",
+      "responsive-layout.tablet#accordion-dettagli-tecnici",
+      "responsive-layout.phone#accordion-dettagli-tecnici",
+      // "rich-text#dettagli-tecnici",
+      // "product-specifications-with-rules#caratt-tec",
+      "responsive-layout.phone#accordionTopFeature",
+      "responsive-layout.desktop#accordionTopFeature",
+      "responsive-layout.tablet#accordionTopFeature",
+      // "rich-text#documenti",
+      // "flex-layout.row#documentiTabContainer",
+      "rich-text#recensioni",
+      "product-reviews.bazaarvoice",
+      "responsive-layout.desktop#accordion-documenti",
+      "responsive-layout.tablet#accordion-documenti",
+      "responsive-layout.phone#accordion-documenti"
+    ]
+  },
+  "responsive-layout.desktop#accordionTopFeature": {
+    "children": ["rich-text#tecnologia", "product-specifications-with-images"]
+  },
+  "responsive-layout.tablet#accordionTopFeature": {
+    "children": ["flex-layout.row#accordionTopFeature"]
+  },
+  "responsive-layout.phone#accordionTopFeature": {
+    "children": ["flex-layout.row#accordionTopFeature"]
+  },
+  "flex-layout.row#accordionTopFeature": {
+    "props": {
+      "blockClass": "pdpAccordionRow"
+    },
+    "children": ["disclosure-layout#accordionTopFeature"]
+  },
+  "disclosure-state-indicator#arrows": {
+    "props": {
+      "Show": "image#arrowBreadDown",
+      "Hide": "image#arrowBreadUp"
+    }
+  },
+  "disclosure-layout#accordionTopFeature": {
+    "props": {
+      "blockClass": "pdpAccordion"
+    },
+    "children": [
+      "disclosure-trigger#accordionTopFeature",
+      "disclosure-content#accordionTopFeature"
+    ]
+  },
+  "disclosure-trigger#accordionTopFeature": {
+    "children": ["rich-text#tecnologia", "disclosure-state-indicator#arrows"],
+    "props": {
+      "blockClass": ["pdpAccordionTrigger", "topFeature"]
+    }
+  },
+  "disclosure-content#accordionTopFeature": {
+    "props": {
+      "blockClass": "pdpAccordionContent"
+    },
+    "children": ["product-specifications-with-images"]
+  },
+  "flex-layout.row#product-specifications-with-images": {
+    "children": ["product-specifications-with-images"]
+  },
+
+  "responsive-layout.desktop#accordion-dettagli-tecnici": {
+    "children": [
+      "rich-text#dettagli-tecnici",
+      "product-specifications-with-rules#caratt-tec"
+    ]
+  },
+  "responsive-layout.tablet#accordion-dettagli-tecnici": {
+    "children": ["flex-layout.row#accordion-dettagli-tecnici"]
+  },
+  "responsive-layout.phone#accordion-dettagli-tecnici": {
+    "children": ["flex-layout.row#accordion-dettagli-tecnici"]
+  },
+  "flex-layout.row#accordion-dettagli-tecnici": {
+    "props": {
+      "blockClass": "pdpAccordionRow"
+    },
+    "children": ["disclosure-layout#accordion-dettagli-tecnici"]
+  },
+  "disclosure-layout#accordion-dettagli-tecnici": {
+    "props": {
+      "blockClass": "pdpAccordion"
+    },
+    "children": [
+      "disclosure-trigger#accordion-dettagli-tecnici",
+      "disclosure-content#accordion-dettagli-tecnici"
+    ]
+  },
+  "disclosure-trigger#accordion-dettagli-tecnici": {
+    "children": [
+      "rich-text#dettagli-tecnici",
+      "disclosure-state-indicator#arrows"
+    ],
+    "props": {
+      "blockClass": "pdpAccordionTrigger"
+    }
+  },
+  "disclosure-content#accordion-dettagli-tecnici": {
+    "props": {
+      "blockClass": "pdpAccordionContent"
+    },
+    "children": ["flex-layout.row#product-specifications-with-rules"]
+  },
+  "flex-layout.row#product-specifications-with-rules": {
+    "children": ["product-specifications-with-rules#caratt-tec"]
+  },
+
+  "responsive-layout.desktop#accordion-documenti": {
+    "children": ["rich-text#documenti", "flex-layout.row#documentiTabContainer"]
+  },
+  "responsive-layout.tablet#accordion-documenti": {
+    "children": ["flex-layout.row#accordion-documenti"]
+  },
+  "responsive-layout.phone#accordion-documenti": {
+    "children": ["flex-layout.row#accordion-documenti"]
+  },
+  "flex-layout.row#accordion-documenti": {
+    "props": {
+      "blockClass": ["pdpAccordionRow", "pdpAccordionRowDocumenti"]
+    },
+    "children": ["disclosure-layout#accordion-documenti"]
+  },
+  "disclosure-layout#accordion-documenti": {
+    "props": {
+      "blockClass": "pdpAccordion"
+    },
+    "children": [
+      "disclosure-trigger#accordion-documenti",
+      "disclosure-content#accordion-documenti"
+    ]
+  },
+  "disclosure-trigger#accordion-documenti": {
+    "children": ["rich-text#documenti", "disclosure-state-indicator#arrows"],
+    "props": {
+      "blockClass": "pdpAccordionTrigger"
+    }
+  },
+  "disclosure-content#accordion-documenti": {
+    "props": {
+      "blockClass": "pdpAccordionContent"
+    },
+    "children": ["flex-layout.row#documentiTabContainer"]
+  },
+
+  "vtex.menu@2.x:menu#pdpTab": {
+    "title": "Menu PDP Tab",
+    "props": {
+      "blockClass": ["pdpTab"]
+    },
+    "children": [
+      // "menu-item#dettagliTecnici",
+      // "menu-item#caratteristichePrincipali",
+      // "menu-item#recensioni",
+      // "menu-item#documenti"
+      "analytics-wrapper#dettagliTecnici",
+      "analytics-wrapper#caratteristichePrincipali",
+      "analytics-wrapper#recensioni",
+      "analytics-wrapper#documenti"
+    ]
+  },
+  "analytics-wrapper#dettagliTecnici": {
+    "props": {
+      "propsAnalytics": {
+        "analyticsProperties": "provide",
+        "nameEvent": "extra_info_interaction",
+        "name": "extraInfoInteraction",
+        "nameView": "",
+        "data": [
+          {
+            "title": "type",
+            "value": "detail tab specifiche tecniche"
+          }
+        ],
+        "isView": false
+      }
+    },
+    "children": ["menu-item#dettagliTecnici"]
+  },
+  "menu-item#dettagliTecnici": {
+    "props": {
+      "id": "menu-tab-pdp",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#dettagli-tecnici",
+        "noFollow": false,
+        "tagTitle": "Dettagli tecnici",
+        "text": "Specifiche tecniche"
+      },
+      "blockClass": ["pdpTab", "techData"]
+    }
+  },
+  "analytics-wrapper#caratteristichePrincipali": {
+    "props": {
+      "propsAnalytics": {
+        "analyticsProperties": "provide",
+        "nameEvent": "extra_info_interaction",
+        "name": "extraInfoInteraction",
+        "nameView": "",
+        "data": [
+          {
+            "title": "type",
+            "value": "detail tab caratteristiche"
+          }
+        ],
+        "isView": false
+      }
+    },
+    "children": ["menu-item#caratteristichePrincipali"]
+  },
+  "menu-item#caratteristichePrincipali": {
+    "props": {
+      "id": "menu-tab-pdp",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#caratteristiche--principali",
+        "noFollow": false,
+        "tagTitle": "Caratteristiche principali",
+        "text": "Caratteristiche"
+      },
+      "blockClass": ["pdpTab", "specialFeatures"]
+    }
+  },
+  "analytics-wrapper#recensioni": {
+    "props": {
+      "propsAnalytics": {
+        "analyticsProperties": "provide",
+        "nameEvent": "extra_info_interaction",
+        "name": "extraInfoInteraction",
+        "nameView": "",
+        "data": [
+          {
+            "title": "type",
+            "value": "detail tab recensioni"
+          }
+        ],
+        "isView": false
+      }
+    },
+    "children": ["menu-item#recensioni"]
+  },
+  "menu-item#recensioni": {
+    "props": {
+      "id": "menu-tab-pdp",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#recensioni",
+        "noFollow": false,
+        "tagTitle": "Recensioni",
+        "text": "Recensioni"
+      },
+      "blockClass": ["pdpTab", "reviews"]
+    }
+  },
+  "analytics-wrapper#documenti": {
+    "props": {
+      "propsAnalytics": {
+        "analyticsProperties": "provide",
+        "nameEvent": "extra_info_interaction",
+        "name": "extraInfoInteraction",
+        "nameView": "",
+        "data": [
+          {
+            "title": "type",
+            "value": "detail tab documenti"
+          }
+        ],
+        "isView": false
+      }
+    },
+    "children": ["menu-item#documenti"]
+  },
+
+  "menu-item#documenti": {
+    "props": {
+      "id": "menu-tab-pdp",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#documenti",
+        "noFollow": false,
+        "tagTitle": "Documenti",
+        "text": "Documenti"
+      },
+      "blockClass": ["pdpTab", "documents"]
+    }
+  },
+  "rich-text#Caratt-principali": {
+    "props": {
+      "htmlId": "caratteristiche-principali",
+      "text": "## Caratteristiche principali",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": "titleTab"
+    }
+  },
+  "rich-text#dettagli-tecnici": {
+    "props": {
+      "htmlId": "dettagli-tecnici",
+      "text": "## Dettagli tecnici",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": ["titleTab", "titleAccordionPdp"]
+    }
+  },
+  "rich-text#tecnologia": {
+    "props": {
+      "htmlId": "caratteristiche--principali",
+      "text": "## Tecnologia ed innovazioni all'avanguardia",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": ["titleTab", "titleAccordionPdp"]
+    }
+  },
+  "rich-text#documenti": {
+    "props": {
+      "htmlId": "documenti",
+      "text": "## Documenti",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": ["titleTab", "titleAccordionPdp"]
+    }
+  },
+  "rich-text#recensioni": {
+    "props": {
+      "htmlId": "recensioni",
+      "text": "## Recensioni",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": ["titleTab", "titleReviews", "titleAccordionPdp"]
+    }
+  },
+  "experimental__visibility-layout#Caratt-principali": {
+    "props": {
+      "visible": false
+    },
+    "children": ["rich-text#Caratt-principali"]
+  },
+  "experimental__visibility-layout#bannerClassicoImmSin80Tab": {
+    "props": {
+      "visible": false
+    },
+    "children": ["flex-layout.row#bannerClassicoImmSin80"]
+  },
+  "flex-layout.row#bannerClassicoImmSin80": {
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": [
+        "bannerPostilla",
+        "marginAutoContent",
+        "width80",
+        "classico",
+        "tab"
+      ]
+    },
+    "children": [
+      "flex-layout.col#leftPartClassicoTab",
+      "flex-layout.col#rightPartClassicoCaratt"
+    ]
+  },
+  "flex-layout.col#leftPartClassicoTab": {
+    "props": {
+      "width": "50%",
+      "blockClass": "columnPostillaImage"
+    },
+    "children": ["image#leftPartClassicoTab"]
+  },
+  "image#leftPartClassicoTab": {
+    "props": {
+      "src": "assets/imagebannertabpdp.png",
+      "blockClass": ["imagePostillaBanner", "cover", "minHeight"]
+    }
+  },
+  "flex-layout.col#rightPartClassicoCaratt": {
+    "props": {
+      "width": "50%",
+      "preventVerticalStretch": true,
+      "blockClass": ["columnPostilla", "editorialIfocard"]
+    },
+    "children": [
+      "experimental__visibility-layout#logoBannerTopCaratt",
+      "experimental__visibility-layout#TitleBannerTopCaratt",
+      "experimental__visibility-layout#BannDescTopCaratt",
+      "experimental__visibility-layout#ButtonBannerClassicoCaratt",
+      "experimental__visibility-layout#bannerClassicoPostillaCaratt"
+    ]
+  },
+  "experimental__visibility-layout#logoBannerTopCaratt": {
+    "props": {
+      "visible": false
+    },
+    "children": ["image#LogoBannerTop"]
+  },
+  "experimental__visibility-layout#TitleBannerTopCaratt": {
+    "props": {
+      "visible": true
+    },
+    "children": ["rich-text#BannTitleTopCaratt"]
+  },
+  "experimental__visibility-layout#BannDescTopCaratt": {
+    "props": {
+      "visible": true
+    },
+    "children": ["rich-text#BannDescTopCaratt"]
+  },
+  "experimental__visibility-layout#ButtonBannerClassicoCaratt": {
+    "props": {
+      "visible": false
+    },
+    "children": ["link#ButtonBannerClassico"]
+  },
+  "experimental__visibility-layout#bannerClassicoPostillaCaratt": {
+    "props": {
+      "visible": false
+    },
+    "children": ["rich-text#bannerClassicoPostilla"]
+  },
+  "rich-text#BannTitleTopCaratt": {
+    "props": {
+      "text": "# Irresistibile alla vista,<br>Impercettibile all'udito",
+      "blockClass": "titleHBannerPostilla"
+    }
+  },
+  "rich-text#BannDescTopCaratt": {
+    "props": {
+      "text": "Sappiamo che l'ultima cosa che vuoi è disturbare la tranquillità della tua casa con rumori indesiderati. Da questo momento vivi ogni momento della tua giornata in pace e tranquillità.",
+      "blockClass": "descBannerPostilla"
+    }
+  },
+  //Secondo editorial banner
+  "experimental__visibility-layout#editorialBanner": {
+    "props": {
+      "visible": false
+    },
+    "children": ["flex-layout.row#cardPersonalizedProductCaratt"]
+  },
+  "flex-layout.row#cardPersonalizedProductCaratt": {
+    "props": {
+      "blockClass": ["promoBannerProduct", "maxWidth58"]
+    },
+    "children": [
+      "flex-layout.col#textProductCaratt",
+      "flex-layout.col#imageCardProduct"
+    ]
+  },
+  "flex-layout.col#textProductCaratt": {
+    "props": {
+      "blockClass": "promoBannerProduct"
+    },
+    "children": [
+      "experimental__visibility-layout#rangeProductCaratt",
+      "experimental__visibility-layout#titleProductCaratt",
+      "experimental__visibility-layout#subtitleProductCaratt",
+      "experimental__visibility-layout#postillaProductCaratt"
+    ]
+  },
+  "experimental__visibility-layout#rangeProductCaratt": {
+    "props": {
+      "visible": true
+    },
+    "children": ["rich-text#rangeProduct"]
+  },
+  "experimental__visibility-layout#titleProductCaratt": {
+    "props": {
+      "visible": true
+    },
+    "children": ["rich-text#titleProduct"]
+  },
+  "experimental__visibility-layout#subtitleProductCaratt": {
+    "props": {
+      "visible": true
+    },
+    "children": ["rich-text#subtitleProduct"]
+  },
+  "experimental__visibility-layout#postillaProductCaratt": {
+    "props": {
+      "visible": true
+    },
+    "children": ["rich-text#postillaProduct"]
+  },
+  "flex-layout.row#documentiTabContainer": {
+    "props": {
+      "blockClass": "containerDocumenti",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "condition-layout.product#schedaProdottoTab",
+      "condition-layout.product#etichetta-enegetica-new",
+      "condition-layout.product#schedaTecnicaTab",
+      "condition-layout.product#safetyEnvironment",
+      "condition-layout.product#referenceGuide",
+      "condition-layout.product#installation",
+      "condition-layout.product#utilizzoManutenzioneTab",
+      "condition-layout.product#instruction",
+      "condition-layout.product#program",
+      "condition-layout.product#cookbook",
+      "condition-layout.product#formativaFGASlink"
+    ]
+  }
+}

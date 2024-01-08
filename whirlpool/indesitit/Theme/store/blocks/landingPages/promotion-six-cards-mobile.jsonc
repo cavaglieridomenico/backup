@@ -1,0 +1,671 @@
+//MOBILE LAYOUT
+{
+  "responsive-layout.mobile#promotion-six-cards-mobile": {
+    "props": {
+      "blockClass": "promotion-six-cards-mobile-style"
+    },
+    "children": ["flex-layout.row#promotion-six-cards-mobile-maxi-container"]
+  },
+  "flex-layout.row#promotion-six-cards-mobile-maxi-container": {
+    "children": ["flex-layout.col#promotion-six-cards-mobile-maxi-container"],
+    "props": {
+      "blockClass": "promotion-six-cards-mobile-maxi-container"
+    }
+  },
+  "flex-layout.col#promotion-six-cards-mobile-maxi-container": {
+    "children": [
+      //"analytics#landing-pages",
+      /* "breadcrumb#promotion-six-cards-mobile", */
+      "breadcrumb-custom#promotion-six-cards-mobile",
+      "flex-layout.row#promotion-six-cards-intro-mobile",
+      /* "flex-layout.row#promotion-six-cards-mobile-first-centered-title-desktop-container",
+        "flex-layout.row#promotion-six-cards-first-carousel-mobile-container", */
+      "flex-layout.row#promotion-six-cards-mobile-first-title-desktop-container",
+      "flex-layout.row#promotion-six-cards-product-detail-card-05-mobile",
+      "flex-layout.row#promotion-six-cards-product-detail-card-03-mobile",
+      "flex-layout.row#promotion-six-cards-mobile-second-title-desktop-container",
+      "flex-layout.row#promotion-six-cards-product-detail-noCard-02-mobile",
+      "flex-layout.row#promotion-six-cards-noCard-01-mobile",
+      "flex-layout.row#promotion-six-cards-noCard-02-mobile",
+      /*  "flex-layout.row#promotion-six-cards-button-learn-more-mobile", */
+      "flex-layout.row#promotion-six-cards-cards-after-intro-mobile",
+      "flex-layout.row#promotion-six-cards-mobile-second-image-container"
+      /* "flex-layout.row#promotion-six-cards-mobile-last-centered-title-desktop-container",
+        "flex-layout.row#promotion-six-cards-last-carousel-mobile-container" */
+    ],
+    "props": {
+      "blockClass": "promotion-six-cards-mobile-maxi-container-style"
+    }
+  },
+  "breadcrumb#promotion-six-cards-mobile": {
+    "props": {
+      "categories": ["/Home/", "promotion-six-cards"],
+      "showOnMobile": true,
+      "blockClass": "breadcrumb-landing-template-mobile"
+    }
+  },
+  "breadcrumb-custom#promotion-six-cards-mobile": {
+    "props": {
+      /* "blockClass": "containerBreadcrumbs", */
+      "firstPage": "Home",
+      "currentPage": "promotion-six-cards"
+    }
+  },
+  /* INTRO TO PRODUCT MOBILE*/
+  "flex-layout.row#promotion-six-cards-intro-mobile": {
+    "children": [
+      "flex-layout.col#promotion-six-cards-intro-image-mobile",
+      "flex-layout.col#promotion-six-cards-intro-desc-mobile"
+    ],
+    "props": {
+      "blockClass": "promotion-six-cards-text-landing-template-intro-mobile"
+    }
+  },
+  "flex-layout.col#promotion-six-cards-intro-image-mobile": {
+    "children": ["image#promotion-six-cards-intro-mobile"],
+    "props": {
+      "blockClass": "intro-image-mobile"
+    }
+  },
+  "image#promotion-six-cards-intro-mobile": {
+    "props": {
+      "blockClass": "product-launch-intro-mobile",
+      "src": "https://i.picsum.photos/id/1002/4312/2868.jpg?hmac=5LlLE-NY9oMnmIQp7ms6IfdvSUQOzP_O3DPMWmyNxwo"
+    }
+  },
+  "flex-layout.col#promotion-six-cards-intro-desc-mobile": {
+    "children": [
+      "title-text#promotion-six-cards-intro-desc-title",
+      "rich-text#promotion-six-cards-intro-desc-paragraph-mobile"
+    ],
+    "props": {
+      "blockClass": "intro-desc-mobile"
+    }
+  },
+  "rich-text#promotion-six-cards-intro-desc-title-mobile": {
+    "props": {
+      "text": "Product or product line name",
+      "blockClass": "intro-landing-template-title-mobile"
+    }
+  },
+  "rich-text#promotion-six-cards-intro-desc-paragraph-mobile": {
+    "props": {
+      "text": "Payoff to intruduce the products presented, to promote the product in it's context",
+      "blockClass": "intro-landing-template-paragraph-mobile"
+    }
+  },
+
+  //first centered text after the intro
+  "flex-layout.row#promotion-six-cards-mobile-first-centered-title-desktop-container": {
+    "children": [
+      "flex-layout.col#promotion-six-cards-mobile-first-centered-title-desktop-container"
+    ],
+    "props": {
+      "blockClass": "promotion-six-cards-mobile-first-centered-title-desktop-container-style"
+    }
+  },
+  "flex-layout.col#promotion-six-cards-mobile-first-centered-title-desktop-container": {
+    "children": ["rich-text#promotion-six-cards-mobile-first-centered-text"],
+    "props": {
+      "blockClass": "promotion-six-cards-mobile-first-centered-title-desktop-container-style"
+    }
+  },
+  "rich-text#promotion-six-cards-mobile-first-centered-text": {
+    "props": {
+      "text": "You may also be interested in",
+      "blockClass": "title-landing-template-mobile"
+    }
+  },
+  //first carousel
+  "flex-layout.row#promotion-six-cards-first-carousel-mobile-container": {
+    "children": [
+      "product-carousel-landing-page-new#promotion-six-cards-first-carousel-mobile"
+    ],
+    "props": {
+      "blockClass": "promotion-six-cards-first-carousel-mobile-container-style"
+    }
+  },
+  "product-carousel-landing-page-new#promotion-six-cards-first-carousel-mobile": {
+    "props": {
+      "collectionID": "137",
+      "isBottomCarousel": true
+    }
+  },
+  //mobile first text title and description centered container
+  "flex-layout.row#promotion-six-cards-mobile-first-title-desktop-container": {
+    "props": {
+      "blockClass": "promotion-mobile-first-title-desktop-container-style"
+    },
+    "children": [
+      "flex-layout.col#promotion-six-cards-mobile-first-title-desktop-container"
+    ]
+  },
+  "flex-layout.col#promotion-six-cards-mobile-first-title-desktop-container": {
+    "props": {
+      "blockClass": "promotion-mobile-first-title-desktop-container-style"
+    },
+    "children": [
+      "flex-layout.row#promotion-six-cards-mobile-first-text-title-container",
+      "flex-layout.row#promotion-six-cards-mobile-first-text-description-container"
+    ]
+  },
+  "flex-layout.row#promotion-six-cards-mobile-first-text-title-container": {
+    "props": {
+      "blockClass": "promotion-mobile-first-text-title-container-style"
+    },
+    "children": ["rich-text#promotion-six-cards-mobile-first-text-title"]
+  },
+  "flex-layout.row#promotion-six-cards-mobile-first-text-description-container": {
+    "props": {
+      "blockClass": "promotion-mobile-first-description-desktop-container-style"
+    },
+    "children": ["rich-text#promotion-six-cards-mobile-first-text-description"]
+  },
+  "rich-text#promotion-six-cards-mobile-first-text-title": {
+    "props": {
+      "text": "Header of the description",
+      "blockClass": "promotion-mobile-first-text-title-style"
+    }
+  },
+  "rich-text#promotion-six-cards-mobile-first-text-description": {
+    "props": {
+      "text": "Brief introduction of the promotion-six-cards, if any context is there to be displayed(E.G. time span to accelerate urgency perception)",
+      "blockClass": "promotion-mobile-first-text-description-style"
+    }
+  },
+  /* PRODUCT DETAIL CARD WITH TEXT 05 MOBILE */
+  "flex-layout.row#promotion-six-cards-product-detail-card-05-mobile": {
+    "children": [
+      "flex-layout.col#promotion-six-cards-product-detail-card-05-mobile"
+    ]
+  },
+  "flex-layout.col#promotion-six-cards-product-detail-card-05-mobile": {
+    "children": [
+      "flex-layout.row#promotion-six-cards-product-detail-card-05-container-mobile"
+    ]
+  },
+  "flex-layout.row#promotion-six-cards-product-detail-card-05-container-mobile": {
+    "children": [
+      "flex-layout.col#promotion-six-cards-product-detail-card-05-image-mobile",
+      "flex-layout.col#promotion-six-cards-product-detail-card-05-container-desc-mobile"
+    ],
+    "props": {
+      "blockClass": "container-global-bordered-text-image-landing-template-mobile"
+    }
+  },
+  /* ------------------------------------ */
+  "flex-layout.col#promotion-six-cards-product-detail-card-05-image-mobile": {
+    "children": [
+      /* "image#promotion-six-cards-product-detail-card-05-image-mobile" */ "is-image-or-video#promotion-six-cards-mobile"
+    ],
+    "props": {
+      "blockClass": "container-image-bordered-text-image-landing-template-mobile"
+    }
+  },
+  /* "image#promotion-six-cards-product-detail-card-05-image-mobile": {
+      "props": {
+        "blockClass": "image-bordered-text-image-landing-template-mobile",
+        "src": "https://i.picsum.photos/id/1002/4312/2868.jpg?hmac=5LlLE-NY9oMnmIQp7ms6IfdvSUQOzP_O3DPMWmyNxwo"
+      }
+    }, */
+  /* ------------------------------------ */
+  "flex-layout.col#promotion-six-cards-product-detail-card-05-container-desc-mobile": {
+    "children": [
+      "rich-text#promotion-six-cards-product-detail-card-05-title-mobile",
+      "rich-text#promotion-six-cards-product-detail-card-05-desc-mobile"
+      /* "rich-text#promotion-six-cards-button-go-to-product-mobile" */
+    ]
+  },
+  "rich-text#promotion-six-cards-product-detail-card-05-title-mobile": {
+    "props": {
+      "blockClass": "title-bordered-text-image-landing-template-mobile",
+      "text": "Header about the main characterstic"
+    }
+  },
+  "rich-text#promotion-six-cards-product-detail-card-05-desc-mobile": {
+    "props": {
+      "blockClass": "description-bordered-text-image-landing-template-mobile",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt enim sit imperdiet id aenean nunc ut faucibus. Vitae ullamcorper turpis blandit semper at."
+    }
+  },
+  "rich-text#promotion-six-cards-button-go-to-product-mobile": {
+    "props": {
+      "text": "[ GO TO PRODUCT/LINE ](/)",
+      "blockClass": ["button-go-to-product-mobile"]
+    }
+  },
+  /* PRODUCT DETAIL CARD WITH TEXT 03 MOBILE */
+  "flex-layout.row#promotion-six-cards-product-detail-card-03-mobile": {
+    "props": {
+      "blockClass": "pl-product-detail-card-03-mobile"
+    },
+    "children": [
+      "flex-layout.col#promotion-six-cards-product-detail-card-03-mobile"
+    ]
+  },
+  "flex-layout.col#promotion-six-cards-product-detail-card-03-mobile": {
+    "props": {
+      "blockClass": "pl-product-detail-card-03-mobile"
+    },
+    "children": [
+      "flex-layout.row#promotion-six-cards-product-detail-card-03-container-mobile"
+    ]
+  },
+  "flex-layout.row#promotion-six-cards-product-detail-card-03-container-mobile": {
+    "children": [
+      "flex-layout.col#promotion-six-cards-product-detail-card-03-image-mobile",
+      "flex-layout.col#promotion-six-cards-product-detail-card-03-container-desc-mobile"
+    ],
+    "props": {
+      "blockClass": "container-global-bordered-text-image-landing-template-mobile"
+    }
+  },
+  /* ------------------------------------ */
+  "flex-layout.col#promotion-six-cards-product-detail-card-03-image-mobile": {
+    "children": [
+      /* "image#promotion-six-cards-product-detail-card-03-image-mobile" */ "is-image-or-video#promotion-six-cards-mobile"
+    ],
+    "props": {
+      "blockClass": "container-image-bordered-text-image-landing-template-mobile"
+    }
+  },
+  /*  "image#promotion-six-cards-product-detail-card-03-image-mobile": {
+      "props": {
+        "blockClass": "image-bordered-text-image-landing-template-mobile",
+        "src": "https://i.picsum.photos/id/1002/4312/2868.jpg?hmac=5LlLE-NY9oMnmIQp7ms6IfdvSUQOzP_O3DPMWmyNxwo"
+      }
+    }, */
+  /* ------------------------------------ */
+  "flex-layout.col#promotion-six-cards-product-detail-card-03-container-desc-mobile": {
+    "children": [
+      "rich-text#promotion-six-cards-product-detail-card-03-title-mobile",
+      "rich-text#promotion-six-cards-product-detail-card-03-desc-mobile"
+    ]
+  },
+  "rich-text#promotion-six-cards-product-detail-card-03-title-mobile": {
+    "props": {
+      "blockClass": "title-bordered-text-image-landing-template-mobile",
+      "text": "Header about the main characterstic"
+    }
+  },
+  "rich-text#promotion-six-cards-product-detail-card-03-desc-mobile": {
+    "props": {
+      "blockClass": "description-bordered-text-image-landing-template-mobile",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt enim sit imperdiet id aenean nunc ut faucibus. Vitae ullamcorper turpis blandit semper at."
+    }
+  },
+  //mobile second text title and description centered container
+  "flex-layout.row#promotion-six-cards-mobile-second-title-desktop-container": {
+    "props": {
+      "blockClass": "promotion-mobile-second-title-desktop-container-style"
+    },
+    "children": [
+      "flex-layout.col#promotion-six-cards-mobile-second-title-desktop-container"
+    ]
+  },
+  "flex-layout.col#promotion-six-cards-mobile-second-title-desktop-container": {
+    "props": {
+      "blockClass": "promotion-mobile-second-title-desktop-container-style"
+    },
+    "children": [
+      "flex-layout.row#promotion-six-cards-mobile-second-text-title-container",
+      "flex-layout.row#promotion-six-cards-mobile-second-text-description-container"
+    ]
+  },
+  "flex-layout.row#promotion-six-cards-mobile-second-text-title-container": {
+    "props": {
+      "blockClass": "promotion-mobile-second-text-title-container-style"
+    },
+    "children": ["rich-text#promotion-six-cards-mobile-second-text-title"]
+  },
+  "flex-layout.row#promotion-six-cards-mobile-second-text-description-container": {
+    "props": {
+      "blockClass": "promotion-mobile-second-description-desktop-container-style"
+    },
+    "children": ["rich-text#promotion-six-cards-mobile-second-text-description"]
+  },
+  "rich-text#promotion-six-cards-mobile-second-text-title": {
+    "props": {
+      "text": "Header of the description",
+      "blockClass": "promotion-mobile-second-text-title-style"
+    }
+  },
+  "rich-text#promotion-six-cards-mobile-second-text-description": {
+    "props": {
+      "text": "Brief introduction of the promotion-six-cards, if any context is there to be displayed(E.G. time span to accelerate urgency perception)",
+      "blockClass": "promotion-mobile-second-text-description-style"
+    }
+  },
+  /* PRODUCT DETAIL NO CARD WITH TEXT MOBILE*/
+  "flex-layout.row#promotion-six-cards-product-detail-noCard-02-mobile": {
+    "children": [
+      "flex-layout.col#promotion-six-cards-product-detail-noCard-02-mobile"
+    ]
+  },
+  "flex-layout.col#promotion-six-cards-product-detail-noCard-02-mobile": {
+    "children": [
+      "flex-layout.row#promotion-six-cards-product-detail-noCard-02-container-mobile"
+    ]
+  },
+  "flex-layout.row#promotion-six-cards-product-detail-noCard-02-container-mobile": {
+    "children": [
+      "flex-layout.col#promotion-six-cards-product-detail-noCard-02-image-mobile",
+      "flex-layout.col#promotion-six-cards-product-detail-noCard-02-container-desc-mobile"
+    ]
+  },
+  /* ------------------------------------ */
+  "flex-layout.col#promotion-six-cards-product-detail-noCard-02-image-mobile": {
+    "children": [
+      /* "image#promotion-six-cards-product-detail-noCard-02-image-mobile" */ "is-image-or-video#promotion-six-cards-mobile"
+    ],
+    "props": {
+      "blockClass": "container-image-text-image-landing-template-mobile"
+    }
+  },
+  /*  "image#promotion-six-cards-product-detail-noCard-02-image-mobile": {
+      "props": {
+        "blockClass": "image-text-image-landing-template-mobile",
+        "src": "https://i.picsum.photos/id/1002/4312/2868.jpg?hmac=5LlLE-NY9oMnmIQp7ms6IfdvSUQOzP_O3DPMWmyNxwo"
+      }
+    }, */
+  /* ------------------------------------ */
+  "flex-layout.col#promotion-six-cards-product-detail-noCard-02-container-desc-mobile": {
+    "children": [
+      "rich-text#promotion-six-cards-product-detail-noCard-02-title-mobile",
+      "rich-text#promotion-six-cards-product-detail-noCard-02-desc-mobile"
+    ],
+    "props": {
+      "blockClass": "container-text-text-image-landing-template-mobile"
+    }
+  },
+  "rich-text#promotion-six-cards-product-detail-noCard-02-title-mobile": {
+    "props": {
+      "blockClass": "title-text-image-landing-template-mobile",
+      "text": "Header about the main characterstic 2"
+    }
+  },
+  "rich-text#promotion-six-cards-product-detail-noCard-02-desc-mobile": {
+    "props": {
+      "blockClass": "description-text-image-landing-template-mobile",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt enim sit imperdiet id aenean nunc ut faucibus. Vitae ullamcorper turpis blandit semper at."
+    }
+  },
+
+  /* LEARN MORE BUTTON */
+
+  /*   "flex-layout.row#promotion-six-cards-button-learn-more-mobile": {
+      "children": ["flex-layout.col#promotion-six-cards-button-learn-more-container"]
+    },
+    "flex-layout.col#promotion-six-cards-button-learn-more-container": {
+      "children": ["button-learn-more-mobile#button-learn-more"],
+      "props": {
+        "blockClass": "button-learn-more-container"
+      }
+    },
+    "button-learn-more-mobile#button-learn-more": {},
+   */
+  /* PRODUCT DETAIL NO CARD WITH TEXT MOBILE*/
+  "flex-layout.row#promotion-six-cards-noCard-01-mobile": {
+    "children": ["flex-layout.col#promotion-six-cards-noCard-01-mobile"]
+  },
+  "flex-layout.col#promotion-six-cards-noCard-01-mobile": {
+    "children": [
+      "flex-layout.row#promotion-six-cards-noCard-01-container-mobile"
+    ]
+  },
+  "flex-layout.row#promotion-six-cards-noCard-01-container-mobile": {
+    "children": [
+      "flex-layout.col#promotion-six-cards-noCard-01-image-mobile",
+      "flex-layout.col#promotion-six-cards-noCard-01-container-desc-mobile"
+    ]
+  },
+  /* ------------------------------------ */
+  "flex-layout.col#promotion-six-cards-noCard-01-image-mobile": {
+    "children": [
+      /* "image#promotion-six-cards-noCard-01-image-mobile" */ "is-image-or-video#promotion-six-cards-mobile"
+    ],
+    "props": {
+      "blockClass": "container-image-text-image-landing-template-mobile"
+    }
+  },
+  /*  "image#promotion-six-cards-noCard-01-image-mobile": {
+    "props": {
+      "blockClass": "image-text-image-landing-template-mobile",
+      "src": "https://i.picsum.photos/id/1002/4312/2868.jpg?hmac=5LlLE-NY9oMnmIQp7ms6IfdvSUQOzP_O3DPMWmyNxwo"
+    }
+  }, */
+  /* ------------------------------------ */
+  "flex-layout.col#promotion-six-cards-noCard-01-container-desc-mobile": {
+    "children": [
+      "rich-text#promotion-six-cards-noCard-01-title-mobile",
+      "rich-text#promotion-six-cards-noCard-01-desc-mobile"
+    ],
+    "props": {
+      "blockClass": "container-text-text-image-landing-template-mobile"
+    }
+  },
+  "rich-text#promotion-six-cards-noCard-01-title-mobile": {
+    "props": {
+      "blockClass": "title-text-image-landing-template-mobile",
+      "text": "Header about the main characterstic 1"
+    }
+  },
+  "rich-text#promotion-six-cards-noCard-01-desc-mobile": {
+    "props": {
+      "blockClass": "description-text-image-landing-template-mobile",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt enim sit imperdiet id aenean nunc ut faucibus. Vitae ullamcorper turpis blandit semper at."
+    }
+  },
+  /* PRODUCT DETAIL NO CARD WITH TEXT MOBILE*/
+  "flex-layout.row#promotion-six-cards-noCard-02-mobile": {
+    "children": ["flex-layout.col#promotion-six-cards-noCard-02-mobile"]
+  },
+  "flex-layout.col#promotion-six-cards-noCard-02-mobile": {
+    "children": [
+      "flex-layout.row#promotion-six-cards-noCard-02-container-mobile"
+    ]
+  },
+  "flex-layout.row#promotion-six-cards-noCard-02-container-mobile": {
+    "children": [
+      "flex-layout.col#promotion-six-cards-noCard-02-image-mobile",
+      "flex-layout.col#promotion-six-cards-noCard-02-container-desc-mobile"
+    ]
+  },
+  /* ------------------------------------ */
+  "flex-layout.col#promotion-six-cards-noCard-02-image-mobile": {
+    "children": [
+      /* "image#promotion-six-cards-noCard-02-image-mobile" */ "is-image-or-video#promotion-six-cards-mobile"
+    ],
+    "props": {
+      "blockClass": "container-image-text-image-landing-template-mobile"
+    }
+  },
+  /*  "image#promotion-six-cards-noCard-02-image-mobile": {
+    "props": {
+      "blockClass": "image-text-image-landing-template-mobile",
+      "src": "https://i.picsum.photos/id/1002/4312/2868.jpg?hmac=5LlLE-NY9oMnmIQp7ms6IfdvSUQOzP_O3DPMWmyNxwo"
+    }
+  }, */
+  /* ------------------------------------ */
+  "flex-layout.col#promotion-six-cards-noCard-02-container-desc-mobile": {
+    "children": [
+      "rich-text#promotion-six-cards-noCard-02-title-mobile",
+      "rich-text#promotion-six-cards-noCard-02-desc-mobile"
+    ],
+    "props": {
+      "blockClass": "container-text-text-image-landing-template-mobile"
+    }
+  },
+  "rich-text#promotion-six-cards-noCard-02-title-mobile": {
+    "props": {
+      "blockClass": "title-text-image-landing-template-mobile",
+      "text": "Header about the main characterstic 2"
+    }
+  },
+  "rich-text#promotion-six-cards-noCard-02-desc-mobile": {
+    "props": {
+      "blockClass": "description-text-image-landing-template-mobile",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt enim sit imperdiet id aenean nunc ut faucibus. Vitae ullamcorper turpis blandit semper at."
+    }
+  },
+
+  /* CARDS AFTER THE INTRO OF THE PRODUCT MOBILE */
+  "flex-layout.row#promotion-six-cards-cards-after-intro-mobile": {
+    "children": [
+      "flex-layout.col#promotion-six-cards-card-customer-service-mobile",
+      "flex-layout.col#promotion-six-cards-card-extended-warranty-mobile",
+      "flex-layout.col#promotion-six-cards-card-expired-warranty-mobile"
+    ],
+    "props": {
+      "blockClass": "card-after-intro-mobile"
+    }
+  },
+  /* ------------------------------------ */
+  "flex-layout.col#promotion-six-cards-card-customer-service-mobile": {
+    "children": [
+      "flex-layout.row#promotion-six-cards-card-container-cs-mobile"
+    ],
+    "props": {
+      "blockClass": "card-triple-container-landing-template-mobile"
+    }
+  },
+  "flex-layout.row#promotion-six-cards-card-container-cs-mobile": {
+    "children": [
+      "rich-text#promotion-six-cards-card-title-cs-mobile",
+      "rich-text#promotion-six-cards-card-desc-cs-mobile"
+    ],
+    "props": {
+      "blockClass": "card-triple-container-landing-template-mobile"
+    }
+  },
+  "rich-text#promotion-six-cards-card-title-cs-mobile": {
+    "props": {
+      "text": "Value name",
+      "blockClass": "card-triple-title-landing-template-mobile"
+    }
+  },
+  "rich-text#promotion-six-cards-card-desc-cs-mobile": {
+    "props": {
+      "text": "If you have purchased the product less than two years ago, you can organize an appointment through our Consumer Service.",
+      "blockClass": "card-triple-text-landing-template-mobile"
+    }
+  },
+  /* ------------------------------------ */
+  "flex-layout.col#promotion-six-cards-card-extended-warranty-mobile": {
+    "children": [
+      "flex-layout.row#promotion-six-cards-card-container-extW-mobile"
+    ],
+    "props": {
+      "blockClass": "card-triple-container-landing-template-mobile"
+    }
+  },
+  "flex-layout.row#promotion-six-cards-card-container-extW-mobile": {
+    "children": [
+      "rich-text#promotion-six-cards-card-title-extW-mobile",
+      "rich-text#promotion-six-cards-card-desc-extW-mobile"
+    ],
+    "props": {
+      "blockClass": "card-triple-container-landing-template-mobile"
+    }
+  },
+  "rich-text#promotion-six-cards-card-title-extW-mobile": {
+    "props": {
+      "text": "Value name",
+      "blockClass": "card-triple-title-landing-template-mobile"
+    }
+  },
+  "rich-text#promotion-six-cards-card-desc-extW-mobile": {
+    "props": {
+      "text": "If you have a valid extended warranty con01act, you cna use our Repair & Care online booking portal.",
+      "blockClass": "card-triple-text-landing-template-mobile"
+    }
+  },
+  /* ------------------------------------ */
+  "flex-layout.col#promotion-six-cards-card-expired-warranty-mobile": {
+    "children": [
+      "flex-layout.row#promotion-six-cards-card-container-expW-mobile"
+    ],
+    "props": {
+      "blockClass": "card-triple-container-landing-template-mobile"
+    }
+  },
+  "flex-layout.row#promotion-six-cards-card-container-expW-mobile": {
+    "children": [
+      "rich-text#promotion-six-cards-card-title-expW-mobile",
+      "rich-text#promotion-six-cards-card-desc-expW-mobile"
+    ],
+    "props": {
+      "blockClass": "card-triple-container-landing-template-mobile"
+    }
+  },
+  "rich-text#promotion-six-cards-card-title-expW-mobile": {
+    "props": {
+      "text": "Value name",
+      "blockClass": "card-triple-title-landing-template-mobile"
+    }
+  },
+  "rich-text#promotion-six-cards-card-desc-expW-mobile": {
+    "props": {
+      "text": "If your warranty has expired, don't worry! We can provide a tailored solution just for you. Discover the best offer.",
+      "blockClass": "card-triple-text-landing-template-mobile"
+    }
+  },
+  //image in the middle of the page
+  "flex-layout.row#promotion-six-cards-mobile-second-image-container": {
+    "children": [
+      "flex-layout.col#promotion-six-cards-mobile-second-image-container"
+    ],
+    "props": {
+      "blockClass": "promotion-six-cards-mobile-second-image-container-style"
+    }
+  },
+  "flex-layout.col#promotion-six-cards-mobile-second-image-container": {
+    "children": ["image#promotion-six-cards-mobile-second-image"],
+    "props": {
+      "blockClass": "promotion-six-cards-mobile-second-image-container-style"
+    }
+  },
+  "image#promotion-six-cards-mobile-second-image": {
+    "props": {
+      "blockClass": "promotion-six-cards-mobile-second-image-style",
+      "src": "https://i.picsum.photos/id/1002/4312/2868.jpg?hmac=5LlLE-NY9oMnmIQp7ms6IfdvSUQOzP_O3DPMWmyNxwo"
+    }
+  },
+  //last centered text after the intro
+  "flex-layout.row#promotion-six-cards-mobile-last-centered-title-desktop-container": {
+    "children": [
+      "flex-layout.col#promotion-six-cards-mobile-last-centered-title-desktop-container"
+    ],
+    "props": {
+      "blockClass": "promotion-six-cards-mobile-last-centered-title-desktop-container-style"
+    }
+  },
+  "flex-layout.col#promotion-six-cards-mobile-last-centered-title-desktop-container": {
+    "children": ["rich-text#promotion-six-cards-mobile-last-centered-text"],
+    "props": {
+      "blockClass": "promotion-six-cards-mobile-firlastst-centered-title-desktop-container-style"
+    }
+  },
+  "rich-text#promotion-six-cards-mobile-last-centered-text": {
+    "props": {
+      "text": "You may also be interested in",
+      "blockClass": "title-landing-template-mobile"
+    }
+  },
+  //last carousel
+  "flex-layout.row#promotion-six-cards-last-carousel-mobile-container": {
+    "children": [
+      "product-carousel-landing-page-new#promotion-six-cards-last-carousel-mobile"
+    ],
+    "props": {
+      "blockClass": "promotion-six-cards-last-carousel-mobile-container-style"
+    }
+  },
+  "product-carousel-landing-page-new#promotion-six-cards-last-carousel-mobile": {
+    "props": {
+      "collectionID": "137",
+      "isBottomCarousel": true
+    }
+  },
+  "is-image-or-video#promotion-six-cards-mobile": {}
+}

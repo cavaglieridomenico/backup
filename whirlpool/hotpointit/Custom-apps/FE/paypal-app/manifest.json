@@ -1,0 +1,40 @@
+{
+  "vendor": "hotpointit",
+  "name": "paypal-app",
+  "version": "0.0.4",
+  "title": "Paypal iFrame",
+  "description": "Paypal iFrame",
+  "defaultLocale": "en-GB",
+  "builders": {
+    "messages": "1.x",
+    "store": "0.x",
+    "react": "3.x"
+  },
+  "scripts": {
+    "postreleasy": "node ./react/utils/script.js"
+  },
+  "dependencies": {
+    "vtex.styleguide": "9.x",
+    "vtex.css-handles": "0.x",
+    "vtex.product-context": "0.x",
+    "vtex.render-runtime": "8.x",
+    "vtex.apps-graphql": "2.x"
+  },
+  "settingsSchema": {
+    "title": "Paypal iFrame",
+    "type": "object",
+    "properties": {
+      "clientId": {
+        "title": "client-id",
+        "description": "Enter the Paypal client-id",
+        "type": "string"
+      },
+      "locale": {
+        "title": "Locale",
+        "description": "Enter the country locale (ex. en_GB)",
+        "type": "string"
+      }
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

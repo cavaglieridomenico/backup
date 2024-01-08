@@ -1,0 +1,229 @@
+/* Numbers.tsx */
+.numbersContainer {
+  display: flex;
+  flex-direction: column;
+}
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.numberContainer {
+  border: 1.5px solid #EDAC09;
+  border-radius: 6px;
+  margin: 0 4px;
+  height: 90px;
+  width: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.number {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 2.8rem;
+}
+.countdownDots {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-size: 3rem;  
+  margin: 0 0.5rem;
+}
+.labels {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  margin-left: 0.25rem;
+}
+/* Animation for seconds */
+@keyframes tickSecondsDigitTwo {
+  0% {
+    opacity: 0;
+    transform: translateY(70px);
+    animation-timing-function: linear;
+  }
+  10% {
+    opacity: 0.3;
+    transform: translateY(50px);
+    animation-timing-function: linear;
+  }
+  20% {
+    opacity: 0.5;
+    transform: translateY(35px);
+    animation-timing-function: linear;
+  }
+  40% {
+    opacity: 1;
+    transform: translateY(0px);
+    animation-timing-function: linear;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0px);
+    animation-timing-function: linear;
+  }
+  75% {
+    opacity: 0.5;
+    transform: translateY(-45px);
+    animation-timing-function: linear;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-60px);
+    animation-timing-function: linear;
+  }
+}
+.secondsDigitTwo {  /* Class with animation for seconds */
+  animation: tickSecondsDigitTwo 1s ease infinite;
+}
+/* Modal.tsx */
+.modalContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.199);
+}
+.modalWrapper {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: auto;
+  top: auto;
+  padding: 2rem 3rem;
+  border-radius: 2px;
+  background-color: #363636;
+  max-width: 352px;
+}
+.closeIcon {
+  position: absolute;
+  top: 8%;
+  right: 5%;
+  cursor: pointer;
+}
+.modalText {
+  font-size: 0.8rem;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+.modalButton {
+  font-style: normal;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #EDAC09;
+  border-radius: 2px;
+  border: none;
+  width: 100%;
+  height: 48px;
+  cursor: pointer;
+}
+/* Laptop small*/
+@media only screen and (min-width: 1025px) and (max-width: 1439px) {
+  .numberContainer {
+    width: 44px;
+    height: 70px;
+  }
+  .number {
+    font-size: 2rem;
+  }
+  .countdownDots {
+    font-size: 2.2rem;
+  }
+}
+/* Tablet version*/
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  /* Numbers.tsx */
+  .numberContainer {
+    width: 35px;
+    height: 55px;
+    border: 1px solid #EDAC09;
+    margin: 0 2px;
+  }
+  .number {
+    font-size: 1.5rem;
+  }
+  .countdownDots {
+    font-size: 1rem;
+    margin: 0 0.25rem;
+  }
+}
+/* Mobile version*/
+@media only screen and (max-width: 600px) {
+  /* Numbers.tsx */
+  .numbersContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .numberContainer {
+    width: 30px;
+    height: 45px;
+    border: 1px solid #EDAC09;
+    margin: 0 2px;
+  }
+  .number {
+    font-size: 1.2rem;
+  }
+  .countdownDots {
+    font-size: 1.5rem;
+    margin: 0 0.25rem;
+  }
+  .labels {
+    font-size: 10px;
+  }
+  /* Animation for seconds */
+  @keyframes tickSecondsDigitTwo {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+      animation-timing-function: linear;
+    }
+    10% {
+      opacity: 0.3;
+      transform: translateY(10px);
+      animation-timing-function: linear;
+    }
+    20% {
+      opacity: 0.5;
+      transform: translateY(5px);
+      animation-timing-function: linear;
+    }
+    40% {
+      opacity: 1;
+      transform: translateY(0px);
+      animation-timing-function: linear;
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0px);
+      animation-timing-function: linear;
+    }
+    75% {
+      opacity: 0.5;
+      transform: translateY(-15px);
+      animation-timing-function: linear;
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-30px);
+      animation-timing-function: linear;
+    }
+  }
+  .secondsDigitTwo {  /* Class with animation for seconds */
+    animation: tickSecondsDigitTwo 1s ease infinite;
+  }
+}

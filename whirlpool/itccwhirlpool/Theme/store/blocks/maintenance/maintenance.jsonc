@@ -1,0 +1,254 @@
+{
+  "store.custom#maintenance": {
+    "parent": {
+      "header": "header#empty-maintenance",
+      "footer": "footer#empty-maintenance"
+    },
+    "blocks": [
+      "responsive-layout.desktop#maintenance",
+      "responsive-layout.mobile#maintenance"
+    ]
+  },
+  "header#empty-maintenance": {
+    "blocks": [
+      "header-layout.desktop#empty-maintenance",
+      "header-layout.mobile#empty-maintenance"
+    ]
+  },
+  "header-layout.desktop#empty-maintenance": {
+    "children": []
+  },
+  "header-layout.mobile#empty-maintenance": {
+    "children": []
+  },
+  "footer#empty-maintenance": {
+    "blocks": [
+      "footer-layout.desktop#empty-maintenance",
+      "footer-layout.mobile#empty-maintenance"
+    ]
+  },
+  "footer-layout.desktop#empty-maintenance": {
+    "children": []
+  },
+  "footer-layout.mobile#empty-maintenance": {
+    "children": []
+  },
+  "rich-text#title": {
+    "props": {
+      "text": "# <div>ВЕДУТСЯ</div> <div>ТЕХНИЧЕСКИЕ</div> <div>РАБОТЫ</div>",
+      "blockClass": "maintenanceTitle"
+    }
+  },
+  "responsive-layout.desktop#maintenance": {
+    "children": ["flex-layout.row#maintenance-wrapper"]
+  },
+  "responsive-layout.mobile#maintenance": {
+    "children": ["flex-layout.row#maintenance-wrapper-mobile"]
+  },
+  "flex-layout.row#maintenance-wrapper": {
+    "children": [
+      "flex-layout.col#maintenance-text",
+      "flex-layout.col#maintenance-image"
+    ],
+    "props": {
+      "blockClass": "maintenanceWrapper"
+    }
+  },
+  "flex-layout.row#maintenance-wrapper-mobile": {
+    "children": ["flex-layout.col#maintenance-wrapper-mobile"],
+    "props": {
+      "blockClass": "maintenanceWrapperMobile"
+    }
+  },
+  "flex-layout.col#maintenance-text": {
+    "children": [
+      "rich-text#title",
+      "rich-text#description",
+      "rich-text#contact-us-description",
+      "flex-layout.row#contacts",
+      "flex-layout.row#socials-maintenance"
+    ]
+  },
+  "flex-layout.col#maintenance-image": {
+    "children": ["image#maintenance"],
+    "props": {
+      "blockClass": ["maintenanceImageWrapper"]
+    }
+  },
+  "flex-layout.col#maintenance-wrapper-mobile": {
+    "children": [
+      "rich-text#title",
+      "rich-text#description",
+      "flex-layout.row#maintenance-descr-image-mobile",
+      "flex-layout.row#contacts",
+      "flex-layout.row#socials-maintenance"
+    ],
+    "props": {
+      "blockClass": ["maintenanceWrapperMobile"]
+    }
+  },
+  "flex-layout.row#maintenance-descr-image-mobile": {
+    "children": [
+      "flex-layout.col#maintenance-contact-us-description-mobile",
+      "flex-layout.col#maintenance-image"
+    ],
+    "props": {
+      "blockClass": "maintenanceDescAndImageMobile"
+    }
+  },
+  "flex-layout.col#maintenance-contact-us-description-mobile": {
+    "children": ["rich-text#contact-us-description"],
+    "props": {
+      "blockClass": "maintenanceDescription2Mobile"
+    }
+  },
+  "rich-text#description": {
+    "props": {
+      "text": "Сайт находится на техническом обслуживании и скоро будет доступен.",
+      "blockClass": ["maintenanceDescription", "maintenanceDescription1"]
+    }
+  },
+  "rich-text#contact-us-description": {
+    "props": {
+      "text": "Попробуйте зайти позже или свяжитесь с нами:",
+      "blockClass": ["maintenanceDescription", "maintenanceDescription2"]
+    }
+  },
+  "flex-layout.row#contacts": {
+    "children": ["flex-layout.col#phoneCTA", "flex-layout.col#emailCTA"],
+    "props": {
+      "blockClass": ["contacts"]
+    }
+  },
+  "flex-layout.col#phoneCTA": {
+    "children": ["image#phoneCTA", "rich-text#phoneCTA"],
+    "props": {
+      "blockClass": "ctaLabel"
+    }
+  },
+  "image#phoneCTA": {
+    "props": {
+      "src": "assets/maintenance/phone-logo.svg",
+      "maxWidth": "34.5px",
+      "blockClass": ["contactsLogo"]
+    }
+  },
+  "rich-text#phoneCTA": {
+    "props": {
+      "text": "[8 800 3333 887](tel:88003333887)",
+      "blockClass": "contactCTA"
+    }
+  },
+  "flex-layout.col#emailCTA": {
+    "children": ["image#emailCTA", "rich-text#emailCTA"],
+    "props": {
+      "blockClass": "ctaLabel"
+    }
+  },
+  "image#emailCTA": {
+    "props": {
+      "src": "assets/maintenance/email-logo.svg",
+      "maxWidth": "38px",
+      "blockClass": ["contactsLogo"]
+    }
+  },
+  "rich-text#emailCTA": {
+    "props": {
+      "text": "ru_shop@whirlpool.com",
+      "blockClass": "contactCTA"
+    }
+  },
+  "flex-layout.row#socials-maintenance": {
+    "children": [
+      // "link#facebook",
+      // "link#instagram",
+      "link#youtube",
+      "link#vk",
+      "link#ok"
+    ],
+    "props": {
+      "blockClass": "socials"
+    }
+  },
+  "link#facebook": {
+    "props": {
+      "href": "https://www.facebook.com/HotpointRussia/",
+      "target": "_blank",
+      "blockClass": []
+    },
+    "children": ["image#facebook-maintenance"]
+  },
+  "image#facebook-maintenance": {
+    "props": {
+      "src": "" /* "assets/maintenance/facebook-logo.svg" */,
+      "maxWidth": "50px",
+      "blockClass": ["socialLogo"]
+    }
+  },
+  "link#instagram": {
+    "props": {
+      "href": "https://www.instagram.com/whirlpoolrussia/",
+      "target": "_blank",
+      "blockClass": []
+    },
+    "children": ["image#instagram-maintenance"]
+  },
+  "image#instagram-maintenance": {
+    "props": {
+      "src": "assets/maintenance/instagram-logo.svg",
+      "maxWidth": "50px",
+      "blockClass": ["socialLogo"]
+    }
+  },
+  "link#youtube": {
+    "props": {
+      "href": "https://www.youtube.com/user/HotpointAristonRU",
+      "target": "_blank",
+      "blockClass": []
+    },
+    "children": ["image#youtube-maintenance"]
+  },
+  "image#youtube-maintenance": {
+    "props": {
+      "src": "assets/maintenance/youtube-logo.svg",
+      "maxWidth": "50px",
+      "blockClass": ["socialLogo", "socialLogoYouTube"]
+    }
+  },
+  "link#vk": {
+    "props": {
+      "href": "https://vk.com/indesitrussia",
+      "target": "_blank",
+      "blockClass": ["vkLink"]
+    },
+    "children": ["image#vk"]
+  },
+  "image#vk": {
+    "props": {
+      "src": "assets/maintenance/vk-logo.svg",
+      "maxWidth": "40px",
+      "blockClass": ["socialLogo", "socialLogoVk"]
+    }
+  },
+  "link#ok": {
+    "props": {
+      "href": "https://ok.ru/indesit.russia/",
+      "target": "_blank",
+      "blockClass": ["vkLink", "okLink"]
+    },
+    "children": ["image#ok"]
+  },
+  "image#ok": {
+    "props": {
+      "src": "assets/maintenance/ok-logo.svg",
+      "maxWidth": "50px",
+      "blockClass": ["socialLogo", "socialLogoOk"]
+    }
+  },
+  "image#maintenance": {
+    "props": {
+      "src": "assets/maintenance/maintenance.png",
+      "blockClass": ["maintenanceImage"]
+    }
+  }
+}

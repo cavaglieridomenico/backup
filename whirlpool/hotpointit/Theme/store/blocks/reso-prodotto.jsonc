@@ -1,0 +1,116 @@
+{
+  "store.custom#reso-prodotto": {
+    "blocks": [
+      "breadcrumb#resoProdotto",
+      "flex-layout.row#spaceSmall",
+      "flex-layout.row#resoProdottoText",
+      "flex-layout.row#halfSpace",
+      "flex-layout.row#customFormReso",
+      "toggle-layout#chatWidget",
+      "flex-layout.row#newsletter-row"
+      //"analytics"
+    ]
+  },
+  "flex-layout.row#customFormReso": {
+    "props": {
+      "blockClass": "CustomFormRow"
+    },
+    "children": ["custom-form"]
+  },
+  "custom-form": {
+    "props": {
+      "url": "/v1/api/order/refund",
+      "isReturn": false,
+      "isProduct": true,
+      "privacyLinkLabel": "Informativa sulla privacy",
+      "privacyLabel": "Tratteremo le tue informazioni personali in conformità con la nostra ",
+      "privacyLink": "/pagine/informativa-sulla-privacy",
+      "errorFieldEmpty": "Il campo non può essere vuoto.",
+      "errorWrongEmail": "Inserire una mail valida.",
+      "errorOrderNumberChars": "Questo valore deve essere esattamente di 16 caratteri.",
+      "errorProductCodeChars": "Questo valore deve essere esattamente di 12 caratteri.",
+      "errorDateFuture": "Il campo è obbligatorio e non può includere una data futura",
+      "successMessageText": "Grazie per averci contattato! Ti abbiamo inviato una email con il resoconto dei dati ",
+      "addressFormText": "RESIDENZA *",
+      "addressTo": "INDIRIZZO *",
+      "orderNumber": "NUMERO D'ORDINE *",
+      "productCode": "CODICE PRODOTTO *",
+      "deliveredDate": "DATA RICEZIONE MERCE *",
+      "documentTransportNumber": "N. DOCUMENTO DI TRASPORTO",
+      "refundReason": "MOTIVAZIONE DEL RESO",
+      "returnReason": "DESCRIZIONE DEL DANNO RILEVATO",
+      "note": "NOTE",
+      "fotoLabel": "Si richiede foto del danno da inviare alla mail: ",
+      "supportEmail": "supporto@whirlpool.com",
+      "requiredFields": "*Campi obbligatori",
+      "placeholderNumber": "+39",
+      "placeholderEmail": "latuaemail@esempio.com",
+      "goBackHome": "torna alla home"
+    }
+  },
+  "custom-form": {
+    "props": {
+      "url": "/v1/api/order/refund",
+      "isReturn": false,
+      "isProduct": true,
+      "privacyLinkLabel" : "Informativa sulla privacy",
+      "privacyLabel" : "Tratteremo le tue informazioni personali in conformità con la nostra ",
+      "privacyLink" : "/pagine/informativa-sulla-privacy",
+      "errorFieldEmpty":"Il campo non può essere vuoto.",
+      "errorWrongEmail":"Inserire una mail valida.",
+      "errorOrderNumberChars":"Questo valore deve essere esattamente di 16 caratteri.",
+      "errorProductCodeChars":"Questo valore deve essere esattamente di 12 caratteri.",
+      "errorDateFuture":"Il campo è obbligatorio e non può includere una data futura",
+      "successMessageText":"Grazie per averci contattato! Ti abbiamo inviato una email con il resoconto dei dati ",
+      "addressFormText":"RESIDENZA **",
+      "addressTo":"INDIRIZZO **",
+      "pickupAddress": "INDIRIZZO DOVE RITIRARE IL PRODOTTO **",
+      "orderNumber":"NUMERO D'ORDINE **",
+      "productCode":"CODICE PRODOTTO **",
+      "deliveredDate":"DATA RICEZIONE MERCE **",
+      "documentTransportNumber":"N. DOCUMENTO DI TRASPORTO",
+      "refundReason":"MOTIVAZIONE DEL RESO",
+      "returnReason":"DESCRIZIONE DEL DANNO RILEVATO *",
+      "note":"NOTE",
+      "fotoLabel":"Si richiede foto del danno da inviare alla mail: ",
+      "supportEmail": "supporto@whirlpool.com",
+      "requiredFields": "*Campi obbligatori",
+      "placeholderNumber":"+39",
+      "placeholderEmail":"latuaemail@esempio.com",
+      "goBackHome":"torna alla home"
+
+    }
+  },
+  "breadcrumb#resoProdotto": {
+    "props": {
+      "categories": [
+        "/supporto/",
+        "/supporto/diritto di recesso/",
+        "diritto di recesso/reso prodotto"
+      ],
+      "showOnMobile": false
+    }
+  },
+  "flex-layout.row#resoProdottoText": {
+    "props": {
+      "blockClass": ["container", "center"]
+    },
+    "children": ["flex-layout.col#resoProdottoText"]
+  },
+  "flex-layout.col#resoProdottoText": {
+    "props": {
+      "width": "80%",
+      "margin": "auto",
+      "blockClass": "marginAuto"
+    },
+    "children": ["rich-text#resoProdottoText"]
+  },
+  "rich-text#resoProdottoText": {
+    "props": {
+      "text": "# Modulo di recesso online Elettrodomestici \n\n\n ## Diritto di recesso \n\n\n Se hai cambiato idea puoi restituire il prodotto e ti sarà rimborsato. \n La richiesta di recesso deve pervenire entro 14 giorni di calendario dalla ricezione dell'ordine e puoi inserirla direttamente online compilando il modulo di reso che trovi qui sotto.\nAi sensi di quanto indicato dall’articolo 5.3 delle Condizioni Generali di Acquisto, le spese di spedizione per la restituzione del Prodotto sono a carico del cliente. \n I punti di riconsegna del prodotto sono: \n * Whirlpool Warehouse a Carinaro, via Variante 7bis KM 17 - 81032 Carinaro (CE) \n Per maggiori informazioni sulle Condizioni Generali di Acquisto, [clicca qui](https://epp.whirlpool.it/pages/termini-e-condizioni).\nA causa dell'emergenza sanitaria il punto di raccolta di Cassinetta è momentaneamente chiuso fino al 31. Pertanto i prodotti relativi al diritto di recesso potranno essere consegnati dopo tale data. Verrà comunque inserita la pratica di rimborso.",
+      "textAlignment": "left",
+      "textPosition": "LEFT",
+      "blockClass": "formText"
+    }
+  }
+}

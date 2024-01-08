@@ -1,0 +1,95 @@
+.modal.modal--modalProductPicture {
+    z-index: 2000!important;
+}
+
+.backdrop {
+    background-color: rgb(14, 12, 12);
+}
+
+.container--barcodeModal .paperScrollContent {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    /*top: 125px;*/
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 506px;
+    height: 100%;
+    overflow-y: scroll;
+    border-radius: unset;
+    max-height: 100% !important;
+}
+
+.backdrop--barcodeModal {
+    background-color: transparent;
+    overflow-y: hidden !important;
+}
+
+.triggerContainer--barcodeModal {
+    width: 100%;
+    display: none;
+    justify-content: flex-end;
+}
+
+.hiddenContainer {
+    overflow-y: scroll;
+}
+
+.container--modalProductPicture .paperScrollContent {
+    overflow: hidden !important;
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.paperScrollContent :global(.vtex-store-components-3-x-productImagesContainer),
+.paperScrollContent :global(.vtex-store-components-3-x-carouselContainer),
+.paperScrollContent :global(.vtex-store-components-3-x-carouselGaleryCursor),
+.paperScrollContent :global(.vtex-store-components-3-x-productImagesGallerySwiperContainer),
+.paperScrollContent :global(.vtex-store-components-3-x-productImagesGallerySlide--productImages) {
+    width: 100%;
+}
+
+.closeIcon {
+    color: #3AB5BE;
+    width: 16px;
+    height: 12px;
+    border: 3px solid #3AB5BE;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-top: 24px;
+}
+
+.headerContainer,
+.closeButtonContainer,
+.closeButton {
+    height: 10px;
+    outline-width: 0;
+}
+
+.paper--alsoFitsInList {
+    width: 100%;
+    max-width: 1200px;
+    background-color: #f2f2f2;
+    max-height: 50vh;
+    overflow-y: scroll;
+    padding: 0 20px
+}
+
+@media only screen and (max-width: 1024px) {
+    .triggerContainer--barcodeModal {
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        z-index: 9999;
+    }
+    .container--barcodeModal .paperScrollContent {
+        top: 63px;
+        width: 100%;
+        z-index: 9999;
+    }
+    .triggerContainer--alsoFitsIn {
+        padding: 0 5%;
+    }
+}

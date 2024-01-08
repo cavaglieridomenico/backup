@@ -1,0 +1,23 @@
+{
+  "product-summary.shelf#searchWithoutComparison": {
+    "children": [
+      "vtex.product-highlights@2.x:product-highlights#promotion",
+      "responsive-layout.desktop#productCardDesktopCarousel",
+      "responsive-layout.tablet#productCardTabletCarousel",
+      "responsive-layout.phone#productCardMobileCarousel"
+    ],
+    "props": {
+     "blockClass":"searchWithout"
+    }
+
+  },
+  "flex-layout.row#selling-price-savings-no-comparison": {
+    "props": {
+      "preserveLayoutOnMobile": true,
+      "preventHorizontalStretch": false,
+      "blockClass": "priceSummaryCont",
+      "colSizing": "equal"
+    },
+    "children": ["flex-layout.col#price-selling"]
+  }
+}

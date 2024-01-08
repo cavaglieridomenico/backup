@@ -1,0 +1,91 @@
+{
+  "product-summary.shelf#caroselliLanding": {
+    "children": [
+      "promo-countdown#hpCarousel",
+      // "vtex.product-highlights@2.x:product-highlights#promotion",
+      "stack-layout#head",
+      "vtex.product-highlights@2.x:product-highlights#promo",
+      "flex-layout.row#nameAndPriceRow",
+      "responsive-layout.mobile#additionalServicePLpNotAccessorio",
+      "flex-layout.row#energy-label-carousel",
+      // "product-installments#summary",
+      // "add-to-cart-custom#plp",
+      // "responsive-layout.desktop#addToCartAndSpecs",
+      // "responsive-layout.tablet#addToCartAndSpecs",
+      // "responsive-layout.phone#addToCartAndSpecs",
+      "add-to-cart-custom#plp",
+      //     "responsive-layout.desktop#addToCartPlp",
+      // "responsive-layout.tablet#addToCartPlp",
+      // "responsive-layout.phone#addToCartPlp",
+      "add-to-list-btn"
+    ],
+    "props": {
+      "blockClass": "carouselBlackFriday"
+    }
+  },
+  "promo-countdown#hpCarousel": {
+    "title": "Promo Countdown in Homepage's Carousel",
+    "props": {
+      "blockClass": "promoCountdownHpCarousel"
+    }
+  },
+  "responsive-layout.mobile#additionalServicePLpNotAccessorio": {
+    "children": [
+      "condition-layout.product#additionalServicePLpNotAccessorio"
+    ]
+  },
+  "flex-layout.row#nameAndPriceRow": {
+    "props": {
+      "blockClass": "nameAndPriceRow"
+    },
+    "children": [
+      "vtex.store-components:product-name#summary",
+      "responsive-layout.desktop#priceRowcategory",
+      "responsive-layout.tablet#priceRowcategory",
+      "responsive-layout.phone#priceRowcategory"
+    ]
+  },
+  "responsive-layout.desktop#priceRowcategory": {
+    "children": [
+      "product-summary-space",
+      "product-list-price#summary",
+      "flex-layout.row#selling-price-savings"
+    ]
+  },
+  "responsive-layout.tablet#priceRowcategory": {
+    "children": [
+      // "product-summary-space",
+      "product-list-price#summary",
+      "flex-layout.row#selling-price-savings"
+    ]
+  },
+  "responsive-layout.phone#priceRowcategory": {
+    "children": [
+      "flex-layout.row#pricesLandingPageRowPre"
+    ]
+  },
+  "vtex.store-components:product-name#summary": {
+    "props": {
+      "tag": "div",
+      "displayMode": "linkToProductPage",
+      "blockClass": "summaryName"
+    }
+  },
+  "flex-layout.row#pricesLandingPageRowPre": {
+    "props": {
+      "blockClass": "pricesLandingPageRowPre"
+    },
+    "children": [
+      "flex-layout.row#pricesLandingPageRow"
+    ]
+  },
+  "flex-layout.row#pricesLandingPageRow": {
+    "props": {
+      "blockClass": "pricesLandingPageRow"
+    },
+    "children": [
+      "flex-layout.row#summary-price-Home-Carousel",
+      "flex-layout.row#selling-price-savings"
+    ]
+  }
+}

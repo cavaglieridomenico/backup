@@ -1,0 +1,353 @@
+{
+  /* SERVICE SUPPORT BOX TITLE */
+  "experimental__visibility-layout#service-support-box-title": {
+    "title": "[BOTTOM] Experimental Visibility Layout - Service Support Box Title",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "responsive-layout.desktop#service-support-box-title",
+      "responsive-layout.mobile#service-support-box-title"
+    ]
+  },
+  // Desktop
+  "responsive-layout.desktop#service-support-box-title": {
+    "title": "[DESKTOP] Responsive Layout - Support Box Title",
+    "children": [
+      "rich-text#service-support-box"
+    ]
+  },
+  "rich-text#service-support-box": {
+    "title": "Rich Text - Support Box Title",
+    "props": {
+      "text": "HOME APPLIANCES CUSTOMER CENTRE",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": "textHome"
+    }
+  },
+  // Mobile
+  "responsive-layout.mobile#service-support-box-title": {
+    "title": "[MOBILE] Responsive Layout - Support Box Title",
+    "children": [
+      "rich-text#service-support-box-mobile"
+    ]
+  },
+  "rich-text#service-support-box-mobile": {
+    "title": "Rich Text - Support Box Title",
+    "props": {
+      "text": "CUSTOMER CENTRE",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": "textHome"
+    }
+  },
+  /* ___ END SERVICE SUPPORT BOX TITLE ___ */
+  /* SERVICE SUPPORT BOX */
+  "experimental__visibility-layout#service-support-box": {
+    "title": "[BOTTOM] Experimental Visibility Layout - Service Support Box",
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "slider-layout#service-support-box-cards"
+    ]
+  },
+  "slider-layout#service-support-box-cards": {
+    "title": "[SLIDER-LAYOUT] - Service Support Box Cards",
+    "props": {
+      "itemsPerPage": {
+        "desktop": 4,
+        "tablet": 4,
+        "phone": 1
+      },
+      "infinite": false,
+      "showNavigationArrows": "never",
+      "autoplay": {
+        "timeout": 5000,
+        "stopOnHover": false
+      },
+      "blockClass": [
+        "carousel",
+        "hpServiceCardsSupp"
+      ]
+    },
+    "children": [
+      "flex-layout.row#supportBoxCard1",
+      "flex-layout.row#supportBoxCard2",
+      "flex-layout.row#supportBoxCard3",
+      "flex-layout.row#supportBoxCard4"
+    ]
+  },
+  // CARD 1
+  "flex-layout.row#supportBoxCard1": {
+    "title": "[ROW] - Support Card 1",
+    "props": {
+      "blockClass": [
+        "linkCards",
+        "footerCol"
+      ]
+    },
+    "children": [
+      "link#supportBoxCard1"
+    ]
+  },
+  "link#supportBoxCard1": {
+    "props": {
+      "blockClass": "linkCards",
+      "href": "/service/repair"
+    },
+    "children": [
+      "image#supportBoxCard1",
+      "rich-text#supportBoxCard1Title",
+      "rich-text#supportBoxCard1Text",
+      "rich-text#supportBoxCard1Button"
+    ]
+  },
+  "image#supportBoxCard1": {
+    "title": "[IMAGE] - Support Box Card 1",
+    "props": {
+      "blockClass": "supportBoxCard",
+      "src": "/arquivos/icon_repair.svg"
+    }
+  },
+  "rich-text#supportBoxCard1Title": {
+    "title": "[TEXT] - Title Support Box Card 1",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Book a repair",
+      "blockClass": "linkCardsTitle"
+    }
+  },
+  "rich-text#supportBoxCard1Text": {
+    "title": "[TEXT] - Text Support Box Card 1",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Access or download product manuals",
+      "blockClass": "linkCardsSubTitle"
+    }
+  },
+  "rich-text#supportBoxCard1Button": {
+    "title": "[TEXT] - Button Support Box Card 1",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "<a href=\"/service/repair\" target=\"_blank\" class=\"lh-copy vtex-rich-text-0-x-paragraph vtex-rich-text-0-x-paragraph--remove-link-styles lh-copy vtex-rich-text-0-x-paragraph vtex-rich-text-0-x-paragraph--linkCardsButton  vtex-rich-text-0-x-paragraph--custom\">Access Here</a>",
+      "blockClass": [
+        "linkCardsButton",
+        "buttonLink"
+      ]
+    }
+  },
+  // CARD 2
+  "flex-layout.row#supportBoxCard2": {
+    "title": "[ROW] - Support Card 2",
+    "props": {
+      "blockClass": [
+        "linkCards",
+        "footerCol"
+      ]
+    },
+    "children": [
+      "link#supportBoxCard2"
+    ]
+  },
+  "link#supportBoxCard2": {
+    "props": {
+      "blockClass": "linkCards",
+      "href": "/register-my-appliance"
+    },
+    "children": [
+      "image#supportBoxCard2",
+      "rich-text#supportBoxCard2Title",
+      "rich-text#supportBoxCard2Text",
+      "rich-text#supportBoxCard2Button"
+    ]
+  },
+  "image#supportBoxCard2": {
+    "title": "[IMAGE] - Support Box Card 2",
+    "props": {
+      "blockClass": "supportBoxCard",
+      "src": "/arquivos/icon_register_appliance.svg"
+    }
+  },
+  "rich-text#supportBoxCard2Title": {
+    "title": "[TEXT] - Title Support Box Card 2",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Register your appliance",
+      "blockClass": "linkCardsTitle"
+    }
+  },
+  "rich-text#supportBoxCard2Text": {
+    "title": "[TEXT] - Text Support Box Card 2",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Enjoy faster service. Get expert advice and exclusive offers",
+      "blockClass": "linkCardsSubTitle"
+    }
+  },
+  "rich-text#supportBoxCard2Button": {
+    "title": "[TEXT] - Button Support Box Card 2",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "<a href=\"/register-my-appliance\" target=\"_blank\" class=\"lh-copy vtex-rich-text-0-x-paragraph vtex-rich-text-0-x-paragraph--remove-link-styles lh-copy vtex-rich-text-0-x-paragraph vtex-rich-text-0-x-paragraph--linkCardsButton  vtex-rich-text-0-x-paragraph--custom\">Register Here</a>",
+      "blockClass": [
+        "linkCardsButton",
+        "buttonLink"
+      ]
+    }
+  },
+  // CARD 3
+  "flex-layout.row#supportBoxCard3": {
+    "title": "[ROW] - Support Card 3",
+    "props": {
+      "blockClass": [
+        "linkCards",
+        "footerCol"
+      ]
+    },
+    "children": [
+      "link#supportBoxCard3"
+    ]
+  },
+  "link#supportBoxCard3": {
+    "props": {
+      "blockClass": "linkCards",
+      "href": "#chat"
+    },
+    "children": [
+      "image#supportBoxCard3",
+      "rich-text#supportBoxCard3Title",
+      "rich-text#supportBoxCard3Text",
+      "analytics-wrapper#supportBoxCard3Button"
+    ]
+  },
+  "image#supportBoxCard3": {
+    "title": "[IMAGE] - Support Box Card 3",
+    "props": {
+      "blockClass": "supportBoxCard",
+      "src": "/arquivos/icon_protect.svg"
+    }
+  },
+  "rich-text#supportBoxCard3Title": {
+    "title": "[TEXT] - Title Support Box Card 3",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Purchase Repair",
+      "blockClass": "linkCardsTitle"
+    }
+  },
+  "rich-text#supportBoxCard3Text": {
+    "title": "[TEXT] - Text Support Box Card 3",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Get faster support. Start a live chat with our support team",
+      "blockClass": "linkCardsSubTitle"
+    }
+  },
+  "analytics-wrapper#supportBoxCard3Button": {
+    "title": "[ANALYTICS WRAPPER] - Support Box Card 3",
+    "props": {
+      "isLeazy": false,
+      "propsAnalytics": {
+        "analyticsProperties": "provide",
+        "nameEvent": "ga4-supportChat",
+        "name": "data",
+        "nameView": "",
+        "data": [
+          {
+            "title": "chat_status",
+            "value": "Chat Request (Available)"
+          }
+        ],
+        "isView": false
+      }
+    },
+    "children": [
+      "rich-text#supportBoxCard3Button"
+    ]
+  },
+  "rich-text#supportBoxCard3Button": {
+    "title": "[TEXT] - Button Support Box Card 3",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Open Chat",
+      "blockClass": [
+        "linkCardsButton",
+        "buttonLink"
+      ]
+    }
+  },
+  // CARD 4
+  "flex-layout.row#supportBoxCard4": {
+    "title": "[ROW] - Support Card 4",
+    "props": {
+      "blockClass": [
+        "linkCards",
+        "footerCol"
+      ]
+    },
+    "children": [
+      "link#supportBoxCard4"
+    ]
+  },
+  "link#supportBoxCard4": {
+    "props": {
+      "blockClass": "linkCards",
+      "href": "/service/contact"
+    },
+    "children": [
+      "image#supportBoxCard4",
+      "rich-text#supportBoxCard4Title",
+      "rich-text#supportBoxCard4Text",
+      "rich-text#supportBoxCard4Button"
+    ]
+  },
+  "image#supportBoxCard4": {
+    "title": "[IMAGE] - Support Box Card 4",
+    "props": {
+      "blockClass": "supportBoxCard",
+      "src": "/arquivos/icon_contact.svg"
+    }
+  },
+  "rich-text#supportBoxCard4Title": {
+    "title": "[TEXT] - Title Support Box Card 4",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Contact Us",
+      "blockClass": "linkCardsTitle"
+    }
+  },
+  "rich-text#supportBoxCard4Text": {
+    "title": "[TEXT] - Text Support Box Card 4",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "We're here to help \n364 days a year",
+      "blockClass": "linkCardsSubTitle"
+    }
+  },
+  "rich-text#supportBoxCard4Button": {
+    "title": "[TEXT] - Button Support Box Card 4",
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "<a href=\"/service/contact\" target=\"_blank\" class=\"lh-copy vtex-rich-text-0-x-paragraph vtex-rich-text-0-x-paragraph--remove-link-styles lh-copy vtex-rich-text-0-x-paragraph vtex-rich-text-0-x-paragraph--linkCardsButton  vtex-rich-text-0-x-paragraph--custom\">Contact Us</a>",
+      "blockClass": [
+        "linkCardsButton",
+        "buttonLink"
+      ]
+    }
+  }
+  /* ___ END SERVICE SUPPORT BOX ___ */
+}

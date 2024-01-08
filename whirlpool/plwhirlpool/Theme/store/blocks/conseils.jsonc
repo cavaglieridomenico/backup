@@ -1,0 +1,321 @@
+{
+  "store.custom#conseils": {
+    "blocks": [
+      "flex-layout.row#bread-theme5",
+      "info-card#heroBannerConseils",
+      "analytics",
+      "flex-layout.row#halfSpace",
+      "toggle-layout#bannerTopPropositionConseils",
+      "flex-layout.row#halfSpace",
+      "toggle-layout#bannerConseil",
+      "toggle-layout#bannerConseilReverse",
+      "toggle-layout#bannerConseil2",
+      "flex-layout.row#halfSpace",
+      "toggle-layout#CarouselAccessories",
+      "flex-layout.row#newsletter-row"
+    ]
+  },
+  "breadcrumb#conseils": {
+    "props": {
+      "categories": [
+        "Conseils d’entretien et d’installation"
+      ],
+      "showOnMobile": false
+    }
+  },
+  "info-card#heroBannerConseils": {
+    "props": {
+      "id": "hero-banner-conseils",
+      "callToActionMode": "button",
+      "callToActionText": "Odkryj",
+      "callToActionUrl": "/accessoires",
+      "isFullModeStyle": false,
+      "textPosition": "left",
+      "imageUrl": "assets/placeholders/placeholder-image-square.jpg",
+      "headline": "Plus que des accessoires, des solutions.",
+      "subhead": "Wpro propose une gamme complète d’accessoires, de consommables et de produits d’entretien qui vous accompagnent au quotidien et vous aident à prolonger la vie de vos appareils ainsi qu’à faciliter leur installation et leur utilisation",
+      "blockClass": [
+        "heroBanner",
+        "heroBannerWCollection"
+      ],
+      "textAlignment": "left"
+    }
+  },
+  "toggle-layout#videoPromo": {
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "flex-layout.row#bannervideoCons"
+    ]
+  },
+  "flex-layout.row#bannervideoCons": {
+    "children": [
+      "modal-trigger#videoBannerConseils"
+    ]
+  },
+  "rich-text#conseilsVideoButton": {
+    "props": {
+      "text": "### Odkryj",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": [
+        "buttonCardConseils"
+      ]
+    }
+  },
+  "link#conseilsVideoButton": {
+    "props": {
+      "href": "/",
+      "label": "Odkryj",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": [
+        "buttonCardConseils",
+        "buttonLink"
+      ]
+    }
+  },
+  "modal-trigger#videoBannerConseils": {
+    "props": {
+      "blockClass": "cover"
+    },
+    "children": [
+      //"rich-text#conseilsVideoButton",
+      "link#conseilsVideoButton"
+      //"modal-layout#conseilsVideoContent"
+    ]
+  },
+  "modal-layout#conseilsVideoContent": {
+    "props": {
+      "blockClass": "video"
+    },
+    "children": [
+      "modal-header",
+      "iframe#promoVideoModal"
+    ]
+  },
+  "iframe#promoVideoModal": {
+    "props": {
+      "src": "https://www.youtube.com/embed/IkkrhUAvy10",
+      "width": "100%",
+      "height": "100%",
+      "blockClass": "videoConseils"
+    }
+  },
+  "toggle-layout#CarouselAccessories": {
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "list-context.product-list#CarouselAccessoriesConseils"
+    ]
+  },
+  "list-context.product-list#CarouselAccessoriesConseils": {
+    "blocks": [
+      "product-summary.shelf#caroselliLanding"
+    ],
+    "children": [
+      "slider-layout#CarouselAccessories"
+    ],
+    "props": {
+      "collection": "144",
+      "productList": {
+        "maxItems": 5,
+        "itemsPerPage": 5,
+        "minItemsPerPage": 1,
+        "scroll": "BY_PAGE",
+        "arrows": true,
+        "titleText": "Non sai da dove iniziare? Scopri i prodotti Whirlpool più venduti"
+      }
+    }
+  },
+  "slider-layout#CarouselAccessories": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 5,
+        "tablet": 2,
+        "phone": 1
+      },
+      "infinite": true,
+      "fullWidth": false,
+      "blockClass": "shelf",
+      "showPaginationDots": "desktopOnly"
+    }
+  },
+  "toggle-layout#bannerTopPropositionConseils": {
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "flex-layout.row#bannerTopPropositionConseils"
+    ]
+  },
+  "flex-layout.row#bannerTopPropositionConseils": {
+    "props": {
+      "preventHorizontalStretch": false,
+      "blockClass": "bannerPostilla"
+    },
+    "children": [
+      "flex-layout.col#leftPartTop1Conseils",
+      "flex-layout.col#rightPartTopConseils"
+    ]
+  },
+  "flex-layout.col#leftPartTop1Conseils": {
+    "props": {
+      "width": "70%",
+      "preventVerticalStretch": true,
+      "blockClass": [
+        "columnPostilla",
+        "columnPostillaBottom"
+      ]
+    },
+    "children": [
+      "toggle-layout#TitleBannerTop",
+      "toggle-layout#BannDescTop",
+      "rich-text#bannerTopPostilla"
+    ]
+  },
+  "flex-layout.col#rightPartTopConseils": {
+    "props": {
+      "width": "30%",
+      "blockClass": [
+        "columnPostillaImage",
+        "wproConseils"
+      ]
+    },
+    "children": [
+      "image#wproConseils"
+    ]
+  },
+  "image#wproConseils": {
+    "props": {
+      "src": "assets/wpro-logo.png"
+    }
+  },
+  //
+  "toggle-layout#bannerConseil": {
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "flex-layout.row#bannerConseil"
+    ]
+  },
+  "flex-layout.row#bannerConseil": {
+    "props": {
+      "blockClass": [
+        "bannerConseil"
+      ]
+    },
+    "children": [
+      "flex-layout.col#rightPartBannerDesignCons2",
+      "flex-layout.col#leftPartBannerDesignCons2"
+    ]
+  },
+  "flex-layout.col#rightPartBannerDesignCons2": {
+    "props": {
+      "width": "50%",
+      "blockClass": [
+        "columnPostillaImage",
+        "fullheight"
+      ]
+    },
+    "children": [
+      "image#bannerPostillaBannerDesign"
+    ]
+  },
+  "flex-layout.col#leftPartBannerDesignCons2": {
+    "props": {
+      "width": "50%",
+      "preventVerticalStretch": true,
+      "blockClass": [
+        "columnPostilla",
+        "columnPostillaBottom",
+        "bg-grey"
+      ]
+    },
+    "children": [
+      "rich-text#BannTitleheroBannerAnto",
+      "rich-text#BannDescheroBannerAnto",
+      "toggle-layout#videoPromo"
+    ]
+  },
+  "toggle-layout#bannerConseilReverse": {
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "flex-layout.row#bannerConseilReverse"
+    ]
+  },
+  "flex-layout.row#bannerConseilReverse": {
+    "props": {
+      "blockClass": [
+        "bannerConseil",
+        "bannerConseilReverse"
+      ]
+    },
+    "children": [
+      "flex-layout.col#leftPartBannerDesignCons2",
+      "flex-layout.col#rightPartBannerDesignCons2"
+    ]
+  },
+  "toggle-layout#bannerConseil2": {
+    "props": {
+      "visible": true
+    },
+    "children": [
+      "info-card#universalSolution"
+    ]
+  },
+  //
+  "info-card#durableSolution": {
+    "props": {
+      "htmlId": "durableSolution",
+      "id": "durableSolution",
+      "isFullModeStyle": false,
+      "imageUrl": "assets/placeholders/placeholder-vertical.jpg",
+      "headline": "Des solutions durables",
+      "subhead": "Wpro vous aide à prolonger la durée de vie de vos appareils",
+      "callToActionText": "Odkryj",
+      "callToActionUrl": "#",
+      "textAlignment": "left",
+      "blockClass": [
+        "halfBannerReverse",
+        "halfBannerReverseW"
+      ]
+    }
+  },
+  "info-card#easySolution": {
+    "props": {
+      "htmlId": "easySolution",
+      "id": "easySolution",
+      "isFullModeStyle": false,
+      "textPosition": "left",
+      "imageUrl": "assets/placeholders/placeholder-vertical.jpg",
+      "headline": "Des solutions faciles",
+      "subhead": "Wpro vous simplifie votre vie quotidienne",
+      "blockClass": "halfBanner",
+      "textAlignment": "left",
+      "callToActionText": "Odkryj",
+      "callToActionUrl": "#"
+    }
+  },
+  "info-card#universalSolution": {
+    "props": {
+      "htmlId": "universalSolution",
+      "id": "universalSolution",
+      "isFullModeStyle": false,
+      "imageUrl": "assets/placeholders/placeholder-image-square.jpg",
+      "headline": "Des solutions universelles",
+      "subhead": "Wpro vous propose des accessoires ou consommables compatibles avec toutes les marques et appareils gros électroménager",
+      "callToActionText": "Odkryj",
+      "callToActionUrl": "https://www.wpro-whirlpool.com/fr_FR",
+      "textAlignment": "left",
+      "blockClass": [
+        "halfBannerReverse"
+      ]
+    }
+  }
+}

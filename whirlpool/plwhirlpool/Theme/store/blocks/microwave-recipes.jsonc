@@ -1,0 +1,757 @@
+{
+    "store.custom#microwave-recipes": {
+        "blocks": [
+            "toggle-layout#heroBannerMR",
+            "vtex.menu@2.x:menu#microwaveRecipes",
+            "toggle-layout#firstBoxMR",
+            "rich-text#anchorBannerTasty",
+            "toggle-layout#titleHalfBannerTastyMR",
+            "toggle-layout#bannerTastyMR",
+            "toggle-layout#bannerTastyReverseMR",
+            "toggle-layout#bannerTasty2MR",
+            "rich-text#anchorBannerDelicious",
+            "toggle-layout#titleHalfBannerDeliciousMR",
+            "toggle-layout#bannerDeliciousMR",
+            "toggle-layout#bannerDeliciousReverseMR",
+            "toggle-layout#bannerDelicious2MR",
+            "toggle-layout#bannerDelicious2ReverseMR",
+            "toggle-layout#bannerDelicious3MR",
+            "rich-text#anchorBannerDessert",
+            "toggle-layout#titleHalfBannerDessertMR",
+            "toggle-layout#bannerDessertMR",
+            "toggle-layout#bannerDessertReverseMR",
+            "toggle-layout#sliderVideoRecipes",
+            "toggle-layout#goToRecipesMR",
+            "toggle-layout#exceptionalResultsMR",
+            "toggle-layout#carouselMR",
+            "flex-layout.row#newsletter-row"
+        ]
+    },
+    "vtex.menu@2.x:menu#microwaveRecipes": {
+        "props": {
+            "blockClass": [
+                "microwaveRecipesMenu"
+            ]
+        },
+        "children": [
+            "menu-item#microwaveRecipesTitle2",
+            "menu-item#microwaveRecipesTitle1",
+            "menu-item#microwaveRecipesTitle3"
+        ]
+    },
+    "menu-item#microwaveRecipesTitle1": {
+        "props": {
+            "id": "menu-w-collection",
+            "type": "custom",
+            "highlight": false,
+            "itemProps": {
+                "type": "internal",
+                "href": "#bannerTitleDelicious",
+                "noFollow": false,
+                "tagTitle": "Delicious main courses",
+                "text": "Delicious main courses"
+            },
+            "blockClass": [
+                "wcollectionMenuItem",
+                "energyLabelMenuItem"
+            ]
+        }
+    },
+    "menu-item#microwaveRecipesTitle2": {
+        "props": {
+            "id": "menu-w-collection",
+            "type": "custom",
+            "highlight": false,
+            "itemProps": {
+                "type": "internal",
+                "href": "#bannerTitleTasty",
+                "noFollow": false,
+                "tagTitle": "Apetyczne przekąski",
+                "text": "Apetyczne przekąski"
+            },
+            "blockClass": [
+                "wcollectionMenuItem",
+                "energyLabelMenuItem"
+            ]
+        }
+    },
+    "menu-item#microwaveRecipesTitle3": {
+        "props": {
+            "id": "menu-w-collection",
+            "type": "custom",
+            "highlight": false,
+            "itemProps": {
+                "type": "internal",
+                "href": "#bannerTitleDessert",
+                "noFollow": false,
+                "tagTitle": "Wyjątkowe desery",
+                "text": "Wyjątkowe desery"
+            },
+            "blockClass": [
+                "wcollectionMenuItem",
+                "energyLabelMenuItem"
+            ]
+        }
+    },
+    "toggle-layout#heroBannerMR": {
+        "props": {
+            "visible": true
+        },
+        "children": [
+            "flex-layout.row#heroBannerMR"
+        ]
+    },
+    "flex-layout.row#heroBannerMR": {
+        "props": {
+            "preventHorizontalStretch": false,
+            "blockClass": [
+                "bgColorAntonioHero",
+                "space-400",
+                "nte",
+                "heroBannerMobile"
+            ]
+        },
+        "children": [
+            "flex-layout.col#heroBannerTextMR",
+            "flex-layout.col#heroBannerImageMR"
+        ]
+    },
+    "flex-layout.col#heroBannerTextMR": {
+        "props": {
+            "width": "40%",
+            "preventVerticalStretch": true,
+            "blockClass": [
+                "columnPostilla",
+                "columnPostillaBottom",
+                "columnHOB"
+            ]
+        },
+        "children": [
+            "rich-text#heroBannTitleMR",
+            "rich-text#heroBannDescMR"
+        ]
+    },
+    "rich-text#heroBannTitleMR": {
+        "props": {
+            "text": "# Frigorifero combinato 4 porte",
+            "blockClass": "titleHBannerHOB"
+        }
+    },
+    "rich-text#heroBannDescMR": {
+        "props": {
+            "text": "33% di spazio extra per frutta e verdura *",
+            "blockClass": "descBannerHOB"
+        }
+    },
+    "flex-layout.col#heroBannerImageMR": {
+        "props": {
+            "width": "60%",
+            "blockClass": "columnPostillaVideo400"
+        },
+        "children": [
+            "image#heroBannerImageMR"
+        ]
+    },
+    "image#heroBannerImageMR": {
+        "props": {
+            "width": "100%",
+            "height": "100%",
+            "poster": "https://assets.wpsandwatch.com/storage/images/3/3/1/9/12079133-4-ita-IT/CoverVIDEO.png",
+            "loop": false,
+            "autoPlay": false,
+            "muted": true,
+            "src": "assets/placeholders/placeholder-image-square.jpg",
+            "blockClass": "imageHOB"
+        }
+    },
+    "toggle-layout#firstBoxMR": {
+        "props": {
+            "visible": true
+        },
+        "children": [
+            "flex-layout.row#firstBoxMR"
+        ]
+    },
+    "flex-layout.row#firstBoxMR": {
+        "props": {
+            "blockClass": [
+                "firstBoxMR"
+            ]
+        },
+        "children": [
+            "toggle-layout#firstBoxTitleMR",
+            "toggle-layout#firstBoxDescMR"
+        ]
+    },
+    "toggle-layout#firstBoxTitleMR": {
+        "props": {
+            "visible": true
+        },
+        "children": [
+            "rich-text#firstBoxTitleMR"
+        ]
+    },
+    "rich-text#firstBoxTitleMR": {
+        "props": {
+            "text": "## Arricchito con tecnologie all'avanguardia",
+            "blockClass": [
+                "firstBoxTitleMR",
+                "titleHOB",
+                "energyLabelBannerTestoTitle"
+            ]
+        }
+    },
+    "toggle-layout#firstBoxDescMR": {
+        "props": {
+            "visible": true
+        },
+        "children": [
+            "rich-text#firstBoxDescMR"
+        ]
+    },
+    "rich-text#firstBoxDescMR": {
+        "props": {
+            "text": "Smettete di scendere a compromessi quando si tratta di conservazione degli alimenti. La tecnologia intelligente 6° SENSO vi aiuterà a conservare gli alimenti alla loro temperatura e umidità ottimali, mantenendo il clima ideale dall'alto verso il basso.",
+            "blockClass": [
+                "bannerTestoDesc",
+                "energyLabelPara"
+            ]
+        }
+    },
+    "toggle-layout#titleHalfBannerTastyMR": {
+        "props": {
+            "visible": true
+        },
+        "children": [
+            "rich-text#titleHalfBannerMR"
+        ]
+    },
+    "rich-text#titleHalfBannerMR": {
+        "props": {
+            "text": "## Arricchito con tecnologie all'avanguardia",
+            "blockClass": [
+                "firstBoxTitleMR",
+                "titleHOB",
+                "energyLabelBannerTestoTitle"
+            ]
+        }
+    },
+    "toggle-layout#titleHalfBannerDeliciousMR": {
+        "props": {
+            "visible": true
+        },
+        "children": [
+            "rich-text#titleHalfBannerDeliciousMR"
+        ]
+    },
+    "toggle-layout#titleHalfBannerDessertMR": {
+        "props": {
+            "visible": true
+        },
+        "children": [
+            "rich-text#titleHalfBannerDeliciousMR"
+        ]
+    },
+    "toggle-layout#carouselMR": {
+        "props": {
+            "visible": true
+        },
+        "children": [
+            "rich-text#carouselTitle",
+            "list-context.product-list#bf-1"
+        ]
+    },
+    "toggle-layout#goToRecipesMR": {
+        "props": {
+            "visible": true
+        },
+        "children": [
+            "rich-text#goToRecipesMR",
+            "flex-layout.row#button"
+        ]
+    },
+    "toggle-layout#exceptionalResultsMR": {
+        "props": {
+            "visible": true
+        },
+        "children": [
+            "flex-layout.row#exceptionalResultsTitle",
+            "flex-layout.row#exceptionalResults"
+        ]
+    },
+    "flex-layout.row#exceptionalResultsTitle": {
+        "props": {
+            "blockClass": [
+                "exceptionalResultsBox",
+                "exceptionalResultsTitle"
+            ]
+        },
+        "children": [
+            "rich-text#exceptionalResultsTitleMR"
+        ]
+    },
+    "flex-layout.row#exceptionalResults": {
+        "props": {
+            "blockClass": "exceptionalResultsBox"
+        },
+        "children": [
+            "slider-layout#exceptionalResultsMR"
+        ]
+    },
+    "flex-layout.col#exceptionalResults": {
+        "props": {
+            "blockClass": "exceptionalResultsCol"
+        },
+        "children": [
+            "rich-text#exceptionalResultsSubTitleMR",
+            "rich-text#exceptionalResultsDescMR"
+        ]
+    },
+    "flex-layout.col#exceptionalResults2": {
+        "props": {
+            "blockClass": "exceptionalResultsCol"
+        },
+        "children": [
+            "rich-text#exceptionalResultsSubTitleMR",
+            "rich-text#exceptionalResultsDescMR"
+        ]
+    },
+    "flex-layout.col#exceptionalResults3": {
+        "props": {
+            "blockClass": "exceptionalResultsCol"
+        },
+        "children": [
+            "rich-text#exceptionalResultsSubTitleMR",
+            "rich-text#exceptionalResultsDescMR"
+        ]
+    },
+    "flex-layout.row#button": {
+        "props": {
+            "blockClass": "goToRecipes"
+        },
+        "children": [
+            "link#ButtonBannerGoToRecipes"
+        ]
+    },
+    "rich-text#titleHalfBannerDeliciousMR": {
+        "props": {
+            "text": "## Arricchito con tecnologie all'avanguardia",
+            "blockClass": [
+                "firstBoxTitleMR",
+                "titleHOB",
+                "energyLabelBannerTestoTitle",
+                "bannerDeliciousTitle"
+            ]
+        }
+    },
+    "rich-text#carouselTitle": {
+        "props": {
+            "text": "## Arricchito con tecnologie all'avanguardia",
+            "blockClass": [
+                "firstBoxTitleMR",
+                "titleHOB",
+                "carouselTitle"
+            ]
+        }
+    },
+    "rich-text#goToRecipesMR": {
+        "props": {
+            "text": "## Arricchito con tecnologie all'avanguardia",
+            "blockClass": [
+                "firstBoxTitleMR",
+                "titleHOB",
+                "energyLabelBannerTestoTitle",
+                "bannerDeliciousTitle"
+            ]
+        }
+    },
+    "rich-text#anchorBannerTasty": {
+        "props": {
+            "text": "",
+            "blockClass": [
+                "anchorInnovazioni",
+                "anchorBannerTasty"
+            ],
+            "htmlId": "bannerTitleTasty"
+        }
+    },
+    "rich-text#anchorBannerDessert": {
+        "props": {
+            "text": "",
+            "blockClass": [
+                "anchorInnovazioni"
+            ],
+            "htmlId": "bannerTitleDessert"
+        }
+    },
+    "rich-text#anchorBannerDelicious": {
+        "props": {
+            "text": "",
+            "blockClass": [
+                "anchorInnovazioni"
+            ],
+            "htmlId": "bannerTitleDelicious"
+        }
+    },
+    "rich-text#exceptionalResultsTitleMR": {
+        "props": {
+            "text": "Arricchito con tecnologie all'avanguardia",
+            "blockClass": [
+                "firstBoxTitleMR",
+                "titleHOB",
+                "exceptionalResultsTitle"
+            ]
+        }
+    },
+    "rich-text#exceptionalResultsSubTitleMR": {
+        "props": {
+            "text": "### Title",
+            "blockClass": [
+                "firstBoxTitleMR",
+                "titleHOB",
+                "exceptionalResultsSubTitle"
+            ]
+        }
+    },
+    "rich-text#exceptionalResultsDescMR": {
+        "props": {
+            "text": "Arricchito con tecnologie all'avanguardia Arricchito con tecnologie all'avanguardia Arricchito con tecnologie all'avanguardia Arricchito con tecnologie all'avanguardia ",
+            "blockClass": [
+                "firstBoxTitleMR",
+                "titleHOB",
+                "exceptionalResultsDesc"
+            ]
+        }
+    },
+    "toggle-layout#bannerTastyMR": {
+        "props": {
+            "visible": true
+        },
+        "children": [
+            "flex-layout.row#bannerTastyMR"
+        ]
+    },
+    "toggle-layout#bannerDeliciousMR": {
+        "props": {
+            "visible": true
+        },
+        "children": [
+            "flex-layout.row#bannerTastyMR"
+        ]
+    },
+    "toggle-layout#bannerDessertMR": {
+        "props": {
+            "visible": true
+        },
+        "children": [
+            "flex-layout.row#bannerTastyMR"
+        ]
+    },
+    "toggle-layout#bannerTasty2MR": {
+        "props": {
+            "visible": true
+        },
+        "children": [
+            "flex-layout.row#bannerTastyMR"
+        ]
+    },
+    "toggle-layout#bannerDelicious2MR": {
+        "props": {
+            "visible": true
+        },
+        "children": [
+            "flex-layout.row#bannerTastyMR"
+        ]
+    },
+    "toggle-layout#bannerDelicious3MR": {
+        "props": {
+            "visible": true
+        },
+        "children": [
+            "flex-layout.row#bannerTastyMR"
+        ]
+    },
+    "toggle-layout#bannerTastyReverseMR": {
+        "props": {
+            "visible": true
+        },
+        "children": [
+            "flex-layout.row#bannerTastyReverseMR"
+        ]
+    },
+    "toggle-layout#bannerDeliciousReverseMR": {
+        "props": {
+            "visible": true
+        },
+        "children": [
+            "flex-layout.row#bannerTastyReverseMR"
+        ]
+    },
+    "toggle-layout#bannerDessertReverseMR": {
+        "props": {
+            "visible": true
+        },
+        "children": [
+            "flex-layout.row#bannerTastyReverseMR"
+        ]
+    },
+    "toggle-layout#bannerDelicious2ReverseMR": {
+        "props": {
+            "visible": true
+        },
+        "children": [
+            "flex-layout.row#bannerTastyReverseMR"
+        ]
+    },
+    "flex-layout.row#bannerTastyMR": {
+        "props": {
+            "preventHorizontalStretch": false,
+            "fullWidth": true,
+            "blockClass": [
+                "bannerMR"
+            ]
+        },
+        "children": [
+            "flex-layout.col#leftBannerTastyMR",
+            "flex-layout.col#rightBannerTastyImageMR"
+        ]
+    },
+    "flex-layout.row#bannerTastyReverseMR": {
+        "props": {
+            "preventHorizontalStretch": false,
+            "fullWidth": true,
+            "blockClass": [
+                "bannerMR",
+                "bannerMRMobile"
+            ]
+        },
+        "children": [
+            "flex-layout.col#rightBannerTastyImageMR",
+            "flex-layout.col#leftBannerTastyMR"
+        ]
+    },
+    "flex-layout.col#leftBannerTastyMR": {
+        "props": {
+            "width": "55%",
+            "preventVerticalStretch": true,
+            "blockClass": [
+                "leftBannerTastyMR"
+            ]
+        },
+        "children": [
+            "rich-text#leftBannerTastyTitleMR",
+            "rich-text#leftBannerTastyDescMR",
+            "toggle-layout#ButtonBannerTastyMR"
+        ]
+    },
+    "rich-text#leftBannerTastyTitleMR": {
+        "props": {
+            "text": "# Frigorifero combinato 4 porte",
+            "blockClass": [
+                "titleHBannerPostilla",
+                "collectionTitleBanner"
+            ]
+        }
+    },
+    "rich-text#leftBannerTastyDescMR": {
+        "props": {
+            "text": "Smettete di scendere a compromessi quando si tratta di conservazione degli alimenti. La tecnologia intelligente 6° SENSO vi aiuterà a conservare gli alimenti alla loro temperatura e umidità ottimali, mantenendo il clima ideale dall'alto verso il basso.",
+            "blockClass": []
+        }
+    },
+    "toggle-layout#ButtonBannerTastyMR": {
+        "props": {
+            "visible": true
+        },
+        "children": [
+            "link#ButtonBannerTastyMR"
+        ]
+    },
+    "link#ButtonBannerTastyMR": {
+        "props": {
+            "label": "TESTO BOTTONE",
+            "href": "#",
+            "displayMode": "button",
+            "blockClass": [
+                "postillaButton",
+                "marginButtonWColl",
+                "buttonBannerTastyMobile"
+            ]
+        }
+    },
+    "link#ButtonBannerGoToRecipes": {
+        "props": {
+            "label": "TESTO BOTTONE",
+            "href": "#",
+            "displayMode": "button",
+            "blockClass": [
+                "postillaButton",
+                "marginButtonWColl",
+                "buttonGoToRecipes"
+            ]
+        }
+    },
+    "flex-layout.col#rightBannerTastyImageMR": {
+        "props": {
+            "width": "55%",
+            "blockClass": [
+                "columnPostillaImage"
+            ]
+        },
+        "children": [
+            "image#bannerTastyImageMR"
+        ]
+    },
+    "image#bannerTastyImageMR": {
+        "props": {
+            "src": "assets/placeholders/placeholder-vertical.jpg",
+            "blockClass": [
+                "imagePostillaBanner",
+                "rightBannerTastyImageMR"
+            ]
+        }
+    },
+    "toggle-layout#sliderVideoRecipes": {
+        "props": {
+            "visible": true
+        },
+        "children": [
+            "rich-text#videoTitle",
+            "slider-layout#videoRecipes"
+        ]
+    },
+    "slider-layout#videoRecipes": {
+        "props": {
+            "itemsPerPage": {
+                "desktop": 3,
+                "tablet": 3,
+                "phone": 1
+            },
+            "infinite": false,
+            "showNavigationArrows": "desktopOnly",
+            "autoplay": {
+                "timeout": 5000,
+                "stopOnHover": false
+            },
+            "blockClass": [
+                "carousel",
+                "microwaveRecipeSlider",
+                "microwaveRecipeSliderMobile"
+            ]
+        },
+        "children": [
+            "flex-layout.row#1VIdeoRecipe",
+            "flex-layout.row#1VIdeoRecipe",
+            "flex-layout.row#1VIdeoRecipe",
+            "flex-layout.row#1VIdeoRecipe",
+            "flex-layout.row#1VIdeoRecipe",
+            "flex-layout.row#1VIdeoRecipe"
+        ]
+    },
+    "slider-layout#exceptionalResultsMR": {
+        "props": {
+            "itemsPerPage": {
+                "desktop": 3,
+                "tablet": 2,
+                "phone": 1
+            },
+            "infinite": false,
+            "showNavigationArrows": "desktopOnly",
+            "autoplay": {
+                "timeout": 5000,
+                "stopOnHover": false
+            },
+            "blockClass": [
+                "carousel",
+                "microwaveRecipeSlider",
+                "microwaveRecipeSliderMobile"
+            ]
+        },
+        "children": [
+            "flex-layout.col#exceptionalResults",
+            "flex-layout.col#exceptionalResults2",
+            "flex-layout.col#exceptionalResults3"
+        ]
+    },
+    "flex-layout.row#1VIdeoRecipe": {
+        "props": {
+            "blockClass": [
+                "vantaggiRicambiOriginali",
+                "1VIdeoRecipe"
+            ]
+        },
+        "children": [
+            "modal-trigger#video1",
+            "rich-text#1VIdeoRecipe"
+        ]
+    },
+    "modal-trigger#video1": {
+        "children": [
+            "image#videoRecipe1",
+            //   "image#videoRecipePlay",
+            "modal-layout#video1"
+        ]
+    },
+    "image#videoRecipe1": {
+        "props": {
+            "width": "100%",
+            "src": "assets/placeholders/image-placeholder-16-9.png",
+            "blockClass": "imageRecipe"
+        }
+    },
+    "image#videoRecipePlay": {
+        "props": {
+            "width": "100%",
+            "src": "assets/heart.svg",
+            "blockClass": "imagePlay"
+        }
+    },
+    "rich-text#example": {
+        "props": {
+            "text": "Click me"
+        }
+    },
+    "modal-layout#video1": {
+        "props": {
+            "blockClass": "modalVideo1"
+        },
+        "children": [
+            "modal-header",
+            "video#recipe1"
+        ]
+    },
+    "video#recipe1": {
+        "props": {
+            "width": "100%",
+            "muted": false,
+            "src": "assets/wVideo.mp4",
+            "blockClass": [
+                "recipe1"
+            ],
+            "controlsType": "native"
+        }
+    },
+    "rich-text#videoTitle": {
+        "props": {
+            "blockClass": "videoTitle",
+            "text": "## Title"
+        }
+    },
+    "image#1VIdeoRecipe": {
+        "props": {
+            "height": "2.6875rem",
+            "src": "assets/supporto/benefitplus.svg"
+        }
+    },
+    "rich-text#1VIdeoRecipe": {
+        "props": {
+            "textPosition": "CENTER",
+            "textAlignment": "CENTER",
+            "text": "Verifichiamo i nostri prezzi per farti risparmiare.",
+            "blockClass": [
+                "vantaggiRicambiOriginali",
+                "descVideoRecipe"
+            ]
+        }
+    }
+}

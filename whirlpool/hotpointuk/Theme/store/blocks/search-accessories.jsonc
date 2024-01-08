@@ -1,0 +1,232 @@
+{
+  "flex-layout.col#spare-parts-and-accessories-summary-search":{
+    "children":[
+      //"responsive-layout.desktop#productCardDesktopSpareAndAccessoriesSearch",
+      //"responsive-layout.tablet#productCardDesktopSpareAndAccessoriesSearch",
+      //"responsive-layout.phone#productCardDesktopSpareAndAccessoriesSearch"
+      ],
+      "props": {
+        "blockClass": "sparePartsAndAccassoriesCardSearch"
+      }
+    },
+  "responsive-layout.desktop#productCardDesktopSpareAndAccessoriesSearch": {
+    "children": [
+      "flex-layout.row#product-summary-head-accessories"
+    ]
+  },
+  "responsive-layout.phone#productCardDesktopSpareAndAccessoriesSearch": {
+    "children": [
+      "flex-layout.col#productCardMobileSearchAccessories"
+    ]
+  },
+  "responsive-layout.tablet#productCardDesktopSpareAndAccessoriesSearch":{
+    "children": [
+      "flex-layout.row#product-summary-head-accessories"
+    ]
+  },
+  "flex-layout.row#product-summary-head-accessories": {
+    "children":[
+      "flex-layout.col#leftAccessories",
+      "flex-layout.col#allRightAccessories"
+    ]
+  },
+  "flex-layout.col#leftAccessories": {
+    "children": [
+      "flex-layout.col#leadTime",
+      "product-summary-image#spare-and-accessories",
+      "add-to-list-btn#hpCarousel"
+    ],
+    "props": {
+      "blockClass": [
+        "leftAccessoriesDesk",
+        "secondary"
+      ],
+      "preventVerticalStretch": true,
+      "width": "30%",
+      "verticalAlign": "center"
+    }
+  },
+  "flex-layout.col#leadTime":{
+    "children":[
+      "lead-time",
+      "flex-layout.row#spaceSmall"
+    ]
+  },
+  "flex-layout.row#rightAccessories": {
+    "children": [
+      "flex-layout.col#deliveryQuantity",
+      "flex-layout.col#buttonsKeyFeaturesAccessories"
+    ],
+    "props": {
+      "blockClass": [
+        "rightAccessoriesDesk"
+      ],
+      "preventVerticalStretch": true,
+      "width": "70%",
+      "height": "70%",
+      "verticalAlign": "center"
+    }
+  },
+  "flex-layout.row#toggleDeliveryAccessories":{
+    "title":"[ROW] - Key Informations Delivery Accessories",
+    "children":[
+      "image#deliveryPlp",
+      "rich-text#deliveryPlp",
+      "overlay-trigger#keyDeliveryPlp"
+    ],
+    "props":{
+      "blockClass": ["gapKeyInformations", "gapKeyInformationsDelivery"],
+      "colGap": "2",
+      "preventHorizontalStretch": true,
+      "height": "40%"
+    }
+  },
+  "flex-layout.col#buttonsAccessories": {
+    "children": [
+      "rich-text#buttonDiscoverMore",
+      "condition-layout.product#add-to-cart-is-sellablePlp"
+    ],
+    "props":{
+      "blockClass":["buttonsDiscoverBuy"]
+    }
+  },
+  "flex-layout.col#buttonsKeyFeaturesAccessories": {
+    "children": [
+      "key-features",
+      "flex-layout.col#buttonsAccessories"
+    ],
+    "props":{
+      "blockClass":["buttonAndFeatures"]
+    }
+  },
+  "flex-layout.row#topAccessories": {
+    "children": [
+      "vtex.store-components:product-name#summary",
+      "flex-layout.col#price-selling-plp"
+    ],
+    "props": {
+      "blockClass": [
+        "topAccessoriesDesk"
+      ],
+      "preventVerticalStretch": true,
+      "width": "70%",
+      "height": "30%",
+      "verticalAlign": "center"
+    }
+  },
+  "flex-layout.col#allRightAccessories":{
+    "children":[
+      "flex-layout.row#product-summary-top-searchAccessories",
+      "flex-layout.row#rightAccessories"
+    ],
+    "props":{
+      "blockClass":[
+        "allRightAccessories"
+      ]
+    }
+  },
+  "flex-layout.row#product-summary-top-searchAccessories": {
+    "children": [
+      "flex-layout.col#product-summary-top-left",
+      "flex-layout.row#product-summary-top-right"
+    ],
+    "props": {
+      "blockClass": "summary-top"
+    }
+  },
+  "flex-layout.col#deliveryQuantity":{
+    "children":[
+      "flex-layout.row#toggleDeliveryAccessories",
+      "product-summary-quantity#quantityAccessoriesSummary"
+    ],
+    "props":{
+      "blockClass":[
+        "deliveryQuantity"
+      ]
+    }
+  },
+  "flex-layout.col#deliveryQuantityMobile":{
+    "children":[
+      "flex-layout.row#toggleDeliveryAccessories"
+      //"product-summary-quantity#quantityAccessoriesSummary"
+    ],
+    "props":{
+      "blockClass":[
+        "deliveryQuantity"
+      ]
+    }
+  },
+  "product-summary-quantity#quantityAccessoriesSummary":{
+    "props": {
+      "selectorType":"dropdown",
+      "showLabel": false,
+      "blockClass":[
+        "accessoriesQuantity"
+      ]
+    }
+  },
+  "flex-layout.col#productCardMobileSearchAccessories": {
+    "props": {
+      "blockClass": "1024Version"
+    },
+    "children": [
+      "flex-layout.row#principalMobileSearchAccessories",
+      "flex-layout.row#secondaryMobile-searchAccessories"
+    ]
+  },
+  "flex-layout.row#principalMobileSearchAccessories": {
+    "children": [
+      "flex-layout.col#principalMobile-left-searchAccessories",
+      "flex-layout.row#principalMobile-right-searchAccessories"
+    ],
+    "props": {
+      "blockClass": "principalMobileSearch"
+    }
+  },
+  "flex-layout.col#principalMobile-left-searchAccessories": {
+    "children": ["product-summary-image#shelf"],
+    "props": {
+      "blockClass": "principalMobile-left",
+      "verticalAlign": "top"
+    }
+  },
+  "flex-layout.row#principalMobile-right-searchAccessories": {
+    "children": [
+      "flex-layout.col#leadWish",
+      "flex-layout.row#mobilePriceQuantityAccessories"
+    ],
+    "props": {
+      "blockClass": "principalMobile-right-search",
+      "preventVerticalStretch": true,
+      "verticalAlign": "top"
+    }
+  },
+  "flex-layout.row#mobilePriceQuantityAccessories":{
+    "children":[
+      "flex-layout.row#price-selling",
+      "product-summary-quantity#quantityAccessoriesSummary"
+    ],
+    "props":{
+      "blockClass": "mobilePriceQuantity"
+    }
+  },
+  "flex-layout.row#secondaryMobile-searchAccessories": {
+    "children": [
+      "flex-layout.row#commercialCode",
+      "flex-layout.row#mobileNameButton",
+      "flex-layout.col#informationsFeauturesSearchMobile"
+    ],
+    "props": {
+      "blockClass": "secondaryMobile"
+    }
+  },
+  "flex-layout.col#informationsFeauturesSearchMobile":{
+    "props":{
+      "blockClass":"informationsFeaturesPlpMobile"
+    },
+    "children":[
+      "flex-layout.row#toggleDeliveryAccessories",
+      "flex-layout.row#key-features-plpMobile"
+    ]
+  }
+}

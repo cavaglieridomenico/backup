@@ -1,0 +1,49 @@
+{
+  "product-summary.shelf#caroselliLanding": {
+    "children": [
+      "responsive-layout.desktop#caroselliLanding",
+      "responsive-layout.mobile#caroselliLanding"
+    ],
+    "props": {
+      "blockClass": ["summaryNorthStar"]
+    }
+  },
+  "responsive-layout.desktop#caroselliLanding": {
+    "children": [
+      "flex-layout.row#collection-badges",
+      "product-summary-image#shelf",
+      "flex-layout.row#garantieLogo",
+      "vtex.store-components:product-name#summary",
+      "flex-layout.row#plpPrice",
+      "flex-layout.row#energy-label-carousel",
+      "condition-layout.product#stockFewPiecesLabel",
+      "add-to-cart-custom#plp",
+      "add-to-list-btn"
+    ]
+  },
+  "responsive-layout.mobile#caroselliLanding": {
+    "children": [
+      "flex-layout.row#collection-badges",
+      "flex-layout.row#imageAndPriceMobile",
+      "vtex.store-components:product-name#summary",
+      "flex-layout.row#commercialCodeMobile",
+      "flex-layout.row#stockFewPiecesLabelCard",
+      "flex-layout.row#WPROKeyMobile"
+    ]
+  },
+  "flex-layout.row#priceAndPostilla": {
+    "children": ["product-summary-price", "rich-text#pricePostilla"],
+    "props": {
+      "blockClass": ["carouselsPriceRow", "priceColLanding"]
+    }
+  },
+  "flex-layout.row#selling-price-savings-carousels": {
+    "props": {
+      "preserveLayoutOnMobile": true,
+      "preventHorizontalStretch": false,
+      "blockClass": "priceSummaryCarousels",
+      "colSizing": "equal"
+    },
+    "children": ["flex-layout.col#price-selling"]
+  }
+}

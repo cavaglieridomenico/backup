@@ -1,0 +1,13 @@
+input OrderItem {
+  seller: String
+  quantity: Int
+  id: String
+  index: Int
+  hasBundleItems: Boolean
+}
+
+input UpdateCartItemsReq {
+  orderItems: [OrderItem]
+  expectedOrderFormSections: [String]
+  noSplitItem: Boolean
+}

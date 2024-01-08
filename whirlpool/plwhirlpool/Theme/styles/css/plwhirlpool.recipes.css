@@ -1,0 +1,29 @@
+.container {
+  /* display: block; */
+}
+.containerGridInner {
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)) !important;
+}
+.recipeList {
+  margin: 0 auto;
+}
+.recipeItemTitle {
+  font-family: "myriadLight", Arial;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #505050;
+}
+.recipeItemWrapper {
+  width: unset !important;
+  min-width: 17rem !important;
+  max-width: 100% !important;
+}
+.recipeItemWrapper:hover .recipeItemTitle {
+  font-family: "myriadRegular", Arial;
+}
+@media only screen and (min-width: 640px) and (max-width: 1024px) {
+  .container {
+    padding: 3.125rem;
+  }
+}

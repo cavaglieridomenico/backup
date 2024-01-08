@@ -1,0 +1,68 @@
+{
+  "memory": 256,
+  "ttl": 60,
+  "timeout": 40,
+  "minReplicas": 30,
+  "maxReplicas": 100,
+  "workers": 4,
+  "events": {
+    "bookingStatus": {
+      "sender": "vtex.orders-broadcast",
+      "topics": [
+        "handling",
+        "invoiced",
+        "canceled"
+      ]
+    },
+    "updateOnOrderCreated": {
+      "sender": "vtex.orders-broadcast",
+      "topics": [
+        "order-created"
+      ]
+    },
+    "onAppInstalled": {
+      "sender": "apps",
+      "keys": [
+        "setup"
+      ]
+    }
+  },
+  "routes": {
+    "getDeliverySlots": {
+      "path": "/app/fareye/slots/retrieve/:orderFormId",
+      "public": true
+    },
+    "reserveDeliverySlot": {
+      "path": "/app/fareye/slots/reserve/:orderFormId",
+      "public": true
+    },
+    "checkBookingStatus": {
+      "path": "/app/fareye/reservation/check/:orderFormId",
+      "public": true
+    },
+    "cancellationBatch": {
+      "path": "/app/fareye/reservations/cancel",
+      "public": true
+    },
+    "getReservation": {
+      "path": "/app/fareye/reservations/:orderId",
+      "public": true
+    },
+    "setMPBookingStatus": {
+      "path": "/app/fareye/marketplace/setBookingStatus",
+      "public": true
+    },
+    "checkOrderReservation": {
+      "path": "/app/fareye/order_reservation/check/:orderId",
+      "public": true
+    },
+    "bookingStatusBackUp": {
+      "path": "/app/fareye/booking-status-update/:orderId/:currentState",
+      "public": true
+    },
+    "ping": {
+      "path": "/_v/private/app/fareye/ping",
+      "public": true
+    }
+  }
+}

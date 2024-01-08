@@ -1,0 +1,18 @@
+query getProductsProperties(
+	$field: ProductUniqueIdentifierField!
+	$values: [ID!]
+) {
+	productsByIdentifier(field: $field, values: $values)
+		@context(provider: "vtex.search-graphql") {
+		productId
+		properties {
+			name
+			values
+		}
+		categoryId
+	}
+}
+
+#product è il nome della query
+#getProductProperties nome con cui esporto
+#(identifier: $identifier) è la variabile che si aspetta, la vedo dall'ide non ha bisogno di essere esplosa

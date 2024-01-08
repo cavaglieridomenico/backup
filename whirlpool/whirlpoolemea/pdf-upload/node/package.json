@@ -1,0 +1,36 @@
+{
+  "name": "pdf-upload",
+  "private": true,
+  "license": "UNLICENSED",
+  "scripts": {
+    "lint": "eslint --ext js,jsx,ts,tsx .",
+    "format": "prettier --write \"**/*.{ts,js,json}\""
+  },
+  "lint-staged": {
+    "*.{ts,js,tsx,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,graphql,gql}": [
+      "prettier --write"
+    ]
+  },
+  "devDependencies": {
+    "@types/co-body": "0.0.3",
+    "@typescript-eslint/parser": "2.2.0",
+    "@vtex/api": "6.45.12",
+    "@vtex/tsconfig": "^0.5.6",
+    "lint-staged": "10.1.1",
+    "prettier": "2.0.2",
+    "typescript": "3.9.7"
+  },
+  "dependencies": {
+    "@types/multiparty": "^0.0.33",
+    "co-body": "^6.0.0",
+    "form-data": "^4.0.0",
+    "multiparty": "^4.2.3"
+  },
+  "resolutions": {
+    "@types/express-serve-static-core": "4.17.18"
+  }
+}

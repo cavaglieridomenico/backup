@@ -1,0 +1,139 @@
+{
+  "store.custom#legal-issues-achat": {
+    "blocks": [
+      "responsive-layout.desktop#achat-maxi-container",
+      "responsive-layout.mobile#achat"
+    ]
+  },
+  "responsive-layout.desktop#achat-maxi-container": {
+    "children": ["flex-layout.row#achat-maxi-container"]
+  },
+  "flex-layout.row#achat-maxi-container": {
+    "props": {
+      "blockClass": "achat-maxi-container"
+    },
+    "children": ["flex-layout.col#achat-col-maxi-container"]
+  },
+  "flex-layout.col#achat-col-maxi-container": {
+    "props": {
+      "blockClass": "achat-col-maxi-container"
+    },
+    "children": [
+      "breadcrumb#achat",
+      "flex-layout.row#achat-title-container",
+      "flex-layout.row#achat-content-container",
+      "flex-layout.row#achat-first-contact-data",
+      "flex-layout.row#achat-second-content-container",
+      "flex-layout.row#achat-second-contact-data",
+      "flex-layout.row#achat-third-content-container"
+    ]
+  },
+  //BREADCRUMBS
+  "breadcrumb#achat": {
+    "props": {
+      "categories": ["/Home/", "Mentions Légales", "Achat en ligne"],
+      "showOnMobile": true,
+      "blockClass": "breadcrumb-legal-issues-landings"
+    }
+  },
+  "breadcrumb-custom#achat": {
+    "props": {
+      "firstPage": "Home",
+      "previousPage": "Mentions Légales",
+      "previousPath": "/mentions-legales",
+      "currentPage": "Achat en ligne",
+      "blockClass": "breadcrumb-legal-issues-landings"
+    }
+  },
+  //TITLE
+  "flex-layout.row#achat-title-container": {
+    "props": {
+      "blockClass": "achat-title-container"
+    },
+    "children": ["rich-text#achat-title"]
+  },
+  "rich-text#achat-title": {
+    "props": {
+      "blockClass": "achat-text-title",
+      "text": "Achat en ligne"
+    }
+  },
+  //FIRST CONTENT & OBJET
+  "flex-layout.row#achat-content-container": {
+    "props": {
+      "blockClass": "achat-content-container"
+    },
+    "children": ["rich-text#achat-content-text"]
+  },
+  "rich-text#achat-content-text": {
+    "props": {
+      "blockClass": "achat-text",
+      "text": "Conditions générales de vente pour les Accessoires et produits d’entretien<br><br> \n **OBJET:** \n Les présentes conditions générales de vente s’appliquent, sans restriction ni réserve à l’ensemble des ventes conclues par Whirlpool France SAS (ci-après dénommée « Whirlpool ») auprès d’acheteurs non professionnels (ci-après dénommés le ou le(s) « Client(s) »), désirant acquérir les accessoires et produits d’entretien de marque Whirlpool et WPro (ci-après dénommés les « Produits ») via le site internet https://www.indesit.fr. <br><br> \n "
+    }
+  },
+  // COMMANDE
+  "flex-layout.row#achat-first-contact-data": {
+    "props": {
+      "blockClass": "achat-content-container"
+    },
+    "children": ["rich-text#achat-text-contact-data"]
+  },
+  "rich-text#achat-text-contact-data": {
+    "props": {
+      "blockClass": "achat-text",
+      "text": "**COMMANDE** : \n Le consommateur doit être âgé d’au moins 18 ans et avoir la capacité juridique ou être titulaire d’une autorisation parentale pour effectuer une commande en ligne. Toute commande vaut acceptation des prix et produits disponibles à la vente ainsi que des présentes conditions générales de vente.<br><br> \n"
+    }
+  },
+  //les commandes sont passees
+  "flex-layout.row#achat-second-content-container": {
+    "props": {
+      "blockClass": "achat-content-container"
+    },
+    "children": ["rich-text#achat-second-content-text"]
+  },
+  "rich-text#achat-second-content-text": {
+    "props": {
+      "blockClass": "achat-text",
+      "text": "Les commandes sont passées: \n  <ul> <li> Soit à partir des références des offres en ligne: les prix sont garantis pendant toute la durée de validité de l’offre mentionnée sur le site ;</li><li>Soit à partir des références des catalogues papier dont les dates de validité ne sont pas expirées.  </li> </ul>  <br> \n Les produits sont vendus dans la limite des stocks disponibles. <br><br> \n En cas d’indisponibilité du Produit, Whirlpool s’engage à en informer le Client soit au moment de la passation de la commande, soit dans les meilleurs délais par courrier électronique. Le Client ne sera alors débité que du montant des articles expédiés.<br><br> \n La validation définitive de la commande intervient après la validation du paiement par l’envoi d’un courrier électronique confirmant l’enregistrement de la commande, le récapitulatif de celle-ci, et contenant les présentes conditions générales de vente, qui sont mises à la disposition du consommateur préalablement à la commande, ainsi que le formulaire électronique de rétractation. <br><br> \n Les prix des articles sont exprimés en euros, toutes taxes comprises. Whirlpool se réserve le droit de réviser les prix à tout moment en fonction de la conjoncture économique, étant précisé que les conditions applicables sont celles au jour de la commande. Les photographies, textes, graphismes, informations et caractéristiques reproduits et illustrant les Produits présentés ne sont pas contractuels. En conséquence, la responsabilité de Whirlpool ne saurait être engagée en cas d'erreur ou d'omission minime dans l'une de ces photographies, textes ou graphismes, informations ou caractéristiques des produits, ou en cas de modification des Produits. En cas d'impossibilité de fournir un Produit, il ne pourra être réclamé de dommages et intérêts. <br><br> \n"
+    }
+  },
+  //PAIMENT
+  "flex-layout.row#achat-second-contact-data": {
+    "props": {
+      "blockClass": "achat-content-container"
+    },
+    "children": ["rich-text#achat-text-contact-data"]
+  },
+  "rich-text#achat-text-second-contact-data": {
+    "props": {
+      "blockClass": "achat-text",
+      "text": "**PAIEMENT:** \n Le paiement de la commande se fait uniquement en ligne par paiement sécurisé. <br><br> \n"
+    }
+  },
+  //LIVRAISON
+  "flex-layout.row#achat-third-content-container": {
+    "props": {
+      "blockClass": "achat-content-container"
+    },
+    "children": ["rich-text#achat-third-content-text"]
+  },
+  "rich-text#achat-third-content-text": {
+    "props": {
+      "blockClass": "achat-text",
+      "text": "**LIVRAISON** \n La livraison ne sera effectuée qu’en France métropolitaine et Corse et qu’après règlement sécurisé en ligne sur le site. Le délai normal de livraison est de 6 jours ouvrés à compter de la validation de la commande. Celle-ci s’effectue par colis postal au domicile du Client. <br><br> \n Les Produits seront livrés à l'adresse indiquée par le Client lors de la commande. Le Client est tenu de s'assurer d’avoir mentionné toutes les informations utiles à la livraison de sa commande et de vérifier l'exhaustivité et la conformité des renseignements concernant l'adresse de livraison, Whirlpool ne saurait être tenue pour responsable d'éventuelles erreurs de saisie et des conséquences qui en découleraient tel qu'un retard et/ou une erreur de livraison."
+    }
+  },
+  //DELAI DE RETRACTATION :
+  "flex-layout.row#achat-delai-de-retractation-container": {
+    "props": {
+      "blockClass": "achat-content-container"
+    },
+    "children": ["rich-text#achat-delai-de-retractation-text"]
+  },
+  "rich-text#achat-delai-de-retractation-text": {
+    "props": {
+      "blockClass": "achat-text",
+      "text": "**DELAI DE RETRACTATION :** \n Conformément aux dispositions de l’article L 121-21 du Code de la consommation relatif à la vente à distance, le Client dispose d’un droit de rétractation à exercer dans un délai de 14 jours à compter du jour où le Client, ou un tiers autre que le transporteur et désigné par le Client, prend physiquement possession du (dernier) bien. "
+    }
+  }
+} //

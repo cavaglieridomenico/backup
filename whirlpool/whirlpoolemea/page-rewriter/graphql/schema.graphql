@@ -1,0 +1,6 @@
+type res{
+  payload:String
+}
+type Query {
+  getVBaseQueryParam(from: String!): String @cacheControl(scope: PUBLIC, maxAge: LONG)
+}

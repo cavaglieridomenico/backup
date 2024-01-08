@@ -1,0 +1,48 @@
+.container {
+  position: relative;
+  margin-left: 3.125rem;
+  padding-top: 0;
+}
+.homeLink::before {
+  content: "Home";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 0.25rem 0.5rem 1.25rem;
+}
+.homeLink .homeIcon {
+  visibility: hidden;
+  height: 10px;
+}
+.link {
+  font-family: "hotpointRegular";
+  font-weight: 300;
+  font-size: 0.8rem;
+  line-height: 1.2;
+  text-decoration: none;
+  color: #505050;
+}
+.term {
+  text-decoration: none;
+}
+.link:hover,
+.link:focus {
+  color: #B24C24;
+}
+.link:focus {
+  border-color: #B24C24;
+}
+.container--breadPP {
+  margin-top: 0.5rem;
+}
+.arrow:last-child {
+  pointer-events: none;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+  .container {
+    display: none;
+  }
+}

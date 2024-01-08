@@ -1,0 +1,665 @@
+{
+  "header": {
+    "blocks": [
+      "header-layout.desktop",
+      "header-layout.mobile"
+    ]
+  },
+  "header.full": {
+    "blocks": [
+      "header-layout.desktop",
+      "header-layout.mobile"
+    ]
+  },
+  "header-layout.desktop": {
+    "title": "Header Desktop",
+    "children": [
+      "wia-canonical-fix",
+      "sticky-layout#desktop",
+      "sticky-layout#desktop-newSearchBar",
+      "slider-layout#banner-carousel2",
+      // Newsletter automatic popup
+      "flex-layout.row#newsletter-automatic-popup"
+    ]
+  },
+  "newsletter-popup#header": {
+    "props": {
+      "time": 0.25
+    },
+    "children": [
+      "newletter-form"
+    ]
+  },
+  "sticky-layout#desktop": {
+    "props": {
+      "blockClass": [
+        "sticky-header",
+        "oldSearchBar"
+      ]
+    },
+    "children": [
+      "flex-layout.row#desktop"
+    ]
+  },
+  "flex-layout.row#desktop": {
+    "props": {
+      "horizontalAlign": "center",
+      "verticalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": true,
+      "blockClass": "headerContent"
+    },
+    "children": [
+      "flex-layout.col#logo-desktop",
+      "flex-layout.col#spacer",
+      "disclosure-layout#search",
+      // "minicart.v2",
+      "conditional-login"
+    ]
+  },
+  "sticky-layout#desktop-newSearchBar": {
+    "props": {
+      "blockClass": [
+        "sticky-header",
+        "newSearchBar"
+      ]
+    },
+    "children": [
+      "flex-layout.row#desktop-newSearchBar"
+    ]
+  },
+  "flex-layout.row#desktop-newSearchBar": {
+    "props": {
+      "horizontalAlign": "center",
+      "verticalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": true,
+      "blockClass": [
+        "headerContent",
+        "newSearchBar"
+      ]
+    },
+    "children": [
+      "flex-layout.col#logo-desktop",
+      "flex-layout.col#spacer-newsearch",
+      "minicart.v2",
+      "link#account-newSearchBar"
+    ]
+  },
+  "flex-layout.col#spacer-newsearch": {
+    "props": {
+      "blockClass": "colMenuSearchBar"
+    },
+    "children": [
+      "flex-layout.row#searchBar-newSearchBar",
+      "flex-layout.row#spacer-newSearchBar"
+    ]
+  },
+  "flex-layout.row#spacer-newSearchBar": {
+    "props": {
+      "width": "grow",
+      "verticalAlign": "middle",
+      "horizontalAlign": "center"
+    },
+    "children": [
+      "vtex.menu@2.x:menu#ws"
+    ]
+  },
+  "link#account-newSearchBar": {
+    "props": {
+      "href": "/account",
+      "blockClass": [
+        "loginIcon",
+        "newSearchBar"
+      ]
+    },
+    "children": [
+      "image#iconAccount"
+    ]
+  },
+  "link#account": {
+    "props": {
+      "href": "/account",
+      "blockClass": "loginIcon"
+    },
+    "children": [
+      "image#iconAccount"
+    ]
+  },
+  "image#iconAccount": {
+    "props": {
+      "width": "22px",
+      "height": "28px",
+      "src": "assets/account-icon.svg"
+    }
+  },
+  "flex-layout.col#search-bar": {
+    "props": {
+      "verticalAlign": "middle",
+      "blockClass": "sb"
+    },
+    "children": [
+      "search-bar#header"
+    ]
+  },
+  "search-bar#header": {
+    "props": {
+      "blockClass": "searchHeader",
+      "displayMode": "search-and-clear-buttons",
+      "placeholder": "Chercher"
+    }
+  },
+  "flex-layout.col#spacer": {
+    "props": {
+      "width": "grow",
+      "verticalAlign": "middle",
+      "horizontalAlign": "center"
+    },
+    "children": [
+      "vtex.menu@2.x:menu#ws"
+    ]
+  },
+  "flex-layout.col#logo-desktop": {
+    "props": {
+      "verticalAlign": "middle",
+      "blockClass": "logo"
+    },
+    "children": [
+      "link#logo"
+    ]
+  },
+  "link#logo": {
+    "props": {
+      "href": "/"
+    },
+    "children": [
+      "image#logo2"
+    ]
+  },
+  "image#logo2": {
+    "props": {
+      "height": "100%",
+      "src": "assets/whrlogo.svg",
+      "blockClass": "logoImage"
+    }
+  },
+  "header-layout.mobile": {
+    "title": "Header Mobile",
+    "children": [
+      "wia-canonical-fix",
+      "sticky-layout#mobile",
+      "sticky-layout#mobile-newSearchBar",
+      "flex-layout.row#searchBar-newSearchBar",
+      "slider-layout#banner-carousel2",
+      // Newsletter automatic popup
+      "flex-layout.row#newsletter-automatic-popup"
+    ]
+  },
+  "sticky-layout#mobile": {
+    "props": {
+      "blockClass": "oldSearchBar"
+    },
+    "children": [
+      "flex-layout.row#mobile"
+    ]
+  },
+  "sticky-layout#mobile-newSearchBar": {
+    "props": {
+      "blockClass": "newSearchBar"
+    },
+    "children": [
+      "flex-layout.row#mobile-newSearchBar"
+    ]
+  },
+  "flex-layout.row#mobile-newSearchBar": {
+    "children": [
+      "drawer",
+      "link#logo",
+      "flex-layout.col#space",
+      "minicart.v2",
+      "link#account"
+    ],
+    "props": {
+      "blockClass": "main-header-mobile",
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    }
+  },
+  "flex-layout.row#searchBar-newSearchBar": {
+    "props": {
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.col#search-newSearchBar"
+    ]
+  },
+  "flex-layout.col#search-newSearchBar": {
+    "props": {
+      "width": "grow",
+      "blockClass": "newSearchBar"
+    },
+    "children": [
+      "search-bar#headerBlock"
+    ]
+  },
+  "search-bar#headerBlock": {
+    "blocks": [
+      "autocomplete-result-list.v2"
+    ],
+    "props": {
+      "openAutocompleteOnFocus": true,
+      "blockClass": "headerSearch"
+    }
+  },
+  "autocomplete-result-list.v2": {
+    "blocks": [
+      "product-summary.shelf#headerSearch"
+    ],
+    "props": {
+      "maxSuggestedProducts": 8,
+      "maxSuggestedTerms": 3,
+      "maxTopSearches": 5,
+      "maxHistory": 3,
+      "productLayout": "VERTICAL"
+    }
+  },
+  "product-summary.shelf#headerSearch": {
+    "children": [
+      "condition-layout.product#isPreOrderLabel",
+      // "condition-layout.product#inStockLabel-SearchResult",
+      "product-summary-image#headerSearchShelf",
+      "vtex.store-components:product-name#headerSearchSummary",
+      "condition-layout.product#showPricePDPSelling-SearchResult"
+    ],
+    "props": {
+      "blockClass": "shelfHeaderSearch"
+    }
+  },
+  "condition-layout.product#isPreOrderLabel": {
+    "title": "[Condition] - Pre Order Label",
+    "props": {
+      "conditions": [
+        {
+          "subject": "productClusters",
+          "arguments": {
+            "id": "513"
+          }
+        },
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "DISPONIBILITÉ EN LIGNE",
+            "value": "Achat sur Whirlpool.fr"
+          }
+        },
+        {
+          "subject": "isProductAvailable"
+        }
+      ],
+      "matchType": "all",
+      "Then": "rich-text#preOrderLabelSearch",
+      "Else": "condition-layout.product#inStockLabel-SearchResult"
+    }
+  },
+  "rich-text#preOrderLabel": {
+    "title": "[Text] - Pre order label",
+    "props": {
+      "text": "Pré-commande",
+      "blockClass": ["inStockProp", "preOrderLabel"]
+    }
+  },
+  "rich-text#preOrderLabelSearch": {
+    "title": "[Text] - Pre order label",
+    "props": {
+      "text": "Pré-commande",
+      "blockClass": ["inStockProp", "preOrderLabel", "preOrderLabelSearch"]
+    }
+  },
+  "rich-text#preOrderLabelPdp": {
+    "title": "[Text] - Pre order label",
+    "props": {
+      "text": "Pré-commande",
+      "blockClass": ["inStockProp", "preOrderLabel", "preOrderLabelPdp"]
+    }
+  },
+  "condition-layout.product#inStockLabel-SearchResult": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "DISPONIBILITÉ EN LIGNE",
+            "value": "Achat sur Whirlpool.fr"
+          }
+        }
+      ],
+      "Then": "rich-text#inStockMobile-SearchResult",
+      "Else": "condition-layout.product#outOfStockLabel-SearchResult"
+    }
+  },
+  "rich-text#inStockMobile-SearchResult": {
+    "props": {
+      "text": "En stock",
+      "blockClass": ["inStockProp", "SearchResult-InStock"]
+    }
+  },
+  "condition-layout.product#outOfStockLabel-SearchResult": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "leadTime",
+            "value": "1"
+          }
+        }
+      ],
+      "Then": "rich-text#outOfStockMobile24h-SearchResult",
+      "Else": "condition-layout.product#outOfStockLabel2-SearchResult"
+    }
+  },
+  "rich-text#outOfStockMobile24h-SearchResult": {
+    "props": {
+      "text": "Bientôt en rupture",
+      "blockClass": ["notInStockProp", "SearchResult-FewDays"]
+    }
+  },
+  "condition-layout.product#outOfStockLabel2-SearchResult": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "leadTime",
+            "value": "7"
+          }
+        }
+      ],
+      "Then": "rich-text#outOfStockMobile7d-SearchResult",
+      "Else": "condition-layout.product#outOfStockLabel3-SearchResult"
+    }
+  },
+  "rich-text#outOfStockMobile7d-SearchResult": {
+    "props": {
+      "text": "Bientôt en rupture",
+      "blockClass": ["notInStockProp", "SearchResult-FewDays"]
+    }
+  },
+  "condition-layout.product#outOfStockLabel3-SearchResult": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "leadTime",
+            "value": "14"
+          }
+        }
+      ],
+      "Then": "rich-text#outOfStockMobile14d-SearchResult",
+      "Else": "condition-layout.product#outOfStockLabel4-SearchResult"
+    }
+  },
+  "rich-text#outOfStockMobile14d-SearchResult": {
+    "props": {
+      "text": "Bientôt en rupture",
+      "blockClass": ["notInStockProp", "SearchResult-FewDays"]
+    }
+  },
+  "condition-layout.product#outOfStockLabel4-SearchResult": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "DISPONIBILITÉ EN LIGNE",
+            "value": "Achat sur Whirlpool.fr"
+          }
+        }
+      ],
+      "Else": "condition-layout.product#outOfStockLabel5-SearchResult"
+    }
+  },
+  "condition-layout.product#outOfStockLabel5-SearchResult": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "sellable",
+            "value": "true"
+          }
+        }
+      ],
+      "Then": "rich-text#outOfStockMobile-SearchResult"
+    }
+  },
+  "rich-text#outOfStockMobile-SearchResult": {
+    "props": {
+      "text": "Temporairement indisponible",
+      "blockClass": ["notInStockProp", "SearchResult-OutOfStock"]
+    }
+  },
+  "condition-layout.product#showPricePDPSelling-SearchResult": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "specificationProperties",
+          "arguments": {
+            "name": "showPrice",
+            "value": "true"
+          }
+        }
+      ],
+      "Then": "flex-layout.row#price-selling-pdp-SearchResult"
+    }
+  },
+  "flex-layout.row#price-selling-pdp-SearchResult": {
+    "children": ["flex-layout.col#product-selling-price-SearchResult"],
+    "props": {
+      "blockClass": ["discountedPrice", "SearchResult"],
+      "colSizing": "auto",
+      "fullWidth": true,
+      "preserveLayoutOnMobile": true,
+      "horizontalAlign": "left"
+    }
+  },
+  "flex-layout.col#product-selling-price-SearchResult": {
+    "children": ["product-selling-price#pdp-SearchResult"]
+  },
+  "product-selling-price#pdp-SearchResult": {
+    "props": {
+      "blockClass": ["summary2", "SearchResult"],
+      "markers": ["Tax"],
+      "message": "{sellingPriceValue}"
+    }
+  },
+  "product-summary-image#headerSearchShelf": {
+    "props": {
+      "showBadge": false,
+      "aspectRatio": "1:1",
+      "maxHeight": 100,
+      "blockClass": "headerSearchShelfImage"
+    }
+  },
+  "vtex.store-components:product-name#headerSearchSummary": {
+    "props": {
+      "tag": "div",
+      "displayMode": "linkToProductPage",
+      "blockClass": [
+        "headerSearchSummaryName",
+        "summaryName"
+      ]
+    }
+  },
+  "search-bar#new": {
+    "props": {
+      "blockClass": "newSearchBar"
+    }
+  },
+  "flex-layout.row#mobile": {
+    "children": [
+      "drawer",
+      "link#logo",
+      "flex-layout.col#space",
+      "disclosure-layout#search",
+      // "minicart.v2",
+      "conditional-login"
+    ],
+    "props": {
+      "blockClass": "main-header-mobile",
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    }
+  },
+  "drawer": {
+    "children": [
+      "vtex.menu@2.x:menu#mobile",
+      "flex-layout.row#loginMobile"
+    ],
+    "props": {
+      "blockClass": "drawerMobile"
+    }
+  },
+  "flex-layout.row#loginMobile": {
+    "props": {
+      "fullWidth": true
+    },
+    "children": []
+  },
+  "vtex.menu@2.x:menu#mobile": {
+    "title": "Menu Mobile",
+    "props": {
+      "orientation": "vertical",
+      "blockClass": "mobileMenu"
+    },
+    "children": [
+      "menu-item#prodottiMobile",
+      "menu-item#w-collectionMobile",
+      // "menu-item#promozioniMobile",
+      "promotion-menu",
+      "menu-item#ricetteMobile",
+      "menu-item#wellbeingMobile",
+      "menu-item#supportoMobile",
+      "menu-item#ricambi-originaliMobile"
+    ]
+  },
+  "promotion-menu": {
+    "props": {
+      "triggerLink": "/promotions",
+      "triggerText": "Nos Offres",
+      "items": []
+    }
+  },
+  "vtex.menu@2.x:menu#ws": {
+    "children": [
+      "menu-item#prodotti",
+      "menu-item#w-collection",
+      "menu-item#offres",
+      "menu-item#astuces",
+      "menu-item#wellbeing",
+      "menu-item#services",
+      "menu-item#pieces"
+    ]
+  },
+  "disclosure-layout#search": {
+    "props": {
+      "blockClass": "header"
+    },
+    "children": [
+      "disclosure-trigger#image",
+      "disclosure-content#search-bar"
+    ]
+  },
+  "disclosure-trigger#image": {
+    "children": [
+      "image#search"
+    ]
+  },
+  "image#search": {
+    "props": {
+      "blockClass": "search-icon",
+      "width": "24px",
+      "src": "assets/search.svg"
+    }
+  },
+  "disclosure-content#search-bar": {
+    "children": [
+      "flex-layout.row#searchBar"
+    ]
+  },
+  "flex-layout.row#searchBar": {
+    "props": {
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.col#search"
+    ]
+  },
+  "flex-layout.col#space": {
+    "props": {
+      "width": "grow"
+    }
+  },
+  "flex-layout.col#search": {
+    "props": {
+      "width": "grow",
+      "blockClass": "oldSearchBar"
+    },
+    "children": [
+      "responsive-layout.desktop#searchbar",
+      "responsive-layout.tablet#searchbar",
+      "responsive-layout.phone#searchbar"
+    ]
+  },
+  "responsive-layout.desktop#searchbar": {
+    "children": [
+      "search-bar"
+    ]
+  },
+  "responsive-layout.tablet#searchbar": {
+    "children": [
+      "search-bar"
+    ]
+  },
+  "responsive-layout.phone#searchbar": {
+    "children": [
+      "search-bar#mobile"
+    ]
+  },
+  "search-bar": {
+    "props": {
+      "placeholder": "Rechercher"
+    }
+  },
+  "search-bar#mobile": {
+    "props": {
+      "placeholder": "Rechercher",
+      "displayMode": "search-and-clear-buttons"
+    }
+  },
+  "link#Accedi": {
+    "props": {
+      "href": "/account#"
+    },
+    "children": [
+      "rich-text#login"
+    ]
+  },
+  "rich-text#login": {
+    "props": {
+      "text": "Login / My Account",
+      "blockClass": [
+        "mobileMenu",
+        "buttonCard",
+        "margin"
+      ]
+    }
+  }
+}

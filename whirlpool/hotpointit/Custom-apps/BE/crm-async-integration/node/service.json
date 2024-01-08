@@ -1,0 +1,38 @@
+{
+  "memory": 256,
+  "ttl": 120,
+  "timeout": 60,
+  "minReplicas": 2,
+  "maxReplicas": 4,
+  "workers": 1,
+  "routes": {
+    "notificationHandler": {
+      "path": "/app/crm-async-integration/notify",
+      "public": true
+    },
+    "setCrmBpId": {
+      "path": "/app/crm-async-integration/vtex/crmbpid",
+      "public": true
+    },
+    "getUserDataFromVtex": {
+      "path": "/app/crm-async-integration/vtex/user",
+      "public": true
+    },
+    "getUserDataFromCRM": {
+      "path": "/app/crm-async-integration/crm/user",
+      "public": true
+    },
+    "productRegistration3YCheckup": {
+      "path": "/app/crm-async-integration/vtex/3ycheckup",
+      "public": true
+    },
+    "registeredUserManagerMid": {
+      "path": "/app/crm-async-integration/crm/registered-user-manage",
+      "public": true
+    },
+    "ping": {
+      "path": "/app/crm-async-integration/vtex/ping",
+      "public": true
+    }
+  }
+}
